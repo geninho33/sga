@@ -14,18 +14,49 @@ node scripts/migrate.mjs up
 echo "[sga] Validando Nginx..."
 nginx -t
 
-echo "[sga] Iniciando API na porta ${PORT:-3001}..."
-node src/index.js &
+stop_api() {
+  if [ -n "${API_PID:-}" ] && kill -0 "$API_PID" 2>/dev/null; then
+    echo "[sga] Encerrando API (PID $API_PID)..."
+    kill -TERM "$API_PID" 2>/dev/null || true
+    wait "$API_PID" 2>/dev/null || true
+  fi
+}
+
+trap 'stop_api; exit 0' TERM INT
+
+echo "[sga] Iniciando Node em segundo plano (porta ${PORT:-3001})..."
+nohup node src/index.js >>/proc/1/fd/1 2>>/proc/1/fd/2 &
 API_PID=$!
+echo "[sga] API em execução — PID $API_PID"
 
-trap 'kill -TERM "$API_PID" 2>/dev/null; exit 0' TERM INT
+echo "[sga] Aguardando API responder..."
+tries=0
+max=30
+while [ $tries -lt $max ]; do
+  if wget -qO- "http://127.0.0.1:${PORT:-3001}/health" >/dev/null 2>&1; then
+    echo "[sga] API pronta."
+    break
+  fi
+  if ! kill -0 "$API_PID" 2>/dev/null; then
+    echo "[sga] ERRO: processo Node encerrou antes de ficar pronto."
+    exit 1
+  fi
+  tries=$((tries + 1))
+  sleep 1
+done
 
-# Se a API cair, encerra o container (evita nginx sem backend)
+if [ $tries -eq $max ]; then
+  echo "[sga] ERRO: API não respondeu em ${max}s."
+  stop_api
+  exit 1
+fi
+
+# Se a API cair depois, encerra o Nginx (e o container reinicia via restart policy)
 (
-  while kill -0 "$API_PID" 2>/dev/null; do sleep 2; done
-  echo "[sga] ERRO: processo da API encerrou inesperadamente."
-  kill -TERM $$
+  while kill -0 "$API_PID" 2>/dev/null; do sleep 5; done
+  echo "[sga] ERRO: processo Node encerrou inesperadamente."
+  nginx -s quit 2>/dev/null || true
 ) &
 
-echo "[sga] Iniciando Nginx na porta 80..."
+echo "[sga] Iniciando Nginx em primeiro plano (porta 80)..."
 exec nginx -g 'daemon off;'
