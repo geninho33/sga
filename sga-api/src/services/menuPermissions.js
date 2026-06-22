@@ -83,12 +83,17 @@ export async function setRoleMenuIds(roleId, menuIds) {
 }
 
 export async function getUserRoleIds(userGuid) {
-  const [rows] = await gamPool.query(
-    `SELECT UserMemRoleRoleId AS RoleId FROM usermemrole
-     WHERE UserGUID = :userGuid AND RepId = :repId`,
-    { userGuid, repId: GAM_REP_ID }
-  );
-  return rows.map((r) => Number(r.RoleId));
+  try {
+    const [rows] = await gamPool.query(
+      `SELECT UserMemRoleRoleId AS RoleId FROM usermemrole
+       WHERE UserGUID = :userGuid AND RepId = :repId`,
+      { userGuid, repId: GAM_REP_ID }
+    );
+    return rows.map((r) => Number(r.RoleId));
+  } catch (err) {
+    console.warn("[menuPermissions] GAM indisponível (confira MYSQL_GAM_DATABASE):", err.message);
+    return [];
+  }
 }
 
 export async function setUserRoleIds(userGuid, roleIds, auditUser = "web") {

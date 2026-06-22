@@ -35,15 +35,20 @@ export async function findUsersByLogin(usuario) {
 
 async function loadGamUser(userGuid) {
   if (!userGuid) return null;
-  const [rows] = await gamPool.query(
-    `SELECT UserGUID, UserName, UserPwd, UserPwdEncryption, UserIsAct, UserIsBlk, UserIsDlt
-     FROM user
-     WHERE UserGUID = :userGuid
-       AND UserIsDlt = 0
-     LIMIT 1`,
-    { userGuid }
-  );
-  return rows[0] ?? null;
+  try {
+    const [rows] = await gamPool.query(
+      `SELECT UserGUID, UserName, UserPwd, UserPwdEncryption, UserIsAct, UserIsBlk, UserIsDlt
+       FROM user
+       WHERE UserGUID = :userGuid
+         AND UserIsDlt = 0
+       LIMIT 1`,
+      { userGuid }
+    );
+    return rows[0] ?? null;
+  } catch (err) {
+    console.warn("[auth] GAM indisponível (confira MYSQL_GAM_DATABASE):", err.message);
+    return null;
+  }
 }
 
 async function loadAppPassword(prefCodigo, usuCodigo) {
