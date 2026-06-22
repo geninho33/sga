@@ -114,7 +114,10 @@ const ALIAS = {
   "clipboard-list": "spoon",
   "chevron-left": "chevron-left",
   "chevron-right": "chevron-right",
+  "chevron-down": "chevron-down",
   "right-to-bracket": "arrow-right",
+  "right-from-bracket": "arrow-right",
+  "user-pen": "edit",
 };
 
 function resolveIcon(name) {

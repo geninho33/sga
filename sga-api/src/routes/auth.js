@@ -1,6 +1,14 @@
 import { Router } from "express";
-import { getUserFromTokenClaims, login, verifyToken } from "../services/authService.js";
+import {
+  getUserFromTokenClaims,
+  loadOwnProfile,
+  login,
+  updateOwnProfile,
+  verifyToken,
+} from "../services/authService.js";
+import { requireAuth } from "../middleware/auth.js";
 import { getUserAllowedMenuIds } from "../services/menuPermissions.js";
+import { sendCrudResult } from "../services/preparacaoEntities.js";
 
 const router = Router();
 
@@ -10,6 +18,15 @@ router.post("/login", async (req, res, next) => {
     const session = await login(usuario, senha);
     if (session.user.usuGUID) {
       session.user.allowedMenuIds = await getUserAllowedMenuIds(session.user.usuGUID);
+      const profile = await loadOwnProfile({
+        prefCodigo: session.user.prefCodigo,
+        usuCodigo: session.user.usuCodigo,
+      });
+      if (profile) {
+        session.user.usuEmail = profile.UserEMail || session.user.usuEmail;
+        session.user.gender = profile.Gender || "N";
+        session.user.phone = profile.Phone || "";
+      }
     } else {
       session.user.allowedMenuIds = null;
     }
@@ -42,6 +59,7 @@ router.get("/me", async (req, res, next) => {
 
     const usuGUID = user.usuGUID?.trim() || null;
     const allowedMenuIds = usuGUID ? await getUserAllowedMenuIds(usuGUID) : null;
+    const profile = await loadOwnProfile(claims);
 
     res.json({
       user: {
@@ -49,12 +67,15 @@ router.get("/me", async (req, res, next) => {
         usuCodigo: user.usuCodigo,
         usuUsuario: user.usuUsuario?.trim(),
         usuNome: user.usuNome?.trim(),
-        usuEmail: user.usuEmail?.trim() || null,
+        usuEmail: profile?.UserEMail || user.usuEmail?.trim() || null,
         usuGUID,
         prefNome: user.prefNome?.trim(),
         prefMunicipio: user.PrefMunicipio?.trim(),
         allowedMenuIds,
+        gender: profile?.Gender || "N",
+        phone: profile?.Phone || "",
       },
+      profile,
     });
   } catch (err) {
     next(err);
@@ -63,6 +84,38 @@ router.get("/me", async (req, res, next) => {
 
 router.post("/logout", (_req, res) => {
   res.json({ ok: true });
+});
+
+router.put("/profile", requireAuth, async (req, res, next) => {
+  try {
+    const header = req.headers.authorization || "";
+    const match = header.match(/^Bearer\s+(.+)$/i);
+    const claims = verifyToken(match[1]);
+    const result = await updateOwnProfile(claims, req.body || {});
+    if (result.error) {
+      return sendCrudResult(res, result);
+    }
+    const user = await getUserFromTokenClaims(claims);
+    const profile = result.data;
+    res.json({
+      data: profile,
+      user: {
+        prefCodigo: user.prefCodigo,
+        usuCodigo: user.usuCodigo,
+        usuUsuario: user.usuUsuario?.trim(),
+        usuNome: user.usuNome?.trim(),
+        usuEmail: profile?.UserEMail || user.usuEmail?.trim() || null,
+        usuGUID: user.usuGUID?.trim() || null,
+        prefNome: user.prefNome?.trim(),
+        prefMunicipio: user.PrefMunicipio?.trim(),
+        gender: profile?.Gender || "N",
+        phone: profile?.Phone || "",
+      },
+      message: "Dados atualizados.",
+    });
+  } catch (err) {
+    next(err);
+  }
 });
 
 export default router;
