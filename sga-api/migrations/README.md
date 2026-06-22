@@ -16,6 +16,17 @@ npm run migrate          # aplica pendentes
 npm run migrate:status   # lista aplicadas e pendentes
 ```
 
+### Base oficial (backup + preparação)
+
+Com credenciais em variáveis de ambiente (`MYSQL_HOST`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`, `MYSQL_GAM_DATABASE`):
+
+```bash
+node scripts/remote-db-prep.mjs   # backup das duas bases + migrations + triggers + croLocSeq
+node scripts/remote-db-finish.mjs # apenas triggers/croLocSeq (se o prep falhar no meio)
+```
+
+Backups ficam em `backups/<timestamp>/` na raiz do repositório (não versionados).
+
 Na subida da API (`npm run dev` / `start`), migrations pendentes são aplicadas automaticamente (mesmo comportamento anterior do `ensureAuthTables`).
 
 ## Controle
