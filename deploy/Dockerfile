@@ -27,8 +27,8 @@ COPY sga-api/scripts ./scripts
 COPY sga-api/migrations ./migrations
 
 COPY --from=web-build /build/web/dist /usr/share/nginx/html
-COPY docker/nginx.conf /etc/nginx/nginx.conf
-COPY docker/entrypoint.sh /entrypoint.sh
+COPY deploy/nginx.conf /etc/nginx/nginx.conf
+COPY deploy/entrypoint.sh /entrypoint.sh
 RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
 
 ENV NODE_ENV=production

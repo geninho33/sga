@@ -1,8 +1,8 @@
 services:
   sga:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: deploy/Dockerfile
     image: sga-alimentacao-escolar:latest
     container_name: sga-alimentacao-escolar
     restart: unless-stopped

@@ -1,9 +1,19 @@
 #!/usr/bin/env bash
 # Deploy / atualização do SGA Alimentação Escolar (Docker)
+#
+# Servidor: 186.233.89.56
+# DNS:      sga.sgebr.net.br
+# Caminho:   /var/alimentacao-escolar
+#
+# Uso no servidor:
+#   cd /var/alimentacao-escolar/deploy
+#   cp .env.example .env   # primeira vez — edite senhas
+#   chmod +x deploy.sh && ./deploy.sh [branch]
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$ROOT"
+DEPLOY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$DEPLOY/.." && pwd)"
+cd "$DEPLOY"
 
 BRANCH="${1:-main}"
 COMPOSE="docker compose"
@@ -15,12 +25,12 @@ log() { printf '\n[deploy] %s\n' "$*"; }
 
 if [[ ! -f .env ]]; then
   if [[ -f .env.example ]]; then
-    log "Arquivo .env não encontrado — copiando de .env.example"
+    log "Arquivo deploy/.env não encontrado — copiando de .env.example"
     cp .env.example .env
-    log "Edite .env (MYSQL_PASSWORD, JWT_SECRET) antes de continuar."
+    log "Edite deploy/.env (MYSQL_PASSWORD, JWT_SECRET) antes de continuar."
     exit 1
   fi
-  log "ERRO: crie o arquivo .env (veja .env.example)"
+  log "ERRO: crie o arquivo deploy/.env (veja deploy/.env.example)"
   exit 1
 fi
 
@@ -29,10 +39,10 @@ source .env 2>/dev/null || true
 HTTP_PORT="${SGA_HTTP_PORT:-13080}"
 
 if [[ -z "${JWT_SECRET:-}" || "${JWT_SECRET}" == "altere-este-segredo-em-producao" ]]; then
-  log "AVISO: defina JWT_SECRET forte no .env"
+  log "AVISO: defina JWT_SECRET forte no deploy/.env"
 fi
 if [[ -z "${MYSQL_PASSWORD:-}" ]]; then
-  log "AVISO: MYSQL_PASSWORD vazio no .env"
+  log "AVISO: MYSQL_PASSWORD vazio no deploy/.env"
 fi
 
 port_in_use() {
@@ -58,16 +68,16 @@ if port_in_use; then
   else
     log "ERRO: porta ${HTTP_PORT} já está em uso por outro processo:"
     port_owner
-    log "Altere SGA_HTTP_PORT no .env (ex.: 13081) e atualize o upstream em docker/nginx-host-https.conf"
+    log "Altere SGA_HTTP_PORT no deploy/.env (ex.: 13081) e atualize deploy/nginx-host-https.conf"
     exit 1
   fi
 fi
 
-if command -v git >/dev/null 2>&1 && [[ -d .git ]]; then
-  log "Atualizando código (git pull origin ${BRANCH})..."
-  git fetch origin "$BRANCH"
-  git checkout "$BRANCH"
-  git pull origin "$BRANCH"
+if command -v git >/dev/null 2>&1 && [[ -d "$ROOT/.git" ]]; then
+  log "Atualizando código em ${ROOT} (git pull origin ${BRANCH})..."
+  git -C "$ROOT" fetch origin "$BRANCH"
+  git -C "$ROOT" checkout "$BRANCH"
+  git -C "$ROOT" pull origin "$BRANCH"
 else
   log "Git não disponível ou não é repositório — usando código local."
 fi
@@ -90,7 +100,6 @@ else
   log "Causas comuns: MYSQL_HOST/PORT incorretos, senha vazia, migrations falhando."
 fi
 
-HTTP_PORT="${SGA_HTTP_PORT:-13080}"
 log "Container HTTP: http://127.0.0.1:${HTTP_PORT}"
-log "Produção HTTPS: configure docker/nginx-host-https.conf no Nginx do host (proxy → :${HTTP_PORT})"
+log "Produção HTTPS: https://sga.sgebr.net.br (nginx-host-https.conf → :${HTTP_PORT})"
 log "Deploy concluído."
