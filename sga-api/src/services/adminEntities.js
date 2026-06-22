@@ -5,6 +5,7 @@ import { hashGamPassword } from "./gamPassword.js";
 import {
   GAM_DEFAULT_USER_LNG,
   dataTooLongErrorMessage,
+  mysqlDuplicateErrorMessage,
   mysqlFieldErrorMessage,
   normalizeGamUserInput,
 } from "./gamUserFields.js";
@@ -205,10 +206,9 @@ function newGamGuid() {
   return crypto.randomUUID();
 }
 
-async function nextUsuarioCodigo(prefCodigo) {
+async function nextUsuarioCodigo() {
   const [rows] = await pool.query(
-    `SELECT COALESCE(MAX(usuCodigo), 0) + 1 AS n FROM trnsusuarios WHERE prefCodigo = :prefCodigo`,
-    { prefCodigo }
+    `SELECT COALESCE(MAX(usuCodigo), 0) + 1 AS n FROM trnsusuarios`
   );
   return Number(rows[0].n);
 }
@@ -224,22 +224,24 @@ export async function syncSgeUsuario(userGuid, body) {
   const login = clip(body.UserName, 20);
 
   const [existing] = await pool.query(
-    `SELECT prefCodigo, usuCodigo FROM trnsusuarios WHERE usuGUID = :userGuid LIMIT 1`,
-    { userGuid }
+    `SELECT prefCodigo, usuCodigo FROM trnsusuarios
+     WHERE usuGUID = :userGuid AND prefCodigo = :prefCodigo
+     LIMIT 1`,
+    { userGuid, prefCodigo }
   );
 
   if (existing.length) {
     await pool.query(
       `UPDATE trnsusuarios
-       SET prefCodigo = :prefCodigo, usuCargo = :carCodigo, usuNome = :nome, usuEmail = :email,
+       SET usuCargo = :carCodigo, usuNome = :nome, usuEmail = :email,
            usuUsuario = :login, usuStatus = 'A', usuDataAlt = CURDATE()
-       WHERE usuGUID = :userGuid`,
+       WHERE usuGUID = :userGuid AND prefCodigo = :prefCodigo`,
       { userGuid, prefCodigo, carCodigo, nome, email, login }
     );
     return;
   }
 
-  const usuCodigo = await nextUsuarioCodigo(prefCodigo);
+  const usuCodigo = await nextUsuarioCodigo();
 
   await pool.query(
     `INSERT INTO trnsusuarios (
@@ -309,7 +311,7 @@ export async function createGamUserEntry(body) {
       return { error: dataTooLongErrorMessage(err) };
     }
     if (err.code === "ER_DUP_ENTRY") {
-      return { error: "Login ou cadastro duplicado." };
+      return { error: mysqlDuplicateErrorMessage(err) };
     }
     return { error: mysqlFieldErrorMessage(err) };
   }
@@ -366,7 +368,7 @@ async function createGamUserEntryInner(body) {
       }
     );
   } catch (err) {
-    if (err.code === "ER_DUP_ENTRY") return { error: "Login já cadastrado" };
+    if (err.code === "ER_DUP_ENTRY") return { error: mysqlDuplicateErrorMessage(err) };
     throw err;
   }
 
@@ -374,6 +376,7 @@ async function createGamUserEntryInner(body) {
     await syncSgeUsuario(userGuid, { ...body, ...normalized, UserName: userName });
   } catch (err) {
     await gamPool.query(`DELETE FROM user WHERE UserGUID = :userGuid`, { userGuid }).catch(() => {});
+    if (err.code === "ER_DUP_ENTRY") return { error: mysqlDuplicateErrorMessage(err) };
     throw err;
   }
   return { data: await loadGamUserEntry(userGuid) };
@@ -388,7 +391,7 @@ export async function updateGamUserEntry(userGuid, body) {
       return { error: dataTooLongErrorMessage(err) };
     }
     if (err.code === "ER_DUP_ENTRY") {
-      return { error: "Login ou cadastro duplicado no SGE." };
+      return { error: mysqlDuplicateErrorMessage(err) };
     }
     return { error: mysqlFieldErrorMessage(err) };
   }

@@ -67,6 +67,20 @@ const MYSQL_FIELD_LABELS = {
   UserIsDevice: "Usuário dispositivo",
 };
 
+export function mysqlDuplicateErrorMessage(err) {
+  const msg = String(err?.sqlMessage || err?.message || "");
+  if (/user\.|UserName|UUSER/i.test(msg)) {
+    return "Login já cadastrado no GAM.";
+  }
+  if (/usuCodigo|PRIMARY/i.test(msg)) {
+    return "Conflito ao gerar o código do usuário no SGE. Tente salvar novamente.";
+  }
+  if (/usuUsuario|Itrnsusuarios/i.test(msg)) {
+    return "Login já cadastrado nesta prefeitura.";
+  }
+  return "Login ou cadastro duplicado.";
+}
+
 export function mysqlFieldErrorMessage(err) {
   if (err?.code === "ER_DATA_TOO_LONG") return dataTooLongErrorMessage(err);
   const message = String(err?.sqlMessage || err?.message || "");
