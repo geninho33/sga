@@ -1,0 +1,2678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="15234b14-479f-08ea-1bb1-e8499edfd4ba" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-10T14:36:07.0000000Z" lastUpdate="2024-10-10T14:22:48.0000000Z" checksum="b5199960b8814856174567393ae50858" fullyQualifiedName="trnsnotaitensWW" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="0d0dfd22-7e07-48fc-b35f-6fe4d3c17581" name="trnsnotaitensWW" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description=" Itens da Nota Fiscal" parent="WorkWithPlustrnsnotaitens" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;PanelNoHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value /&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableHeader" tableType="Flex" flexDirection="Column" containerSlotName="TableHeader"><row><cell><group controlName="UnnamedGroup1" caption="  Compra " class="Group"><table controlName="grupoCompra" tableType="Responsive" responsiveSizes="[]"><row><cell><data attribute="&amp;dadosNota" labelPosition="None" readonly="True" class="ReadonlyAttribute" /></cell></row></table></group></cell><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableActions" tableType="Flex"><row><cell flexGrow="0"><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell><cell flexGrow="0"><table controlName="TableRightHeader" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableFilters" /></cell></row></table></cell></row></table></cell><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="UnnamedTableInLineInsert" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableGridWrapper" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;trnsnotaitens&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;notaItemProdutoDescricao  when &amp;amp;OrderedBy = 1&#xD;&#xA;prefCodigo notaCodigo notaItemProduto  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemProduto)  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo notaCodigo notaItemProdutoUnidade  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemProdutoUnidade)  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo notaCodigo notaItemProdutoUndPeso  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemProdutoUndPeso)  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo notaCodigo notaItemProdutoPeso  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemProdutoPeso)  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo notaCodigo notaItemLote  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemLote)  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo notaCodigo notaItemValidade  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemValidade)  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo notaCodigo notaItemQtde  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemQtde)  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo notaCodigo notaItemValor  when &amp;amp;OrderedBy = 9 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (notaCodigo) (notaItemValor)  when &amp;amp;OrderedBy = 9 AND &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-trnsnotaitensWWDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;prefCodigo, &amp;amp;notaCodigo, &amp;amp;TFnotaItemProduto, &amp;amp;TFnotaItemProduto_To, &amp;amp;TFnotaItemProdutoUnidade, &amp;amp;TFnotaItemProdutoUnidade_Sel, &amp;amp;TFnotaItemProdutoUndPeso, &amp;amp;TFnotaItemProdutoUndPeso_Sel, &amp;amp;TFnotaItemProdutoPeso, &amp;amp;TFnotaItemProdutoPeso_To, &amp;amp;TFnotaItemLote, &amp;amp;TFnotaItemLote_Sel, &amp;amp;TFnotaItemValidade, &amp;amp;TFnotaItemValidade_To, &amp;amp;TFnotaItemQtde, &amp;amp;TFnotaItemQtde_To, &amp;amp;TFnotaItemValor, &amp;amp;TFnotaItemValor_To, &amp;amp;TFnotaItemTotal, &amp;amp;TFnotaItemTotal_To, &amp;amp;TFnotaItemPesoTotal, &amp;amp;TFnotaItemPesoTotal_To&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;EditableGridCancel" titleExp="" class="DeleteAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridCancel'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Update" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_update&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Delete" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigo" titleExp="Prefeitura" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemProduto_Editable" titleExp="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemProduto" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemProdutoDescricao" titleExp="Descrição" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemProdutoUnidade_Editable" titleExp="Unidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;uniCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;uniDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo =  &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemProdutoUnidade" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemProdutoSaldo" titleExp="Saldo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemProdutoUndPeso" titleExp="Und Peso" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemProdutoPeso" titleExp="Peso" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemLote_Editable" titleExp="Lote" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemLote" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemValidade_Editable" titleExp="Validade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemValidade" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemQtde_Editable" titleExp="Quantidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemQtde" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemValor_Editable" titleExp="Valor" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemValor" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemTotal" titleExp="Total" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="notaItemPesoTotal" titleExp="Peso Total" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EditableGridConfirm" titleExp="" class="SelectAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridConfirm'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></cell></row><row><cell><table controlName="TableGridInsertLine" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="GridInsertLine" class="GridWithBorderColor WorkWith"><item attribute="&amp;EditableGridCancel2" titleExp="" class="DeleteAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridCancel'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemProduto_Editable2" titleExp="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemProdutoUnidade_Editable2" titleExp="Unidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;uniCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;uniDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo =  &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemProdutoUndPeso_Editable2" titleExp="Und Peso" class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemProdutoPeso_Editable2" titleExp="Peso" class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemLote_Editable2" titleExp="Lote" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemValidade_Editable2" titleExp="Validade" class="AttributeRealWidthDate" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemQtde_Editable2" titleExp="Quantidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemValor_Editable2" titleExp="Valor" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemTotal_Editable2" titleExp="Total" class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemPesoTotal_Editable2" titleExp="Peso Total" class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EditableGridConfirm2" titleExp="" class="SelectAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridInsertLineConfirm'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="ActionGroupGrouped"><item><action controlName="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_insert&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnRomaneios" onClickEvent="'DoRomaneios'" caption="Romaneios" /></item><item><action controlName="BtnbtnRetornar" onClickEvent="'DobtnRetornar'" caption="Retornar" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GXBootstrap.DDOExtendedCombo ControlName="Combo_notaItemProduto" Cls="ExtendedCombo" IsGridItem="True" DropDownOptionsData="&amp;notaItemProduto_Data" /><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="5:notaItemProduto|8:notaItemProdutoUnidade|11:notaItemProdutoUndPeso|12:notaItemProdutoPeso|13:notaItemLote|15:notaItemValidade|17:notaItemQtde|19:notaItemValor|21:notaItemTotal|22:notaItemPesoTotal" ColumnsSortValues="2|3|4|5|6|7|8|9||" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T|T|T|T|T|T|T|T||" IncludeFilter="T" FilterType="Numeric|Character|Character|Numeric|Character|Date|Numeric|Numeric|Numeric|Numeric" FilterIsRange="T|||T||P|T|T|T|T" IncludeDataList="|T|T||T|||||" DataListType="|Dynamic|Dynamic||Dynamic|||||" DataListProc="trnsnotaitensWWGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsnotaitensWWGetFilterData" Format="8.0|||18.3|||12.4|15.4|15.4|15.4" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" /><DIV classref="Invisible" id="DDO_notaItemValidadeAuxDates"><gxAttribute AttID="&amp;DDO_notaItemValidadeAuxDateText" /><gxWWP.DateRangePicker ControlName="TFnotaItemValidade_RangePicker" DateRangePickerStartDate="&amp;DDO_notaItemValidadeAuxDate" DateRangePickerEndDate="&amp;DDO_notaItemValidadeAuxDateTo" /></DIV></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+parm(in:&prefCodigo, in:&notaCodigo);
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	&dadosNota = ''
+	For each
+		Where prefCodigo = &prefCodigo
+		Where notaCodigo = &notaCodigo
+
+		&dadosNota = ' Nota nr. : ' + notaNumero +' - Série : ' + notaSerie +' - Data : ' + notaData.ToString() + ' - Fornecedor : '+ notaFornecedorNome
+		&notaStatus = notaStatus
+
+//		For each trnsfornecedores
+//			Where forCodigo = notaFornecedor
+//			Where prefCodigo = &prefCodigo
+//			&dadosNota += ' - Fornecedor : '+ forNome
+//		EndFor
+
+	    if not notaDsCancelamento.IsEmpty()
+		    &dadosNota += Chr(13) + '  -  Motivo do Cancelamento : '  + notaDsCancelamento
+		endif
+
+		&ExisteVinculoRomaneio = (Count(romanData) > 0)
+	EndFor
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	TFnotaItemValidade_RangePicker.Attach(&DDO_notaItemValidadeAuxDateText.InternalName)
+	Combo_notaItemProduto.TitleControlIdToReplace = &notaItemProduto_Editable.InternalName
+	&notaItemProduto_Editable.HorizontalAlignment = !'Left'
+	Do 'LoadCombonotaItemProduto'
+	
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = ' Itens da Nota Fiscal'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	If &OrderedBy < 1
+		&OrderedBy = 1
+		Do 'SetDDOSortedStatus'
+	EndIf
+	If &HTTPRequest.Method = HttpMethod.Get
+		TableGridInsertLine.Visible = False
+	EndIf
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'CheckSecurityForActions'
+	Do 'SaveGridState'
+
+	If &EditableGrid_IsNotFirst OR &EditableGrid_Mode.IsEmpty()
+		&EditableGrid_Mode = !'TrnMode.Display'
+	EndIf
+	If &EditableGrid_Mode = !'TrnMode.Display'
+		TableGridInsertLine.Visible = False
+		TableGridWrapper.Visible = True
+	Else
+		BtnInsert.Visible = False
+	EndIf
+	&Update.Visible = (&EditableGrid_Mode = !'TrnMode.Display')
+	&Delete.Visible = (&EditableGrid_Mode = !'TrnMode.Display')
+	&EditableGridCancel.Visible = (&EditableGrid_Mode <> !'TrnMode.Display')
+	&EditableGridConfirm.Visible = (&EditableGrid_Mode <> !'TrnMode.Display')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedBy.FromString(DDO_Grid.SelectedValue_get)
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'notaItemProduto'
+					&TFnotaItemProduto.FromString(DDO_Grid.FilteredText_get)
+					&TFnotaItemProduto_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'notaItemProdutoUnidade'
+					&TFnotaItemProdutoUnidade = DDO_Grid.FilteredText_get
+					&TFnotaItemProdutoUnidade_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFnotaItemProdutoUnidade_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'notaItemProdutoUndPeso'
+					&TFnotaItemProdutoUndPeso = DDO_Grid.FilteredText_get
+					&TFnotaItemProdutoUndPeso_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'notaItemProdutoPeso'
+					&TFnotaItemProdutoPeso.FromString(DDO_Grid.FilteredText_get)
+					&TFnotaItemProdutoPeso_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'notaItemLote'
+					&TFnotaItemLote = DDO_Grid.FilteredText_get
+					&TFnotaItemLote_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'notaItemValidade'
+					&TFnotaItemValidade.FromString(DDO_Grid.FilteredText_get)
+					&TFnotaItemValidade_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'notaItemQtde'
+					&TFnotaItemQtde.FromString(DDO_Grid.FilteredText_get)
+					&TFnotaItemQtde_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'notaItemValor'
+					&TFnotaItemValor.FromString(DDO_Grid.FilteredText_get)
+					&TFnotaItemValor_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'notaItemTotal'
+					&TFnotaItemTotal.FromString(DDO_Grid.FilteredText_get)
+					&TFnotaItemTotal_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'notaItemPesoTotal'
+					&TFnotaItemPesoTotal.FromString(DDO_Grid.FilteredText_get)
+					&TFnotaItemPesoTotal_To.FromString(DDO_Grid.FilteredTextTo_get)
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&EditableGridCancel.FromImage(ActionCancel)
+	&EditableGridCancel.TooltipText = "GX_BtnCancel"
+	
+	&Update = !'<i class="fa fa-pen"></i>'
+	If (&notaStatus<>'C' and not &ExisteVinculoRomaneio)
+		&Update.Class = !'Attribute'
+	Else
+		&Update.Class = !'Invisible'
+	Endif
+	&Delete = !'<i class="fa fa-times"></i>'
+	If (&notaStatus<>'C' and not &ExisteVinculoRomaneio)
+		&Delete.Class = !'Attribute'
+	Else
+		&Delete.Class = !'Invisible'
+	Endif
+	&EditableGridConfirm.FromImage(SelectRow)
+	&EditableGridConfirm.TooltipText = "GX_BtnEnter"
+	
+	TableGridInsertLine.Visible = False
+	TableGridWrapper.Visible = True
+	If &EditableGrid_Mode = !'TrnMode.Insert' AND not &EditableGrid_IsNotFirst
+		&EditableGrid_IsNotFirst = True
+		&notaItemProduto_Editable.Enabled = True
+		&notaItemProdutoUnidade_Editable.Enabled = True
+		&notaItemLote_Editable.Enabled = True
+		&notaItemValidade_Editable.Enabled = True
+		&notaItemValidade_Editable.Class = !'AttributeRealWidthDate'
+		&notaItemQtde_Editable.Enabled = True
+		&notaItemValor_Editable.Enabled = True
+		notaItemProdutoUndPeso.Class = !'Invisible'
+		notaItemProdutoPeso.Class = !'Invisible'
+		notaItemTotal.Class = !'Invisible'
+		notaItemPesoTotal.Class = !'Invisible'
+		Grid.Load()
+		notaItemProdutoUndPeso.Class = !'AttributeRealWidth'
+		notaItemProdutoPeso.Class = !'AttributeRealWidth'
+		notaItemTotal.Class = !'AttributeRealWidth'
+		notaItemPesoTotal.Class = !'AttributeRealWidth'
+	EndIf
+	&notaItemProduto_Editable = notaItemProduto
+	&notaItemProdutoUnidade_Editable = notaItemProdutoUnidade
+	&notaItemLote_Editable = notaItemLote
+	&notaItemValidade_Editable = notaItemValidade
+	&notaItemQtde_Editable = notaItemQtde
+	&notaItemValor_Editable = notaItemValor
+
+	If &EditableGrid_Mode <> !'TrnMode.Display'
+		&IsCurrentRecordSelected = False
+		If &EditableGrid_Mode <> !'TrnMode.Insert' AND &notaItemProduto_SelectedLine = notaItemProduto
+			&IsCurrentRecordSelected = True
+		EndIf
+		If &EditableGrid_Mode = !'TrnMode.Delete'
+			&notaItemProduto_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&notaItemProdutoUnidade_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			notaItemProdutoUndPeso.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			notaItemProdutoPeso.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&notaItemLote_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&notaItemValidade_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&notaItemQtde_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&notaItemValor_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			notaItemTotal.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			notaItemPesoTotal.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+		Else
+			&notaItemProduto_Editable.Enabled = False
+			&notaItemProdutoUnidade_Editable.Enabled = &IsCurrentRecordSelected
+			&notaItemLote_Editable.Enabled = &IsCurrentRecordSelected
+			&notaItemValidade_Editable.Enabled = &IsCurrentRecordSelected
+			&notaItemValidade_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidthDate', !'AttributeRealWidth')
+			&notaItemQtde_Editable.Enabled = &IsCurrentRecordSelected
+			&notaItemValor_Editable.Enabled = &IsCurrentRecordSelected
+		EndIf
+		&EditableGridCancel.Class = iif(&IsCurrentRecordSelected, !'DeleteAttribute ActionBaseColorAttribute', !'Invisible')
+		&EditableGridConfirm.Class = iif(&IsCurrentRecordSelected, !'SelectAttribute ActionBaseColorAttribute', !'Invisible')
+	EndIf
+				
+
+	Grid.Load()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoInsert'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		&EditableGrid_Mode = !'TrnMode.Insert'
+		&EditableGrid_IsNotFirst = False
+		
+		&notaItemProduto_SelectedLine.SetEmpty()
+		
+		TableGridWrapper.Visible = False
+		TableGridInsertLine.Visible = True
+		Grid.FirstPage()
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &Update.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&notaItemProduto_SelectedLine = notaItemProduto
+	&EditableGrid_Mode = !'TrnMode.Update'
+	&EditableGrid_IsNotFirst = False
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &Delete.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&notaItemProduto_SelectedLine = notaItemProduto
+	&EditableGrid_Mode = !'TrnMode.Delete'
+	&EditableGrid_IsNotFirst = False
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridConfirm'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TempBoolean = False
+	If &EditableGrid_Mode = !'TrnMode.Insert'
+		If (&IsAuthorized_Insert)
+			&TempBoolean = True
+		Else
+			msg("WWP_ActionNoLongerAvailable")
+			Refresh
+		Endif
+	EndIf
+	If &EditableGrid_Mode = !'TrnMode.Update'
+		&TempBoolean = True
+	EndIf
+	If &EditableGrid_Mode = !'TrnMode.Delete'
+		&TempBoolean = True
+	EndIf
+	
+	If &TempBoolean
+		If &EditableGrid_Mode = !'TrnMode.Insert'
+			&trnsnotaitensEditableGrid = new()
+			&trnsnotaitensEditableGrid.prefCodigo = &prefCodigo
+			&trnsnotaitensEditableGrid.notaCodigo = &notaCodigo
+		Else
+			&trnsnotaitensEditableGrid.Load(prefCodigo, notaCodigo, notaItemProduto)
+		EndIf
+		&Messages = new()
+		If &EditableGrid_Mode = !'TrnMode.Insert' OR &trnsnotaitensEditableGrid.Success()
+			If &EditableGrid_Mode <> !'TrnMode.Delete'
+				If &EditableGrid_Mode = !'TrnMode.Insert'
+					&trnsnotaitensEditableGrid.notaItemProduto = &notaItemProduto_Editable
+				EndIf
+				&trnsnotaitensEditableGrid.notaItemProdutoUnidade = &notaItemProdutoUnidade_Editable
+				&trnsnotaitensEditableGrid.notaItemLote = &notaItemLote_Editable
+				&trnsnotaitensEditableGrid.notaItemValidade = &notaItemValidade_Editable
+				&trnsnotaitensEditableGrid.notaItemQtde = &notaItemQtde_Editable
+				&trnsnotaitensEditableGrid.notaItemValor = &notaItemValor_Editable
+				&trnsnotaitensEditableGrid.Save()
+			Else
+				&trnsnotaitensEditableGrid.Delete()
+			EndIf
+			If &trnsnotaitensEditableGrid.Success()
+				&EditableGrid_Mode = !'TrnMode.Display'
+				&notaItemProduto_SelectedLine.SetEmpty()
+				Commit
+				Refresh
+			Else
+				&Messages = &trnsnotaitensEditableGrid.GetMessages()
+			EndIf
+		Else
+			&Messages = &trnsnotaitensEditableGrid.GetMessages()
+		EndIf
+		If &Messages.Count > 0
+			&notaItemProduto_SelectedLine = notaItemProduto
+			Do 'Show Messages'
+		EndIf
+		
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridCancel'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&notaItemProduto_SelectedLine.SetEmpty()
+	&EditableGrid_Mode = !'TrnMode.Display'
+	TableGridInsertLine.Visible = False
+	TableGridWrapper.Visible = True
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridInsertLineConfirm'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		&trnsnotaitensEditableGrid = new()
+		&trnsnotaitensEditableGrid.prefCodigo = &prefCodigo
+		&trnsnotaitensEditableGrid.notaCodigo = &notaCodigo
+		&trnsnotaitensEditableGrid.notaItemProduto = &notaItemProduto_Editable2
+		&trnsnotaitensEditableGrid.notaItemProdutoUnidade = &notaItemProdutoUnidade_Editable2
+		&trnsnotaitensEditableGrid.notaItemLote = &notaItemLote_Editable2
+		&trnsnotaitensEditableGrid.notaItemValidade = &notaItemValidade_Editable2
+		&trnsnotaitensEditableGrid.notaItemQtde = &notaItemQtde_Editable2
+		&trnsnotaitensEditableGrid.notaItemValor = &notaItemValor_Editable2
+		&trnsnotaitensEditableGrid.Save()
+		&Messages = new()
+		If &trnsnotaitensEditableGrid.Success()
+			&EditableGrid_Mode = !'TrnMode.Display'
+			&notaItemProduto_SelectedLine.SetEmpty()
+			Commit
+			TableGridInsertLine.Visible = False
+			TableGridWrapper.Visible = True
+			Refresh
+		Else
+			&Messages = &trnsnotaitensEditableGrid.GetMessages()
+		EndIf
+		If &Messages.Count > 0
+			TableGridWrapper.Visible = False
+			Do 'Show Messages'
+		EndIf
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridInsertLine.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&EditableGridCancel2.FromImage(ActionCancel)
+	&EditableGridCancel2.TooltipText = "GX_BtnCancel"
+	
+	&EditableGridConfirm2.FromImage(SelectRow)
+	&EditableGridConfirm2.TooltipText = "GX_BtnEnter"
+	
+	GridInsertLine.Load()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoRomaneios'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Romaneios)
+		VinculaRomaneioNota.Call(&prefCodigo, &notaCodigo)
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnRetornar'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_btnRetornar)
+		trnsnotaWW.Call()
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = &OrderedBy.ToString().Trim() + !':' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	BtnInsert.Visible = True
+	&IsAuthorized_Insert = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsnotaitensww_Insert')
+	If not (&IsAuthorized_Insert AND (&notaStatus <> 'C'))
+		BtnInsert.Visible = False
+	Endif
+	&IsAuthorized_Romaneios = SecGAMIsAuthByFunctionalityKey.Udp(!'vincularomaneionota_Execute')
+	If not (&IsAuthorized_Romaneios)
+		BtnRomaneios.Visible = False
+	Endif
+	&IsAuthorized_btnRetornar = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsnotaww_Execute')
+	If not (&IsAuthorized_btnRetornar)
+		BtnbtnRetornar.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'Show Messages'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &Message in &Messages
+		msg(&Message.Description)
+	endfor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+
+	&OrderedBy = &GridState.OrderedBy
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMPRODUTO"
+				&TFnotaItemProduto.FromString(&GridStateFilterValue.Value)
+				&TFnotaItemProduto_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMPRODUTOUNIDADE"
+				&TFnotaItemProdutoUnidade.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMPRODUTOUNIDADE_SEL"
+				&TFnotaItemProdutoUnidade_Sel.FromString(&GridStateFilterValue.Value)
+					&TFnotaItemProdutoUnidade_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMPRODUTOUNDPESO"
+				&TFnotaItemProdutoUndPeso.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMPRODUTOUNDPESO_SEL"
+				&TFnotaItemProdutoUndPeso_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMPRODUTOPESO"
+				&TFnotaItemProdutoPeso.FromString(&GridStateFilterValue.Value)
+				&TFnotaItemProdutoPeso_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMLOTE"
+				&TFnotaItemLote.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMLOTE_SEL"
+				&TFnotaItemLote_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMVALIDADE"
+				&TFnotaItemValidade.FromString(&GridStateFilterValue.Value)
+				&TFnotaItemValidade_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMQTDE"
+				&TFnotaItemQtde.FromString(&GridStateFilterValue.Value)
+				&TFnotaItemQtde_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMVALOR"
+				&TFnotaItemValor.FromString(&GridStateFilterValue.Value)
+				&TFnotaItemValor_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMTOTAL"
+				&TFnotaItemTotal.FromString(&GridStateFilterValue.Value)
+				&TFnotaItemTotal_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFNOTAITEMPESOTOTAL"
+				&TFnotaItemPesoTotal.FromString(&GridStateFilterValue.Value)
+				&TFnotaItemPesoTotal_To.FromString(&GridStateFilterValue.ValueTo)
+		EndCase
+	EndFor
+	DDO_Grid.SelectedText_set = !'|' + iif(&TFnotaItemProdutoUnidade_Sel.IsEmpty(), '', &TFnotaItemProdutoUnidade_SelDsc) + !'||||||||'
+	DDO_Grid.SelectedValue_set = !'|' + iif(&TFnotaItemProdutoUnidade_Sel.IsEmpty(), '', &TFnotaItemProdutoUnidade_Sel.ToString()) + !'|' + WWP_GetFilterVal(&TFnotaItemProdutoUndPeso_Sel.IsEmpty(), &TFnotaItemProdutoUndPeso_Sel) + !'||' + WWP_GetFilterVal(&TFnotaItemLote_Sel.IsEmpty(), &TFnotaItemLote_Sel) + !'|||||'
+	DDO_Grid.FilteredText_set = iif(&TFnotaItemProduto.IsEmpty(), '', &TFnotaItemProduto.ToString()) + !'|' + WWP_GetFilterVal(&TFnotaItemProdutoUnidade.IsEmpty(), &TFnotaItemProdutoUnidade) + !'|' + WWP_GetFilterVal(&TFnotaItemProdutoUndPeso.IsEmpty(), &TFnotaItemProdutoUndPeso) + !'|' + iif(&TFnotaItemProdutoPeso.IsEmpty(), '', &TFnotaItemProdutoPeso.ToString()) + !'|' + WWP_GetFilterVal(&TFnotaItemLote.IsEmpty(), &TFnotaItemLote) + !'|' + iif(&TFnotaItemValidade.IsEmpty(), '', &TFnotaItemValidade.ToString()) + !'|' + iif(&TFnotaItemQtde.IsEmpty(), '', &TFnotaItemQtde.ToString()) + !'|' + iif(&TFnotaItemValor.IsEmpty(), '', &TFnotaItemValor.ToString()) + !'|' + iif(&TFnotaItemTotal.IsEmpty(), '', &TFnotaItemTotal.ToString()) + !'|' + iif(&TFnotaItemPesoTotal.IsEmpty(), '', &TFnotaItemPesoTotal.ToString())
+	DDO_Grid.FilteredTextTo_set = iif(&TFnotaItemProduto_To.IsEmpty(), '', &TFnotaItemProduto_To.ToString()) + !'|||' + iif(&TFnotaItemProdutoPeso_To.IsEmpty(), '', &TFnotaItemProdutoPeso_To.ToString()) + !'||' + iif(&TFnotaItemValidade_To.IsEmpty(), '', &TFnotaItemValidade_To.ToString()) + !'|' + iif(&TFnotaItemQtde_To.IsEmpty(), '', &TFnotaItemQtde_To.ToString()) + !'|' + iif(&TFnotaItemValor_To.IsEmpty(), '', &TFnotaItemValor_To.ToString()) + !'|' + iif(&TFnotaItemTotal_To.IsEmpty(), '', &TFnotaItemTotal_To.ToString()) + !'|' + iif(&TFnotaItemPesoTotal_To.IsEmpty(), '', &TFnotaItemPesoTotal_To.ToString())
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedBy = &OrderedBy
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValue(&GridState, !"TFNOTAITEMPRODUTO", "", not (&TFnotaItemProduto.IsEmpty() AND &TFnotaItemProduto_To.IsEmpty()), 0, &TFnotaItemProduto.ToString().Trim(), iif(&TFnotaItemProduto.IsEmpty(), '', trim(&TFnotaItemProduto.ToFormattedString())), True, &TFnotaItemProduto_To.ToString().Trim(), iif(&TFnotaItemProduto_To.IsEmpty(), '', trim(&TFnotaItemProduto_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFNOTAITEMPRODUTOUNIDADE", "", not &TFnotaItemProdutoUnidade.IsEmpty(), 0, &TFnotaItemProdutoUnidade.ToString().Trim(), trim(&TFnotaItemProdutoUnidade.ToFormattedString()), False, '', '', not &TFnotaItemProdutoUnidade_Sel.IsEmpty(), &TFnotaItemProdutoUnidade_Sel.ToString().Trim(), &TFnotaItemProdutoUnidade_SelDsc)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFNOTAITEMPRODUTOUNDPESO", "", not &TFnotaItemProdutoUndPeso.IsEmpty(), 0, &TFnotaItemProdutoUndPeso, &TFnotaItemProdutoUndPeso, False, '', '', not &TFnotaItemProdutoUndPeso_Sel.IsEmpty(), &TFnotaItemProdutoUndPeso_Sel, &TFnotaItemProdutoUndPeso_Sel)
+	WWP_GridStateAddFilterValue(&GridState, !"TFNOTAITEMPRODUTOPESO", "", not (&TFnotaItemProdutoPeso.IsEmpty() AND &TFnotaItemProdutoPeso_To.IsEmpty()), 0, &TFnotaItemProdutoPeso.ToString().Trim(), iif(&TFnotaItemProdutoPeso.IsEmpty(), '', trim(&TFnotaItemProdutoPeso.ToFormattedString())), True, &TFnotaItemProdutoPeso_To.ToString().Trim(), iif(&TFnotaItemProdutoPeso_To.IsEmpty(), '', trim(&TFnotaItemProdutoPeso_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFNOTAITEMLOTE", "", not &TFnotaItemLote.IsEmpty(), 0, &TFnotaItemLote, &TFnotaItemLote, False, '', '', not &TFnotaItemLote_Sel.IsEmpty(), &TFnotaItemLote_Sel, &TFnotaItemLote_Sel)
+	WWP_GridStateAddFilterValue(&GridState, !"TFNOTAITEMVALIDADE", "", not (&TFnotaItemValidade.IsEmpty() AND &TFnotaItemValidade_To.IsEmpty()), 0, &TFnotaItemValidade.ToString().Trim(), iif(&TFnotaItemValidade.IsEmpty(), '', trim(&TFnotaItemValidade.ToFormattedString())), True, &TFnotaItemValidade_To.ToString().Trim(), iif(&TFnotaItemValidade_To.IsEmpty(), '', trim(&TFnotaItemValidade_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFNOTAITEMQTDE", "", not (&TFnotaItemQtde.IsEmpty() AND &TFnotaItemQtde_To.IsEmpty()), 0, &TFnotaItemQtde.ToString().Trim(), iif(&TFnotaItemQtde.IsEmpty(), '', trim(&TFnotaItemQtde.ToFormattedString())), True, &TFnotaItemQtde_To.ToString().Trim(), iif(&TFnotaItemQtde_To.IsEmpty(), '', trim(&TFnotaItemQtde_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFNOTAITEMVALOR", "", not (&TFnotaItemValor.IsEmpty() AND &TFnotaItemValor_To.IsEmpty()), 0, &TFnotaItemValor.ToString().Trim(), iif(&TFnotaItemValor.IsEmpty(), '', trim(&TFnotaItemValor.ToFormattedString())), True, &TFnotaItemValor_To.ToString().Trim(), iif(&TFnotaItemValor_To.IsEmpty(), '', trim(&TFnotaItemValor_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFNOTAITEMTOTAL", "", not (&TFnotaItemTotal.IsEmpty() AND &TFnotaItemTotal_To.IsEmpty()), 0, &TFnotaItemTotal.ToString().Trim(), iif(&TFnotaItemTotal.IsEmpty(), '', trim(&TFnotaItemTotal.ToFormattedString())), True, &TFnotaItemTotal_To.ToString().Trim(), iif(&TFnotaItemTotal_To.IsEmpty(), '', trim(&TFnotaItemTotal_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFNOTAITEMPESOTOTAL", "", not (&TFnotaItemPesoTotal.IsEmpty() AND &TFnotaItemPesoTotal_To.IsEmpty()), 0, &TFnotaItemPesoTotal.ToString().Trim(), iif(&TFnotaItemPesoTotal.IsEmpty(), '', trim(&TFnotaItemPesoTotal.ToFormattedString())), True, &TFnotaItemPesoTotal_To.ToString().Trim(), iif(&TFnotaItemPesoTotal_To.IsEmpty(), '', trim(&TFnotaItemPesoTotal_To.ToFormattedString())))
+	If not &prefCodigo.IsEmpty()
+		&GridStateFilterValue = new()
+		&GridStateFilterValue.Name = !"PARM_&PREFCODIGO"
+		&GridStateFilterValue.Value = &prefCodigo.ToString()
+		&GridState.FilterValues.Add(&GridStateFilterValue)
+	EndIf
+	If not &notaCodigo.IsEmpty()
+		&GridStateFilterValue = new()
+		&GridStateFilterValue.Name = !"PARM_&NOTACODIGO"
+		&GridStateFilterValue.Value = &notaCodigo.ToString()
+		&GridState.FilterValues.Add(&GridStateFilterValue)
+	EndIf
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"trnsnotaitens"
+
+	&TrnContextAtt = new()
+	&TrnContextAtt.AttributeName = !"prefCodigo"
+	&TrnContextAtt.AttributeValue = &prefCodigo.ToString()
+	&TrnContext.Attributes.Add(&TrnContextAtt)
+
+	&TrnContextAtt = new()
+	&TrnContextAtt.AttributeName = !"notaCodigo"
+	&TrnContextAtt.AttributeValue = &notaCodigo.ToString()
+	&TrnContext.Attributes.Add(&TrnContextAtt)
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadCombonotaItemProduto'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For Each
+		Order prodDescricao
+		Where prefCodigo = &prefCodigo and
+prodStatus = 'A'
+		&Combo_DataItem = new()
+		&Combo_DataItem.ID = prodCodigo.ToString().Trim()
+		&Combo_DataItem.Title = prodDescricao
+		&notaItemProduto_Data.Add(&Combo_DataItem)
+	EndFor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: LoadPrefeitura
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+prefCodigo = &prefCodigo;
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateDynamicFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateDynamicFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.DynamicFilter, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedByAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedByAux</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>de Produto:NOTAITEMPRODUTODESCRICAO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator1</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoDescricao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoDescricao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>de Produto:NOTAITEMPRODUTODESCRICAO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator2</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoDescricao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoDescricao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>de Produto:NOTAITEMPRODUTODESCRICAO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator3</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoDescricao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoDescricao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersRemoving">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersRemoving</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersIgnoreFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersIgnoreFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelFilename">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelFilename</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>512</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>512</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorXML">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorXML</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserCustomValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserCustomValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelector">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelector</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorAux</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersXml">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersXml</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersExecutionStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersExecutionStep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProduto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProduto_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProduto_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoDescricao_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoDescricao_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoUnidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoUnidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoUnidade_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoUnidade_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUnidade</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoSaldo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoSaldo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoSaldo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoSaldo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoSaldo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoSaldo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemQtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemQtde</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemQtde</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemQtde_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemQtde_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemQtde</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemValor">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemValor</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValor</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemValor_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemValor_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValor</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportDataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportDataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Insert">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Insert</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TempBoolean">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TempBoolean</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGrid_Mode">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGrid_Mode</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Messages">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Messages</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsCurrentRecordSelected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsCurrentRecordSelected</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="trnsnotaitensEditableGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>trnsnotaitensEditableGrid</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:trnsnotaitens</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProduto_SelectedLine">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProduto_SelectedLine</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGrid_IsNotFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGrid_IsNotFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProduto_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProduto_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProduto_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProduto_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoDescricao_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoDescricao_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoDescricao_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoDescricao_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoUnidade_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoUnidade_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUnidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoUnidade_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoUnidade_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUnidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoSaldo_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoSaldo_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoSaldo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoSaldo_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoSaldo_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoSaldo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemQtde_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemQtde_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemQtde</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemQtde_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemQtde_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemQtde</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemValor_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemValor_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemValor_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemValor_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridCancel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridCancel</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnCancel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridCancel2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridCancel2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnCancel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridConfirm">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridConfirm</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnEnter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridConfirm2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridConfirm2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnEnter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProduto_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProduto_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProduto_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProduto_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dadosNota">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dadosNota</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaDsCancelamento</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoUnidade_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoUnidade_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUnidade</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoUnidade_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoUnidade_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoUndPeso">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoUndPeso</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUndPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoUndPeso_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoUndPeso_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUndPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoPeso">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoPeso</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemProdutoPeso_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemProdutoPeso_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemPesoTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemPesoTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemPesoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemPesoTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemPesoTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemPesoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemPesoTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemPesoTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemPesoTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoUndPeso_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoUndPeso_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUndPeso</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoUndPeso_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoUndPeso_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoUndPeso</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoPeso_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoPeso_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoPeso</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProdutoPeso_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProdutoPeso_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProdutoPeso</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemValidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemValidade_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemValidade_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_notaItemValidadeAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_notaItemValidadeAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_notaItemValidadeAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_notaItemValidadeAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_notaItemValidadeAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_notaItemValidadeAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemLote">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemLote</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemLote</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFnotaItemLote_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFnotaItemLote_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemLote</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemValidade_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemValidade_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemValidade_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemValidade_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemLote_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemLote_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemLote</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemLote_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemLote_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemLote</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaStatus">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaStatus</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Status</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Romaneios">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Romaneios</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExisteVinculoRomaneio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExisteVinculoRomaneio</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnRetornar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnRetornar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProduto_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProduto_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsnotaitensWW</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value> Itens da Nota Fiscal</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsnotaitens</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>Selection</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

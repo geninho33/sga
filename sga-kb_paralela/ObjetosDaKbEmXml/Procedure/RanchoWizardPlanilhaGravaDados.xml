@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-25T15:51:42.0000000Z" lastUpdate="2025-06-25T04:08:30.0000000Z" checksum="d419d72d49ae040b9ba60cf61a7f1ff0" fullyQualifiedName="RanchoWizardPlanilhaGravaDados" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="43da6c0d-1abf-49f8-85ad-652754375292" name="RanchoWizardPlanilhaGravaDados" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Rancho Wizard Planilha Grava Dados" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+// Carrega dados Context
+LoadWWPContext(&WWPContext)
+&prefCodigo = &WWPContext.prefCodigo
+
+// Carrega dados do WizardData
+&WizardData.FromXml(FileXmlToWizardData(&WebSessionKey))
+
+do 'GravaDadosRancho'
+
+do 'GravaRemessa'
+
+do 'GravaDistribuicao'
+
+
+Sub 'GravaRemessa'
+
+	/* Registra remessa */
+	&dataInicial = &WizardData.Periodo.DataInicial
+	&dataFinal   = &WizardData.Periodo.DataFinal
+	&remCodigo	 = PRCDGerarNovoCodigo('remessas')
+
+	New
+		prefCodigo		 = &prefCodigo
+		remCodigo		 = &remCodigo
+		remStatus		 = Status.Ativo
+		remCadastro		 = ServerDate()
+		remAlteracao	 = ServerDate()
+		remUsuario		 = &WWPContext.UserName +' | IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+		remGerSemana1Ini = &dataInicial
+		remGerSemana1Fim = &dataFinal
+//		remGerSemana2Ini
+//		remGerSemana2Fim
+//		remGerSemana3Ini
+//		remGerSemana3Fim
+//		remGerSemana4Ini
+//		remGerSemana4Fim
+//		remGerSemana5Ini
+//		remGerSemana5Fim
+		remRancho		 = true
+	EndNew
+
+//	&trnsRemessas = new()
+//	&trnsRemessas.remStatus 		= Status.Ativo
+//	&trnsRemessas.remRancho			= true
+//	&trnsRemessas.remGerSemana1Ini 	= &dataInicial
+//	&trnsRemessas.remGerSemana1Fim 	= &dataFinal
+//
+//	&trnsRemessas.Insert()
+//	if &trnsRemessas.Fail()
+//		&IsSucess = false
+//		&Messages = &trnsRemessas.GetMessages()
+//		//		log.Error(&Messages.ToJson(),'GeraDistribuicao.Rollback')
+//		Rollback
+//		Return
+//	else
+//		&IsSucess = true
+//		&remCodigo = &trnsRemessas.remCodigo
+//		Commit
+//	endif
+
+	/* Registra atendimento da remessa */
+	for &PessoasGridItem in &WizardData.Pessoas2.Grid
+
+		/* Berçario 1 */
+		if &PessoasGridItem.Bercario1 > 0
+			&AreEnsCodigo 		= 1
+			&AreEnsSequencial 	= 1
+			&AreEnsTurno		= turno.Int
+			&locCodigo			= &PessoasGridItem.locCodigo
+			&remNormal			= &PessoasGridItem.Bercario1
+			do 'GravaAtendimentoRemessa'
+		endif
+
+		/* Berçario 2 */
+		if &PessoasGridItem.Bercario2 > 0
+			&AreEnsCodigo 		= 2
+			&AreEnsSequencial 	= 2
+			&AreEnsTurno		= turno.Int
+			&locCodigo			= &PessoasGridItem.locCodigo
+			&remNormal			= &PessoasGridItem.Bercario2
+			do 'GravaAtendimentoRemessa'
+		endif
+
+		/* Creche */
+		if &PessoasGridItem.Creche > 0
+			&AreEnsCodigo 		= 3
+			&AreEnsSequencial 	= 3
+			&AreEnsTurno		= turno.Int
+			&locCodigo			= &PessoasGridItem.locCodigo
+			&remNormal			= &PessoasGridItem.Creche
+			do 'GravaAtendimentoRemessa'
+		endif
+
+		/* EMEB */
+		if &PessoasGridItem.Emeb > 0
+			&AreEnsCodigo 		= 4
+			&AreEnsSequencial 	= 4
+			&AreEnsTurno		= turno.Int
+			&locCodigo			= &PessoasGridItem.locCodigo
+			&remNormal			= &PessoasGridItem.Emeb
+			do 'GravaAtendimentoRemessa'
+		endif
+
+		/* Integral */
+		if &PessoasGridItem.Integral > 0
+			&AreEnsCodigo 		= 5
+			&AreEnsSequencial 	= 5
+			&AreEnsTurno		= turno.Int
+			&locCodigo			= &PessoasGridItem.locCodigo
+			&remNormal			= &PessoasGridItem.Integral
+			do 'GravaAtendimentoRemessa'
+		endif
+
+	endfor
+
+EndSub
+
+Sub 'GravaAtendimentoRemessa'
+	New
+		prefCodigo    	  	= &prefCodigo
+		remCodigo    		= &remCodigo
+		remAreEnsCodigo 	= &AreEnsCodigo
+		remAreEnsSequencial = &AreEnsSequencial
+		remAreEnsTurno	  	= &AreEnsTurno
+		remLocal      	  	= &locCodigo
+		remNormal     	 	= &remNormal
+	EndNew
+EndSub
+
+Sub 'GravaDistribuicao'
+
+	&distDataEnvio  = &WizardData.Periodo.DataEnvio
+	&remTipoRemessa = &WizardData.Alimentos.prodCodigoTipoRemessa
+
+	/* Busca local de origem */
+	For each
+		Where prefCodigo = &prefCodigo
+	  	&distLocalOrigem = prefLocalDeposito
+  	When none
+	  	&distLocalOrigem = 0
+	Endfor
+
+	&locCodigo = 0
+	for &GuiasGridItem in &WizardData.Guias.Grid
+		if &locCodigo <> &GuiasGridItem.locCodigo
+			&locCodigo = &GuiasGridItem.locCodigo
+			&distObservacao = &GuiasGridItem.distObservacao
+//			log.Info(&locCodigo.ToString(),'CabeçalhoDistribuicao')
+			&distCodigo = PRCDSalvarCabecalhoDistribuicao(&prefCodigo,&remCodigo,&locCodigo,&distDataEnvio,&distLocalOrigem,&remTipoRemessa,&dataInicial,&dataFinal,&distObservacao)
+		endif
+
+		&prodCodigo 		= &GuiasGridItem.prodCodigo
+		&AreEnsCodigo 		= 0
+		&AreEnsSequencial 	= 0
+		&AreEnsTurno		= turno.Int
+		&Quantidade			= &GuiasGridItem.Quantidade
+		&PerCapta			= 1
+//		log.Info(&distCodigo.ToString(),'ItemDistribuicao')
+	  	PRCDSalvarRemessaAlimentos(&prefCodigo,&remCodigo,&prodCodigo,&AreEnsCodigo,&AreEnsSequencial,&AreEnsTurno,&Quantidade,&PerCapta,&distCodigo,&dataInicial,&dataFinal,0)
+
+		/* Atualiza estoque */
+//		log.Info(&prodCodigo.ToString(),'Estoque')
+		PRCDEstoqueMovimentacao(&distCodigo,&prodCodigo,&distLocalOrigem,&Quantidade,'RD','N',0,&Retorno)
+
+	endfor
+
+Endsub
+
+Sub 'GravaDadosRancho'
+
+	&Rancho = new()
+	&Rancho.prefCodigo 		= &prefCodigo
+	&Rancho.RanchoAno		= &WizardData.Periodo.DataEnvio.Year()
+	&Rancho.RanchoMes		= Meses.Convert(&WizardData.Periodo.DataEnvio.Month())
+	&Rancho.RanchoDataEnvio	= &WizardData.Periodo.DataEnvio
+
+	/* Carrega dados da área de ensino */
+	&AreEnsCodigo = 1 // Berçario 1
+	do 'CarregaDadosAreaEnsino'
+
+	&AreEnsCodigo = 2 // Berçario 2
+	do 'CarregaDadosAreaEnsino'
+
+	&AreEnsCodigo = 3 // Creche
+	do 'CarregaDadosAreaEnsino'
+
+	&AreEnsCodigo = 4 // EMEB
+	do 'CarregaDadosAreaEnsino'
+
+	&AreEnsCodigo = 5 // Integral
+	do 'CarregaDadosAreaEnsino'
+
+	&AreEnsCodigo = 99999997 // Funcionários
+	do 'CarregaDadosAreaEnsino'
+
+//	log.Info(&Rancho.ToJson(),&Pgmname + '.Rancho')
+
+	/* Grava os dados */
+	&Rancho.InsertOrUpdate()
+	if &Rancho.Fail()
+		&IsSucess = false
+		&Messages = &Rancho.GetMessages()
+//		log.Error(&Messages.ToJson(),'GravaDadosRancho.Rollback')
+		Rollback
+		Return
+	else
+		&IsSucess = true
+		Commit
+	endif
+
+Endsub
+
+Sub 'CarregaDadosAreaEnsino'
+
+	&RanchoAreasEnsino = new()
+	&RanchoAreasEnsino.RanchoAreasEnsinoCodigo = &AreEnsCodigo
+
+	/* Quantidade de pessoas atendidas */
+	for &PessoasGridItem in &WizardData.Pessoas2.Grid
+
+		&RanchoAreasEnsinoPessoas = new()
+		&RanchoAreasEnsinoPessoas.locCodigo = &PessoasGridItem.locCodigo
+		&RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade = 0
+
+		do case
+			case &AreEnsCodigo = 1
+				&RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade = &PessoasGridItem.Bercario1
+			case &AreEnsCodigo = 2
+				&RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade = &PessoasGridItem.Bercario2
+			case &AreEnsCodigo = 3
+				&RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade = &PessoasGridItem.Creche
+			case &AreEnsCodigo = 4
+				&RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade = &PessoasGridItem.Emeb
+			case &AreEnsCodigo = 5
+				&RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade = &PessoasGridItem.Integral
+			case &AreEnsCodigo = 99999997
+				&RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade = &PessoasGridItem.Funcionarios
+		endcase
+
+		if &RanchoAreasEnsinoPessoas.RanchoAreasEnsinoPessoasQuantidade > 0
+			&RanchoAreasEnsino.Pessoas.Add(&RanchoAreasEnsinoPessoas)
+		endif
+
+	endfor
+
+	/* Valor das Per Captas por produto */
+	for &PerCaptaGridItem in &WizardData.PerCapta2.Grid
+
+		&RanchoAreasEnsinoPerCapta = new()
+		&RanchoAreasEnsinoPerCapta.prodCodigo = &PerCaptaGridItem.prodCodigo
+
+		do case
+			case &AreEnsCodigo = 1
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaValor  = &PerCaptaGridItem.Bercario1PerCapta
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaOferta = &PerCaptaGridItem.Bercario1Oferta
+			case &AreEnsCodigo = 2
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaValor  = &PerCaptaGridItem.Bercario2PerCapta
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaOferta = &PerCaptaGridItem.Bercario2Oferta
+			case &AreEnsCodigo = 3
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaValor  = &PerCaptaGridItem.CrechePerCapta
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaOferta = &PerCaptaGridItem.CrecheOferta
+			case &AreEnsCodigo = 4
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaValor  = &PerCaptaGridItem.EmebPerCapta
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaOferta = &PerCaptaGridItem.EmebOferta
+			case &AreEnsCodigo = 5
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaValor  = &PerCaptaGridItem.IntegralPerCapta
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaOferta = &PerCaptaGridItem.IntegralOferta
+			case &AreEnsCodigo = 99999997
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaValor  = &PerCaptaGridItem.FuncionarioPerCapta
+				&RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaOferta = &PerCaptaGridItem.FuncionarioOferta
+		endcase
+
+		if &RanchoAreasEnsinoPerCapta.RanchoAreasEnsinoPerCaptaValor > 0
+			&RanchoAreasEnsino.PerCapta.Add(&RanchoAreasEnsinoPerCapta)
+		endif
+
+	endfor
+
+	&Rancho.AreasEnsino.Add(&RanchoAreasEnsino)
+
+Endsub
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&WebSessionKey,out:&remCodigo,out:&Messages,out:&IsSucess);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área de Ensino</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Sequencial</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsTurno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:turno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Envio</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigem</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Origem</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GuiasGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GuiasGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Guias.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSucess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSucess</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Messages">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Messages</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PerCaptaGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PerCaptaGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.PerCapta2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PessoasGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PessoasGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Pessoas2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Quantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Quantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Rancho">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Rancho</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Rancho</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoAreasEnsino">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoAreasEnsino</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Rancho.AreasEnsino</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoAreasEnsinoPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoAreasEnsinoPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Rancho.AreasEnsino.PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoAreasEnsinoPessoas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoAreasEnsinoPessoas</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Rancho.AreasEnsino.Pessoas</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo de Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Retorno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Retorno</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="trnsRemessas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>trnsRemessas</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:trnsremessas</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSessionKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSessionKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WizardData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WizardData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAlimentosItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAlimentosItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Alimentos.GridAlimentosItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distObservacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distObservacao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Observação</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remNormal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remNormal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Normal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remNormal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GuiasGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GuiasGrid</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Guias.GridItem</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RanchoWizardPlanilhaGravaDados</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-07T03:20:59.0000000Z" checksum="7f1ab77b38983e64d03f5bd95d05e0fa" fullyQualifiedName="trnsfornecedores" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fe709be0-25c9-f422-51bb-130911718d19" name="trnsfornecedores" type="19abc6ff-2cd2-0000-0006-6d172bc2333b" description="trnsfornecedores" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="19abc6ff-2cd2-1000-0006-6d172bc2333b">
+    <Attributes>
+      <DataViewAttribute InternalName="usuPrefeitura" ExternalName="prefeitura" />
+      <DataViewAttribute InternalName="forCodigo" ExternalName="forCodigo" />
+      <DataViewAttribute InternalName="forNome" ExternalName="forNome" />
+      <DataViewAttribute InternalName="forAbreviatura" ExternalName="forAbreviatura" />
+      <DataViewAttribute InternalName="forCnpjcpf" ExternalName="forCnpjcpf" />
+      <DataViewAttribute InternalName="forDocumento" ExternalName="forDocumento" />
+      <DataViewAttribute InternalName="forFisicaJuridica" ExternalName="forFisicaJuridica" />
+      <DataViewAttribute InternalName="forEndereco" ExternalName="forEndereco" />
+      <DataViewAttribute InternalName="forComplemento" ExternalName="forComplemento" />
+      <DataViewAttribute InternalName="forBairro" ExternalName="forBairro" />
+      <DataViewAttribute InternalName="forCidade" ExternalName="forCidade" />
+      <DataViewAttribute InternalName="forEstado" ExternalName="forEstado" />
+      <DataViewAttribute InternalName="forCep" ExternalName="forCep" />
+      <DataViewAttribute InternalName="forTelefone" ExternalName="forTelefone" />
+      <DataViewAttribute InternalName="forContato" ExternalName="forContato" />
+      <DataViewAttribute InternalName="forEmail" ExternalName="forEmail" />
+      <DataViewAttribute InternalName="forTipo" ExternalName="forTipo" />
+      <DataViewAttribute InternalName="forCooperativa" ExternalName="forCooperativa" />
+      <DataViewAttribute InternalName="forDap" ExternalName="forDap" />
+      <DataViewAttribute InternalName="forCertificadoNumero" ExternalName="forCertificadoNumero" />
+      <DataViewAttribute InternalName="forCertificadoValidade" ExternalName="forCertificadoValidade" />
+      <DataViewAttribute InternalName="forStatus" ExternalName="forStatus" />
+      <DataViewAttribute InternalName="forDataCad" ExternalName="forDataCad" />
+      <DataViewAttribute InternalName="forDataAlt" ExternalName="forDataAlt" />
+    </Attributes>
+    <Platforms>
+      <DataViewStructurePlatform Dbms="18">
+        <PlatformProperties>
+          <Properties>
+            <Property>
+              <Name>NAME</Name>
+              <Value>trnsfornecedores</Value>
+            </Property>
+            <Property>
+              <Name>SCHEMA</Name>
+              <Value>sgegae</Value>
+            </Property>
+          </Properties>
+        </PlatformProperties>
+      </DataViewStructurePlatform>
+    </Platforms>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="7706bd3b-212a-1000-0006-8aaeb59068b9">
+    <Indexes>
+      <Object Type="Unique" parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-07T14:35:33.0000000Z" checksum="d031e0bba282b5e68e4df2ef56cff6d8" fullyQualifiedName="PRIMARY3" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7945fb0d-41a7-0666-4364-6fc5fbb8e2aa" name="PRIMARY3" type="fc1b76c4-95c5-0000-0101-44f9543121bd" description="">
+        <Platforms>
+          <DataViewIndexesPlatform Dbms="18">
+            <PlatformProperties>
+              <Properties>
+                <Property>
+                  <Name>NAME</Name>
+                  <Value>PRIMARY</Value>
+                </Property>
+                <Property>
+                  <Name>SCHEMA</Name>
+                  <Value>sgegae</Value>
+                </Property>
+              </Properties>
+            </PlatformProperties>
+          </DataViewIndexesPlatform>
+        </Platforms>
+        <Part type="fe47b55c-ea2a-1000-0101-5b38901e24f7">
+          <Members>
+            <Member Order="Ascending">trnsfornecedoresprefeitura</Member>
+            <Member Order="Ascending">forCodigo</Member>
+          </Members>
+          <Properties />
+        </Part>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>PRIMARY3</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value />
+          </Property>
+        </Properties>
+      </Object>
+    </Indexes>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsfornecedores</Value>
+    </Property>
+    <Property>
+      <Name>DVDataStore</Name>
+      <Value>dsDataViews</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="5e37f98a-9c17-0208-3887-ab994890b848" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-19T11:50:58.0000000Z" lastUpdate="2024-08-15T01:56:26.0000000Z" checksum="4ab465e5193813ffbbb4dfef31886a34" fullyQualifiedName="trnslancarestoqueUEWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="900614f6-de23-4c88-9f79-1b24f5b6c3e6" name="trnslancarestoqueUEWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnslancarestoque UEWWDS" parent="WorkWithPlustrnslancarestoqueUE" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial >= &lanestdatInicial1 when &DynamicFiltersSelector1 = !'LANESTDATINICIAL' AND &DynamicFiltersOperator1 = 0 AND (not &lanestdatInicial1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial <= &lanestdatInicial_To1 when &DynamicFiltersSelector1 = !'LANESTDATINICIAL' AND &DynamicFiltersOperator1 = 0 AND (not &lanestdatInicial_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal >= &lanestdatFinal1 when &DynamicFiltersSelector1 = !'LANESTDATFINAL' AND &DynamicFiltersOperator1 = 0 AND (not &lanestdatFinal1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal <= &lanestdatFinal_To1 when &DynamicFiltersSelector1 = !'LANESTDATFINAL' AND &DynamicFiltersOperator1 = 0 AND (not &lanestdatFinal_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestcodigo = &lanestcodigo1 when &DynamicFiltersSelector1 = !'LANESTCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &lanestcodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial >= &lanestdatInicial2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTDATINICIAL' AND &DynamicFiltersOperator2 = 0 AND (not &lanestdatInicial2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial <= &lanestdatInicial_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTDATINICIAL' AND &DynamicFiltersOperator2 = 0 AND (not &lanestdatInicial_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal >= &lanestdatFinal2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTDATFINAL' AND &DynamicFiltersOperator2 = 0 AND (not &lanestdatFinal2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal <= &lanestdatFinal_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTDATFINAL' AND &DynamicFiltersOperator2 = 0 AND (not &lanestdatFinal_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestcodigo = &lanestcodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &lanestcodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial >= &lanestdatInicial3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTDATINICIAL' AND &DynamicFiltersOperator3 = 0 AND (not &lanestdatInicial3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial <= &lanestdatInicial_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTDATINICIAL' AND &DynamicFiltersOperator3 = 0 AND (not &lanestdatInicial_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal >= &lanestdatFinal3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTDATFINAL' AND &DynamicFiltersOperator3 = 0 AND (not &lanestdatFinal3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal <= &lanestdatFinal_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTDATFINAL' AND &DynamicFiltersOperator3 = 0 AND (not &lanestdatFinal_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestcodigo = &lanestcodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &lanestcodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestcodigo >= &TFlanestcodigo when not &TFlanestcodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestcodigo <= &TFlanestcodigo_To when not &TFlanestcodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial >= &TFlanestdatInicial when not &TFlanestdatInicial.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatInicial <= &TFlanestdatInicial_To when not &TFlanestdatInicial_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal >= &TFlanestdatFinal when not &TFlanestdatFinal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestdatFinal <= &TFlanestdatFinal_To when not &TFlanestdatFinal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like &TFlanestTipoRemessa.ToLower() when &TFlanestTipoRemessa_Sel.IsEmpty() AND (not &TFlanestTipoRemessa.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestTipoRemessa = &TFlanestTipoRemessa_Sel when not &TFlanestTipoRemessa_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestCodigoRemessa >= &TFlanestCodigoRemessa when not &TFlanestCodigoRemessa.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestCodigoRemessa <= &TFlanestCodigoRemessa_To when not &TFlanestCodigoRemessa_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestStatus in &TFlanestStatus_Sels when &TFlanestStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatInicial1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatInicial1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatInicial_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatInicial_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatInicial2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatInicial2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatInicial_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatInicial_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatInicial3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatInicial3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatInicial_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatInicial_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestcodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestcodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestcodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestcodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestcodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestcodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestdatInicial">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestdatInicial</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestdatInicial_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestdatInicial_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatInicial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestdatFinal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestdatFinal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestdatFinal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestdatFinal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatFinal1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatFinal1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatFinal_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatFinal_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatFinal2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatFinal2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatFinal_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatFinal_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatFinal3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatFinal3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestdatFinal_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdatFinal_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestdatFinal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestcodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestcodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestcodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestcodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestcodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestcodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestcodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestcodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestcodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestObs">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestObs</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestObs</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestObs_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestObs_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestObs</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestRemessa">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestRemessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestRemessa_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestRemessa_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestTipoRemessa">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestTipoRemessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestTipoRemessa_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestTipoRemessa_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestCodigoRemessa">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestCodigoRemessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestCodigoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestCodigoRemessa_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestCodigoRemessa_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestCodigoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestTipoRemessa_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestTipoRemessa_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatInicial1</Name>
+        <Description>lanestdat Inicial1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatInicial_To1</Name>
+        <Description>lanestdat Inicial_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatFinal1</Name>
+        <Description>lanestdat Final1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatFinal_To1</Name>
+        <Description>lanestdat Final_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestcodigo1</Name>
+        <Description>lanestcodigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatInicial2</Name>
+        <Description>lanestdat Inicial2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatInicial_To2</Name>
+        <Description>lanestdat Inicial_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatFinal2</Name>
+        <Description>lanestdat Final2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatFinal_To2</Name>
+        <Description>lanestdat Final_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestcodigo2</Name>
+        <Description>lanestcodigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatInicial3</Name>
+        <Description>lanestdat Inicial3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatInicial_To3</Name>
+        <Description>lanestdat Inicial_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatFinal3</Name>
+        <Description>lanestdat Final3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestdatFinal_To3</Name>
+        <Description>lanestdat Final_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestcodigo3</Name>
+        <Description>lanestcodigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestcodigo</Name>
+        <Description>TFlanestcodigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestcodigo_To</Name>
+        <Description>TFlanestcodigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestdatInicial</Name>
+        <Description>TFlanestdat Inicial</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestdatInicial_To</Name>
+        <Description>TFlanestdat Inicial_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestdatFinal</Name>
+        <Description>TFlanestdat Final</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestdatFinal_To</Name>
+        <Description>TFlanestdat Final_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestTipoRemessa</Name>
+        <Description>TFlanest Tipo Remessa</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestTipoRemessa_Sel</Name>
+        <Description>TFlanest Tipo Remessa_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestCodigoRemessa</Name>
+        <Description>TFlanest Codigo Remessa</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestCodigoRemessa_To</Name>
+        <Description>TFlanest Codigo Remessa_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestStatus_Sels</Name>
+        <Description>TFlanest Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnslancarestoqueUEWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnslancarestoqueUE</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

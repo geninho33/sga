@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:27.0000000Z" checksum="658cc7d6d9ee4a128373c41f33326e8b" fullyQualifiedName="trnssalasgrupoAtendimento" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f94b2d4d-df5f-43ac-bef2-bf31179d8e17" name="trnssalasgrupoAtendimento" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Grupo de Atendimento">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="8f783da2-05fd-ac74-4a7c-8b42c703eb00">salaLocCodigo</Item>
+      <Item guid="f0b42735-bf50-0922-14f1-8f29572bad66">salaCodigo</Item>
+      <Item guid="9fdcc8e5-a5de-4206-a997-6ca248e444cd">salaGrupoCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:23.0000000Z" checksum="04cc4c4f75f89f41eb4856fae59f72bf" fullyQualifiedName="ItrnssalasgrupoAtendimento" moduleGuid="00000000-0000-0000-0000-000000000000" guid="44555e45-dc9c-4d16-b4ab-fd7f46195902" name="ItrnssalasgrupoAtendimento" type="9e750647-3679-0000-0100-2529de263960" description="Itrnssalasgrupo Atendimento">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">salaLocCodigo</Member>
+              <Member Order="Ascending">salaCodigo</Member>
+              <Member Order="Ascending">salaGrupoCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>ItrnssalasgrupoAtendimento</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:23.0000000Z" checksum="c9b6046e4df315a5ac952680ad85fc3b" fullyQualifiedName="ItrnssalasgrupoAtendimento1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="ea86a1c1-f8b8-40ea-a15c-6c4e8ad1913c" name="ItrnssalasgrupoAtendimento1" type="9e750647-3679-0000-0100-2529de263960" description="Itrnssalasgrupo Atendimento1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">salaLocCodigo</Member>
+              <Member Order="Ascending">salaCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>ItrnssalasgrupoAtendimento1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnssalasgrupoAtendimento</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Grupo de Atendimento</Value>
+    </Property>
+  </Properties>
+</Object>

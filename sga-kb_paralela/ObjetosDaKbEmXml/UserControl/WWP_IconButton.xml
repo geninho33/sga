@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="eabf2595-127f-4740-beee-048c9da4cc9a" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2021-02-25T13:41:02.0000000Z" checksum="b1e958c2399e4d74bca6b24e3fdd9dd4" fullyQualifiedName="WWP_IconButton" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8b8bfe97-ddcc-4b54-92e4-9743d026a525" name="WWP_IconButton" type="562f4793-aabe-449f-8821-fc77e550698e" description="WWP_Icon Button" parent="UserControls" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="3dd92fe7-b095-44d3-9fa0-8488fa3f0c67">
+    <Source><![CDATA[<button {{OnClickEvent}} class="{{Class}}" title="{{TooltipText}}"> 
+	<i class="{{BeforeIconClass}}"></i>
+	{{Caption}}
+	<i class="{{AfterIconClass}}"></i>
+</button>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="8e9e4a7c-a4d3-4c36-8e8e-fb6702402f63">
+    <Source><![CDATA[<Definition auto="true">
+  <Property Name="TooltipText" Type="string" Default="" />
+  <Property Name="BeforeIconClass" Type="string" Default="" />
+  <Property Name="AfterIconClass" Type="string" Default="" />
+</Definition>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_IconButton</Value>
+    </Property>
+    <Property>
+      <Name>BaseControlType</Name>
+      <Value>idButton</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

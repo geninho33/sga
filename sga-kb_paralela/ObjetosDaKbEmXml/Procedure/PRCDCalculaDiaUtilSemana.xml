@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-11-06T05:33:06.0000000Z" checksum="7eae5fe72766205af3aba351e2fd5d30" fullyQualifiedName="PRCDCalculaDiaUtilSemana" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b24cd09d-aa3a-44b3-9200-54e113938244" name="PRCDCalculaDiaUtilSemana" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Calcular o primeiro dia Util da Semana " parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[// Primeiro dia do mês
+&FirstDay ="01/"+ &Month.ToString().Trim() + "/" + &Year.ToString()  
+
+// Dia da semana (1 = domingo, 2 = segunda-feira, ..., 7 = sábado)
+&DayOfWeek = DoW( CTOD( &FirstDay.Trim( ) ) ) 
+
+// Calcula o deslocamento necessário para o primeiro dia útil
+&Offset = 1 - &DayOfWeek + ((&WeekNumber - 1) * 7)
+
+// Calcula o primeiro dia da semana
+&FirstDayOfWeek = &FirstDayOfWeek.AddDays( &Offset )
+
+// Verifica se o primeiro dia é sábado (6) ou domingo (7) e, se for, ajusta para a próxima segunda-feira
+
+// Sábado
+If &DayOfWeek = 6  
+	
+   // Adiciona 2 dias (segunda-feira)	
+   &FirstDayOfWeek = &FirstDayOfWeek.AddDays( 2 ) 
+Endif
+
+// Domingo
+If &DayOfWeek = 7  
+	
+   // Adiciona 1 dia (segunda-feira)	
+   &FirstDayOfWeek = &FirstDayOfWeek.AddDays( 1 )  
+EndIf
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&Month, in:&Year, in:&WeekNumber,out:&FirstDayOfWeek);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Month">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Month</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>2</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Year">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Year</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WeekNumber">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WeekNumber</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FirstDayOfWeek">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FirstDayOfWeek</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FirstDay">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FirstDay</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DayOfWeek">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DayOfWeek</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Offset">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Offset</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDCalculaDiaUtilSemana</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Calcular o primeiro dia Util da Semana </Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

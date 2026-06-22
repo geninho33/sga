@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="2896f7a3-4874-40c9-ac7e-f57685983b0f" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-06-12T14:37:54.0000000Z" checksum="e8e9f7fe49cbc32f39cec3c4cab56e8f" fullyQualifiedName="GAMExampleActivateUserAccount" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="6b4d78ec-946c-47ea-9d27-a966b6c0b5e5" name="GAMExampleActivateUserAccount" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="GAM_Activateuseraccount" parent="GAM_Frontend" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="2" version="html:15.0.0;layout:17.11.0"><Form id="2" type="layout"><detail variables="&lt;Variables&gt;&lt;Variable Id=&quot;5&quot; Name=&quot;UserName&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;UserName&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idBasedOn&lt;/Name&gt;&lt;Value&gt;Domain:GAMUserIdentification, GeneXusSecurityCommon&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/Variable&gt;&lt;StandardVariable Id=&quot;1&quot; Name=&quot;Today&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Today&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Date&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;StandardVariable Id=&quot;2&quot; Name=&quot;Time&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Time&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Character&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Length&lt;/Name&gt;&lt;Value&gt;8&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;StandardVariable Id=&quot;3&quot; Name=&quot;Pgmname&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Pgmname&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Character&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Length&lt;/Name&gt;&lt;Value&gt;128&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AttMaxLen&lt;/Name&gt;&lt;Value&gt;128&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;StandardVariable Id=&quot;4&quot; Name=&quot;Pgmdesc&quot;&gt;&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Name&lt;/Name&gt;&lt;Value&gt;Pgmdesc&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;OBJ_TYPE&lt;/Name&gt;&lt;Value&gt;id_OTYPE_VAR&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IsStandardVariable&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ATTCUSTOMTYPE&lt;/Name&gt;&lt;Value&gt;bas:Character&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Length&lt;/Name&gt;&lt;Value&gt;256&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;&lt;Documentation&gt;&amp;lt;WikiPage&amp;gt;&amp;lt;Modified&amp;gt;0001-01-01T00:00:00&amp;lt;/Modified&amp;gt;&amp;lt;Revision&amp;gt;0&amp;lt;/Revision&amp;gt;&amp;lt;/WikiPage&amp;gt;&lt;/Documentation&gt;&lt;/StandardVariable&gt;&lt;/Variables&gt;"><layout><table controlName="MainTable" class="" tableType="Responsive" responsiveSizes="[]"><row><cell hAlign="Center"><table controlName="TableContainer" class="table-login stack-top-xxl w-100" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[],[{&quot;width&quot;:50}]]}]"><row><cell cellClass="stack-bottom-xxl" hAlign="Center" vAlign="Middle"><textblock controlName="TBTitle" caption="GAM_Accountactivationconfirmation" class="Title" /></cell></row><row><cell hAlign="Center"><errorviewer controlName="ErrorViewer1" /></cell></row><row><cell><table controlName="TableBack" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:17}]]}]"><row><cell><image controlName="Image1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-GeneXusUnanimo.arrow_left" /></cell><cell><action controlName="Login" onClickEvent="'Login'" caption="GAM_BacktoLogin" class="Button button-secondary" /></cell></row></table></cell></row></table></cell></row></table></layout></detail></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(&ActivationKey);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[Event Start
+	&isOK = GAMRepository.ActivateUser(&ActivationKey, True, &GAMErrorCollection)
+	If &isOK
+		Msg("GAM_Youruseraccountwasactivatedsuccessfully" + NewLine() + "GAM_YoumustgototheLoginpagetoentertheapplication")
+	Else
+		Do 'DisplayMessages'
+	Endif
+Endevent
+
+
+Event 'Login'
+	GAMExampleLogin()
+Endevent
+
+
+Sub 'DisplayMessages'
+	For &GAMError in &GAMErrorCollection
+		Msg(&GAMError.Message)
+	EndFor
+EndSub
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="ActivationKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ActivationKey</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMDescriptionLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMError">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMError</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrorCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrorCollection</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="isOK">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>isOK</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GAMExampleActivateUserAccount</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>GAM_Activateuseraccount</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>(none)</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityNone</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>GAMExampleActivateUserAccount</Value>
+    </Property>
+    <Property>
+      <Name>WebUX</Name>
+      <Value>SMOOTH</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+  <Categories>GAM_Samples-web,GAM_Frontend-web</Categories>
+</Object>

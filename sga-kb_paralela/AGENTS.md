@@ -1,0 +1,245 @@
+# AGENTS.md - AlimentacaoEscolar2
+<!-- PREENCHER: substitua AlimentacaoEscolar2 pelo nome real da KB -->
+
+## Identificacao
+
+- Nome da KB: `AlimentacaoEscolar2`
+- Pasta paralela da KB: `C:\Dev\Prod\Gx_AlimentacaoEscolar2`
+- Pasta nativa da KB vista pelo GeneXus: `C:\KBs\AlimentacaoEscolar2`
+- Verificacao inicial: a pasta nativa da KB existia e estava acessivel em
+  2026-06-17.
+<!-- PREENCHER: data no formato YYYY-MM-DD -->
+
+## Regra crítica da pasta nativa da KB
+
+`C:\KBs\AlimentacaoEscolar2` é terreno proibido para gravação por agentes.
+
+Agentes não devem criar, editar, mover, renomear ou excluir arquivos nessa pasta.
+Leitura é permitida apenas quando o fluxo operacional explícito realmente exigir.
+
+Invocar o GeneXus via MSBuild headless (ex: `Invoke-GeneXusKbBuildAll.ps1`,
+`Invoke-GeneXusKbSpecifyGenerate.ps1`) não é gravação por agentes — é o GeneXus
+operando a KB como parte do seu funcionamento normal. O agente é o chamador do
+processo; quem grava na KB é o próprio GeneXus. Essa distinção é intencional:
+proibir o agente de manipular arquivos diretamente não proíbe invocar operações
+GeneXus autorizadas pelo usuário.
+
+## Estrutura funcional da pasta paralela da KB
+
+- `scripts`: wrappers locais finos que delegam ao motor compartilhado.
+- `Temp`: temporarios e relatorios descartaveis.
+- `XpzExportadosPelaIDE`: entrada de `.xpz` exportados pela IDE GeneXus.
+- `ObjetosDaKbEmXml`: snapshot oficial materializado; somente leitura para
+  agentes fora do fluxo oficial.
+- `KbIntelligence`: indice derivado regeneravel.
+- `ObjetosGeradosParaImportacaoNaKbNoGenexus`: area de trabalho para XMLs de
+  importacao. Cada frente ativa deve usar subpasta
+  `NomeCurto_GUID_YYYYMMDD`. Nao e deposito geral de usuario: XML de
+  referencia, exemplo, template ou molde deixado na frente ativa bloqueia o
+  empacotamento ate ser removido ou tratado por caminho explicito fora da
+  area gerenciada.
+- `PacotesGeradosParaImportacaoNaKbNoGenexus`: saida plana de pacotes finais.
+
+## Estado operacional
+
+Estado operacional desta pasta paralela e os timestamps de materializacao e
+indice nao sao gravados nesta secao. Espelho declarativo de timestamp envelhece
+silenciosamente porque nada o mantem coerente com a fonte autoritativa. Para
+conhecer o estado atual, usar:
+
+- `estado_operacional_sugerido` e demais dimensoes: saida de
+  `Test-AlimentacaoEscolar2KbSetupAudit.ps1` (executar a cada auditoria).
+- `last_xpz_materialization_run_at`: frontmatter de `kb-source-metadata.md`,
+  mantido pelo fluxo `xpz-sync`.
+- `last_index_build_run_at`: tabela `metadata` do SQLite em
+  `KbIntelligence\kb-intelligence.sqlite`, exposto por
+  `Query-AlimentacaoEscolar2KbIntelligence.ps1 -Query index-metadata`.
+- Gate operacional de frescor do indice:
+  `Test-AlimentacaoEscolar2KbIndexGate.ps1` — retorna `GATE_OK` ou `BLOCK: <motivo>`.
+- Mapeamento de output/web por environment:
+  `kb_environment_output_dirs` e `kb_environment_web_dirs` em
+  `kb-source-metadata.md`, mantidos por `Set-AlimentacaoEscolar2KbSourceMetadataDeployment.ps1`.
+
+Nao registrar timestamps literais (`last_xpz_materialization_run_at`,
+`last_index_build_run_at`) nesta secao nem em outras secoes deste `AGENTS.md`
+ou do `README.md` local.
+
+## Wrappers locais
+
+Os wrappers em `scripts` usam a base compartilhada:
+
+```text
+C:\Desenvolvimento\sga\GeneXus-XPZ-Skills-main
+```
+
+Wrappers esperados:
+
+- `Test-AlimentacaoEscolar2KbSetupFreshness.ps1`: PRE-CONDICAO do gatilho global — compara
+  a assinatura de contrato auditada (`setup_contract_signature_*`) com a
+  assinatura atual de `xpz-kb-parallel-setup` e retorna `GATE_ONLY` ou
+  `AUDIT_REQUIRED: <motivo>`.
+- `Set-AlimentacaoEscolar2KbSetupAuditTimestamp.ps1`: grava `last_setup_audit_run_at` e
+  `setup_contract_signature_*` em `kb-source-metadata.md` apos auditoria de setup
+  bem-sucedida; usar na mesma sessao quando o freshness retornar `AUDIT_REQUIRED`
+  por campo ausente, assinatura ausente ou assinatura defasada e a auditoria
+  completa + gate tiverem passado.
+- `Update-AlimentacaoEscolar2KbFromXpz.ps1`: materializa XPZ/XML em `ObjetosDaKbEmXml`,
+  atualiza **cirurgicamente** campos de materializacao em `kb-source-metadata.md`
+  (motor `Sync-GeneXusXpzToXml.ps1` via `XpzKbSourceMetadataEditSupport.ps1`),
+  preservando `last_setup_audit_run_at` e `setup_contract_signature_*`, e chama o refresh do indice quando nao estiver
+  em `VerifyOnly`. Deve repassar `-ParallelKbRoot` ao motor `Sync-GeneXusXpzToXml.ps1`
+  (catalogo efetivo com override local), executar lembrete de override por sessao
+  e pre-varredura com `-FailOnUnknownTypes` antes de materializar (ver secao abaixo).
+- `Test-AlimentacaoEscolar2KbFullSnapshot.ps1`: conferencia full em modo somente verificacao.
+- `Rebuild-AlimentacaoEscolar2KbIntelligenceIndex.ps1`: regenera e valida
+  `KbIntelligence\kb-intelligence.sqlite`.
+- `Query-AlimentacaoEscolar2KbIntelligence.ps1`: consulta o indice derivado, inclusive
+  `index-metadata`.
+- `Test-AlimentacaoEscolar2KbIndexGate.ps1`: gate de frescor — verifica estrutura, SQLite,
+  timestamps e retorna `GATE_OK` ou lanca `BLOCK: <motivo>`; deve ser o unico
+  ponto de execucao do gate.
+- `Test-AlimentacaoEscolar2KbSourceSanity.ps1`: wrapper consultivo para XMLs locais da
+  frente antes do empacotamento; delega ao script compartilhado de sanidade do
+  `Source` e devolve `xmlWellFormed`, `sourceSanityStatus` e
+  `probablyImportable`.
+- `New-AlimentacaoEscolar2KbFront.ps1`: wrapper recomendado quando agentes abrem frentes
+  locais com frequencia; delega ao motor compartilhado
+  `New-GeneXusXpzFront.ps1` para criar ou reutilizar
+  `ObjetosGeradosParaImportacaoNaKbNoGenexus\NomeCurto_GUID_YYYYMMDD`, gerar o
+  GUID da frente e devolver GUIDs adicionais do lote em chamada atomica.
+- `Get-AlimentacaoEscolar2KbLastUpdate.ps1`: wrapper recomendado quando agentes atualizam
+  `lastUpdate` em XMLs locais com frequencia; delega ao motor compartilhado
+  `Get-GeneXusXpzLastUpdate.ps1` para obter timestamp UTC no formato GeneXus em
+  chamada atomica.
+- `New-AlimentacaoEscolar2KbImportPackage.ps1`: wrapper recomendado quando o empacotamento
+  local for recorrente; delega ao motor compartilhado `New-XpzImportPackage.ps1`
+  para criar `import_file.xml` a partir da subpasta ativa da frente em
+  `ObjetosGeradosParaImportacaoNaKbNoGenexus`, com `NN` explícito e
+  `TemplatePackagePath` opcional para `import_file.xml` ou `.xpz` real
+  comparável; quando o template trouxer `Attributes` de topo e a frente nao
+  trouxer atributos explicitos, o motor preserva esses `Attributes`.
+- `Get-AlimentacaoEscolar2KbMetadata.ps1`: le campos-chave de `kb-source-metadata.md` sem
+  regex inline nos chamadores; expoe ao menos `last_xpz_materialization_run_at`,
+  `kb_name`, `source_guid` e, quando presentes, campos de environment/deploy/output.
+- `Resolve-AlimentacaoEscolar2KbGeneratedCsPath.ps1`: wrapper recomendado para diagnostico
+  de codigo C# gerado; resolve `<webDir>\<objeto-lowercase>.cs` a partir de
+  `kb_environment_web_dirs` em `kb-source-metadata.md`, sem varredura recursiva
+  da KB nativa. Se o metadata nao tiver o mapeamento do environment, bloquear e
+  atualizar setup via `xpz-kb-parallel-setup`.
+- `Resolve-AlimentacaoEscolar2KbIdentity.ps1`: wrapper recomendado quando for preciso
+  reconciliar identidade estavel da KB nativa local porque o XPZ exportado veio
+  com `Source` vazio ou incompleto; delega ao motor compartilhado
+  `Resolve-GeneXusKbIdentity.ps1` em modo somente leitura e, quando chamado com
+  opcao explicita de atualizacao, ao motor
+  `Update-XpzKbSourceMetadataIdentity.ps1`.
+- `Test-AlimentacaoEscolar2KbMetadataWrapper.ps1`: valida o contrato funcional do
+  `Get-AlimentacaoEscolar2KbMetadata.ps1` contra `kb-source-metadata.md`; retorna
+  `METADATA_WRAPPER_OK`, `PENDENTE_DE_DADOS` ou `BLOCK: ...`.
+- `Test-AlimentacaoEscolar2KbStructure.ps1`: relatorio de presenca/ausencia de pastas,
+  scripts e artefatos esperados; retorna `STRUCTURE_OK` ou lista componentes
+  ausentes. Na auditoria de naming, `Attribute` pode ser identificado pela raiz
+  `<Attribute>` sem depender de `Object/@type`.
+- `Notify-TaskComplete.ps1`: helper opcional de notificacao operacional.
+
+Scripts do motor com parâmetros totalmente dinâmicos por execução (ex:
+`Watch-GeneXusMsBuildLog.ps1`, cujo `-Pid` e `-LogPath` variam a cada build)
+nao requerem wrapper local — sao chamados diretamente pelo caminho absoluto
+do motor.
+
+## Catalogo XPZ (tipos desconhecidos e override local)
+
+- Catalogo efetivo = `GeneXus-XPZ-Skills/scripts/gx-object-type-catalog.json` +
+  `scripts/gx-object-type-catalog.override.json` nesta pasta paralela quando existir.
+- Override local e paliativo (`upstreamPending`); nao e silencioso.
+- Em cada nova sessao, antes de sync ou materializacao longa, executar
+  `GeneXus-XPZ-Skills/scripts/Test-XpzCatalogOverrideSessionReminder.ps1` com
+  `-ParallelKbRoot` apontando para esta pasta (wrapper local fino opcional).
+  Se `reminderRequired=true`, avisar o usuario que ainda falta alinhar
+  GeneXus-XPZ-Skills.
+- Antes de materializar XPZ full ou primeira carga, pre-varredura obrigatoria:
+  `Get-GeneXusImportPackageObjectInventory.ps1` com `-FailOnUnknownTypes` e
+  `-ParallelKbRoot`. Se bloquear, nao chamar sync ate resolver o tipo.
+- Tipo desconhecido no pacote = lacuna de catalogo, nao defeito do XPZ da KB.
+  Perguntar ao usuario se autoriza consulta recomendavel a `nexa` e wiki/docs
+  oficiais GeneXus antes de registrar override ou pedir atualizacao upstream.
+- Registro local somente com consentimento explicito via
+  `Register-GeneXusObjectTypeCatalogOverride.ps1` (`-UserApproved`). Molde JSON:
+  `examples/gx-object-type-catalog.override.json.example`.
+- Prompt copiavel para o mantenedor da base XPZ:
+  `New-GeneXusUnknownTypeMaintainerPrompt.ps1`.
+
+## Triagem Por Indice
+
+Para qualquer pergunta sobre existencia, localizacao, impacto tecnico, dependentes,
+dependencias ou investigacao funcional curta sobre objetos desta KB, usar
+`xpz-index-triage`. O gate e o unico ponto de entrada para o indice:
+
+1. Verificar se `scripts/Test-AlimentacaoEscolar2KbIndexGate.ps1` existe.
+   - Se ausente: encerrar a consulta e oferecer atualizacao via
+     `xpz-kb-parallel-setup`.
+2. Executar o gate:
+   ```powershell
+   & "C:\Dev\Prod\Gx_AlimentacaoEscolar2\scripts\Test-AlimentacaoEscolar2KbIndexGate.ps1" #gate
+   ```
+   - `GATE_OK` → prosseguir com `xpz-index-triage`.
+   - `BLOCK: <motivo>` → encerrar a consulta e oferecer rebuild do indice.
+3. Nunca acessar `KbIntelligence\kb-intelligence.sqlite` diretamente por
+   nenhuma ferramenta — Python, sqlite3, PowerShell inline, Bash ou qualquer
+   outro meio.
+4. Nunca compensar gate bloqueado com leitura manual de SQLite, JSON de
+   validacao, `kb-source-metadata.md` isolado, datas de arquivo ou XML oficial.
+5. `ObjetosDaKbEmXml` e a fonte normativa; so consultar apos gate liberado e
+   apenas para o conjunto minimo necessario indicado pela triagem.
+
+## Regras GeneXus/XPZ
+
+- Em tarefas GeneXus, usar a skill `nexa`.
+- Em tarefas XPZ, `import_file.xml`, XML exportado da KB, pacote de importacao
+  ou `ObjectsIdentityMapping`, usar a skill `xpz-*` aplicavel.
+- Em importacao headless via MSBuild (`Invoke-GeneXusXpzImport.ps1` do motor
+  compartilhado) e em qualquer diagnostico de sub-estado de import — incluindo
+  classificacao apos exception interna do wrapper, leitura de
+  `__IMPORTED_ITEM__` no log bruto (`msbuild.stdout.log`) e identificacao de
+  `postProcessingFailed=true` ou `diagnosticDegraded=true` no `import.json` —, usar `xpz-msbuild-import-export`;
+  nao reinterpretar sub-estados de import localmente. Em particular: falha de
+  pos-processamento do wrapper com evidencia de import no log bruto NAO e falha
+  de import — e o sub-estado nomeado
+  `importacao real efetiva provada por evidencia de stdout (falha no
+  pos-processamento do wrapper)`.
+- Em diagnostico degradado de import/export MSBuild, quando existir
+  `executionEvidence.msBuildExitCode`, tratar esse campo como fonte canonica do
+  exit bruto do MSBuild; `msBuildExitCode` top-level e compatibilidade transitoria.
+- `diagnosticDegraded=true` pode aparecer sem `postProcessingFailed=true`; nesse caso,
+  tratar a rodada como diagnostico parcial/degradado, nao como sucesso limpo nem como
+  falha operacional automatica.
+- Em diagnostico JSON de preview/import MSBuild, preferir `compactSignals` para leitura
+  compacta de itens, warnings, erros e campos canonicos; se ausente, nulo ou insuficiente,
+  usar `msbuild.import.signals.json` ao lado dos logs como fallback auditavel; reparsear
+  `msbuild.stdout.log`/`msbuild.stderr.log` inteiros apenas quando ambos estiverem ausentes
+  ou insuficientes.
+- Em exportacao headless via MSBuild (`Invoke-GeneXusXpzExport.ps1` do motor
+  compartilhado) e em qualquer diagnostico de sub-estado de export — incluindo
+  classificacao apos exception interna do wrapper, leitura de
+  `__EXPORTED_FILE__` no log bruto (`msbuild.stdout.log`) e identificacao de
+  `postProcessingFailed=true` no `export.json` —, usar `xpz-msbuild-import-export`;
+  nao reinterpretar sub-estados de export localmente. Em particular: falha de
+  pos-processamento do wrapper com `Export Sucesso` + `__EXPORTED_FILE__` no log
+  bruto e arquivo XPZ existente NAO e falha de export — e o sub-estado nomeado
+  `exportacao headless concluida e XPZ gerado (falha no pos-processamento do
+  wrapper)`.
+- Se o `export.json` de exportacao headless trouxer `exitCode=48`,
+  `msBuildCategoryBBlocked=true`, `exportErrors` ou `invalidTypesRejected`,
+  tratar como Categoria B conforme `xpz-msbuild-import-export`: o XPZ pode
+  existir apenas para inspecao, nao e entrega limpa, e a rodada deve PARAR
+  antes de materializacao, importacao, sync ou handoff operacional.
+- `ObjetosDaKbEmXml` e o snapshot oficial materializado; `KbIntelligence` e
+  apenas camada derivada e regeneravel.
+- antes de gerar `import_file.xml` localmente a partir de
+  `ObjetosGeradosParaImportacaoNaKbNoGenexus`, preferir passar o XML ou a
+  subpasta ativa da frente por `Test-AlimentacaoEscolar2KbSourceSanity.ps1`.
+- nunca tratar XML de referencia, exemplo, template ou molde salvo dentro da
+  frente ativa como objeto importavel; esse arquivo indica contaminacao da
+  area gerenciada e deve bloquear o empacotamento.
+- `last_xpz_materialization_run_at` deve existir em `kb-source-metadata.md`.
+- `last_index_build_run_at`, no SQLite, deve ser igual ou posterior a
+  `last_xpz_materialization_run_at` antes de triagem ampla ou geracao de objetos.

@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-02T04:32:35.0000000Z" checksum="6b48698efb7224abc5d2f8d36514686d" fullyQualifiedName="PRCDEstoqueMovimentacaoRM" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b58e194c-1758-44b5-8646-35696a5d8ed5" name="PRCDEstoqueMovimentacaoRM" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="PRCDEstoque Movimentacao para o Rancho" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[// Log.Write(!"Write message", !"MyCompany.Test.TestLoggingWrite",LogLEvel.DEBUG)
+// Log.Error(!" "+&tipo,!"Tipo : " )
+
+LoadWWPContext.Call(&WWPContext)
+&tem         = false
+&saldoMexido = false
+&saldo 		 = 0
+&qtde  		 = 0
+&prefCodigo  = &WWPContext.prefCodigo
+
+
+
+if &tipo.IsEmpty()
+   &tipoRT = PRCDBuscarAcaoAjuste(&codigo)
+else
+   &tipoRT = &tipo
+endif
+
+if &situacao = 'I'
+   Do case
+	 case &tipoRT = 'E'
+		  &tipoRT = 'S'
+
+	 case &tipoRT = 'S'
+		  &tipoRT = 'E'
+
+	 case &tipoRT = 'C'
+		  &tipoRT = 'D'
+
+	 case &tipoRT = 'D'
+		  &tipoRT = 'C'
+
+	 case &tipoRT = 'DD'
+	 	  &tipoRT = 'CC'
+
+ 	 case &tipoRT = 'RM'
+	 	  &tipoRT = 'DD'
+
+
+	 case &tipoRT = 'CC'
+		  &tipoRT = 'DD'
+   EndCase
+endif
+
+if &locaCodigo = 0
+	Do Case
+	   Case &tipoRT= 'D' or &tipoRT= 'DD'
+			for each
+				where prefCodigo = &prefCodigo
+				where distCodigo = &codigo
+			          &locaCodigoLocal = distLocalOrigem
+			endFor
+       Case  &tipoRT= 'C' or &tipoRT= 'CC'
+			for each
+				where notaCodigo = &codigo
+				where prefCodigo = &prefCodigo
+	              &locaCodigoLocal = notaLocal
+			endFor
+	  Case  &tipoRT= 'R' or &tipoRT= 'RR'
+			for each
+				where romanCodigo = &codigo
+				where prefCodigo = &prefCodigo
+		              &locaCodigoLocal = romanLocal
+			endFor
+	   Otherwise
+			for each
+				where estoCodigo = &codigo
+				where prefCodigo = &prefCodigo
+	                  &locaCodigoLocal = estoLocal
+			endFor
+	EndCase
+else
+	&locaCodigoLocal = &locaCodigo
+endif
+
+if &locaCodigoLocal = 0
+   &locaCodigoLocal = prefLocalDeposito
+endif
+
+for each
+	where prefCodigo = &prefCodigo
+   where prodCodigo = &prodCodigo
+	// where prodLocalCodigo = &locaCodigoLocal
+
+   &saldo   = prodSaldo
+   &unidade = prodUnidMedCompra
+  For each
+	  where prefCodigo = &prefCodigo
+	  where uniCodigo  = &unidade
+	  &uniDescricao = uniDescricao
+  EndFor
+endfor
+
+PGeraLog.Call(&Pgmname, 'Prod: ' + &prodCodigo.ToString().Trim() + '-' + 'Saldo atual: ' + &saldo.ToString().Trim())
+
+// verificando saldo e movimentação, existem ...
+for each
+	where prefCodigo      = &prefCodigo
+	where estoNfCodigo    = &codigo when &tipoRT= 'C' or &tipoRT= 'CC'
+	where estoDistCodigo  = &codigo when &tipoRT= 'D' or &tipoRT= 'DD'or &tipoRT= 'RM'or &tipoRT= 'RD'
+	where estoRomanCodigo = &codigo when &tipoRT= 'R' or &tipoRT= 'RR'
+	where estoAjusCodigo  = &codigo when not &tipoRT in ('D','C','DD','CC','R','RR','RD')
+	where estoProduto     = &prodCodigo
+	where estoSaldo       = &quantidade
+
+		  &qtde = estoQuantidade
+		  &tem  = true
+
+		   // atualizando o estoque no produto
+		  Do Case
+		     Case &tipoRT = 'C' or &tipoRT= 'S'
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&qtde,'D')
+				  estoSaldo = &saldo - &qtde
+				  PGeraLog.Call(&Pgmname, 'Est 01: ' + &prodCodigo.ToString().Trim() + '-' + 'Saldo: ' + &saldo.ToString().Trim()+ '-' + 'Qtdade: ' + &qtde.ToString().Trim()+ '=' + 'Novo saldo: ' + estoSaldo.ToString().Trim())
+
+			 Case &tipoRT= 'DD'	or &tipoRT= 'RM'
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&qtde,'DD')
+				  estoSaldo = &saldo + &qtde
+				  PGeraLog.Call(&Pgmname, 'Est 02: ' + &prodCodigo.ToString().Trim() + '-' + 'Saldo: ' + &saldo.ToString().Trim()+ '-' + 'Qtdade: ' + &qtde.ToString().Trim()+ '=' + 'Novo saldo: ' + estoSaldo.ToString().Trim())
+
+		     Case &tipoRT= 'D' or &tipoRT= 'E' or &tipoRT= 'R'
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&qtde,'C')
+				  estoSaldo = &saldo + &qtde
+				  Log.Error(!"Error message",!"Entrou em R | Valor : " + estoSaldo.ToString())
+				  PGeraLog.Call(&Pgmname, 'Est 03: ' + &prodCodigo.ToString().Trim() + '-' + 'Saldo: ' + &saldo.ToString().Trim()+ '-' + 'Qtdade: ' + &qtde.ToString().Trim()+ '=' + 'Novo saldo: ' + estoSaldo.ToString().Trim())
+
+			 Case &tipoRT= 'CC'
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&qtde,'CC')
+				  estoSaldo = &saldo - &qtde
+				  PGeraLog.Call(&Pgmname, 'Est 04: ' + &prodCodigo.ToString().Trim() + '-' + 'Saldo: ' + &saldo.ToString().Trim()+ '-' + 'Qtdade: ' + &qtde.ToString().Trim()+ '=' + 'Novo saldo: ' + estoSaldo.ToString().Trim())
+
+			 Case &tipoRT= 'RR'
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&qtde,'C')
+				  estoSaldo = &saldo + &qtde
+				  Log.Error(!"Error message",!"Entrou em RR | Valor : " + estoSaldo.ToString() )
+				  PGeraLog.Call(&Pgmname, 'Est 05: ' + &prodCodigo.ToString().Trim() + '-' + 'Saldo: ' + &saldo.ToString().Trim()+ '-' + 'Qtdade: ' + &qtde.ToString().Trim()+ '=' + 'Novo saldo: ' + estoSaldo.ToString().Trim())
+				  
+			 Case &tipoRT= 'RD'  // baixa da remessa
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&qtde,'D')
+				  estoSaldo = &saldo - &qtde
+				  Log.Error(!"Error message",!"Entrou em RD | Valor : " + estoSaldo.ToString() )
+				  PGeraLog.Call(&Pgmname, 'Est 06: ' + &prodCodigo.ToString().Trim() + '-' + 'Saldo: ' + &saldo.ToString().Trim()+ '-' + 'Qtdade: ' + &qtde.ToString().Trim()+ '=' + 'Novo saldo: ' + estoSaldo.ToString().Trim())				  
+
+		  EndCase
+
+		   /*
+		  Do Case
+		     Case &tipoRT = 'C' or &tipoRT= 'E' or &tipoRT= 'DD'
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&quantidade,'C')
+				  estoSaldo = &saldo - &qtde
+		     Case &tipoRT= 'D' or &tipoRT= 'S' or &tipoRT= 'CC'
+				  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&quantidade,'D')
+				  estoSaldo = &saldo + &qtde
+		  EndCase
+	  		*/
+
+
+		  // atualizando os dados da movimentação
+		  estoQuantidade = &quantidade
+
+	when none
+		 &saldoMexido  = True
+		 &retorno      = 'E'
+endfor
+
+// Atualizando as tabelas
+if not &tem
+
+   if &tipo.IsEmpty()
+	  &tipo2 = &tipoRT
+   else
+      &tipo2 = &tipo
+   endif
+
+   new
+	 estoCodigo = PRCDGerarNovoCodigo('estoque')
+	 Do Case
+		    Case &tipoRT= 'C' or &tipoRT= 'DD'
+				 If &tipoRT= 'C'
+					estoNfCodigo = &codigo
+					estoTipo     = 'E'
+				 else
+					estoDistCodigo = &codigo
+					estoTipo     = 'G'
+				 endif
+
+		    Case &tipoRT=  'D' or &tipoRT= 'CC' or &tipoRT= 'RD'
+				 If &tipoRT= 'CC'
+					estoNfCodigo = &codigo
+					estoTipo     = 'F'
+				 else
+					estoDistCodigo = &codigo
+					estoTipo     = 'S'
+				 endif
+		    Case &tipoRT=  'R' or &tipoRT= 'RR'
+				 estoRomanCodigo = &codigo
+				 If &tipoRT= 'RR'
+					estoTipo     = 'T'
+				 else
+					estoTipo     = 'R'
+				 endif
+		    Case &tipoRT=  'RM'
+		         estoDistCodigo = &codigo
+				 estoTipo     = 'M'
+				 &tipo2 = "DD"
+			Otherwise
+				 estoAjusCodigo = &codigo
+				 estoTipo       = &tipoRT
+				 if &tipoRT= 'E'
+					&tipo2 = 'C'
+				 else
+					&tipo2 = 'D'
+				 endif
+	 EndCase
+
+		prefCodigo       = &prefCodigo
+		estoLocal        = &locaCodigoLocal
+		estoProduto      = &prodCodigo
+		estoQuantidade   = &quantidade
+		estoUnidade      = &unidade
+		estoUnidadeSigla = &uniDescricao
+		estoSaldo        = &saldo
+		estoUserName	  = GAMUser.GetEmail()
+  endNew
+
+  PGeraLog.Call(&Pgmname, 'Prod 2: ' + &prodCodigo.ToString().Trim() + '-' + 'Prod: ' + &locaCodigoLocal.ToString().Trim() + '-' + 'Qtdade: ' + &Quantidade.ToString().Trim() + '-' + 'Tipo: ' + &tipo)
+  PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&quantidade,&tipo2)
+  &retorno = 'A'
+endif
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&codigo,in:&prodCodigo,in:&locaCodigo, in:&quantidade, in:&tipo, in:&situacao, out:&retorno);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="codigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>codigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:codigoMaior, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>2</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="saldo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>saldo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="qtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>qtde</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="saldoMexido">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>saldoMexido</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="unidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>unidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="quantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="retorno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>retorno</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipo2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locaCodigoLocal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locaCodigoLocal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="situacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>situacao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipoRT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipoRT</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>2</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="uniDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>uniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDEstoqueMovimentacaoRM</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>PRCDEstoque Movimentacao para o Rancho</Value>
+    </Property>
+    <Property>
+      <Name>CommitOnExit</Name>
+      <Value>No</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

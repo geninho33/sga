@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="8662a3b6-3a61-055e-370b-11204d8a1f30" user="JORGE-AVELL\joadh" versionDate="2024-08-08T14:09:06.0000000Z" lastUpdate="2024-08-08T13:43:30.0000000Z" checksum="2728b5e0fc8de9a80a242e944b49689e" fullyQualifiedName="trnsnotaWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="53e6919c-96f2-4b2f-be15-bd05603193da" name="trnsnotaWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsnota WWDS" parent="WorkWithPlustrnsnota" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like '%' +  &notaNumero1.ToLower() when &DynamicFiltersSelector1 = !'NOTANUMERO' AND &DynamicFiltersOperator1 = 0 AND (not &notaNumero1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &notaNumero1.ToLower() when &DynamicFiltersSelector1 = !'NOTANUMERO' AND &DynamicFiltersOperator1 = 1 AND (not &notaNumero1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData >= &notaData1 when &DynamicFiltersSelector1 = !'NOTADATA' AND &DynamicFiltersOperator1 = 0 AND (not &notaData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData <= &notaData_To1 when &DynamicFiltersSelector1 = !'NOTADATA' AND &DynamicFiltersOperator1 = 0 AND (not &notaData_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaStatus = &notaStatus1 when &DynamicFiltersSelector1 = !'NOTASTATUS' AND &DynamicFiltersOperator1 = 0 AND (not &notaStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome.ToLower() like &notaFornecedorNome1.ToLower() when &DynamicFiltersSelector1 = !'NOTAFORNECEDORNOME' AND &DynamicFiltersOperator1 = 0 AND (not &notaFornecedorNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome.ToLower() like '%' +  &notaFornecedorNome1.ToLower() when &DynamicFiltersSelector1 = !'NOTAFORNECEDORNOME' AND &DynamicFiltersOperator1 = 1 AND (not &notaFornecedorNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like '%' +  &notaNumero2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTANUMERO' AND &DynamicFiltersOperator2 = 0 AND (not &notaNumero2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &notaNumero2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTANUMERO' AND &DynamicFiltersOperator2 = 1 AND (not &notaNumero2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData >= &notaData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTADATA' AND &DynamicFiltersOperator2 = 0 AND (not &notaData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData <= &notaData_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTADATA' AND &DynamicFiltersOperator2 = 0 AND (not &notaData_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaStatus = &notaStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTASTATUS' AND &DynamicFiltersOperator2 = 0 AND (not &notaStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome.ToLower() like &notaFornecedorNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTAFORNECEDORNOME' AND &DynamicFiltersOperator2 = 0 AND (not &notaFornecedorNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome.ToLower() like '%' +  &notaFornecedorNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTAFORNECEDORNOME' AND &DynamicFiltersOperator2 = 1 AND (not &notaFornecedorNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like '%' +  &notaNumero3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTANUMERO' AND &DynamicFiltersOperator3 = 0 AND (not &notaNumero3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &notaNumero3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTANUMERO' AND &DynamicFiltersOperator3 = 1 AND (not &notaNumero3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData >= &notaData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTADATA' AND &DynamicFiltersOperator3 = 0 AND (not &notaData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData <= &notaData_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTADATA' AND &DynamicFiltersOperator3 = 0 AND (not &notaData_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaStatus = &notaStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTASTATUS' AND &DynamicFiltersOperator3 = 0 AND (not &notaStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome.ToLower() like &notaFornecedorNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTAFORNECEDORNOME' AND &DynamicFiltersOperator3 = 0 AND (not &notaFornecedorNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome.ToLower() like '%' +  &notaFornecedorNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTAFORNECEDORNOME' AND &DynamicFiltersOperator3 = 1 AND (not &notaFornecedorNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaCodigo >= &TFnotaCodigo when not &TFnotaCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaCodigo <= &TFnotaCodigo_To when not &TFnotaCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &TFnotaNumero.ToLower() when &TFnotaNumero_Sel.IsEmpty() AND (not &TFnotaNumero.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero = &TFnotaNumero_Sel when not &TFnotaNumero_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaSerie.ToLower() like &TFnotaSerie.ToLower() when &TFnotaSerie_Sel.IsEmpty() AND (not &TFnotaSerie.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaSerie = &TFnotaSerie_Sel when not &TFnotaSerie_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData >= &TFnotaData when not &TFnotaData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaData <= &TFnotaData_To when not &TFnotaData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome.ToLower() like &TFnotaFornecedorNome.ToLower() when &TFnotaFornecedorNome_Sel.IsEmpty() AND (not &TFnotaFornecedorNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaFornecedorNome = &TFnotaFornecedorNome_Sel when not &TFnotaFornecedorNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaTotal >= &TFnotaTotal when not &TFnotaTotal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaTotal <= &TFnotaTotal_To when not &TFnotaTotal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaStatus in &TFnotaStatus_Sels when &TFnotaStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaNumero1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaNumero1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaNumero2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaNumero2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaNumero3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaNumero3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaNumero">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaNumero</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaNumero_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaNumero_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaSerie">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaSerie</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaSerie</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaSerie_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaSerie_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaSerie</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaFornecedor">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaFornecedor</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaTotal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaTotal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaTotal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaTotal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaData1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaData1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaData_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaData_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaFornecedor1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaFornecedor1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaData2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaData2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaData_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaData_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaFornecedor2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaFornecedor2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaData3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaData3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaData_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaData_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaFornecedor3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaFornecedor3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaFornecedor_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaFornecedor_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaFornecedorNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaFornecedorNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedorNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaFornecedorNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaFornecedorNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedorNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaFornecedorNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaFornecedorNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedorNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaFornecedorNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaFornecedorNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedorNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaFornecedorNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaFornecedorNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaFornecedorNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaNumero1</Name>
+        <Description>nota Numero1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaData1</Name>
+        <Description>nota Data1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaData_To1</Name>
+        <Description>nota Data_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaStatus1</Name>
+        <Description>nota Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaFornecedorNome1</Name>
+        <Description>nota Fornecedor Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaNumero2</Name>
+        <Description>nota Numero2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaData2</Name>
+        <Description>nota Data2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaData_To2</Name>
+        <Description>nota Data_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaStatus2</Name>
+        <Description>nota Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaFornecedorNome2</Name>
+        <Description>nota Fornecedor Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaNumero3</Name>
+        <Description>nota Numero3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaData3</Name>
+        <Description>nota Data3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaData_To3</Name>
+        <Description>nota Data_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaStatus3</Name>
+        <Description>nota Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaFornecedorNome3</Name>
+        <Description>nota Fornecedor Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaCodigo</Name>
+        <Description>TFnota Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaCodigo_To</Name>
+        <Description>TFnota Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaNumero</Name>
+        <Description>TFnota Numero</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaNumero_Sel</Name>
+        <Description>TFnota Numero_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaSerie</Name>
+        <Description>TFnota Serie</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaSerie_Sel</Name>
+        <Description>TFnota Serie_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaData</Name>
+        <Description>TFnota Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaData_To</Name>
+        <Description>TFnota Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaFornecedorNome</Name>
+        <Description>TFnota Fornecedor Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaFornecedorNome_Sel</Name>
+        <Description>TFnota Fornecedor Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaTotal</Name>
+        <Description>TFnota Total</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaTotal_To</Name>
+        <Description>TFnota Total_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaStatus_Sels</Name>
+        <Description>TFnota Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsnotaWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsnota</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

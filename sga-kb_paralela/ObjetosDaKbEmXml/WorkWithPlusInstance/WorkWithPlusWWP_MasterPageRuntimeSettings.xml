@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e70c210f-4ea3-4604-aa42-19df356fe931" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-24T14:42:50.0000000Z" checksum="7438beb289afb8a423ab4579a081ac52" fullyQualifiedName="WWPBaseObjects.WorkWithPlusWWP_MasterPageRuntimeSettings" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="3ea6061c-db47-4622-a759-d2398e932fd2" name="WorkWithPlusWWP_MasterPageRuntimeSettings" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WWP_Master Page Runtime Settings" parent="WWPBaseObjects.WWP_MasterPageRuntimeSettings" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WWP_MasterPageTopActionsWC" defaultSecFuntionKey="WWP_MasterPageRuntimeSettings">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMainDesignerSelector" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <textBlock controlName="ColorTxt" caption="WWP_Color_Dsc" themeClass="RuntimeDesignSettingsTitle" />
+      <freeStyleGrid FSColumns="4" cellThemeClass="CellPaddingRight45" ControlName="FSColor">
+        <table name="TableColorItem" type="Responsive">
+          <textBlock controlName="ColorSquare" caption=" " format="Raw HTML" />
+          <variable name="ColorName" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" visible="False" defaultVisible="False" readOnly="True" defaultReadOnly="True" />
+        </table>
+      </freeStyleGrid>
+      <textBlock controlName="BackStyleTxt" caption="WWP_BackgroundStyle_Dsc" themeClass="RuntimeDesignSettingsTitle" cellThemeClass="CellMarginTop" />
+      <variable name="BackStyle" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="10" defaultBasicCLength="10" themeClass="Attribute" defaultThemeClass="Attribute" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Radio Button" defaultControlType="Radio Button" controlValues="WWP_BackgroundStyle_Light:Light,WWP_BackgroundStyle_Dark:Dark" defaultControlValues="WWP_BackgroundStyle_Light:Light,WWP_BackgroundStyle_Dark:Dark" controlRadioDir="Horizontal" defaultControlRadioDir="Horizontal" />
+      <textBlock controlName="FontSizeTxt" caption="WWP_FontSize_Dsc" themeClass="RuntimeDesignSettingsTitle" cellThemeClass="CellMarginTop" />
+      <table flexJustifyContent="Space Around" type="Flex" includeInPanel="False" panelTitle="Font Size">
+        <textBlock controlName="FontSizeSmall" caption="A" themeClass="FontSizeSelectorSmall" flexGrow="0" flexAlignSelf="Center" />
+        <textBlock controlName="FontSizeMedium" caption="A" themeClass="FontSizeSelectorMedium" flexGrow="0" flexAlignSelf="Center" />
+        <textBlock controlName="FontSizeLarge" caption="A" themeClass="FontSizeSelectorLarge" cellId="FontSizeLargeCell" flexGrow="0" flexAlignSelf="Center" />
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWWP_MasterPageRuntimeSettings</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.WWP_MasterPageRuntimeSettings</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

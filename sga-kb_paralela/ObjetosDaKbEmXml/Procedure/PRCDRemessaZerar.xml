@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-25T15:51:42.0000000Z" lastUpdate="2025-06-25T04:07:21.0000000Z" checksum="a90e101276b828446ad98d496abb9ead" fullyQualifiedName="PRCDRemessaZerar" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="6c3ac91e-ecd8-4ae0-b965-6b624d614288" name="PRCDRemessaZerar" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Zerar Remessa" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[// zerar distribuição
+for each trnsdistribuicao
+   where prefCodigo            = &prefCodigo
+	where distRemCodigo         = &remCodigo
+	where distCodigoTipoRemessa = &disTipNumero
+      &distCodigo = distCodigo
+      &distLocalDestino = distLocalDestino
+	  &distReceber = distReceber
+	  for each trnsdistribuicaoitens
+		 where prefCodigo = &prefCodigo
+		 where distCodigo = &distCodigo
+	       if &distReceber = 'S'
+	       	  PRCDAtualiarEstoqueUE(prefCodigo,&distLocalDestino,distItemProduto,distItemQuantidade,'S',0,'Unidade')
+		   endif
+	       PRCDEstoqueMovimentacao( &distCodigo,distItemProduto,&distLocalDestino,distItemQuantidade,'D','I',distItemQtdeAntes)
+	  endfor
+	  distReceber        = 'N'
+	  distStatus         = "C"
+      distDSCancelamento = &dsCancelamento
+endFor
+msg("Remessa zerada com sucesso !")
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo, in:&remCodigo,in:&disTipNumero,in:&dsCancelamento);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="zerado">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>zerado</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="disTipNumero">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>disTipNumero</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Número</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:disTipNumero</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestino">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestino</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value> Destino</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distReceber">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distReceber</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>dist Receber</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distReceber</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="temBaixa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>temBaixa</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaDsCancelamento">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaDsCancelamento</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição de Cancelamento</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaDsCancelamento</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dsCancelamento">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dsCancelamento</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1500</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1500</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDRemessaZerar</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Zerar Remessa</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

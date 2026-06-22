@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="269f9914-7129-491e-be0f-96d726fcc538" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-08T23:43:03.0000000Z" checksum="d783d4e4976a8361df496c8392c042a8" fullyQualifiedName="WorkWithPlusLocaisIgnorar" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fa13cd71-6ffb-4597-a367-b4b6cc9be63d" name="WorkWithPlusLocaisIgnorar" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus Locais Ignorar" parent="LocaisIgnorar" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="LocaisIgnorar" defaultSecFuntionKey="LocaisIgnorar" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty" formThemeClass="FormNoBackgroundColor">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <table name="TableTotais" numberOfColumns="3" flexJustifyContent="Space Between" type="Responsive">
+          <variable name="prodDescricao" description="Produto:" defaultDescription="Descrição" domain="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" flexGrow="0" readOnly="True" />
+          <variable name="TotCalculo" description="Total:" defaultDescription="Tot Calculo" dataType="Basic" defaultDataType="Basic" basicLength="8" defaultBasicLength="8" flexGrow="0" readOnly="True" />
+        </table>
+        <variable name="locDescricaoPesquisa" description="Pesquisar" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" cellThemeClass="CellMarginTop10" />
+      </table>
+      <grid defaultType="&lt;default&gt;" name="GridLocaisIgnorarGridSDTs" page="&lt;unlimited&gt;" multiRowSelection="True" multiRowSelectAll="True" SDTCollection="&amp;LocaisIgnorarGridSDT">
+        <gridVariable name="LocaisIgnorarGridSDT" defaultDescription="Selected" domain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" readOnly="False" sdtItem="item(0).Selected" defaultSdtItem="item(0).Selected" />
+        <gridVariable name="LocaisIgnorarGridSDT" description="Código" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" sdtItem="item(0).locCodigo" defaultSdtItem="item(0).locCodigo" />
+        <gridVariable name="LocaisIgnorarGridSDT" description="Local" defaultDescription="Local Nome" domain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" sdtItem="item(0).locDescricao" defaultSdtItem="item(0).locDescricao" />
+        <gridVariable name="LocaisIgnorarGridSDT" description="Quantidade" defaultDescription="Calculo" domain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-LocaisIgnorarGridSDT" sdtItem="item(0).Calculo" defaultSdtItem="item(0).Calculo" />
+      </grid>
+      <standardAction name="Enter" />
+    </table>
+    <steps />
+    <parameters>
+      <parameter type="In" name="&amp;WebSessionKey" />
+      <parameter type="In" name="&amp;locCodigoCollectionJson" />
+      <parameter type="In" name="&amp;Bercario1Percapta" />
+      <parameter type="In" name="&amp;Bercario1Oferta" />
+      <parameter type="In" name="&amp;Bercario2Percapta" />
+      <parameter type="In" name="&amp;Bercario2Oferta" />
+      <parameter type="In" name="&amp;CrechePercapta" />
+      <parameter type="In" name="&amp;CrecheOferta" />
+      <parameter type="In" name="&amp;EmebPercapta" />
+      <parameter type="In" name="&amp;EmebOferta" />
+      <parameter type="In" name="&amp;IntegralPercapta" />
+      <parameter type="In" name="&amp;IntegralOferta" />
+      <parameter type="In" name="&amp;FuncionarioPercapta" />
+      <parameter type="In" name="&amp;FuncionarioOferta" />
+      <parameter type="In" name="&amp;prodPesoConsumo" />
+      <parameter type="In" name="&amp;prodDescricao" />
+    </parameters>
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusLocaisIgnorar</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-LocaisIgnorar</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

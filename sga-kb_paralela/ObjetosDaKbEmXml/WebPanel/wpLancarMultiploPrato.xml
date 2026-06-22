@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f811665e-5346-41c3-8b57-18681f666aa3" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-03-11T02:22:56.0000000Z" lastUpdate="2026-03-11T02:12:17.0000000Z" checksum="ad3f0b84f6a5663829a743797462c269" fullyQualifiedName="wpLancarMultiploPrato" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f9a2dcf0-52e0-4618-aa18-8e487756f827" name="wpLancarMultiploPrato" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Lançamento do mesmo prato em vários dias diferentes" parent="Webpainel" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[{&quot;width&quot;:100}]]}]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cPanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Informações Gerais&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cPanel" tableType="Responsive" responsiveSizes="[]" containerSlotName="cPanel"><row><cell cellClass="ExtendedComboCell"><table controlName="TableSplittedcarPratoRefeicao" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockCombo_carPratoRefeicao" caption="Refeição " class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_carPratoRefeicao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;carPratoRefeicao_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><data attribute="&amp;carPratoTurno" labelCaption="Turno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;refTipCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;refTipDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo=&amp;amp;prefCodigo and refTipstatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="HasGridEmpowerer"><simplegrid controlName="GridSDTDiasMess" class="GridWithBorderColor WorkWith" collection="&amp;SDTDiasMes"><item controlName="SDTDiasMes__ok" attribute="&amp;SDTDiasMes" fieldSpecifier="item(0).ok" titleExp="Seleção" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTDiasMes__EhFinalSemana" attribute="&amp;SDTDiasMes" fieldSpecifier="item(0).EhFinalSemana" titleExp="Semana" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs hidden-sm hidden-md hidden-lg&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTDiasMes__Data" attribute="&amp;SDTDiasMes" fieldSpecifier="item(0).Data" titleExp="Data" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTDiasMes__DiaSemana" attribute="&amp;SDTDiasMes" fieldSpecifier="item(0).DiaSemana" titleExp="Dia Semana" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_ActionGroup1" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_ActionGroup1" class="CellMarginTop10"><item><action controlName="BtnactionConfirmar" onClickEvent="'DoactionConfirmar'" caption="Confirmar" /></item><item><action controlName="BtnactionFechar" onClickEvent="'DoactionFechar'" caption="Fechar" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" AttID="&amp;carPratoRefeicao" /><gxWWP.GridEmpowerer ControlName="GridSDTDiasMess_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo, in:&carDapCodigo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+    return
+	&DiasMes.Clear()
+    for each trnscardapio
+		where prefCodigo = &prefCodigo
+		where carDapCodigo = &carDapCodigo
+		      &carPratoData = carDapMesAno
+			  exit
+	endFor
+
+	&DataInicial = YMDtoD( &carPratoData.Year(),&carPratoData.Month(),1)
+	&DataFinal   = YMDtoD( &carPratoData.Year(),&carPratoData.Month(), &carPratoData.EndOfMonth().Day() )
+	&DataAtual   = &DataInicial
+
+	// &DataFinal   = &carPratoData. EndOfMonth()
+	//msg('Dt Inicial: ' + &DataAtual.ToString() + '|  Dt Final:' + &DataFinal.ToString() )
+
+	Do while &DataAtual <= &DataFinal
+
+		&Item 			= new()
+		&Item.Data 		= &DataAtual
+		&Item.DiaSemana = cDoW(&DataAtual,'por')
+
+		If DoW(&DataAtual) = 1 or DoW(&DataAtual) = 7
+			&Item.EhFinalSemana = True
+		Else
+			&Item.EhFinalSemana = False
+		EndIf
+
+		&SDTDiasMes.Add(&Item)
+		&DataAtual = &DataAtual.AddDays( 1 )
+	EndDo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&carPratoRefeicao.Visible = False
+	Do 'LoadCombocarPratoRefeicao'
+	GridSDTDiasMess_Empowerer.GridInternalName = GridSDTDiasMess.InternalName
+	GridSDTDiasMess.Rows = 0
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTDiasMess.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoactionConfirmar'
+
+	&tem = false
+
+	for &Item in &SDTDiasMes
+		if &Item.ok
+		   PRCDSalvarRefeicaoDia(&prefCodigo,&carDapCodigo,&carPratoRefeicao,&Item.Data,&carPratoTurno)
+		   &tem = true
+		endif
+	endfor
+
+    if &tem
+		msg('Refeições foram lançadas com sucesso no cardápio !')
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoactionFechar'
+
+    return
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_carPratoRefeicao.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&carPratoRefeicao.FromString(Combo_carPratoRefeicao.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadCombocarPratoRefeicao'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//&carPratoRefeicao initial value has to be loaded manually at the beginning of this Subrutine
+	For Each
+		Order pratoDscricao50
+		Where prefCodigo=&prefCodigo and pratoStatus = 'A'
+		&Combo_DataItem = new()
+		&Combo_DataItem.ID = pratoCodigo.ToString().Trim()
+		&Combo_DataItem.Title = pratoDscricao50
+		&carPratoRefeicao_Data.Add(&Combo_DataItem)
+	EndFor
+	Combo_carPratoRefeicao.SelectedValue_set = iif(&carPratoRefeicao.IsEmpty(), '', &carPratoRefeicao.ToString().Trim())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="carDapCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoData</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Data</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Refeição ( código do Prato)</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoTurno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoRefeicao_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoRefeicao_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataAtual">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataAtual</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DiasMes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DiasMes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTDiasMes</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTDiasMessAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTDiasMessAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTDiasMessCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTDiasMessCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTDiasMessPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTDiasMessPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Item">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Item</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTDiasMes.Item</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SDTDiasMes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SDTDiasMes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTDiasMes</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>wpLancarMultiploPrato</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Lançamento do mesmo prato em vários dias diferentes</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

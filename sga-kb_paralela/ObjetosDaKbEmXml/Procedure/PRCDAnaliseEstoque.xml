@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-12-05T04:02:24.0000000Z" lastUpdate="2024-12-04T20:31:52.0000000Z" checksum="31b50c7db18aca3fce578879b4a1674b" fullyQualifiedName="PRCDAnaliseEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="38741ce8-e1de-4e0d-8c4f-ea590be255ec" name="PRCDAnaliseEstoque" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Análise de Estoque" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&estoUeSaldo = 0
+
+
+for each
+	order prefCodigo, (lanestcodigo)
+	where lanestStatus = 'A'
+	where prefCodigo   = &prefCodigo
+		  &lanestCodigo = lanestcodigo
+		  exit
+endfor
+
+for each trnsdistribuicao, trnsdistribuicaoitens
+	order distDataEnvio
+	where prefCodigo            = &prefCodigo
+	where lanestcodigo 			= &lanestCodigo
+	where distLocalDestino      = &locCodigo
+	where distDataEnvio.Month() = &dataCorrente.Month()
+	where distDataEnvio.year()  = &dataCorrente.year()
+	where distItemProduto       = &prodCodigo
+	where distStatus            = 'A'
+	where distReceber           = 'S'
+	      &estoUeSaldo         += distItemQuantidade
+Endfor
+
+/*
+for each
+	order prefCodigo, lanestItemAlteracao
+	where lanestItemLocCodigo         = &locCodigo
+	where prefCodigo                  = &prefCodigo
+	where lanestItemAlteracao.Month() = &dataCorrente.Month()
+	where lanestItemAlteracao.year()  = &dataCorrente.year()
+	where lanestItemProdCodigo        = &prodCodigo
+	  	  &estoUeSaldo               += lanestItemQuantidade
+endfor
+*/
+
+for each
+	order prefCodigo, mapaUeData
+	where prefCodigo         = &prefCodigo
+	where mapaUeLocCodigo    = &locCodigo
+	where mapaUeData.Month() = &dataCorrente.Month()
+	where mapaUeData.year()  = &dataCorrente.year()
+	where mapaUeProdCodigo   = &prodCodigo
+	  	  &estoUeSaldo      -= mapaUeQuantidade
+endFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo,in:&locCodigo,in:&prodCodigo,in:&dataCorrente,out:&estoUeSaldo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="estoUeSaldo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>estoUeSaldo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Saldo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:estoUeSaldo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Lançamento</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestcodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataCorrente">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataCorrente</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:estoUeAlteracao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDAnaliseEstoque</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Análise de Estoque</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

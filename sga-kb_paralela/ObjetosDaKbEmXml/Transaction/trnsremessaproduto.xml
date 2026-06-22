@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:25:05.0000000Z" checksum="7415b982c29ade0cfc578b66295aa0a9" fullyQualifiedName="trnsremessaproduto" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b124c8ef-84c5-4ea4-a23b-3272514d3471" name="trnsremessaproduto" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Lançamento de Produtos" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsremessaproduto" Type="trnsremessaproduto" Description="Lançamento de Produtos" Guid="b124c8ef-84c5-4ea4-a23b-3272514d3471">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="f47eab15-6906-4b8f-9331-52a8b07df950">remCodigo</Attribute>
+      <Attribute key="True" guid="6972091b-ffca-4aef-ae0f-fa4d17e068e1">remProdCodigo</Attribute>
+      <Attribute key="True" guid="19e62b6a-aac0-4138-a8d0-7918c9b90279">remProdAreEnsCodigo</Attribute>
+      <Attribute key="True" guid="876b8a27-9da2-44f1-8e75-7535c08ccf8c">remProdAreEnsSequencial</Attribute>
+      <Attribute key="True" guid="ffffae09-151d-44d9-b52b-48c67fa71d76">remProdAreEnsTurno</Attribute>
+      <Attribute key="False" guid="dd88b5b3-ed39-4336-b851-d201b7b31861">remProdDescricao</Attribute>
+      <Attribute key="False" guid="d731be80-05f4-40e8-a481-a44a5a154417">remProdUnPeso</Attribute>
+      <Attribute key="False" guid="464e9036-d429-47a4-a71e-88c1104ba49b">remProdQtde</Attribute>
+      <Attribute key="False" guid="20b24a16-00e2-414b-b162-57df9864d43f">remProdPerCapta</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedprefCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockprefCodigo" caption="Prefeitura" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_prefCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;trnsremessaprodutoLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListGXProc&lt;/Name&gt;&lt;Value&gt;84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsremessaprodutoLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProcParametersPrefix&lt;/Name&gt;&lt;Value&gt; &quot;ComboName&quot;: &quot;prefCodigo&quot;, &quot;TrnMode&quot;: &quot;INS&quot;, &quot;IsDynamicCall&quot;: true, &quot;prefCodigo&quot;: 0, &quot;remCodigo&quot;: 0, &quot;remProdCodigo&quot;: 0, &quot;remProdAreEnsCodigo&quot;: 0, &quot;remProdAreEnsSequencial&quot;: 0, &quot;remProdAreEnsTurno&quot;: 0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsTitleSettingsIcons&lt;/Name&gt;&lt;Value&gt;&amp;amp;DDO_TitleSettingsIcons&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;prefCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="prefCodigo" labelPosition="None" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedremCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockremCodigo" caption="Remessa de Alimentação" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_remCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;trnsremessaprodutoLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListGXProc&lt;/Name&gt;&lt;Value&gt;84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsremessaprodutoLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsTitleSettingsIcons&lt;/Name&gt;&lt;Value&gt;&amp;amp;DDO_TitleSettingsIcons&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;remCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="remCodigo" labelPosition="None" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedremProdCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockremProdCodigo" caption="Código" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_remProdCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;trnsremessaprodutoLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListGXProc&lt;/Name&gt;&lt;Value&gt;84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsremessaprodutoLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsTitleSettingsIcons&lt;/Name&gt;&lt;Value&gt;&amp;amp;DDO_TitleSettingsIcons&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;remProdCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="remProdCodigo" labelPosition="None" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="remProdAreEnsCodigo" labelCaption="Área" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="remProdAreEnsSequencial" labelCaption="Etapa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="remProdAreEnsTurno" labelCaption="Turno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="remProdDescricao" labelCaption="Descrição" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="remProdUnPeso" labelCaption="Unidade" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="remProdQtde" labelCaption="Qtde" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="remProdPerCapta" labelCaption="Capta" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><div id="SectionAttribute_prefCodigo"><gxAttribute AttID="&amp;ComboprefCodigo" /></div><div id="SectionAttribute_remCodigo"><gxAttribute AttID="&amp;ComboremCodigo" /></div><div id="SectionAttribute_remProdCodigo"><gxAttribute AttID="&amp;ComboremProdCodigo" /></div></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&prefCodigo, in:&remCodigo, in:&remProdCodigo, in:&remProdAreEnsCodigo, in:&remProdAreEnsSequencial, in:&remProdAreEnsTurno);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+remCodigo = &remCodigo if not &remCodigo.IsEmpty();
+noaccept(remCodigo) if not &remCodigo.IsEmpty();
+remProdCodigo = &remProdCodigo if not &remProdCodigo.IsEmpty();
+noaccept(remProdCodigo) if not &remProdCodigo.IsEmpty();
+remProdAreEnsCodigo = &remProdAreEnsCodigo if not &remProdAreEnsCodigo.IsEmpty();
+noaccept(remProdAreEnsCodigo) if not &remProdAreEnsCodigo.IsEmpty();
+remProdAreEnsSequencial = &remProdAreEnsSequencial if not &remProdAreEnsSequencial.IsEmpty();
+noaccept(remProdAreEnsSequencial) if not &remProdAreEnsSequencial.IsEmpty();
+remProdAreEnsTurno = &remProdAreEnsTurno if not &remProdAreEnsTurno.IsEmpty();
+noaccept(remProdAreEnsTurno) if not &remProdAreEnsTurno.IsEmpty();
+
+prefCodigo = &ComboprefCodigo;
+remCodigo = &ComboremCodigo;
+remProdCodigo = &ComboremProdCodigo;
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	Combo_remProdCodigo.GAMOAuthToken = &GAMSession.Token
+	remProdCodigo.Visible = False
+	&ComboremProdCodigo.SetEmpty()
+	&ComboremProdCodigo.Visible = False
+	Combo_remCodigo.GAMOAuthToken = &GAMSession.Token
+	remCodigo.Visible = False
+	&ComboremCodigo.SetEmpty()
+	&ComboremCodigo.Visible = False
+	Combo_prefCodigo.GAMOAuthToken = &GAMSession.Token
+	prefCodigo.Visible = False
+	&ComboprefCodigo.SetEmpty()
+	&ComboprefCodigo.Visible = False
+	Do 'LoadComboprefCodigo'
+	Do 'LoadComboremCodigo'
+	Do 'LoadComboremProdCodigo'
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsremessaprodutoWW.Call(prefCodigo, remCodigo)
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_remProdCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ComboremProdCodigo.FromString(Combo_remProdCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_remCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ComboremCodigo.FromString(Combo_remCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_prefCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Cond_prefCodigo = prefCodigo
+	&ComboprefCodigo.FromString(Combo_prefCodigo.SelectedValue_get)
+	If &Cond_prefCodigo <> &ComboprefCodigo
+		&ComboremCodigo.SetEmpty()
+		Combo_remCodigo.SelectedValue_set = ''
+		Combo_remCodigo.SelectedText_set = ''
+		&ComboremProdCodigo.SetEmpty()
+		Combo_remProdCodigo.SelectedValue_set = ''
+		Combo_remProdCodigo.SelectedText_set = ''
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If Not SecGAMIsAuthByFunctionalityKey(!'remCodigo_Edit_Attribute')
+		Combo_remCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboremProdCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Combo_remProdCodigo.DataListProcParametersPrefix = format(!' "ComboName": "remProdCodigo", "TrnMode": "INS", "IsDynamicCall": true, "prefCodigo": 0, "remCodigo": 0, "remProdCodigo": 0, "remProdAreEnsCodigo": 0, "remProdAreEnsSequencial": 0, "remProdAreEnsTurno": 0, "Cond_prefCodigo": "#%1#"', prefCodigo.InternalName)
+	&Combo_DataJson = trnsremessaprodutoLoadDVCombo(!'remProdCodigo', &Mode, false, &prefCodigo, &remCodigo, &remProdCodigo, &remProdAreEnsCodigo, &remProdAreEnsSequencial, &remProdAreEnsTurno, prefCodigo, '', &ComboSelectedValue, &ComboSelectedText)
+	Combo_remProdCodigo.SelectedValue_set = &ComboSelectedValue
+	Combo_remProdCodigo.SelectedText_set = &ComboSelectedText
+	&ComboremProdCodigo.FromString(&ComboSelectedValue)
+	If &Mode <> TrnMode.Insert Or Not &remProdCodigo.IsEmpty()
+		Combo_remProdCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboremCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Combo_remCodigo.DataListProcParametersPrefix = format(!' "ComboName": "remCodigo", "TrnMode": "INS", "IsDynamicCall": true, "prefCodigo": 0, "remCodigo": 0, "remProdCodigo": 0, "remProdAreEnsCodigo": 0, "remProdAreEnsSequencial": 0, "remProdAreEnsTurno": 0, "Cond_prefCodigo": "#%1#"', prefCodigo.InternalName)
+	&Combo_DataJson = trnsremessaprodutoLoadDVCombo(!'remCodigo', &Mode, false, &prefCodigo, &remCodigo, &remProdCodigo, &remProdAreEnsCodigo, &remProdAreEnsSequencial, &remProdAreEnsTurno, prefCodigo, '', &ComboSelectedValue, &ComboSelectedText)
+	Combo_remCodigo.SelectedValue_set = &ComboSelectedValue
+	Combo_remCodigo.SelectedText_set = &ComboSelectedText
+	&ComboremCodigo.FromString(&ComboSelectedValue)
+	If &Mode <> TrnMode.Insert Or Not &remCodigo.IsEmpty()
+		Combo_remCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboprefCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Combo_DataJson = trnsremessaprodutoLoadDVCombo(!'prefCodigo', &Mode, false, &prefCodigo, &remCodigo, &remProdCodigo, &remProdAreEnsCodigo, &remProdAreEnsSequencial, &remProdAreEnsTurno, prefCodigo, '', &ComboSelectedValue, &ComboSelectedText)
+	Combo_prefCodigo.SelectedValue_set = &ComboSelectedValue
+	Combo_prefCodigo.SelectedText_set = &ComboSelectedText
+	&ComboprefCodigo.FromString(&ComboSelectedValue)
+	If &Mode <> TrnMode.Insert Or Not &prefCodigo.IsEmpty()
+		Combo_prefCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdAreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdAreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdAreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdAreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdAreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdAreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdAreEnsTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdAreEnsTurno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdAreEnsTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboremCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboremCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Cond_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Cond_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboremProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboremProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsremessaproduto</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Lançamento de Produtos</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnsremessaprodutoWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

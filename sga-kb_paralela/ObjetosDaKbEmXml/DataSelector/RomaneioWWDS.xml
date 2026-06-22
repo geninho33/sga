@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ac67bb45-8d84-06c4-3335-e3ff51fe1254" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-05-08T02:25:57.0000000Z" lastUpdate="2025-05-08T01:56:55.0000000Z" checksum="232ba43d0ee9c659d64377851c2ca386" fullyQualifiedName="RomaneioWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="40791a60-2693-44de-b6ab-c32a37aca055" name="RomaneioWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Romaneio WWDS" parent="WorkWithPlusRomaneio" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[romanData >= &romanData1 when &DynamicFiltersSelector1 = !'ROMANDATA' AND &DynamicFiltersOperator1 = 0 AND (not &romanData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanData <= &romanData_To1 when &DynamicFiltersSelector1 = !'ROMANDATA' AND &DynamicFiltersOperator1 = 0 AND (not &romanData_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &forNome1.ToLower() when &DynamicFiltersSelector1 = !'FORNOME' AND &DynamicFiltersOperator1 = 0 AND (not &forNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like '%' +  &forNome1.ToLower() when &DynamicFiltersSelector1 = !'FORNOME' AND &DynamicFiltersOperator1 = 1 AND (not &forNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &notaNumero1.ToLower() when &DynamicFiltersSelector1 = !'NOTANUMERO' AND &DynamicFiltersOperator1 = 0 AND (not &notaNumero1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like '%' +  &notaNumero1.ToLower() when &DynamicFiltersSelector1 = !'NOTANUMERO' AND &DynamicFiltersOperator1 = 1 AND (not &notaNumero1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanData >= &romanData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ROMANDATA' AND &DynamicFiltersOperator2 = 0 AND (not &romanData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanData <= &romanData_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ROMANDATA' AND &DynamicFiltersOperator2 = 0 AND (not &romanData_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &forNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORNOME' AND &DynamicFiltersOperator2 = 0 AND (not &forNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like '%' +  &forNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORNOME' AND &DynamicFiltersOperator2 = 1 AND (not &forNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &notaNumero2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTANUMERO' AND &DynamicFiltersOperator2 = 0 AND (not &notaNumero2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like '%' +  &notaNumero2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'NOTANUMERO' AND &DynamicFiltersOperator2 = 1 AND (not &notaNumero2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanData >= &romanData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ROMANDATA' AND &DynamicFiltersOperator3 = 0 AND (not &romanData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanData <= &romanData_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ROMANDATA' AND &DynamicFiltersOperator3 = 0 AND (not &romanData_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &forNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORNOME' AND &DynamicFiltersOperator3 = 0 AND (not &forNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like '%' +  &forNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORNOME' AND &DynamicFiltersOperator3 = 1 AND (not &forNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &notaNumero3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTANUMERO' AND &DynamicFiltersOperator3 = 0 AND (not &notaNumero3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like '%' +  &notaNumero3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'NOTANUMERO' AND &DynamicFiltersOperator3 = 1 AND (not &notaNumero3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanCodigo >= &TFromanCodigo when not &TFromanCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanCodigo <= &TFromanCodigo_To when not &TFromanCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanData >= &TFromanData when not &TFromanData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[romanData <= &TFromanData_To when not &TFromanData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &TFforNome.ToLower() when &TFforNome_Sel.IsEmpty() AND (not &TFforNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome = &TFforNome_Sel when not &TFforNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero.ToLower() like &TFnotaNumero.ToLower() when &TFnotaNumero_Sel.IsEmpty() AND (not &TFnotaNumero.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaNumero = &TFnotaNumero_Sel when not &TFnotaNumero_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaSerie.ToLower() like &TFnotaSerie.ToLower() when &TFnotaSerie_Sel.IsEmpty() AND (not &TFnotaSerie.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaSerie = &TFnotaSerie_Sel when not &TFnotaSerie_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="romanData1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>romanData1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="romanData_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>romanData_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="romanData2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>romanData2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="romanData_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>romanData_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="romanData3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>romanData3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="romanData_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>romanData_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFromanCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFromanCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFromanCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFromanCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFromanData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFromanData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFromanData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFromanData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:romanData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaNumero1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaNumero1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaNumero2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaNumero2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaNumero3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaNumero3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaNumero">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaNumero</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaNumero_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaNumero_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaSerie">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaSerie</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaSerie</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaSerie_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaSerie_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaSerie</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>romanData1</Name>
+        <Description>roman Data1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>romanData_To1</Name>
+        <Description>roman Data_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forNome1</Name>
+        <Description>for Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaNumero1</Name>
+        <Description>nota Numero1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>romanData2</Name>
+        <Description>roman Data2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>romanData_To2</Name>
+        <Description>roman Data_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forNome2</Name>
+        <Description>for Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaNumero2</Name>
+        <Description>nota Numero2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>romanData3</Name>
+        <Description>roman Data3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>romanData_To3</Name>
+        <Description>roman Data_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forNome3</Name>
+        <Description>for Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaNumero3</Name>
+        <Description>nota Numero3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFromanCodigo</Name>
+        <Description>TFroman Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFromanCodigo_To</Name>
+        <Description>TFroman Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFromanData</Name>
+        <Description>TFroman Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFromanData_To</Name>
+        <Description>TFroman Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforNome</Name>
+        <Description>TFfor Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforNome_Sel</Name>
+        <Description>TFfor Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaNumero</Name>
+        <Description>TFnota Numero</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaNumero_Sel</Name>
+        <Description>TFnota Numero_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaSerie</Name>
+        <Description>TFnota Serie</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaSerie_Sel</Name>
+        <Description>TFnota Serie_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RomaneioWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusRomaneio</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c510037e-484e-0ed5-f1a2-d680e1c73d14" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-21T12:38:49.0000000Z" checksum="06f87c47adc837179ca7cc54aeb2e62d" fullyQualifiedName="trnsdoencasWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fb2b0161-e934-4ce5-bc7a-65dfec4a12d1" name="trnsdoencasWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsdoencas WWDS" parent="WorkWithPlustrnsdoencas" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[doenCodigo >= &TFdoenCodigo when not &TFdoenCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[doenCodigo <= &TFdoenCodigo_To when not &TFdoenCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[doenDescricao.ToLower() like &TFdoenDescricao.ToLower() when &TFdoenDescricao_Sel.IsEmpty() AND (not &TFdoenDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[doenDescricao = &TFdoenDescricao_Sel when not &TFdoenDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[doenStatus in &TFdoenStatus_Sels when &TFdoenStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="TFdoenCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdoenCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:doenCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdoenCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdoenCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:doenCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdoenDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdoenDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:doenDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdoenDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdoenDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:doenDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdoenStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdoenStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:doenStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdoenCodigo</Name>
+        <Description>TFdoen Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdoenCodigo_To</Name>
+        <Description>TFdoen Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdoenDescricao</Name>
+        <Description>TFdoen Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdoenDescricao_Sel</Name>
+        <Description>TFdoen Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdoenStatus_Sels</Name>
+        <Description>TFdoen Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdoencasWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsdoencas</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

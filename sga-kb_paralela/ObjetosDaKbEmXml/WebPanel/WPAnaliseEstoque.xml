@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-02-25T05:13:56.0000000Z" lastUpdate="2025-02-25T04:45:35.0000000Z" checksum="724429746a180f5f4f721a7066f07842" fullyQualifiedName="WPAnaliseEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8ccfddb2-ad8c-41ba-8115-7d3c6dacb24b" name="WPAnaliseEstoque" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Análise Estoque" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cpOpcoes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value /&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cpOpcoes" tableType="Responsive" responsiveSizes="[]" containerSlotName="cpOpcoes"><row><cell><group controlName="UnnamedGroup1" caption="Opções para Busca" class="Group"><table controlName="grupoOpcoesBusca" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;label&quot;:33},{},{&quot;width&quot;:25},{&quot;width&quot;:25},{&quot;width&quot;:17}]]}]"><row><cell><data attribute="&amp;locCodigo" labelCaption="Unidade Escolar" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;  locStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todas&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><data attribute="&amp;prodCodigo" labelCaption="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;prodCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;prodDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prodStatus= 'A';&#xD;&#xA;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todos&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><data attribute="&amp;mesAno" labelCaption="Mês e Ano" class="AttributeRealWidthDate" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;mapaUeData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;(none)&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EditAutocomplete&lt;/Name&gt;&lt;Value&gt;No&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterOperator&lt;/Name&gt;&lt;Value&gt;Begins with&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;MaxItems&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlSortDescription&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaseSensitive&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoResize&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><data attribute="&amp;opcao" labelCaption="Opção" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Nenhuma Opção:N,Saldos  Iguais:I,Saldos Diferentes:D,Saldo Atual Negativo :A,Saldo Progessão Negativo:P&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><action controlName="BtnbtnBuscar" onClickEvent="'DobtnBuscar'" caption="Buscar" /></cell></row></table></group></cell></row><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cpResultado&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Resultado da Busca&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cpResultado" tableType="Responsive" responsiveSizes="[]" containerSlotName="cpResultado"><row><cell cellClass="HasGridEmpowerer"><table controlName="GridSDTEstoqueUEsTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="GridSDTEstoqueUEs" class="GridWithPaginationBar GridWithBorderColor WorkWith" collection="&amp;SDTEstoqueUE"><item attribute="&amp;btnSalvarEstoqueUE" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnMovEstoque" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Movimentação de Estoque&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUePrevisao" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUePrevisao" titleExp="Ordem" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUelocDescricao" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUelocDescricao" titleExp="Local" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUeCodigo" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUeCodigo" titleExp="Codigo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUeTipoRemessa" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUeTipoRemessa" titleExp="Tipo de Remessa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUeProdCodigo" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUeProdCodigo" titleExp="Cod. Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUeProdDescricao" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUeProdDescricao" titleExp="Descrição" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUeUniDescricao" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUeUniDescricao" titleExp="Unidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUeSaldo" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUeSaldo" titleExp="Saldo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUeQtdeFixo" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUeQtdeFixo" titleExp="Verificação de Saldo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEstoqueUE__estoUelocCodigo" attribute="&amp;SDTEstoqueUE" fieldSpecifier="item(0).estoUelocCodigo" titleExp="Previsão" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridSDTEstoqueUEsPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridSDTEstoqueUEsCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridSDTEstoqueUEsPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridSDTEstoqueUEsAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></ucw></cell></row></table></ucw></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><table id="TableDVelop_ConfirmPanel_btnSalvarEstoqueUE"><tbody><tr><td align="Center"><gxDVelop.GXBootstrap.ConfirmPanel ControlName="DVelop_ConfirmPanel_btnSalvarEstoqueUE" Title="Ajustar Saldo" ConfirmationText="Tem certeza que deseja lançar esse saldo ?" YesButtonCaption="WWP_ConfirmTextYes" NoButtonCaption="WWP_ConfirmTextNo" CancelButtonCaption="WWP_ConfirmTextCancel" YesButtonPosition="Left" ConfirmType="YesNo"><container containerId="Body" /></gxDVelop.GXBootstrap.ConfirmPanel></td></tr></tbody></table><gxWWP.GridEmpowerer ControlName="GridSDTEstoqueUEs_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call( &WWPContext )
+    &prefCodigo = &WWPContext.prefCodigo
+
+    &mesAno = Now()
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	GridSDTEstoqueUEs_Empowerer.GridInternalName = GridSDTEstoqueUEs.InternalName
+	GridSDTEstoqueUEs.Rows = Page.Rows
+	GridSDTEstoqueUEsPaginationBar.RowsPerPageSelectedValue = GridSDTEstoqueUEs.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'CheckSecurityForActions'
+
+	&GridSDTEstoqueUEsCurrentPage = GridSDTEstoqueUEs.CurrentPage
+	&GridSDTEstoqueUEsPageCount = GridSDTEstoqueUEs.PageCount
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTEstoqueUEs.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+	&btnSalvarEstoqueUE = !'<i class="fas fa-balance-scale"></i>'
+	
+	&btnMovEstoque = !'<i class="fas fa-tasks"></i>'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTEstoqueUEsPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridSDTEstoqueUEsPaginationBar.SelectedPage = !'Previous'
+			GridSDTEstoqueUEs.PreviousPage()
+		Case GridSDTEstoqueUEsPaginationBar.SelectedPage = !'Next'
+			&PageToGo = GridSDTEstoqueUEs.CurrentPage
+			&PageToGo += 1
+			GridSDTEstoqueUEs.GotoPage(&PageToGo)
+		Otherwise
+			&PageToGo.FromString(GridSDTEstoqueUEsPaginationBar.SelectedPage)
+			GridSDTEstoqueUEs.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTEstoqueUEsPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	GridSDTEstoqueUEs.Rows = GridSDTEstoqueUEsPaginationBar.RowsPerPageSelectedValue
+	GridSDTEstoqueUEs.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnSalvarEstoqueUE.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DVelop_ConfirmPanel_btnSalvarEstoqueUE.Confirm()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DVelop_ConfirmPanel_btnSalvarEstoqueUE.Close
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If DVelop_ConfirmPanel_btnSalvarEstoqueUE.Result = !'Yes'
+		Do 'Do btnSalvarEstoqueUE'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnMovEstoque.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_btnMovEstoque)
+		WPMovimentacaoProdutoUE.PopUp(&prefCodigo, &SDTEstoqueUE.CurrentItem.estoUeLocCodigo, &SDTEstoqueUE.CurrentItem.estoUeProdCodigo, &mesAno)
+		Refresh
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnBuscar'
+
+	Do 'Popular Produtos'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&IsAuthorized_btnMovEstoque = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnMovEstoque)
+		&btnMovEstoque.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'Do btnSalvarEstoqueUE'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	PRCDSalvarSaldoUE.Call(&prefCodigo, &SDTEstoqueUE.CurrentItem.estoUeCodigo, &SDTEstoqueUE.CurrentItem.estoUeSaldo, &SDTEstoqueUE.CurrentItem.estoUeProdCodigo, &SDTEstoqueUE.CurrentItem.estoUeLocCodigo)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'Popular Produtos'
+
+    &SDTEstoqueUE.Clear()
+	&processado = 1
+
+	for each trnsprodutos
+		where prefCodigo       = &prefCodigo
+		where prodCodigo        = &prodCodigo when &prodCodigo<>0
+		where prodStatus   = 'A'
+			  &estoUeSaldo = find(estoUeSaldo,estoUeProdCodigo = prodCodigo and estoUeLocCodigo = &locCodigo and prefCodigo = &prefCodigo,0 )
+			  if &estoUeSaldo > -1
+				 &estoque  = new()
+				 &estoque.estoUeCodigo        = find(estoUeCodigo,estoUeProdCodigo = prodCodigo and estoUeLocCodigo = &locCodigo and prefCodigo = &prefCodigo,0 )   
+				 &estoque.estoUelocCodigo     = &locCodigo
+				 &estoque.estoUelocDescricao  = find( locDescricao, locCodigo = &locCodigo and prefCodigo = &prefCodigo,'' )
+				 &estoque.estoUeProdCodigo    = prodCodigo
+				 &estoque.estoUeProdDescricao = prodDescricao
+				 &estoque.estoUeSaldo         = &estoUeSaldo
+				 &estoque.estoUeQtdeFixo      = PRCDAnaliseEstoque(&prefCodigo,&locCodigo,prodCodigo,&mesAno)
+				 &estoque.estoUePrevisao      = &processado
+				 for each
+					 where uniCodigo = prodUnidMedConsumo
+						   &estoque.estoUeUniDescricao  = uniDescricao
+				 endFor
+				
+				 Do Case
+					Case &opcao = 'I'
+						if  &estoque.estoUeSaldo = &estoque.estoUeQtdeFixo
+							&SDTEstoqueUE.Add( &estoque )
+							&processado += 1
+						endif
+					Case &opcao = 'D'
+						if  &estoque.estoUeSaldo <> &estoque.estoUeQtdeFixo
+							&SDTEstoqueUE.Add( &estoque )
+							&processado += 1
+						endif
+					Case &opcao = 'A'
+						if  &estoque.estoUeSaldo<0
+							&SDTEstoqueUE.Add( &estoque )
+							&processado += 1
+						endif
+					Case &opcao = 'P'
+						if  &estoque.estoUeQtdeFixo<0
+							&SDTEstoqueUE.Add( &estoque )
+							&processado += 1
+						endif
+					Otherwise
+						&SDTEstoqueUE.Add( &estoque )
+						&processado += 1
+				 Endcase
+			 endif	
+	endfor
+
+    msg( &processado.ToString().Trim() +' Produto(s) Processado(s) ' )
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEstoqueUEsAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEstoqueUEsAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEstoqueUEsCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEstoqueUEsCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEstoqueUEsPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEstoqueUEsPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="mesAno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>mesAno</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SDTEstoqueUE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SDTEstoqueUE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTEstoqueUE</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="estoque">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>estoque</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTEstoqueUE.estoque</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="processado">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>processado</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="opcao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>opcao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnMovEstoque">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnMovEstoque</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnMovEstoque">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnMovEstoque</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ordem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ordem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnSalvarEstoqueUE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnSalvarEstoqueUE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="estoUeSaldo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>estoUeSaldo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Saldo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:estoUeSaldo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WPAnaliseEstoque</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Análise Estoque</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

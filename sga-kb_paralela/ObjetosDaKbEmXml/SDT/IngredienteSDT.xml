@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="JORGE-AVELL\joadh" versionDate="2024-06-23T18:18:22.0000000Z" lastUpdate="2024-06-20T15:20:06.0000000Z" checksum="72fd575367167156ca01063a37fa5115" fullyQualifiedName="IngredienteSDT" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="894ce4ad-39b7-4068-8d6e-6485bc153488" name="IngredienteSDT" type="447527b5-9210-4523-898b-5dccb17be60a" description="Ingrediente SDT" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="IngredienteSDT">
+      <LevelInfo guid="adf840b8-07fe-4b8b-a502-0461ec41f351" name="IngredienteSDT" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Ingrediente SDT" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>IngredienteSDT</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="7ee1abbb-3c05-4b8a-a6d2-cd8265d0d970" name="prodCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Level Name="PercaptaOferta">
+        <LevelInfo guid="d1665e59-b264-470f-9318-428992c348ec" name="PercaptaOferta" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Percapta Oferta" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>PercaptaOferta</Value>
+            </Property>
+            <Property>
+              <Name>AttCollection</Name>
+              <Value>True</Value>
+            </Property>
+          </Properties>
+        </LevelInfo>
+        <Item guid="9628ce1a-9c2a-4b02-84a4-b8ed424ad77e" name="AreEnsCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Área de Ensino" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>AreEnsCodigo</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:AreEnsCodigo</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="476bf1de-f48b-4b70-a82c-aa8a0989b008" name="AreEnsSequencial" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Sequencial" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>AreEnsSequencial</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:AreEnsSequencial</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="1cfc365f-9d03-4a2a-bc43-f05ea2b360c1" name="carGruTurno" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Turno" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>carGruTurno</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:carGruTurno</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="22b58734-6de7-4b59-8446-86a63b614783" name="Percapta" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Quantidade" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Percapta</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:pratIngrQuantidade</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="80e054fa-b3ec-4dc4-81d7-ebd2f1e73f18" name="Oferta" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Oferta" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Oferta</Value>
+            </Property>
+          </Properties>
+        </Item>
+      </Level>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>IngredienteSDT</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

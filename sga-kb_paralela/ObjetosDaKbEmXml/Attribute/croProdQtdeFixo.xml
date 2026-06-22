@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Attribute parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-02-19T03:18:18.0000000Z" lastUpdate="2025-02-19T00:51:20.0000000Z" checksum="3121e023cb40138b049ab4e71a7db9d9" fullyQualifiedName="croProdQtdeFixo" moduleGuid="00000000-0000-0000-0000-000000000000" guid="5d98b396-29bc-4ba5-a591-389bd06832ef" name="croProdQtdeFixo" description="cro Prod Qtde Fixo">
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>croProdQtdeFixo</Value>
+    </Property>
+    <Property>
+      <Name>Formula</Name>
+      <Value>find(estoUEQtdeFixa, estoUeLocCodigo = croLocCodigo and estoUeProdCodigo=prodCodigo, 0)</Value>
+    </Property>
+    <Property>
+      <Name>idBasedOn</Name>
+      <Value>Domain:Qtde, WWPBaseObjects</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Attribute>

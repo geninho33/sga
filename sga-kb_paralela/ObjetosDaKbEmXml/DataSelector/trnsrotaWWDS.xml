@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="514d2ad7-5cdb-a409-664a-4c30af531f56" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-21T12:37:56.0000000Z" checksum="5878ffb326918a6285b2456a575e900e" fullyQualifiedName="trnsrotaWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="aeac6455-976d-4a0a-81dc-160ce0dbc35d" name="trnsrotaWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsrota WWDS" parent="WorkWithPlustrnsrota" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like &rotaDescricao1.ToLower() when &DynamicFiltersSelector1 = !'ROTADESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &rotaDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like '%' +  &rotaDescricao1.ToLower() when &DynamicFiltersSelector1 = !'ROTADESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &rotaDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaStatus = &rotaStatus1 when &DynamicFiltersSelector1 = !'ROTASTATUS' AND (not &rotaStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like &rotaDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ROTADESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &rotaDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like '%' +  &rotaDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ROTADESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &rotaDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaStatus = &rotaStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ROTASTATUS' AND (not &rotaStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like &rotaDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ROTADESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &rotaDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like '%' +  &rotaDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ROTADESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &rotaDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaStatus = &rotaStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ROTASTATUS' AND (not &rotaStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaCodigo >= &TFrotaCodigo when not &TFrotaCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaCodigo <= &TFrotaCodigo_To when not &TFrotaCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like &TFrotaDescricao.ToLower() when &TFrotaDescricao_Sel.IsEmpty() AND (not &TFrotaDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao = &TFrotaDescricao_Sel when not &TFrotaDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaStatus in &TFrotaStatus_Sels when &TFrotaStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="rotaDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>rotaDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="rotaDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>rotaDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="rotaDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>rotaDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrotaCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrotaCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrotaCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrotaCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrotaDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrotaDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrotaDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrotaDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrotaStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrotaStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="rotaStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>rotaStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="rotaStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>rotaStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="rotaStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>rotaStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>rotaDescricao1</Name>
+        <Description>rota Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>rotaStatus1</Name>
+        <Description>rota Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>rotaDescricao2</Name>
+        <Description>rota Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>rotaStatus2</Name>
+        <Description>rota Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>rotaDescricao3</Name>
+        <Description>rota Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>rotaStatus3</Name>
+        <Description>rota Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrotaCodigo</Name>
+        <Description>TFrota Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrotaCodigo_To</Name>
+        <Description>TFrota Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrotaDescricao</Name>
+        <Description>TFrota Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrotaDescricao_Sel</Name>
+        <Description>TFrota Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrotaStatus_Sels</Name>
+        <Description>TFrota Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsrotaWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsrota</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

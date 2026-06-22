@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="1ab375f4-744e-4841-ad42-cc7bb54e1bd2" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-09T17:16:42.0000000Z" checksum="e8362f72cb756d12a2e50513123a168a" fullyQualifiedName="WPComposicaoRefeicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="da75b586-e9cd-4d28-b58c-4f39408a66c9" name="WPComposicaoRefeicao" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Alteração de Composição de Refeições" parent="WebPanel" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cpComposicao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Alteração de Percapta por Alimento&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cpComposicao" tableType="Responsive" responsiveSizes="[]" containerSlotName="cpComposicao"><row><cell><table controlName="tableProduto" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="ExtendedComboCell"><table controlName="TableSplittedprodCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:8},{&quot;width&quot;:92}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockCombo_prodCodigo" caption="Alimento" class="Label" /></cell><cell><table controlName="TableMergedprodCodigo" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_prodCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;prodCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><data attribute="&amp;AreEnsCodigo" labelCaption="Área" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;AreEnsCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;AreEnsNome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo and ArenEnsStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><table controlName="TableSplitteddtInicial" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:8},{&quot;width&quot;:92}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockdtInicial" caption="Período" class="Label" /></cell><cell><table controlName="TableMergeddtInicial" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;dtInicial" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell><data attribute="&amp;dtFinal" labelCaption="a" class="AttributeRealWidthDate" /></cell></row></table></cell></row></table></cell></row><row><cell><table controlName="TableSplittedtemPercapta" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlocktemPercapta" caption="Somente percapta maior que zero  ?" class="Label" /></cell><cell><table controlName="TableMergedtemPercapta" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;temPercapta" labelPosition="None" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Check Box&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><action controlName="BtnbtnProcurar" onClickEvent="'DobtnProcurar'" caption="Procurar " /></cell></row></table></cell></row></table></cell></row></table></cell></row><row><cell><table controlName="tableProdutoGrid" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[{&quot;label&quot;:17}]]}]"><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><simplegrid controlName="GridSDTComposicaoRefeicaos" class="GridWithBorderColor WorkWith" collection="&amp;SDTComposicaoRefeicao"><item controlName="SDTComposicaoRefeicao__carDapCodigo" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).carDapCodigo" titleExp="Cód. Cardápio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;15&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__carDapDescricao" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).carDapDescricao" titleExp="Descrição Cardápio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;200&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__pratoCodigo" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).pratoCodigo" titleExp="Cód. Prato" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;15&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__pratoDscricao" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).pratoDscricao" titleExp="Descrição Prato" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;200&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__carPratoData" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).carPratoData" titleExp="Data" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__carPratoHorario" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).carPratoHorario" titleExp="Horário" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__AreEnsNome" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).AreEnsNome" titleExp="Área" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;100&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__AreEnsEtapaNome" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).AreEnsEtapaNome" titleExp="Etapa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;100&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__perCapta" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).perCapta" titleExp="Percapta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;100&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__AreEnsCodigo" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).AreEnsCodigo" titleExp="Área de Ensino" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__AreEnsSequencial" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).AreEnsSequencial" titleExp="Sequencial" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTComposicaoRefeicao__prodCodigo" attribute="&amp;SDTComposicaoRefeicao" fieldSpecifier="item(0).prodCodigo" titleExp="Cód. Prato" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;15&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><data attribute="&amp;oferta" labelCaption="Total de oferta : " readonly="True" class="AssociationTitle" /></cell></row></table></cell></row><row><cell><table controlName="TableMergedBtnbtnSalvar" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><action controlName="BtnbtnSalvar" onClickEvent="'DobtnSalvar'" caption="Salvar " /></cell><cell><action controlName="BtnbtnReturn" onClickEvent="'DobtnReturn'" caption="Retornar" /></cell></row></table></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute AttID="&amp;prodCodigo" /><table id="TableDVelop_ConfirmPanel_BtnbtnSalvar"><tbody><tr><td align="Center"><gxDVelop.GXBootstrap.ConfirmPanel ControlName="DVelop_ConfirmPanel_BtnbtnSalvar" Title="Salvar Percaptas" ConfirmationText="Tem certeza que deseja Salvar as Percaptas ?" YesButtonCaption="WWP_ConfirmTextYes" NoButtonCaption="WWP_ConfirmTextNo" CancelButtonCaption="WWP_ConfirmTextCancel" YesButtonPosition="Left" ConfirmType="YesNo"><container containerId="Body" /></gxDVelop.GXBootstrap.ConfirmPanel></td></tr></tbody></table><gxWWP.GridEmpowerer ControlName="GridSDTComposicaoRefeicaos_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call(&WWPContext)
+    &prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prodCodigo.Visible = False
+	Do 'LoadComboprodCodigo'
+
+	Do 'AttributesSecurityCode'
+	GridSDTComposicaoRefeicaos_Empowerer.GridInternalName = GridSDTComposicaoRefeicaos.InternalName
+	GridSDTComposicaoRefeicaos.Rows = 0
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTComposicaoRefeicaos.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnSalvar'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DVelop_ConfirmPanel_BtnbtnSalvar.Confirm()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DVelop_ConfirmPanel_BtnbtnSalvar.Close
+
+    if PRCDNutricionista()
+		For &refeicao in &SDTComposicaoRefeicao
+		    PRCDSalvarPerCapta(&prefCodigo,&refeicao.pratoCodigo,&refeicao.prodCodigo,&refeicao.AreEnsCodigo,&refeicao.AreEnsSequencial,&refeicao.perCapta)
+		endFor
+    else
+		msg('Este usuário não tem permissão !') 
+    endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Ask If DVelop_ConfirmPanel_BtnbtnSalvar.Result = !'Yes'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnReturn'
+
+	return
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnProcurar'
+
+	Do 'PopularGRID'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_prodCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prodCodigo.FromString(Combo_prodCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If Not (&prefCodigo <> 26)
+		SDTComposicaoRefeicao__AreEnsEtapaNome.Visible = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboprodCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//&prodCodigo initial value has to be loaded manually at the beginning of this Subrutine
+	For Each
+		Order prodDescricao
+		Where prefCodigo = &prefCodigo and prodStatus = 'A'
+		&Combo_DataItem = new()
+		&Combo_DataItem.ID = prodCodigo.ToString().Trim()
+		&Combo_DataItem.Title = prodDescricao
+		&prodCodigo_Data.Add(&Combo_DataItem)
+	EndFor
+	Combo_prodCodigo.SelectedValue_set = iif(&prodCodigo.IsEmpty(), '', &prodCodigo.ToString().Trim())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PopularGRID'
+
+  &SDTComposicaoRefeicao.Clear()
+  &oferta = 0
+
+  /*msg('PrefCodigo ' + &prefCodigo.ToString() +
+      '| Produto :  ' + &prodCodigo.ToString() +
+	  ' Data Inicial ' + &dtInicial.ToString() +
+	  ' Data Final ' + &dtFinal.ToString() )*/
+
+  for each trnscardapioprato
+      where prefCodigo  = &prefCodigo
+      where carPratoData>=&dtInicial
+      where carPratoData<=&dtFinal
+            &carPratoRefeicao = carPratoRefeicao
+	        &cardapCodigo     = carDapCodigo
+			for each  trnspratosingredientes, trnsAreaEnsino
+				order prefCodigo, carPratoData, carPratoHorario, AreEnsCodigo,AreEnsSequencial
+				where prefCodigo         = &prefCodigo
+				where pratoCodigo        = &carPratoRefeicao
+				where pratIngrProdCodigo = &prodCodigo
+				where AreEnsCodigo	      = &AreEnsCodigo when not &AreEnsCodigo.IsEmpty()
+				where pratIngrStatus     = 'A'
+				where pratIngrQuantidade>0                when &temPercapta
+					  // msg('Entrou em ingrediente ')
+					  &cardapCodigo = carDapCodigo
+					  &refeicao         		 = new()
+					  &refeicao.carDapCodigo     = &cardapCodigo
+					  &refeicao.carDapDescricao  = PRCDBuscarCardapioDescricao(&prefCodigo,&cardapCodigo)
+					  &refeicao.carPratoHorario  = carPratoHorario
+					  &refeicao.carPratoData     = carPratoData
+					  &refeicao.prodCodigo   	 = pratIngrProdCodigo
+					  &refeicao.pratoCodigo      = &carPratoRefeicao
+					  &refeicao.pratoDscricao    = PRCDBuscarPratoDescricao(&prefCodigo,&carPratoRefeicao)
+					  &refeicao.perCapta         = pratIngrQuantidade
+					  &refeicao.AreEnsCodigo     = AreEnsCodigo
+					  &refeicao.AreEnsSequencial = AreEnsSequencial
+					  &refeicao.AreEnsEtapaNome  = PRCDBuscarAreaEtapaNome(&prefCodigo,AreEnsCodigo,AreEnsSequencial)
+					  &refeicao.AreEnsNome       = AreEnsNome
+					  &SDTComposicaoRefeicao.Add( &refeicao )
+					  &oferta += 1
+			endFor
+  endFor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsNome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridComposicaoRefeicaoAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridComposicaoRefeicaoAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridComposicaoRefeicaoCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridComposicaoRefeicaoCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridComposicaoRefeicaoPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridComposicaoRefeicaoPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="perCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>perCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoDscricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoDscricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDscricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigoGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigoGrid</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="refeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>refeicao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTComposicaoRefeicao.refeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SDTComposicaoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SDTComposicaoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTComposicaoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dtInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dtInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dtFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dtFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="cardapCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>cardapCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Refeição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="temPercapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>temPercapta</Value>
+        </Property>
+        <Property>
+          <Name>EmptyAsNull</Name>
+          <Value>Yes</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_START</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_STEP</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_FORREPLICATION</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_SHORT</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>oferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WPComposicaoRefeicao</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Alteração de Composição de Refeições</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

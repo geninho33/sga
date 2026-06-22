@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="bd8fa2de-4109-4e1b-ac09-959be8f1f66f" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:23:07.0000000Z" checksum="d7b9fa7ae182d71aabb8277a7411a3da" fullyQualifiedName="trnsprogramas" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="83e174b7-2d65-0b08-f563-60657af694dd" name="trnsprogramas" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Tipo Programa" parent="Configuracoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsprogramas" Type="trnsprogramas" Description="Tipo Programa" Guid="83e174b7-2d65-0b08-f563-60657af694dd">
+      <Properties />
+      <Attribute key="True" guid="0fce60a8-f0b3-5dee-edc0-8d7cab63f388">progCodigo</Attribute>
+      <Attribute key="False" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="False" guid="1a6ead6d-17a0-a265-69bf-3cef6c07626d">progDescricao</Attribute>
+      <Attribute key="False" guid="16e1ff2c-c64c-a5df-3348-8f5bc79ade01">progSigla</Attribute>
+      <Attribute key="False" guid="4703fdd2-a728-d75f-893e-91d6bd732c47">progApareceRemessa</Attribute>
+      <Attribute key="False" guid="b3182dcf-f2da-2df2-d404-8e9e39691528">progOrigem</Attribute>
+      <Attribute key="False" guid="3c46886f-d5d1-2762-1ea1-5ce4bf1d9a9c">proTipoLicitacao</Attribute>
+      <Attribute key="False" guid="05ff0e21-c94f-6133-717a-ff6d177d8a75">progStatus</Attribute>
+      <Attribute key="False" guid="071328fd-eb7a-ea58-b696-f94a8cfd3a94">progDataCad</Attribute>
+      <Attribute key="False" guid="ee72e473-0e12-11be-4636-40a9d32a5257">progDataAlt</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellClass="DataContentCell"><data attribute="progCodigo" labelCaption="Codigo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="progDescricao" labelCaption="Descricao" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="progSigla" labelCaption="Sigla" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="progApareceRemessa" labelCaption="Aparece na Remessa" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="progOrigem" labelCaption="Origem" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="proTipoLicitacao" labelCaption="Tipo Licitacao" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="progStatus" labelCaption="Situacao" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="progDataCad" /><gxAttribute ControlType="Edit" InputType="Values" AttID="progDataAlt" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Document>
+      <Form>
+        <Type>Windows</Type>
+        <Class>Windows</Class>
+        <ClassGuid>4df66249-100d-407d-8ce0-41ec76938671</ClassGuid>
+        <SizeUnit>px</SizeUnit>
+        <Info>
+          <Properties>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>True</Value>
+            </Property>
+            <Property>
+              <Name>Defaults</Name>
+              <Value>gx:TrnDefaultWindowsForm.dkt</Value>
+            </Property>
+          </Properties>
+        </Info>
+      </Form>
+    </Document>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&progCodigo);
+
+progCodigo = &progCodigo if not &progCodigo.IsEmpty();
+noaccept(progCodigo) if not &progCodigo.IsEmpty();
+noprompt(progCodigo);
+
+prefCodigo = &Insert_prefCodigo if &Mode = TrnMode.Insert and not &Insert_prefCodigo.IsEmpty();
+noaccept(prefCodigo) if &Mode = TrnMode.Insert and not &Insert_prefCodigo.IsEmpty();
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+progDataCad = serverNow() 
+	on beforeInsert;
+
+progDataAlt = serverNow() 
+	on beforeUpdate;
+
+progCodigo = PRCDGerarNovoCodigo('programa')  
+	on BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	If (&TrnContext.TransactionName = &Pgmname and &Mode = TrnMode.Insert)
+		For &TrnContextAtt in &TrnContext.Attributes
+			Do Case
+				// When inserting with instantiated prefCodigo
+				Case &TrnContextAtt.AttributeName = !"prefCodigo"
+					&Insert_prefCodigo.FromString(&TrnContextAtt.AttributeValue)
+			Endcase
+		Endfor
+	Endif
+	
+	progDataCad.Visible = False
+	progDataAlt.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsprogramasWW.Call()
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="progCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>progCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:progCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsprogramas</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Tipo Programa</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnsprogramasWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

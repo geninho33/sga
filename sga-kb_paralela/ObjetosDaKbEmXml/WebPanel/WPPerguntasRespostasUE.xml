@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="1ab375f4-744e-4841-ad42-cc7bb54e1bd2" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-01T03:48:07.0000000Z" lastUpdate="2024-08-01T02:17:41.0000000Z" checksum="50fa6708d42f061475908ec5c8f4a417" fullyQualifiedName="WPPerguntasRespostasUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="dedd68c9-d773-4b0c-bd29-c4f1f31daa80" name="WPPerguntasRespostasUE" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Duvidas" parent="WebPanel" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_tableDuvidas&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Informações Gerais&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="tableDuvidas" tableType="Responsive" responsiveSizes="[]" containerSlotName="tableDuvidas"><row><cell><table controlName="tableVariavel" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}]]}]"><row><cell><data attribute="&amp;perResAssunto" labelCaption="Assunto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Produto:1,Refeição:2,Cardápio:3,Entregas:4,Lançamento de Estoque:5,Inventário:6,Estoque:7,Sugestão:8,Outros:9&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;GX_EmptyItemText&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoResize&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell><data attribute="&amp;perResPergunta" labelCaption="Pergunta" class="AttributeRealWidth" /></cell></row><row><cell cellControlName="perResResposta_Cell"><data attribute="&amp;perResResposta" labelCaption="Resposta" readonly="True" class="ReadonlyAttribute" /></cell></row></table></cell></row><row><cell><table controlName="tableBotoes" tableType="Responsive" responsiveSizes="[]"><row><cell><action controlName="BtnbtnSalvar" onClickEvent="'DobtnSalvar'" caption="Confirmar" /></cell><cell><action controlName="BtnbtnFechar" onClickEvent="'DobtnFechar'" caption="Fechar" /></cell></row></table></cell></row></table></ucw></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><table id="TableDVelop_ConfirmPanel_BtnbtnSalvar"><tbody><tr><td align="Center"><gxDVelop.GXBootstrap.ConfirmPanel ControlName="DVelop_ConfirmPanel_BtnbtnSalvar" Title="Enviar" ConfirmationText="Deseja enviar a pergunta ?" YesButtonCaption="WWP_ConfirmTextYes" NoButtonCaption="WWP_ConfirmTextNo" CancelButtonCaption="WWP_ConfirmTextCancel" YesButtonPosition="Left" ConfirmType="YesNo"><container containerId="Body" /></gxDVelop.GXBootstrap.ConfirmPanel></td></tr></tbody></table></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo,in:&locCodigo,&perResCodigo,in:&situacao);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+   Do 'popular'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	tableBotoes.Width = 300
+	tableBotoes.Height = 100
+
+	Do 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnSalvar'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DVelop_ConfirmPanel_BtnbtnSalvar.Confirm()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DVelop_ConfirmPanel_BtnbtnSalvar.Close
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If DVelop_ConfirmPanel_BtnbtnSalvar.Result = !'Yes'
+		PRCDSalvarPergunta.Call(&prefCodigo, &locCodigo, &perResAssunto, &perResPergunta)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnFechar'
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If Not (not &perResResposta.IsEmpty())
+		&perResResposta.Visible = False
+		perResResposta_Cell.Class = !'Invisible'
+	Else
+		&perResResposta.Visible = True
+		perResResposta_Cell.Class = !'col-xs-12'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'popular'
+
+    for each
+		where prefCodigo   = &prefCodigo
+		where perResCodigo = &perResCodigo
+			  &perResAssunto  = perResAssunto
+			  &perResPergunta = perResPergunta
+			  &perResResposta = perResResposta
+    endFor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="perResCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>perResCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:perResCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="situacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>situacao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="perResAssunto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>perResAssunto</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>2</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="perResPergunta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>perResPergunta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>500</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>500</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="perResResposta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>perResResposta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>500</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>500</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WPPerguntasRespostasUE</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Duvidas</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPageUE</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityNone</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

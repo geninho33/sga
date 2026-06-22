@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="30fb09fd-8cc6-4200-8a02-aed2eb552e4c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T17:57:37.0000000Z" checksum="e85a6e65a9417f44290c72ca340743df" fullyQualifiedName="WorkWithPlusGAMExampleIDPLogin" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="37e8516d-da3a-0a9b-3e0a-a8e5c9afb131" name="WorkWithPlusGAMExampleIDPLogin" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus GAMExample IDPLogin" parent="GAMExampleIDPLogin" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="GAMRemoteLogin" defaultSecFuntionKey="GAMExampleIDPLogin">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty" formThemeClass="FormBackgroundImage">
+    <table name="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellPadding="-1" cellSpacing="-1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <table name="TableLoginContent" defaultNumberOfColumns="1" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" cellThemeClass="CellMarginLoginImageLeft" align="Center">
+        <table name="TableLogin" themeClass="TableLoginWithLeftImage" defaultThemeClass="DataTable" cellPadding="0" defaultCellPadding="0" cellSpacing="0" defaultCellSpacing="0" type="Responsive" defaultIncludeInPanel="True" panelTitle="" defaultPanelTitle="General Information" panelTheme="BootstrapPanel-Gray" collapsable="False" defaultCollapsable="False" cellThemeClass="CellPaddingLeft30">
+          <image controlName="logoLogin" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-LogoLogin" align="Center" />
+          <table type="Responsive" cellThemeClass="CellMarginTop" align="Center">
+            <variable name="LogoAppClient" dataType="Basic" defaultDataType="Basic" basicType="Image" defaultBasicType="Image" visibleCondition="not &amp;GAMApplication.ClientImageURL.IsEmpty()" defaultVisibleCondition="not &amp;GAMApplication.ClientImageURL.IsEmpty()" align="Center" defaultAlign="Center" showDescription="False" defaultShowDescription="False" readOnly="True" defaultReadOnly="True" />
+            <textBlock controlName="TBAppName" caption="App Name" themeClass="TextBlockTitleLogin" align="Center" />
+            <variable name="LogOnTo" description="Entrar" defaultDescription="Entrar" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" themeClass="AttributeLoginImageLeft" defaultThemeClass="AttributeLoginImageLeft" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Combo Box" cellThemeClass="DataContentCellLogin CellPaddingLogin" defaultCellThemeClass="DataContentCellLogin CellPaddingLogin" descriptionPosition="Top" defaultDescriptionPosition="Top" />
+            <variable name="UserName" description="WWP_GAM_Email" defaultDescription="WWP_GAM_Email" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" themeClass="AttributeLoginImageLeft" defaultThemeClass="AttributeLoginImageLeft" cellThemeClass="DataContentCellLogin CellPaddingLogin" defaultCellThemeClass="DataContentCellLogin CellPaddingLogin" descriptionPosition="Top" defaultDescriptionPosition="Top" />
+            <variable name="UserPassword" description="WWP_GAM_Password" defaultDescription="WWP_GAM_Password" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMPassword" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMPassword" themeClass="AttributeLoginImageLeft" defaultThemeClass="AttributeLoginImageLeft" cellThemeClass="DataContentCellLogin CellPaddingLogin" defaultCellThemeClass="DataContentCellLogin CellPaddingLogin" descriptionPosition="Top" defaultDescriptionPosition="Top" />
+            <textBlock controlName="TBForgotPwd" caption="WWP_GAM_ForgotPassword" themeClass="DataDescriptionLogin" format="HTML" cellThemeClass="DataContentCellLogin CellPaddingLogin" />
+            <variable name="KeepMeLoggedIn" description="WWP_GAM_Keepmeloggedin" defaultDescription="WWP_GAM_Keepmeloggedin" dataType="Basic" defaultDataType="Basic" basicType="Boolean" defaultBasicType="Boolean" visibleCondition="1=1" defaultVisibleCondition="1=1" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Check Box" defaultControlType="Check Box" controlControlTitle="WWP_GAM_Keepmeloggedin" defaultControlControlTitle="WWP_GAM_Keepmeloggedin" cellThemeClass="DataContentCellLogin" defaultCellThemeClass="DataContentCellLogin" showDescription="False" defaultShowDescription="False" />
+            <variable name="RememberMe" description="Remember Me" defaultDescription="Remember Me" dataType="Basic" defaultDataType="Basic" basicType="Boolean" defaultBasicType="Boolean" visibleCondition="1=1" defaultVisibleCondition="1=1" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Check Box" defaultControlType="Check Box" controlControlTitle="WWP_GAM_RememberMe" defaultControlControlTitle="WWP_GAM_RememberMe" cellThemeClass="DataContentCellLogin" defaultCellThemeClass="DataContentCellLogin" showDescription="False" defaultShowDescription="False" />
+            <standardAction caption="WWP_GAM_Login" name="Enter" cellThemeClass="DataContentCellLogin CellPaddingLogin" />
+          </table>
+        </table>
+      </table>
+      <variable name="URL" description="GAMURL" defaultDescription="GAMURL" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMURL" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMURL" visible="False" defaultVisible="False" />
+      <userControl controlName="WWPUtilities" ucName="WWP.WorkWithPlusUtilities_FAL" ucProperties="EnableFixObjectFitCover:True,EmpowerTabs:True,EnableConvertComboToBootstrapSelect:True" />
+    </table>
+    <steps />
+    <parameters>
+      <parameter name="&amp;IDP_State" />
+    </parameters>
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusGAMExampleIDPLogin</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-GAMExampleIDPLogin</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

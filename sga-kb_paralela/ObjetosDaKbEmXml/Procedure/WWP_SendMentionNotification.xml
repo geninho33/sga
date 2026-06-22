@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="515affa9-7ed0-4ead-acff-2425ae2bebf7" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2020-12-03T20:40:55.0000000Z" checksum="49f0619639a8841c76d834219e9387f6" fullyQualifiedName="WWPBaseObjects.Notifications.Common.WWP_SendMentionNotification" moduleGuid="32debbd4-a63b-4d3d-8a4d-69ab661245c1" guid="c2f80ddf-febb-4816-a9b2-e1e5fe0c9805" name="WWP_SendMentionNotification" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="WWPSend Mention Notification" parent="WWPBaseObjects.Notifications.Common.Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+For Each WWPBaseObjects.Notifications.Common.WWP_NotificationDefinition
+	Where WWPNotificationDefinitionName = &WWPNotificationDefinitionName
+	Where WWPEntityId = WWP_GetEntityByName(&WWPEntityName)
+	
+	&WWPNotificationDefinitionId = WWPNotificationDefinitionId
+	
+	If &pWWPNotificationDefinitionIcon.IsEmpty()
+		&WWPNotificationDefinitionIcon = WWPNotificationDefinitionIcon
+	Else
+		&WWPNotificationDefinitionIcon = &pWWPNotificationDefinitionIcon
+	EndIf
+	If &pWWPNotificationDefinitionTitle.IsEmpty()
+		&WWPNotificationDefinitionTitle = WWPNotificationDefinitionTitle
+	Else
+		&WWPNotificationDefinitionTitle = &pWWPNotificationDefinitionTitle
+	EndIf
+	If &pWWPNotificationDefinitionShortDescription.IsEmpty()
+		&WWPNotificationDefinitionShortDescription = WWPNotificationDefinitionShortDescription
+	Else
+		&WWPNotificationDefinitionShortDescription = &pWWPNotificationDefinitionShortDescription
+	EndIf
+	If &pWWPNotificationDefinitionLongDescription.IsEmpty()
+		&WWPNotificationDefinitionLongDescription = WWPNotificationDefinitionLongDescription
+	Else
+		&WWPNotificationDefinitionLongDescription = &pWWPNotificationDefinitionLongDescription
+	EndIf
+	If &pWWPNotificationDefinitionLink.IsEmpty()
+		&WWPNotificationDefinitionLink = WWPNotificationDefinitionLink
+	Else
+		&WWPNotificationDefinitionLink = &pWWPNotificationDefinitionLink
+	EndIf
+	&MentionsWWPUserExtendedIdCollection.FromJson(&MentionWWPUserExtendedIdCollectionJson)
+	For &WWPUserExtendedId In &MentionsWWPUserExtendedIdCollection
+		WWPBaseObjects.Notifications.Common.WWP_CreateNotificationToUser(&WWPUserExtendedId, &WWPNotificationDefinitionId, &WWPNotificationDefinitionTitle, &WWPNotificationDefinitionShortDescription, &WWPNotificationDefinitionLongDescription, &WWPNotificationDefinitionLink, &WWPNotificationMetadata, &WWPNotificationDefinitionIcon, True)
+	EndFor
+	
+EndFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&WWPNotificationDefinitionName, in:&WWPEntityName, in:&WWPSubscriptionEntityRecordId, in:&pWWPNotificationDefinitionIcon, in:&pWWPNotificationDefinitionTitle, in:&pWWPNotificationDefinitionShortDescription, in:&pWWPNotificationDefinitionLongDescription, in:&pWWPNotificationDefinitionLink, in:&WWPNotificationMetadata, in:&MentionWWPUserExtendedIdCollectionJson);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="pWWPNotificationDefinitionIcon">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pWWPNotificationDefinitionIcon</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Notification Definition Default Icon</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionIcon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pWWPNotificationDefinitionLink">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pWWPNotificationDefinitionLink</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Notification Definition Default Link</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionLink</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pWWPNotificationDefinitionLongDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pWWPNotificationDefinitionLongDescription</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Notification Definition Default Long Description</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionLongDescription</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pWWPNotificationDefinitionShortDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pWWPNotificationDefinitionShortDescription</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Notification Definition Default Short Description</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionShortDescription</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pWWPNotificationDefinitionTitle">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pWWPNotificationDefinitionTitle</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Notification Definition Default Title</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionTitle</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPUserExtendedId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPUserExtendedId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPUser Extended Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcludedWWPUserExtendedIdCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcludedWWPUserExtendedIdCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPUser Extended Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedId</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IncludeNotificationToUser">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IncludeNotificationToUser</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsFirstSMS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsFirstSMS</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MailBody">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MailBody</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Mail Body</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPMailBody</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MentionsWWPUserExtendedIdCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MentionsWWPUserExtendedIdCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPUser Extended Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedId</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SMSRecipientNumbers">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SMSRecipientNumbers</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>SMSRecipient Numbers</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPSMSRecipientNumbers</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPEntityName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPEntityName</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Entity Name</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPEntityName</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationDefinitionIcon">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionIcon</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Definition Icon</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionIcon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationDefinitionId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Definition Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationDefinitionLink">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionLink</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Definition Link</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionLink</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationDefinitionLongDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionLongDescription</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Definition Long Description</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionLongDescription</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationDefinitionName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionName</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Notification Definition Internal Name</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionName</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationDefinitionShortDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionShortDescription</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Definition Short Description</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionShortDescription</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationDefinitionTitle">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionTitle</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Definition Title</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionTitle</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationID</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationMetadata">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationMetadata</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Metadata</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationMetadata</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPSubscriptionEntityRecordId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPSubscriptionEntityRecordId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPSubscription Entity Record Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPSubscriptionEntityRecordId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MentionWWPUserExtendedIdCollectionJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MentionWWPUserExtendedIdCollectionJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_SendMentionNotification</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>WWPSend Mention Notification</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

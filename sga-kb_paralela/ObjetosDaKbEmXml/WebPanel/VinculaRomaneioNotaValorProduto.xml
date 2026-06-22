@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="JORGE-AVELL\joadh" versionDate="2025-05-21T01:51:18.0000000Z" lastUpdate="2025-05-21T01:18:24.0000000Z" checksum="89796e76ee8bc181dfdcb3da7752bcd8" fullyQualifiedName="VinculaRomaneioNotaValorProduto" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5652e2ea-11b3-43de-addb-423401edb5ad" name="VinculaRomaneioNotaValorProduto" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Vincula Romaneio Nota Valor Produto" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="HasGridEmpowerer"><simplegrid controlName="Grid1" class="GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;MaxRows&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InfiniteScrolling&lt;/Name&gt;&lt;Value&gt;Infinite scrolling&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ScrollBar&lt;/Name&gt;&lt;Value&gt;Form&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;prodCodigo" titleExp="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodDescricao" titleExp="Descrição" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;UniDescricao" titleExp="uni Descricao" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemQtde" titleExp="Quantidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemValor" titleExp="Valor Unitário" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemValidade" titleExp="Validade" class="AttributeRealWidthDate" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;notaItemLote" titleExp="Lote" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell cellClass="CellMarginTop10"><actiongroup controlName="ActionGroup_ActionGroup1" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_ActionGroup1"><item><action controlName="BtnEnter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnCancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><table id="TableDVelop_ConfirmPanel_Enter"><tbody><tr><td align="Center"><gxDVelop.GXBootstrap.ConfirmPanel ControlName="DVelop_ConfirmPanel_Enter" Title="ATENÇÃO!!!" ConfirmationText="Produtos sem valor definido não serão incluídos na nota. Deseja continuar?" YesButtonCaption="WWP_ConfirmTextYes" NoButtonCaption="WWP_ConfirmTextNo" CancelButtonCaption="WWP_ConfirmTextCancel" YesButtonPosition="Left" ConfirmType="YesNo"><container containerId="Body" /></gxDVelop.GXBootstrap.ConfirmPanel></td></tr></tbody></table><gxWWP.GridEmpowerer ControlName="Grid1_Empowerer" InfiniteScrolling="Form" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(In:&prefCodigo, In:&notaCodigo, In:&romanCodigoCollectionString);
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	&romanCodigoCollection.FromJson(&romanCodigoCollectionString)
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid1_Empowerer.GridInternalName = Grid1.InternalName
+	Grid1.Rows = Page.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid1.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	&prodCodigo.SetEmpty()
+	For each Romaneio.Item
+		order prodCodigo, prodDescricao, prodUnidMedCompra
+		Where prefCodigo = &prefCodigo
+		Where romanCodigo in &romanCodigoCollection
+		
+		if &prodCodigo <> prodCodigo 
+			if not &prodCodigo.IsEmpty()
+				Load
+			endif
+			&prodCodigo 	= prodCodigo
+			&prodDescricao 	= prodDescricao
+			&UniDescricao 	= find(uniDescricao,uniCodigo = prodUnidMedCompra,'Indefinido')
+			&notaItemQtde 	= romanItemQuantidade
+			&notaItemValor.SetEmpty()
+			&notaItemValidade.SetEmpty()
+			&notaItemLote.SetEmpty()
+		else
+			&notaItemQtde += romanItemQuantidade
+		endif
+		
+	Endfor
+
+	if not &prodCodigo.IsEmpty()
+		Load
+	endif
+
+EndEvent
+
+Event Enter
+
+	// Verifica se todos os produtos tem valor informado
+	&FaltaValor = false
+	For each line in Grid1
+		if &notaItemValor.IsEmpty()
+			&FaltaValor = true
+			Exit
+		endif
+	Endfor
+
+	if &FaltaValor
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DVelop_ConfirmPanel_Enter.Confirm()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	else
+		Do 'VinculaRomaneio'
+	endif
+
+EndEvent
+
+Event DVelop_ConfirmPanel_Enter.Close
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If DVelop_ConfirmPanel_Enter.Result = !'Yes'
+		Do 'Do Action Enter'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'Do Action Enter'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	Do 'VinculaRomaneio'
+
+EndSub
+
+Sub 'GravaItensNota'
+
+	For each line in Grid1
+		if &notaItemValor > 0
+			&IsSucess = VinculaRomaneioNotaIncluiItensNota(&prefCodigo,&notaCodigo,&prodCodigo,&notaItemQtde,&notaItemValor,&notaItemValidade,&notaItemLote,&Message)
+			if not &IsSucess
+				msg(&Message.Description)
+				Exit
+			endif
+		endif
+	Endfor
+
+EndSub
+
+Sub 'VinculaRomaneio'
+
+	&IsSucess = VinculaRomaneioNotaProcesso(true,&prefCodigo,&notaCodigo,&romanCodigoCollection,&Message)
+	if not &IsSucess
+		msg(&Message.Description)
+	else
+		Do 'GravaItensNota'
+		if &IsSucess
+			Commit
+			Return
+		else
+			Rollback
+		endif
+	endif
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemQtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemQtde</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemQtde</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemValor">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemValor</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="romanCodigoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>romanCodigoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Número romaneio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:romanCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FaltaValor">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FaltaValor</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSucess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSucess</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="romanCodigoCollectionString">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>romanCodigoCollectionString</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1000</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1000</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UniDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemValidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemValidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemLote">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemLote</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemLote</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>VinculaRomaneioNotaValorProduto</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

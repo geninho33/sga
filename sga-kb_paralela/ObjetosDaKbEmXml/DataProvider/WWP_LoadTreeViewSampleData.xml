@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f952860a-9553-4095-82c8-dedaadd8cf64" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-03-18T13:00:54.0000000Z" checksum="05d1fa767e9b47e24ec2f31ee3e422a6" fullyQualifiedName="WWPBaseObjects.WWP_LoadTreeViewSampleData" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="6b6d1ca5-fb93-49cb-9adb-4ec8aa80675b" name="WWP_LoadTreeViewSampleData" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="WWP_Load Tree View Sample Data" parent="WWPBaseObjects" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[TreeNodeCollection
+{
+	&Id = 1
+	TreeNode
+	{
+		Id = &Id.ToString()
+		&Id = &Id + 1
+		Name = !"Root"
+		Expanded = True
+		Nodes
+		{
+			TreeNode
+			{
+				Id = &Id.ToString()
+				&Id = &Id + 1
+				Name = !"Option 1"
+				Expanded = True
+				Nodes
+				{
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 1.1"
+					}
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 1.2"
+						Nodes
+						{
+							TreeNode
+							{
+								Id = &Id.ToString()
+								&Id = &Id + 1
+								Name = !"Option 1.2.1"
+							}
+							TreeNode
+							{
+								Id = &Id.ToString()
+								&Id = &Id + 1
+								Name = !"Option 1.2.2"
+							}
+						}
+					}
+				}
+			}
+			TreeNode
+			{
+				Id = &Id.ToString()
+				&Id = &Id + 1
+				Name = !"Option 2"
+				Expanded = True
+				Nodes
+				{
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 2.1"
+					}
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 2.2"
+					}
+				}
+			}
+			TreeNode
+			{
+				Id = &Id.ToString()
+				&Id = &Id + 1
+				Name = !"Option 3"
+				Expanded = True
+				Nodes
+				{
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 3.1"
+					}
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 3.2"
+					}
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 3.3"
+					}
+				}
+			}
+			TreeNode
+			{
+				Id = &Id.ToString()
+				&Id = &Id + 1
+				Name = !"Option 4"
+				Expanded = False
+				Nodes
+				{
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 4.1"
+					}
+					TreeNode
+					{
+						Id = &Id.ToString()
+						&Id = &Id + 1
+						Name = !"Option 4.2"
+					}
+				}
+			}
+		}
+	}
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Id">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_LoadTreeViewSampleData</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-TreeNodeCollection</Value>
+    </Property>
+    <Property>
+      <Name>SPC_WARNINGS_DISABLED</Name>
+      <Value>spc0096 spc0107 spc0142 spc0217</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

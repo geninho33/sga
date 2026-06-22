@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-03-06T03:46:01.0000000Z" lastUpdate="2026-03-05T02:06:17.0000000Z" checksum="3c2de856ee8aff426425b69567df917b" fullyQualifiedName="trnscardapioprato" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a69e2186-7963-4a6f-a367-c851fcbfb487" name="trnscardapioprato" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Lançamento de  Refeição" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnscardapioprato" Type="trnscardapioprato" Description="Lançamento de  Refeição" Guid="a69e2186-7963-4a6f-a367-c851fcbfb487">
+      <Properties />
+      <AttributeProperties Attribute="carPratoTurnoPeriodo">
+        <Properties>
+          <Property>
+            <Name>IncludeInForms</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </AttributeProperties>
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="9ef616e3-6b19-4ce7-96b2-10cab811deae">carDapCodigo</Attribute>
+      <Attribute key="True" guid="617e37e9-cb3d-4895-83a6-4d5582cb0e59">carPratoCodigo</Attribute>
+      <Attribute key="False" guid="576b4332-1e95-46e0-b7c2-29162b250153">carPratoHorario</Attribute>
+      <Attribute key="False" guid="05bc45e7-4b3d-4c15-85f5-98f190cce904">carPratoTurno</Attribute>
+      <Attribute key="False" guid="29b57dc8-32bd-4684-a2c1-25a50dd379a8">carPratoTurnoNome</Attribute>
+      <Attribute key="False" guid="a6a23b92-efc3-4454-8ac0-12df93e265e0">carPratoTurnoPeriodo</Attribute>
+      <Attribute key="False" guid="2b8f90a9-3b6e-4929-9afe-0e66a8b0cc81">carPratoTurnoHorario</Attribute>
+      <Attribute key="False" guid="d7faad99-94c3-4f5d-b9a4-dff7886ed506">carPratoTurnoHorario2</Attribute>
+      <Attribute key="False" guid="c7a2d96d-0aa2-4baa-a123-97c16f5ac2ca">carPratoRefeicao</Attribute>
+      <Attribute key="False" guid="18201705-3ad4-4dc0-a68e-d7f7b0030624">carPratoRefeicaoDescricao</Attribute>
+      <Attribute key="False" guid="f4b52408-399a-44c9-b3c5-e42f2a3775b5">carPratoData</Attribute>
+      <Attribute key="False" guid="da04d069-7641-4c48-aa85-3926ba83a49d">carPratoNrSemana</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellControlName="carPratoCodigo_Cell"><data attribute="carPratoCodigo" labelCaption="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="carPratoData" labelCaption="Data" class="AttributeRealWidthDate" /></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedcarPratoRefeicao" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockcarPratoRefeicao" caption="Refeição" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_carPratoRefeicao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo MinWidth-25perc&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;carPratoRefeicao_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="carPratoRefeicao" labelPosition="None" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="carPratoTurno" labelCaption="Turno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;refTipCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;refTipDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;refTipstatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="carPratoTurnoHorario" labelCaption="Horário" class="AttributeRealWidthDateTime" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><div id="SectionAttribute_carPratoRefeicao"><gxAttribute ControlType="Edit" AttID="&amp;CombocarPratoRefeicao" /></div><gxAttribute ControlType="Edit" InputType="Values" AttID="prefCodigo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="carDapCodigo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="carPratoHorario" /><gxAttribute ControlType="Edit" InputType="Values" AttID="carPratoNrSemana" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+[web]
+{
+parm(in:&Mode, in:&prefCodigo, in:&carDapCodigo, in:&carPratoCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+carDapCodigo = &carDapCodigo if not &carDapCodigo.IsEmpty();
+noaccept(carDapCodigo) if not &carDapCodigo.IsEmpty();
+carPratoCodigo = &carPratoCodigo if not &carPratoCodigo.IsEmpty();
+noaccept(carPratoCodigo) if not &carPratoCodigo.IsEmpty();
+
+carPratoTurno = &Insert_carPratoTurno if &Mode = TrnMode.Insert and not &Insert_carPratoTurno.IsEmpty();
+noaccept(carPratoTurno) if &Mode = TrnMode.Insert and not &Insert_carPratoTurno.IsEmpty();
+carPratoRefeicao = &Insert_carPratoRefeicao if &Mode = TrnMode.Insert and not &Insert_carPratoRefeicao.IsEmpty();
+noaccept(carPratoRefeicao) if &Mode = TrnMode.Insert and not &Insert_carPratoRefeicao.IsEmpty();
+carPratoCodigo.Visible = carPratoCodigo<>0;
+carPratoCodigo_Cell.Class = !'Invisible' If not(carPratoCodigo<>0);
+carPratoCodigo_Cell.Class = !'col-xs-12 DataContentCell' If carPratoCodigo<>0;
+carPratoRefeicao = &CombocarPratoRefeicao;
+}
+
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+Error('Este usuário não tem permissão !') 
+	If not PRCDNutricionista() on beforeInsert, beforeUpdate; 
+
+error('Informe a refeição ! ') 
+	if carPratoRefeicao=0;
+
+error('Informe o tipo de refeição! ') 
+	if carPratoTurno=0;
+	
+// error('Informe o horário! ') 
+//	if carPratoHorario.ToString() = '';
+
+error('Informe a Data! ') 
+	if carPratoData.IsEmpty() ;
+
+error('Esta dia é um final de semana !' ) 
+	if Dow(carPratoData ) = 1 or Dow(carPratoData ) = 7;
+
+error('Esta data não é do mesmo Ano do Cardápio !' ) 
+	if carPratoData.Year() <> PRCDVerificarAnoMes(&prefCodigo,&carDapCodigo,'A');
+
+error('Esta data não é do mesmo Mês do Cardápio !' ) 
+	if carPratoData.Month() <> PRCDVerificarAnoMes(&prefCodigo,&carDapCodigo,'M');
+
+error('Dia não letivo - Não é permitido utilizar !')
+	if PRCDVerificaCalendario( &prefCodigo, carPratoData );
+
+carPratoCodigo = PRCDGerarNovoCodigo('cardapioPrato')  
+	on BeforeInsert;
+
+
+&AdmLogCha = carDapCodigo.ToString().Trim() + '-' + carPratoCodigo.ToString().Trim()
+ on AfterInsert, AfterUpdate, AfterDelete;
+&AdmLogDad = carPratoCodigo.ToFormattedString() + '-' + carPratoData.ToFormattedString() + '-' + carPratoRefeicao.ToFormattedString() + '-' + carPratoTurno.ToFormattedString() + '-' + carPratoTurnoHorario.ToFormattedString()
+ on AfterInsert, AfterUpdate, AfterDelete;
+PRC_AliEscGravaLog(&AdmLogCha, &Pgmname, &Mode, &AdmLogDad)
+ on AfterInsert, AfterUpdate, AfterDelete;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	[web]
+	{
+	carPratoRefeicao.Visible = False
+	&CombocarPratoRefeicao.SetEmpty()
+	&CombocarPratoRefeicao.Visible = False
+	Do 'LoadCombocarPratoRefeicao'
+	}
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	If (&TrnContext.TransactionName = &Pgmname and &Mode = TrnMode.Insert)
+		For &TrnContextAtt in &TrnContext.Attributes
+			Do Case
+				// When inserting with instantiated carPratoTurno
+				Case &TrnContextAtt.AttributeName = !"carPratoTurno"
+					&Insert_carPratoTurno.FromString(&TrnContextAtt.AttributeValue)
+				// When inserting with instantiated carPratoRefeicao
+				Case &TrnContextAtt.AttributeName = !"carPratoRefeicao"
+					&Insert_carPratoRefeicao.FromString(&TrnContextAtt.AttributeValue)
+					[web]
+					{
+					If not &Insert_carPratoRefeicao.IsEmpty()
+						&CombocarPratoRefeicao = &Insert_carPratoRefeicao
+						Combo_carPratoRefeicao.SelectedValue_set = &CombocarPratoRefeicao.ToString().Trim()
+						Combo_carPratoRefeicao.Enabled = False
+					EndIf
+					}
+			Endcase
+		Endfor
+	Endif
+	
+    [web]
+    {
+	prefCodigo.Visible = False
+	carDapCodigo.Visible = False
+	carPratoHorario.Visible = False
+	carPratoNrSemana.Visible = False
+	}
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+   [web]
+   {
+	
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnscardapiopratoWW.Call(prefCodigo, carDapCodigo)
+	Endif
+
+	Return
+   }
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+    PRCDBuscarHorario(&prefCodigo,'N',carPratoTurnoNome,carPratoHorario)
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+[web]
+{
+	carPratoCodigo.Visible = False
+	carPratoCodigo_Cell.Class = !'Invisible'
+	
+}
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+[web]
+{
+
+Event Combo_carPratoRefeicao.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&CombocarPratoRefeicao.FromString(Combo_carPratoRefeicao.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadCombocarPratoRefeicao'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&carPratoRefeicao_Data = trnscardapiopratoLoadDVCombo(!'carPratoRefeicao', &Mode, &prefCodigo, &carDapCodigo, &carPratoCodigo, &ComboSelectedValue)
+	Combo_carPratoRefeicao.SelectedValue_set = &ComboSelectedValue
+	&CombocarPratoRefeicao.FromString(&ComboSelectedValue)
+	If &Mode = TrnMode.Display OR &Mode = TrnMode.Delete
+		Combo_carPratoRefeicao.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+}
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombocarDapCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombocarDapCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Cond_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Cond_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_carPratoTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_carPratoTurno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_carPratoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_carPratoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoRefeicao_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoRefeicao_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombocarPratoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombocarPratoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogCha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogCha</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Chave</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogCha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogDad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogDad</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Dados</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogDad</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscardapioprato</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Lançamento de  Refeição</Value>
+    </Property>
+    <Property>
+      <Name>idISBUSINESSCOMPONENT</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnscardapiopratoWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

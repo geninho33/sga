@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="5652e2ea-11b3-43de-addb-423401edb5ad" user="JORGE-AVELL\joadh" versionDate="2025-05-20T02:54:05.0000000Z" lastUpdate="2025-05-20T00:56:48.0000000Z" checksum="4574030d9f3c65e94bb04cb2e52531cd" fullyQualifiedName="WorkWithPlusVinculaRomaneioNotaValorProduto" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5141ba7a-474f-0b45-19d3-440323172ad0" name="WorkWithPlusVinculaRomaneioNotaValorProduto" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus Vincula Romaneio Nota Valor Produto" parent="VinculaRomaneioNotaValorProduto" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="VinculaRomaneioNotaValorProduto" defaultSecFuntionKey="VinculaRomaneioNotaValorProduto" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <grid includePaginationBar="False" name="Grid1" pagingType="Infinite scrolling (form scroll bar)">
+          <gridVariable name="prodCodigo" description="Produto" defaultDescription="Código" domain="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" />
+          <gridVariable name="prodDescricao" description="Descrição" defaultDescription="Descrição" domain="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" />
+          <gridVariable name="UniDescricao" description="uni Descricao" defaultDescription="uni Descricao" domain="adbb33c9-0906-4971-833c-998de27e0676-uniDescricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-uniDescricao" />
+          <gridVariable name="notaItemQtde" description="Quantidade" defaultDescription="Quantidade" domain="adbb33c9-0906-4971-833c-998de27e0676-notaItemQtde" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-notaItemQtde" />
+          <gridVariable name="notaItemValor" description="Valor Unitário" defaultDescription="Valor" domain="adbb33c9-0906-4971-833c-998de27e0676-notaItemValor" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-notaItemValor" readOnly="False" defaultReadOnly="False" />
+          <gridVariable name="notaItemValidade" description="Validade" defaultDescription="nota Item Validade" domain="adbb33c9-0906-4971-833c-998de27e0676-notaItemValidade" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-notaItemValidade" readOnly="False" defaultReadOnly="False" />
+          <gridVariable name="notaItemLote" description="Lote" defaultDescription="nota Item Lote" domain="adbb33c9-0906-4971-833c-998de27e0676-notaItemLote" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-notaItemLote" readOnly="False" defaultReadOnly="False" />
+        </grid>
+        <actionGroup name="ActionGroup1" cellThemeClass="CellMarginTop10">
+          <standardAction defaultControlType="&lt;default&gt;" confirm="True" confirmMessage="Produtos sem valor definido não serão incluídos na nota. Deseja continuar?" confirmTitle="ATENÇÃO!!!" confirmType="YesNo" defaultImageType="&lt;default&gt;" name="Enter" />
+          <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Cancel" />
+        </actionGroup>
+      </table>
+    </table>
+    <steps />
+    <parameters>
+      <parameter type="In" name="&amp;prefCodigo" />
+      <parameter type="In" name="&amp;notaCodigo" />
+      <parameter type="In" name="&amp;romanCodigoCollectionString" />
+    </parameters>
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusVinculaRomaneioNotaValorProduto</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-VinculaRomaneioNotaValorProduto</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

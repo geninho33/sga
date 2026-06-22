@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2025-04-02T04:18:55.0000000Z" checksum="15f1736ec918d13eb52a25d210b71102" fullyQualifiedName="trnscardapioprato" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="02a5980e-42c9-4aff-899c-45f473f7ddb8" name="trnscardapioprato" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="trnscardapioprato">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="9ef616e3-6b19-4ce7-96b2-10cab811deae">carDapCodigo</Item>
+      <Item guid="617e37e9-cb3d-4895-83a6-4d5582cb0e59">carPratoCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-05T15:25:50.0000000Z" checksum="b77933cc1db490e478347826a35c493d" fullyQualifiedName="Ipref" moduleGuid="00000000-0000-0000-0000-000000000000" guid="e4c10dd7-ee55-489b-a5f2-102018505262" name="Ipref" type="9e750647-3679-0000-0100-2529de263960" description="Ipref">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">carDapCodigo</Member>
+              <Member Order="Ascending">carPratoCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Ipref</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-05T15:25:50.0000000Z" checksum="311250de92786ee4ff7d8a009be554fa" fullyQualifiedName="Ipref1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="7e139da6-6500-45d2-970f-891d47de5665" name="Ipref1" type="9e750647-3679-0000-0100-2529de263960" description="Ipref1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">carDapCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Ipref1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-05T15:25:50.0000000Z" checksum="62e5dd12dd280349e3dcb8dac132e0c4" fullyQualifiedName="Itrnscardapioprato1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="9345d0c2-18f9-4c11-b3f1-c4dcfd031024" name="Itrnscardapioprato1" type="9e750647-3679-0000-0100-2529de263960" description="Itrnscardapioprato1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">carPratoRefeicao</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Itrnscardapioprato1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-05T15:25:50.0000000Z" checksum="6fa2014fa48ca0acb3635e181d09bef4" fullyQualifiedName="Itrnscardapioprato" moduleGuid="00000000-0000-0000-0000-000000000000" guid="02757f87-2e58-465c-a3b3-677c4c8d241b" name="Itrnscardapioprato" type="9e750647-3679-0000-0100-2529de263960" description="Itrnscardapioprato">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">carPratoTurno</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Itrnscardapioprato</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-05T15:25:50.0000000Z" checksum="5a7ca46151d0be0244b6e34cc10aa0f7" fullyQualifiedName="Utrnscardapioprato" moduleGuid="00000000-0000-0000-0000-000000000000" guid="49812e36-6a65-42fe-92a4-d4d42f6a801b" name="Utrnscardapioprato" type="9e750647-3679-0000-0100-2529de263960" description="Utrnscardapioprato">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">carDapCodigo</Member>
+              <Member Order="Ascending">carPratoData</Member>
+              <Member Order="Ascending">carPratoHorario</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Utrnscardapioprato</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscardapioprato</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>trnscardapioprato</Value>
+    </Property>
+    <Property>
+      <Name>HasCustomName</Name>
+      <Value>True</Value>
+    </Property>
+  </Properties>
+</Object>

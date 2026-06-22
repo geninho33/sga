@@ -1,0 +1,1664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="af98852b-d140-492d-bef3-a785f3f060d8" user="JORGE-AVELL\joadh" versionDate="2025-02-20T13:08:33.0000000Z" lastUpdate="2025-02-20T13:07:36.0000000Z" checksum="ee856775145981f00efd59f2e0aa1035" fullyQualifiedName="DiagnosticoNutricional" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="013f69f7-601f-44b8-9924-4f70cdc296cd" name="DiagnosticoNutricional" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Diagnóstico Nutricional" parent="Consultas" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><table controlName="TableHeader" tableType="Flex" flexDirection="Column"><row><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableRightHeader" tableType="Flex" flexWrap="Wrap"><row><cell cellClass="CellAlignTopPaddingTop2" flexGrow="0"><ucw gxControlType="1204120062" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;ddo_ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconType&lt;/Name&gt;&lt;Value&gt;FontIcon&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Icon&lt;/Name&gt;&lt;Value&gt;fas fa-filter&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Tooltip&lt;/Name&gt;&lt;Value&gt;WWP_ManageFiltersTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ManageFiltersData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><table controlName="TableFilters" tableType="Responsive" responsiveSizes="[]"><row><cell><data attribute="&amp;diag_nutricional_Ano" labelCaption="Ano" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataSourceFrom&lt;/Name&gt;&lt;Value&gt;DataProvider&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataProvider&lt;/Name&gt;&lt;Value&gt;2a9e9aba-d2de-4801-ae7f-5e3819222daf-DiagosticoNutricionalAnos&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataProviderParameters&lt;/Name&gt;&lt;Value /&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DPItemValuesFieldSpecifier&lt;/Name&gt;&lt;Value&gt;Ano&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DPItemDescriptionFieldSpecifier&lt;/Name&gt;&lt;Value&gt;Descricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlSortDescription&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><data attribute="&amp;diag_nutricional_Escola" labelCaption="Escola" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataSourceFrom&lt;/Name&gt;&lt;Value&gt;DataProvider&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataProvider&lt;/Name&gt;&lt;Value&gt;2a9e9aba-d2de-4801-ae7f-5e3819222daf-DiagosticoNutricionalEscolas&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataProviderParameters&lt;/Name&gt;&lt;Value&gt;&amp;amp;diag_nutricional_Ano&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DPItemValuesFieldSpecifier&lt;/Name&gt;&lt;Value&gt;Codigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DPItemDescriptionFieldSpecifier&lt;/Name&gt;&lt;Value&gt;Nome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlSortDescription&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todas&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><table controlName="TableSplittedFilterTextdiag_nutricional_NumColeta" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="FilterTextdiag_nutricional_NumColeta" caption="Nro Coleta" class="Label" /></cell><cell><table controlName="TableMergeddiag_nutricional_NumColeta" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;diag_nutricional_NumColeta" labelPosition="None" class="Attribute" /></cell><cell><textblock controlName="diag_nutricional_NumColeta_RightText" caption="(Digite 0 para todas)" class="DataDescription" /></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="tableGraficos" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_tableGraficoTotal&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Total&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="tableGraficoTotal" tableType="Responsive" responsiveSizes="[]" containerSlotName="tableGraficoTotal"><row><cell><ucw gxControlType="-2065241387" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GraficoTotal&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Axes&lt;/Name&gt;&lt;Value&gt;&amp;amp;Elements&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Parameters&lt;/Name&gt;&lt;Value&gt;&amp;amp;Parameters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemDoubleClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemDoubleClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DragAndDropData&lt;/Name&gt;&lt;Value&gt;&amp;amp;DragAndDropData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterChangedData&lt;/Name&gt;&lt;Value&gt;&amp;amp;FilterChangedData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemExpandData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemExpandData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemCollapseData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemCollapseData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></ucw></cell><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_tableGraficoComparativo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Comparativo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="tableGraficoComparativo" tableType="Responsive" responsiveSizes="[]" containerSlotName="tableGraficoComparativo"><row><cell><ucw gxControlType="-2065241387" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GraficoComparativo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Axes&lt;/Name&gt;&lt;Value&gt;&amp;amp;Elements&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Parameters&lt;/Name&gt;&lt;Value&gt;&amp;amp;Parameters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemDoubleClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemDoubleClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DragAndDropData&lt;/Name&gt;&lt;Value&gt;&amp;amp;DragAndDropData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterChangedData&lt;/Name&gt;&lt;Value&gt;&amp;amp;FilterChangedData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemExpandData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemExpandData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemCollapseData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemCollapseData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders CellMarginTop HasGridEmpowerer"><table controlName="GridTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithPaginationBar GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;viewDiagNutricional&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;diag_nutricional_NomeEscola diag_nutricional_AlunoNome  when &amp;amp;OrderedDsc = False&#xD;&#xA;(diag_nutricional_NomeEscola) (diag_nutricional_AlunoNome)  when &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-DiagnosticoNutricionalDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;diag_nutricional_Ano, &amp;amp;diag_nutricional_Escola, &amp;amp;diag_nutricional_NumColeta, &amp;amp;TFdiag_nutricional_AlunoNome, &amp;amp;TFdiag_nutricional_AlunoNome_Sel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="diag_nutricional_Ano" titleExp="Ano" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Grid_GroupCaption" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Escola" titleExp="Escola" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_NomeEscola" titleExp="Escola" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_NumColeta" titleExp="Nro Coleta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_DataColeta" titleExp="Data Coleta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Aluno" titleExp="Aluno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_AlunoNome" titleExp="Estudante" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Nascto" titleExp="Data Nasc." class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Sexo" titleExp="Sexo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Sexo" titleExp="Sexo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Anos" titleExp="Anos" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Meses" titleExp="Meses" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Altura" titleExp="Altura" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Peso" titleExp="Peso" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_Circunferencia" titleExp="Circunferencia" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_IMC" titleExp="IMC" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="diag_nutricional_DiagnosticoIMC" titleExp="Diagnóstico" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="7:diag_nutricional_AlunoNome" ColumnsSortValues="-1" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T" IncludeFilter="T" FilterType="Character" IncludeDataList="T" DataListType="Dynamic" DataListProc="DiagnosticoNutricionalGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-DiagnosticoNutricionalGetFilterData" /><gxDVelop.DVGroupBy ControlName="Grid_Group" ColumnIndex="1" AllowCollapse="False" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" HasRowGroups="True" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid_Group.GridInternalName = Grid.InternalName
+	
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+
+	If &HTTPRequest.Method = HttpMethod.Get
+		Do 'LoadSavedFilters'
+	EndIf
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = 'Diagnóstico Nutricional'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	GridPaginationBar.RowsPerPageSelectedValue = Grid.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	do 'CarregaGraficos'
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do Case
+		Case &ManageFiltersExecutionStep = 1
+			&ManageFiltersExecutionStep = 2
+		Case &ManageFiltersExecutionStep = 2
+			&ManageFiltersExecutionStep = 0
+			Do 'LoadSavedFilters'
+	EndCase
+	Do 'SaveGridState'
+
+	&GridCurrentPage = Grid.CurrentPage
+	&GridPageCount = Grid.PageCount
+	&GridAppliedFilters = WWP_GetAppliedFiltersDescription(&Pgmname)
+	&Grid_GroupCaption.SetEmpty()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridPaginationBar.SelectedPage = !'Previous'
+			Grid.PreviousPage()
+		Case GridPaginationBar.SelectedPage = !'Next'
+			Grid.NextPage()
+		Otherwise
+			&PageToGo.FromString(GridPaginationBar.SelectedPage)
+			Grid.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = GridPaginationBar.RowsPerPageSelectedValue
+	Grid.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'diag_nutricional_AlunoNome'
+					&TFdiag_nutricional_AlunoNome = DDO_Grid.FilteredText_get
+					&TFdiag_nutricional_AlunoNome_Sel = DDO_Grid.SelectedValue_get
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Grid_GroupCaption = diag_nutricional_NomeEscola
+	&Grid_GroupCaption = format('%1: %2', "Escola", iif(diag_nutricional_NomeEscola.IsEmpty(), 'WWP_FilterEmpty', &Grid_GroupCaption))
+	
+	&Sexo = iif(diag_nutricional_Sexo = 1, 'Masculino', 'Feminino')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_ManageFilters.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Clean#>'
+			Do 'CleanFilters'
+			Grid.FirstPage()
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Save#>'
+			Do 'SaveGridState'
+			SaveFilterAs.Popup(!'DiagnosticoNutricionalFilters', &PgmName + !"GridState")
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Manage#>'
+			ManageFilters.Popup(!'DiagnosticoNutricionalFilters')
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Otherwise
+			&ManageFiltersXml = GetFilterByName(!'DiagnosticoNutricionalFilters', ddo_ManageFilters.ActiveEventKey)
+			If &ManageFiltersXml.IsEmpty()
+				msg('WWP_FilterNotExist')
+			Else
+				Do 'CleanFilters'
+				SaveGridState.Call(&PgmName + !"GridState",  &ManageFiltersXml)
+				&GridState.FromXml(&ManageFiltersXml)
+				&OrderedDsc = &GridState.OrderedDsc
+				Do 'SetDDOSortedStatus' 
+				Do 'LoadRegFiltersState'
+				Grid.FirstPage()
+			EndIf
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = !'-1:' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadSavedFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ManageFiltersData = WWP_ManageFiltersLoadSavedFilters(!'DiagnosticoNutricionalFilters', '', '', False)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CleanFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&diag_nutricional_Ano.SetEmpty()
+	&diag_nutricional_Escola.SetEmpty()
+	&diag_nutricional_NumColeta.SetEmpty()
+	&TFdiag_nutricional_AlunoNome.SetEmpty()
+	&TFdiag_nutricional_AlunoNome_Sel.SetEmpty()
+	DDO_Grid.SelectedValue_set = ''
+	DDO_Grid.FilteredText_set = ''
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+	Do 'LoadRegFiltersState'
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadRegFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"DIAG_NUTRICIONAL_ANO"
+				&diag_nutricional_Ano.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"DIAG_NUTRICIONAL_ESCOLA"
+				&diag_nutricional_Escola.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"DIAG_NUTRICIONAL_NUMCOLETA"
+				&diag_nutricional_NumColeta.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDIAG_NUTRICIONAL_ALUNONOME"
+				&TFdiag_nutricional_AlunoNome.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDIAG_NUTRICIONAL_ALUNONOME_SEL"
+				&TFdiag_nutricional_AlunoNome_Sel.FromString(&GridStateFilterValue.Value)
+		EndCase
+	EndFor
+	DDO_Grid.SelectedValue_set = WWP_GetFilterVal(&TFdiag_nutricional_AlunoNome_Sel.IsEmpty(), &TFdiag_nutricional_AlunoNome_Sel)
+	DDO_Grid.FilteredText_set = WWP_GetFilterVal(&TFdiag_nutricional_AlunoNome.IsEmpty(), &TFdiag_nutricional_AlunoNome)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValue(&GridState, !"DIAG_NUTRICIONAL_ANO", "Ano", not &diag_nutricional_Ano.IsEmpty(), 0, &diag_nutricional_Ano.ToString().Trim(), trim(&diag_nutricional_Ano.ToFormattedString()), False, '', '')
+	WWP_GridStateAddFilterValue(&GridState, !"DIAG_NUTRICIONAL_ESCOLA", "Escola", not &diag_nutricional_Escola.IsEmpty(), 0, &diag_nutricional_Escola.ToString().Trim(), trim(&diag_nutricional_Escola.ToFormattedString()), False, '', '')
+	WWP_GridStateAddFilterValue(&GridState, !"DIAG_NUTRICIONAL_NUMCOLETA", "Nro Coleta", not &diag_nutricional_NumColeta.IsEmpty(), 0, &diag_nutricional_NumColeta.ToString().Trim(), trim(&diag_nutricional_NumColeta.ToFormattedString()), False, '', '')
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDIAG_NUTRICIONAL_ALUNONOME", "Estudante", not &TFdiag_nutricional_AlunoNome.IsEmpty(), 0, &TFdiag_nutricional_AlunoNome, &TFdiag_nutricional_AlunoNome, False, '', '', not &TFdiag_nutricional_AlunoNome_Sel.IsEmpty(), &TFdiag_nutricional_AlunoNome_Sel, &TFdiag_nutricional_AlunoNome_Sel)
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"viewDiagNutricional"
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event &diag_nutricional_Ano.ControlValueChanged
+
+	do 'CarregaGraficos'
+
+EndEvent
+
+Event &diag_nutricional_Escola.ControlValueChanged
+
+	do 'CarregaGraficos'
+
+EndEvent
+
+Event &diag_nutricional_NumColeta.ControlValueChanged
+
+	do 'CarregaGraficos'
+
+EndEvent
+
+Sub 'CarregaGraficos'
+
+	GraficoTotal.Object = queryDiagnosticoNutricionalIndividual(&diag_nutricional_Ano,&diag_nutricional_Escola,&diag_nutricional_Sexo,&diag_nutricional_NumColeta)
+	GraficoComparativo.Object = queryDiagnosticoNutricionalComparativo(&diag_nutricional_Ano,&diag_nutricional_Escola,&diag_nutricional_NumColeta)
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diag_nutricional_Ano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_Ano</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Ano</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Grid_GroupCaption">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Grid_GroupCaption</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersXml">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersXml</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersExecutionStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersExecutionStep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_NumColeta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_NumColeta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_NumColeta</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_NumColeta_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_NumColeta_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_NumColeta</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_DataColeta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_DataColeta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_DataColeta</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_DataColeta_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_DataColeta_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_DataColeta</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_diag_nutricional_DataColetaAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_diag_nutricional_DataColetaAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_diag_nutricional_DataColetaAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_diag_nutricional_DataColetaAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_diag_nutricional_DataColetaAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_diag_nutricional_DataColetaAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Aluno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Aluno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Aluno</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Aluno_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Aluno_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Aluno</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Nascto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Nascto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Nascto</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Nascto_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Nascto_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Nascto</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_diag_nutricional_NasctoAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_diag_nutricional_NasctoAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_diag_nutricional_NasctoAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_diag_nutricional_NasctoAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_diag_nutricional_NasctoAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_diag_nutricional_NasctoAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Sexo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Sexo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Sexo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Sexo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Sexo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Sexo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Anos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Anos</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Anos</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Anos_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Anos_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Anos</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Meses">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Meses</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Meses</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Meses_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Meses_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Meses</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Altura">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Altura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Altura</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Altura_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Altura_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Altura</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Peso">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Peso</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Peso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Peso_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Peso_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Peso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Circunferencia">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Circunferencia</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Circunferencia</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_Circunferencia_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_Circunferencia_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Circunferencia</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_IMC">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_IMC</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_IMC</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_IMC_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_IMC_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_IMC</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_DiagnosticoIMC">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_DiagnosticoIMC</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_DiagnosticoIMC</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_DiagnosticoIMC_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_DiagnosticoIMC_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_DiagnosticoIMC</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RecordKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RecordKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Groupdiag_nutricional_NomeEscola">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Groupdiag_nutricional_NomeEscola</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_NomeEscola</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCollapsedRecordsChildren">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCollapsedRecordsChildren</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCollapsedRecords">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCollapsedRecords</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_NomeEscola</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Index">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Index</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OldGridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OldGridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DiscardFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DiscardFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AddChildren">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AddChildren</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Expand">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Expand</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diag_nutricional_Escola">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_Escola</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Escola</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diag_nutricional_Escola_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_Escola_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diag_nutricional_EscolaDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_EscolaDescription</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuxText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuxText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Elements">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Elements</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerElements, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Parameters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Parameters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerParameters, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemClickData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemClickData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemClickData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemDoubleClickData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemDoubleClickData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemDoubleClickData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DragAndDropData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DragAndDropData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerDragAndDropData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterChangedData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterChangedData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerFilterChangedData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemExpandData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemExpandData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemExpandData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemCollapseData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemCollapseData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemCollapseData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Parameter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Parameter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Element">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Element</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerElements.Element, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diag_nutricional_NumColeta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_NumColeta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_NumColeta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Sexo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Sexo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diag_nutricional_Sexo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_Sexo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Sexo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Sexo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_AlunoNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_AlunoNome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_AlunoNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdiag_nutricional_AlunoNome_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdiag_nutricional_AlunoNome_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_AlunoNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>DiagnosticoNutricional</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Diagnóstico Nutricional</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

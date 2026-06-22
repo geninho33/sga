@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-01-31T02:43:00.0000000Z" lastUpdate="2025-02-19T01:16:34.0000000Z" checksum="9aa83ceb1bdb02b345e92e903716834e" fullyQualifiedName="trnscronograma" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="56686d99-c211-4b28-adf1-3968033ae7a1" name="trnscronograma" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Cronograma de Entrega de Produtos" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnscronograma" Type="trnscronograma" Description="Cronograma de Entrega de Produtos" Guid="56686d99-c211-4b28-adf1-3968033ae7a1">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="422aed5e-aaac-435d-babf-624af37a0819">croCodigo</Attribute>
+      <Attribute key="False" guid="a1ba8a6a-0912-1d3c-8632-6d3ce0572e26" isNullable="True">forCodigo</Attribute>
+      <Attribute key="False" guid="6397a6d6-d7ff-4707-a2ec-bf9353dbd4c6" isNullable="True">croMarca</Attribute>
+      <Attribute key="False" guid="a8a3f9ac-078c-547a-1fed-1a3fe3041b46" isNullable="True">prodCodigo</Attribute>
+      <Attribute key="False" guid="dd1ca48f-cbf0-479c-a55e-a6cd2e10eb2f" isNullable="True">croDtInicial</Attribute>
+      <Attribute key="False" guid="a6c39d2a-fa61-4d8a-a1f3-10003dba8f2f" isNullable="True">croDtFinal</Attribute>
+      <Attribute key="False" guid="6986a070-6b6f-4f36-bda8-25d43a9db876" isNullable="True">croNumeroNota</Attribute>
+      <Attribute key="False" guid="6bf25c87-3557-4516-8b21-c13a5392bbcd" isNullable="True">croDtConsumo</Attribute>
+      <Attribute key="False" guid="c07ec903-0ef0-4f85-9a36-4de34a3d9412" isNullable="True">croStatus</Attribute>
+      <Attribute key="False" guid="24cfef01-a6c4-4595-8742-c56267f79f6d" isNullable="True">croDataCad</Attribute>
+      <Attribute key="False" guid="7246c1fd-4a86-4b90-9a31-2a967d16c600" isNullable="True">croUsuario</Attribute>
+      <Attribute key="False" guid="3e89c0fd-e172-4d46-8e09-c8d5ee0e6959" isNullable="True">croDataAlt</Attribute>
+      <Attribute key="False" guid="a0277947-fd4f-458b-9448-fa119d08dfcf" isNullable="True">croRemessa</Attribute>
+      <Attribute key="False" guid="c88caa5c-b508-4596-a244-7e35c6682a4e" isNullable="True">croFeito</Attribute>
+      <Attribute key="False" guid="6bb22e5a-35e7-4673-8f44-530db1984a9b" isNullable="True">croTipoRemessa</Attribute>
+      <Attribute key="False" guid="75c21911-b7b2-4706-aefe-ea460579307c">croTotal</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}],[{&quot;label&quot;:17}]]}]" containerSlotName="TableAttributes"><row><cell cellControlName="croCodigo_Cell"><data attribute="croCodigo" labelCaption="Codigo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forCodigo" labelCaption=" Fornecedor" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;forCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;forNome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo and forStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="prodCodigo" labelCaption="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;prodCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;prodDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo and prodStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="croMarca" labelCaption="Marca" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedcroDtInicial" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:17},{&quot;width&quot;:83}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockcroDtInicial" caption="Período de " class="Label" /></cell><cell><table controlName="TableMergedcroDtInicial" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="croDtInicial" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell cellClass="DataContentCell"><data attribute="croDtFinal" labelCaption="a" class="AttributeRealWidthDate" /></cell></row></table></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="croDtConsumo" labelCaption="Data Consumo" class="AttributeRealWidthDate" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="croNumeroNota" labelCaption=" Nota" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="croTipoRemessa" labelCaption="Tipo de Remessa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;disTipNumero&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;disTipDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;disTipStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="croRemessa" labelCaption="Remessa" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="croStatus" labelCaption="Status" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="croTotal" labelCaption=" Total" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault hidden-xs hidden-sm hidden-md hidden-lg" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="prefCodigo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="croUsuario" /><gxAttribute ControlType="Edit" InputType="Values" AttID="croDataAlt" /><gxAttribute ControlType="Edit" InputType="Values" AttID="croFeito" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&prefCodigo, in:&croCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+croCodigo = &croCodigo if not &croCodigo.IsEmpty();
+noaccept(croCodigo) if not &croCodigo.IsEmpty();
+
+forCodigo = &Insert_forCodigo if &Mode = TrnMode.Insert and not &Insert_forCodigo.IsEmpty();
+noaccept(forCodigo) if &Mode = TrnMode.Insert and not &Insert_forCodigo.IsEmpty();
+prodCodigo = &Insert_prodCodigo if &Mode = TrnMode.Insert and not &Insert_prodCodigo.IsEmpty();
+noaccept(prodCodigo) if &Mode = TrnMode.Insert and not &Insert_prodCodigo.IsEmpty();
+croCodigo.Visible = croCodigo<>0;
+croCodigo_Cell.Class = !'Invisible' If not(croCodigo<>0);
+croCodigo_Cell.Class = !'col-xs-12 DataContentCell' If croCodigo<>0;
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+error('Não é possível salvar com o status de DISTRIBUIÇÃO, sem informar o código da remessa !') 
+	if croRemessa = 0 and croStatus = 'D';
+
+error('Informe a marca do produto !') 
+	if croMarca.IsEmpty();
+	
+error('Informe o fornecedor !') 
+	if forCodigo.IsEmpty();
+
+error('Informe a data inicial  é a data Final !') 
+	if croDtInicial.IsEmpty() or croDtFinal.IsEmpty(); 
+
+error('Data inicial é maior que a data Final !') 
+	if croDtInicial>croDtFinal; 
+
+croDataCad = serverNow() 
+	on beforeInsert;
+
+croDataAlt = serverNow() 
+	on beforeUpdate;
+
+croCodigo = PRCDGerarNovoCodigo('cronograma')  
+	on BeforeInsert;
+
+croStatus = 'A'
+	on BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	 LoadWWPContext.Call(&WWPContext)
+     &prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	If (&TrnContext.TransactionName = &Pgmname and &Mode = TrnMode.Insert)
+		For &TrnContextAtt in &TrnContext.Attributes
+			Do Case
+				// When inserting with instantiated forCodigo
+				Case &TrnContextAtt.AttributeName = !"forCodigo"
+					&Insert_forCodigo.FromString(&TrnContextAtt.AttributeValue)
+				// When inserting with instantiated prodCodigo
+				Case &TrnContextAtt.AttributeName = !"prodCodigo"
+					&Insert_prodCodigo.FromString(&TrnContextAtt.AttributeValue)
+			Endcase
+		Endfor
+	Endif
+	
+	prefCodigo.Visible = False
+	croUsuario.Visible = False
+	croDataAlt.Visible = False
+	croFeito.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+    if &Mode = TrnMode.Update
+       PRCDVerificarProdutoCronograma(&prefCodigo,croCodigo,prodCodigo)
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnscronogramaWW.Call()
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	croCodigo.Visible = False
+	croCodigo_Cell.Class = !'Invisible'
+	If Not SecGAMIsAuthByFunctionalityKey(!'true')
+		croRemessa.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_forCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_forCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:forCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscronograma</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Cronograma de Entrega de Produtos</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

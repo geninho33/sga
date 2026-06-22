@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="2c6583be-97db-4fe9-8638-e71e5d8b5d34" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:23:33.0000000Z" checksum="1679b6cf61e513ce0cac5db8db8fac14" fullyQualifiedName="WWPBaseObjects.Discussions.WWP_DiscussionsWC" moduleGuid="e2da86dd-2537-4d5a-8e82-35fda77dc9e5" guid="9946ab31-5b1b-4b91-a7c2-fb201a86bf92" name="WWP_DiscussionsWC" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Discussions of a record" parent="WWPBaseObjects.Discussions.UserInterface" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainDiscussions" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="UnnamedTable1" tableType="Flex"><row><cell><textblock controlName="DiscussionsTitle" caption="Discussions" class="TextBlockTitleWWP" /></cell><cell flexGrow="0" alignSelf="Flex End"><textblock controlName="NewThread" caption="Start a new thread" class="TextBlock" /></cell></row></table></cell></row><row><cell cellControlName="GridCell" cellClass="DiscussionsGridCell"><grid controlName="Grid" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;WWP_DiscussionMessage&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="UnnamedTableFSGrid" tableType="Responsive" responsiveSizes="[]"><row><cell cellControlName="DiscussionCardCell" cellClass="CellMarginBottom15"><table controlName="DiscussionCard" class="DiscussionCardTable" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellMarginTop"><table controlName="TableCard" tableType="Flex"><row><cell cellClass="CellPaddingTop5" flexGrow="0"><data attribute="&amp;UserExtendedPhoto" labelPosition="None" readonly="True" class="AttributeDiscussionImage" /></cell><cell><table controlName="TableTitle" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMergedWWPUserExtendedFullName" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="WWPUserExtendedFullName" labelPosition="None" class="SimpleCardAttributeTitle" /></cell><cell><data attribute="WWPDiscussionMessageDate" labelPosition="None" class="AttributeDiscussionDate" /></cell></row></table></cell></row><row><cell><data attribute="WWPDiscussionMessageMessage" labelPosition="None" class="AttributeDiscussionDescription" /></cell></row></table></cell></row></table></cell></row><row><cell cellControlName="WCDiscussionsOneThreadCell"><component controlName="WCDiscussionsOneThreadWC" /></cell></row><row><cell cellControlName="DiscussionsOneThreadCollapsedWCCell"><component controlName="DiscussionsOneThreadCollapsedWC" /></cell></row></table></cell></row><row><cell cellClass="Invisible"><table controlName="UnnamedTableContentFSGrid"><row><cell><data attribute="&amp;IsDiscussionAnswersWCLoaded" labelPosition="None" /></cell><cell><data attribute="WWPDiscussionMessageId" labelPosition="None" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></grid></cell></row><row><cell cellControlName="NewThreadCell" cellClass="DiscussionNewMessageCell"><table controlName="TableNewThread" tableType="Flex" flexDirection="Column" flexWrap="Wrap"><row><cell cellClass="CellMarginTop"><data attribute="&amp;Message" labelPosition="None" class="Attribute" inviteMessage="Type a message to create a new thread..." /></cell><cell flexGrow="0" alignSelf="Flex End"><textblock controlName="Enter" caption="&lt;i class=&quot;fas fa-paper-plane DiscussionsSendIcon&quot;&gt;&lt;/i&gt;" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;Event&lt;/Name&gt;&lt;Value&gt;Enter&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;HTML&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><ucw gxControlType="2059354192" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;UCMentions&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;WWPBaseObjects.Discussions.WWP_GetUsersForDiscussionMentions&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="WWPDiscussionMessageEntityRecordId" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+parm(in:&WWPEntityName, in:&WWPDiscussionMessageEntityRecordId, in:&WWPSubscriptionEntityRecordDescription, in:&WWPNotificationLink);
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	UCMentions.GAMOAuthToken = &GAMSession.Token
+	UCMentions.ItemHtmlTemplate = WWP_GetStyledDVCombo(!'Title, subtitle and image')
+	UCMentions.Attach(!'+', &Message.InternalName)
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&IsDiscussionAnswersWCLoaded.Visible = False
+	WWPDiscussionMessageId.Visible = False
+
+	Grid.Rows = Page.Rows
+	WWPDiscussionMessageEntityRecordId.Visible = False
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	&WWPEntityId = WWP_GetEntityByName(&WWPEntityName)
+	WWPActions.Textarea_EnterBehaviourToAction(&Message.InternalName, Enter.InternalName)
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	WCDiscussionsOneThreadCell.Visible = True
+	&IsFirstDiscussionRecord = True
+	&WWPDiscussionMessageIdToExpand = 0
+	
+	If &WebSession.Get(!"DiscussionThreadIdToOpen") <> ''
+		&WWPDiscussionMessageIdToExpand.FromString(&WebSession.Get(!"DiscussionThreadIdToOpen"))
+		&WebSession.Remove(!"DiscussionThreadIdToOpen")
+	EndIf
+	
+	If &WWPDiscussionMessageIdToExpand = 0
+		For Each WWPBaseObjects.Discussions.WWP_DiscussionMessage Order (WWPDiscussionMessageId)
+			Where WWPEntityId = &WWPEntityId
+			Where WWPDiscussionMessageEntityRecordId = &WWPDiscussionMessageEntityRecordId
+			Where WWPDiscussionMessageThreadId.IsNull() or WWPDiscussionMessageThreadId.IsEmpty()
+			&WWPDiscussionMessageIdToExpand = WWPDiscussionMessageId
+			Exit
+		EndFor
+	EndIf
+	GridCell.Visible = False
+	&IsDiscussionAnswersWCLoaded = False
+	NewThread.Visible = False
+
+EndEvent
+
+Event Grid.Load
+
+	If &IsFirstDiscussionRecord
+		&IsFirstDiscussionRecord = False
+		NewThreadCell.Visible = false
+		GridCell.Visible = True
+		NewThread.Visible = True
+	Endif
+	
+	If WWPUserExtendedPhoto.ImageURI = ''
+		&UserExtendedPhoto.FromImage(AvatarDiscussionPhoto)
+	Else
+		&UserExtendedPhoto.ImageURI = WWPUserExtendedPhoto.ImageURI
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DiscussionsOneThreadCollapsedWC.Object = WWP_DiscussionsOneThreadCollapsedWC.Create(WWPDiscussionMessageId)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	If WWPDiscussionMessageId = &WWPDiscussionMessageIdToExpand
+		&IsDiscussionAnswersWCLoaded = True
+		WCDiscussionsOneThreadCell.Visible = True
+		DiscussionsOneThreadCollapsedWCCell.Visible = False
+		WCDiscussionsOneThreadWC.Object = WWPBaseObjects.Discussions.WWP_DiscussionsOneThreadWC.Create(WWPDiscussionMessageId, &WWPSubscriptionEntityRecordDescription, &WWPNotificationLink)
+	Else
+		&IsDiscussionAnswersWCLoaded = False
+		WCDiscussionsOneThreadCell.Visible = False
+		DiscussionsOneThreadCollapsedWCCell.Visible = True
+		
+	EndIf
+
+EndEvent
+
+Event Enter
+
+	If Not &Message.IsEmpty()
+		&WWPEntityId = WWP_GetEntityByName(&WWPEntityName)
+		If &WWPEntityId > 0
+			If WWPBaseObjects.Discussions.WWP_CreateAndNotifyDiscussionMessage(&WWPEntityId, 0, &WWPDiscussionMessageEntityRecordId, &Message, UCMentions.SelectedItemsJson, &WWPDiscussionMessage.WWPDiscussionMessageId.ToString(), "WWP_Notifications_NewDiscussionThread", &WWPSubscriptionEntityRecordDescription, &WWPNotificationLink)
+				&Message.SetEmpty()
+				NewThreadCell.Visible = False
+				Grid.Refresh()
+			EndIf
+		EndIf
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"WWPBaseObjects.Discussions.WWP_DiscussionMessage"
+
+	&TrnContextAtt = new()
+	&TrnContextAtt.AttributeName = !"WWPDiscussionMessageEntityRecordId"
+	&TrnContextAtt.AttributeValue = &WWPDiscussionMessageEntityRecordId.ToString()
+	&TrnContext.Attributes.Add(&TrnContextAtt)
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event DiscussionCard.Click
+
+	WCDiscussionsOneThreadCell.Visible = Not WCDiscussionsOneThreadCell.Visible
+	DiscussionsOneThreadCollapsedWCCell.Visible = Not DiscussionsOneThreadCollapsedWCCell.Visible
+	
+	If DiscussionsOneThreadCollapsedWCCell.Visible
+		DiscussionsOneThreadCollapsedWC.Refresh()
+	Else
+		If &IsDiscussionAnswersWCLoaded
+			WCDiscussionsOneThreadWC.Refresh()
+		Else
+			WCDiscussionsOneThreadWC.Object = WWPBaseObjects.Discussions.WWP_DiscussionsOneThreadWC.Create(WWPDiscussionMessageId, &WWPSubscriptionEntityRecordDescription, &WWPNotificationLink)
+			&IsDiscussionAnswersWCLoaded = True
+		EndIf
+	EndIf
+
+EndEvent
+
+Event NewThread.Click
+
+	For each line in Grid
+		WCDiscussionsOneThreadCell.Visible = False
+		DiscussionsOneThreadCollapsedWCCell.Visible = True
+		DiscussionsOneThreadCollapsedWC.Refresh()
+	EndFor
+	NewThreadCell.Visible = true
+	&Message.SetFocus()
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+WWPDiscussionMessageEntityRecordId = &WWPDiscussionMessageEntityRecordId;
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+WWPDiscussionMessageThreadId.IsNull() or WWPDiscussionMessageThreadId.IsEmpty();
+WWPEntityId = &WWPEntityId;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="MentionWWPUserExtendedIdCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MentionWWPUserExtendedIdCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPUser Extended Id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedId</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionEntity">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionEntity</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:WWP_Entity, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionMessage</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:WWP_DiscussionMessage, WWPBaseObjects.Discussions</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPEntityId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPEntityId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPEntity Id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPEntityId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsDiscussionAnswersWCLoaded">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsDiscussionAnswersWCLoaded</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsFirstDiscussionRecord">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsFirstDiscussionRecord</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>400</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>400</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserExtendedPhoto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserExtendedPhoto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedPhoto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionEntityName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionEntityName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPEntityName</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionMessageEntityRecordId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionMessageEntityRecordId</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPDiscussionMessageEntityRecordId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionMessageIdToExpand">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionMessageIdToExpand</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPDiscussionMessageId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPEntityName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPEntityName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPEntityName</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationLink">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationLink</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPSubscriptionEntityRecordDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPSubscriptionEntityRecordDescription</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_DiscussionsWC</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Discussions of a record</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>WWPDiscussionsWC</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f952860a-9553-4095-82c8-dedaadd8cf64" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-03-18T13:04:23.0000000Z" checksum="65c9ad8f24d7b6c376460e2d2b26682d" fullyQualifiedName="WWPBaseObjects.GoogleDocsResult" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="896fe0cc-b4fe-4c98-aa65-8f0f5681eb80" name="GoogleDocsResult" type="447527b5-9210-4523-898b-5dccb17be60a" description="Google Docs Result" parent="WWPBaseObjects" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="GoogleDocsResult">
+      <LevelInfo guid="85f65495-bc29-4a63-8875-56d61af4fde7" name="GoogleDocsResult" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Google Docs Result" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>GoogleDocsResult</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>False</Value>
+          </Property>
+          <Property>
+            <Name>idCollectionItemName</Name>
+            <Value>Item</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="d8d5ea39-02e3-4432-b6b8-f0b38ee77e0f" name="Success" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Success" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Success</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="9a7c8635-dbe5-4671-8e72-9016a5f28ecf" name="Error" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Error" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Error</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>1000</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>1000</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Level Name="Docs">
+        <LevelInfo guid="363bdc5d-608c-4e3c-ba8f-7ee301648a77" name="Docs" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Docs" user="">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Docs</Value>
+            </Property>
+            <Property>
+              <Name>AttCollection</Name>
+              <Value>True</Value>
+            </Property>
+            <Property>
+              <Name>idCollectionItemName</Name>
+              <Value>Doc</Value>
+            </Property>
+          </Properties>
+        </LevelInfo>
+        <Item guid="efd92db8-65ce-4193-9489-12ac817b6932" name="Type" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Type" user="">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Type</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:VarChar</Value>
+            </Property>
+            <Property>
+              <Name>Length</Name>
+              <Value>100</Value>
+            </Property>
+            <Property>
+              <Name>AttMaxLen</Name>
+              <Value>100</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="c7e54d3b-e62c-4256-bea0-ddc237d36d4a" name="Title" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Title" user="">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Title</Value>
+            </Property>
+            <Property>
+              <Name>EmptyAsNull</Name>
+              <Value>Yes</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:VarChar</Value>
+            </Property>
+            <Property>
+              <Name>Length</Name>
+              <Value>100</Value>
+            </Property>
+            <Property>
+              <Name>Decimals</Name>
+              <Value>0</Value>
+            </Property>
+            <Property>
+              <Name>AttMaxLen</Name>
+              <Value>100</Value>
+            </Property>
+            <Property>
+              <Name>AttAvgLen</Name>
+              <Value>0</Value>
+            </Property>
+            <Property>
+              <Name>AttCollection</Name>
+              <Value>False</Value>
+            </Property>
+            <Property>
+              <Name>ControlType</Name>
+              <Value>Edit</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="12055da2-b39d-46ff-a032-b96e43e758e2" name="URL" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="URL" user="">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>URL</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Domain:Url, GeneXus</Value>
+            </Property>
+          </Properties>
+        </Item>
+      </Level>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GoogleDocsResult</Value>
+    </Property>
+    <Property>
+      <Name>ExternalName</Name>
+      <Value>Result</Value>
+    </Property>
+    <Property>
+      <Name>ExternalNamespace</Name>
+      <Value>DVelop.Extensions.GoogleDocs</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

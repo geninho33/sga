@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a676350a-d3a1-4850-9f51-4cef8688b224" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2014-07-25T17:32:21.0000000Z" checksum="2c382274d303a660e3b7f1064b0988f8" fullyQualifiedName="RwdRecentLinks" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="312e98f9-43c6-4277-bca0-75aae3f2b03b" name="RwdRecentLinks" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Responsive Recent Links" parent="Web" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="2" version="html:15.0.0;layout:17.11.0"><Form id="2" type="layout"><detail><layout><table controlName="MainTable" class="RecentLinksMainTable" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:18},{&quot;width&quot;:82}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;width&quot;:8},{&quot;width&quot;:91}]]}]"><row><cell><textblock controlName="RecentText" caption="Recents" class="RecentsTitle" /></cell><cell><grid controlName="Links" class="RecentLinksGrid" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;RenderingMode&lt;/Name&gt;&lt;Value&gt;Responsive&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;multi_columns&lt;/Name&gt;&lt;Value&gt;1 0 0 0 &lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;multi_columns_xs&lt;/Name&gt;&lt;Value&gt;1&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;multi_columns_sm&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;multi_columns_md&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;multi_columns_lg&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="LinksTable" class="RecentLinksTable" tableType="Responsive"><row><cell><textblock controlName="Place" caption="Place." class="RecentLinkItem" /></cell></row></table></grid></cell></row></table></layout><gridData name="Links" /></detail></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+parm(in:&FormCaption, in:&FormPgmName);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[Event RecentText.Click
+	if MainTable.Class = !"RecentLinksMainTable"
+		MainTable.Class = !"RecentLinksMainTable RecentLinksMainTableExpanded"
+	else
+		MainTable.Class = !"RecentLinksMainTable"
+	endif
+EndEvent
+
+Event Links.Load
+	// Load current links.
+	&RecentLinksItems.FromXml(&Session.Get(!"RecentLinks"))
+
+	// Delete current from list, if present.
+	&i = 1
+	Do While &i <= &RecentLinksItems.Count
+		&RecentLinksItem = &RecentLinksItems.Item(&i)
+		If Trim(&RecentLinksItem.Caption) = Trim(&FormCaption)
+			&RecentLinksItems.Remove(&i)
+		Else
+			&i += 1
+		EndIf
+	EndDo
+
+	// Shorten list if necessary, so that at most RecentLinksOptions.Size items are left at the end.
+	Do While &RecentLinksItems.Count > RecentLinksOptions.Size - 1
+		&RecentLinksItems.Remove(1)
+	EndDo
+
+	// Add new link and store.
+	&RecentLinksItem = new()
+	&RecentLinksItem.Caption = Trim(&FormCaption)
+	&RecentLinksItem.URL = &Request.ScriptName + !"?" + &Request.QueryString 
+	&RecentLinksItems.Add(&RecentLinksItem)
+
+	&Session.Set(!"RecentLinks", &RecentLinksItems.ToXml())
+
+	// Display links.
+	For &i = 1 To &RecentLinksItems.Count
+		&RecentLinksItem = &RecentLinksItems.Item(&i)
+		&PlaceCaption = &RecentLinksItem.Caption
+		if (&PlaceCaption.Length()> 20)
+			&PlaceCaption = Format(!"%1...", &PlaceCaption.Substring(1, 18))
+		endif
+		Place.Caption = &PlaceCaption
+		If (&i < &RecentLinksItems.Count)
+			Place.Link = Link(&RecentLinksItem.URL)
+		Else
+			Place.Link = ""
+		EndIf
+
+		Load
+	EndFor
+EndEvent
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FormCaption">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FormCaption</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FormPgmName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FormPgmName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:ObjectName, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="i">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>i</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Index</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Numeric</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>5</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Request">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Request</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>HTTP Request</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RecentLinksItems">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RecentLinksItems</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:LinkList</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RecentLinksItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RecentLinksItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:LinkList.LinkItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PlaceCaption">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PlaceCaption</Value>
+        </Property>
+        <Property>
+          <Name>EmptyAsNull</Name>
+          <Value>Yes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <InnerHtml><![CDATA[Keeps and shows a list of the last places the user was.]]></InnerHtml>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RwdRecentLinks</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Responsive Recent Links</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

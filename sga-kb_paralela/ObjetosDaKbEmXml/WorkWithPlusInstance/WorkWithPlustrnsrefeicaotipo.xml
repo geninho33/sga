@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e4bd5929-cb7d-e59a-9fb7-60ccb3fbef75" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-02T05:03:28.0000000Z" lastUpdate="2025-04-02T03:38:47.0000000Z" checksum="8a8f7797abf7c0f1048ece9f488c8d46" fullyQualifiedName="WorkWithPlustrnsrefeicaotipo" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="e3ae01b9-9d81-ad01-2bbf-66fb91017008" name="WorkWithPlustrnsrefeicaotipo" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnsrefeicaotipo" parent="trnsrefeicaotipo" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnsrefeicaotipo" defaultSecFuntionKey="WWtrnsrefeicaotipo" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsrefeicaotipo" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsrefeicaotipo" SecFuntionKeyINS="WWtrnsrefeicaotipo_Insert" defaultSecFuntionKeyINS="WWtrnsrefeicaotipo_Insert" SecFuntionKeyUPD="WWtrnsrefeicaotipo_Update" defaultSecFuntionKeyUPD="WWtrnsrefeicaotipo_Update" SecFuntionKeyDLT="WWtrnsrefeicaotipo_Delete" defaultSecFuntionKeyDLT="WWtrnsrefeicaotipo_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;refTipCodigo-2;22;refTipDescricao-2;22;refTipAbreviatura-2;22;refTipperiodo-2;22;refTipHorario-2;22;refTipstatus-2;22;refTipDataCad-2;22;refTipDataAlt-2;22;prefCodigo">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visibleCondition="refTipCodigo&lt;&gt;0" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipAbreviatura" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipperiodo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="True" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipHorario" description="Horário 1" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipHorario2" description="Horário 2" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipstatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;refTipDescricao-4;39;-5;41;" id="e4bd5929-cb7d-e59a-9fb7-60ccb3fbef75:1" name="trnsrefeicaotipo">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDescricao" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Tipo de Refeição" defaultDescription=" Turno" childrenOrderedList="4;02;Main Table" level="root:trnsrefeicaotipo" defaultLevel="root:trnsrefeicaotipo" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Export" />
+                  <standardAction popup="True" defaultPopup="True" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="ExportReport" />
+                </actionGroup>
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+                <userAction caption="Atualizar Cardápios" name="btnAtualizar" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=refTipDescricao.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order name="Order1">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipCodigo" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;refTipDescricao">
+                  <filterAttribute name="refTipCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;refTipCodigo;LowerThan-4;96;4;99;refTipCodigo;Equals-4;96;4;99;refTipCodigo;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                  <filterAttribute name="refTipDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;refTipDescricao;StartsWith-4;96;4;99;refTipDescricao;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="refTipperiodo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" allValue="True" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" />
+                  <filterAttribute name="refTipstatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" allValue="True" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" />
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;refTipCodigo-4;23;refTipDescricao-4;23;refTipAbreviatura-4;23;refTipperiodo-4;23;refTipHorario-4;23;refTipstatus-4;23;refTipDataCad-4;23;refTipDataAlt">
+          <standardAction name="Update" />
+          <standardAction name="Delete" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipCodigo" description="Código" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="refTipCodigo &gt;= &amp;TFrefTipCodigo when not &amp;TFrefTipCodigo.IsEmpty();refTipCodigo &lt;= &amp;TFrefTipCodigo_To when not &amp;TFrefTipCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipAbreviatura" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="refTipAbreviatura.ToLower() like &amp;TFrefTipAbreviatura.ToLower() when not &amp;TFrefTipAbreviatura.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultFilterCondition="refTipDescricao.ToLower() like &amp;TFrefTipDescricao.ToLower() when not &amp;TFrefTipDescricao.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipperiodo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipHorario" description="Horário 1" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="refTipHorario &gt;= &amp;TFrefTipHorario when not &amp;TFrefTipHorario.IsEmpty();refTipHorario &lt;= &amp;TFrefTipHorario_To when not &amp;TFrefTipHorario_To.IsEmpty()" defaultFilterCondition="refTipHorario &gt;= &amp;TFrefTipHorario when not &amp;TFrefTipHorario.IsEmpty();refTipHorario &lt;= &amp;TFrefTipHorario_To when not &amp;TFrefTipHorario_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipHorario2" description="Horário 2" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipstatus" description="Situação" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="refTipDataCad &gt;= &amp;TFrefTipDataCad when not &amp;TFrefTipDataCad.IsEmpty();refTipDataCad &lt;= &amp;TFrefTipDataCad_To when not &amp;TFrefTipDataCad_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-refTipDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="refTipDataAlt &gt;= &amp;TFrefTipDataAlt when not &amp;TFrefTipDataAlt.IsEmpty();refTipDataAlt &lt;= &amp;TFrefTipDataAlt_To when not &amp;TFrefTipDataAlt_To.IsEmpty()" />
+        </grid>
+      </table>
+    </selection>
+    <view childrenOrderedList="5;14;prefCodigo;5;41;-5;14;refTipCodigo;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="refTipDescricao.ToString()" defaultCaption="refTipDescricao.ToString()">
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="refTipCodigo" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsrefeicaotipoGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Turno" defaultCaption="Ir a Turno" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsrefeicaotipoGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsrefeicaotipoGeneral;42;General-trnsrefeicaotipotrnscardapiopratoWC;43;trnscardapioprato">
+        <tabularTab childrenOrderedList="trnsrefeicaotipoGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsrefeicaotipoGeneral" defaultWcname="trnsrefeicaotipoGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsrefeicaotipoGeneral;126;-trnsrefeicaotipoGeneral;88;Actions">
+            <transactionDetailData />
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsrefeicaotipoGeneral;91;Update-trnsrefeicaotipoGeneral;91;Delete">
+              <standardAction caption="" ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction caption="" ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsrefeicaotipo</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsrefeicaotipo</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a1bdfc47-e176-9196-c300-f84b38f57a2c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-07-26T03:49:44.0000000Z" checksum="a4af625968589950631bf0d4a9c4f388" fullyQualifiedName="trnsdistribuicaotipoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8eabe85c-0f62-4b7c-9711-594d9136a54a" name="trnsdistribuicaotipoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsdistribuicaotipo WWDS" parent="WorkWithPlustrnsdistribuicaotipo" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[disTipCodigo.ToLower() like &disTipCodigo1.ToLower() when &DynamicFiltersSelector1 = !'DISTIPCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &disTipCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipCodigo.ToLower() like '%' +  &disTipCodigo1.ToLower() when &DynamicFiltersSelector1 = !'DISTIPCODIGO' AND &DynamicFiltersOperator1 = 1 AND (not &disTipCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like &disTipDescricao1.ToLower() when &DynamicFiltersSelector1 = !'DISTIPDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &disTipDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like '%' +  &disTipDescricao1.ToLower() when &DynamicFiltersSelector1 = !'DISTIPDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &disTipDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDias = &disTipDias1 when &DynamicFiltersSelector1 = !'DISTIPDIAS' AND &DynamicFiltersOperator1 = 0 AND (not &disTipDias1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipNumero = &disTipNumero1 when &DynamicFiltersSelector1 = !'DISTIPNUMERO' AND &DynamicFiltersOperator1 = 0 AND (not &disTipNumero1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipStatus = &disTipStatus1 when &DynamicFiltersSelector1 = !'DISTIPSTATUS' AND (not &disTipStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipCodigo.ToLower() like &disTipCodigo2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTIPCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &disTipCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipCodigo.ToLower() like '%' +  &disTipCodigo2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTIPCODIGO' AND &DynamicFiltersOperator2 = 1 AND (not &disTipCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like &disTipDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTIPDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &disTipDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like '%' +  &disTipDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTIPDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &disTipDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDias = &disTipDias2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTIPDIAS' AND &DynamicFiltersOperator2 = 0 AND (not &disTipDias2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipNumero = &disTipNumero2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTIPNUMERO' AND &DynamicFiltersOperator2 = 0 AND (not &disTipNumero2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipStatus = &disTipStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTIPSTATUS' AND (not &disTipStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipCodigo.ToLower() like &disTipCodigo3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTIPCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &disTipCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipCodigo.ToLower() like '%' +  &disTipCodigo3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTIPCODIGO' AND &DynamicFiltersOperator3 = 1 AND (not &disTipCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like &disTipDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTIPDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &disTipDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like '%' +  &disTipDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTIPDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &disTipDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDias = &disTipDias3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTIPDIAS' AND &DynamicFiltersOperator3 = 0 AND (not &disTipDias3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipNumero = &disTipNumero3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTIPNUMERO' AND &DynamicFiltersOperator3 = 0 AND (not &disTipNumero3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipStatus = &disTipStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTIPSTATUS' AND (not &disTipStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipCodigo.ToLower() like &TFdisTipCodigo.ToLower() when &TFdisTipCodigo_Sel.IsEmpty() AND (not &TFdisTipCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipCodigo = &TFdisTipCodigo_Sel when not &TFdisTipCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like &TFdisTipDescricao.ToLower() when &TFdisTipDescricao_Sel.IsEmpty() AND (not &TFdisTipDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao = &TFdisTipDescricao_Sel when not &TFdisTipDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricaoPlural.ToLower() like &TFdisTipDescricaoPlural.ToLower() when &TFdisTipDescricaoPlural_Sel.IsEmpty() AND (not &TFdisTipDescricaoPlural.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricaoPlural = &TFdisTipDescricaoPlural_Sel when not &TFdisTipDescricaoPlural_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDias >= &TFdisTipDias when not &TFdisTipDias.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDias <= &TFdisTipDias_To when not &TFdisTipDias_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipSemanas >= &TFdisTipSemanas when not &TFdisTipSemanas.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipSemanas <= &TFdisTipSemanas_To when not &TFdisTipSemanas_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipRemessaMes >= &TFdisTipRemessaMes when not &TFdisTipRemessaMes.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipRemessaMes <= &TFdisTipRemessaMes_To when not &TFdisTipRemessaMes_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipStatus in &TFdisTipStatus_Sels when &TFdisTipStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipDescricaoPlural">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipDescricaoPlural</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricaoPlural</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipDescricaoPlural_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipDescricaoPlural_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricaoPlural</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipDias">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipDias</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDias</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipDias_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipDias_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDias</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipSemanas">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipSemanas</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipSemanas</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipSemanas_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipSemanas_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipSemanas</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipRemessaMes">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipRemessaMes</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipRemessaMes</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipRemessaMes_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipRemessaMes_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipRemessaMes</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdisTipStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdisTipStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipDias1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipDias1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDias</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipNumero1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipNumero1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipDias2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipDias2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDias</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipNumero2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipNumero2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipDias3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipDias3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDias</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipNumero3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipNumero3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="disTipStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>disTipStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipCodigo1</Name>
+        <Description>dis Tip Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipDescricao1</Name>
+        <Description>dis Tip Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipDias1</Name>
+        <Description>dis Tip Dias1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipNumero1</Name>
+        <Description>dis Tip Numero1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipStatus1</Name>
+        <Description>dis Tip Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipCodigo2</Name>
+        <Description>dis Tip Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipDescricao2</Name>
+        <Description>dis Tip Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipDias2</Name>
+        <Description>dis Tip Dias2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipNumero2</Name>
+        <Description>dis Tip Numero2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipStatus2</Name>
+        <Description>dis Tip Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipCodigo3</Name>
+        <Description>dis Tip Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipDescricao3</Name>
+        <Description>dis Tip Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipDias3</Name>
+        <Description>dis Tip Dias3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipNumero3</Name>
+        <Description>dis Tip Numero3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>disTipStatus3</Name>
+        <Description>dis Tip Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipCodigo</Name>
+        <Description>TFdis Tip Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipCodigo_Sel</Name>
+        <Description>TFdis Tip Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipDescricao</Name>
+        <Description>TFdis Tip Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipDescricao_Sel</Name>
+        <Description>TFdis Tip Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipDescricaoPlural</Name>
+        <Description>TFdis Tip Descricao Plural</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipDescricaoPlural_Sel</Name>
+        <Description>TFdis Tip Descricao Plural_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipDias</Name>
+        <Description>TFdis Tip Dias</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipDias_To</Name>
+        <Description>TFdis Tip Dias_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipSemanas</Name>
+        <Description>TFdis Tip Semanas</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipSemanas_To</Name>
+        <Description>TFdis Tip Semanas_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipRemessaMes</Name>
+        <Description>TFdis Tip Remessa Mes</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipRemessaMes_To</Name>
+        <Description>TFdis Tip Remessa Mes_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdisTipStatus_Sels</Name>
+        <Description>TFdis Tip Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicaotipoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsdistribuicaotipo</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

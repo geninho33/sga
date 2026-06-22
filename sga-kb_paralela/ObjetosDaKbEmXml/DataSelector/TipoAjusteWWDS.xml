@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="198c24dd-56d7-03f5-025d-c52a77182e9f" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-08-10T02:20:18.0000000Z" checksum="27985348054e90969347d92097d41130" fullyQualifiedName="TipoAjusteWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5db7ff45-39de-4aec-aedb-552b8dba39ef" name="TipoAjusteWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Tipo Ajuste WWDS" parent="WorkWithPlusTipoAjuste" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &tipajuNome1.ToLower() when &DynamicFiltersSelector1 = !'TIPAJUNOME' AND &DynamicFiltersOperator1 = 0 AND (not &tipajuNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like '%' +  &tipajuNome1.ToLower() when &DynamicFiltersSelector1 = !'TIPAJUNOME' AND &DynamicFiltersOperator1 = 1 AND (not &tipajuNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla.ToLower() like &tipajuSigla1.ToLower() when &DynamicFiltersSelector1 = !'TIPAJUSIGLA' AND &DynamicFiltersOperator1 = 0 AND (not &tipajuSigla1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla.ToLower() like '%' +  &tipajuSigla1.ToLower() when &DynamicFiltersSelector1 = !'TIPAJUSIGLA' AND &DynamicFiltersOperator1 = 1 AND (not &tipajuSigla1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuAcao = &tipajuAcao1 when &DynamicFiltersSelector1 = !'TIPAJUACAO' AND (not &tipajuAcao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &tipajuNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'TIPAJUNOME' AND &DynamicFiltersOperator2 = 0 AND (not &tipajuNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like '%' +  &tipajuNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'TIPAJUNOME' AND &DynamicFiltersOperator2 = 1 AND (not &tipajuNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla.ToLower() like &tipajuSigla2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'TIPAJUSIGLA' AND &DynamicFiltersOperator2 = 0 AND (not &tipajuSigla2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla.ToLower() like '%' +  &tipajuSigla2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'TIPAJUSIGLA' AND &DynamicFiltersOperator2 = 1 AND (not &tipajuSigla2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuAcao = &tipajuAcao2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'TIPAJUACAO' AND (not &tipajuAcao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &tipajuNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'TIPAJUNOME' AND &DynamicFiltersOperator3 = 0 AND (not &tipajuNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like '%' +  &tipajuNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'TIPAJUNOME' AND &DynamicFiltersOperator3 = 1 AND (not &tipajuNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla.ToLower() like &tipajuSigla3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'TIPAJUSIGLA' AND &DynamicFiltersOperator3 = 0 AND (not &tipajuSigla3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla.ToLower() like '%' +  &tipajuSigla3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'TIPAJUSIGLA' AND &DynamicFiltersOperator3 = 1 AND (not &tipajuSigla3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuAcao = &tipajuAcao3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'TIPAJUACAO' AND (not &tipajuAcao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuCodigo >= &TFtipajuCodigo when not &TFtipajuCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuCodigo <= &TFtipajuCodigo_To when not &TFtipajuCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &TFtipajuNome.ToLower() when &TFtipajuNome_Sel.IsEmpty() AND (not &TFtipajuNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome = &TFtipajuNome_Sel when not &TFtipajuNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla.ToLower() like &TFtipajuSigla.ToLower() when &TFtipajuSigla_Sel.IsEmpty() AND (not &TFtipajuSigla.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuSigla = &TFtipajuSigla_Sel when not &TFtipajuSigla_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuAcao in &TFtipajuAcao_Sels when &TFtipajuAcao_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuSigla">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuSigla</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuSigla_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuSigla_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuAcao_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuAcao_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuAcao</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuSigla1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuSigla1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuAcao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuAcao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuAcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuSigla2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuSigla2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuAcao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuAcao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuAcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuSigla3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuSigla3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuAcao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuAcao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuAcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuNome1</Name>
+        <Description>tipaju Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuSigla1</Name>
+        <Description>tipaju Sigla1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuAcao1</Name>
+        <Description>tipaju Acao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuNome2</Name>
+        <Description>tipaju Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuSigla2</Name>
+        <Description>tipaju Sigla2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuAcao2</Name>
+        <Description>tipaju Acao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuNome3</Name>
+        <Description>tipaju Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuSigla3</Name>
+        <Description>tipaju Sigla3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuAcao3</Name>
+        <Description>tipaju Acao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuCodigo</Name>
+        <Description>TFtipaju Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuCodigo_To</Name>
+        <Description>TFtipaju Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuNome</Name>
+        <Description>TFtipaju Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuNome_Sel</Name>
+        <Description>TFtipaju Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuSigla</Name>
+        <Description>TFtipaju Sigla</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuSigla_Sel</Name>
+        <Description>TFtipaju Sigla_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuAcao_Sels</Name>
+        <Description>TFtipaju Acao_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>TipoAjusteWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusTipoAjuste</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

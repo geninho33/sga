@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="007d7d78-bc3e-03a6-a544-910f4b2fe15a" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-11-15T02:09:20.0000000Z" checksum="053d26a6db8a2907cb16fd69cebd3b57" fullyQualifiedName="trnsusuariosWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b73019a6-b5f7-43b5-869f-a672bea14a80" name="trnsusuariosWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsusuarios WWDS" parent="WorkWithPlustrnsusuarios" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[usuUsuario.ToLower() like &usuUsuario1.ToLower() when &DynamicFiltersSelector1 = !'USUUSUARIO' AND &DynamicFiltersOperator1 = 0 AND (not &usuUsuario1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuUsuario.ToLower() like '%' +  &usuUsuario1.ToLower() when &DynamicFiltersSelector1 = !'USUUSUARIO' AND &DynamicFiltersOperator1 = 1 AND (not &usuUsuario1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like &usuNome1.ToLower() when &DynamicFiltersSelector1 = !'USUNOME' AND &DynamicFiltersOperator1 = 0 AND (not &usuNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like '%' +  &usuNome1.ToLower() when &DynamicFiltersSelector1 = !'USUNOME' AND &DynamicFiltersOperator1 = 1 AND (not &usuNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuGUID.ToLower() like &usuGUID1.ToLower() when &DynamicFiltersSelector1 = !'USUGUID' AND &DynamicFiltersOperator1 = 0 AND (not &usuGUID1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuGUID.ToLower() like '%' +  &usuGUID1.ToLower() when &DynamicFiltersSelector1 = !'USUGUID' AND &DynamicFiltersOperator1 = 1 AND (not &usuGUID1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail.ToLower() like &usuEmail1.ToLower() when &DynamicFiltersSelector1 = !'USUEMAIL' AND &DynamicFiltersOperator1 = 0 AND (not &usuEmail1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail.ToLower() like '%' +  &usuEmail1.ToLower() when &DynamicFiltersSelector1 = !'USUEMAIL' AND &DynamicFiltersOperator1 = 1 AND (not &usuEmail1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo1 when &DynamicFiltersSelector1 = !'PREFCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &prefCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuUsuario.ToLower() like &usuUsuario2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUUSUARIO' AND &DynamicFiltersOperator2 = 0 AND (not &usuUsuario2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuUsuario.ToLower() like '%' +  &usuUsuario2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUUSUARIO' AND &DynamicFiltersOperator2 = 1 AND (not &usuUsuario2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like &usuNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUNOME' AND &DynamicFiltersOperator2 = 0 AND (not &usuNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like '%' +  &usuNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUNOME' AND &DynamicFiltersOperator2 = 1 AND (not &usuNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuGUID.ToLower() like &usuGUID2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUGUID' AND &DynamicFiltersOperator2 = 0 AND (not &usuGUID2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuGUID.ToLower() like '%' +  &usuGUID2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUGUID' AND &DynamicFiltersOperator2 = 1 AND (not &usuGUID2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail.ToLower() like &usuEmail2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUEMAIL' AND &DynamicFiltersOperator2 = 0 AND (not &usuEmail2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail.ToLower() like '%' +  &usuEmail2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'USUEMAIL' AND &DynamicFiltersOperator2 = 1 AND (not &usuEmail2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PREFCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &prefCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuUsuario.ToLower() like &usuUsuario3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUUSUARIO' AND &DynamicFiltersOperator3 = 0 AND (not &usuUsuario3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuUsuario.ToLower() like '%' +  &usuUsuario3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUUSUARIO' AND &DynamicFiltersOperator3 = 1 AND (not &usuUsuario3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like &usuNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUNOME' AND &DynamicFiltersOperator3 = 0 AND (not &usuNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like '%' +  &usuNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUNOME' AND &DynamicFiltersOperator3 = 1 AND (not &usuNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuGUID.ToLower() like &usuGUID3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUGUID' AND &DynamicFiltersOperator3 = 0 AND (not &usuGUID3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuGUID.ToLower() like '%' +  &usuGUID3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUGUID' AND &DynamicFiltersOperator3 = 1 AND (not &usuGUID3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail.ToLower() like &usuEmail3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUEMAIL' AND &DynamicFiltersOperator3 = 0 AND (not &usuEmail3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail.ToLower() like '%' +  &usuEmail3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'USUEMAIL' AND &DynamicFiltersOperator3 = 1 AND (not &usuEmail3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PREFCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &prefCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuCodigo >= &TFusuCodigo when not &TFusuCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuCodigo <= &TFusuCodigo_To when not &TFusuCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCodigo >= &TFprefCodigo when not &TFprefCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCodigo <= &TFprefCodigo_To when not &TFprefCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuUsuario.ToLower() like &TFusuUsuario.ToLower() when &TFusuUsuario_Sel.IsEmpty() AND (not &TFusuUsuario.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuUsuario = &TFusuUsuario_Sel when not &TFusuUsuario_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like &TFusuNome.ToLower() when &TFusuNome_Sel.IsEmpty() AND (not &TFusuNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome = &TFusuNome_Sel when not &TFusuNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuCargo >= &TFusuCargo when not &TFusuCargo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuCargo <= &TFusuCargo_To when not &TFusuCargo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail.ToLower() like &TFusuEmail.ToLower() when &TFusuEmail_Sel.IsEmpty() AND (not &TFusuEmail.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuEmail = &TFusuEmail_Sel when not &TFusuEmail_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuStatus in &TFusuStatus_Sels when &TFusuStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuUsuario1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuUsuario1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuUsuario2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuUsuario2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuUsuario3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuUsuario3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuUsuario">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuUsuario</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuUsuario_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuUsuario_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuCargo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuCargo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuCargo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuCargo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuCargo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuCargo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuEmail">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuEmail</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuEmail_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuEmail_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFusuStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFusuStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuGUID1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuGUID1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuGUID</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuEmail1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuEmail1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuGUID2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuGUID2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuGUID</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuEmail2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuEmail2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuGUID3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuGUID3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuGUID</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="usuEmail3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>usuEmail3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuUsuario1</Name>
+        <Description>usu Usuario1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuNome1</Name>
+        <Description>usu Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuGUID1</Name>
+        <Description>usu GUID1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuEmail1</Name>
+        <Description>usu Email1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo1</Name>
+        <Description>pref Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuUsuario2</Name>
+        <Description>usu Usuario2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuNome2</Name>
+        <Description>usu Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuGUID2</Name>
+        <Description>usu GUID2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuEmail2</Name>
+        <Description>usu Email2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo2</Name>
+        <Description>pref Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuUsuario3</Name>
+        <Description>usu Usuario3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuNome3</Name>
+        <Description>usu Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuGUID3</Name>
+        <Description>usu GUID3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>usuEmail3</Name>
+        <Description>usu Email3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo3</Name>
+        <Description>pref Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuCodigo</Name>
+        <Description>TFusu Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuCodigo_To</Name>
+        <Description>TFusu Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefCodigo</Name>
+        <Description>TFpref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefCodigo_To</Name>
+        <Description>TFpref Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuUsuario</Name>
+        <Description>TFusu Usuario</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuUsuario_Sel</Name>
+        <Description>TFusu Usuario_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuNome</Name>
+        <Description>TFusu Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuNome_Sel</Name>
+        <Description>TFusu Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuCargo</Name>
+        <Description>TFusu Cargo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuCargo_To</Name>
+        <Description>TFusu Cargo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuEmail</Name>
+        <Description>TFusu Email</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuEmail_Sel</Name>
+        <Description>TFusu Email_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFusuStatus_Sels</Name>
+        <Description>TFusu Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsusuariosWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsusuarios</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

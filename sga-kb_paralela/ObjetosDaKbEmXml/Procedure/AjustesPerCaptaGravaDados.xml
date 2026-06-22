@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-06T02:33:15.0000000Z" checksum="230f1130a0654c24e79f7be5debb92d3" fullyQualifiedName="AjustesPerCaptaGravaDados" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="abb5a38a-8723-41d4-944b-2041a363e7f8" name="AjustesPerCaptaGravaDados" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Ajustes Per Capta Grava Dados" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[//&RanchoAno		= Year(ServerDate())
+//&RanchoMes		= Meses.Janeiro
+&RanchoDataEnvio.Set(&RanchoAno,&RanchoMes,1)
+
+if &wMode = 'INS'
+	For each trnsprodutos
+		Where prodCodigo = &prodCodigo
+		prodCodigoTipoRemessa = &prodCodigoTipoRemessa
+	endfor
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		RanchoDataEnvio = &RanchoDataEnvio
+		RanchoDataEnvio = ServerDate()
+		RanchoIncluido  = ServerNow()
+		RanchoStatus	= Status.Ativo
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		RanchoAreasEnsinoCodigo = 1 // Berçario 1
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		RanchoAreasEnsinoCodigo = 2 // Berçario 2
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		RanchoAreasEnsinoCodigo = 3 // Creche
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		RanchoAreasEnsinoCodigo = 4 // EMEB
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		RanchoAreasEnsinoCodigo = 5 // Integral
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		RanchoAreasEnsinoCodigo = 99999997 // Funcionários
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		prodCodigo 		= &prodCodigo
+		RanchoAreasEnsinoCodigo = 1
+		RanchoAreasEnsinoPerCaptaValor  = &Bercario1
+		RanchoAreasEnsinoPerCaptaOferta = &Bercario1Oferta
+		When duplicate
+		For each
+			RanchoAreasEnsinoPerCaptaValor  = &Bercario1
+			RanchoAreasEnsinoPerCaptaOferta = &Bercario1Oferta
+		Endfor
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		prodCodigo 		= &prodCodigo
+		RanchoAreasEnsinoCodigo = 2
+		RanchoAreasEnsinoPerCaptaValor  = &Bercario2
+		RanchoAreasEnsinoPerCaptaOferta = &Bercario2Oferta
+		When duplicate
+		For each
+			RanchoAreasEnsinoPerCaptaValor  = &Bercario2
+			RanchoAreasEnsinoPerCaptaOferta = &Bercario2Oferta
+		Endfor
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		prodCodigo 		= &prodCodigo
+		RanchoAreasEnsinoCodigo = 3
+		RanchoAreasEnsinoPerCaptaValor  = &Creche
+		RanchoAreasEnsinoPerCaptaOferta = &CrecheOferta
+		When duplicate
+		For each
+			RanchoAreasEnsinoPerCaptaValor  = &Creche
+			RanchoAreasEnsinoPerCaptaOferta = &CrecheOferta
+		Endfor
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		prodCodigo 		= &prodCodigo
+		RanchoAreasEnsinoCodigo = 4
+		RanchoAreasEnsinoPerCaptaValor  = &Emeb
+		RanchoAreasEnsinoPerCaptaOferta = &EmebOferta
+		When duplicate
+		For each
+			RanchoAreasEnsinoPerCaptaValor  = &Emeb
+			RanchoAreasEnsinoPerCaptaOferta = &EmebOferta
+		Endfor
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		prodCodigo 		= &prodCodigo
+		RanchoAreasEnsinoCodigo = 5
+		RanchoAreasEnsinoPerCaptaValor  = &Integral
+		RanchoAreasEnsinoPerCaptaOferta = &IntegralOferta
+		When duplicate
+		For each
+			RanchoAreasEnsinoPerCaptaValor  = &Integral
+			RanchoAreasEnsinoPerCaptaOferta = &IntegralOferta
+		Endfor
+	EndNew
+
+	New
+		prefCodigo 		= &prefCodigo
+		RanchoAno		= &RanchoAno
+		RanchoMes		= &RanchoMes
+		prodCodigo 		= &prodCodigo
+		RanchoAreasEnsinoCodigo = 99999997
+		RanchoAreasEnsinoPerCaptaValor  = &Funcionarios
+		RanchoAreasEnsinoPerCaptaOferta = &FuncionarioOferta
+		When duplicate
+		For each
+			RanchoAreasEnsinoPerCaptaValor  = &Funcionarios
+			RanchoAreasEnsinoPerCaptaOferta = &FuncionarioOferta
+		Endfor
+	EndNew
+else
+
+	&prodCodigoTipoRemessa = 0
+	&Bercario1.SetEmpty()
+	&Bercario2.SetEmpty()
+	&Creche.SetEmpty()
+	&Emeb.SetEmpty()
+	&Integral.SetEmpty()
+	&Funcionarios.SetEmpty()
+	&Bercario1Oferta.SetEmpty()
+	&Bercario2Oferta.SetEmpty()
+	&CrecheOferta.SetEmpty()
+	&EmebOferta.SetEmpty()
+	&FuncionarioOferta.SetEmpty()
+	&IntegralOferta.SetEmpty()
+
+	For each trnsprodutos
+		Where prodCodigo = &prodCodigo
+		&prodCodigoTipoRemessa = prodCodigoTipoRemessa
+	endfor
+
+	/* Busca Percapta e Oferta dos cardápios */
+	&DataInicial.Set(&RanchoAno,&RanchoMes,1)
+	&DataFinal = &DataInicial.EndOfMonth()
+	&PropertiesCollection = BuscaPercaptaOfertaDosCardapios(&prefCodigo,&DataInicial,&DataFinal,&prodCodigo)
+
+	/* Busca percapta e Oferta nos dados dos cardápios */
+//	Comentei para buscar somente do rancho - Gerson em 30/04/2024
+//	for &Properties in &PropertiesCollection
+//		do case
+//			case &Properties.Get(!'AreEnsCodigo').ToNumeric() = 1
+//				&Bercario1 		 = &Properties.Get(!'Percapta').ToNumeric()
+//				&Bercario1Oferta = &Properties.Get(!'Oferta').ToNumeric()
+//			case &Properties.Get(!'AreEnsCodigo').ToNumeric() = 2
+//				&Bercario2 		 = &Properties.Get(!'Percapta').ToNumeric()
+//				&Bercario2Oferta = &Properties.Get(!'Oferta').ToNumeric()
+//			case &Properties.Get(!'AreEnsCodigo').ToNumeric() = 3
+//				&Creche 		 = &Properties.Get(!'Percapta').ToNumeric()
+//				&CrecheOferta	 = &Properties.Get(!'Oferta').ToNumeric()
+//			case &Properties.Get(!'AreEnsCodigo').ToNumeric() = 4
+//				&Emeb	 		 = &Properties.Get(!'Percapta').ToNumeric()
+//				&EmebOferta		 = &Properties.Get(!'Oferta').ToNumeric()
+//			case &Properties.Get(!'AreEnsCodigo').ToNumeric() = 5
+//				&Integral		 = &Properties.Get(!'Percapta').ToNumeric()
+//				&IntegralOferta  = &Properties.Get(!'Oferta').ToNumeric()
+//			otherwise
+//				&Funcionarios 	 	= &Properties.Get(!'Percapta').ToNumeric()
+//				&FuncionarioOferta  = &Properties.Get(!'Oferta').ToNumeric()
+//		endcase
+//	endfor
+
+	/* Busca do Rancho caso ache algum valor zerado */
+	For Each
+		Where prefCodigo 	= &prefCodigo
+		Where RanchoAno		= &RanchoAno
+		Where RanchoMes		= &RanchoMes
+		Where prodCodigo  = &prodCodigo
+		Do Case
+			Case RanchoAreasEnsinoCodigo = 1 and &Bercario1.IsEmpty()
+				&Bercario1 		 = RanchoAreasEnsinoPerCaptaValor
+				&Bercario1Oferta = RanchoAreasEnsinoPerCaptaOferta
+				//msg('B1: ' + RanchoAreasEnsinoPerCaptaOferta.ToString().Trim())
+			Case RanchoAreasEnsinoCodigo = 2 and &Bercario2.IsEmpty()
+				&Bercario2 		 = RanchoAreasEnsinoPerCaptaValor
+				&Bercario2Oferta = RanchoAreasEnsinoPerCaptaOferta
+				//msg('B2: ' + RanchoAreasEnsinoPerCaptaOferta.ToString().Trim())
+			Case RanchoAreasEnsinoCodigo = 3 and &Creche.IsEmpty()
+				&Creche 	  = RanchoAreasEnsinoPerCaptaValor
+				&CrecheOferta = RanchoAreasEnsinoPerCaptaOferta
+				//msg('Creche: ' + RanchoAreasEnsinoPerCaptaOferta.ToString().Trim())
+			Case RanchoAreasEnsinoCodigo = 4 and &Emeb.IsEmpty()
+				&Emeb 		= RanchoAreasEnsinoPerCaptaValor
+				&EmebOferta = RanchoAreasEnsinoPerCaptaOferta
+				//msg('EMEB: ' + RanchoAreasEnsinoPerCaptaOferta.ToString().Trim())
+			Case RanchoAreasEnsinoCodigo = 5 and &Integral.IsEmpty()
+				&Integral 		= RanchoAreasEnsinoPerCaptaValor
+				&IntegralOferta = RanchoAreasEnsinoPerCaptaOferta
+				//msg('Integral: ' + RanchoAreasEnsinoPerCaptaOferta.ToString().Trim())
+			OtherWise
+				if &Funcionarios.IsEmpty()
+					&Funcionarios 		= RanchoAreasEnsinoPerCaptaValor
+					&FuncionarioOferta 	= RanchoAreasEnsinoPerCaptaOferta
+					//msg('Ok')
+				endif
+				//msg('Proc: ' + &Funcionarios.ToString().Trim() + ' - ' + &FuncionarioOferta.ToString().Trim())			
+		EndCase
+	EndFor
+
+endif
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&prefCodigo,in:&RanchoAno,in:&RanchoMes,in:&prodCodigo,in:&wMode,&prodCodigoTipoRemessa,&Bercario1,&Bercario1Oferta,&Bercario2,&Bercario2Oferta,&Creche,&CrecheOferta,&Emeb,&EmebOferta,&Integral,&IntegralOferta,&Funcionarios,&FuncionarioOferta);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Bercario1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario1Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario1Oferta</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Oferta Semanal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario2Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario2Oferta</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Oferta Semanal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Creche">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Creche</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CrecheOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CrecheOferta</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Oferta Semanal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Emeb">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Emeb</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EmebOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EmebOferta</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Oferta Semanal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FuncionarioOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FuncionarioOferta</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Oferta Semanal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Funcionarios">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Funcionarios</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Integral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Integral</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IntegralOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IntegralOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigoTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigoTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo de Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigoTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PropertiesCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PropertiesCollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Rancho">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Rancho</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Rancho</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoAno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoAno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoAreasEnsino">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoAreasEnsino</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Rancho.AreasEnsino</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoAreasEnsinoPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoAreasEnsinoPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Rancho.AreasEnsino.PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoDataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Data Envio</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RanchoMes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RanchoMes</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Mês</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoMes</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="wMode">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>wMode</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>3</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>3</Value>
+        </Property>
+        <Property>
+          <Name>idCHARCASE</Name>
+          <Value>idCHARCASE_UPPER</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>AjustesPerCaptaGravaDados</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

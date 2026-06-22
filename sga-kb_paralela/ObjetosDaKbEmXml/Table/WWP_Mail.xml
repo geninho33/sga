@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:19:00.0000000Z" checksum="ae4ebcda098f5008038ba6ac13a8e212" fullyQualifiedName="WWP_Mail" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5e85a9e3-538c-4599-ab34-68bfca147426" name="WWP_Mail" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="WWP_Mail">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="3497f796-1d6a-42c7-a68e-07c7ff89a188">WWPMailId</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="9a318e536a89530c8d496258953aa90a" fullyQualifiedName="IWWP_Mail" moduleGuid="00000000-0000-0000-0000-000000000000" guid="4dbc2979-838e-4c2f-9463-ec101f5b3f0c" name="IWWP_Mail" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Mail">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPMailId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Mail</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="81f5614d021265b48ec4d8112c6ac3b9" fullyQualifiedName="IWWP_Mail1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="55165084-55bd-4d81-a9cf-f974df545e28" name="IWWP_Mail1" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Mail1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPNotificationId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Mail1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_Mail</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>WWP_Mail</Value>
+    </Property>
+  </Properties>
+</Object>

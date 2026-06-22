@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-07T03:36:12.0000000Z" checksum="431435f7f7b89050f1cbc5bc9ddd5037" fullyQualifiedName="trnstaco" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f492dc80-0059-5308-9d4d-95cc44303b8d" name="trnstaco" type="19abc6ff-2cd2-0000-0006-6d172bc2333b" description="trnstaco" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="19abc6ff-2cd2-1000-0006-6d172bc2333b">
+    <Attributes>
+      <DataViewAttribute InternalName="tacoCodigo" ExternalName="tacoCodigo" />
+      <DataViewAttribute InternalName="tacoDescricao" ExternalName="tacoDescricao" />
+      <DataViewAttribute InternalName="tacoCaloria" ExternalName="tacoCaloria" />
+      <DataViewAttribute InternalName="tacoProteina" ExternalName="tacoProteina" />
+      <DataViewAttribute InternalName="tacoLipidio" ExternalName="tacoLipidio" />
+      <DataViewAttribute InternalName="tacoCarboidrato" ExternalName="tacoCarboidrato" />
+      <DataViewAttribute InternalName="tacoFibra" ExternalName="tacoFibra" />
+      <DataViewAttribute InternalName="tacoCalcio" ExternalName="tacoCalcio" />
+      <DataViewAttribute InternalName="tacoMagnesio" ExternalName="tacoMagnesio" />
+      <DataViewAttribute InternalName="tacoFerro" ExternalName="tacoFerro" />
+      <DataViewAttribute InternalName="tacoSal" ExternalName="tacoSal" />
+      <DataViewAttribute InternalName="tacoPotassio" ExternalName="tacoPotassio" />
+      <DataViewAttribute InternalName="tacoZinco" ExternalName="tacoZinco" />
+      <DataViewAttribute InternalName="tacoVitaminac" ExternalName="tacoVitaminac" />
+      <DataViewAttribute InternalName="tacoVitaminaa" ExternalName="tacoVitaminaa" />
+      <DataViewAttribute InternalName="tacoGorduraSaturada" ExternalName="tacoGorduraSaturada" />
+      <DataViewAttribute InternalName="tacoStatus" ExternalName="tacoStatus" />
+      <DataViewAttribute InternalName="tacoDataCad" ExternalName="tacoDataCad" />
+      <DataViewAttribute InternalName="tacoDataAlt" ExternalName="tacoDataAlt" />
+    </Attributes>
+    <Platforms>
+      <DataViewStructurePlatform Dbms="18">
+        <PlatformProperties>
+          <Properties>
+            <Property>
+              <Name>NAME</Name>
+              <Value>trnstaco</Value>
+            </Property>
+            <Property>
+              <Name>SCHEMA</Name>
+              <Value>sgegae</Value>
+            </Property>
+          </Properties>
+        </PlatformProperties>
+      </DataViewStructurePlatform>
+    </Platforms>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="7706bd3b-212a-1000-0006-8aaeb59068b9">
+    <Indexes>
+      <Object Type="Unique" parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-07T14:35:34.0000000Z" checksum="1b7e3e00abd744ecaab651cfc61988b6" fullyQualifiedName="PRIMARY4" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="6f90d71f-390f-8eb0-ae08-7e3db0b0e817" name="PRIMARY4" type="fc1b76c4-95c5-0000-0101-44f9543121bd" description="">
+        <Platforms>
+          <DataViewIndexesPlatform Dbms="18">
+            <PlatformProperties>
+              <Properties>
+                <Property>
+                  <Name>NAME</Name>
+                  <Value>PRIMARY</Value>
+                </Property>
+                <Property>
+                  <Name>SCHEMA</Name>
+                  <Value>sgegae</Value>
+                </Property>
+              </Properties>
+            </PlatformProperties>
+          </DataViewIndexesPlatform>
+        </Platforms>
+        <Part type="fe47b55c-ea2a-1000-0101-5b38901e24f7">
+          <Members>
+            <Member Order="Ascending">tacoCodigo</Member>
+          </Members>
+          <Properties />
+        </Part>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>PRIMARY4</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value />
+          </Property>
+        </Properties>
+      </Object>
+    </Indexes>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnstaco</Value>
+    </Property>
+    <Property>
+      <Name>DVAssocTable</Name>
+      <Value>adbb33c9-0906-4971-833c-998de27e0676-tacoCodigo</Value>
+    </Property>
+    <Property>
+      <Name>DVDataStore</Name>
+      <Value>dsDataViews</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

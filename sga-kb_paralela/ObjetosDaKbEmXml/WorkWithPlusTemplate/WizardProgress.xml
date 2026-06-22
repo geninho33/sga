@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="46a2a12c-c136-4667-b372-4bcc4505f3a3" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-01-26T03:21:07.0000000Z" checksum="c7a3888bb18ca081a89bba37a990efa2" fullyQualifiedName="WWPBaseObjects.WizardProgress" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="70a764a9-012b-4356-8a64-ecb9c9071481" name="WizardProgress" type="083f1b21-5715-45e1-8a8d-ceadef141e02" description="Wizard Progress" parent="WWPBaseObjects.Wizard" parentType="00000000-0000-0000-0000-000000000008">
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WizardProgress</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Category</Name>
+      <Value>Wizards (Steps in Web Components)</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_CategoryOrder</Name>
+      <Value>300</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Type</Name>
+      <Value>Wizard</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_TemplateXml</Name>
+      <Value>&lt;template type="Wizard" cleanNextStepData="False" Name="WizardProgress" &gt;  &lt;table name="TableMain" themeClass="TableWizardMainWithShadow"&gt;		&lt;stepTitles name="StepTitles" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.WizardStepsProgressWC" /&gt;	&lt;stepsPosition cellThemeClass="WizardStepsLinePositionCell" /&gt;  &lt;/table&gt;  &lt;steps&gt;  &lt;/steps&gt;  &lt;events&gt;  &lt;/events&gt;  &lt;variables&gt;  &lt;/variables&gt;&lt;/template&gt;</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_PreviewImage</Name>
+      <Value>data:image/octet-stream;base64,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</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

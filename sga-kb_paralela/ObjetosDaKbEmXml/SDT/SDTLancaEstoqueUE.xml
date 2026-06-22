@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="da2bbf54-ab54-4d23-bae5-cddd3d944e1c" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-19T11:50:58.0000000Z" lastUpdate="2024-08-16T00:45:38.0000000Z" checksum="64ef7b7d40d9f0b39970b8baf165821a" fullyQualifiedName="SDTLancaEstoqueUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="70ab4558-fd5e-4737-824d-fb8e77efb05c" name="SDTLancaEstoqueUE" type="447527b5-9210-4523-898b-5dccb17be60a" description="Lançamento de Estoque pelas UE" parent="SDT" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="SDTLancaEstoqueUE">
+      <LevelInfo guid="36ec070b-a68b-4952-843a-82ab4ae8766f" name="SDTLancaEstoqueUE" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="SDTLanca Estoque UE" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>SDTLancaEstoqueUE</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+          <Property>
+            <Name>idCollectionItemName</Name>
+            <Value>Item</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="51cec36c-0195-45f9-9591-66897d0c3564" name="lanestcodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código Lançamento" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestcodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Código Lançamento</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestcodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="356d69a7-47e5-40f0-a88e-bff051e5ed4d" name="lanestItemIndex" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="lanest Item Index" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemIndex</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="4d8c11d1-9830-4706-9094-ada0e418ef7a" name="lanestItemLocCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="lanest Item Loc Codigo" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemLocCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>lanest Item Loc Codigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="40f56e2a-9a89-4023-96ed-9cbdcc16caca" name="lanestItemProdCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Cod. Produto" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Cod. Produto</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="c929a4d6-2d50-4a2a-a764-aed4bdca2da2" name="lanestItemProdDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdDescricao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Descrição</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="93ffc891-cada-4b3e-ac13-2675c134119f" name="lanestItemProdUni" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdUni</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Unidade</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="27830c53-817e-4adf-a82e-052dc227dd5e" name="lanestItemPesoUni" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Peso Unidade" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemPesoUni</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Peso Unidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemPesoUni</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="c1a942a2-f2ab-49b9-98c2-d3100945c583" name="lanestItemPeso" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Peso" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemPeso</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Peso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemPeso</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="21dc7bde-7799-40de-b12c-f757bec50383" name="lanestItemQuantidade" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Quantidade" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemQuantidade</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Quantidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemQuantidade</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="6d29e23d-53a9-4b7a-87c1-3f6e923bca1e" name="lanestItemStatus" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Status" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemStatus</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Status</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemStatus</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="83a47be3-29d9-4c83-8de5-576d3e557019" name="lanestItemObservacao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Observação" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemObservacao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Observação</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>250</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>250</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="49fef8b9-fbfc-44a5-a785-4fa19e6e35e1" name="lanestItemValidade" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Validade" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemValidade</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Validade</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Date</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="2283743b-ba2a-4171-97ac-3c1ce82d4582" name="lanestdisTipDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestdisTipDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="bd034495-c68d-4465-a95a-ef296922655d" name="lanestItemMapeamenteo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Mapeamenteo" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemMapeamenteo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemMapeamenteo</Value>
+          </Property>
+        </Properties>
+      </Item>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>SDTLancaEstoqueUE</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Lançamento de Estoque pelas UE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-11-11T02:05:32.0000000Z" checksum="d7e2ab01cad715cea08da78c4aa8740b" fullyQualifiedName="PRCDAplicarTabelaTaco" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c0128922-116d-45b4-a0f8-97040337ea91" name="PRCDAplicarTabelaTaco" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Aplicar os dados da Tabela Taco no novo produto" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[for each
+	where tacoCodigo = &tacoCodigo
+		  &prodCaloria		   = tacoCaloria
+		  &prodCarboidrato 	   = tacoCarboidrato		
+		  &prodGorduraSaturada = tacoGorduraSaturada
+		  &prodProteina 	   = tacoProteina
+		  &prodSal 			   = tacoSal
+		  &prodPotassio 	   = tacoPotassio
+		  &prodCalcio 		   = tacoCalcio
+		  &prodFerro 		   = tacoFerro
+		  &prodVitaminaA 	   = tacoVitaminaa
+		  &prodLipidio 		   = tacoLipidio
+		  &prodFibra 		   = tacoFibra
+		  &prodVitaminaC 	   = tacoVitaminac
+		  &prodMagnesio 	   = tacoMagnesio
+		  &prodZinco 		   = tacoZinco
+		  // &prodAcucar = taco
+		  // &prodGorduraTrans = tacoG GorduraTrans
+		  // &prodNpcal =
+		  // &prodNdpcal = 
+endFor	
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&tacoCodigo, &prodCaloria,&prodCarboidrato,&prodGorduraTrans,&prodGorduraSaturada,&prodProteina,
+	&prodSal,&prodPotassio,&prodCalcio,&prodFerro,&prodVitaminaA,
+	&prodNpcal,&prodNdpcal,&prodLipidio,&prodFibra,&prodVitaminaC,
+	&prodMagnesio,&prodZinco,&prodAcucar);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prodCaloria">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCaloria</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Calorias</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCaloria</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCarboidrato">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCarboidrato</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Carboidrato</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCarboidrato</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodGorduraTrans">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodGorduraTrans</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Gordura Trans</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodGorduraTrans</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodGorduraSaturada">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodGorduraSaturada</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Gordura Saturada</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodGorduraSaturada</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodProteina">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodProteina</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Proteína</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodProteina</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodSal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodSal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Sal</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodSal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodPotassio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodPotassio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Potássio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodPotassio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCalcio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCalcio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Cálcio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCalcio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodFerro">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodFerro</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Ferro</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodFerro</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodVitaminaA">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodVitaminaA</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Vitamina A</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodVitaminaA</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodNpcal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodNpcal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>NPCAL</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodNpcal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodNdpcal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodNdpcal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value> NDPCAL</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodNdpcal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodLipidio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodLipidio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Lipidio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodLipidio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodFibra">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodFibra</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Fibra</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodFibra</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodVitaminaC">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodVitaminaC</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Vitamina C</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodVitaminaC</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodMagnesio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodMagnesio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Magnésio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodMagnesio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodZinco">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodZinco</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Zinco</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodZinco</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodAcucar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodAcucar</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade Açucar</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodAcucar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tacoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tacoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tacoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDAplicarTabelaTaco</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Aplicar os dados da Tabela Taco no novo produto</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

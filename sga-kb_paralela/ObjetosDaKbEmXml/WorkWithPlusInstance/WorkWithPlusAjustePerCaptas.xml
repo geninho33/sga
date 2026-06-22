@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="18876388-38d9-43d0-b1c6-19968ed23904" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-04-02T21:39:04.0000000Z" checksum="f023e4898998b7262d28b285e5eb6707" fullyQualifiedName="WorkWithPlusAjustePerCaptas" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1f943b18-6e25-0b4b-05ce-1fa1ac28a679" name="WorkWithPlusAjustePerCaptas" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus Ajuste Per Captas" parent="AjustePerCaptas" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsprodutos" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsprodutos">
+    <table defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" />
+  </transaction>
+  <level childrenOrderedList="4;39;" id="b2f0eae3-8148-82da-fc68-ce52d1677920:1" name="AjustePerCaptas">
+    <selection Template="InfiniteScrolling" description=" Percapta de Alimentos" defaultDescription=" Alimentos" page="50" defaultPage="50" pagingType="Infinite scrolling (form scroll bar)" defaultPagingType="Infinite scrolling (form scroll bar)" childrenOrderedList="4;02;Main Table" level="root:trnsprodutos" defaultLevel="root:trnsprodutos" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns">
+                <standardAction caption="Gravar" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Enter" />
+              </actionGroup>
+              <table name="TableMesAno" numberOfColumns="3">
+                <variable name="Ano" description="Ano" defaultDescription="Ano" dataType="Basic" defaultDataType="Basic" themeClass="Attribute" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlInfo="00972a17-9975-449e-aab1-d26165d51393-AnosDescendente" defaultControlInfo="00972a17-9975-449e-aab1-d26165d51393-AnosDescendente" controlType="DVelop Combo" defaultControlType="DVelop Combo" controlInputDS="User code" defaultControlInputDS="User code" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-RanchoAno" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-RanchoAno" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-RanchoAno" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-RanchoAno" controlInputDP="2a9e9aba-d2de-4801-ae7f-5e3819222daf-ListaDeAnos" defaultControlInputDP="2a9e9aba-d2de-4801-ae7f-5e3819222daf-ListaDeAnos" controlInputDPParameters="OrdemClassificacao.Descentente" defaultControlInputDPParameters="OrdemClassificacao.Descentente" controlInputDPValue="Valor" defaultControlInputDPValue="Valor" controlInputDPDescription="Descricao" defaultControlInputDPDescription="Descricao" controlSortDescription="False" defaultControlSortDescription="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" align="Right" />
+                <variable name="Mes" description="Mês" defaultDescription="Lista de meses do ano" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-Meses" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-Meses" basicLength="2" defaultBasicLength="2" themeClass="Attribute" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlInfo="00972a17-9975-449e-aab1-d26165d51393-Meses" defaultControlInfo="00972a17-9975-449e-aab1-d26165d51393-Meses" controlType="DVelop Combo" defaultControlType="DVelop Combo" controlInputDS="User code" defaultControlInputDS="User code" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-RanchoMes" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-RanchoMes" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-RanchoMes" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-RanchoMes" controlSortDescription="False" defaultControlSortDescription="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="12%" />
+                <variable name="BuscarDados" dataType="Basic" basicType="Boolean" themeClass="Attribute" rightText="Buscar dados" showDescription="False" />
+              </table>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=prodPrograma.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order name="Descricao">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;prodPrograma" maxFilters="1">
+                  <filterAttribute name="prodClassificacao" description="Classificação" defaultDescription="=Attribute.Title" allValue="True" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" />
+                  <filterAttribute name="prodDescricao" description="=Attribute.Title" defaultDescription="=Attribute.Title" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;prodDescricao;StartsWith-4;96;4;99;prodDescricao;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv">
+            <filterAttribute name="prodStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" default="Status.Ativo" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" />
+          </table>
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid includePaginationBar="False" defaultIncludePaginationBar="False" defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;prodCodigo-4;23;prodPrograma-4;23;prodPrograma_exclusivo-4;23;prodDescricao-4;23;prodUnidMedCompra-4;23;prodPesoCompra-4;23;prodObsCompra-4;23;prodEmbalagemCompra-4;23;prodObsEmbalagem-4;23;prodQtdeEmbalagemCompra-4;23;prodUnidMedConsumo-4;23;prodPesoConsumo-4;23;prodObsConsumo-4;23;prodPesoUnidade-4;23;prodUnidMedEstocagem-4;23;prodPesoEstocagem-4;23;prodObsEstocagem-4;23;prodTipo-4;23;prodLoteCompra-4;23;prodClassificacao-4;23;prodTipoRemessa-4;23;prodTiipoCompra-4;23;prodFracaoEstocagem-4;23;prodFracaoConsumo-4;23;prodArredConsumo-4;23;prodEspecificacao-4;23;prodValorunitario-4;23;prodArredondaOcorrencia-4;23;prodCalculoDifer-4;23;prodOrigem-4;23;prodZonaUrbana-4;23;prodZonaRural-4;23;prodAcucar-4;23;prodCaloria-4;23;prodCarboidrato-4;23;prodGorduraTrans-4;23;prodGorduraSaturada-4;23;prodProteina-4;23;prodSal-4;23;prodPotassio-4;23;prodCalcio-4;23;prodFerro-4;23;prodVitaminaA-4;23;prodNpcal-4;23;prodNdpcal-4;23;prodLipidio-4;23;prodFibra-4;23;prodVitaminaC-4;23;prodMagnesio-4;23;prodZinco-4;23;prodTipoIndice-4;23;prodIndice-4;23;prodTaco-4;23;prodStatus-4;23;prodDataCad-4;23;prodDataAlt-4;23;prodCodigoTipoRemessa-4;23;prodSaldo-4;23;prodQtdeMinimo-4;23;prodQtdeMaximo-4;23;prodPesoEstoque-4;23;prodDescricaoSaldo" columnSelector="False">
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" description="Cód." defaultDescription="=Attribute.ContextualTitle" titleCategory="Produto" defaultCellVisible_E="False" includeTitleFilter="False" defaultFilterCondition="prodCodigo &gt;= &amp;TFprodCodigo when not &amp;TFprodCodigo.IsEmpty();prodCodigo &lt;= &amp;TFprodCodigo_To when not &amp;TFprodCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" titleCategory="Produto" defaultCellVisible_E="False" includeTitleFilter="False" defaultFilterCondition="prodDescricao.ToLower() like &amp;TFprodDescricao.ToLower() when not &amp;TFprodDescricao.IsEmpty()" />
+          <gridVariable name="prodCodigoTipoRemessa" description="Tipo Remessa" defaultDescription="=Attribute.ContextualTitle" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-prodCodigoTipoRemessa" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-disTipNumero" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-disTipDescricao" conditions="prefCodigo = prefCodigo;" controlEmptyItem="True" titleCategory="Produto" readOnly="False" defaultCellVisible_E="False" defaultFilterCondition="prodTipoRemessa.ToLower() like &amp;TFprodTipoRemessa.ToLower() when not &amp;TFprodTipoRemessa.IsEmpty()" />
+          <gridVariable name="Bercario1" description="Per Capta" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" themeClass="Attribute" titleCategory="Berçario I" readOnly="False" />
+          <gridVariable name="Bercario1Oferta" description="Oferta" defaultDescription="Oferta Semanal" domain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" themeClass="Attribute" width="50" defaultWidth="50" titleCategory="Berçario I" defaultTitleCategory="Berçário 1" defaultColumnClass="ColumnAlignCenter" readOnly="False" defaultReadOnly="False" defaultTotalizer="Sum" />
+          <gridVariable name="Bercario2" description="Per Capta" defaultDescription="Per Capta" domain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" themeClass="Attribute" titleCategory="Berçário II" readOnly="False" />
+          <gridVariable name="Bercario2Oferta" description="Oferta" defaultDescription="Oferta Semanal" domain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" themeClass="Attribute" width="50" defaultWidth="50" titleCategory="Berçário II" defaultTitleCategory="Berçário 2" defaultColumnClass="ColumnAlignCenter" readOnly="False" defaultReadOnly="False" defaultTotalizer="Sum" />
+          <gridVariable name="Creche" description="Per Capta" defaultDescription="Per Capta" domain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" themeClass="Attribute" titleCategory="Creche" readOnly="False" />
+          <gridVariable name="CrecheOferta" description="Oferta" defaultDescription="Oferta Semanal" domain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" themeClass="Attribute" width="50" defaultWidth="50" titleCategory="Creche" defaultTitleCategory="Creche" defaultColumnClass="ColumnAlignCenter" readOnly="False" defaultReadOnly="False" defaultTotalizer="Sum" />
+          <gridVariable name="Emeb" description="Per Capta" defaultDescription="Per Capta" domain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" themeClass="Attribute" titleCategory="EMEB" readOnly="False" />
+          <gridVariable name="EmebOferta" description="Oferta" defaultDescription="Oferta Semanal" domain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" themeClass="Attribute" width="50" defaultWidth="50" titleCategory="EMEB" defaultTitleCategory="EMEB" defaultColumnClass="ColumnAlignCenter" readOnly="False" defaultReadOnly="False" defaultTotalizer="Sum" />
+          <gridVariable name="Integral" description="Per Capta" defaultDescription="Per Capta" domain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" themeClass="Attribute" titleCategory="Integral" readOnly="False" />
+          <gridVariable name="IntegralOferta" description="Oferta" defaultDescription="Oferta Semanal" domain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" themeClass="Attribute" width="50" defaultWidth="50" titleCategory="Integral" defaultTitleCategory="Integral" defaultColumnClass="ColumnAlignCenter" readOnly="False" defaultReadOnly="False" defaultTotalizer="Sum" />
+          <gridVariable name="Funcionarios" description="Per Capta" defaultDescription="Per Capta" domain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-PerCapta" themeClass="Attribute" titleCategory="Funcionários" readOnly="False" />
+          <gridVariable name="FuncionariosOferta" description="Oferta" defaultDescription="Oferta Semanal" domain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-RanchoAreasEnsinoPerCaptaOferta" themeClass="Attribute" width="50" defaultWidth="50" titleCategory="Funcionários" defaultTitleCategory="Funcionários" defaultColumnClass="ColumnAlignCenter" readOnly="False" defaultReadOnly="False" defaultTotalizer="Sum" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+        </grid>
+      </table>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusAjustePerCaptas</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-AjustePerCaptas</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

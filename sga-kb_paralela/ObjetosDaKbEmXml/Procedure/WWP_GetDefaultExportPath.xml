@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="56b0068c-8475-4ed9-8861-6aa3f64e3321" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-26T19:58:20.0000000Z" checksum="4beeabdf03e90ff54ce086f200e93e44" fullyQualifiedName="WWPBaseObjects.WWP_GetDefaultExportPath" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="b3cf510a-033b-4788-9f9f-761a189d517a" name="WWP_GetDefaultExportPath" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Get Default Export Path" parent="WWPBaseObjects.Export" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+&IsCSharp = False
+csharp [!&IsCSharp!] = true;
+
+If &IsCSharp
+	&Path = !'PrivateTempStorage' + &File.Separator
+	
+	&Directory.Source = !'PrivateTempStorage'
+	If not &Directory.Exists()
+		&Directory.Create()
+	EndIf
+Else
+	&Path = &File.Separator + !"WEB-INF" + &File.Separator
+EndIf
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+parm(out:&Path);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Path">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Path</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="File">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>File</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:File</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Directory">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Directory</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Directory</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsCSharp">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsCSharp</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_GetDefaultExportPath</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Get Default Export Path</Value>
+    </Property>
+    <Property>
+      <Name>SPC_WARNINGS_DISABLED</Name>
+      <Value>spc0096 spc0107 spc0142 spc0087</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-25T15:51:42.0000000Z" lastUpdate="2025-06-25T15:28:30.0000000Z" checksum="c0f54091d618ace3fe749f375bb57aac" fullyQualifiedName="Romaneio" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="ab74e3d5-db78-4e5f-873d-e5c873048d29" name="Romaneio" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Romaneio" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="Romaneio" Type="Romaneio" Description="Romaneio" Guid="ab74e3d5-db78-4e5f-873d-e5c873048d29">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="af3b70bd-c7e4-4f89-89ff-f36a6a3f04e8">romanCodigo</Attribute>
+      <Attribute key="False" guid="c01aada1-07cf-421b-936f-996fdaaa9c43">romanData</Attribute>
+      <Attribute key="False" guid="a1ba8a6a-0912-1d3c-8632-6d3ce0572e26">forCodigo</Attribute>
+      <Attribute key="False" guid="85992035-92fb-8dee-6097-c5c4ee34744b">forNome</Attribute>
+      <Attribute key="False" guid="e4350f3b-2ab9-4e52-0a8d-24374f4d975a">forStatus</Attribute>
+      <Attribute key="False" guid="02418b71-e706-43f1-8aa0-fc75da400255">romanLocal</Attribute>
+      <Attribute key="False" guid="dde082eb-a17a-47e9-8e8b-9d1652b9ca63">romanLocalDescricao</Attribute>
+      <Attribute key="False" guid="80acc8cc-2fe2-4776-af09-ad0cbbfc4cc2">romanDataCadastro</Attribute>
+      <Attribute key="False" guid="95676dfd-9f32-470a-895c-7320944fbeba">romanDataAlteracao</Attribute>
+      <Attribute key="False" guid="9eda66ce-175c-48d2-90b1-0776c2874ca1">romanUserName</Attribute>
+      <Attribute key="False" guid="d731c972-2bed-4bbc-86db-2ea38ea81e46" isNullable="True">notaCodigo</Attribute>
+      <Attribute key="False" guid="7780c24b-65dc-4887-87db-08389277fb70">notaNumero</Attribute>
+      <Attribute key="False" guid="c161659d-6c57-498c-9831-1ad3a0ae4b4b">notaSerie</Attribute>
+      <Attribute key="False" guid="b46ea620-9429-40da-a7ad-922df1443638">notaData</Attribute>
+      <Level Name="Item" Type="Item" Description="Item" Guid="a2543864-d259-4001-935c-57b817c3f4bc">
+        <Properties />
+        <Attribute key="True" guid="a8a3f9ac-078c-547a-1fed-1a3fe3041b46">prodCodigo</Attribute>
+        <Attribute key="False" guid="0671d176-c07a-de72-b01a-764b532723e0">prodDescricao</Attribute>
+        <Attribute key="False" guid="2e8ae799-3b77-a427-2e25-0a408d5951e3">prodUnidMedCompra</Attribute>
+        <Attribute key="False" guid="1f14f8f6-2ad6-4c47-8a9d-05f56aeb5452">romanItemQuantidade</Attribute>
+        <Attribute key="False" guid="1bdf65b0-5083-4086-8f8f-e0f3875b1a62" isNullable="True">romanItemQuantidadeAntes</Attribute>
+      </Level>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellClass="DataContentCell"><data attribute="romanCodigo" labelCaption="Número" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="RequiredDataContentCell"><data attribute="romanData" labelCaption="Data" class="AttributeRealWidthDate" /></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedforCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockforCodigo" caption="Fornecedor" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_forCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;forCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="forCodigo" labelPosition="None" /></cell></row></table></cell><cell cellClass="DataContentCell"><data attribute="romanLocal" labelCaption="Local Estoque" class="AttributeRealWidth" /></cell></row><row><cell><group controlName="UnnamedGroup1" caption="Nota Fiscal de Compra" class="Group"><table controlName="TableNota" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><data attribute="notaNumero" labelCaption="Nota nº" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="notaSerie" labelCaption="Série" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="notaData" labelCaption="Data" class="AttributeRealWidthDate" /></cell></row></table></group></cell></row></table></ucw></cell></row></table></cell></row><row><cell cellClass="CellMarginTop"><table controlName="TableLeafLevel_Item" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders"><simplegrid controlName="GridLevel_Item" class="GridWithBorderColor WorkWith"><item attribute="prodCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;TrnColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prodUnidMedCompra" titleExp="Unid. Medida" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;TrnColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prodDescricao" titleExp="Descrição" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;TrnColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="romanItemQuantidade" titleExp="Quantidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;TrnColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><div id="SectionAttribute_forCodigo"><gxAttribute AttID="&amp;ComboforCodigo" /></div><gxDVelop.GXBootstrap.DDOExtendedCombo ControlName="Combo_prodCodigo" Cls="ExtendedCombo" EmptyItem="False" IsGridItem="True" DropDownOptionsData="&amp;prodCodigo_Data" /><gxAttribute ControlType="Edit" InputType="Values" AttID="prefCodigo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="notaCodigo" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&prefCodigo, in:&romanCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+romanCodigo = &romanCodigo if not &romanCodigo.IsEmpty();
+noaccept(romanCodigo) if not &romanCodigo.IsEmpty();
+
+forCodigo = &Insert_forCodigo if &Mode = TrnMode.Insert and not &Insert_forCodigo.IsEmpty();
+noaccept(forCodigo) if &Mode = TrnMode.Insert and not &Insert_forCodigo.IsEmpty();
+notaCodigo = &Insert_notaCodigo if &Mode = TrnMode.Insert and not &Insert_notaCodigo.IsEmpty();
+noaccept(notaCodigo) if &Mode = TrnMode.Insert and not &Insert_notaCodigo.IsEmpty();
+forCodigo = &ComboforCodigo;
+Error(Format('WWP_RequiredAttribute','Quantidade')) if romanItemQuantidade.IsEmpty();
+Error(Format('WWP_RequiredAttribute','Data')) if romanData.IsEmpty();
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+default(romanLocal,1);
+default(romanData,today());
+default(romanDataCadastro,now());
+
+romanCodigo = PRCDGerarNovoCodigo('romaneio') 
+	on BeforeInsert;
+
+romanDataAlteracao = now() 
+	on BeforeUpdate;
+
+romanUserName = GAMUser.GetEmail()  
+	on BeforeUpdate;
+
+noaccept(notaCodigo) 
+	if not notaCodigo.IsEmpty();
+
+noaccept(romanItemQuantidade) 
+	if not notaCodigo.IsEmpty();
+
+
+// Salvando a quantidade anterior
+// romanItemQuantidadeAntes = romanItemQuantidade
+//	On BeforeUpdate, BeforeDelete
+//	level romanItemQuantidade;	
+
+error('Romaneio com nota vinculada não pode ser eliminado.') 
+	if not notaCodigo.IsEmpty()
+	on BeforeDelete
+	Level romanData;
+
+error('Romaneio com nota vinculada não permite eliminar itens.') 
+	if not notaCodigo.IsEmpty()
+	on BeforeDelete
+	Level romanItemQuantidade;
+	
+PRCDEstoqueMovimentacao(romanCodigo,prodCodigo,romanLocal,romanItemQuantidade,'R','N',romanItemQuantidadeAntes) 
+	if notaCodigo.IsEmpty()
+	On AfterInsert, AfterUpdate 
+	level romanItemQuantidade;
+
+PRCDEstoqueMovimentacao(romanCodigo,prodCodigo,romanLocal,romanItemQuantidade,'R','I',romanItemQuantidadeAntes) 
+	if notaCodigo.IsEmpty()
+	on BeforeDelete
+	level romanItemQuantidade;
+/*
+PRCDEstoqueMovimentacao(romanCodigo,prodCodigo,romanLocal,romanItemQuantidade,'R','N') 
+	if notaCodigo.IsEmpty()
+	On AfterInsert, AfterUpdate 
+	level romanItemQuantidade;
+
+PRCDEstoqueMovimentacao(romanCodigo,prodCodigo,romanLocal,romanItemQuantidade,'RR','N') 
+	if notaCodigo.IsEmpty()
+	on BeforeDelete, BeforeUpdate 
+	level romanItemQuantidade;
+*/
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Combo_prodCodigo.TitleControlIdToReplace = prodCodigo.InternalName
+	prodCodigo.HorizontalAlignment = !'Left'
+	forCodigo.Visible = False
+	&ComboforCodigo.SetEmpty()
+	&ComboforCodigo.Visible = False
+	Do 'LoadComboforCodigo'
+	Do 'LoadComboprodCodigo'
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	If (&TrnContext.TransactionName = &Pgmname and &Mode = TrnMode.Insert)
+		For &TrnContextAtt in &TrnContext.Attributes
+			Do Case
+				// When inserting with instantiated forCodigo
+				Case &TrnContextAtt.AttributeName = !"forCodigo"
+					&Insert_forCodigo.FromString(&TrnContextAtt.AttributeValue)
+					If not &Insert_forCodigo.IsEmpty()
+						&ComboforCodigo = &Insert_forCodigo
+						Combo_forCodigo.SelectedValue_set = &ComboforCodigo.ToString().Trim()
+						Combo_forCodigo.Enabled = False
+					EndIf
+				// When inserting with instantiated notaCodigo
+				Case &TrnContextAtt.AttributeName = !"notaCodigo"
+					&Insert_notaCodigo.FromString(&TrnContextAtt.AttributeValue)
+			Endcase
+		Endfor
+	Endif
+	
+	prefCodigo.Visible = False
+	notaCodigo.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		RomaneioWW.Call()
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_forCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ComboforCodigo.FromString(Combo_forCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If Not SecGAMIsAuthByFunctionalityKey(!'romanLocal_Edit_Attribute')
+		romanLocal.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboprodCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prodCodigo_Data = RomaneioLoadDVCombo(!'prodCodigo', &Mode, &prefCodigo, &romanCodigo, &ComboSelectedValue)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboforCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&forCodigo_Data = RomaneioLoadDVCombo(!'forCodigo', &Mode, &prefCodigo, &romanCodigo, &ComboSelectedValue)
+	Combo_forCodigo.SelectedValue_set = &ComboSelectedValue
+	&ComboforCodigo.FromString(&ComboSelectedValue)
+	If &Mode = TrnMode.Display OR &Mode = TrnMode.Delete
+		Combo_forCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="romanCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>romanCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:romanCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_forCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_forCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:forCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_notaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_notaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Cond_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Cond_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="forCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>forCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboforCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboforCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:forCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombonotaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombonotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:codigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Romaneio</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>RomaneioWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

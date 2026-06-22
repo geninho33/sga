@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="3c1f6d44-70e6-4278-8a56-7445424c6012" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-09T00:43:39.0000000Z" checksum="646006b508d6d814edf385f394d1d338" fullyQualifiedName="WorkWithPlusWPLancarPerCapta" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="3b0c35d4-261a-0ae3-3e5e-727260b6ff6f" name="WorkWithPlusWPLancarPerCapta" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPLancar Per Capta" parent="WPLancarPerCapta" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPLancarPerCapta" defaultSecFuntionKey="WPLancarPerCapta" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table name="CPPerCapta" type="Responsive" includeInPanel="True" panelTitle="Lançamento de Percapta">
+        <table name="grupoDadosGerais" isGroup="True" numberOfColumns="1" type="Responsive" title="Dados Gerais  ">
+          <table name="tableDadosGerais" numberOfColumns="2" type="Responsive">
+            <variable name="pratoDscricao" description="Refeição : " defaultDescription="Refeição : " domain="adbb33c9-0906-4971-833c-998de27e0676-pratoDscricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-pratoDscricao" vAlign="Bottom" defaultVAlign="Bottom" descriptionWidth="25%" descriptionPosition="Left" readOnly="True" defaultReadOnly="True" />
+            <variable name="prodDescricao" description="Ingrediente : " defaultDescription="Ingrediente : " domain="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" vAlign="Bottom" defaultVAlign="Bottom" descriptionWidth="25%" descriptionPosition="Left" readOnly="True" defaultReadOnly="True" />
+          </table>
+        </table>
+        <table name="tableIngrediente" numberOfColumns="1" type="Responsive" align="Left" />
+        <grid name="GridSDTPerCaptas" SDTCollection="&amp;SDTPerCapta">
+          <gridVariable name="SDTPerCapta" description="Área de Ensino" defaultDescription="Área de Ensino" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" visible="False" defaultVisible="False" sdtItem="item(0).AreEnsCodigo" defaultSdtItem="item(0).AreEnsCodigo" />
+          <gridVariable name="SDTPerCapta" description="Área" defaultDescription="Nome" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" sdtItem="item(0).AreEnsNome" defaultSdtItem="item(0).AreEnsNome" />
+          <gridVariable name="SDTPerCapta" description="Sequencial" defaultDescription="Sequencial" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" visible="False" defaultVisible="False" sdtItem="item(0).AreEnsSequencial" defaultSdtItem="item(0).AreEnsSequencial" />
+          <gridVariable name="SDTPerCapta" description="Etapa" defaultDescription="Nome Etapa" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" sdtItem="item(0).AreEnsEtapaNome" defaultSdtItem="item(0).AreEnsEtapaNome" />
+          <gridVariable name="SDTPerCapta" description="Turno" defaultDescription="Turno" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" visible="False" defaultVisible="False" sdtItem="item(0).Turno" defaultSdtItem="item(0).Turno" />
+          <gridVariable name="SDTPerCapta" description="Percapta" defaultDescription="Quantidade" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTPerCapta" readOnly="False" defaultReadOnly="False" sdtItem="item(0).pratIngrQuantidade" defaultSdtItem="item(0).pratIngrQuantidade" />
+        </grid>
+        <textBlock controlName="TextPerCapta" caption="Atenção! O percapta é com 4 casas decimais. Se percapta é 40 gramas deve informar 0,0400 " themeClass="ActionGroupRight" />
+      </table>
+      <table name="tableButton" numberOfColumns="2">
+        <userAction caption="Salvar" name="botaoSalvar" popup="False" confirm="True" confirmMessage="Deseja realmente salvar as alterações na Percapta ?" confirmTitle="Confirmação " />
+        <userAction caption="Retornar " name="botaoRetornar" />
+      </table>
+    </table>
+    <steps />
+    <parameters>
+      <parameter type="In" name="&amp;prefCodigo" />
+      <parameter type="In" name="&amp;pratoCodigo" />
+      <parameter type="In" name="&amp;prodCodigo" />
+    </parameters>
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPLancarPerCapta</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPLancarPerCapta</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="5d409ffa-98cc-4fda-a51b-1735099d1826" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-04-03T01:06:40.0000000Z" checksum="b4fe4a4d044bf0a75acb84f319a5d767" fullyQualifiedName="WorkWithPlustrnsajusteitens" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5a53c76a-ce30-0741-1113-11022b67875b" name="WorkWithPlustrnsajusteitens" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnsajusteitens" parent="trnsajusteitens" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnsajusteitens" defaultSecFuntionKey="WWtrnsajusteitens" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsajusteitens" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsajusteitens" SecFuntionKeyINS="WWtrnsajusteitens_Insert" defaultSecFuntionKeyINS="WWtrnsajusteitens_Insert" SecFuntionKeyUPD="WWtrnsajusteitens_Update" defaultSecFuntionKeyUPD="WWtrnsajusteitens_Update" SecFuntionKeyDLT="WWtrnsajusteitens_Delete" defaultSecFuntionKeyDLT="WWtrnsajusteitens_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;ajusCodigo-2;22;ajusItemProduto-2;22;ajusItemQuantidade-2;22;ajusItemUN-2;22;ajusItemProdutoDescricao-2;22;ajusItemProdutoSaldo-2;22;ajusItemLocal-2;22;ajusItemTipo-2;22;ajusItemProdutoUNPeso-2;22;ajusItemProdutoPeso-2;22;ajusItemProdutoPesoTotal">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusCodigo" description="=Attribute.Title" defaultDescription="=Attribute.Title" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProduto" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemQuantidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemUN" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProdutoDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProdutoSaldo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemLocal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemTipo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;ajusItemProdutoDescricao-4;39;-5;41;" id="5d409ffa-98cc-4fda-a51b-1735099d1826:1" name="trnsajusteitens">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProdutoDescricao" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProdutoDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Lançamento de Itens" defaultDescription=" Lançamento de Itens" childrenOrderedList="4;02;Main Table" level="root:trnsajusteitens" defaultLevel="root:trnsajusteitens" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table isGroup="True" numberOfColumns="1" type="Responsive" title=" Ajuste de Estoque">
+            <variable name="dadosAjustes" description="Mês e Ano - Cardápio : " dataType="Basic" basicType="VarChar" basicCLength="150" themeClass="ActionGroupGrouped" showDescription="False" descriptionWidth="25%" readOnly="True" />
+          </table>
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" InLine="True" />
+                <userAction caption="Retornar" name="UserAction2" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=ajusItemProdutoDescricao.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;ajusItemProdutoDescricao;=ajusItemProdutoDescricao.ContextualTitle" name="=ajusItemProdutoDescricao.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProdutoDescricao" />
+                  </order>
+                  <order name="ProdutoNome">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProduto" />
+                  </order>
+                </orders>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+          <grid includePaginationBar="False" defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;ajusCodigo-4;23;ajusItemProduto-4;23;ajusItemProdutoDescricao-4;23;ajusItemProdutoSaldo-4;23;ajusItemProdutoUNPeso-4;23;ajusItemProdutoPeso-4;23;ajusItemQuantidade-4;23;ajusItemUN-4;23;ajusItemLocal-4;23;ajusItemTipo-4;23;ajusItemProdutoPesoTotal">
+            <standardAction name="Update" InLine="True" />
+            <standardAction name="Delete" InLine="True" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="ajusCodigo &gt;= &amp;TFajusCodigo when not &amp;TFajusCodigo.IsEmpty();ajusCodigo &lt;= &amp;TFajusCodigo_To when not &amp;TFajusCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProduto" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="True" defaultVisible="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';" controlEmptyItem="False" defaultCellVisible_E="False" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemUN" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-uniCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-uniDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;uniStatus = 'A';" controlEmptyItem="True" defaultCellVisible_E="False" defaultFilterCondition="ajusItemUN &gt;= &amp;TFajusItemUN when not &amp;TFajusItemUN.IsEmpty();ajusItemUN &lt;= &amp;TFajusItemUN_To when not &amp;TFajusItemUN_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemQuantidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" cellVisible_E="False" defaultCellVisible_E="False" defaultFilterCondition="ajusItemQuantidade &gt;= &amp;TFajusItemQuantidade when not &amp;TFajusItemQuantidade.IsEmpty();ajusItemQuantidade &lt;= &amp;TFajusItemQuantidade_To when not &amp;TFajusItemQuantidade_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProdutoDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" filterCondition="ajusItemProdutoDescricao.ToLower() like &amp;TFajusItemProdutoDescricao.ToLower() when not &amp;TFajusItemProdutoDescricao.IsEmpty()" defaultFilterCondition="ajusItemProdutoDescricao.ToLower() like &amp;TFajusItemProdutoDescricao.ToLower() when not &amp;TFajusItemProdutoDescricao.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProdutoSaldo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="ajusItemProdutoSaldo &gt;= &amp;TFajusItemProdutoSaldo when not &amp;TFajusItemProdutoSaldo.IsEmpty();ajusItemProdutoSaldo &lt;= &amp;TFajusItemProdutoSaldo_To when not &amp;TFajusItemProdutoSaldo_To.IsEmpty()" defaultFilterCondition="ajusItemProdutoSaldo &gt;= &amp;TFajusItemProdutoSaldo when not &amp;TFajusItemProdutoSaldo.IsEmpty();ajusItemProdutoSaldo &lt;= &amp;TFajusItemProdutoSaldo_To when not &amp;TFajusItemProdutoSaldo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemLocal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="ajusItemLocal &gt;= &amp;TFajusItemLocal when not &amp;TFajusItemLocal.IsEmpty();ajusItemLocal &lt;= &amp;TFajusItemLocal_To when not &amp;TFajusItemLocal_To.IsEmpty()" defaultFilterCondition="ajusItemLocal &gt;= &amp;TFajusItemLocal when not &amp;TFajusItemLocal.IsEmpty();ajusItemLocal &lt;= &amp;TFajusItemLocal_To when not &amp;TFajusItemLocal_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemTipo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" />
+          </grid>
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+      </table>
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="ajusCodigo" />
+      </parameters>
+    </selection>
+    <view childrenOrderedList="5;14;prefCodigo;5;41;-5;14;ajusCodigo;5;41;-5;14;ajusItemProduto;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="ajusItemProdutoDescricao.ToString()" defaultCaption="ajusItemProdutoDescricao.ToString()">
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="ajusCodigo" />
+        <parameter name="ajusItemProduto" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsajusteitensGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Lançamento de Itens" defaultCaption="Ir a Lançamento de Itens" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsajusteitensGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsajusteitensGeneral;42;General">
+        <tabularTab childrenOrderedList="trnsajusteitensGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsajusteitensGeneral" defaultWcname="trnsajusteitensGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsajusteitensGeneral;126;-trnsajusteitensGeneral;88;Actions">
+            <table name="TransactionDetail_TableAttributes" type="Responsive" includeInPanel="False" panelTitle="WWP_TemplateDataPanelTitle" collapsable="False" cellWidth_S="75%">
+              <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" cellThemeClass="DataContentCell" />
+              <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusCodigo" description="Cadastro de Ajuste de Estoque" cellThemeClass="DataContentCell" />
+              <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemProduto" description="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" />
+              <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemQuantidade" description="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" />
+              <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-ajusItemUN" description="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" />
+            </table>
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsajusteitensGeneral;91;Update-trnsajusteitensGeneral;91;Delete">
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsajusteitens</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsajusteitens</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

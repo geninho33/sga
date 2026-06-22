@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="4112490b-fbb7-465c-b84c-aa319245c2c5" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-28T03:20:36.0000000Z" lastUpdate="2025-10-28T03:06:12.0000000Z" checksum="ed4772fde8bce8c5a3d1c9db7cb62215" fullyQualifiedName="WPRelatorioDistribuicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f948e962-262e-4999-aeaa-7c14ca770318" name="WPRelatorioDistribuicao" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Relatório de Distribuição de Produtos" parent="Relatorios" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[],[],[{&quot;width&quot;:67}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[],[{&quot;width&quot;:67}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[],[],[{&quot;width&quot;:67}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[],[],[{&quot;width&quot;:67}]]}]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]" /></cell></row><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cPanelOpcoes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Opções de Impressão&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cPanelOpcoes" tableType="Responsive" responsiveSizes="[]" containerSlotName="cPanelOpcoes"><row><cell><group controlName="UnnamedGroup1" caption="Opções " class="Group"><table controlName="groupFiltro" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="ExtendedComboCell"><table controlName="TableSplittedproduto" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlockCombo_produto" caption="Produto" class="Label" /></cell><cell cellClass="CellWidth_87_5"><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_produto&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todos&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;produto_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="UnnamedTablebuscarGrupo" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlockbuscarGrupo" caption="Grupo" class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;buscarGrupo" labelPosition="None" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;prodGrupCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;prodGrupdescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prodGrupStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todos&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="UnnamedTablesituacaoData" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlocksituacaoData" caption="filtrar por " class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;situacaoData" labelPosition="None" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Todas as Datas:T,Data de Recepção:R,Data de Envio:E&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="UnnamedTableordem" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlockordem" caption="Ordem" class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;ordem" labelPosition="None" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Codigo de Produto:C,Nome do Produto:N&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="UnnamedTabletotalizacao" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlocktotalizacao" caption="Totalização" class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;totalizacao" labelPosition="None" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Sim:S,Não:N&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></group></cell></row><row><cell><group controlName="UnnamedGroup2" caption="Periodo" class="Group"><table controlName="groupPeriodo" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="UnnamedTabledataIncial" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlockdataIncial" caption="Data Inicial: " class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;dataIncial" labelPosition="None" class="AttributeRealWidthDate" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;distDataEnvio&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;(none)&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EditAutocomplete&lt;/Name&gt;&lt;Value&gt;No&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterOperator&lt;/Name&gt;&lt;Value&gt;Begins with&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;MaxItems&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlSortDescription&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaseSensitive&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoResize&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="UnnamedTabledataFinal" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlockdataFinal" caption="Data Final" class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;dataFinal" labelPosition="None" class="AttributeRealWidthDate" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;distDataEnvio&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;(none)&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EditAutocomplete&lt;/Name&gt;&lt;Value&gt;No&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterOperator&lt;/Name&gt;&lt;Value&gt;Begins with&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;MaxItems&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlSortDescription&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaseSensitive&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoResize&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></group></cell></row><row><cell><group controlName="UnnamedGroup3" caption="Rota / Local" class="Group"><table controlName="groupRota" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="UnnamedTablerotaCodigo" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlockrotaCodigo" caption="Rota " class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;rotaCodigo" labelPosition="None" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;rotaCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;rotaDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;rotaStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todas&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell cellControlName="localDestino_Cell"><table controlName="TableSplittedlocalDestino" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlocklocalDestino" caption="Local (Destino)" class="Label" /></cell><cell cellClass="CellWidth_87_5"><table controlName="TableMergedlocalDestino" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;localDestino" labelPosition="None" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;locStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todos&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><textblock controlName="localDestino_RightText" caption="* Só é possível lançar o local, quando não tiver ROTA." class="DataDescription" /></cell></row></table></cell></row></table></cell></row></table></group></cell></row><row><cell><action controlName="BtnbtnImprimir" onClickEvent="'DobtnImprimir'" caption="Imprimir" /></cell></row></table></ucw></cell></row><row><cell><ucw gxControlType="-667710712" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;NovaAba&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute AttID="&amp;produto" /><gxAttribute AttID="&amp;tipoRelatorio" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	&dataIncial  = Today()-60
+	&dataFinal   = Today()
+	&localOrigem = 1
+	&situacaoData  = 'R'
+	&ordem = 'N'
+	&totalizacao = 'N'
+    LoadWWPContext.Call(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&produto.Visible = False
+	Do 'LoadComboproduto'
+
+	Do 'AttributesSecurityCode'
+	&tipoRelatorio.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnImprimir'
+
+     NovaAba.Target = PRINTRelatorioDistribuicao.Link( &dataIncial,
+													   &dataFinal,
+													   &rotaCodigo,
+													   &localDestino,
+													   &produto,
+													   &situacaoData,
+													   &ordem,
+													   &totalizacao,
+													   &tipoRelatorio,
+													   &buscarGrupo )
+    novaAba.OpenWindow()
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_produto.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&produto.FromString(Combo_produto.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If Not (&rotaCodigo=0)
+		&localDestino.Visible = False
+		localDestino_Cell.Class = !'Invisible'
+	Else
+		&localDestino.Visible = True
+		localDestino_Cell.Class = !'col-xs-12'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboproduto'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//&produto initial value has to be loaded manually at the beginning of this Subrutine
+	For Each
+		Order prodDescricao
+		Where prefCodigo = &prefCodigo and
+prodStatus = 'A'
+		&Combo_DataItem = new()
+		&Combo_DataItem.ID = prodCodigo.ToString().Trim()
+		&Combo_DataItem.Title = prodDescricao
+		&produto_Data.Add(&Combo_DataItem)
+	EndFor
+	Combo_produto.SelectedValue_set = iif(&produto.IsEmpty(), '', &produto.ToString().Trim())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localOrigem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localOrigem</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localDestino">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localDestino</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataIncial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataIncial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="produto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>produto</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="buscarGrupo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>buscarGrupo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodGrupCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="situacaoData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>situacaoData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ordem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ordem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="totalizacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>totalizacao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipoRelatorio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipoRelatorio</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="rotaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>rotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="produto_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>produto_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WPRelatorioDistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Relatório de Distribuição de Produtos</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

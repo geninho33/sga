@@ -1,0 +1,776 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="324d115f-c1da-7d4f-57e6-2d1c2bda6687" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-03-26T21:17:43.0000000Z" checksum="23ce05338db4c4ee61dafed2e84f4b36" fullyQualifiedName="trnsprefeiturasWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="166a5e4c-7257-4b3a-97d6-de5b8e5be24a" name="trnsprefeiturasWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsprefeituras WWDS" parent="WorkWithPlustrnsprefeituras" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio.ToLower() like &PrefMunicipio1.ToLower() when &DynamicFiltersSelector1 = !'PREFMUNICIPIO' AND &DynamicFiltersOperator1 = 0 AND (not &PrefMunicipio1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio.ToLower() like '%' +  &PrefMunicipio1.ToLower() when &DynamicFiltersSelector1 = !'PREFMUNICIPIO' AND &DynamicFiltersOperator1 = 1 AND (not &PrefMunicipio1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome.ToLower() like &prefNome1.ToLower() when &DynamicFiltersSelector1 = !'PREFNOME' AND &DynamicFiltersOperator1 = 0 AND (not &prefNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome.ToLower() like '%' +  &prefNome1.ToLower() when &DynamicFiltersSelector1 = !'PREFNOME' AND &DynamicFiltersOperator1 = 1 AND (not &prefNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ.ToLower() like &prefCNPJ1.ToLower() when &DynamicFiltersSelector1 = !'PREFCNPJ' AND &DynamicFiltersOperator1 = 0 AND (not &prefCNPJ1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ.ToLower() like '%' +  &prefCNPJ1.ToLower() when &DynamicFiltersSelector1 = !'PREFCNPJ' AND &DynamicFiltersOperator1 = 1 AND (not &prefCNPJ1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio.ToLower() like &PrefMunicipio2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PREFMUNICIPIO' AND &DynamicFiltersOperator2 = 0 AND (not &PrefMunicipio2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio.ToLower() like '%' +  &PrefMunicipio2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PREFMUNICIPIO' AND &DynamicFiltersOperator2 = 1 AND (not &PrefMunicipio2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome.ToLower() like &prefNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PREFNOME' AND &DynamicFiltersOperator2 = 0 AND (not &prefNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome.ToLower() like '%' +  &prefNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PREFNOME' AND &DynamicFiltersOperator2 = 1 AND (not &prefNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ.ToLower() like &prefCNPJ2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PREFCNPJ' AND &DynamicFiltersOperator2 = 0 AND (not &prefCNPJ2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ.ToLower() like '%' +  &prefCNPJ2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PREFCNPJ' AND &DynamicFiltersOperator2 = 1 AND (not &prefCNPJ2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio.ToLower() like &PrefMunicipio3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PREFMUNICIPIO' AND &DynamicFiltersOperator3 = 0 AND (not &PrefMunicipio3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio.ToLower() like '%' +  &PrefMunicipio3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PREFMUNICIPIO' AND &DynamicFiltersOperator3 = 1 AND (not &PrefMunicipio3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome.ToLower() like &prefNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PREFNOME' AND &DynamicFiltersOperator3 = 0 AND (not &prefNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome.ToLower() like '%' +  &prefNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PREFNOME' AND &DynamicFiltersOperator3 = 1 AND (not &prefNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ.ToLower() like &prefCNPJ3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PREFCNPJ' AND &DynamicFiltersOperator3 = 0 AND (not &prefCNPJ3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ.ToLower() like '%' +  &prefCNPJ3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PREFCNPJ' AND &DynamicFiltersOperator3 = 1 AND (not &prefCNPJ3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCodigo >= &TFprefCodigo when not &TFprefCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCodigo <= &TFprefCodigo_To when not &TFprefCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome.ToLower() like &TFprefNome.ToLower() when &TFprefNome_Sel.IsEmpty() AND (not &TFprefNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefNome = &TFprefNome_Sel when not &TFprefNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ.ToLower() like &TFprefCNPJ.ToLower() when &TFprefCNPJ_Sel.IsEmpty() AND (not &TFprefCNPJ.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefCNPJ = &TFprefCNPJ_Sel when not &TFprefCNPJ_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio.ToLower() like &TFPrefMunicipio.ToLower() when &TFPrefMunicipio_Sel.IsEmpty() AND (not &TFPrefMunicipio.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[PrefMunicipio = &TFPrefMunicipio_Sel when not &TFPrefMunicipio_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefEstado.ToLower() like &TFprefEstado.ToLower() when &TFprefEstado_Sel.IsEmpty() AND (not &TFprefEstado.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefEstado = &TFprefEstado_Sel when not &TFprefEstado_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefTelefone.ToLower() like &TFprefTelefone.ToLower() when &TFprefTelefone_Sel.IsEmpty() AND (not &TFprefTelefone.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefTelefone = &TFprefTelefone_Sel when not &TFprefTelefone_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefContato.ToLower() like &TFprefContato.ToLower() when &TFprefContato_Sel.IsEmpty() AND (not &TFprefContato.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefContato = &TFprefContato_Sel when not &TFprefContato_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prefStatus in &TFprefStatus_Sels when &TFprefStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="PrefMunicipio1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>PrefMunicipio1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:PrefMunicipio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCNPJ1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCNPJ1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCNPJ</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="PrefMunicipio2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>PrefMunicipio2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:PrefMunicipio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCNPJ2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCNPJ2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCNPJ</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="PrefMunicipio3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>PrefMunicipio3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:PrefMunicipio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCNPJ3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCNPJ3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCNPJ</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCNPJ">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCNPJ</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCNPJ</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCNPJ_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCNPJ_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCNPJ</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFPrefMunicipio">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFPrefMunicipio</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:PrefMunicipio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFPrefMunicipio_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFPrefMunicipio_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:PrefMunicipio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefEstado">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefEstado</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefEstado</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefEstado_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefEstado_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefEstado</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefTelefone">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefTelefone</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefTelefone_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefTelefone_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefContato">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefContato</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefContato</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefContato_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefContato_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefContato</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>PrefMunicipio1</Name>
+        <Description>Pref Municipio1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefNome1</Name>
+        <Description>pref Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCNPJ1</Name>
+        <Description>pref CNPJ1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>PrefMunicipio2</Name>
+        <Description>Pref Municipio2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefNome2</Name>
+        <Description>pref Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCNPJ2</Name>
+        <Description>pref CNPJ2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>PrefMunicipio3</Name>
+        <Description>Pref Municipio3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefNome3</Name>
+        <Description>pref Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCNPJ3</Name>
+        <Description>pref CNPJ3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefCodigo</Name>
+        <Description>TFpref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefCodigo_To</Name>
+        <Description>TFpref Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefNome</Name>
+        <Description>TFpref Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefNome_Sel</Name>
+        <Description>TFpref Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefCNPJ</Name>
+        <Description>TFpref CNPJ</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefCNPJ_Sel</Name>
+        <Description>TFpref CNPJ_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFPrefMunicipio</Name>
+        <Description>TFPref Municipio</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFPrefMunicipio_Sel</Name>
+        <Description>TFPref Municipio_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefEstado</Name>
+        <Description>TFpref Estado</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefEstado_Sel</Name>
+        <Description>TFpref Estado_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefTelefone</Name>
+        <Description>TFpref Telefone</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefTelefone_Sel</Name>
+        <Description>TFpref Telefone_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefContato</Name>
+        <Description>TFpref Contato</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefContato_Sel</Name>
+        <Description>TFpref Contato_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprefStatus_Sels</Name>
+        <Description>TFpref Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsprefeiturasWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsprefeituras</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

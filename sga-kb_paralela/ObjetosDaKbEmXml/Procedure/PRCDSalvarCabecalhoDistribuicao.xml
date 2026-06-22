@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-11-07T03:56:02.0000000Z" lastUpdate="2025-11-07T03:40:28.0000000Z" checksum="a0826ac87fed7fdc39b1f63a8c6cca48" fullyQualifiedName="PRCDSalvarCabecalhoDistribuicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f5e7e62c-56e6-4d3f-9400-0742805bc189" name="PRCDSalvarCabecalhoDistribuicao" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Salvar o cabeçalho da Distribuição" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[LoadWWPContext.Call(&WWPContext)
+
+for each
+	where prefCodigo            = &prefCodigo
+	where distRemCodigo	        = &remCodigo
+	where distLocalOrigem       = &distLocalOrigem
+	where distLocalDestino      = &locCodigo
+	where distCodigoTipoRemessa = &remTipoRemessa when &remTipoRemessa<>0
+	where distPeriodo           = &dataInicial.ToString() +  ' a ' + &dataFinal.ToString() when not &dataFinal.IsEmpty()
+	where distObservacao        = &distObservacao
+	      &distCodigo = distCodigo
+when none
+	&distCodigo = PRCDGerarNovoCodigo('distribuicao')
+	new
+		prefCodigo 		      = &prefCodigo
+		distCodigo            = &distCodigo
+		distDataEnvio         = &distDataEnvio
+	    distRemCodigo	      = &remCodigo
+	    distLocalOrigem       = &distLocalOrigem
+		distLocalDestino      = &locCodigo
+		distRotaCodigo        = PRCDBuscarRota(&prefCodigo,&locCodigo)
+		distStatus            = 'A'
+		distPeriodo           = &dataInicial.ToString() +  ' a ' + &dataFinal.ToString()
+		distCodigoTipoRemessa = &remTipoRemessa
+		distDataCadastro      = serverNow()
+		distDataAlteracao     = serverNow()
+		distUserName          = &WWPContext.UserName +' | IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+		distObservacao		  = &distObservacao
+		distReceber           = 'N'
+	Endnew
+endFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm( in:&prefCodigo, 
+	  in:&remCodigo, 
+	  in:&locCodigo,
+	  in:&distDataEnvio,
+	  in:&distLocalOrigem,
+	  in:&remTipoRemessa,
+	  in:&dataInicial,
+	  in:&dataFinal,
+	  in:&distObservacao,
+	  out:&distCodigo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdAreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdAreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Etapa</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdAreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdAreEnsTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdAreEnsTurno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdAreEnsTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remProdQtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remProdQtde</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Qtde</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remProdQtde</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Envio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigem</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Origem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo de Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distObservacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distObservacao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Observação</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDSalvarCabecalhoDistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Salvar o cabeçalho da Distribuição</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

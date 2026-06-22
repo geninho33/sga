@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="93cb2e18-1a96-4728-8099-f8a960980196" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-03-18T01:09:16.0000000Z" checksum="db4344cd1e6d6f53fbc973166d0b8e5c" fullyQualifiedName="WorkWithPlusWPLoginUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="94d87688-4c6a-0fb3-3491-fe9e42629eeb" name="WorkWithPlusWPLoginUE" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPLogin UE" parent="WPLoginUE" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPLoginUE" defaultSecFuntionKey="WPLoginUE" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty" masterPage="&lt;none&gt;" formThemeClass="Form">
+    <table name="TableMain" themeClass="Table100x100H" defaultThemeClass="TableMain" numberOfColumns="1" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" align="Center" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <table name="TableContent" numberOfColumns="1" numberOfColumns_E="1" numberOfColumns_S="1" defaultNumberOfColumns_S="1" numberOfColumns_M="1" defaultNumberOfColumns_M="1" numberOfColumns_L="1" defaultNumberOfColumns_L="1" type="Regular" defaultType="Responsive" align="Center">
+        <table name="tablelogin" themeClass="TableLoginWithLeftImage" numberOfColumns="1" type="Responsive" cellThemeClass="CellPaddingLeft30" align="Center">
+          <image controlName="LoginImage" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-IconRefeicao" cellWidth_E="100%" cellWidth_S="100%" />
+          <textBlock controlName="nmTotulo" caption="Portal da Alimentação Escolar" themeClass="TextBlockTitleMaster" format="HTML" cellThemeClass="CellNoPaddingHorizontal" align="Center" />
+          <table name="tableForm" type="Responsive" cellThemeClass="CellMarginTop" align="Center">
+            <variable name="login" description="Informe o login" defaultDescription="Email" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-locUsuario" basicType="Character" basicLength="11" basicCLength="11" themeClass="AttributeLoginImageLeft" defaultThemeClass="AttributeLoginImageLeft" descriptionThemeClass="DataDescription" defaultDescriptionThemeClass="DataDescription" cellThemeClass="DataContentCellLogin CellPaddingLogin" defaultCellThemeClass="DataContentCellLogin CellPaddingLogin" descriptionCellThemeClass="DataDescriptionCellLogin" defaultDescriptionCellThemeClass="DataDescriptionCellLogin" showDescription="True" descriptionPosition="Top" defaultDescriptionPosition="Top" />
+            <variable name="senha" description="Informe a Senha " defaultDescription="Password" domain="adbb33c9-0906-4971-833c-998de27e0676-locSenha" themeClass="AttributeLoginImageLeft" defaultThemeClass="AttributeLoginImageLeft" descriptionThemeClass="DataDescription" defaultDescriptionThemeClass="DataDescription" cellThemeClass="DataContentCellLogin CellPaddingLogin" defaultCellThemeClass="DataContentCellLogin CellPaddingLogin" descriptionCellThemeClass="DataDescriptionCellLogin" defaultDescriptionCellThemeClass="DataDescriptionCellLogin" showDescription="True" descriptionPosition="Top" defaultDescriptionPosition="Top" />
+            <textBlock controlName="ForgotPassword" caption="Servidor Municipal: use a senha do contracheque" themeClass="DataDescriptionLogin" format="HTML" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" cellThemeClass="DataContentCellLogin CellPaddingLogin" />
+            <userAction caption="Entrar" name="UserActionEntrar" />
+            <table name="tableEsqueceuSenha" numberOfColumns="1" type="Regular" cellVisible_E="True" cellVisible_S="True" cellVisible_M="True" cellVisible_L="True" cellThemeClass="DataContentCellLogin CellPaddingLogin">
+              <textBlock controlName="tbEsqueceuSenha" caption="Esqueceu sua senha ? " />
+              <textBlock controlName="tbEsqueceuSenha2" caption="Entre em  contato com orgão central " themeClass="TextBlock" />
+            </table>
+          </table>
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPLoginUE</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPLoginUE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

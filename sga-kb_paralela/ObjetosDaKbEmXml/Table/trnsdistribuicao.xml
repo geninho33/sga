@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-11-04T02:47:33.0000000Z" lastUpdate="2025-11-04T01:21:58.0000000Z" checksum="1a22de1559a156ec58dc4aaef622be00" fullyQualifiedName="trnsdistribuicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7c07f49f-37a7-426b-a689-99132d7c282c" name="trnsdistribuicao" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="trnsdistribuicao">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="c8a4131f-9674-4a54-894c-4dae8ac78cee">distCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2025-11-04T01:21:58.0000000Z" checksum="70c192dce703587841295389f97b7f93" fullyQualifiedName="Itrnsdistribuicao" moduleGuid="00000000-0000-0000-0000-000000000000" guid="2edaee03-2c03-44b1-bdd1-0bf64b4acabb" name="Itrnsdistribuicao" type="9e750647-3679-0000-0100-2529de263960" description="Itrnsdistribuicao">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">distCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Itrnsdistribuicao</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-11-04T01:21:58.0000000Z" checksum="302d9e31e51d31721508f70165c18fba" fullyQualifiedName="Itrnsdistribuicao2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="3fe70170-1dba-4151-b636-31bc5f2490eb" name="Itrnsdistribuicao2" type="9e750647-3679-0000-0100-2529de263960" description="Itrnsdistribuicao2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">distLocalDestino</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Itrnsdistribuicao2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-11-04T01:21:58.0000000Z" checksum="7b7bac90ef86f23647f83246d328c7e0" fullyQualifiedName="Itrnsdistribuicao1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="a23fa479-cc32-4cc2-b32d-60dd3f466483" name="Itrnsdistribuicao1" type="9e750647-3679-0000-0100-2529de263960" description="Itrnsdistribuicao1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">distLocalOrigem</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Itrnsdistribuicao1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-11-04T01:21:58.0000000Z" checksum="67b9ea39475f0297efc597ddf34d02c1" fullyQualifiedName="Utrnsdistribuicao" moduleGuid="00000000-0000-0000-0000-000000000000" guid="118537f8-7c1a-42e2-84a3-c9ac94575cc6" name="Utrnsdistribuicao" type="9e750647-3679-0000-0100-2529de263960" description="Utrnsdistribuicao">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">distDataEnvio</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Utrnsdistribuicao</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-11-04T01:21:58.0000000Z" checksum="93a577fd960467fdf0f3a3768d266921" fullyQualifiedName="Utrnsdistribuicao1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="04143111-2a33-4ae9-8766-1ca0376dd17d" name="Utrnsdistribuicao1" type="9e750647-3679-0000-0100-2529de263960" description="Utrnsdistribuicao1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">distDataRecepcao</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Utrnsdistribuicao1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-11-04T01:21:58.0000000Z" checksum="662648a1f2bea2b680f8848972216e61" fullyQualifiedName="Utrnsdistribuicao2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="0391b736-fd07-4d17-a159-4e61f3b0013f" name="Utrnsdistribuicao2" type="9e750647-3679-0000-0100-2529de263960" description="Utrnsdistribuicao2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">distRotaCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Utrnsdistribuicao2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>trnsdistribuicao</Value>
+    </Property>
+  </Properties>
+</Object>

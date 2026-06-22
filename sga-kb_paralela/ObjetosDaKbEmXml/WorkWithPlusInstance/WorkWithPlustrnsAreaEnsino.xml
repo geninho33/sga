@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="623d39d9-8a6f-4673-ac67-fcba041d626f" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:34:20.0000000Z" checksum="72d60c50edc5ca6c80dc27707b981742" fullyQualifiedName="WorkWithPlustrnsAreaEnsino" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="652e6149-dc93-0ee8-186f-fa8d26e7fd12" name="WorkWithPlustrnsAreaEnsino" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrns Area Ensino" parent="trnsAreaEnsino" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnsAreaEnsino" defaultSecFuntionKey="WWtrnsAreaEnsino" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsAreaEnsino" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsAreaEnsino" SecFuntionKeyINS="WWtrnsAreaEnsino_Insert" defaultSecFuntionKeyINS="WWtrnsAreaEnsino_Insert" SecFuntionKeyUPD="WWtrnsAreaEnsino_Update" defaultSecFuntionKeyUPD="WWtrnsAreaEnsino_Update" SecFuntionKeyDLT="WWtrnsAreaEnsino_Delete" defaultSecFuntionKeyDLT="WWtrnsAreaEnsino_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;01;TableLeafLevel_Etapa-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;AreEnsCodigo-2;22;AreEnsNome-2;22;AreEnsSigla-2;22;ArenEnsStatus">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" description="Código" defaultDescription="=Attribute.ContextualTitle" autolink="False" visibleCondition="AreEnsCodigo&lt;&gt;0" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" description="Nome" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSigla" description="Sigla" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <gridLevel childrenOrderedList="2;81;AreEnsSequencial-2;81;AreEnsEtapaNumero-2;81;AreEnsEtapaNivel-2;81;AreEnsEtapaNome" name="GridLevel_Etapa" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders">
+            <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSequencial" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+            <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+            <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNivel" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+            <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+          </gridLevel>
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;AreEnsNome-4;39;-5;41;" id="623d39d9-8a6f-4673-ac67-fcba041d626f:1" name="trnsAreaEnsino">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Áreas Ensino e Etapas" defaultDescription=" Áreas Ensino e Etapas" childrenOrderedList="4;02;Main Table" level="root:trnsAreaEnsino" defaultLevel="root:trnsAreaEnsino" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Export" />
+                  <standardAction popup="True" defaultPopup="True" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="ExportReport" />
+                </actionGroup>
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=AreEnsNome.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;AreEnsNome;=AreEnsNome.ContextualTitle" name="=AreEnsNome.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;AreEnsNome">
+                  <filterAttribute name="AreEnsNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;AreEnsNome;StartsWith-4;96;4;99;AreEnsNome;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;AreEnsCodigo-4;23;AreEnsNome-4;23;AreEnsSigla-4;23;ArenEnsStatus">
+          <standardAction name="Update" />
+          <standardAction name="Delete" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" description="Código" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="AreEnsCodigo &gt;= &amp;TFAreEnsCodigo when not &amp;TFAreEnsCodigo.IsEmpty();AreEnsCodigo &lt;= &amp;TFAreEnsCodigo_To when not &amp;TFAreEnsCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultFilterCondition="AreEnsNome.ToLower() like &amp;TFAreEnsNome.ToLower() when not &amp;TFAreEnsNome.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSigla" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="AreEnsSigla.ToLower() like &amp;TFAreEnsSigla.ToLower() when not &amp;TFAreEnsSigla.IsEmpty()" />
+        </grid>
+      </table>
+    </selection>
+    <view childrenOrderedList="5;14;prefCodigo;5;41;-5;14;AreEnsCodigo;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="AreEnsNome.ToString()" defaultCaption="AreEnsNome.ToString()">
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="AreEnsCodigo" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsAreaEnsinoGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Áreas Ensino e Etapas" defaultCaption="Ir a Áreas Ensino e Etapas" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsAreaEnsinoGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsAreaEnsinoGeneral;42;General-trnsAreaEnsinoEtapaWC;43;Etapa">
+        <tabularTab childrenOrderedList="trnsAreaEnsinoGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsAreaEnsinoGeneral" defaultWcname="trnsAreaEnsinoGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsAreaEnsinoGeneral;126;-trnsAreaEnsinoGeneral;88;Actions">
+            <transactionDetailData />
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsAreaEnsinoGeneral;91;Update-trnsAreaEnsinoGeneral;91;Delete">
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+        <gridTab childrenOrderedList="trnsAreaEnsinoEtapaWC;35;-trnsAreaEnsinoEtapaWC;02;Main Table" name="Etapa" defaultName="Etapa" code="Etapa" wcname="trnsAreaEnsinoEtapaWC" defaultWcname="trnsAreaEnsinoEtapaWC" collapsedByDefault="True" defaultCollapsedByDefault="True">
+          <transaction transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsAreaEnsino" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsAreaEnsino" level="8c30705b-aea6-42d7-b1f8-0918d3e72cb7:trnsAreaEnsino.Etapa" defaultLevel="8c30705b-aea6-42d7-b1f8-0918d3e72cb7:trnsAreaEnsino.Etapa" />
+          <table name="TableGridHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" colSpan="999" defaultColSpan="999" childrenOrderedList="trnsAreaEnsinoEtapaWC;28;ErrorViewer-trnsAreaEnsinoEtapaWC;31;">
+            <errorViewer defaultThemeClass="ErrorViewer" />
+            <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="trnsAreaEnsinoEtapaWC;23;AreEnsSequencial-trnsAreaEnsinoEtapaWC;23;AreEnsEtapaNumero-trnsAreaEnsinoEtapaWC;23;AreEnsEtapaNivel-trnsAreaEnsinoEtapaWC;23;AreEnsEtapaNome" columnSelector="False" defaultColumnSelector="False">
+              <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSequencial" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" includeTitleFilter="False" defaultIncludeTitleFilter="False" filterCondition="AreEnsSequencial &gt;= &amp;TFAreEnsSequencial when not &amp;TFAreEnsSequencial.IsEmpty();AreEnsSequencial &lt;= &amp;TFAreEnsSequencial_To when not &amp;TFAreEnsSequencial_To.IsEmpty()" defaultFilterCondition="AreEnsSequencial &gt;= &amp;TFAreEnsSequencial when not &amp;TFAreEnsSequencial.IsEmpty();AreEnsSequencial &lt;= &amp;TFAreEnsSequencial_To when not &amp;TFAreEnsSequencial_To.IsEmpty()" />
+              <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" includeTitleFilter="False" defaultIncludeTitleFilter="False" filterCondition="AreEnsEtapaNumero &gt;= &amp;TFAreEnsEtapaNumero when not &amp;TFAreEnsEtapaNumero.IsEmpty();AreEnsEtapaNumero &lt;= &amp;TFAreEnsEtapaNumero_To when not &amp;TFAreEnsEtapaNumero_To.IsEmpty()" defaultFilterCondition="AreEnsEtapaNumero &gt;= &amp;TFAreEnsEtapaNumero when not &amp;TFAreEnsEtapaNumero.IsEmpty();AreEnsEtapaNumero &lt;= &amp;TFAreEnsEtapaNumero_To when not &amp;TFAreEnsEtapaNumero_To.IsEmpty()" />
+              <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNivel" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" includeTitleFilter="False" defaultIncludeTitleFilter="False" />
+              <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="True" includeTitleFilter="False" defaultIncludeTitleFilter="False" filterCondition="AreEnsEtapaNome.ToLower() like &amp;TFAreEnsEtapaNome.ToLower() when not &amp;TFAreEnsEtapaNome.IsEmpty()" defaultFilterCondition="AreEnsEtapaNome.ToLower() like &amp;TFAreEnsEtapaNome.ToLower() when not &amp;TFAreEnsEtapaNome.IsEmpty()" />
+            </grid>
+          </table>
+        </gridTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsAreaEnsino</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsAreaEnsino</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

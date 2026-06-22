@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e6f750f0-840b-0ede-332f-71e27cb3dfe4" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-31T03:04:05.0000000Z" lastUpdate="2024-10-31T00:53:09.0000000Z" checksum="d1233f54187f7976cd336634545ce57b" fullyQualifiedName="trnsdistribuicaoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="75656333-913f-4b51-ade5-f276bcb9f95f" name="trnsdistribuicaoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsdistribuicao WWDS" parent="WorkWithPlustrnsdistribuicao" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[distCodigo = &distCodigo1 when &DynamicFiltersSelector1 = !'DISTCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &distCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRemCodigo = &distRemCodigo1 when &DynamicFiltersSelector1 = !'DISTREMCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &distRemCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio >= &distDataEnvio1 when &DynamicFiltersSelector1 = !'DISTDATAENVIO' AND &DynamicFiltersOperator1 = 0 AND (not &distDataEnvio1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio <= &distDataEnvio_To1 when &DynamicFiltersSelector1 = !'DISTDATAENVIO' AND &DynamicFiltersOperator1 = 0 AND (not &distDataEnvio_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao >= &distDataRecepcao1 when &DynamicFiltersSelector1 = !'DISTDATARECEPCAO' AND &DynamicFiltersOperator1 = 0 AND (not &distDataRecepcao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao <= &distDataRecepcao_To1 when &DynamicFiltersSelector1 = !'DISTDATARECEPCAO' AND &DynamicFiltersOperator1 = 0 AND (not &distDataRecepcao_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRotaCodigo = &distRotaCodigo1 when &DynamicFiltersSelector1 = !'DISTROTACODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &distRotaCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo.ToLower() like &distPeriodo1.ToLower() when &DynamicFiltersSelector1 = !'DISTPERIODO' AND &DynamicFiltersOperator1 = 0 AND (not &distPeriodo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo.ToLower() like '%' +  &distPeriodo1.ToLower() when &DynamicFiltersSelector1 = !'DISTPERIODO' AND &DynamicFiltersOperator1 = 1 AND (not &distPeriodo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigemNome.ToLower() like '%' +  &distLocalOrigemNome1.ToLower() when &DynamicFiltersSelector1 = !'DISTLOCALORIGEMNOME' AND &DynamicFiltersOperator1 = 0 AND (not &distLocalOrigemNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigemNome.ToLower() like &distLocalOrigemNome1.ToLower() when &DynamicFiltersSelector1 = !'DISTLOCALORIGEMNOME' AND &DynamicFiltersOperator1 = 1 AND (not &distLocalOrigemNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestinoNome.ToLower() like '%' +  &distLocalDestinoNome1.ToLower() when &DynamicFiltersSelector1 = !'DISTLOCALDESTINONOME' AND &DynamicFiltersOperator1 = 0 AND (not &distLocalDestinoNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestinoNome.ToLower() like &distLocalDestinoNome1.ToLower() when &DynamicFiltersSelector1 = !'DISTLOCALDESTINONOME' AND &DynamicFiltersOperator1 = 1 AND (not &distLocalDestinoNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distReceber.ToLower() like &distReceber1.ToLower() when &DynamicFiltersSelector1 = !'DISTRECEBER' AND (not &distReceber1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distCodigo = &distCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &distCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRemCodigo = &distRemCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTREMCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &distRemCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio >= &distDataEnvio2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTDATAENVIO' AND &DynamicFiltersOperator2 = 0 AND (not &distDataEnvio2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio <= &distDataEnvio_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTDATAENVIO' AND &DynamicFiltersOperator2 = 0 AND (not &distDataEnvio_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao >= &distDataRecepcao2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTDATARECEPCAO' AND &DynamicFiltersOperator2 = 0 AND (not &distDataRecepcao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao <= &distDataRecepcao_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTDATARECEPCAO' AND &DynamicFiltersOperator2 = 0 AND (not &distDataRecepcao_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRotaCodigo = &distRotaCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTROTACODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &distRotaCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo.ToLower() like &distPeriodo2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPERIODO' AND &DynamicFiltersOperator2 = 0 AND (not &distPeriodo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo.ToLower() like '%' +  &distPeriodo2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPERIODO' AND &DynamicFiltersOperator2 = 1 AND (not &distPeriodo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigemNome.ToLower() like '%' +  &distLocalOrigemNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTLOCALORIGEMNOME' AND &DynamicFiltersOperator2 = 0 AND (not &distLocalOrigemNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigemNome.ToLower() like &distLocalOrigemNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTLOCALORIGEMNOME' AND &DynamicFiltersOperator2 = 1 AND (not &distLocalOrigemNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestinoNome.ToLower() like '%' +  &distLocalDestinoNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTLOCALDESTINONOME' AND &DynamicFiltersOperator2 = 0 AND (not &distLocalDestinoNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestinoNome.ToLower() like &distLocalDestinoNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTLOCALDESTINONOME' AND &DynamicFiltersOperator2 = 1 AND (not &distLocalDestinoNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distReceber.ToLower() like &distReceber2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTRECEBER' AND (not &distReceber2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distCodigo = &distCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &distCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRemCodigo = &distRemCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTREMCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &distRemCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio >= &distDataEnvio3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTDATAENVIO' AND &DynamicFiltersOperator3 = 0 AND (not &distDataEnvio3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio <= &distDataEnvio_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTDATAENVIO' AND &DynamicFiltersOperator3 = 0 AND (not &distDataEnvio_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao >= &distDataRecepcao3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTDATARECEPCAO' AND &DynamicFiltersOperator3 = 0 AND (not &distDataRecepcao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao <= &distDataRecepcao_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTDATARECEPCAO' AND &DynamicFiltersOperator3 = 0 AND (not &distDataRecepcao_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRotaCodigo = &distRotaCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTROTACODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &distRotaCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo.ToLower() like &distPeriodo3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPERIODO' AND &DynamicFiltersOperator3 = 0 AND (not &distPeriodo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo.ToLower() like '%' +  &distPeriodo3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPERIODO' AND &DynamicFiltersOperator3 = 1 AND (not &distPeriodo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigemNome.ToLower() like '%' +  &distLocalOrigemNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTLOCALORIGEMNOME' AND &DynamicFiltersOperator3 = 0 AND (not &distLocalOrigemNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigemNome.ToLower() like &distLocalOrigemNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTLOCALORIGEMNOME' AND &DynamicFiltersOperator3 = 1 AND (not &distLocalOrigemNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestinoNome.ToLower() like '%' +  &distLocalDestinoNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTLOCALDESTINONOME' AND &DynamicFiltersOperator3 = 0 AND (not &distLocalDestinoNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestinoNome.ToLower() like &distLocalDestinoNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTLOCALDESTINONOME' AND &DynamicFiltersOperator3 = 1 AND (not &distLocalDestinoNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distReceber.ToLower() like &distReceber3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTRECEBER' AND (not &distReceber3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distCodigo >= &TFdistCodigo when not &TFdistCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distCodigo <= &TFdistCodigo_To when not &TFdistCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRemCodigo >= &TFdistRemCodigo when not &TFdistRemCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRemCodigo <= &TFdistRemCodigo_To when not &TFdistRemCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo.ToLower() like &TFdistPeriodo.ToLower() when &TFdistPeriodo_Sel.IsEmpty() AND (not &TFdistPeriodo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distPeriodo = &TFdistPeriodo_Sel when not &TFdistPeriodo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigemNome.ToLower() like &TFdistLocalOrigem.ToLower() when &TFdistLocalOrigem_Sel.IsEmpty() AND (not &TFdistLocalOrigem.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalOrigem = &TFdistLocalOrigem_Sel when not &TFdistLocalOrigem_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio >= &TFdistDataEnvio when not &TFdistDataEnvio.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataEnvio <= &TFdistDataEnvio_To when not &TFdistDataEnvio_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestinoNome.ToLower() like &TFdistLocalDestino.ToLower() when &TFdistLocalDestino_Sel.IsEmpty() AND (not &TFdistLocalDestino.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distLocalDestino = &TFdistLocalDestino_Sel when not &TFdistLocalDestino_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao >= &TFdistDataRecepcao when not &TFdistDataRecepcao.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distDataRecepcao <= &TFdistDataRecepcao_To when not &TFdistDataRecepcao_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRecebedor.ToLower() like &TFdistRecebedor.ToLower() when &TFdistRecebedor_Sel.IsEmpty() AND (not &TFdistRecebedor.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRecebedor = &TFdistRecebedor_Sel when not &TFdistRecebedor_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[rotaDescricao.ToLower() like &TFdistRotaCodigo.ToLower() when &TFdistRotaCodigo_Sel.IsEmpty() AND (not &TFdistRotaCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRotaCodigo = &TFdistRotaCodigo_Sel when not &TFdistRotaCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distReceber in &TFdistReceber_Sels when &TFdistReceber_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distStatus in &TFdistStatus_Sels when &TFdistStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataEnvio1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataEnvio1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataEnvio_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataEnvio_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataEnvio2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataEnvio2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataEnvio_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataEnvio_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataEnvio3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataEnvio3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataEnvio_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataEnvio_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistDataEnvio">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistDataEnvio</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistDataEnvio_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistDataEnvio_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistLocalOrigem">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistLocalOrigem</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistDataRecepcao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistDataRecepcao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistDataRecepcao_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistDataRecepcao_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistLocalDestino">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistLocalDestino</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataRecepcao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataRecepcao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataRecepcao_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataRecepcao_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalOrigem1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalOrigem1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalDestino1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalDestino1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataRecepcao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataRecepcao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataRecepcao_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataRecepcao_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalOrigem2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalOrigem2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalDestino2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalDestino2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataRecepcao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataRecepcao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distDataRecepcao_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distDataRecepcao_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distDataRecepcao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalOrigem3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalOrigem3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalDestino3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalDestino3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRecebedor">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRecebedor</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRecebedor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRecebedor_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRecebedor_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRecebedor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistLocalOrigem_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistLocalOrigem_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistLocalDestino_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistLocalDestino_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRotaCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRotaCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRotaCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRotaCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRotaCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRotaCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRotaCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRotaCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:rotaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRemCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRemCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRemCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRemCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRemCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRemCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRemCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRemCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRemCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRemCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRemCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRemCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRemCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRemCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRemCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRotaCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRotaCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distPeriodo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distPeriodo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distPeriodo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distPeriodo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distPeriodo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distPeriodo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistPeriodo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistPeriodo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistPeriodo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistPeriodo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalOrigemNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalOrigemNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalOrigemNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalDestinoNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalDestinoNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalDestinoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalOrigemNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalOrigemNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalOrigemNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalDestinoNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalDestinoNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalDestinoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalOrigemNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalOrigemNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalOrigemNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distLocalDestinoNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distLocalDestinoNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distLocalDestinoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distReceber1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distReceber1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distReceber</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distReceber2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distReceber2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distReceber</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distReceber3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distReceber3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distReceber</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistReceber_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistReceber_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distReceber</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distCodigo1</Name>
+        <Description>dist Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRemCodigo1</Name>
+        <Description>dist Rem Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataEnvio1</Name>
+        <Description>dist Data Envio1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataEnvio_To1</Name>
+        <Description>dist Data Envio_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataRecepcao1</Name>
+        <Description>dist Data Recepcao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataRecepcao_To1</Name>
+        <Description>dist Data Recepcao_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRotaCodigo1</Name>
+        <Description>dist Rota Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distPeriodo1</Name>
+        <Description>dist Periodo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distLocalOrigemNome1</Name>
+        <Description>dist Local Origem Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distLocalDestinoNome1</Name>
+        <Description>dist Local Destino Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distReceber1</Name>
+        <Description>dist Receber1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distCodigo2</Name>
+        <Description>dist Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRemCodigo2</Name>
+        <Description>dist Rem Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataEnvio2</Name>
+        <Description>dist Data Envio2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataEnvio_To2</Name>
+        <Description>dist Data Envio_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataRecepcao2</Name>
+        <Description>dist Data Recepcao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataRecepcao_To2</Name>
+        <Description>dist Data Recepcao_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRotaCodigo2</Name>
+        <Description>dist Rota Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distPeriodo2</Name>
+        <Description>dist Periodo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distLocalOrigemNome2</Name>
+        <Description>dist Local Origem Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distLocalDestinoNome2</Name>
+        <Description>dist Local Destino Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distReceber2</Name>
+        <Description>dist Receber2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distCodigo3</Name>
+        <Description>dist Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRemCodigo3</Name>
+        <Description>dist Rem Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataEnvio3</Name>
+        <Description>dist Data Envio3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataEnvio_To3</Name>
+        <Description>dist Data Envio_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataRecepcao3</Name>
+        <Description>dist Data Recepcao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distDataRecepcao_To3</Name>
+        <Description>dist Data Recepcao_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRotaCodigo3</Name>
+        <Description>dist Rota Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distPeriodo3</Name>
+        <Description>dist Periodo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distLocalOrigemNome3</Name>
+        <Description>dist Local Origem Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distLocalDestinoNome3</Name>
+        <Description>dist Local Destino Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distReceber3</Name>
+        <Description>dist Receber3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistCodigo</Name>
+        <Description>TFdist Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistCodigo_To</Name>
+        <Description>TFdist Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRemCodigo</Name>
+        <Description>TFdist Rem Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRemCodigo_To</Name>
+        <Description>TFdist Rem Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistPeriodo</Name>
+        <Description>TFdist Periodo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistPeriodo_Sel</Name>
+        <Description>TFdist Periodo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistLocalOrigem</Name>
+        <Description>TFdist Local Origem</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistLocalOrigem_Sel</Name>
+        <Description>TFdist Local Origem_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistDataEnvio</Name>
+        <Description>TFdist Data Envio</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistDataEnvio_To</Name>
+        <Description>TFdist Data Envio_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistLocalDestino</Name>
+        <Description>TFdist Local Destino</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistLocalDestino_Sel</Name>
+        <Description>TFdist Local Destino_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistDataRecepcao</Name>
+        <Description>TFdist Data Recepcao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistDataRecepcao_To</Name>
+        <Description>TFdist Data Recepcao_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRecebedor</Name>
+        <Description>TFdist Recebedor</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRecebedor_Sel</Name>
+        <Description>TFdist Recebedor_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRotaCodigo</Name>
+        <Description>TFdist Rota Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRotaCodigo_Sel</Name>
+        <Description>TFdist Rota Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistReceber_Sels</Name>
+        <Description>TFdist Receber_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistStatus_Sels</Name>
+        <Description>TFdist Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicaoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsdistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

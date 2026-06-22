@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="687d6d62-378b-4328-a31b-889b02268617" user="JORGE-AVELL\joadh" versionDate="2025-02-19T00:13:32.0000000Z" lastUpdate="2025-01-20T20:23:38.0000000Z" checksum="f4ca7f2e3ce01822be31888071dee113" fullyQualifiedName="DadosDiagnosticoNutricional" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f0f2bb66-4dbb-4083-b1c3-8fd1b53b39a0" name="DadosDiagnosticoNutricional" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Dados Diagnóstico Nutricional" parent="DataProviders" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[viewDiagNutricional_Structure
+{
+	Dados
+	Where diag_nutricional_Ano = &diag_nutricional_Ano
+	Where diag_nutricional_Escola = &diag_nutricional_Escola
+	{
+		diag_nutricional_Ano
+		diag_nutricional_Escola
+		diag_nutricional_NomeEscola
+		diag_nutricional_NumColeta
+		diag_nutricional_DataColeta
+		diag_nutricional_Aluno
+		diag_nutricional_AlunoNome
+		diag_nutricional_Nascto
+		diag_nutricional_Sexo
+		diag_nutricional_Anos
+		diag_nutricional_Meses
+		diag_nutricional_Altura
+		diag_nutricional_Peso
+		diag_nutricional_Circunferencia
+		diag_nutricional_IMC
+		diag_nutricional_DiagnosticoIMC
+	}
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&diag_nutricional_Ano,in:&diag_nutricional_Escola);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="diag_nutricional_Ano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_Ano</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Ano</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diag_nutricional_Escola">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_Escola</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Escola</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Escola</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>DadosDiagnosticoNutricional</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Dados Diagnóstico Nutricional</Value>
+    </Property>
+    <Property>
+      <Name>idINFER_SDT</Name>
+      <Value>idINFER_STRUCTURE_IF_SDT_IS_DYNAMIC</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-viewDiagNutricional_Structure</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

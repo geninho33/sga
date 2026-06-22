@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-09-18T05:35:35.0000000Z" lastUpdate="2025-09-18T05:17:42.0000000Z" checksum="7dc2bf9db8bcc31a2131fe19315d294e" fullyQualifiedName="PRCDSalvarMapa" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="9fe00408-98e3-4e09-8c6a-617d11224e05" name="PRCDSalvarMapa" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Salvar Dados no Mapa" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+// preparando as variaveis para lançar na auditoria
+&AdmLogCha     = &prefCodigo.ToFormattedString() + '-'+  &mapaUeLocCodigo.ToFormattedString() +'-'+ &mapaUeProdCodigo.ToFormattedString()
+&prodDescricao = &mapaUeProdCodigo.ToFormattedString() + ' - ' +   find(prodDescricao,prefCodigo = &prefCodigo and prodCodigo = &mapaUeProdCodigo, '' )
+&locDescricao  = &mapaUeLocCodigo.ToFormattedString() + ' - ' +   find( locDescricao,prefCodigo = &prefCodigo and locCodigo = &mapaUeLocCodigo, '' )
+&AdmLogDad     = 'UE Codigo : ' + &locDescricao + ' - Produto : ' + &prodDescricao + ' - Qtde Atual ' + &mapaUeQuantidade.ToString()
+
+&itens = 0
+for each
+	where prefCodigo       = &prefCodigo
+	where mapaUeData       = &mapaUeData
+    where mapaUeLocCodigo  = &mapaUeLocCodigo
+	where mapaUeUserName   = 'IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+    where mapaUeProdCodigo = &mapaUeProdCodigo
+		  if mapaUeQuantidade <> &mapaUeQuantidade or mapaUeObs <> &mapaUeObs
+			 if mapaUeQuantidade <> &mapaUeQuantidade
+				PRCDAtualizarEstoqueMapaUE(&prefCodigo,&mapaUeLocCodigo,&mapaUeProdCodigo,mapaUeQuantidade,'E')
+			 endif
+			 mapaUeObs           = &mapaUeObs
+			 mapaUeDataAlteracao = serverNow()
+			 mapaUeUserName      = 'IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+			 if mapaUeQuantidade <> &mapaUeQuantidade		    
+				&AdmLogDad      += ' - Qtde Anterior: ' + mapaUeQuantidade.ToString()
+				mapaUeQuantidade  = &mapaUeQuantidade
+				mapaUeSaldoAntes  = PRCDBuscarSaldoProdutoUE(&prefCodigo,&mapaUeProdCodigo,&mapaUeLocCodigo) 
+				mapaUeSaldoDepois = &mapaUeQuantidade + PRCDBuscarSaldoProdutoUE(&prefCodigo,&mapaUeProdCodigo,&mapaUeLocCodigo) 
+				PRCDAtualizarEstoqueMapaUE(&prefCodigo,&mapaUeLocCodigo,&mapaUeProdCodigo,&mapaUeQuantidade,'S')
+			 endif
+			 &itens =1
+		  endif
+   when none
+	  if &mapaUeQuantidade <> 0
+		  new
+			  prefCodigo          = &prefCodigo
+			  mapaUeCodigo        = PRCDGerarNovoCodigo('mapaUE')
+			  mapaUeData          = &mapaUeData
+		      mapaUeLocCodigo     = &mapaUeLocCodigo
+		      mapaUeProdCodigo    = &mapaUeProdCodigo
+		      mapaUeObs           = &mapaUeObs
+			  mapaUeQuantidade    = &mapaUeQuantidade
+			  mapaUeDataAlteracao = serverNow()
+			  mapaUeUserName      = 'IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+			  mapaUeDataCadastro  = serverNow()			  
+			  mapaUeSaldoAntes    = PRCDBuscarSaldoProdutoUE(&prefCodigo,&mapaUeProdCodigo,&mapaUeLocCodigo) 
+			  PRCDAtualizarEstoqueMapaUE(&prefCodigo,&mapaUeLocCodigo,&mapaUeProdCodigo,&mapaUeQuantidade,'S')
+			  mapaUeSaldoDepois   = PRCDBuscarSaldoProdutoUE(&prefCodigo,&mapaUeProdCodigo,&mapaUeLocCodigo)
+			  &AdmLogDad          += ' - Qtde Anterior: 0,00'
+		  endnew
+		  &itens = 1
+	  endif
+endFor
+
+PRC_AliEscGravaLog(&AdmLogCha, &Pgmname, &Mode, &AdmLogDad)
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo,in:&mapaUeData,in:&mapaUeLocCodigo,in:&mapaUeProdCodigo,in:&mapaUeQuantidade,in:&mapaUeObs,out:&itens);
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="mapaUeData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>mapaUeData</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>mapa Ue Data</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:mapaUeData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="mapaUeLocCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>mapaUeLocCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>mapa Ue Loc Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:mapaUeLocCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="mapaUeProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>mapaUeProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>mapa Ue Prod Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:mapaUeProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="mapaUeQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>mapaUeQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>mapa Ue Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:mapaUeQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="mapaUeObs">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>mapaUeObs</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>mapa Ue Obs</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:mapaUeObs</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="itens">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>itens</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogDad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogDad</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Dados</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogDad</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogCha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogCha</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Chave</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogCha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Local Nome</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDSalvarMapa</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Salvar Dados no Mapa</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

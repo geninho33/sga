@@ -1,0 +1,1912 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="41a15ceb-7c94-4da6-9d39-7e991a197d28" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-01-16T15:44:17.0000000Z" lastUpdate="2025-12-09T02:37:27.0000000Z" checksum="895091f1c423ccb72136d30c705e2384" fullyQualifiedName="RanchoWizardPlanilhaPerCapta2" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="9a8f49c7-d787-4fd5-901b-f6819d7c0f2d" name="RanchoWizardPlanilhaPerCapta2" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Rancho Wizard Planilha Per Capta2" parent="WorkWithPlusRanchoWizardPlanilha" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell cellClass="CellMarginTop"><table controlName="TableGrid" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableFiltros" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMergedUsaCardapio" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;UsaCardapio" labelPosition="None" class="AttributeRealWidthCheckBox" /></cell><cell><textblock controlName="UsaCardapio_RightText" caption="Buscar dados cardápio" class="DataDescription" /></cell></row></table></cell><cell cellControlName="PermiteSaldoNegativo_Cell"><table controlName="TableMergedPermiteSaldoNegativo" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;PermiteSaldoNegativo" labelPosition="None" class="AttributeRealWidthCheckBox" /></cell><cell><textblock controlName="PermiteSaldoNegativo_RightText" caption="Permite saldo negativo" class="DataDescription" /></cell></row></table></cell></row></table></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="GridTableWithTotalizers" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithTotalizer GridWithBorderColor WorkWith"><item attribute="&amp;prodDescricao" titleExp="Alimento" class="MinWidth-25perc" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario1PerCapta" titleExp="Percapta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario1Oferta" titleExp="Oferta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario1Alunos" titleExp="Alunos" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;30&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario2PerCapta" titleExp="Percapta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario2Oferta" titleExp="Oferta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario2Alunos" titleExp="Alunos" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;30&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;CrechePerCapta" titleExp="Percapta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;CrecheOferta" titleExp="Oferta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;CrecheAlunos" titleExp="Alunos" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;30&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EmebPerCapta" titleExp="Percapta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EmebOferta" titleExp="Oferta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EmebAlunos" titleExp="Alunos" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;30&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;IntegralPerCapta" titleExp="Percapta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;IntegralOferta" titleExp="Oferta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;IntegralAlunos" titleExp="Alunos" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;30&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;FuncionarioPerCapta" titleExp="Percapta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;FuncionarioOferta" titleExp="Oferta" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;FuncionarioPessoas" titleExp="Pessoas" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColAutoResize&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColWidth&lt;/Name&gt;&lt;Value&gt;30&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;QtdeEmbalagem" titleExp="Qtde Emb." class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodSaldo" titleExp="Atual" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Quantidade" titleExp="Qtde" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodSaldoFinal" titleExp="Saldo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;LocaisIgnorar" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Locais a ignorar&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;uniDescricao" titleExp="uni Descricao" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodPesoConsumo" titleExp="prod Peso Consumo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xBercario1Oferta" titleExp="Oferta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xBercario2Oferta" titleExp="Oferta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xCrecheOferta" titleExp="Oferta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xEmebOferta" titleExp="Oferta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xIntegralOferta" titleExp="Oferta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xFuncionarioOferta" titleExp="Oferta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;locCodigoCollectionJson" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row rowClass="Invisible"><cell><table controlName="GridTableTotalizer" class="TableTotalizerAl" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell /><cell /><cell><data attribute="&amp;TotValueBercario1Oferta" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell /><cell /><cell><data attribute="&amp;TotValueBercario2Oferta" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell /><cell /><cell><data attribute="&amp;TotValueCrecheOferta" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell /><cell /><cell><data attribute="&amp;TotValueEmebOferta" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell /><cell /><cell><data attribute="&amp;TotValueIntegralOferta" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell /><cell /><cell><data attribute="&amp;TotValueFuncionarioOferta" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell /><cell /><cell /><cell><data attribute="&amp;TotValueQuantidade" labelPosition="None" readonly="True" class="AttributeRealWidthTotalizer" /></cell><cell /><cell /><cell /><cell /><cell /><cell /><cell /><cell /><cell /><cell /><cell /><cell /></row></table></cell></row></table></cell></row></table></cell></row><row><cell cellClass="CellWizardActions"><table controlName="TableActions" tableType="Flex" flexWrap="Wrap" justifyContent="Space Between"><row><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardPrevious&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;BeforeIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Event&lt;/Name&gt;&lt;Value&gt;'WizardPrevious'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GXM_previous&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;BtnDefault ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardNext&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AfterIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GXM_next&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;Button ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GridTitlesCategories ControlName="Grid_TitlesCategories" GridTitlesCategories=";Berçário 1;Berçário 1;Berçário 1;Berçário 2;Berçário 2;Berçário 2;Creche;Creche;Creche;EMEB;EMEB;EMEB;Integral;Integral;Integral;Funcionários;Funcionários;Funcionários;;Estoque;Estoque;Estoque;;;;;;;;;;;" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasCategories="True" FixedColumns="L;;;;;;;;;;;;;;;;;;;;;;R;;;;;;;;;;;" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&WebSessionKey, in:&PreviousStep, in:&GoingBack);
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+    cache.ClearAllCaches()
+	
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'LoadVariablesFromWizardData'
+
+	Do 'AttributesSecurityCode'
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	Grid.Rows = 0
+	Grid_TitlesCategories.GridInternalName = Grid.InternalName
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	&UsaCardapio = true
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prodSaldoFinal.ColumnHeaderClass = !'WWColumn'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+	&LocaisIgnorar = !'<i class="fas fa-store-alt-slash"></i>'
+
+	&prodSaldoFinal.ColumnClass = iif(&prodSaldoFinal < 0, !'WWColumn WWColumnTag WWColumnTagDanger WWColumnTagDangerSingleCell', !'WWColumn')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	&prodSaldoFinal.SetEmpty()
+
+	&TotBercario1Oferta.SetEmpty()
+	&TotBercario2Oferta.SetEmpty()
+	&TotCrecheOferta.SetEmpty()
+	&TotEmebOferta.SetEmpty()
+	&TotIntegralOferta.SetEmpty()
+	&TotFuncionarioOferta.SetEmpty()
+	&TotQuantidade.SetEmpty()
+
+	for &GridAlimentosItem in &WizardData.Alimentos.GridAlimentos
+
+		&prodCodigo 		= &GridAlimentosItem.prodCodigo
+		&prodDescricao		= &GridAlimentosItem.prodDescricao
+
+		&prodPesoConsumo	= &GridAlimentosItem.QtdeEmbalagem
+		&QtdeEmbalagem 		= &GridAlimentosItem.prodPesoConsumo
+		//msg(&prodDescricao + ' - ' + &prodPesoConsumo.ToString())
+
+		&prodSaldo			= &GridAlimentosItem.prodSaldo
+		&uniDescricao		= &GridAlimentosItem.uniDescricao
+
+		&Bercario1PerCapta.SetEmpty()
+		&Bercario1Oferta.SetEmpty()
+		//&Bercario1Alunos.SetEmpty()
+
+		&Bercario2PerCapta.SetEmpty()
+		&Bercario2Oferta.SetEmpty()
+		//&Bercario1Alunos.SetEmpty()
+
+		&CrechePerCapta.SetEmpty()
+		&CrecheOferta.SetEmpty()
+		//&CrecheAlunos.SetEmpty()
+
+		&EmebPerCapta.SetEmpty()
+		&EmebOferta.SetEmpty()
+		//&EmebAlunos.SetEmpty()
+
+		&IntegralPerCapta.SetEmpty()
+		&IntegralOferta.SetEmpty()
+		//&IntegralAlunos.SetEmpty()
+
+		&FuncionarioPerCapta.SetEmpty()
+		&FuncionarioOferta.SetEmpty()
+		//&FuncionarioPessoas.SetEmpty()
+
+		&prodSaldoFinal.SetEmpty()
+		&locCodigoCollectionJson.SetEmpty()
+
+		/* Busca Percapta e Oferta dos cardápios */
+		&PropertiesCollection = BuscaPercaptaOfertaDosCardapios(&prefCodigo,&WizardData.Periodo.DataInicial,&WizardData.Periodo.DataFinal,&prodCodigo)
+
+		for &PerCaptaGridItem in &WizardData.PerCapta2.Grid
+
+			if &PerCaptaGridItem.prodCodigo = &prodCodigo
+				&Bercario1PerCapta	 = &PerCaptaGridItem.Bercario1PerCapta
+				&Bercario1Oferta	 = &PerCaptaGridItem.Bercario1Oferta
+
+				&Bercario2PerCapta	 = &PerCaptaGridItem.Bercario2PerCapta
+				&Bercario2Oferta	 = &PerCaptaGridItem.Bercario2Oferta
+
+				&CrechePerCapta		 = &PerCaptaGridItem.CrechePerCapta
+				&CrecheOferta		 = &PerCaptaGridItem.CrecheOferta
+
+				&EmebPerCapta		 = &PerCaptaGridItem.EmebPerCapta
+				&EmebOferta			 = &PerCaptaGridItem.EmebOferta
+
+				&IntegralPerCapta	 = &PerCaptaGridItem.IntegralPerCapta
+				&IntegralOferta		 = &PerCaptaGridItem.IntegralOferta
+
+				&FuncionarioPerCapta = &PerCaptaGridItem.FuncionarioPerCapta
+				&FuncionarioOferta	 = &PerCaptaGridItem.FuncionarioOferta
+
+				&locCodigoCollectionJson = &PerCaptaGridItem.locCodigoCollectionJson
+
+				Exit
+			endif
+
+		endfor
+
+		if &Bercario1PerCapta.IsEmpty()
+			&AreEnsCodigo = 1
+			do 'BuscaValorPerCapta'
+			&Bercario1PerCapta	= &Valor
+			&Bercario1Oferta	= &Oferta
+		endif
+
+		if &Bercario2PerCapta.IsEmpty()
+			&AreEnsCodigo = 2
+			do 'BuscaValorPerCapta'
+			&Bercario2PerCapta	= &Valor
+			&Bercario2Oferta	= &Oferta
+		endif
+
+		if &CrechePerCapta.IsEmpty()
+			&AreEnsCodigo = 3
+			do 'BuscaValorPerCapta'
+			&CrechePerCapta		= &Valor
+			&CrecheOferta		= &Oferta
+		endif
+
+		if &EmebPerCapta.IsEmpty()
+			&AreEnsCodigo = 4
+			do 'BuscaValorPerCapta'
+			&EmebPerCapta		= &Valor
+			&EmebOferta			= &Oferta
+		endif
+
+		if &IntegralPerCapta.IsEmpty()
+			&AreEnsCodigo = 5
+			do 'BuscaValorPerCapta'
+			&IntegralPerCapta	= &Valor
+			&IntegralOferta		= &Oferta
+		endif
+
+		if &FuncionarioPerCapta.IsEmpty()
+			&AreEnsCodigo = 99999997
+			do 'BuscaValorPerCapta'
+			&FuncionarioPerCapta = &Valor
+			&FuncionarioOferta	 = &Oferta
+		endif
+
+		do 'CalculaTotaisDaLinha'
+
+		// Guarda valores anteriores
+		&xBercario1Oferta 	= &Bercario1Oferta
+		&xBercario2Oferta 	= &Bercario2Oferta
+		&xCrecheOferta	  	= &CrecheOferta
+		&xEmebOferta	  	= &EmebOferta
+		&xIntegralOferta  	= &IntegralOferta
+		&xFuncionarioOferta = &FuncionarioOferta
+
+		// Acumula totais da coluna
+		&TotBercario1Oferta 	+= &Bercario1Oferta
+		&TotBercario2Oferta 	+= &Bercario2Oferta
+		&TotCrecheOferta		+= &CrecheOferta
+		&TotEmebOferta			+= &EmebOferta
+		&TotIntegralOferta		+= &IntegralOferta
+		&TotFuncionarioOferta 	+= &FuncionarioOferta
+		&TotQuantidade			+= &Quantidade
+
+		&Bercario1Alunos 	= &WizardData.Pessoas2.TotBercario1
+		&Bercario2Alunos 	= &WizardData.Pessoas2.TotBercario2
+		&CrecheAlunos	 	= &WizardData.Pessoas2.TotCreche
+		&EmebAlunos		 	= &WizardData.Pessoas2.TotEmeb
+		&IntegralAlunos	 	= &WizardData.Pessoas2.TotIntegral
+		&FuncionarioPessoas = &WizardData.Pessoas2.TotFuncionarios
+
+		Load
+	endfor
+
+	/* Carrega totais nas colunas */
+	&TotValueBercario1Oferta 	= &TotBercario1Oferta.ToFormattedString()
+	&TotValueBercario2Oferta 	= &TotBercario2Oferta.ToFormattedString()
+	&TotValueCrecheOferta	 	= &TotCrecheOferta.ToFormattedString()
+	&TotValueEmebOferta		 	= &TotEmebOferta.ToFormattedString()
+	&TotValueIntegralOferta	 	= &TotIntegralOferta.ToFormattedString()
+	&TotValueFuncionarioOferta 	= &TotFuncionarioOferta.ToFormattedString()
+	&TotValueQuantidade		 	= &TotQuantidade.ToFormattedString()
+
+EndEvent
+
+Event Enter
+
+	msg("<#CLEAR#>")
+
+	// Verifica se foram informadas Percaptas para todas as áreas de ensino
+	&HasValidationErrors = false
+	do 'ValidaDadosGrid'
+
+	if &Messages.Count > 0 and not &PermiteSaldoNegativo
+		&HasValidationErrors = true
+		for &Message in &Messages
+			if &Message.Id = !'SALDONEGATIVO'
+				Msg(DVMessageGetBasicNotificationMsg('', &Message.Description, DVMessageType.error, '', DVMessageBoolean.True, ''))
+			else
+				Msg(DVMessageGetBasicNotificationMsg('', &Message.Description, DVMessageType.error, !'#' + &Message.Id, DVMessageBoolean.True, ''))
+			endif
+		endfor
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If not &HasValidationErrors
+		Do 'SaveVariablesToWizardData'
+		RanchoWizardPlanilha(!'PerCapta2', !'Guias', false)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'WizardPrevious'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'SaveVariablesToWizardData'
+	RanchoWizardPlanilha(!'PerCapta2', !'Pessoas2', true)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadVariablesFromWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: XmlFileToWizardData
+	&WizardData.FromXML(FileXmlToWizardData(&WebSessionKey))
+	&WebSession.Set(&WebSessionKey,&WizardData.ToJson())
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&UsaCardapio = &WizardData.PerCapta2.UsaCardapio
+	&PermiteSaldoNegativo = &WizardData.PerCapta2.PermiteSaldoNegativo
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveVariablesToWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&WizardData.PerCapta2.UsaCardapio = &UsaCardapio
+	&WizardData.PerCapta2.PermiteSaldoNegativo = &PermiteSaldoNegativo
+	&WizardData.PerCapta2.Grid.Clear()
+	For Each Line in Grid
+		&GridItem = new()
+		&GridItem.prodDescricao = &prodDescricao
+		&GridItem.Bercario1PerCapta = &Bercario1PerCapta
+		&GridItem.Bercario1Oferta = &Bercario1Oferta
+		&GridItem.Bercario1Alunos = &Bercario1Alunos
+		&GridItem.Bercario2PerCapta = &Bercario2PerCapta
+		&GridItem.Bercario2Oferta = &Bercario2Oferta
+		&GridItem.Bercario2Alunos = &Bercario2Alunos
+		&GridItem.CrechePerCapta = &CrechePerCapta
+		&GridItem.CrecheOferta = &CrecheOferta
+		&GridItem.CrecheAlunos = &CrecheAlunos
+		&GridItem.EmebPerCapta = &EmebPerCapta
+		&GridItem.EmebOferta = &EmebOferta
+		&GridItem.EmebAlunos = &EmebAlunos
+		&GridItem.IntegralPerCapta = &IntegralPerCapta
+		&GridItem.IntegralOferta = &IntegralOferta
+		&GridItem.IntegralAlunos = &IntegralAlunos
+		&GridItem.FuncionarioPerCapta = &FuncionarioPerCapta
+		&GridItem.FuncionarioOferta = &FuncionarioOferta
+		&GridItem.FuncionarioPessoas = &FuncionarioPessoas
+		&GridItem.QtdeEmbalagem = &QtdeEmbalagem
+		&GridItem.prodSaldo = &prodSaldo
+		&GridItem.Quantidade = &Quantidade
+		&GridItem.prodSaldoFinal = &prodSaldoFinal
+		&GridItem.prodCodigo = &prodCodigo
+		&GridItem.uniDescricao = &uniDescricao
+		&GridItem.prodPesoConsumo = &prodPesoConsumo
+		&GridItem.xBercario1Oferta = &xBercario1Oferta
+		&GridItem.xBercario2Oferta = &xBercario2Oferta
+		&GridItem.xCrecheOferta = &xCrecheOferta
+		&GridItem.xEmebOferta = &xEmebOferta
+		&GridItem.xIntegralOferta = &xIntegralOferta
+		&GridItem.xFuncionarioOferta = &xFuncionarioOferta
+		&GridItem.locCodigoCollectionJson = &locCodigoCollectionJson
+
+		&WizardData.PerCapta2.Grid.Add(&GridItem)
+	EndFor
+	&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+
+	//Code block: WizardDataToXmlFile
+	WizardDataToFileXML(&WebSessionKey,&WizardData.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If Not SecGAMIsAuthByFunctionalityKey(!'Rancho_PermiteSaldoNegativo')
+		&PermiteSaldoNegativo.Visible = False
+		PermiteSaldoNegativo_Cell.Class = !'Invisible'
+	Else
+		PermiteSaldoNegativo_Cell.Class = !'col-xs-12 col-sm-6'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event GlobalEvents.ForceUpdateWizardData
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: ForceUpdateWizardDataGlobalEvent
+	do 'SaveVariablesToWizardData'
+	do 'LoadVariablesFromWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &LocaisIgnorar.Click
+
+	//log.Info(&locCodigoCollectionJson,'locCodigoCollectionJson-Click')
+	LocaisIgnorar.Popup(&WebSessionKey,&locCodigoCollectionJson,&Bercario1PerCapta,&Bercario1Oferta,&Bercario2PerCapta,&Bercario2Oferta,&CrechePerCapta,&CrecheOferta,&EmebPerCapta,&EmebOferta,&IntegralPerCapta,&IntegralOferta,&FuncionarioPerCapta,&FuncionarioOferta,&prodPesoConsumo,&prodDescricao)
+
+EndEvent
+
+Event &Bercario1PerCapta.ControlValueChanged
+
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &Bercario1Oferta.ControlValueChanged
+
+	&Diferenca = (&Bercario1Oferta - &xBercario1Oferta)
+	&TotBercario1Oferta += &Diferenca
+	&TotValueBercario1Oferta = &TotBercario1Oferta.ToFormattedString()
+	&xBercario1Oferta = &Bercario1Oferta
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &Bercario2PerCapta.ControlValueChanged
+
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &Bercario2Oferta.ControlValueChanged
+
+	&Diferenca = (&Bercario2Oferta - &xBercario2Oferta)
+	&TotBercario2Oferta += &Diferenca
+	&TotValueBercario2Oferta = &TotBercario2Oferta.ToFormattedString()
+	&xBercario2Oferta = &Bercario2Oferta
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &CrechePerCapta.ControlValueChanged
+
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &CrecheOferta.ControlValueChanged
+
+	&Diferenca = (&CrecheOferta - &xCrecheOferta)
+	&TotCrecheOferta += &Diferenca
+	&TotValueCrecheOferta = &TotCrecheOferta.ToFormattedString()
+	&xCrecheOferta = &CrecheOferta
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &EmebPerCapta.ControlValueChanged
+
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &EmebOferta.ControlValueChanged
+
+	&Diferenca = (&EmebOferta - &xEmebOferta)
+	&TotEmebOferta += &Diferenca
+	&TotValueEmebOferta = &TotEmebOferta.ToFormattedString()
+	&xEmebOferta = &EmebOferta
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &IntegralPerCapta.ControlValueChanged
+
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &IntegralOferta.ControlValueChanged
+
+	&Diferenca = (&IntegralOferta - &xIntegralOferta)
+	&TotIntegralOferta += &Diferenca
+	&TotValueIntegralOferta = &TotIntegralOferta.ToFormattedString()
+	&xIntegralOferta = &IntegralOferta
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &FuncionarioPerCapta.ControlValueChanged
+
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event &FuncionarioOferta.ControlValueChanged
+
+	&Diferenca = (&FuncionarioOferta - &xFuncionarioOferta)
+	&TotFuncionarioOferta += &Diferenca
+	&TotValueFuncionarioOferta = &TotFuncionarioOferta.ToFormattedString()
+	&xFuncionarioOferta = &FuncionarioOferta
+	do 'CalculaTotaisDaLinha'
+
+EndEvent
+
+Event GlobalEvents.IgnorarDados(&Aux_locCodigoCollectionJson)
+
+	&locCodigoCollectionJson = &Aux_locCodigoCollectionJson
+	do 'CalculaTotaisDaLinha'
+	//log.Info(&locCodigoCollectionJson,'locCodigoCollectionJson.GlobalEvents')
+
+EndEvent
+
+Sub 'BuscaValorPerCapta'
+
+	&Valor.SetEmpty()
+	&Oferta.SetEmpty()
+
+	/* Busca percapta e Oferta nos dados dos cardápios */
+	if &UsaCardapio
+		for &Properties in &PropertiesCollection
+			if &Properties.Get(!'AreEnsCodigo').ToNumeric() = &AreEnsCodigo
+				&Valor = &Properties.Get(!'Percapta').ToNumeric()
+				&Oferta = &Properties.Get(!'Oferta').ToNumeric()
+				Exit
+			endif
+		endfor
+	endif
+
+	/* Procura em meses anteriores caso não ache no mês informado */
+	if not &UsaCardapio
+		For each Rancho.AreasEnsino.PerCapta
+			order prefCodigo,RanchoAno,(RanchoMes),RanchoAreasEnsinoCodigo,prodCodigo
+			Where prefCodigo 				= &prefCodigo
+			Where RanchoAno 				= &WizardData.Periodo.Ano
+			Where RanchoMes					<= &WizardData.Periodo.Mes
+			Where RanchoAreasEnsinoCodigo 	= &AreEnsCodigo
+			Where prodCodigo 			  	= &prodCodigo
+			Where RanchoAreasEnsinoPerCaptaValor > 0
+
+			&Valor  = RanchoAreasEnsinoPerCaptaValor
+			&Oferta = RanchoAreasEnsinoPerCaptaOferta
+			Exit
+		Endfor
+	endif
+
+EndSub
+
+Sub 'CalculaQuantidade'
+
+	&Calculo = 0
+	&locCodigoCollection.FromJson(&locCodigoCollectionJson)
+
+	for &PessoasGridItem in &WizardData.Pessoas2.Grid
+
+		/* Verifica se foram selecionados Locais a serem ignorados */
+		if (&locCodigoCollection.Count = 0) or (&locCodigoCollection.IndexOf(&PessoasGridItem.locCodigo) = 0)
+
+			&ValorPerCapta  = ((&Bercario1PerCapta * &PessoasGridItem.Bercario1) * &Bercario1Oferta)
+			&ValorPerCapta += ((&Bercario2PerCapta * &PessoasGridItem.Bercario2) * &Bercario2Oferta)
+			&ValorPerCapta += ((&CrechePerCapta * &PessoasGridItem.Creche) * &CrecheOferta)
+			&ValorPerCapta += ((&EmebPerCapta * &PessoasGridItem.Emeb) * &EmebOferta)
+			&ValorPerCapta += ((&IntegralPerCapta * &PessoasGridItem.Integral) * &IntegralOferta)
+			&ValorPerCapta += ((&FuncionarioPerCapta * &PessoasGridItem.Funcionarios) * &FuncionarioOferta)
+
+			if &ValorPerCapta > 0
+				//msg('&prodPesoConsumo: ' + &prodPesoConsumo.ToString())
+
+				&CalculoLocal = round(((&ValorPerCapta / &prodPesoConsumo) + 0.49),0)
+				//msg('&CalculoLocal: ' + &CalculoLocal.ToString() + ' - VPercapta: ' + &ValorPerCapta.ToString() + ' - PConsumo: ' + &prodPesoConsumo.ToString())
+				if &CalculoLocal <= 0
+					&CalculoLocal = 1
+				endif
+
+				&Calculo += &CalculoLocal
+			endif
+
+		endif
+
+	endfor
+
+EndSub
+
+Sub 'CalculaTotaisDaLinha'
+
+	/* Calcula necessidade */
+	do 'CalculaQuantidade'
+	&Quantidade = &Calculo
+
+	/* Saldo final */
+	&prodSaldoFinal = &prodSaldo - &Quantidade
+
+	/* Popover e Conditional Formating*/
+	&prodSaldoFinal.ColumnClass = iif(&prodSaldoFinal < 0, !'WWColumn WWColumnTag WWColumnTagDanger WWColumnTagDangerSingleCell', !'WWColumn')
+
+EndSub
+
+Sub 'ValidaDadosGrid'
+
+	&Messages = new()
+	For Each Line in Grid
+		// Valida Per Capta
+		if  (&Bercario1PerCapta = 0 and &Bercario1Oferta <> 0)
+			&Message.Type = MessageTypes.Error
+			&Message.Description = 'Falta Percapta'
+			&Message.Id = &Bercario1PerCapta.InternalName
+			&Messages.Add(&Message)
+		endif
+		if  (&Bercario2PerCapta = 0 and &Bercario2Oferta <> 0)
+			&Message.Type = MessageTypes.Error
+			&Message.Description = 'Falta Percapta'
+			&Message.Id = &Bercario2PerCapta.InternalName
+			&Messages.Add(&Message)
+		endif
+		if  (&CrechePerCapta = 0 and &CrecheOferta <> 0)
+			&Message.Type = MessageTypes.Error
+			&Message.Description = 'Falta Percapta'
+			&Message.Id = &CrechePerCapta.InternalName
+			&Messages.Add(&Message)
+		endif
+		if  (&EmebPerCapta = 0 and &EmebOferta <> 0)
+			&Message.Type = MessageTypes.Error
+			&Message.Description = 'Falta Percapta'
+			&Message.Id = &EmebPerCapta.InternalName
+			&Messages.Add(&Message)
+		endif
+		if  (&IntegralPerCapta = 0 and &IntegralOferta <> 0)
+			&Message.Type = MessageTypes.Error
+			&Message.Description = 'Falta Percapta'
+			&Message.Id = &IntegralPerCapta.InternalName
+			&Messages.Add(&Message)
+		endif
+		if  (&FuncionarioPerCapta = 0 and &FuncionarioOferta <> 0)
+			&Message.Type = MessageTypes.Error
+			&Message.Description = 'Falta Percapta'
+			&Message.Id = &FuncionarioPerCapta.InternalName
+			&Messages.Add(&Message)
+		endif
+
+		// Valida saldo negativo
+		if  &prodSaldoFinal < 0
+			&Message.Type = MessageTypes.Error
+			&Message.Description = 'Existem produtos com previsão de saldo negativo.'
+			&Message.Id = !'SALDONEGATIVO'
+			if &Messages.IndexOf(&Message) = 0
+				&Messages.Add(&Message)
+			endif
+		endif
+	Endfor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área de Ensino</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Aux_locCodigoCollectionJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Aux_locCodigoCollectionJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario1Alunos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario1Alunos</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario1Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario1Oferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario1PerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario1PerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario2Alunos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario2Alunos</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario2Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario2Oferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario2PerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario2PerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Calculo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Calculo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CalculoLocal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CalculoLocal</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CrecheAlunos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CrecheAlunos</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CrecheOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CrecheOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CrechePerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CrechePerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Diferenca">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Diferenca</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EmebAlunos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EmebAlunos</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EmebOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EmebOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EmebPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EmebPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FuncionarioOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FuncionarioOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FuncionarioPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FuncionarioPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FuncionarioPessoas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FuncionarioPessoas</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GoingBack">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GoingBack</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAlimentosItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAlimentosItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Alimentos.GridAlimentosItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.PerCapta2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HasValidationErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HasValidationErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IntegralAlunos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IntegralAlunos</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IntegralOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IntegralOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IntegralPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IntegralPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="LocaisIgnorar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>LocaisIgnorar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigoCollectionJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigoCollectionJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Messages">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Messages</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Oferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PerCaptaGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PerCaptaGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.PerCapta2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PessoasGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PessoasGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Pessoas2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PreviousStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PreviousStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodPesoConsumo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodPesoConsumo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodPesoConsumo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodSaldo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodSaldo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodSaldo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodSaldoFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodSaldoFinal</Value>
+        </Property>
+        <Property>
+          <Name>EmptyAsNull</Name>
+          <Value>Yes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Numeric</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>12</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>12</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>Signed</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_START</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_STEP</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_FORREPLICATION</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_SHORT</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value />
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Properties">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Properties</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PropertiesCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PropertiesCollection</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="QtdeEmbalagem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>QtdeEmbalagem</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>3</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>3</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Quantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotBercario1Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotBercario1Oferta</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotBercario2Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotBercario2Oferta</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotCrecheOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotCrecheOferta</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotEmebOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotEmebOferta</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotFuncionarioOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotFuncionarioOferta</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotIntegralOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotIntegralOferta</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZZZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueBercario1Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueBercario1Oferta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueBercario2Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueBercario2Oferta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueCrecheOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueCrecheOferta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueEmebOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueEmebOferta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueFuncionarioOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueFuncionarioOferta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueIntegralOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueIntegralOferta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="uniDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>uniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UsaCardapio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UsaCardapio</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Valor">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Valor</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaValor</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValorPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValorPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSessionKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSessionKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WizardData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WizardData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xBercario1Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xBercario1Oferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xBercario2Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xBercario2Oferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xCrecheOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xCrecheOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xEmebOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xEmebOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xFuncionarioOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xFuncionarioOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xIntegralOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xIntegralOferta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:RanchoAreasEnsinoPerCaptaOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CurrentStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CurrentStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PermiteSaldoNegativo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PermiteSaldoNegativo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RanchoWizardPlanilhaPerCapta2</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>KEY_ENTER</Name>
+      <Value>N</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusRanchoWizardPlanilha</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/WPRoot[1]/steps/step[@Name="PerCapta2"]</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>WizardStep</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

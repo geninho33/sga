@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-07-15T03:33:11.0000000Z" lastUpdate="2025-07-15T03:19:34.0000000Z" checksum="6921fdbd466ef4745d6c4f1b9f628aed" fullyQualifiedName="WPApuracaoEntradaSaidaProdutos" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="81e80a83-82ec-4c09-874f-5d63d78d350d" name="WPApuracaoEntradaSaidaProdutos" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Apuração de Entrada e Saida de Produtos" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]" /></cell></row><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_UnnamedTable1&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value /&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]" containerSlotName="UnnamedTable1"><row><cell><group controlName="UnnamedGroup3" caption="Informe as opções abaixo" class="Group"><table controlName="UnnamedTable2" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{},{&quot;width&quot;:25,&quot;label&quot;:17},{&quot;label&quot;:17}]]}]"><row><cell><data attribute="&amp;classificacao" labelCaption="Classificação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Perecíveis:2,Semi-perecíveis:4,Não perecíveis:3&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><data attribute="&amp;prodCodigo" labelCaption="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;prodCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;prodDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prodStatus = 'A' and prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todos&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell hAlign="Right"><data attribute="&amp;dtInicial" labelCaption="De " class="AttributeRealWidthDate" /></cell><cell><data attribute="&amp;dtFinal" labelCaption="   a       " class="AttributeRealWidthDate" /></cell><cell><action controlName="BtnbtnProcessar" onClickEvent="'DobtnProcessar'" caption="Processar" /></cell></row></table></group></cell></row><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cpResultadoBusca&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Resultado do Processamento&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cpResultadoBusca" tableType="Responsive" responsiveSizes="[]" containerSlotName="cpResultadoBusca"><row><cell cellClass="HasGridEmpowerer"><table controlName="GridSDTProdutossTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="GridSDTProdutoss" class="GridWithPaginationBar GridWithBorderColor WorkWith" collection="&amp;SDTProdutos"><item controlName="SDTProdutos__check" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).check" titleExp="Seleção" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Check Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__prodCodigo" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).prodCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__prodDescricao" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).prodDescricao" titleExp="Descrição" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__UNCompra" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).UNCompra" titleExp="UN Entrada" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__UNDistribuicao" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).UNDistribuicao" titleExp="UN Saida" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__qtdeEntrada" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).qtdeEntrada" titleExp="Entrada ( Compra / Romaneio / Ajuste )" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__qtdeSaida" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).qtdeSaida" titleExp="Saida ( Distribuição / Ajuste )" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__prodLocalSaldo" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).prodLocalSaldo" titleExp="Saldo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTProdutos__QtdeMaximo" attribute="&amp;SDTProdutos" fieldSpecifier="item(0).QtdeMaximo" titleExp="Qtde Antiga" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridSDTProdutossPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridSDTProdutossCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridSDTProdutossPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridSDTProdutossAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></ucw></cell></row><row><cell><action controlName="BtnbtnAplicar" onClickEvent="'DobtnAplicar'" caption="Aplicar o saldo no estoque" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxWWP.GridEmpowerer ControlName="GridSDTProdutoss_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Properties />
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+    LoadWWPContext.Call(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+	&dataHoje   = now()
+    &dtInicial  = &dataHoje
+	&dtFinal    = &dataHoje.AddDays(30)
+	&prodCodigo = 0
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	GridSDTProdutoss_Empowerer.GridInternalName = GridSDTProdutoss.InternalName
+	GridSDTProdutoss.Rows = Page.Rows
+	GridSDTProdutossPaginationBar.RowsPerPageSelectedValue = GridSDTProdutoss.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridSDTProdutossCurrentPage = GridSDTProdutoss.CurrentPage
+	&GridSDTProdutossPageCount = GridSDTProdutoss.PageCount
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTProdutoss.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTProdutossPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridSDTProdutossPaginationBar.SelectedPage = !'Previous'
+			GridSDTProdutoss.PreviousPage()
+		Case GridSDTProdutossPaginationBar.SelectedPage = !'Next'
+			&PageToGo = GridSDTProdutoss.CurrentPage
+			&PageToGo += 1
+			GridSDTProdutoss.GotoPage(&PageToGo)
+		Otherwise
+			&PageToGo.FromString(GridSDTProdutossPaginationBar.SelectedPage)
+			GridSDTProdutoss.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTProdutossPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	GridSDTProdutoss.Rows = GridSDTProdutossPaginationBar.RowsPerPageSelectedValue
+	GridSDTProdutoss.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnAplicar'
+
+    for &item in &SDTProdutos
+		if &item.prodLocalSaldo<>&item.QtdeMaximo and &item.check
+			if &item.prodLocalSaldo>&item.QtdeMaximo
+			   &saldo    = &item.prodLocalSaldo - &item.QtdeMaximo
+			   &ajusTipo = 'E'
+			else
+			   &saldo    = &item.QtdeMaximo - &item.prodLocalSaldo
+			   &ajusTipo = 'S'
+			endif
+			PRCDLancarInventario( &ajusTipo,0, &item.prodCodigo, &saldo , &item.prodLocalSaldo )
+			msg('O ' + &item.prodDescricao + ' foi atualizado com sucesso !')
+		endif
+	endfor
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnProcessar'
+
+	if &dtFinal<&dtInicial
+		msg('Data Inicial não poder ser maior que a data Final !')
+	else
+		Do 'processarMovimentacao'
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'processarMovimentacao'
+
+	&prodDescricao = ''
+	&unEntrada     = ''
+	&unSaida       = ''
+	&qtdeEntrada   = 0
+	&qtdeSaida     = 0
+	&saldo         = 0
+	&SDTProdutos.Clear()
+
+	for each
+		order prefCodigo, prodCodigo
+		where prefCodigo = &prefCodigo
+		where prodCodigo = &prodCodigo when &prodCodigo<>0
+		where prodClassificacao = &classificacao when not &classificacao.IsEmpty()
+		where prodStatus = 'A'
+		      &item = new()
+			  &prodDescricao = prodDescricao
+			  &unEntrada     = find( uniDescricao, prefCodigo = &prefCodigo and uniCodigo = prodUnidMedCompra, 'Nenhuma' )
+			  &unSaida       = find( uniDescricao, prefCodigo = &prefCodigo and uniCodigo = prodUnidMedConsumo, 'Nenhuma' )
+			  &produto       = prodCodigo
+
+			  // apuração de Compra
+			  for each trnsnota, trnsnotaitens
+				  order prefCodigo, notaDataCadastro
+				  where prefCodigo        = &prefCodigo
+				  where notaDataCadastro >= &dtInicial
+				  where notaDataCadastro <= &dtFinal
+				  where notaItemProduto   = prodCodigo
+				  where not notaStatus in ('C','I')
+		                &qtdeEntrada += notaItemQtde
+			  endfor
+
+			  // apuração de Romaneio
+			  for each  Romaneio, Romaneio.Item
+				  order prefCodigo, romanData
+				  where prefCodigo = &prefCodigo
+				  where romanData >= &dtInicial
+				  where romanData <= &dtFinal
+				  where prodCodigo = &produto
+				  		if romanItemQuantidade > 0
+		                   &qtdeEntrada += romanItemQuantidade
+						   // msg('Quantidade : ' + romanItemQuantidade.ToString() )
+						endif
+			  endfor
+
+			  // apuração de ajuste de Entrada
+			  for each trnsajuste, trnsajusteitens
+				  order prefCodigo, ajusDataCadastro
+				  where prefCodigo        = &prefCodigo
+				  where ajusDataCadastro >= &dtInicial
+				  where ajusDataCadastro <= &dtFinal
+				  where ajusItemProduto   = prodCodigo
+				  where ajusStatus        = 'A'
+				  where ajusItemTipo      = 'E'
+			            &qtdeEntrada += ajusItemQuantidade
+			  endfor
+
+			  // apuração da distribuição
+			  for each trnsdistribuicao, trnsdistribuicaoitens
+				  order prefCodigo, distDataCadastro
+				  where prefCodigo        = &prefCodigo
+				  where distDataCadastro >= &dtInicial
+				  where distDataCadastro <= &dtFinal
+				  where distItemProduto   = prodCodigo
+				  where distStatus        = 'A'
+			            &qtdeSaida += distItemQuantidade
+			  endfor
+
+			  // apuração de ajuste de saida
+			  for each trnsajuste, trnsajusteitens
+				  order prefCodigo, ajusDataCadastro
+				  where prefCodigo        = &prefCodigo
+				  where ajusDataCadastro >= &dtInicial
+				  where ajusDataCadastro <= &dtFinal
+				  where ajusItemProduto   = prodCodigo
+				  where ajusItemTipo      = 'S'
+			            &qtdeSaida +=  ajusItemQuantidade
+			  endfor
+
+			  if &qtdeEntrada<>0 or &qtdeSaida<>0
+				 &item.prodCodigo     = prodCodigo
+				 &item.QtdeMaximo     = prodSaldo
+				 &item.prodDescricao  = &prodDescricao
+				 &item.UNCompra       = &unEntrada
+				 &item.UNDistribuicao = &unSaida
+				 &item.qtdeEntrada    = &qtdeEntrada
+				 &item.qtdeSaida      = &qtdeSaida
+				 &item.prodLocalSaldo = &qtdeEntrada - &qtdeSaida
+				 &SDTProdutos.Add( &item )
+			  endif
+
+              &qtdeEntrada = 0
+			  &qtdeSaida   = 0
+
+	endfor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="item">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>item</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTProdutos.Item</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SDTProdutos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SDTProdutos</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTProdutos</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dtInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dtInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dtFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dtFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTProdutossCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTProdutossCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTProdutossPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTProdutossPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTProdutossAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTProdutossAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataHoje">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataHoje</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="unEntrada">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>unEntrada</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>20</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>20</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="unSaida">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>unSaida</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>20</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>20</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="qtdeEntrada">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>qtdeEntrada</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodQtdeMaximo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="qtdeSaida">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>qtdeSaida</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="saldo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>saldo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="produto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>produto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusTipo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusTipo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alçao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusTipo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="classificacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>classificacao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Classificacao</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WPApuracaoEntradaSaidaProdutos</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Apuração de Entrada e Saida de Produtos</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

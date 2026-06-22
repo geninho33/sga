@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="53cb377d-4940-0152-151f-17cc868494f2" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:33:53.0000000Z" checksum="5d98945390197a65b7ee841b3cf71ca7" fullyQualifiedName="trnsajusteWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="527222b4-bce4-42af-8086-a919b0b6ec66" name="trnsajusteWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsajuste WWDS" parent="WorkWithPlustrnsajuste" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &tipajuNome1.ToLower() when &DynamicFiltersSelector1 = !'TIPAJUNOME' AND &DynamicFiltersOperator1 = 0 AND (not &tipajuNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like '%' +  &tipajuNome1.ToLower() when &DynamicFiltersSelector1 = !'TIPAJUNOME' AND &DynamicFiltersOperator1 = 1 AND (not &tipajuNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusLocaDescricao.ToLower() like &ajusLocaDescricao1.ToLower() when &DynamicFiltersSelector1 = !'AJUSLOCADESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &ajusLocaDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusLocaDescricao.ToLower() like '%' +  &ajusLocaDescricao1.ToLower() when &DynamicFiltersSelector1 = !'AJUSLOCADESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &ajusLocaDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusCodigo = &ajusCodigo1 when &DynamicFiltersSelector1 = !'AJUSCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &ajusCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &tipajuNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'TIPAJUNOME' AND &DynamicFiltersOperator2 = 0 AND (not &tipajuNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like '%' +  &tipajuNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'TIPAJUNOME' AND &DynamicFiltersOperator2 = 1 AND (not &tipajuNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusLocaDescricao.ToLower() like &ajusLocaDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AJUSLOCADESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &ajusLocaDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusLocaDescricao.ToLower() like '%' +  &ajusLocaDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AJUSLOCADESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &ajusLocaDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusCodigo = &ajusCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AJUSCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &ajusCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &tipajuNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'TIPAJUNOME' AND &DynamicFiltersOperator3 = 0 AND (not &tipajuNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like '%' +  &tipajuNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'TIPAJUNOME' AND &DynamicFiltersOperator3 = 1 AND (not &tipajuNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusLocaDescricao.ToLower() like &ajusLocaDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AJUSLOCADESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &ajusLocaDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusLocaDescricao.ToLower() like '%' +  &ajusLocaDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AJUSLOCADESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &ajusLocaDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusCodigo = &ajusCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AJUSCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &ajusCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusCodigo >= &TFajusCodigo when not &TFajusCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusCodigo <= &TFajusCodigo_To when not &TFajusCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusData >= &TFajusData when not &TFajusData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusData <= &TFajusData_To when not &TFajusData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuNome.ToLower() like &TFtipajuCodigo.ToLower() when &TFtipajuCodigo_Sel.IsEmpty() AND (not &TFtipajuCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuCodigo = &TFtipajuCodigo_Sel when not &TFtipajuCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[tipajuAcao in &TFtipajuAcao_Sels when &TFtipajuAcao_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &TFajusLocaCodigo.ToLower() when &TFajusLocaCodigo_Sel.IsEmpty() AND (not &TFajusLocaCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[ajusLocaCodigo = &TFajusLocaCodigo_Sel when not &TFajusLocaCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusData1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusData1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusData_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusData_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusData2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusData2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusData_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusData_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusData3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusData3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusData_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusData_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFajusCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFajusCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFajusCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFajusCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFajusData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFajusData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFajusData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFajusData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFajusLocaCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFajusLocaCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFajusLocaCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFajusLocaCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusLocaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFtipajuAcao_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFtipajuAcao_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuAcao</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="tipajuNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>tipajuNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:tipajuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusLocaDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusLocaDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusLocaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusLocaDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusLocaDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusLocaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="ajusLocaDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>ajusLocaDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:ajusLocaDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuNome1</Name>
+        <Description>tipaju Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>ajusLocaDescricao1</Name>
+        <Description>ajus Loca Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>ajusCodigo1</Name>
+        <Description>ajus Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuNome2</Name>
+        <Description>tipaju Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>ajusLocaDescricao2</Name>
+        <Description>ajus Loca Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>ajusCodigo2</Name>
+        <Description>ajus Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>tipajuNome3</Name>
+        <Description>tipaju Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>ajusLocaDescricao3</Name>
+        <Description>ajus Loca Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>ajusCodigo3</Name>
+        <Description>ajus Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFajusCodigo</Name>
+        <Description>TFajus Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFajusCodigo_To</Name>
+        <Description>TFajus Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFajusData</Name>
+        <Description>TFajus Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFajusData_To</Name>
+        <Description>TFajus Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuCodigo</Name>
+        <Description>TFtipaju Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuCodigo_Sel</Name>
+        <Description>TFtipaju Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFtipajuAcao_Sels</Name>
+        <Description>TFtipaju Acao_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFajusLocaCodigo</Name>
+        <Description>TFajus Loca Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFajusLocaCodigo_Sel</Name>
+        <Description>TFajus Loca Codigo_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsajusteWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsajuste</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

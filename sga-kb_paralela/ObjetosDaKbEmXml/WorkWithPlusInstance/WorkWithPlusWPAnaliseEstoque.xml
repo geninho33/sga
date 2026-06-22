@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="8ccfddb2-ad8c-41ba-8115-7d3c6dacb24b" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-02-25T05:13:56.0000000Z" lastUpdate="2025-02-25T04:20:06.0000000Z" checksum="82709153ce7d34247723826fb8ba2b29" fullyQualifiedName="WorkWithPlusWPAnaliseEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8bdc8522-fb70-0921-351d-7b0b4f562d36" name="WorkWithPlusWPAnaliseEstoque" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPAnalise Estoque" parent="WPAnaliseEstoque" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPAnaliseEstoque" defaultSecFuntionKey="WPAnaliseEstoque" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <table name="cpOpcoes" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="">
+          <table name="grupoOpcoesBusca" isGroup="True" numberOfColumns="5" type="Responsive" title="Opções para Busca">
+            <variable name="locCodigo" description="Unidade Escolar" dataType="Basic" domain="adbb33c9-0906-4971-833c-998de27e0676-locVinculada" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" controlSortDescription="True" conditions="prefCodigo = &amp;prefCodigo;  locStatus = 'A';" controlEmptyItem="True" controlEmptyItemText="Todas" descriptionWidth="33%" />
+            <variable name="prodCodigo" description="Produto" dataType="Basic" basicLength="8" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" controlSortDescription="True" conditions="prodStatus= 'A';&#xD;&#xA;prefCodigo = &amp;prefCodigo;" controlEmptyItem="True" controlEmptyItemText="Todos" />
+            <variable name="mesAno" description="Mês e Ano" dataType="Basic" basicType="Date" controlInfoDef="Based on" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-mapaUeData" controlType="Edit" cellWidth_S="25%" descriptionWidth="25%" />
+            <variable name="opcao" description="Opção" dataType="Basic" basicType="Character" basicCLength="1" controlInfoDef="Custom" controlType="Combo Box" controlValues="Nenhuma Opção:N,Saldos  Iguais:I,Saldos Diferentes:D,Saldo Atual Negativo :A,Saldo Progessão Negativo:P" cellWidth_S="25%" />
+            <userAction caption="Buscar" name="btnBuscar" cellWidth_S="17%" />
+          </table>
+          <table name="cpResultado" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Resultado da Busca">
+            <grid name="GridSDTEstoqueUEs" SDTCollection="&amp;SDTEstoqueUE">
+              <userAction fontIcon="fas fa-balance-scale" ControlType="Image" name="btnSalvarEstoqueUE" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRCDSalvarSaldoUE" imageType="Font icon" confirm="True" confirmMessage="Tem certeza que deseja lançar esse saldo ?" confirmTitle="Ajustar Saldo">
+                <parameters>
+                  <parameter type="In" name="&amp;prefCodigo" />
+                  <parameter type="In" name="&amp;SDTEstoqueUE.CurrentItem.estoUeCodigo" />
+                  <parameter type="In" name="&amp;SDTEstoqueUE.CurrentItem.estoUeSaldo" />
+                  <parameter type="In" name="&amp;SDTEstoqueUE.CurrentItem.estoUeProdCodigo" />
+                  <parameter type="In" name="&amp;SDTEstoqueUE.CurrentItem.estoUeLocCodigo" />
+                </parameters>
+              </userAction>
+              <userAction tooltip="Movimentação de Estoque" fontIcon="fas fa-tasks" ControlType="Image" name="btnMovEstoque" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WPMovimentacaoProdutoUE" imageType="Font icon" popup="True">
+                <parameters>
+                  <parameter type="In" name="&amp;prefCodigo" />
+                  <parameter type="In" name="&amp;SDTEstoqueUE.CurrentItem.estoUeLocCodigo" />
+                  <parameter type="In" name="&amp;SDTEstoqueUE.CurrentItem.estoUeProdCodigo" />
+                  <parameter type="In" name="&amp;mesAno" />
+                </parameters>
+              </userAction>
+              <gridVariable name="SDTEstoqueUE" description="Ordem" defaultDescription="Prefeitura" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" visible="True" sdtItem="item(0).estoUePrevisao" defaultSdtItem="item(0).prefCodigo" />
+              <gridVariable name="SDTEstoqueUE" description="Local" defaultDescription="Data Alteração" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" visible="True" sdtItem="item(0).estoUelocDescricao" defaultSdtItem="item(0).estoUeAlteracao" />
+              <gridVariable name="SDTEstoqueUE" description="Codigo" defaultDescription="Codigo" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" visible="False" sdtItem="item(0).estoUeCodigo" defaultSdtItem="item(0).estoUeCodigo" />
+              <gridVariable name="SDTEstoqueUE" description="Tipo de Remessa" defaultDescription="Tipo de Remessa" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" visible="False" sdtItem="item(0).estoUeTipoRemessa" defaultSdtItem="item(0).estoUeTipoRemessa" />
+              <gridVariable name="SDTEstoqueUE" description="Cod. Produto" defaultDescription="Codigo Produto" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" visible="True" sdtItem="item(0).estoUeProdCodigo" defaultSdtItem="item(0).estoUeProdCodigo" />
+              <gridVariable name="SDTEstoqueUE" description="Descrição" defaultDescription="Descrição" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" sdtItem="item(0).estoUeProdDescricao" defaultSdtItem="item(0).estoUeProdDescricao" />
+              <gridVariable name="SDTEstoqueUE" description="Unidade" defaultDescription="Unidade" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" sdtItem="item(0).estoUeUniDescricao" defaultSdtItem="item(0).estoUeUniDescricao" />
+              <gridVariable name="SDTEstoqueUE" description="Saldo" defaultDescription="Saldo" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" readOnly="False" sdtItem="item(0).estoUeSaldo" defaultSdtItem="item(0).estoUeSaldo" />
+              <gridVariable name="SDTEstoqueUE" description="Verificação de Saldo" defaultDescription="Qtde Fixa" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" sdtItem="item(0).estoUeQtdeFixo" defaultSdtItem="item(0).estoUeQtdeFixo" />
+              <gridVariable name="SDTEstoqueUE" description="Previsão" defaultDescription="Previsão" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEstoqueUE" visible="False" sdtItem="item(0).estoUelocCodigo" defaultSdtItem="item(0).estoUePrevisao" />
+            </grid>
+          </table>
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPAnaliseEstoque</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPAnaliseEstoque</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

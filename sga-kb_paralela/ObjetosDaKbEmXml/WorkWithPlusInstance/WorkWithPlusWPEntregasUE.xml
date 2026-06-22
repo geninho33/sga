@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="24d8e64b-58c3-4694-86fb-492b3e1a0355" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-11-06T04:29:22.0000000Z" lastUpdate="2024-11-06T01:59:51.0000000Z" checksum="763a77be539f26608dde219dce291b2b" fullyQualifiedName="WorkWithPlusWPEntregasUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="23cbbedb-0e3f-0e0f-32f3-4f1c1ce09c28" name="WorkWithPlusWPEntregasUE" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPEntregas UE" parent="WPEntregasUE" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPEntregasUE" defaultSecFuntionKey="WPEntregasUE" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <table name="cPanelEntregas" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Listagem de Entregas" collapsable="True">
+          <userAction fontIcon="fas fa-info-circle" caption="Ajuda" ControlType="Button" name="btnAjuda" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WPAjudaUE" imageType="Font icon" popup="True" align="Right">
+            <parameters>
+              <parameter type="In" name="&amp;prefCodigo" />
+              <parameter type="In" name="&amp;codigoAjuda" />
+            </parameters>
+          </userAction>
+          <variable name="distCodigo" description="Informe o número da Guia" defaultDescription="Código" domain="adbb33c9-0906-4971-833c-998de27e0676-distCodigo" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-distCodigo" descriptionWidth="17%" />
+          <userAction caption="Buscar " name="btnBuscar" mergeWithPrevious="True" />
+          <tabs ControlName="Tabs1">
+            <tab ControlName="abaGuias" title="Entregas">
+              <table name="abaProdutos" numberOfColumns="1" type="Responsive">
+                <grid includePaginationBar="&lt;default&gt;" includeRowsPerPageSelector="&lt;default&gt;" allowSelection="False" allowHovering="False" type="&lt;default&gt;" conditionalFormatting="0;&amp;SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''):Warning:" align="&lt;default&gt;" name="GridSDTEntregasUEs" page="&lt;unlimited&gt;" pagingType="&lt;default&gt;" multiRowSelectAll="False" SDTCollection="&amp;SDTEntregasUE">
+                  <userAction tooltip="Receber Entrega" fontIcon="fas fa-check" ControlType="Image" name="btnReceber" imageType="Font icon" confirm="True" confirmMessage="Confirma o recebimento dos Produtos ?" confirmTitle="Confirmação" />
+                  <userAction tooltip="Imprimir Guia" fontIcon="fas fa-print" ControlType="Image" name="btnImprimir" imageType="Font icon" />
+                  <gridVariable name="SDTEntregasUE" description="Guia nr." defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" sdtItem="item(0).distCodigo" defaultSdtItem="item(0).distCodigo" />
+                  <gridVariable name="SDTEntregasUE" description="Situação" defaultDescription="Prefeitura" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" visible="True" sdtItem="item(0).distSituacao" defaultSdtItem="item(0).prefCodigo" />
+                  <gridVariable name="SDTEntregasUE" description="Tipo de Remessa" defaultDescription="Tipo Remessa" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" sdtItem="item(0).distCodigoTipoRemessa" defaultSdtItem="item(0).distCodigoTipoRemessa" />
+                  <gridVariable name="SDTEntregasUE" description="Origem" defaultDescription="Origem" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" visible="False" sdtItem="item(0).distLocalOrigem" defaultSdtItem="item(0).distLocalOrigem" />
+                  <gridVariable name="SDTEntregasUE" description=" Destino" defaultDescription=" Destino" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" visible="False" sdtItem="item(0).distLocalDestino" defaultSdtItem="item(0).distLocalDestino" />
+                  <gridVariable name="SDTEntregasUE" description="Envio" defaultDescription="Envio" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" sdtItem="item(0).distDataEnvio" defaultSdtItem="item(0).distDataEnvio" />
+                  <gridVariable name="SDTEntregasUE" description="Recepção" defaultDescription="Recepção" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" sdtItem="item(0).distDataRecepcao" defaultSdtItem="item(0).distDataRecepcao" />
+                  <gridVariable name="SDTEntregasUE" description="Recebedor" defaultDescription="Recebedor" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" sdtItem="item(0).distRecebedor" defaultSdtItem="item(0).distRecebedor" />
+                  <gridVariable name="SDTEntregasUE" description="Unidade Vinculada" defaultDescription="Recebedor" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" sdtItem="item(0).distVincDescricao" defaultSdtItem="item(0).distRecebedor" />
+                  <gridVariable name="SDTEntregasUE" description="Observação" defaultDescription="Observação" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTEntregasUE" sdtItem="item(0).distObservacao" defaultSdtItem="item(0).distObservacao" />
+                </grid>
+              </table>
+            </tab>
+          </tabs>
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPEntregasUE</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPEntregasUE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

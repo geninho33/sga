@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:24:57.0000000Z" checksum="91ba2532228309937dd4e6d4d489a28e" fullyQualifiedName="trnsremessas" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="3ac53fe4-ba41-45b8-fde9-ce5a3d74ec00" name="trnsremessas" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Remessa de Alimentação">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsremessas" Type="trnsremessas" Description="Remessa de Alimentação" Guid="3ac53fe4-ba41-45b8-fde9-ce5a3d74ec00">
+      <Properties />
+      <AttributeProperties Attribute="remRancho">
+        <Properties>
+          <Property>
+            <Name>IncludeInForms</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </AttributeProperties>
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="f47eab15-6906-4b8f-9331-52a8b07df950">remCodigo</Attribute>
+      <Attribute key="False" guid="5fa5533a-d6f4-40ae-892c-ba1fc01ec7f9" isNullable="True">remStatus</Attribute>
+      <Attribute key="False" guid="2303be7b-4454-49d0-accd-9718f0f6a00f" isNullable="True">remCadastro</Attribute>
+      <Attribute key="False" guid="d33dda07-a6d4-46d6-8a7e-e42898f0375c" isNullable="True">remAlteracao</Attribute>
+      <Attribute key="False" guid="256d8802-4023-413c-88b3-868490921b92" isNullable="True">remUsuario</Attribute>
+      <Attribute key="False" guid="1a50254d-3438-4349-86ed-0fb666dfc3e7" isNullable="True">remGerSemana1Ini</Attribute>
+      <Attribute key="False" guid="7a01e394-2891-4b8e-994a-9c4f3190f7a4" isNullable="True">remGerSemana1Fim</Attribute>
+      <Attribute key="False" guid="bec4a51b-3e72-46de-a189-8eec88b35b53" isNullable="True">remGerSemana2Ini</Attribute>
+      <Attribute key="False" guid="d60fd005-39b0-4643-95ba-207108267c0d" isNullable="True">remGerSemana2Fim</Attribute>
+      <Attribute key="False" guid="12d467ad-0e5c-4352-9541-97584ff36f69" isNullable="True">remGerSemana3Ini</Attribute>
+      <Attribute key="False" guid="c14b5be5-0694-4377-b046-98fc20f0164b" isNullable="True">remGerSemana3Fim</Attribute>
+      <Attribute key="False" guid="d83385d1-88fb-45f5-abfd-a9846bf9aac3" isNullable="True">remGerSemana4Ini</Attribute>
+      <Attribute key="False" guid="b5beaf40-c090-457d-8b21-3fcd94d297f4" isNullable="True">remGerSemana4Fim</Attribute>
+      <Attribute key="False" guid="ae8432e9-1078-46e2-85bb-00ae6d60f2c8" isNullable="True">remGerSemana5Ini</Attribute>
+      <Attribute key="False" guid="a713e3c8-cb83-4ab4-aca2-56447d5bfbb6" isNullable="True">remGerSemana5Fim</Attribute>
+      <Attribute key="False" guid="e00da89f-f11c-4eb8-b728-b2ae53d4db4a">remRancho</Attribute>
+      <Attribute key="False" guid="f1cc80c1-9be3-4794-bd7a-df83a12711ed">remPeriodo1</Attribute>
+      <Attribute key="False" guid="283f125e-51ba-49c3-b31a-bc8a89b9e6dd">remPeriodo2</Attribute>
+      <Attribute key="False" guid="5f7f53fb-d79a-4e58-bc36-4f3e255727b0">remPeriodo3</Attribute>
+      <Attribute key="False" guid="b46a7864-715f-486f-a8cd-20a3e6f6d4f2">remPeriodo4</Attribute>
+      <Attribute key="False" guid="354e061c-acf8-4b6b-ab10-23c94ce21fdb">remPeriodo5</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:67}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:67}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellControlName="remCodigo_Cell"><data attribute="remCodigo" labelCaption="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedremCadastro" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockremCadastro" caption="Mês e Ano " class="Label" /></cell><cell><table controlName="TableMergedremCadastro" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="remCadastro" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell><textblock controlName="remCadastro_RightText" caption="* Informe apenas uma data do mês e ano " class="DataDescription" /></cell></row></table></cell></row></table></cell></row><row><cell><group controlName="UnnamedGroup2" caption="    Período(s)  " class="Group"><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><table controlName="TableSplittedremGerSemana1Ini" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_6_25"><textblock controlName="TextBlockremGerSemana1Ini" caption="1ª" class="Label" /></cell><cell cellClass="CellWidth_93_75"><table controlName="TableMergedremGerSemana1Ini" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="remGerSemana1Ini" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell cellClass="DataContentCell"><data attribute="remGerSemana1Fim" labelCaption="a" class="AttributeRealWidthDate" /></cell></row></table></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedremGerSemana2Ini" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_6_25"><textblock controlName="TextBlockremGerSemana2Ini" caption="2ª" class="Label" /></cell><cell cellClass="CellWidth_93_75"><table controlName="TableMergedremGerSemana2Ini" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="remGerSemana2Ini" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell cellClass="DataContentCell"><data attribute="remGerSemana2Fim" labelCaption="a" class="AttributeRealWidthDate" /></cell></row></table></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedremGerSemana3Ini" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_6_25"><textblock controlName="TextBlockremGerSemana3Ini" caption="3ª" class="Label" /></cell><cell cellClass="CellWidth_93_75"><table controlName="TableMergedremGerSemana3Ini" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="remGerSemana3Ini" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell cellClass="DataContentCell"><data attribute="remGerSemana3Fim" labelCaption="a" class="AttributeRealWidthDate" /></cell></row></table></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedremGerSemana4Ini" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_6_25"><textblock controlName="TextBlockremGerSemana4Ini" caption="4ª" class="Label" /></cell><cell cellClass="CellWidth_93_75"><table controlName="TableMergedremGerSemana4Ini" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="remGerSemana4Ini" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell cellClass="DataContentCell"><data attribute="remGerSemana4Fim" labelCaption="a" class="AttributeRealWidthDate" /></cell></row></table></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedremGerSemana5Ini" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_6_25"><textblock controlName="TextBlockremGerSemana5Ini" caption="5ª" class="Label" /></cell><cell cellClass="CellWidth_93_75"><table controlName="TableMergedremGerSemana5Ini" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="remGerSemana5Ini" labelPosition="None" class="AttributeRealWidthDate" /></cell><cell cellClass="DataContentCell"><data attribute="remGerSemana5Fim" labelCaption="a" class="AttributeRealWidthDate" /></cell></row></table></cell></row></table></cell></row></table></group></cell></row><row><cell cellClass="DataContentCell"><data attribute="remStatus" labelCaption="Status" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault hidden-xs hidden-sm hidden-md hidden-lg" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="remAlteracao" /><gxAttribute ControlType="Edit" InputType="Values" AttID="remUsuario" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Document>
+      <Form>
+        <Type>Windows</Type>
+        <Class>Windows</Class>
+        <ClassGuid>4df66249-100d-407d-8ce0-41ec76938671</ClassGuid>
+        <SizeUnit>px</SizeUnit>
+        <Info>
+          <Properties>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>True</Value>
+            </Property>
+            <Property>
+              <Name>Defaults</Name>
+              <Value>gx:TrnDefaultWindowsForm.dkt</Value>
+            </Property>
+          </Properties>
+        </Info>
+      </Form>
+    </Document>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+[web]
+{
+parm(in:&Mode, in:&prefCodigo, in:&remCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+remCodigo = &remCodigo if not &remCodigo.IsEmpty();
+noaccept(remCodigo) if not &remCodigo.IsEmpty();
+
+remCodigo.Visible = remCodigo<>0;
+remCodigo_Cell.Class = !'Invisible' If not(remCodigo<>0);
+remCodigo_Cell.Class = !'col-xs-12 DataContentCell' If remCodigo<>0;
+}
+
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+Default(remCadastro,ServerDate());
+
+/* Verificando os dados da 1ª semana */
+error('Tem problemas com as datas do periodo 1º !')
+	if not PRCDVerificandoPeriodo(remCadastro,remGerSemana1Ini,remGerSemana1Fim);
+
+/* Verificando os dados da 2ª semana */
+error('Tem problemas com as datas do periodo 2º !')
+	if not PRCDVerificandoPeriodo(remCadastro,remGerSemana2Ini,remGerSemana2Fim);
+
+/* Verificando os dados da 3ª semana */
+error('Tem problemas com as datas do periodo 3º !')
+	if not PRCDVerificandoPeriodo(remCadastro,remGerSemana3Ini,remGerSemana3Fim);
+
+/* Verificando os dados da 4ª semana */
+error('Tem problemas com as datas do periodo 4º !')
+	if not PRCDVerificandoPeriodo(remCadastro,remGerSemana4Ini,remGerSemana4Fim);
+
+/* Verificando os dados da 5ª semana */
+error('Tem problemas com as datas do periodo 5º !')
+	if not PRCDVerificandoPeriodo(remCadastro,remGerSemana5Ini,remGerSemana5Fim);
+
+remCodigo = PRCDGerarNovoCodigo('remessas')  
+	on BeforeInsert;
+
+remAlteracao = serverDate() 
+	on beforeInsert, beforeUpdate;
+	
+remUsuario =   &WWPContext.UserName +' | IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+	on beforeInsert, beforeUpdate;	
+
+[web]
+{
+	remRancho = false;
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+    &opcaoCompra = 1
+	&opcaoRemessa = 2
+	&opcaoDistribuicao = 3
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	
+    [web]
+    {
+	remAlteracao.Visible = False
+	remUsuario.Visible = False
+	}
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+   [web]
+   {
+	
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsremessasWW.Call()
+	Endif
+
+	Return
+   }
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+[web]
+{
+	remCodigo.Visible = False
+	remCodigo_Cell.Class = !'Invisible'
+	If Not SecGAMIsAuthByFunctionalityKey(!'True ')
+		remCodigo.Enabled = False
+	EndIf
+	
+}
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCardapio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCardapio</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCardapio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_carDapCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_carDapCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="opcaoCompra">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>opcaoCompra</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="opcaoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>opcaoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="opcaoDistribuicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>opcaoDistribuicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsremessas</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Remessa de Alimentação</Value>
+    </Property>
+    <Property>
+      <Name>idISBUSINESSCOMPONENT</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsMain</Name>
+      <Value>False</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnsremessasWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>SEARCH_VIEWER</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-trnsremessasView</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

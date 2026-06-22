@@ -1,0 +1,54 @@
+# Dependências
+node_modules/
+.pnp
+.pnp.js
+
+# Build / cache
+dist/
+dist-ssr/
+build/
+.cache/
+*.tsbuildinfo
+
+# Ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# SO e editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.local
+
+# Cobertura e testes
+coverage/
+.nyc_output/
+
+# KB GeneXus — artefatos temporários e gerados
+sga-kb_paralela/Temp/*
+!sga-kb_paralela/Temp/.gitkeep
+sga-kb_paralela/KbIntelligence/kb-intelligence.sqlite
+sga-kb_paralela/KbIntelligence/kb-intelligence-validation.json
+sga-kb_paralela/ObjetosGeradosParaImportacaoNaKbNoGenexus/*
+!sga-kb_paralela/ObjetosGeradosParaImportacaoNaKbNoGenexus/.gitkeep
+sga-kb_paralela/PacotesGeradosParaImportacaoNaKbNoGenexus/*
+!sga-kb_paralela/PacotesGeradosParaImportacaoNaKbNoGenexus/.gitkeep
+sga-kb_paralela/XpzExportadosPelaIDE/*
+!sga-kb_paralela/XpzExportadosPelaIDE/.gitkeep

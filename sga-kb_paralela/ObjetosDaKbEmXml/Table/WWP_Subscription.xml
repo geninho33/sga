@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:19:00.0000000Z" checksum="4c1306b21658cf6714a0cc97dbfafc85" fullyQualifiedName="WWP_Subscription" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="3ee3ef50-9d40-4c79-afa0-e12688694f60" name="WWP_Subscription" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="WWP_Subscription">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="c29c3de2-cd11-43a4-8fd1-a664d325441b">WWPSubscriptionId</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="3b29a589f61fe5ba0ebf8382b39802c1" fullyQualifiedName="IWWP_Subscription" moduleGuid="00000000-0000-0000-0000-000000000000" guid="29cf3e43-0beb-4dbc-b0b2-ef2112c3b0c1" name="IWWP_Subscription" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Subscription">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPSubscriptionId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Subscription</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="b84c4d766c79ec4d9684448830b857ae" fullyQualifiedName="IWWP_Subscription1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="3e32f07b-6828-41c1-9506-3729e209fd25" name="IWWP_Subscription1" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Subscription1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPUserExtendedId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Subscription1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="b01c3afa7a6e6b179515aa13171bbf8d" fullyQualifiedName="IWWP_Subscription2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="ccc1e631-01ec-4b61-870d-5dfb84d6b58f" name="IWWP_Subscription2" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Subscription2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPNotificationDefinitionId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Subscription2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_Subscription</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>WWP_Subscription</Value>
+    </Property>
+  </Properties>
+</Object>

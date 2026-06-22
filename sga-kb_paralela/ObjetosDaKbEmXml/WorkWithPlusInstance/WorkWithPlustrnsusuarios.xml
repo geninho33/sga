@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="076e25e8-eac2-4b3d-114c-973869d57e27" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-12-16T14:02:19.0000000Z" checksum="3a78170f7ceded0dbe45d2e8b6bde780" fullyQualifiedName="WorkWithPlustrnsusuarios" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="007d7d78-bc3e-03a6-a544-910f4b2fe15a" name="WorkWithPlustrnsusuarios" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnsusuarios" parent="trnsusuarios" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnsusuarios" defaultSecFuntionKey="WWtrnsusuarios">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsusuarios" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsusuarios" SecFuntionKeyINS="WWtrnsusuarios_Insert" defaultSecFuntionKeyINS="WWtrnsusuarios_Insert" SecFuntionKeyUPD="WWtrnsusuarios_Update" defaultSecFuntionKeyUPD="WWtrnsusuarios_Update" SecFuntionKeyDLT="WWtrnsusuarios_Delete" defaultSecFuntionKeyDLT="WWtrnsusuarios_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;usuCodigo-2;22;usuUsuario-2;22;usuNome-2;22;prefCodigo-2;22;usuUnidade-2;22;usuSenha-2;22;usuValidadeSenha-2;22;usuGrupo-2;22;usuCargo-2;22;usuInscricao-2;22;usuDataAcesso-2;22;usuEmail-2;22;usuDataCad-2;22;usuDataAlt-2;22;usuGUID-2;22;usuAssinatura-2;22;usuStatus-2;22;usuUnidadesPermitidas">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuCodigo" description="Código" defaultDescription="=Attribute.ContextualTitle" visible="True" visibleCondition="usuCodigo&lt;&gt;0" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuUsuario" description="Usuário" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuUnidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultVisible="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" conditions="prefCodigo = &amp;prefCodigo;" controlAllowMultipleSelection="True" controlLoadDynamically="True" conditionDynAtts="usuPref" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuSenha" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuValidadeSenha" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuGrupo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuCargo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuInscricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="True" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuDataAcesso" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuEmail" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuGUID" description="Usuário  GAM" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuAssinatura" description="Assinatura" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;usuUsuario-4;39;-5;41;" id="076e25e8-eac2-4b3d-114c-973869d57e27:1" name="trnsusuarios">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuUsuario" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-usuUsuario" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Cadastro de Usuários" defaultDescription=" Cadastro de Usuários" childrenOrderedList="4;02;Main Table" level="root:trnsusuarios" defaultLevel="root:trnsusuarios" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Export" />
+                  <standardAction popup="True" defaultPopup="True" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="ExportReport" />
+                </actionGroup>
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=usuUsuario.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;usuUsuario;=usuUsuario.ContextualTitle" name="=usuUsuario.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuUsuario" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;usuUsuario">
+                  <filterAttribute name="usuUsuario" description="Usuário" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;usuUsuario;StartsWith-4;96;4;99;usuUsuario;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="usuNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;usuNome;StartsWith-4;96;4;99;usuNome;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="usuGUID" description="Usuário GAM" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;usuGUID;StartsWith-4;96;4;99;usuGUID;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="usuEmail" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;usuEmail;StartsWith-4;96;4;99;usuEmail;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="prefCodigo" description="=Attribute.Title" defaultDescription="=Attribute.Title" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;prefCodigo;LowerThan-4;96;4;99;prefCodigo;Equals-4;96;4;99;prefCodigo;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;usuCodigo-4;23;prefCodigo-4;23;usuUsuario-4;23;usuNome-4;23;usuSenha-4;23;usuValidadeSenha-4;23;usuGrupo-4;23;usuUnidade-4;23;usuUnidadesPermitidas-4;23;usuCargo-4;23;usuInscricao-4;23;usuDataAcesso-4;23;usuEmail-4;23;usuStatus-4;23;usuDataCad-4;23;usuDataAlt-4;23;usuGUID-4;23;usuAssinatura">
+          <standardAction name="Update" />
+          <standardAction name="Delete" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuCodigo" description="Código" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuCodigo &gt;= &amp;TFusuCodigo when not &amp;TFusuCodigo.IsEmpty();usuCodigo &lt;= &amp;TFusuCodigo_To when not &amp;TFusuCodigo_To.IsEmpty()" defaultFilterCondition="usuCodigo &gt;= &amp;TFusuCodigo when not &amp;TFusuCodigo.IsEmpty();usuCodigo &lt;= &amp;TFusuCodigo_To when not &amp;TFusuCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ColumnTitle" defaultDescription="=Attribute.ColumnTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuUsuario" description="Usuário" defaultDescription="=Attribute.ContextualTitle" filterCondition="usuUsuario.ToLower() like &amp;TFusuUsuario.ToLower() when not &amp;TFusuUsuario.IsEmpty()" defaultFilterCondition="usuUsuario.ToLower() like &amp;TFusuUsuario.ToLower() when not &amp;TFusuUsuario.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuNome.ToLower() like &amp;TFusuNome.ToLower() when not &amp;TFusuNome.IsEmpty()" defaultFilterCondition="usuNome.ToLower() like &amp;TFusuNome.ToLower() when not &amp;TFusuNome.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuSenha" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuSenha.ToLower() like &amp;TFusuSenha.ToLower() when not &amp;TFusuSenha.IsEmpty()" defaultFilterCondition="usuSenha.ToLower() like &amp;TFusuSenha.ToLower() when not &amp;TFusuSenha.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuValidadeSenha" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuValidadeSenha &gt;= &amp;TFusuValidadeSenha when not &amp;TFusuValidadeSenha.IsEmpty();usuValidadeSenha &lt;= &amp;TFusuValidadeSenha_To when not &amp;TFusuValidadeSenha_To.IsEmpty()" defaultFilterCondition="usuValidadeSenha &gt;= &amp;TFusuValidadeSenha when not &amp;TFusuValidadeSenha.IsEmpty();usuValidadeSenha &lt;= &amp;TFusuValidadeSenha_To when not &amp;TFusuValidadeSenha_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuGrupo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuUnidade" description="Local" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultVisible="False" cellVisible_E="False" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuCargo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuCargo &gt;= &amp;TFusuCargo when not &amp;TFusuCargo.IsEmpty();usuCargo &lt;= &amp;TFusuCargo_To when not &amp;TFusuCargo_To.IsEmpty()" defaultFilterCondition="usuCargo &gt;= &amp;TFusuCargo when not &amp;TFusuCargo.IsEmpty();usuCargo &lt;= &amp;TFusuCargo_To when not &amp;TFusuCargo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuInscricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuInscricao.ToLower() like &amp;TFusuInscricao.ToLower() when not &amp;TFusuInscricao.IsEmpty()" defaultFilterCondition="usuInscricao.ToLower() like &amp;TFusuInscricao.ToLower() when not &amp;TFusuInscricao.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuDataAcesso" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuDataAcesso &gt;= &amp;TFusuDataAcesso when not &amp;TFusuDataAcesso.IsEmpty();usuDataAcesso &lt;= &amp;TFusuDataAcesso_To when not &amp;TFusuDataAcesso_To.IsEmpty()" defaultFilterCondition="usuDataAcesso &gt;= &amp;TFusuDataAcesso when not &amp;TFusuDataAcesso.IsEmpty();usuDataAcesso &lt;= &amp;TFusuDataAcesso_To when not &amp;TFusuDataAcesso_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuEmail" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuEmail.ToLower() like &amp;TFusuEmail.ToLower() when not &amp;TFusuEmail.IsEmpty()" defaultFilterCondition="usuEmail.ToLower() like &amp;TFusuEmail.ToLower() when not &amp;TFusuEmail.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuDataCad &gt;= &amp;TFusuDataCad when not &amp;TFusuDataCad.IsEmpty();usuDataCad &lt;= &amp;TFusuDataCad_To when not &amp;TFusuDataCad_To.IsEmpty()" defaultFilterCondition="usuDataCad &gt;= &amp;TFusuDataCad when not &amp;TFusuDataCad.IsEmpty();usuDataCad &lt;= &amp;TFusuDataCad_To when not &amp;TFusuDataCad_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuDataAlt &gt;= &amp;TFusuDataAlt when not &amp;TFusuDataAlt.IsEmpty();usuDataAlt &lt;= &amp;TFusuDataAlt_To when not &amp;TFusuDataAlt_To.IsEmpty()" defaultFilterCondition="usuDataAlt &gt;= &amp;TFusuDataAlt when not &amp;TFusuDataAlt.IsEmpty();usuDataAlt &lt;= &amp;TFusuDataAlt_To when not &amp;TFusuDataAlt_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuGUID" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="usuGUID.ToLower() like &amp;TFusuGUID.ToLower() when not &amp;TFusuGUID.IsEmpty()" defaultFilterCondition="usuGUID.ToLower() like &amp;TFusuGUID.ToLower() when not &amp;TFusuGUID.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-usuAssinatura" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" />
+        </grid>
+      </table>
+    </selection>
+    <view childrenOrderedList="5;14;usuCodigo;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="usuUsuario.ToString()" defaultCaption="usuUsuario.ToString()">
+      <parameters>
+        <parameter name="usuCodigo" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsusuariosGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Cadastro de Usuários" defaultCaption="Ir a Cadastro de Usuários" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsusuariosGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsusuariosGeneral;42;General">
+        <tabularTab childrenOrderedList="trnsusuariosGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsusuariosGeneral" defaultWcname="trnsusuariosGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsusuariosGeneral;126;-trnsusuariosGeneral;88;Actions">
+            <transactionDetailData />
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsusuariosGeneral;91;Update-trnsusuariosGeneral;91;Delete">
+              <standardAction caption="" ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction caption="" ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsusuarios</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsusuarios</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

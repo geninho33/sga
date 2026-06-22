@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="544a31b1-62d8-033d-15d1-1b24e3f762d9" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-10-06T02:48:03.0000000Z" checksum="93f242482db539181730c324c5958150" fullyQualifiedName="InventarioDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c2d06053-295d-41d6-b5f6-585448de4a7e" name="InventarioDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Inventario DS" parent="WorkWithPlusInventario" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prodTipo = &prodTipo when not &prodTipo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodClassificacao = &prodClassificacao when not &prodClassificacao.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like &prodDescricao.ToLower() when &prodDescricaoOperator = 0 AND (not &prodDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like '%' +  &prodDescricao.ToLower() when &prodDescricaoOperator = 1 AND (not &prodDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="prodTipo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodTipo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodClassificacao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodClassificacao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodClassificacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodTipo</Name>
+        <Description>prod Tipo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodClassificacao</Name>
+        <Description>prod Classificacao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodDescricao</Name>
+        <Description>prod Descricao</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>InventarioDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusInventario</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

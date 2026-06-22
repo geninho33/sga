@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-21T04:41:41.0000000Z" lastUpdate="2024-10-21T04:25:52.0000000Z" checksum="344e1b88c86431b1cdca9da6cf5bf3e6" fullyQualifiedName="PRCDSalvarItemLancamentoEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1bb55fa4-c432-41ef-99c8-3f44b7e55027" name="PRCDSalvarItemLancamentoEstoque" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Salvar Item Lancamento Estoque">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+LoadWWPContext.Call(&WWPContext)
+
+// preparando as variaveis para lançar na auditoria
+&AdmLogCha     = &prefCodigo.ToString().Trim() +'-'+ &lanestItemLocCodigo.ToString().Trim() +'-'+ &lanestItemProdCodigo.ToString().Trim()
+&prodDescricao = &lanestItemProdCodigo.ToString().Trim() + ' - ' +   find(prodDescricao,prefCodigo = &prefCodigo and prodCodigo = &lanestItemProdCodigo, '' )
+&locDescricao  = &lanestItemLocCodigo.ToString().Trim() + ' - ' +   find( locDescricao,prefCodigo = &prefCodigo and locCodigo = &lanestItemLocCodigo, '' )
+&AdmLogDad     = '==>> Codigo Lista :' + &lanestcodigo.ToString().Trim() +
+                 '- Unidade Escolar : ' + &locDescricao +
+			     '- Produto : ' + &prodDescricao +
+			     ' - Qtde Atual ' + &lanestItemQuantidade.ToString().Trim()
+
+for each
+	Where prefCodigo = &prefCodigo
+	where lanestcodigo = &lanestcodigo
+    where lanestItemLocCodigo = &lanestItemLocCodigo
+    where lanestItemProdCodigo = &lanestItemProdCodigo
+      if lanestItemQuantidade <> &lanestItemQuantidade
+	     PRCDAtualiarEstoqueUE(&prefCodigo,&lanestItemLocCodigo,&lanestItemProdCodigo,lanestItemQuantidade,'S',0,'Unidade')
+		 PRCDAtualiarEstoqueUE(&prefCodigo,&lanestItemLocCodigo,&lanestItemProdCodigo,&lanestItemQuantidade,'E',0,'Unidade')
+	  endif
+      &AdmLogDad          += ' - Qtde Anterior: ' + lanestItemQuantidade.ToString().Trim()
+	  lanestItemQuantidade = &lanestItemQuantidade
+	  lanestItemObservacao = &lanestItemObservacao
+	  lanestItemValidade   = &lanestItemValidade
+	  lanestItemAlteracao  = servernow()
+when none
+	if &lanestItemQuantidade>0 or not &lanestItemObservacao.IsEmpty()
+		new
+			prefCodigo           = &prefCodigo
+			lanestcodigo         = &lanestcodigo
+			lanestItemLocCodigo  = &lanestItemLocCodigo
+			lanestItemProdCodigo = &lanestItemProdCodigo
+			lanestItemQuantidade = &lanestItemQuantidade
+			lanestItemObservacao = &lanestItemObservacao
+			lanestItemValidade   = &lanestItemValidade
+			//lanestItemAlteracao  = servernow()
+
+			lanestItemCadastro   = servernow()
+			lanestItemUserName   = &WWPContext.locCodigo.ToString()
+			lanestItemStatus     =  Status.Ativo
+			PRCDAtualiarEstoqueUE(&prefCodigo,&lanestItemLocCodigo,&lanestItemProdCodigo,&lanestItemQuantidade,'E',0,'Unidade')
+			&AdmLogDad          += ' - Qtde Anterior: 0,00'
+		endNew
+	endif
+endFor
+
+PRC_AliEscGravaLog(&AdmLogCha, &Pgmname, &Mode, &AdmLogDad)
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo, 
+	 in:&lanestcodigo, 
+	 in:&lanestItemLocCodigo, 
+	 in:&lanestItemProdCodigo, 
+	 in:&lanestItemQuantidade,
+	 in:&lanestItemObservacao,
+	 in:&lanestItemValidade);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="lanestItemQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>lanest Item Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestItemLocCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemLocCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>lanest Item Loc Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemLocCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestcodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestcodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Lançamento</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestcodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestItemObservacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemObservacao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Observação</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestItemProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>lanest Item Prod Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestItemValidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Data de Validade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemValidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="atualizado">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>atualizado</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogCha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogCha</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Chave</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogCha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogDad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogDad</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Dados</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogDad</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Local Nome</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDSalvarItemLancamentoEstoque</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Salvar Item Lancamento Estoque</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

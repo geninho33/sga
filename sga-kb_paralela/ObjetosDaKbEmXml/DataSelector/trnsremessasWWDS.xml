@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="3dd66774-ecbd-0d23-49e1-c86d1f8e737d" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-06-27T03:53:15.0000000Z" checksum="5bd20aba592ffa476f68ee585fa0a408" fullyQualifiedName="trnsremessasWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1485cfb2-2511-47cc-8642-212eb2841390" name="trnsremessasWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsremessas WWDS" parent="WorkWithPlustrnsremessas" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[remCodigo = &remCodigo1 when &DynamicFiltersSelector1 = !'REMCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &remCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro >= &remCadastro1 when &DynamicFiltersSelector1 = !'REMCADASTRO' AND &DynamicFiltersOperator1 = 0 AND (not &remCadastro1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro <= &remCadastro_To1 when &DynamicFiltersSelector1 = !'REMCADASTRO' AND &DynamicFiltersOperator1 = 0 AND (not &remCadastro_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remStatus = &remStatus1 when &DynamicFiltersSelector1 = !'REMSTATUS' AND (not &remStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCodigo = &remCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &remCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro >= &remCadastro2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMCADASTRO' AND &DynamicFiltersOperator2 = 0 AND (not &remCadastro2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro <= &remCadastro_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMCADASTRO' AND &DynamicFiltersOperator2 = 0 AND (not &remCadastro_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remStatus = &remStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMSTATUS' AND (not &remStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCodigo = &remCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &remCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro >= &remCadastro3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMCADASTRO' AND &DynamicFiltersOperator3 = 0 AND (not &remCadastro3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro <= &remCadastro_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMCADASTRO' AND &DynamicFiltersOperator3 = 0 AND (not &remCadastro_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remStatus = &remStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMSTATUS' AND (not &remStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCodigo >= &TFremCodigo when not &TFremCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCodigo <= &TFremCodigo_To when not &TFremCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro >= &TFremCadastro when not &TFremCadastro.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCadastro <= &TFremCadastro_To when not &TFremCadastro_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo1.ToLower() like &TFremPeriodo1.ToLower() when &TFremPeriodo1_Sel.IsEmpty() AND (not &TFremPeriodo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo1 = &TFremPeriodo1_Sel when not &TFremPeriodo1_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo2.ToLower() like &TFremPeriodo2.ToLower() when &TFremPeriodo2_Sel.IsEmpty() AND (not &TFremPeriodo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo2 = &TFremPeriodo2_Sel when not &TFremPeriodo2_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo3.ToLower() like &TFremPeriodo3.ToLower() when &TFremPeriodo3_Sel.IsEmpty() AND (not &TFremPeriodo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo3 = &TFremPeriodo3_Sel when not &TFremPeriodo3_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo4.ToLower() like &TFremPeriodo4.ToLower() when &TFremPeriodo4_Sel.IsEmpty() AND (not &TFremPeriodo4.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo4 = &TFremPeriodo4_Sel when not &TFremPeriodo4_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo5.ToLower() like &TFremPeriodo5.ToLower() when &TFremPeriodo5_Sel.IsEmpty() AND (not &TFremPeriodo5.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remPeriodo5 = &TFremPeriodo5_Sel when not &TFremPeriodo5_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remStatus in &TFremStatus_Sels when &TFremStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremCadastro">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremCadastro</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremCadastro_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremCadastro_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo1_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo1_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo2_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo2_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo3_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo3_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo4">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo4</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo4</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo4_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo4_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo4</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo5">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo5</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo5</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremPeriodo5_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremPeriodo5_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remPeriodo5</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCadastro1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCadastro1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCadastro_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCadastro_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCadastro2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCadastro2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCadastro_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCadastro_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCadastro3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCadastro3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCadastro_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCadastro_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCodigo1</Name>
+        <Description>rem Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCadastro1</Name>
+        <Description>rem Cadastro1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCadastro_To1</Name>
+        <Description>rem Cadastro_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remStatus1</Name>
+        <Description>rem Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCodigo2</Name>
+        <Description>rem Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCadastro2</Name>
+        <Description>rem Cadastro2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCadastro_To2</Name>
+        <Description>rem Cadastro_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remStatus2</Name>
+        <Description>rem Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCodigo3</Name>
+        <Description>rem Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCadastro3</Name>
+        <Description>rem Cadastro3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCadastro_To3</Name>
+        <Description>rem Cadastro_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remStatus3</Name>
+        <Description>rem Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremCodigo</Name>
+        <Description>TFrem Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremCodigo_To</Name>
+        <Description>TFrem Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremCadastro</Name>
+        <Description>TFrem Cadastro</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremCadastro_To</Name>
+        <Description>TFrem Cadastro_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo1</Name>
+        <Description>TFrem Periodo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo1_Sel</Name>
+        <Description>TFrem Periodo1_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo2</Name>
+        <Description>TFrem Periodo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo2_Sel</Name>
+        <Description>TFrem Periodo2_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo3</Name>
+        <Description>TFrem Periodo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo3_Sel</Name>
+        <Description>TFrem Periodo3_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo4</Name>
+        <Description>TFrem Periodo4</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo4_Sel</Name>
+        <Description>TFrem Periodo4_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo5</Name>
+        <Description>TFrem Periodo5</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremPeriodo5_Sel</Name>
+        <Description>TFrem Periodo5_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremStatus_Sels</Name>
+        <Description>TFrem Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsremessasWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsremessas</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,2246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="324d115f-c1da-7d4f-57e6-2d1c2bda6687" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-05T05:49:41.0000000Z" lastUpdate="2025-10-05T04:20:44.0000000Z" checksum="deda0c6973042700ba71da05454cc18f" fullyQualifiedName="trnsprefeiturasWW" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1f053d67-f82d-40dc-b691-24acf925e587" name="trnsprefeiturasWW" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description=" Prefeitura" parent="WorkWithPlustrnsprefeituras" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_FilterOptions&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableHeader" tableType="Flex" flexDirection="Column" containerSlotName="TableHeader"><row><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableActions" tableType="Flex"><row><cell flexGrow="0"><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell><cell flexGrow="0"><table controlName="TableRightHeader" tableType="Flex" flexWrap="Wrap"><row><cell cellClass="CellAlignTopPaddingTop2"><ucw gxControlType="1204120062" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;ddo_ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconType&lt;/Name&gt;&lt;Value&gt;FontIcon&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Icon&lt;/Name&gt;&lt;Value&gt;fas fa-filter&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Tooltip&lt;/Name&gt;&lt;Value&gt;WWP_ManageFiltersTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ManageFiltersData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><table controlName="TableFilters"><row><cell><table controlName="TableDynamicFilters" class="TableDynamicFiltersFlex" tableType="Flex" flexDirection="Column"><row><cell cellClass="DynRowVisible"><table controlName="TableDynamicFiltersRow1" tableType="Flex"><row><cell><textblock controlName="DynamicFiltersPrefix1" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell><data attribute="&amp;DynamicFiltersSelector1" labelPosition="None" class="Attribute" /></cell><cell><textblock controlName="DynamicFiltersMiddle1" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell><table controlName="TableMergedDynamicFilters1" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_PrefMunicipio1_Cell"><data attribute="&amp;PrefMunicipio1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_prefNome1_Cell"><data attribute="&amp;prefNome1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_prefCNPJ1_Cell"><data attribute="&amp;prefCNPJ1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter1_Cell"><image controlName="AddDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter1_Cell"><image controlName="RemoveDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow2" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix2" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector2" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle2" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters2" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_PrefMunicipio2_Cell"><data attribute="&amp;PrefMunicipio2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_prefNome2_Cell"><data attribute="&amp;prefNome2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_prefCNPJ2_Cell"><data attribute="&amp;prefCNPJ2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter2_Cell"><image controlName="AddDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter2_Cell"><image controlName="RemoveDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow3" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix3" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector3" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle3" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters3" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_PrefMunicipio3_Cell"><data attribute="&amp;PrefMunicipio3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_prefNome3_Cell"><data attribute="&amp;prefNome3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_prefCNPJ3_Cell"><data attribute="&amp;prefCNPJ3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_RemoveFilter3_Cell"><image controlName="RemoveDynamicFilters3" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters3'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="GridTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithPaginationBar GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;trnsprefeituras&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;prefCodigo  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo)  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefNome  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefNome)  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCNPJ  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCNPJ)  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = True&#xD;&#xA;PrefMunicipio  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(PrefMunicipio)  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefEstado  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefEstado)  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefTelefone  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefTelefone)  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefContato  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefContato)  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefStatus  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefStatus)  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-trnsprefeiturasWWDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;DynamicFiltersSelector1, &amp;amp;DynamicFiltersOperator1, &amp;amp;PrefMunicipio1, &amp;amp;prefNome1, &amp;amp;prefCNPJ1, &amp;amp;DynamicFiltersEnabled2, &amp;amp;DynamicFiltersSelector2, &amp;amp;DynamicFiltersOperator2, &amp;amp;PrefMunicipio2, &amp;amp;prefNome2, &amp;amp;prefCNPJ2, &amp;amp;DynamicFiltersEnabled3, &amp;amp;DynamicFiltersSelector3, &amp;amp;DynamicFiltersOperator3, &amp;amp;PrefMunicipio3, &amp;amp;prefNome3, &amp;amp;prefCNPJ3, &amp;amp;TFprefCodigo, &amp;amp;TFprefCodigo_To, &amp;amp;TFprefNome, &amp;amp;TFprefNome_Sel, &amp;amp;TFprefCNPJ, &amp;amp;TFprefCNPJ_Sel, &amp;amp;TFPrefMunicipio, &amp;amp;TFPrefMunicipio_Sel, &amp;amp;TFprefEstado, &amp;amp;TFprefEstado_Sel, &amp;amp;TFprefTelefone, &amp;amp;TFprefTelefone_Sel, &amp;amp;TFprefContato, &amp;amp;TFprefContato_Sel, &amp;amp;TFprefStatus_Sels&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;Update" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_update&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Delete" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefNome" titleExp="Nome" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCNPJ" titleExp="CNPJ" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefEndereco" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefComplemento" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefBairro" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="PrefMunicipio" titleExp="Municipio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigoIbge" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefEstado" titleExp="Estado" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCep" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefTelefone" titleExp="Telefone" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefContato" titleExp="Contato" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefNomeEmail" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefEmail" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefForma_gestao" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefTitular" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefDataCad" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefDataAlt" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefLogo" titleExp="Logo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefStatus" titleExp="Situacao" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="ActionGroupGrouped"><item><action controlName="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_insert&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnAGExport" caption="WWP_ExportData" class="ColumnsSelector" /></item><item><action controlName="BtnEditColumns" caption="WWP_EditColumnsCaption" class="hidden-xs" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_EditColumnsTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GXBootstrap.DDORegular ControlName="ddo_AGExport" IconType="FontIcon" Icon="fas fa-download" Caption="WWP_ExportData" DropDownOptionsData="&amp;AGExportData" Cls="ColumnsSelector" /><gxTextBlock GxFormat="HTML" id="JSDynamicFilters" CaptionExpression="JSDynamicFilters" /><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="2:prefCodigo|3:prefNome|4:prefCNPJ|8:PrefMunicipio|10:prefEstado|12:prefTelefone|13:prefContato|20:prefLogo|21:prefStatus" ColumnsSortValues="1|2|3|4|5|6|7||8" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T|T|T|T|T|T|T||T" IncludeFilter="T|T|T|T|T|T|T||" FilterType="Numeric|Character|Character|Character|Character|Character|Character||" FilterIsRange="T||||||||" IncludeDataList="|T|T|T|T|T|T||T" DataListType="|Dynamic|Dynamic|Dynamic|Dynamic|Dynamic|Dynamic||FixedValues" AllowMultipleSelection="||||||||T" DataListFixedValues="||||||||A:Ativo,I:Inativo" DataListProc="trnsprefeiturasWWGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsprefeiturasWWGetFilterData" Format="4.0||||||||" Fixable="T" /><gxInNewWindow ControlName="InNewWindow1" /><gxDVelop.GXBootstrap.DDOGridColumnsSelector ControlName="DDO_GridColumnsSelector" Caption="WWP_EditColumnsCaption" Tooltip="WWP_EditColumnsTooltip" DropDownOptionsData="&amp;ColumnsSelector" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" DropDownOptionsType="GridColumnsSelector" Cls="ColumnsSelector hidden-xs" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" HasColumnsSelector="True" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	DDO_GridColumnsSelector.GridInternalName = Grid.InternalName
+
+	If &HTTPRequest.Method = HttpMethod.Get
+		Do 'LoadSavedFilters'
+	EndIf
+
+	JSDynamicFilters.Caption = ''
+	&DynamicFiltersSelector1 = !'PREFMUNICIPIO'
+	Do 'EnableDynamicFilters1'
+	&DynamicFiltersSelector2 = !'PREFMUNICIPIO'
+	Do 'EnableDynamicFilters2'
+	&DynamicFiltersSelector3 = !'PREFMUNICIPIO'
+	Do 'EnableDynamicFilters3'
+	
+	AddDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 2, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	AddDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters3.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	ddo_AGExport.TitleControlIdToReplace = BtnAGExport.InternalName
+	&AGExportData = new()
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportCaption'
+	&AGExportDataItem.Icon = ActionExport.Link()
+	&AGExportDataItem.EventKey = !'Export'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportReportCaption'
+	&AGExportDataItem.Icon = ActionExportReport.Link()
+	&AGExportDataItem.EventKey = !'ExportReport'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = ' Prefeitura'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	If &OrderedBy < 1
+		&OrderedBy = 1
+		Do 'SetDDOSortedStatus'
+	EndIf
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	DDO_GridColumnsSelector.TitleControlIdToReplace = BtnEditColumns.InternalName
+	GridPaginationBar.RowsPerPageSelectedValue = Grid.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: LoadPrefeitura
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'CheckSecurityForActions'
+
+	Do Case
+		Case &ManageFiltersExecutionStep = 1
+			&ManageFiltersExecutionStep = 2
+		Case &ManageFiltersExecutionStep = 2
+			&ManageFiltersExecutionStep = 0
+			Do 'LoadSavedFilters'
+	EndCase
+
+	&DynamicFiltersOperator1.Clear()
+	Do Case
+		Case &DynamicFiltersSelector1 = !'PREFMUNICIPIO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'PREFNOME'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'PREFCNPJ'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+	EndCase
+	If &DynamicFiltersEnabled2
+		&DynamicFiltersOperator2.Clear()
+		Do Case
+			Case &DynamicFiltersSelector2 = !'PREFMUNICIPIO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'PREFNOME'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'PREFCNPJ'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+		EndCase
+		If &DynamicFiltersEnabled3
+			&DynamicFiltersOperator3.Clear()
+			Do Case
+				Case &DynamicFiltersSelector3 = !'PREFMUNICIPIO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'PREFNOME'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'PREFCNPJ'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+			EndCase
+		EndIf
+	EndIf
+	Do 'SaveGridState'
+
+	
+	If &Session.Get(!'trnsprefeiturasWWColumnsSelector') <> ''
+		&ColumnsSelectorXML = &Session.Get(!'trnsprefeiturasWWColumnsSelector')
+		&ColumnsSelector.FromXml(&ColumnsSelectorXML)
+	Else
+		Do 'InitializeColumnsSelector'
+	EndIf
+	prefCodigo.Visible = &ColumnsSelector.Columns.Item(1).IsVisible
+	prefNome.Visible = &ColumnsSelector.Columns.Item(2).IsVisible
+	prefCNPJ.Visible = &ColumnsSelector.Columns.Item(3).IsVisible
+	PrefMunicipio.Visible = &ColumnsSelector.Columns.Item(4).IsVisible
+	prefEstado.Visible = &ColumnsSelector.Columns.Item(5).IsVisible
+	prefTelefone.Visible = &ColumnsSelector.Columns.Item(6).IsVisible
+	prefContato.Visible = &ColumnsSelector.Columns.Item(7).IsVisible
+	prefLogo.Visible = &ColumnsSelector.Columns.Item(8).IsVisible
+	prefStatus.Visible = &ColumnsSelector.Columns.Item(9).IsVisible
+	&GridCurrentPage = Grid.CurrentPage
+	&GridPageCount = Grid.PageCount
+	&GridAppliedFilters = WWP_GetAppliedFiltersDescription(&Pgmname)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridPaginationBar.SelectedPage = !'Previous'
+			Grid.PreviousPage()
+		Case GridPaginationBar.SelectedPage = !'Next'
+			Grid.NextPage()
+		Otherwise
+			&PageToGo.FromString(GridPaginationBar.SelectedPage)
+			Grid.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = GridPaginationBar.RowsPerPageSelectedValue
+	Grid.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedBy.FromString(DDO_Grid.SelectedValue_get)
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'prefCodigo'
+					&TFprefCodigo.FromString(DDO_Grid.FilteredText_get)
+					&TFprefCodigo_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'prefNome'
+					&TFprefNome = DDO_Grid.FilteredText_get
+					&TFprefNome_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'prefCNPJ'
+					&TFprefCNPJ = DDO_Grid.FilteredText_get
+					&TFprefCNPJ_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'PrefMunicipio'
+					&TFPrefMunicipio = DDO_Grid.FilteredText_get
+					&TFPrefMunicipio_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'prefEstado'
+					&TFprefEstado = DDO_Grid.FilteredText_get
+					&TFprefEstado_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'prefTelefone'
+					&TFprefTelefone = DDO_Grid.FilteredText_get
+					&TFprefTelefone_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'prefContato'
+					&TFprefContato = DDO_Grid.FilteredText_get
+					&TFprefContato_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'prefStatus'
+					&TFprefStatus_SelsJson = DDO_Grid.SelectedValue_get
+					&TFprefStatus_Sels.FromJson(&TFprefStatus_SelsJson)
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Update = !'<i class="fa fa-pen"></i>'
+	If (&IsAuthorized_Update)
+		&Update.Link = trnsprefeituras.Link(TrnMode.Update, prefCodigo)
+	Endif
+	&Delete = !'<i class="fa fa-times"></i>'
+	If (&IsAuthorized_Delete)
+		&Delete.Link = trnsprefeituras.Link(TrnMode.Delete, prefCodigo)
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_GridColumnsSelector.OnColumnsChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ColumnsSelectorXML = DDO_GridColumnsSelector.ColumnsSelectorValues
+	&ColumnsSelector.FromJson(&ColumnsSelectorXML)
+	SaveColumnsSelectorState(!'trnsprefeiturasWWColumnsSelector', iif(&ColumnsSelectorXML.IsEmpty(), '', &ColumnsSelector.ToXml()))
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = True
+	AddDynamicFilters1.Visible = False
+	RemoveDynamicFilters1.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersIgnoreFirst = True
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	&DynamicFiltersIgnoreFirst = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector1.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled3 = True
+	AddDynamicFilters2.Visible = False
+	RemoveDynamicFilters2.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled2 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector2.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled3 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector3.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_ManageFilters.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Clean#>'
+			Do 'CleanFilters'
+			Grid.FirstPage()
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Save#>'
+			Do 'SaveGridState'
+			SaveFilterAs.Popup(!'trnsprefeiturasWWFilters', &PgmName + !"GridState")
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Manage#>'
+			ManageFilters.Popup(!'trnsprefeiturasWWFilters')
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Otherwise
+			&ManageFiltersXml = GetFilterByName(!'trnsprefeiturasWWFilters', ddo_ManageFilters.ActiveEventKey)
+			If &ManageFiltersXml.IsEmpty()
+				msg('WWP_FilterNotExist')
+			Else
+				Do 'CleanFilters'
+				SaveGridState.Call(&PgmName + !"GridState",  &ManageFiltersXml)
+				&GridState.FromXml(&ManageFiltersXml)
+				&OrderedBy = &GridState.OrderedBy
+				&OrderedDsc = &GridState.OrderedDsc
+				Do 'SetDDOSortedStatus' 
+				Do 'LoadRegFiltersState'
+				Do 'LoadDynFiltersState'
+				Grid.FirstPage()
+			EndIf
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoInsert'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		trnsprefeituras.Call(TrnMode.Insert, nullvalue(prefCodigo))
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_AGExport.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_AGExport.ActiveEventKey = !'Export'
+			Do 'DoExport'
+		Case ddo_AGExport.ActiveEventKey = !'ExportReport'
+			Do 'DoExportReport'
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = &OrderedBy.ToString().Trim() + !':' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'InitializeColumnsSelector'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ColumnsSelector = new WWPColumnsSelector()
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefCodigo", '', !'Código', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefNome", '', !'Nome', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefCNPJ", '', !'CNPJ', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"PrefMunicipio", '', !'Municipio', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefEstado", '', !'Estado', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefTelefone", '', !'Telefone', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefContato", '', !'Contato', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefLogo", '', !'Logo', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"prefStatus", '', !'Situacao', True, '')
+		
+	&UserCustomValue = LoadColumnsSelectorState.Udp(!'trnsprefeiturasWWColumnsSelector')
+	If not(&UserCustomValue.IsEmpty())
+		&ColumnsSelectorAux.FromXml(&UserCustomValue)
+		WWP_ColumnSelector_UpdateColumns(&ColumnsSelectorAux, &ColumnsSelector)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&IsAuthorized_Update = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsprefeiturasww_Update')
+	If not (&IsAuthorized_Update)
+		&Update.Visible = False
+	Endif 
+	&IsAuthorized_Delete = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsprefeiturasww_Delete')
+	If not (&IsAuthorized_Delete)
+		&Delete.Visible = False
+	Endif 
+	&IsAuthorized_Insert = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsprefeiturasww_Insert')
+	If not (&IsAuthorized_Insert)
+		BtnInsert.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&PrefMunicipio1.Visible = False
+	&prefNome1.Visible = False
+	&prefCNPJ1.Visible = False
+	&DynamicFiltersOperator1.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector1 = !'PREFMUNICIPIO'
+		&PrefMunicipio1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PREFNOME'
+		&prefNome1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PREFCNPJ'
+		&prefCNPJ1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&PrefMunicipio2.Visible = False
+	&prefNome2.Visible = False
+	&prefCNPJ2.Visible = False
+	&DynamicFiltersOperator2.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector2 = !'PREFMUNICIPIO'
+		&PrefMunicipio2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PREFNOME'
+		&prefNome2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PREFCNPJ'
+		&prefCNPJ2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&PrefMunicipio3.Visible = False
+	&prefNome3.Visible = False
+	&prefCNPJ3.Visible = False
+	&DynamicFiltersOperator3.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector3 = !'PREFMUNICIPIO'
+		&PrefMunicipio3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PREFNOME'
+		&prefNome3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PREFCNPJ'
+		&prefCNPJ3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'ResetDynFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = False
+	&DynamicFiltersSelector2 = !'PREFMUNICIPIO'
+	&DynamicFiltersOperator2 = 0
+	&PrefMunicipio2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	&DynamicFiltersEnabled3 = False
+	&DynamicFiltersSelector3 = !'PREFMUNICIPIO'
+	&DynamicFiltersOperator3 = 0
+	&PrefMunicipio3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadSavedFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ManageFiltersData = WWP_ManageFiltersLoadSavedFilters(!'trnsprefeiturasWWFilters', !"WWPDynFilterHideAll_AL('%1', 3, 0)", TableDynamicFilters.InternalName, False)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CleanFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TFprefCodigo.SetEmpty()
+	&TFprefCodigo_To.SetEmpty()
+	&TFprefNome.SetEmpty()
+	&TFprefNome_Sel.SetEmpty()
+	&TFprefCNPJ.SetEmpty()
+	&TFprefCNPJ_Sel.SetEmpty()
+	&TFPrefMunicipio.SetEmpty()
+	&TFPrefMunicipio_Sel.SetEmpty()
+	&TFprefEstado.SetEmpty()
+	&TFprefEstado_Sel.SetEmpty()
+	&TFprefTelefone.SetEmpty()
+	&TFprefTelefone_Sel.SetEmpty()
+	&TFprefContato.SetEmpty()
+	&TFprefContato_Sel.SetEmpty()
+	&TFprefStatus_Sels = new()
+	DDO_Grid.SelectedValue_set = ''
+	DDO_Grid.FilteredText_set = ''
+	DDO_Grid.FilteredTextTo_set = ''
+
+	&DynamicFiltersSelector1 = !'PREFMUNICIPIO'
+	&DynamicFiltersOperator1 = 0
+	&PrefMunicipio1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+	Do 'ResetDynFilters'
+	&GridState.DynamicFilters.Clear()
+	Do 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+
+	&OrderedBy = &GridState.OrderedBy
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+	Do 'LoadRegFiltersState'
+	Do 'LoadDynFiltersState'
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadRegFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"TFPREFCODIGO"
+				&TFprefCodigo.FromString(&GridStateFilterValue.Value)
+				&TFprefCodigo_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFPREFNOME"
+				&TFprefNome.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFNOME_SEL"
+				&TFprefNome_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFCNPJ"
+				&TFprefCNPJ.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFCNPJ_SEL"
+				&TFprefCNPJ_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFMUNICIPIO"
+				&TFPrefMunicipio.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFMUNICIPIO_SEL"
+				&TFPrefMunicipio_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFESTADO"
+				&TFprefEstado.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFESTADO_SEL"
+				&TFprefEstado_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFTELEFONE"
+				&TFprefTelefone.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFTELEFONE_SEL"
+				&TFprefTelefone_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFCONTATO"
+				&TFprefContato.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFCONTATO_SEL"
+				&TFprefContato_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPREFSTATUS_SEL"
+				&TFprefStatus_SelsJson = &GridStateFilterValue.Value
+				&TFprefStatus_Sels.FromJson(&TFprefStatus_SelsJson)
+		EndCase
+	EndFor
+	DDO_Grid.SelectedValue_set = !'|' + WWP_GetFilterVal(&TFprefNome_Sel.IsEmpty(), &TFprefNome_Sel) + !'|' + WWP_GetFilterVal(&TFprefCNPJ_Sel.IsEmpty(), &TFprefCNPJ_Sel) + !'|' + WWP_GetFilterVal(&TFPrefMunicipio_Sel.IsEmpty(), &TFPrefMunicipio_Sel) + !'|' + WWP_GetFilterVal(&TFprefEstado_Sel.IsEmpty(), &TFprefEstado_Sel) + !'|' + WWP_GetFilterVal(&TFprefTelefone_Sel.IsEmpty(), &TFprefTelefone_Sel) + !'|' + WWP_GetFilterVal(&TFprefContato_Sel.IsEmpty(), &TFprefContato_Sel) + !'||' + WWP_GetFilterVal(&TFprefStatus_Sels.Count = 0, &TFprefStatus_SelsJson)
+	DDO_Grid.FilteredText_set = iif(&TFprefCodigo.IsEmpty(), '', &TFprefCodigo.ToString()) + !'|' + WWP_GetFilterVal(&TFprefNome.IsEmpty(), &TFprefNome) + !'|' + WWP_GetFilterVal(&TFprefCNPJ.IsEmpty(), &TFprefCNPJ) + !'|' + WWP_GetFilterVal(&TFPrefMunicipio.IsEmpty(), &TFPrefMunicipio) + !'|' + WWP_GetFilterVal(&TFprefEstado.IsEmpty(), &TFprefEstado) + !'|' + WWP_GetFilterVal(&TFprefTelefone.IsEmpty(), &TFprefTelefone) + !'|' + WWP_GetFilterVal(&TFprefContato.IsEmpty(), &TFprefContato) + !'||'
+	DDO_Grid.FilteredTextTo_set = iif(&TFprefCodigo_To.IsEmpty(), '', &TFprefCodigo_To.ToString()) + !'||||||||'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	AddDynamicFilters1.Visible = True
+	RemoveDynamicFilters1.Visible = False
+	AddDynamicFilters2.Visible = True
+	RemoveDynamicFilters2.Visible = False
+
+	If &GridState.DynamicFilters.Count >= 1
+		&GridStateDynamicFilter = &GridState.DynamicFilters.Item(1)
+		&DynamicFiltersSelector1 = &GridStateDynamicFilter.Selected
+		Do Case
+			Case &DynamicFiltersSelector1 = !'PREFMUNICIPIO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&PrefMunicipio1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PREFNOME'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&prefNome1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PREFCNPJ'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&prefCNPJ1.FromString(&GridStateDynamicFilter.Value)
+		EndCase
+		Do 'EnableDynamicFilters1'
+			If &GridState.DynamicFilters.Count >= 2
+				JSDynamicFilters.Caption = !'<script type="text/javascript">$(document).ready(function() {'
+				JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 2, 0);", TableDynamicFilters.InternalName)
+				AddDynamicFilters1.Visible = False
+				RemoveDynamicFilters1.Visible = True
+				&DynamicFiltersEnabled2 = True
+				&GridStateDynamicFilter = &GridState.DynamicFilters.Item(2)
+				&DynamicFiltersSelector2 = &GridStateDynamicFilter.Selected
+				Do Case
+					Case &DynamicFiltersSelector2 = !'PREFMUNICIPIO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&PrefMunicipio2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PREFNOME'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&prefNome2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PREFCNPJ'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&prefCNPJ2.FromString(&GridStateDynamicFilter.Value)
+				EndCase
+				Do 'EnableDynamicFilters2'
+				If &GridState.DynamicFilters.Count >= 3
+					JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 3, 0);", TableDynamicFilters.InternalName)
+					AddDynamicFilters2.Visible = False
+					RemoveDynamicFilters2.Visible = True
+					&DynamicFiltersEnabled3 = True
+					&GridStateDynamicFilter = &GridState.DynamicFilters.Item(3)
+					&DynamicFiltersSelector3 = &GridStateDynamicFilter.Selected
+					Do Case
+						Case &DynamicFiltersSelector3 = !'PREFMUNICIPIO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&PrefMunicipio3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PREFNOME'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&prefNome3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PREFCNPJ'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&prefCNPJ3.FromString(&GridStateDynamicFilter.Value)
+					EndCase
+					Do 'EnableDynamicFilters3'
+				EndIf
+				JSDynamicFilters.Caption += !'});</script>'
+			EndIf
+	EndIf
+	If &DynamicFiltersRemoving
+		JSDynamicFilters.Caption = ''
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedBy = &OrderedBy
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValue(&GridState, !"TFPREFCODIGO", "Código", not (&TFprefCodigo.IsEmpty() AND &TFprefCodigo_To.IsEmpty()), 0, &TFprefCodigo.ToString().Trim(), iif(&TFprefCodigo.IsEmpty(), '', trim(&TFprefCodigo.ToFormattedString())), True, &TFprefCodigo_To.ToString().Trim(), iif(&TFprefCodigo_To.IsEmpty(), '', trim(&TFprefCodigo_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPREFNOME", "Nome", not &TFprefNome.IsEmpty(), 0, &TFprefNome, &TFprefNome, False, '', '', not &TFprefNome_Sel.IsEmpty(), &TFprefNome_Sel, &TFprefNome_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPREFCNPJ", "CNPJ", not &TFprefCNPJ.IsEmpty(), 0, &TFprefCNPJ, &TFprefCNPJ, False, '', '', not &TFprefCNPJ_Sel.IsEmpty(), &TFprefCNPJ_Sel, &TFprefCNPJ_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPREFMUNICIPIO", "Municipio", not &TFPrefMunicipio.IsEmpty(), 0, &TFPrefMunicipio, &TFPrefMunicipio, False, '', '', not &TFPrefMunicipio_Sel.IsEmpty(), &TFPrefMunicipio_Sel, &TFPrefMunicipio_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPREFESTADO", "Estado", not &TFprefEstado.IsEmpty(), 0, &TFprefEstado, &TFprefEstado, False, '', '', not &TFprefEstado_Sel.IsEmpty(), &TFprefEstado_Sel, &TFprefEstado_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPREFTELEFONE", "Telefone", not &TFprefTelefone.IsEmpty(), 0, &TFprefTelefone, &TFprefTelefone, False, '', '', not &TFprefTelefone_Sel.IsEmpty(), &TFprefTelefone_Sel, &TFprefTelefone_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPREFCONTATO", "Contato", not &TFprefContato.IsEmpty(), 0, &TFprefContato, &TFprefContato, False, '', '', not &TFprefContato_Sel.IsEmpty(), &TFprefContato_Sel, &TFprefContato_Sel)
+	&AuxText = iif(&TFprefStatus_Sels.Count = 1, !'[' + &TFprefStatus_Sels.Item(1) + !']', 'WWP_FilterValueDescription_MultipleValues')
+	WWP_GridStateAddFilterValue(&GridState, !"TFPREFSTATUS_SEL", "Situacao", not &TFprefStatus_Sels.Count = 0, 0, &TFprefStatus_Sels.ToJson(), iif(&AuxText = '', '', &AuxText.Replace(!"[A]", "Ativo").Replace(!"[I]", "Inativo")), False, '', '')
+
+	Do 'SaveDynFiltersState'
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.DynamicFilters.Clear()
+	If not &DynamicFiltersIgnoreFirst
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector1
+		Do Case
+			Case &DynamicFiltersSelector1 = !'PREFMUNICIPIO' AND not &PrefMunicipio1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Municipio", &DynamicFiltersOperator1, &PrefMunicipio1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &PrefMunicipio1, "WWP_FilterContains" + !' ' + &PrefMunicipio1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PREFNOME' AND not &prefNome1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Nome", &DynamicFiltersOperator1, &prefNome1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &prefNome1, "WWP_FilterContains" + !' ' + &prefNome1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PREFCNPJ' AND not &prefCNPJ1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "CNPJ", &DynamicFiltersOperator1, &prefCNPJ1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &prefCNPJ1, "WWP_FilterContains" + !' ' + &prefCNPJ1), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled2
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector2
+		Do Case
+			Case &DynamicFiltersSelector2 = !'PREFMUNICIPIO' AND not &PrefMunicipio2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Municipio", &DynamicFiltersOperator2, &PrefMunicipio2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &PrefMunicipio2, "WWP_FilterContains" + !' ' + &PrefMunicipio2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PREFNOME' AND not &prefNome2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Nome", &DynamicFiltersOperator2, &prefNome2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &prefNome2, "WWP_FilterContains" + !' ' + &prefNome2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PREFCNPJ' AND not &prefCNPJ2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "CNPJ", &DynamicFiltersOperator2, &prefCNPJ2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &prefCNPJ2, "WWP_FilterContains" + !' ' + &prefCNPJ2), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled3
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector3
+		Do Case
+			Case &DynamicFiltersSelector3 = !'PREFMUNICIPIO' AND not &PrefMunicipio3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Municipio", &DynamicFiltersOperator3, &PrefMunicipio3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &PrefMunicipio3, "WWP_FilterContains" + !' ' + &PrefMunicipio3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PREFNOME' AND not &prefNome3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Nome", &DynamicFiltersOperator3, &prefNome3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &prefNome3, "WWP_FilterContains" + !' ' + &prefNome3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PREFCNPJ' AND not &prefCNPJ3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "CNPJ", &DynamicFiltersOperator3, &prefCNPJ3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &prefCNPJ3, "WWP_FilterContains" + !' ' + &prefCNPJ3), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"trnsprefeituras"
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate Excel spreadsheet and download it.
+	Do 'LoadGridState'
+	trnsprefeiturasWWExport.Call(&ExcelFilename, &ErrorMessage)
+	If (&ExcelFilename <> "")
+		Link(&ExcelFilename)
+	Else
+		msg(&ErrorMessage)
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExportReport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate PDF file.
+	Do 'LoadGridState'
+	InNewWindow1.Target = trnsprefeiturasWWExportReport.Link()
+	InNewWindow1.Height = !'600'
+	InNewWindow1.Width = !'800'
+	InNewWindow1.OpenWindow()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateDynamicFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateDynamicFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.DynamicFilter, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedByAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedByAux</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Municipio:PREFMUNICIPIO,Nome:PREFNOME,CNPJ:PREFCNPJ</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator1</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PrefMunicipio1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PrefMunicipio1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:PrefMunicipio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefNome1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefNome1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCNPJ1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCNPJ1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCNPJ</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Municipio:PREFMUNICIPIO,Nome:PREFNOME,CNPJ:PREFCNPJ</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator2</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PrefMunicipio2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PrefMunicipio2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:PrefMunicipio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefNome2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefNome2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCNPJ2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCNPJ2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCNPJ</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Municipio:PREFMUNICIPIO,Nome:PREFNOME,CNPJ:PREFCNPJ</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator3</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PrefMunicipio3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PrefMunicipio3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:PrefMunicipio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefNome3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefNome3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCNPJ3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCNPJ3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCNPJ</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersRemoving">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersRemoving</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersIgnoreFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersIgnoreFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelFilename">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelFilename</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>512</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>512</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorXML">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorXML</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserCustomValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserCustomValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelector">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelector</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorAux</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersXml">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersXml</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersExecutionStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersExecutionStep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefNome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefNome_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefNome_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCNPJ">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCNPJ</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCNPJ</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCNPJ_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCNPJ_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCNPJ</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFPrefMunicipio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFPrefMunicipio</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:PrefMunicipio</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFPrefMunicipio_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFPrefMunicipio_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:PrefMunicipio</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefEstado">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefEstado</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefEstado</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefEstado_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefEstado_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefEstado</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefTelefone">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefTelefone</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefTelefone</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefTelefone_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefTelefone_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefTelefone</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefContato">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefContato</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefContato</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefContato_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefContato_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefContato</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefEmail">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefEmail</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefEmail</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefEmail_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefEmail_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefEmail</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefTitular">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefTitular</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefTitular</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefTitular_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefTitular_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefTitular</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefStatus">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefStatus</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefStatus</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefStatus_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefStatus_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefStatus</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_prefNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_prefNome</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportDataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportDataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Insert">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Insert</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefStatus_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefStatus_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefStatus_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefStatus_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefStatus</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuxText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuxText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsprefeiturasWW</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value> Prefeitura</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsprefeituras</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>Selection</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="5842abd9-f10e-4bf9-a216-7b917e78374f" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-08-10T06:29:48.0000000Z" lastUpdate="2025-08-09T04:37:15.0000000Z" checksum="716624cc5538538f88a0ad60e59e66a2" fullyQualifiedName="WorkWithPlusWPRelatorioDistribuicaoProduto" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c37e1c89-d31f-401c-976a-5150f35771d0" name="WorkWithPlusWPRelatorioDistribuicaoProduto" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPRelatorio Distribuicao Produto" parent="WPRelatorioDistribuicaoProduto" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPRelatorioDistribuicao" defaultSecFuntionKey="WPRelatorioDistribuicao" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table name="cPanelOpcoes" numberOfColumns="2" numberOfColumns_E="0" type="Responsive" includeInPanel="True" panelTitle="Opções de Impressão" cellWidth_E="83%" cellWidth_S="83%" cellWidth_M="83%" cellWidth_L="83%" mergeWithPrevious="False">
+        <table name="groupFiltro" isGroup="True" numberOfColumns="1" type="Responsive" title="Produtos" cellWidth_E="50%" cellWidth_S="50%" cellWidth_M="50%" cellWidth_L="50%">
+          <grid name="GridSDTProdutoss" pagingType="Infinite scrolling (grid scroll bar)" SDTCollection="&amp;SDTProdutos">
+            <gridVariable name="SDTProdutos" description="Seleção" defaultDescription="check" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" readOnly="False" sdtItem="item(0).check" defaultSdtItem="item(0).check" />
+            <gridVariable name="SDTProdutos" description="Descrição" defaultDescription="Descrição" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).prodDescricao" defaultSdtItem="item(0).prodDescricao" />
+            <gridVariable name="SDTProdutos" description="Unidade" defaultDescription="UNDistribuicao" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).UNDistribuicao" defaultSdtItem="item(0).UNDistribuicao" />
+          </grid>
+        </table>
+        <table name="tableAuxiliar" numberOfColumns="1" type="Responsive" cellWidth_S="50%">
+          <table name="groupPeriodo" isGroup="True" numberOfColumns="1" type="Responsive" title="Periodo" cellWidth_E="50%" cellWidth_S="50%">
+            <variable name="dataIncial" description="Data Inicial: " defaultDescription="Data Inicial: " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" defaultControlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" descriptionWidth="33%" defaultDescriptionWidth="12%" />
+            <variable name="dataFinal" description="Data Final" defaultDescription="Data Final" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" basicCLength="1" defaultBasicCLength="1" controlInfoDef="Based on" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" defaultControlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" controlType="Edit" defaultControlType="Edit" controlValues="Todas:T,Entrada:E,Saida:S" defaultControlValues="Todas:T,Entrada:E,Saida:S" descriptionWidth="33%" defaultDescriptionWidth="12%" />
+          </table>
+          <table name="groupRota" isGroup="True" numberOfColumns="1" type="Responsive" title="Rota " cellWidth_E="50%" cellWidth_S="50%">
+            <variable name="rotaCodigo" description="Rota " defaultDescription="Rota " dataType="Basic" defaultDataType="Basic" basicLength="8" defaultBasicLength="8" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-rotaCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-rotaCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-rotaDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-rotaDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;rotaStatus = 'A';" defaultConditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;rotaStatus = 'A';" controlEmptyItem="True" defaultControlEmptyItem="True" controlEmptyItemText="Todas" defaultControlEmptyItemText="Todas" showDescription="False" descriptionWidth="12%" defaultDescriptionWidth="12%" />
+            <variable name="localDestino" description="Local (Destino)" defaultDescription="Local (Destino)" dataType="Basic" defaultDataType="Basic" basicLength="8" defaultBasicLength="8" visibleCondition="&amp;rotaCodigo=0" defaultVisibleCondition="&amp;rotaCodigo=0" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;locStatus = 'A';" defaultConditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;locStatus = 'A';" controlEmptyItem="True" defaultControlEmptyItem="True" controlEmptyItemText="Todos" defaultControlEmptyItemText="Todos" rightText="* Só é possível lançar o local, quando não tiver ROTA." defaultRightText="* Só é possível lançar o local, quando não tiver ROTA." cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" descriptionWidth="12%" defaultDescriptionWidth="12%" />
+          </table>
+        </table>
+        <userAction caption="Imprimir" name="btnImprimir" />
+      </table>
+      <userControl controlName="NovaAba" ucName="InNewWindow" ucId="-667710712" />
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPRelatorioDistribuicaoProduto</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPRelatorioDistribuicaoProduto</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

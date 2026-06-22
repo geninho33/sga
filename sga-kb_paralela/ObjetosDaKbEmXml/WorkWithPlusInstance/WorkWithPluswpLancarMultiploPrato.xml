@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f9a2dcf0-52e0-4618-aa18-8e487756f827" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-03-06T03:46:01.0000000Z" lastUpdate="2026-03-06T03:27:03.0000000Z" checksum="27af2e9ad86d1d5a0b8e1b56c5f687f5" fullyQualifiedName="WorkWithPluswpLancarMultiploPrato" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="feb18460-041c-0e83-1e10-887f55ac675a" name="WorkWithPluswpLancarMultiploPrato" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Pluswp Lancar Multiplo Prato" parent="wpLancarMultiploPrato" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="wpLancarMultiploPrato" defaultSecFuntionKey="wpLancarMultiploPrato" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" cellWidth_E="100%" cellWidth_S="100%">
+        <table name="cPanel" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Informações Gerais" cellWidth_E="100%" cellWidth_S="100%">
+          <variable name="carPratoRefeicao" description="Refeição " defaultDescription="Refeição ( código do Prato)" domain="adbb33c9-0906-4971-833c-998de27e0676-carPratoRefeicao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-carPratoRefeicao" controlInfoDef="Custom" controlType="DVelop Combo" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-pratoCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-pratoDscricao50" conditions="prefCodigo=&amp;prefCodigo and pratoStatus = 'A';" />
+          <variable name="carPratoTurno" description="Turno" defaultDescription="Turno" domain="adbb33c9-0906-4971-833c-998de27e0676-carPratoTurno" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-carPratoTurno" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-refTipCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-refTipDescricao" conditions="prefCodigo=&amp;prefCodigo and refTipStatus = 'A';" />
+          <grid name="GridSDTDiasMess" page="&lt;unlimited&gt;" pagingType="&lt;default&gt;" SDTCollection="&amp;SDTDiasMes">
+            <gridVariable name="SDTDiasMes" description="Seleção" defaultDescription="ok" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" width="50" readOnly="False" sdtItem="item(0).ok" defaultSdtItem="item(0).ok" />
+            <gridVariable name="SDTDiasMes" description="Semana" defaultDescription="Semana" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" sdtItem="item(0).EhFinalSemana" defaultSdtItem="item(0).EhFinalSemana" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" />
+            <gridVariable name="SDTDiasMes" description="Data" defaultDescription="Data" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" sdtItem="item(0).Data" defaultSdtItem="item(0).Data" />
+            <gridVariable name="SDTDiasMes" description="Dia Semana" defaultDescription="Dia Semana" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTDiasMes" sdtItem="item(0).DiaSemana" defaultSdtItem="item(0).DiaSemana" />
+          </grid>
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" name="ActionGroup1">
+        <userAction caption="Confirmar" name="actionConfirmar" />
+        <userAction caption="Fechar" ControlType="Button" name="actionFechar" />
+      </actionGroup>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPluswpLancarMultiploPrato</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-wpLancarMultiploPrato</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

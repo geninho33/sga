@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:19:00.0000000Z" checksum="8126b7e65a159b0ab7946b891f01ce18" fullyQualifiedName="trnsfornecedores" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="ce8b2fea-0b9b-48f3-a856-0c3a18bc1c08" name="trnsfornecedores" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Cadastro de Fornecedor">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="a1ba8a6a-0912-1d3c-8632-6d3ce0572e26">forCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:23.0000000Z" checksum="42d26681e4f6e5f8a5f1338767984455" fullyQualifiedName="Itrnsfornecedores" moduleGuid="00000000-0000-0000-0000-000000000000" guid="9c567c23-fa88-477e-b74f-dae09904ddd1" name="Itrnsfornecedores" type="9e750647-3679-0000-0100-2529de263960" description="Itrnsfornecedores">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">forCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Itrnsfornecedores</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:23.0000000Z" checksum="32aafbdd751ce38d9cbab047a544bb59" fullyQualifiedName="Itrnsfornecedores1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="00b8cd96-2454-4bd6-850d-955098a17bb9" name="Itrnsfornecedores1" type="9e750647-3679-0000-0100-2529de263960" description="Itrnsfornecedores1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Itrnsfornecedores1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsfornecedores</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Cadastro de Fornecedor</Value>
+    </Property>
+  </Properties>
+</Object>

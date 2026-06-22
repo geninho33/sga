@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="b637907f-d239-063f-1633-344573b7ab0c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-04-08T04:20:52.0000000Z" checksum="d096188f87e11f003808e21ffef0854e" fullyQualifiedName="trnsremessaprodutoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="14d5482e-1958-4af5-85bb-ed0b7837c47d" name="trnsremessaprodutoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsremessaproduto WWDS" parent="WorkWithPlustrnsremessaproduto" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCodigo = &remCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao.ToLower() like &remProdDescricao1.ToLower() when &DynamicFiltersSelector1 = !'REMPRODDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &remProdDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao.ToLower() like '%' +  &remProdDescricao1.ToLower() when &DynamicFiltersSelector1 = !'REMPRODDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &remProdDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao.ToLower() like &remProdDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMPRODDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &remProdDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao.ToLower() like '%' +  &remProdDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMPRODDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &remProdDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao.ToLower() like &remProdDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMPRODDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &remProdDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao.ToLower() like '%' +  &remProdDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMPRODDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &remProdDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdCodigo >= &TFremProdCodigo when not &TFremProdCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdCodigo <= &TFremProdCodigo_To when not &TFremProdCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao.ToLower() like &TFremProdDescricao.ToLower() when &TFremProdDescricao_Sel.IsEmpty() AND (not &TFremProdDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdDescricao = &TFremProdDescricao_Sel when not &TFremProdDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdUnPeso.ToLower() like &TFremProdUnPeso.ToLower() when &TFremProdUnPeso_Sel.IsEmpty() AND (not &TFremProdUnPeso.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdUnPeso = &TFremProdUnPeso_Sel when not &TFremProdUnPeso_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like &TFremProdAreEnsCodigo.ToLower() when &TFremProdAreEnsCodigo_Sel.IsEmpty() AND (not &TFremProdAreEnsCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdAreEnsCodigo = &TFremProdAreEnsCodigo_Sel when not &TFremProdAreEnsCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &TFremProdAreEnsSequencial.ToLower() when &TFremProdAreEnsSequencial_Sel.IsEmpty() AND (not &TFremProdAreEnsSequencial.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdAreEnsSequencial = &TFremProdAreEnsSequencial_Sel when not &TFremProdAreEnsSequencial_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdAreEnsTurno in &TFremProdAreEnsTurno_Sels when &TFremProdAreEnsTurno_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdQtde >= &TFremProdQtde when not &TFremProdQtde.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdQtde <= &TFremProdQtde_To when not &TFremProdQtde_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdPerCapta >= &TFremProdPerCapta when not &TFremProdPerCapta.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remProdPerCapta <= &TFremProdPerCapta_To when not &TFremProdPerCapta_To.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remProdDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remProdDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remProdDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remProdDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remProdDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remProdDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdUnPeso">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdUnPeso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdUnPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdUnPeso_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdUnPeso_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdUnPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdAreEnsCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdAreEnsCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdAreEnsSequencial">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdAreEnsSequencial</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdAreEnsTurno_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdAreEnsTurno_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdAreEnsTurno</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdQtde">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdQtde</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdQtde_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdQtde_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdPerCapta">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdPerCapta</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdPerCapta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdPerCapta_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdPerCapta_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdPerCapta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdAreEnsCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdAreEnsCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdAreEnsCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremProdAreEnsSequencial_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremProdAreEnsSequencial_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remProdAreEnsSequencial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCodigo</Name>
+        <Description>rem Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remProdDescricao1</Name>
+        <Description>rem Prod Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remProdDescricao2</Name>
+        <Description>rem Prod Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remProdDescricao3</Name>
+        <Description>rem Prod Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdCodigo</Name>
+        <Description>TFrem Prod Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdCodigo_To</Name>
+        <Description>TFrem Prod Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdDescricao</Name>
+        <Description>TFrem Prod Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdDescricao_Sel</Name>
+        <Description>TFrem Prod Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdUnPeso</Name>
+        <Description>TFrem Prod Un Peso</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdUnPeso_Sel</Name>
+        <Description>TFrem Prod Un Peso_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdAreEnsCodigo</Name>
+        <Description>TFrem Prod Are Ens Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdAreEnsCodigo_Sel</Name>
+        <Description>TFrem Prod Are Ens Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdAreEnsSequencial</Name>
+        <Description>TFrem Prod Are Ens Sequencial</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdAreEnsSequencial_Sel</Name>
+        <Description>TFrem Prod Are Ens Sequencial_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdAreEnsTurno_Sels</Name>
+        <Description>TFrem Prod Are Ens Turno_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdQtde</Name>
+        <Description>TFrem Prod Qtde</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdQtde_To</Name>
+        <Description>TFrem Prod Qtde_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdPerCapta</Name>
+        <Description>TFrem Prod Per Capta</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremProdPerCapta_To</Name>
+        <Description>TFrem Prod Per Capta_To</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsremessaprodutoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsremessaproduto</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

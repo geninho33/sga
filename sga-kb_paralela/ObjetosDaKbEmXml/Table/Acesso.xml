@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-20T04:07:24.0000000Z" checksum="800d9dd0a3a8419d12fc681355b0556b" fullyQualifiedName="Acesso" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b5ee1e68-1718-41b8-8cb1-71aafc4d668b" name="Acesso" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Acesso">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="eb7d0de5-d490-4ddc-8b95-21196c04508b">Acesso_Numero</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-20T04:07:12.0000000Z" checksum="98dc227c3390c2c0ff5d237a9b8b7730" fullyQualifiedName="IAcesso" moduleGuid="00000000-0000-0000-0000-000000000000" guid="bc606368-5c10-42dd-b925-a5702a3ee37a" name="IAcesso" type="9e750647-3679-0000-0100-2529de263960" description="IAcesso">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">Acesso_Numero</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAcesso</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-20T04:07:12.0000000Z" checksum="88cb6cd9418bb119154b516438014116" fullyQualifiedName="IAcesso1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="6ea18596-69d8-42a3-a82d-0ef23f39f0fb" name="IAcesso1" type="9e750647-3679-0000-0100-2529de263960" description="IAcesso1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAcesso1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Acesso</Value>
+    </Property>
+  </Properties>
+</Object>

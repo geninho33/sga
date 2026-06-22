@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="dedd68c9-d773-4b0c-bd29-c4f1f31daa80" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-01T03:48:07.0000000Z" lastUpdate="2024-07-24T14:01:56.0000000Z" checksum="91a56db740563550282aafb163aafff6" fullyQualifiedName="WorkWithPlusWPPerguntasRespostasUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="519df214-73e8-0704-384e-3f1f3e09e082" name="WorkWithPlusWPPerguntasRespostasUE" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPPerguntas Respostas UE" parent="WPPerguntasRespostasUE" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPPerguntasRespostasUE" defaultSecFuntionKey="WPPerguntasRespostasUE" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" numberOfColumns="1" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" numberOfColumns="1" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <table name="tableDuvidas" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Informações Gerais" collapsable="False">
+          <table name="tableVariavel" numberOfColumns="1" height="" type="Responsive">
+            <variable name="perResAssunto" description="Assunto" defaultDescription="Assunto" dataType="Basic" domain="adbb33c9-0906-4971-833c-998de27e0676-perResAssunto" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-perResAssunto" basicLength="2" controlInfoDef="Based on" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-perResAssunto" controlType="Combo Box" descriptionWidth="17%" readOnly="False" isRequired="False" />
+            <variable name="perResPergunta" description="Pergunta" defaultDescription="Pergunta" dataType="Basic" domain="adbb33c9-0906-4971-833c-998de27e0676-perResPergunta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-perResPergunta" basicType="VarChar" basicCLength="500" descriptionWidth="17%" readOnly="False" />
+            <variable name="perResResposta" description="Resposta" defaultDescription="Resposta" dataType="Basic" domain="adbb33c9-0906-4971-833c-998de27e0676-perResResposta" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-perResResposta" basicType="VarChar" basicCLength="500" visibleCondition="not &amp;perResResposta.IsEmpty()" descriptionWidth="17%" readOnly="True" />
+          </table>
+          <table name="tableBotoes" numberOfColumns="2" width="300" height="100" type="Responsive">
+            <userAction caption="Confirmar" name="btnSalvar" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRCDSalvarPergunta" popup="False" confirm="True" confirmMessage="Deseja enviar a pergunta ?" confirmTitle="Enviar">
+              <parameters>
+                <parameter type="In" name="&amp;prefCodigo" />
+                <parameter type="In" name="&amp;locCodigo" />
+                <parameter type="In" name="&amp;perResAssunto" />
+                <parameter type="In" name="&amp;perResPergunta" />
+              </parameters>
+            </userAction>
+            <userAction caption="Fechar" name="btnFechar" mergeWithPrevious="False" />
+          </table>
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPPerguntasRespostasUE</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPPerguntasRespostasUE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

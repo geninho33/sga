@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e8a45d7b-15cf-4882-81b8-a563ed4784ef" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-06-17T12:18:49.0000000Z" lastUpdate="2024-06-17T00:21:33.0000000Z" checksum="0c6aaf4169189b518972524d32d27232" fullyQualifiedName="WorkWithPlusWPGeracaoRemessa" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="efb705eb-4333-0019-35b0-a354cfbd1b92" name="WorkWithPlusWPGeracaoRemessa" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPGeracao Remessa" parent="WPGeracaoRemessa" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPGeracaoRemessa" defaultSecFuntionKey="WPGeracaoRemessa" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table name="tableGeracaoRemessa" type="Responsive" includeInPanel="True" panelTitle="Geração de Remessa" cellWidth_E="83%" cellWidth_S="83%" cellWidth_M="83%" cellWidth_L="83%">
+        <variable name="remCodigo" description="Remessa Código" defaultDescription="Remessa Código" domain="adbb33c9-0906-4971-833c-998de27e0676-remCodigo" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-remCodigo" descriptionWidth="17%" defaultDescriptionWidth="17%" readOnly="True" defaultReadOnly="True" />
+        <variable name="remCadastro" description="Mês e Ano " defaultDescription="Mês e Ano " dataType="Basic" defaultDataType="Basic" basicType="Character" defaultBasicType="Character" basicCLength="7" defaultBasicCLength="7" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Edit" defaultControlType="Edit" controlValues="Mensal:M,Quinzenal:Q,Semanal:S,Periodo:P" defaultControlValues="Mensal:M,Quinzenal:Q,Semanal:S,Periodo:P" descriptionWidth="17%" defaultDescriptionWidth="17%" readOnly="True" defaultReadOnly="True" />
+        <variable name="locCodigo" description="Local de Origem" defaultDescription="Local de Origem" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" conditions="prefCodigo=&amp;prefCodigo" defaultConditions="prefCodigo=&amp;prefCodigo" descriptionWidth="17%" defaultDescriptionWidth="17%" readOnly="True" defaultReadOnly="True" />
+        <variable name="disTipNumero" description="Tipo de Remessa" defaultDescription="Tipo de Remessa" dataType="Basic" defaultDataType="Basic" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-disTipNumero" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-disTipNumero" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-disTipDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-disTipDescricao" conditions="prefCodigo=&amp;prefCodigo;&#xD;&#xA;distipStatus = 'A';" defaultConditions="prefCodigo=&amp;prefCodigo;&#xD;&#xA;distipStatus = 'A';" controlEmptyItem="False" defaultControlEmptyItem="True" descriptionWidth="17%" defaultDescriptionWidth="17%" />
+        <variable name="tipoGeracao" description="Tipo de Geração" dataType="Basic" basicType="Character" basicCLength="1" controlInfoDef="Custom" controlType="Combo Box" controlValues="Previsão de Compra:P,Distribuição:D,Previsão de Compra&#x9; e Distribuição:T" descriptionWidth="17%" />
+        <table name="grupoPeriodo" isGroup="True" numberOfColumns="1" type="Responsive" title="Período  " cellWidth_E="75%" cellWidth_S="75%">
+          <table name="tableSemana1" numberOfColumns="3" numberOfColumns_E="1" type="Responsive" cellWidth_E="50%" cellWidth_S="50%" cellVisible_E="True" cellVisible_S="True" cellVisible_M="True" cellVisible_L="True">
+            <variable name="periodoSemana1Ini" description="1ª" defaultDescription="1ª" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" descriptionWidth="6%" defaultDescriptionWidth="6%" readOnly="True" defaultReadOnly="True" />
+            <variable name="periodoSemana1Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" descriptionWidth="25%" mergeWithPrevious="False" readOnly="True" defaultReadOnly="True" />
+            <userAction fontIcon="fas fa-recycle" caption="Gerar" ControlType="Button" name="btnGerarSemana1" imageType="Font icon" mergeWithPrevious="False" />
+          </table>
+          <table name="tableSemana2" numberOfColumns="3" numberOfColumns_E="1" visibleCondition="not &amp;periodoSemana2Ini.isEmpty()" type="Responsive" cellWidth_E="50%" cellWidth_S="50%">
+            <variable name="periodoSemana2Ini" description="2ª" defaultDescription="2ª" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visible="True" visibleCondition="" descriptionWidth="6%" defaultDescriptionWidth="6%" readOnly="True" defaultReadOnly="True" />
+            <variable name="periodoSemana2Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visible="True" visibleCondition="" descriptionWidth="25%" mergeWithPrevious="False" readOnly="True" defaultReadOnly="True" />
+            <userAction fontIcon="fas fa-recycle" caption="Gerar" ControlType="Button" name="btnGerarSemana2" imageType="Font icon" mergeWithPrevious="False" />
+          </table>
+          <table name="tableSemana3" numberOfColumns="3" numberOfColumns_E="1" visibleCondition="not &amp;periodoSemana3Ini.isEmpty()" type="Responsive" cellWidth_E="50%" cellWidth_S="50%">
+            <variable name="periodoSemana3Ini" description="3ª" defaultDescription="3ª" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visibleCondition="" descriptionWidth="6%" defaultDescriptionWidth="6%" readOnly="True" defaultReadOnly="True" />
+            <variable name="periodoSemana3Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visibleCondition="" descriptionWidth="25%" mergeWithPrevious="False" readOnly="True" defaultReadOnly="True" />
+            <userAction fontIcon="fas fa-recycle" caption="Gerar" ControlType="Button" name="btnGerarSemana3" imageType="Font icon" mergeWithPrevious="False" />
+          </table>
+          <table name="tableSemana4" numberOfColumns="3" numberOfColumns_E="1" visibleCondition="not &amp;periodoSemana4Ini.isEmpty()" type="Responsive" cellWidth_E="50%" cellWidth_S="50%">
+            <variable name="periodoSemana4Ini" description="4ª" defaultDescription="4ª" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visibleCondition="" descriptionWidth="6%" defaultDescriptionWidth="6%" readOnly="True" defaultReadOnly="True" />
+            <variable name="periodoSemana4Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visibleCondition="" descriptionWidth="25%" mergeWithPrevious="False" readOnly="True" defaultReadOnly="True" />
+            <userAction fontIcon="fas fa-recycle" caption="Gerar" ControlType="Button" name="btnGerarSemana4" imageType="Font icon" mergeWithPrevious="False" />
+          </table>
+          <table name="tableSemana5" numberOfColumns="3" numberOfColumns_E="1" visibleCondition="not &amp;periodoSemana5Ini.isEmpty()" type="Responsive" cellWidth_E="50%" cellWidth_S="50%">
+            <variable name="periodoSemana5Ini" description="5ª" defaultDescription="5ª" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visibleCondition="" descriptionWidth="6%" defaultDescriptionWidth="6%" readOnly="True" defaultReadOnly="True" />
+            <variable name="periodoSemana5Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visibleCondition="" descriptionWidth="25%" mergeWithPrevious="False" readOnly="True" defaultReadOnly="True" />
+            <userAction fontIcon="fas fa-recycle" caption="Gerar " ControlType="Button" name="btnGerar" imageType="Font icon" mergeWithPrevious="False" />
+          </table>
+        </table>
+        <variable name="dataEnvio" description="Data de Envio : " defaultDescription="Data de Envio : " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" visible="False" defaultVisible="False" descriptionWidth="17%" defaultDescriptionWidth="17%" />
+        <table name="tableBotoes" numberOfColumns="2" type="Responsive">
+          <userAction caption="Retornar" name="btnRetornar" />
+          <userAction caption="Zerar Remessa" name="btnZerarRemessa" confirm="True" confirmMessage="Deseja realmente zerar a remessa ?" confirmTitle="Zerar Remessa" />
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPGeracaoRemessa</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPGeracaoRemessa</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

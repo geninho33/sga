@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="b31df820-48ee-4e56-94ed-38742bed3110" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:25:31.0000000Z" checksum="df58e3f43d9885322af5b8e920d44087" fullyQualifiedName="WorkWithPlusGAMWWUserApplications" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b40ea0b0-1e12-06cd-20e5-3e430917ae6d" name="WorkWithPlusGAMWWUserApplications" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus GAMWWUser Applications" parent="GAMWWUserApplications" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="3;40;" type="WebPanel">
+  <level childrenOrderedList="4;39;" id="No_TRN" name="GAMWWUserApplications">
+    <selection Template="Main;Selection" description="Applications API key" defaultDescription="Applications API key" childrenOrderedList="4;02;Main Table" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMainWithShadow" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" defaultIncludeInPanel="True" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions" />
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" defaultFlexWrap="Wrap" defaultType="Flex" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;">
+                <orders descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top" />
+                <FilterFullText themeClass="Attribute" defaultThemeClass="Attribute" inviteMessage="WWP_Search" defaultInviteMessage="WWP_Search" showDescription="True" />
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell CellMarginTop" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete">
+          <gridActionGroup caption="" defaultCaption="" name="GridActions" fontIconThemeClass="fa fa-bars" defaultFontIconThemeClass="fa fa-bars">
+            <userAction caption="WWP_GAM_Revoke" condition="&amp;GAMUser.IsActivatedApplicationAPIkey(&amp;ClientID)" name="BtnRevoke" />
+            <userAction caption="WWP_GAM_Generate" name="BtnGenerate" />
+          </gridActionGroup>
+          <gridVariable name="Id" description="WWP_GAM_Id" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMKeyNumLong" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMKeyNumLong" visible="False" defaultVisible="False" />
+          <gridVariable name="Name" description="WWP_GAM_ApplicationName" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionLong" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionLong" width="300" defaultWidth="300" />
+          <gridVariable name="Description" description="WWP_GAM_Description" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionLong" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionLong" width="300" defaultWidth="300" />
+          <gridVariable name="ClientID" description="WWP_GAM_ClientId" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMClientApplicationId" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMClientApplicationId" themeClass="AttributeLongText" width="300" defaultWidth="300" />
+          <gridVariable name="Status" description="WWP_GAM_APIKeyStatus" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" customProperties="Height=" defaultCustomProperties="Height=" width="100" defaultWidth="100" conditionalFormatting="&amp;GAMUser.IsActivatedApplicationAPIkey(&amp;ClientID):Success tag:;Not &amp;GAMUser.IsActivatedApplicationAPIkey(&amp;ClientID):Danger tag:" />
+        </grid>
+      </table>
+      <parameters>
+        <parameter type="In" name="&amp;UserGUID" />
+      </parameters>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusGAMWWUserApplications</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-GAMWWUserApplications</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

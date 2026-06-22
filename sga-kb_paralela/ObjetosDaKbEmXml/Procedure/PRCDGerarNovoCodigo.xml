@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-23T03:09:41.0000000Z" lastUpdate="2025-04-21T22:19:04.0000000Z" checksum="18da433dc0e30bb65c499904d450d1bf" fullyQualifiedName="PRCDGerarNovoCodigo" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="92e5bc25-09ab-4938-950e-7dc78bfabd18" name="PRCDGerarNovoCodigo" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Gerar código ID" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[LoadWWPContext.Call(&WWPContext)
+&prefCodigo = &WWPContext.prefCodigo
+
+Do case
+   case &tabela = 'aluno'
+	    For each trnsaluno
+		   order (alunCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = alunCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+
+   case &tabela = 'alunoMedidas'
+	    For each trnsalunomedidas
+		   order ( mediAlunColeta )
+		   where prefCodigo = &prefCodigo
+			&codigo = mediAlunColeta + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+
+   case &tabela = 'cardapio'
+	    For each trnscardapio
+		   order (carDapCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = carDapCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'cardapioPrato'
+	    For each trnscardapioprato
+			order (carPratoCodigo)
+		    where prefCodigo = &prefCodigo
+			&codigo = carPratoCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'prato'
+	    For each trnspratos
+			order (pratoCodigo)
+		    where prefCodigo = &prefCodigo
+			&codigo = pratoCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'pratoIngrediente'
+	    For each trnspratosingredientes
+			order (pratoCodigo)
+		    where prefCodigo = &prefCodigo
+			&codigo = pratoCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'cardapioGrupo'
+	    For each trnscardapiogrupo
+		   order ( carGruCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = carGruCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'refeicaoTipo'
+	    For each trnsrefeicaotipo
+			order (refTipCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = refTipCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'distribuicaoTipo'
+	    For each trnsdistribuicaotipo
+		   order (disTipNumero )
+		   where prefCodigo = &prefCodigo
+			&codigo = disTipNumero + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'usuario'
+	    For each trnsusuarios
+			order (usuCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = usuCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'sala'
+	    For each trnssalas.grupoAtendimento
+			order (salaGrupoCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = salaGrupoCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'fornecedor'
+	    For each trnsfornecedores
+			order ( forCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = forCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'produto'
+	    For each trnsprodutos
+			order ( prodCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = prodCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'local'
+	    For each trnslocal
+			order ( locCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = locCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'unidade'
+	    For each trnsunidades
+			order ( uniCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = uniCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'rota'
+	    For each trnsrota
+			order ( rotaCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = rotaCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'programa'
+	    For each trnsprogramas
+			order ( progCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = progCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'Nota'
+	    For each trnsnota
+			order ( notaCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = notaCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'AJUSTE'
+	    For each trnsajuste
+			order ( ajusCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = ajusCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'atendimento'
+	    For each Atendimento
+			order (AtendimentoCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = AtendimentoCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'distribuicao'
+	    For each trnsdistribuicao
+			order (distCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = distCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'pratoPerCapta'
+	    For each trnspratopercapta
+			order (pratoPerCaptaCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = pratoPerCaptaCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'estoque'
+	    For each TRNSEstoque
+			order (estoCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = estoCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'estoqueUE'
+	    For each TRNSEstoqueUE
+			order (estoUeCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = estoUeCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'mapaUE'
+	    For each TRNSMapaUE
+			order ( mapaUeCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = mapaUeCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'remessas'
+	    For each trnsremessas
+			order (remCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = remCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'remessaItem'
+	    For each trnsremessaitem
+			order (remItemCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = remItemCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'preferencias'
+	    For each trnsconfiguracao
+			order (psCodigo)
+		   where prefCodigo = &prefCodigo
+			&codigo = psCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'tipoAjuste'
+	    For each TipoAjuste
+			order ( tipajuCodigo )
+			 where tipajuCodigo < 98
+		   where prefCodigo = &prefCodigo
+			&codigo = tipajuCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'Lancar Estoque'
+	    For each trnslancarestoqueUE
+			order ( lanestcodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = lanestcodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'romaneio'
+	    For each Romaneio
+			order ( romanCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = romanCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'cronograma'
+	    For each trnscronograma
+			order ( croCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = croCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+   case &tabela = 'PerguntaResposta'
+	    For each trnsPerguntaResposta
+			order (  perResCodigo )
+		   where prefCodigo = &prefCodigo
+			&codigo = perResCodigo + 1
+			exit
+		when none
+			&codigo = 1
+		endFor
+EndCase
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&tabela,out:&codigo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="codigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>codigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:codigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tabela">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tabela</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>15</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>15</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDGerarNovoCodigo</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Gerar código ID</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

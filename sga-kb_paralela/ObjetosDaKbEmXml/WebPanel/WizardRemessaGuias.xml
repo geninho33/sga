@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ac68d54c-5158-4987-9d87-36cdf405a067" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-16T05:38:51.0000000Z" lastUpdate="2025-10-12T21:06:07.0000000Z" checksum="88d239f171e9f0fadd9c4560dc8d249f" fullyQualifiedName="WizardRemessaGuias" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="de59937a-98c6-48e7-b468-3b29c147ee63" name="WizardRemessaGuias" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Wizard Remessa Guias" parent="WorkWithPlusWizardRemessa" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" class="Table TableWithSelectableGrid" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableGrid" tableType="Responsive" responsiveSizes="[]"><row><cell><grid controlName="FreeStyleGridLocais" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;SflRender&lt;/Name&gt;&lt;Value&gt;FlexGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FlexGrid_flexWrap&lt;/Name&gt;&lt;Value&gt;wrap&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FlexGrid_justifyContent&lt;/Name&gt;&lt;Value&gt;space-around&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="FreeStyleGridLocaisLayoutTable" tableType="Flex"><row><cell cellClass="Invisible"><table controlName="UnnamedTableContentFSFreeStyleGridLocais"><row><cell><data attribute="&amp;Locais_locCodigo" labelPosition="None" /></cell></row></table></cell><cell cellClass="CellMarginTop"><table controlName="TableCard" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[],[{&quot;label&quot;:100}]]}]"><row><cell cellClass="DataContentCell MinWidth-25perc"><textblock controlName="Local" caption="Local:" class="Attribute" /></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><simplegrid controlName="Grid" class="GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;PROP_EMPTYDATASETTEXT&lt;/Name&gt;&lt;Value&gt;Sem alimentos para o período&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;GridSelected" titleExp="" class="AttributeCheckBox" /><item attribute="&amp;locCodigo" titleExp="Unidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodDescricao" titleExp="Alimento" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Quantidade" titleExp="Quantidade" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;uniDescricao" titleExp="Und." class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distObservacao" titleExp="Observação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodPesoConsumo" titleExp="prod Peso Consumo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;QtdeOferta" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell cellClass="CellMarginTop10 DscTop"><data attribute="&amp;Locais_Observacao" labelCaption="Observação" class="AttributeRealWidth" /></cell></row></table></cell></row></table></grid></cell></row><row><cell hAlign="Center"><textblock controlName="LabelGridEmpty" caption="Nenhuma Guia foi gerada!" class="TextBlockTitleMaster" /></cell></row></table></cell></row><row><cell cellClass="CellWizardActions"><table controlName="TableActions" tableType="Flex" flexWrap="Wrap" justifyContent="Space Between"><row><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardPrevious&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;BeforeIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Event&lt;/Name&gt;&lt;Value&gt;'WizardPrevious'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GXM_previous&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;BtnDefault ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><action controlName="BtnPrevisaoCompra" onClickEvent="'DoPrevisaoCompra'" caption="Previsão de Compras" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Ver previsão de compars&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardNext&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AfterIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;Finalizar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;Button ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute AttID="&amp;remCodigo" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&WebSessionKey, in:&PreviousStep, in:&GoingBack);
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call(&WWPContext)
+   	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'LoadVariablesFromWizardData'
+	&remCodigo.Visible = False
+	&Locais_locCodigo.Visible = False
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	Grid.Rows = 0
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	/* Padrão sem guias */
+	LabelGridEmpty.Visible = true
+	BtnWizardNext.Visible = false
+	BtnPrevisaoCompra.Visible = false
+
+EndEvent
+
+Event FreeStyleGridLocais.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	for &GridLocaisItem in &WizardData.Atendimento.GridLocais
+
+		&Locais_locCodigo = &GridLocaisItem.locCodigo
+		&Locais_Observacao = &GridLocaisItem.LocObservacaoGuia
+
+		Do 'ValidaGuia'
+
+		if &GerarGuia
+			LabelGridEmpty.Visible = false
+			BtnWizardNext.Visible = true
+			BtnPrevisaoCompra.Visible = true
+			Local.Caption = format('LOCAL: %1 (%2) - %3',&GridLocaisItem.locDescricao,&GridLocaisItem.locCodigo.ToString().Trim(),&GridLocaisItem.rotaDescricao)
+			FreeStyleGridLocais.Load()
+		endif
+
+	endfor
+
+EndEvent
+
+Event Grid.Load
+
+	if 1=2 // Inutiliza código do WWPLus
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	&GridSelected = false
+	For &GridSelectedRow in &WizardData.Guias.Grid
+		If &GridSelectedRow.locCodigo = &locCodigo
+			AND &GridSelectedRow.prodCodigo = &prodCodigo
+			AND &GridSelectedRow.prodDescricao = &prodDescricao
+			AND &GridSelectedRow.Quantidade = &Quantidade
+			AND &GridSelectedRow.uniDescricao = &uniDescricao
+			AND &GridSelectedRow.distObservacao = &distObservacao
+			AND &GridSelectedRow.prodPesoConsumo = &prodPesoConsumo
+			AND &GridSelectedRow.QtdeOferta = &QtdeOferta
+			&GridSelected = True
+			Exit
+		EndIf
+	EndFor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	Endif
+
+	&locCodigo = &Locais_locCodigo
+	&distObservacao = &Locais_Observacao
+
+	/* Calcula necessidade dos produtos por unidade */
+	for &GridAlimentosItem in &WizardData.Alimentos.GridAlimentos
+
+		&GridSelected	 = true
+		&prodCodigo 	 = &GridAlimentosItem.prodCodigo
+		&prodDescricao 	 = &GridAlimentosItem.prodDescricao
+		&uniDescricao	 = &GridAlimentosItem.uniDescricao
+		&prodPesoConsumo = &GridAlimentosItem.prodPesoConsumo
+		&Quantidade		 = 0
+		&ValorPerCapta 	 = 0
+		&QtdeOferta		 = 0
+
+		/* Localiza Percaptas/Ofertas do produto */
+		for &IngredienteSDT in &ListaIngredienteSDT
+
+			if &IngredienteSDT.prodCodigo = &prodCodigo
+
+				/* Soma Percapta */
+				For each Atendimento
+					Where prefCodigo = &prefCodigo
+					Where locCodigo = &locCodigo
+					Where carGruCodigo in GruposCardapioReferenteMesAno(&prefCodigo,&WizardData.Periodo.Mes,&WizardData.Periodo.Ano)
+					Where carGruStatus = Status.Ativo
+					Where not AtendimentoCodigo in &AtendimentoCodigoCollection
+
+					for &PercaptaOfertaItem in &IngredienteSDT.PercaptaOferta
+
+						if  &PercaptaOfertaItem.AreEnsCodigo = AreEnsCodigo and
+							&PercaptaOfertaItem.AreEnsSequencial = AreEnsSequencial and
+							&PercaptaOfertaItem.carGruTurno = AtendimentoTurno
+
+							&ValorPerCapta  += ((&PercaptaOfertaItem.Percapta * AtendimentoNormalSegunda) * &PercaptaOfertaItem.Oferta)
+							&QtdeOferta 	+= &PercaptaOfertaItem.Oferta
+
+							Exit
+
+						endif
+
+					endfor
+
+				Endfor
+
+				Exit
+
+			endif
+
+		endfor
+
+		if &ValorPerCapta > 0
+			&Quantidade = round(((&ValorPerCapta / &prodPesoConsumo) + 0.49),0)
+			if &Quantidade = 0
+				&Quantidade = 1
+			endif
+
+			Load
+		endif
+
+	endfor
+
+EndEvent
+
+Event Enter
+
+	// Grava os dados e gera a distribuição
+	Do 'SaveVariablesToWizardData'
+	&HasValidationErrors = false
+	&IsSucess = WizardRemessaGravaDados(&WebSessionKey,&remCodigo,&Message)
+	if not &IsSucess
+		&HasValidationErrors = true
+		msg(&Message.Description)
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If not &HasValidationErrors
+		Do 'SaveVariablesToWizardData'
+		WizardRemessa(!'Guias', !'Conclusao', false)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'WizardPrevious'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'SaveVariablesToWizardData'
+	WizardRemessa(!'Guias', !'Alimentos', true)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoPrevisaoCompra'
+
+	Do 'SaveVariablesToWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	PRINTPrevisaoCompra.PopUp(&prefCodigo, &WebSessionKey)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadGridSelectedRows'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.Guias.Grid.Clear()
+	For Each Line in Grid
+		If (&GridSelected)
+			&GridSelectedRow = new()
+
+			&GridSelectedRow.locCodigo = &locCodigo
+			&GridSelectedRow.prodCodigo = &prodCodigo
+			&GridSelectedRow.prodDescricao = &prodDescricao
+			&GridSelectedRow.Quantidade = &Quantidade
+			&GridSelectedRow.uniDescricao = &uniDescricao
+			&GridSelectedRow.distObservacao = &distObservacao
+			&GridSelectedRow.prodPesoConsumo = &prodPesoConsumo
+			&GridSelectedRow.QtdeOferta = &QtdeOferta
+
+			&WizardData.Guias.Grid.Add(&GridSelectedRow)
+		Endif
+	Endfor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadVariablesFromWizardData'
+
+	/* Carrega dados do arquivo XML */
+	&WizardData.FromXml(FileXmlToWizardData(&WebSessionKey))
+	&WizardData.Guias.Grid.Clear()
+	&WebSession.Set(&WebSessionKey,&WizardData.ToJson())
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&remCodigo = &WizardData.Guias.remCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveVariablesToWizardData'
+
+	if 1=2 // Inutiliza código do WWPLus
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&WizardData.Guias.remCodigo = &remCodigo
+	&WizardData.Guias.FreeStyleGridLocais.Clear()
+	For Each Line in FreeStyleGridLocais
+		&FreeStyleGridLocaisItem = new()
+		&FreeStyleGridLocaisItem.Locais_locCodigo = &Locais_locCodigo
+		&FreeStyleGridLocaisItem.Locais_Observacao = &Locais_Observacao
+
+		&WizardData.Guias.FreeStyleGridLocais.Add(&FreeStyleGridLocaisItem)
+	EndFor
+	Do 'LoadGridSelectedRows'
+	&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	endif
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&WizardData.Guias.remCodigo = &remCodigo
+	&WizardData.Guias.FreeStyleGridLocais.Clear()
+	&WizardData.Guias.Grid.Clear()
+//	&GuiasGrid = new()
+
+	For Each Line in FreeStyleGridLocais
+
+		For Each Line in Grid
+			If (&GridSelected)
+				&GridSelectedRow = new()
+
+				&GridSelectedRow.locCodigo = &locCodigo
+				&GridSelectedRow.prodCodigo = &prodCodigo
+				&GridSelectedRow.prodDescricao = &prodDescricao
+				&GridSelectedRow.Quantidade = &Quantidade
+				&GridSelectedRow.uniDescricao = &uniDescricao
+				&GridSelectedRow.distObservacao = &distObservacao
+				&GridSelectedRow.prodPesoConsumo = &prodPesoConsumo
+				&GridSelectedRow.QtdeOferta = &QtdeOferta
+
+				&WizardData.Guias.Grid.Add(&GridSelectedRow)
+//				&GuiasGrid.Add(&GridSelectedRow)
+			Endif
+		Endfor
+
+	Endfor
+
+	/* Grava dados no arquivo XML */
+	WizardDataToFileXML(&WebSessionKey,&WizardData.ToXml())
+
+	&WizardData.Guias.Grid.Clear()
+	&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+//	&WebSession.Set(&WebSessionKey + !'_Guias', &GuiasGrid.ToJson())
+
+EndSub
+
+Event GlobalEvents.ForceUpdateWizardData
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: ForceUpdateWizardDataGlobalEvent
+	do 'SaveVariablesToWizardData'
+	do 'LoadVariablesFromWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Carrega coleção de Áreas, Etapas e Turnos de atendimento */
+	&AreasEtapasTurnosAtendimentoCollection.FromJson(&WebSession.Get(!'WizardRemessa_AreasEtapasTurnosAtendimentoCollection'))
+
+	/* Carrega coleção de atendimentos a serem ignorados */
+	&AtendimentoCodigoCollection.Clear()
+	&AtendimentoCodigoCollection.FromJson(&WizardData.Atendimento.IgnorarAtendimentoJson)
+
+	/* Carrega coleção de Percaptas a serem ignoradas */
+	&IgnorarPercaptaPropertiesCollection.Clear()
+	&IgnorarPercaptaPropertiesCollection.FromJson(&WizardData.Alimentos.IgnorarPercaptaJson)
+
+	/* Monta lista de ingredientes */
+	&ListaIngredienteSDT = new()
+	for &GridAlimentosItem in &WizardData.Alimentos.GridAlimentos
+
+		&IngredienteSDT = new()
+		&IngredienteSDT.prodCodigo = &GridAlimentosItem.prodCodigo
+
+		for &Properties in &AreasEtapasTurnosAtendimentoCollection
+
+			&AreEnsCodigo.FromString(&Properties.Get(!'AreEnsCodigo'))
+			&AreEnsSequencial.FromString(&Properties.Get(!'AreEnsSequencial'))
+			&carGruTurno.FromString(&Properties.Get(!'AtendimentoTurno'))
+			&carDapGruCodigo.FromString(&Properties.Get(!'carGruCodigo'))
+
+			/* Filtra Percaptas que não entram no cálculo */
+			&Chave.Clear()
+			&Chave.Set(!'AreEnsCodigo',&AreEnsCodigo.ToString())
+			&Chave.Set(!'AreEnsSequencial',&AreEnsSequencial.ToString())
+			&Chave.Set(!'carGruTurno',&carGruTurno.ToString())
+			&ChaveJson = &Chave.ToJson()
+			if (&IgnorarPercaptaPropertiesCollection.IndexOf(&ChaveJson) = 0)
+
+				For each trnspratosingredientes, trnscardapioprato
+					Order prefCodigo, pratIngrProdCodigo, AreEnsCodigo, AreEnsSequencial, carGruTurno
+					Where prefCodigo = &prefCodigo
+					Where pratIngrProdCodigo = &GridAlimentosItem.prodCodigo
+					Where AreEnsCodigo = &AreEnsCodigo
+					Where AreEnsSequencial = &AreEnsSequencial
+					Where carGruTurno = &carGruTurno
+					Where carDapGruCodigo = &carDapGruCodigo
+					Where carPratoData >= &WizardData.Periodo.DataInicial
+					Where carPratoData <= &WizardData.Periodo.DataFinal
+					Where carDapStatus = Status.Ativo
+					Where pratoCodigo = carPratoRefeicao
+					Where pratIngrStatus = Status.Ativo
+					Where pratIngrQuantidade > 0
+
+					&PercaptaOfertaItem = new()
+					&PercaptaOfertaItem.AreEnsCodigo 	 = AreEnsCodigo
+					&PercaptaOfertaItem.AreEnsSequencial = AreEnsSequencial
+					&PercaptaOfertaItem.carGruTurno		 = carGruTurno
+					&PercaptaOfertaItem.Percapta		 = pratIngrQuantidade
+
+					&Oferta = 0
+					/* Calcula oferta */
+					For each trnspratosingredientes
+						&Oferta += 1
+					Endfor
+
+					&PercaptaOfertaItem.Oferta = &Oferta
+					&IngredienteSDT.PercaptaOferta.Add(&PercaptaOfertaItem)
+
+				Endfor
+
+			endif
+
+		endfor
+
+		if &IngredienteSDT.PercaptaOferta.Count > 0
+			&ListaIngredienteSDT.Add(&IngredienteSDT)
+		endif
+
+	endfor
+
+	log.Info(&ListaIngredienteSDT.ToJson(),&Pgmname+'.ListaIngredienteSDT')
+
+EndEvent
+
+Sub 'ValidaGuia'
+
+	&GerarGuia = false
+	for &GridAlimentosItem in &WizardData.Alimentos.GridAlimentos
+
+		for &IngredienteSDT in &ListaIngredienteSDT
+
+			if &IngredienteSDT.prodCodigo = &GridAlimentosItem.prodCodigo
+
+				For each Atendimento
+					Where prefCodigo = &prefCodigo
+					Where locCodigo = &Locais_locCodigo
+					Where carGruCodigo in GruposCardapioReferenteMesAno(&prefCodigo,&WizardData.Periodo.Mes,&WizardData.Periodo.Ano)
+					Where carGruStatus = Status.Ativo
+					Where not AtendimentoCodigo in &AtendimentoCodigoCollection
+
+					for &PercaptaOfertaItem in &IngredienteSDT.PercaptaOferta
+
+						if  &PercaptaOfertaItem.AreEnsCodigo = AreEnsCodigo and
+							&PercaptaOfertaItem.AreEnsSequencial = AreEnsSequencial and
+							&PercaptaOfertaItem.carGruTurno = AtendimentoTurno
+
+							&GerarGuia = true
+							Exit
+						endif
+
+					endfor
+
+					if &GerarGuia
+						Exit
+					endif
+
+				Endfor
+
+			endif
+
+			if &GerarGuia
+				Exit
+			endif
+
+		endfor
+
+		if &GerarGuia
+			Exit
+		endif
+
+	endfor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSessionKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSessionKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GoingBack">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GoingBack</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PreviousStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PreviousStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HasValidationErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HasValidationErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WizardData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WizardData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Locais_locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Locais_locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Locais_Observacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Locais_Observacao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Quantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="uniDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>uniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distObservacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distObservacao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FreeStyleGridLocaisItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FreeStyleGridLocaisItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Guias.FreeStyleGridLocaisItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSelected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSelected</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSelectedRow">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSelectedRow</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Guias.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridLocaisItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridLocaisItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Atendimento.GridLocaisItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ListaIngredienteSDT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ListaIngredienteSDT</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:IngredienteSDT</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IngredienteSDT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IngredienteSDT</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:IngredienteSDT</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PercaptaOfertaItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PercaptaOfertaItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:IngredienteSDT.PercaptaOfertaItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Oferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Oferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoCodigoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoCodigoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAlimentosItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAlimentosItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Alimentos.GridAlimentosItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValorPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValorPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSucess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSucess</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GuiasGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GuiasGrid</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Guias.GridItem</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodPesoConsumo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodPesoConsumo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodPesoConsumo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Chave">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Chave</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ChaveJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ChaveJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1024</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1024</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IgnorarPercaptaPropertiesCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IgnorarPercaptaPropertiesCollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1024</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1024</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="QtdeOferta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>QtdeOferta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreasEtapasTurnosAtendimentoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreasEtapasTurnosAtendimentoCollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Properties">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Properties</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área de Ensino</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Sequencial</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruTurno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapGruCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapGruCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Grupo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapGruCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CurrentStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CurrentStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GerarGuia">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GerarGuia</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WizardRemessaGuias</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>KEY_ENTER</Name>
+      <Value>N</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusWizardRemessa</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/WPRoot[1]/steps/step[@Name="Guias"]</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>WizardStep</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

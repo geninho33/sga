@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="290db6f3-0f60-4fb9-826f-c0ca98eb8333" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-24T14:44:46.0000000Z" checksum="a0031371325fb9372a54e7f642d0e309" fullyQualifiedName="WWPBaseObjects.Discussions.WorkWithPlusWWP_DiscussionsOneThreadWC" moduleGuid="e2da86dd-2537-4d5a-8e82-35fda77dc9e5" guid="2e1eee63-599c-0722-3667-c6fdba111c4e" name="WorkWithPlusWWP_DiscussionsOneThreadWC" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WWP_Discussions One Thread WC" parent="WWPBaseObjects.Discussions.WWP_DiscussionsOneThreadWC" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="">
+  <transaction childrenOrderedList="2;01;Main Table" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-WWPBaseObjects.Discussions.WWP_DiscussionMessage" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-WWPBaseObjects.Discussions.WWP_DiscussionMessage">
+    <table defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" />
+  </transaction>
+  <level childrenOrderedList="4;39;" id="eaaf8060-5b8f-48d2-8b34-febd8695fe03:1" name="WWP_DiscussionsOneThreadWC">
+    <selection Template="CardWithSmallImage" description="Discussions of one thread" defaultDescription=" Discussion Message" page="&lt;unlimited&gt;" childrenOrderedList="4;02;Main Table" level="root:WWP_DiscussionMessage" defaultLevel="root:WWP_DiscussionMessage" GenerateDataSelectorForConditions="False" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="DiscussionsThreadTable" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;28;ErrorViewer-4;32;">
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <freeStyleGrid type="Flex" defaultType="Responsive" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" defaultFSColumns_S="2" defaultFSColumns_M="3" defaultFSColumns_L="3" cellThemeClass="CellMarginTop" childrenOrderedList="4;141;4;32;-4;140;4;32;MainLayout">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPDiscussionMessageId" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultVisible="False" />
+          <variable attTemplate="Image" name="UserExtendedPhoto" description="=Attribute.Title" defaultDescription="=Attribute.Title" domain="adbb33c9-0906-4971-833c-998de27e0676-WWPUserExtendedPhoto" themeClass="AttributeDiscussionThreadImage" defaultThemeClass="CardSmallImageAttribute" cellThemeClass="CellPaddingTop5" showDescription="False" defaultShowDescription="False" flexGrow="0" readOnly="True" />
+          <table name="TableTitle" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+            <attribute attTemplate="Title" attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPUserExtendedFullName" description="=Attribute.Title" defaultDescription="=Attribute.Title" themeClass="SimpleCardAttributeTitle" defaultThemeClass="SimpleCardAttributeTitle" showDescription="False" defaultShowDescription="False" />
+            <attribute attTemplate="Subtitle" attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPDiscussionMessageDate" description="=Attribute.Title" defaultDescription="=Attribute.Title" autolink="False" themeClass="AttributeDiscussionDate" defaultThemeClass="SimpleCardAttributeSubtitle" showDescription="False" defaultShowDescription="False" mergeWithPrevious="True" />
+            <attribute attTemplate="Description" attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPDiscussionMessageMessage" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="AttributeDiscussionDescription" defaultThemeClass="CardSmallImageAttributeDescription" cellThemeClass="CellMarginBottom15" showDescription="False" defaultShowDescription="False" />
+          </table>
+        </freeStyleGrid>
+        <table flexDirection="Column" flexWrap="Wrap" type="Flex">
+          <variable name="Message" dataType="Basic" basicType="VarChar" basicCLength="400" themeClass="Attribute" inviteMessage="Type a message..." showDescription="False" />
+          <standardAction imageClass="fas fa-paper-plane DiscussionsSendIcon" buttonClass="ButtonMaterial CellMarginRight0" ControlType="Image" name="Enter" imageType="Font icon" flexGrow="0" flexAlignSelf="Flex End" />
+        </table>
+        <orders>
+          <order name="Order">
+            <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPDiscussionMessageId" />
+          </order>
+        </orders>
+        <userControl controlName="UCMentions" ucName="WWP.Suggest" ucProperties="DataListProc:WWPBaseObjects.Discussions.WWP_GetUsersForDiscussionMentions" />
+      </table>
+      <parameters>
+        <parameter name="WWPDiscussionMessageThreadId" />
+        <parameter name="&amp;WWPSubscriptionEntityRecordDescription" />
+        <parameter name="&amp;WWPNotificationLink" />
+      </parameters>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWWP_DiscussionsOneThreadWC</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.Discussions.WWP_DiscussionsOneThreadWC</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

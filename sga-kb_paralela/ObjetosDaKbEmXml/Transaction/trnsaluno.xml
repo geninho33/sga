@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-23T03:09:41.0000000Z" lastUpdate="2025-04-23T03:01:07.0000000Z" checksum="adbf9ad55dc77855c6d93b9eea9aba01" fullyQualifiedName="trnsaluno" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="60e27cad-3ed5-4f67-89ef-6165c639465f" name="trnsaluno" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Estudantes">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsaluno" Type="trnsaluno" Description="Estudantes" Guid="60e27cad-3ed5-4f67-89ef-6165c639465f">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="dee034a2-65bd-40fe-a6eb-0bdf954df6a1">AtendimentoCodigo</Attribute>
+      <Attribute key="True" guid="ff885b59-ebe9-4a22-9d1a-126f73101a65">alunCodigo</Attribute>
+      <Attribute key="False" guid="cf7f8fa8-f91d-4edb-8dd8-623e98b220e0" isNullable="True">alunMatricula</Attribute>
+      <Attribute key="False" guid="092a7bff-39b0-4d7c-86fd-a3859ff7992e">alunNome</Attribute>
+      <Attribute key="False" guid="a3211869-15d0-4d77-ae84-1b7d3e1fe2b2">alunNascimento</Attribute>
+      <Attribute key="False" guid="8fa1f33d-fa03-42bb-961c-4ec3e15c3a48">alunSexo</Attribute>
+      <Attribute key="False" guid="188cc5af-e2b8-449f-a579-b6cbe1acc371">alunUserName</Attribute>
+      <Attribute key="False" guid="49a44866-b085-498c-a3e0-11d049778049">alunStatus</Attribute>
+      <Attribute key="False" guid="51894349-e6d3-4a0c-856a-b62b1bbd1b3d">alunDataCadastro</Attribute>
+      <Attribute key="False" guid="691f5983-79de-407e-8ae3-0da25bcf53ba">alunDataAlteracao</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[],[],[],[],[],[],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]}]" containerSlotName="TableAttributes"><row><cell cellClass="DataContentCell"><data attribute="prefCodigo" labelCaption="Prefeitura" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="AtendimentoCodigo" labelCaption="Atendimento" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunCodigo" labelCaption="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunMatricula" labelCaption="Matricula" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunNome" labelCaption="Nome" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunNascimento" labelCaption="de Nascimento" class="AttributeRealWidthDate" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunSexo" labelCaption="Sexo" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunUserName" labelCaption="Name" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunStatus" labelCaption="Situação" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunDataCadastro" labelCaption="do Cadastro" class="AttributeRealWidthDateTime" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunDataAlteracao" labelCaption="da Alteração" class="AttributeRealWidthDateTime" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+[web]
+{
+parm(in:&Mode, in:&prefCodigo, in:&AtendimentoCodigo, in:&alunCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+AtendimentoCodigo = &AtendimentoCodigo if not &AtendimentoCodigo.IsEmpty();
+noaccept(AtendimentoCodigo) if not &AtendimentoCodigo.IsEmpty();
+alunCodigo = &alunCodigo if not &alunCodigo.IsEmpty();
+noaccept(alunCodigo) if not &alunCodigo.IsEmpty();
+
+}
+
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+alunDataCadastro = serverNow() 
+	on beforeInsert;
+
+alunDataAlteracao = serverNow() 
+	on beforeUpdate, beforeInsert;
+
+alunCodigo = PRCDGerarNovoCodigo('aluno')  	
+	on BeforeInsert;
+
+alunUserName =  GAMUser.GetLogin()
+	on BeforeInsert, beforeUpdate;	
+
+alunStatus = '1'
+	on BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+   [web]
+   {
+	
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsalunoWW.Call(prefCodigo, AtendimentoCodigo)
+	Endif
+
+	Return
+   }
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="alunCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>alunCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:alunCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsaluno</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Estudantes</Value>
+    </Property>
+    <Property>
+      <Name>idISBUSINESSCOMPONENT</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

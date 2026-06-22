@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-28T03:20:36.0000000Z" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="5a77b4637950309ecbd3b1f23881f2d1" fullyQualifiedName="TRNSEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="4dffaf14-34ae-4311-b176-f84b7ff73f09" name="TRNSEstoque" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="TRNSEstoque">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d42dc866-af04-45ea-b0e0-cb66f38b3ae9">estoCodigo</Item>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="e8c697b2bcfa7931dcb547174af2e584" fullyQualifiedName="ITRNSEstoque" moduleGuid="00000000-0000-0000-0000-000000000000" guid="b1bebd5d-4339-456d-b1ff-5daf03bb1b1d" name="ITRNSEstoque" type="9e750647-3679-0000-0100-2529de263960" description="ITRNSEstoque">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">estoCodigo</Member>
+              <Member Order="Ascending">prefCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>ITRNSEstoque</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="2f01e1930ea3c7520eed45e8a8cb18d9" fullyQualifiedName="ITRNSEstoque1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="686f0c25-ecae-4c6c-953e-87bd46ea10e9" name="ITRNSEstoque1" type="9e750647-3679-0000-0100-2529de263960" description="ITRNSEstoque1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">estoProduto</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>ITRNSEstoque1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="8c541f89be463d434efd734a4a3f0b4f" fullyQualifiedName="UTRNSEstoque" moduleGuid="00000000-0000-0000-0000-000000000000" guid="8e9569f5-e7ea-4221-a019-4fa04c59578e" name="UTRNSEstoque" type="9e750647-3679-0000-0100-2529de263960" description="UTRNSEstoque">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">estoCadastro</Member>
+              <Member Order="Ascending">estoTipo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UTRNSEstoque</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="72f363c1b1934eb60b6593bf8427afd8" fullyQualifiedName="UTRNSEstoque1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="db5b6f8f-b175-43b6-80ba-f3bf18421bcc" name="UTRNSEstoque1" type="9e750647-3679-0000-0100-2529de263960" description="UTRNSEstoque1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">estoProdutoDescricao</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UTRNSEstoque1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="6bb0101340515064e1918450d60059bc" fullyQualifiedName="UTRNSEstoque2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="59bb2bdc-640b-4ce2-ba1c-a0bbece9bcc5" name="UTRNSEstoque2" type="9e750647-3679-0000-0100-2529de263960" description="UTRNSEstoque2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">estoUnidadeSigla</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UTRNSEstoque2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="5b76552ed9dcfc97e244eb287dae3087" fullyQualifiedName="UTRNSEstoque3" moduleGuid="00000000-0000-0000-0000-000000000000" guid="eae9deb8-8e5e-4f16-8220-929ae3d0ce62" name="UTRNSEstoque3" type="9e750647-3679-0000-0100-2529de263960" description="UTRNSEstoque3">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">estoObservacao</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UTRNSEstoque3</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="8b14c138ad40ae3ea25700d09675f07a" fullyQualifiedName="UTRNSEstoque4" moduleGuid="00000000-0000-0000-0000-000000000000" guid="759e95d5-0a78-4cdb-8c71-f1851569f64f" name="UTRNSEstoque4" type="9e750647-3679-0000-0100-2529de263960" description="UTRNSEstoque4">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">estoAlteracao</Member>
+              <Member Order="Ascending">estoTipo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UTRNSEstoque4</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="1cc5dbcc64e292e1cb926dbc6172cad7" fullyQualifiedName="UTRNSEstoque5" moduleGuid="00000000-0000-0000-0000-000000000000" guid="94f7fd21-b71e-4170-bdf0-3c442dec4ee1" name="UTRNSEstoque5" type="9e750647-3679-0000-0100-2529de263960" description="UTRNSEstoque5">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Descending">estoAlteracao</Member>
+              <Member Order="Ascending">estoTipo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UTRNSEstoque5</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-10-21T03:43:14.0000000Z" checksum="a49e43f1a1ae0b1180fe748ccf96198c" fullyQualifiedName="UTRNSEstoque6" moduleGuid="00000000-0000-0000-0000-000000000000" guid="f3a49b99-f9e1-465a-b181-f4f0be4a0bbe" name="UTRNSEstoque6" type="9e750647-3679-0000-0100-2529de263960" description="UTRNSEstoque6">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">estoTipo</Member>
+              <Member Order="Ascending">estoAlteracao</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UTRNSEstoque6</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>TRNSEstoque</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>TRNSEstoque</Value>
+    </Property>
+  </Properties>
+</Object>

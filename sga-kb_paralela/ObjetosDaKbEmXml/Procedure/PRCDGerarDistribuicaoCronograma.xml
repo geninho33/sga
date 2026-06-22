@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-11-07T03:56:02.0000000Z" lastUpdate="2025-11-07T03:40:27.0000000Z" checksum="bcf0c52a09ef0d249823c43bf6e899f8" fullyQualifiedName="PRCDGerarDistribuicaoCronograma" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="df72b55d-63b4-4b79-b59e-d19f1358de49" name="PRCDGerarDistribuicaoCronograma" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Gerar Distribuição a partir do  Cronograma" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&croStatus       = 'A'
+&diaSemana       = ''
+
+for each trnscronograma
+	where prefCodigo = &prefCodigo
+	where croCodigo  = &crocodigo
+	      croFeito = 'S'
+		  &croTipoRemessa  = croTipoRemessa
+          &remCodigo       = PRCDRemessaCriar(croDtInicial,croDtFinal)
+		  croRemessa       = &remCodigo
+		  &croStatus       = croStatus
+		  croStatus        = 'A'
+endFor
+
+for each trnscronograma, trnscronogramalocal
+	where prefCodigo = &prefCodigo
+	where croCodigo  = &croCodigo
+	where croLocQtde > 0
+	      
+	      if croDia = '0'
+			 &diaSemana       = ''
+          endif			 
+          if croDia = '2'
+			 &diaSemana       = ' | Segunda-feira'
+          endif			 
+          if croDia = '3'
+			 &diaSemana       = ' | Terça-feira'
+          endif			 
+          if croDia = '4'
+			 &diaSemana       = ' | Quarta-feira'
+          endif			 
+          if croDia = '5'
+			 &diaSemana       = ' | Quinta-feira'
+          endif			 
+          if croDia = '6'
+			 &diaSemana       = ' | Sexta-feira'
+          endif			 
+          if croDia = '7'
+			 &diaSemana       = ' | Sábado'
+          endif			 
+	  
+	      &distObservacao =  ' Cronograma :  ' + &croCodigo.ToString() +
+		  ' | Perído de ' + croDtInicial.ToString() +' a '+croDtFinal.ToString() + &diaSemana
+
+          &distCodigo = PRCDSalvarCabecalhoDistribuicao( &prefCodigo,
+		                                                 &remCodigo,
+														 croLocCodigo,
+														 croDtInicial,
+														 &locCodigoOrigem,
+														 croTipoRemessa,
+														 croDtInicial,
+														 croDtFinal,
+														 &distObservacao)
+		  new
+			prefCodigo           = &prefCodigo
+			distCodigo           = &distCodigo
+			distItemProduto      = prodCodigo
+			distItemQuantidade   = croLocQtde
+			distiItemSaldoAntes  = PRCDBuscarSaldoProdutoUE(&prefCodigo,prodCodigo,croLocCodigo)
+			distiItemSaldoDepois = distiItemSaldoAntes + croLocQtde
+			distItemPesoTotal    = distItemProdutoPeso*&croLocQtde
+		  endnew
+
+		  // if croLocQtde>0
+		  if &croStatus<>'R'
+			  PRCDEstoqueMovimentacao( &distCodigo,prodCodigo,croLocCodigo,croLocQtde,'D','N',0)
+		  endif
+		  // endif
+
+endFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo,in:&croCodigo,in:&locCodigoOrigem,out:&remCodigo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croLocQtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croLocQtde</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croLocQtde</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigoOrigem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigoOrigem</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Origem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:origem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo de Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distObservacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distObservacao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Observação</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croStatus">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croStatus</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Status</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="diaSemana">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diaSemana</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Semana</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>15</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>15</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="descdiaSemana">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>descdiaSemana</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Semana</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:semana</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDGerarDistribuicaoCronograma</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Gerar Distribuição a partir do  Cronograma</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

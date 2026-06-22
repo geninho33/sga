@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="945fff49-34e3-4b54-aebe-e5bb4124e1e7" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-13T14:29:53.0000000Z" checksum="a779c0727768155bd063dddd44e64a13" fullyQualifiedName="WWPBaseObjects.SimpleKPI" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="e9f14e1e-4c5a-459e-a34d-3882a814a35e" name="SimpleKPI" type="083f1b21-5715-45e1-8a8d-ceadef141e02" description="Simple KPI" parent="WWPBaseObjects.WWPTemplates" parentType="00000000-0000-0000-0000-000000000008">
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>SimpleKPI</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Category</Name>
+      <Value>KPI</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_CategoryOrder</Name>
+      <Value>0</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Type</Name>
+      <Value>Component</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_TemplateXml</Name>
+      <Value>&lt;component Name="SimpleKPI" PreviewMaxWidth="225"&gt;      &lt;table name="MainTable" type="Responsive" flexWrap="Wrap" panelTheme="PanelNoHeader" collapsable="False" cellThemeClass="CellMarginTop"&gt;         &lt;attributeTemplate name="Value" previewExampleText="352" themeClass="CardProfileImageTitle" align="Center" showDescription="False" editProps="&amp;lt;Att_Template&amp;gt;:Value::T:" domain="00972a17-9975-449e-aab1-d26165d51393-KPINumericValue" readOnly="True" /&gt;         &lt;textBlock controlName="Description" caption="Sales" themeClass="TextBlockDashboardDescriptionCard" align="Center" editProps="caption:Caption::T:" /&gt;      &lt;/table&gt;      &lt;events /&gt;      &lt;variables /&gt;   &lt;/component&gt;</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_InstanceType</Name>
+      <Value>WebPanel</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_PreviewImage</Name>
+      <Value>data:image/octet-stream;base64,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</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

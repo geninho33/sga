@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="d7875fbe-7e6c-6677-1758-9aa7c40a028e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-21T12:38:01.0000000Z" checksum="b92c8148c78728fb058536023ad50126" fullyQualifiedName="trnssalasWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b8cf3486-b668-4b6a-8c6b-6238ec967de7" name="trnssalasWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnssalas WWDS" parent="WorkWithPlustrnssalas" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[salaTurno = &salaTurno1 when &DynamicFiltersSelector1 = !'SALATURNO' AND &DynamicFiltersOperator1 = 0 AND (not &salaTurno1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaLocCodigo = &salaLocCodigo1 when &DynamicFiltersSelector1 = !'SALALOCCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &salaLocCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero.ToLower() like &salaNumero1.ToLower() when &DynamicFiltersSelector1 = !'SALANUMERO' AND &DynamicFiltersOperator1 = 0 AND (not &salaNumero1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero.ToLower() like '%' +  &salaNumero1.ToLower() when &DynamicFiltersSelector1 = !'SALANUMERO' AND &DynamicFiltersOperator1 = 1 AND (not &salaNumero1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaStatus = &salaStatus1 when &DynamicFiltersSelector1 = !'SALASTATUS' AND (not &salaStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaTurno = &salaTurno2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'SALATURNO' AND &DynamicFiltersOperator2 = 0 AND (not &salaTurno2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaLocCodigo = &salaLocCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'SALALOCCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &salaLocCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero.ToLower() like &salaNumero2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'SALANUMERO' AND &DynamicFiltersOperator2 = 0 AND (not &salaNumero2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero.ToLower() like '%' +  &salaNumero2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'SALANUMERO' AND &DynamicFiltersOperator2 = 1 AND (not &salaNumero2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaStatus = &salaStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'SALASTATUS' AND (not &salaStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaTurno = &salaTurno3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'SALATURNO' AND &DynamicFiltersOperator3 = 0 AND (not &salaTurno3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaLocCodigo = &salaLocCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'SALALOCCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &salaLocCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero.ToLower() like &salaNumero3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'SALANUMERO' AND &DynamicFiltersOperator3 = 0 AND (not &salaNumero3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero.ToLower() like '%' +  &salaNumero3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'SALANUMERO' AND &DynamicFiltersOperator3 = 1 AND (not &salaNumero3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaStatus = &salaStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'SALASTATUS' AND (not &salaStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &TFsalaLocCodigo.ToLower() when &TFsalaLocCodigo_Sel.IsEmpty() AND (not &TFsalaLocCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaLocCodigo = &TFsalaLocCodigo_Sel when not &TFsalaLocCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero.ToLower() like &TFsalaNumero.ToLower() when &TFsalaNumero_Sel.IsEmpty() AND (not &TFsalaNumero.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaNumero = &TFsalaNumero_Sel when not &TFsalaNumero_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaTurno in &TFsalaTurno_Sels when &TFsalaTurno_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaAlunos >= &TFsalaAlunos when not &TFsalaAlunos.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaAlunos <= &TFsalaAlunos_To when not &TFsalaAlunos_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[salaStatus in &TFsalaStatus_Sels when &TFsalaStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaTurno1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaTurno1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaTurno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaTurno2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaTurno2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaTurno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaTurno3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaTurno3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaTurno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaLocCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaLocCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaTurno_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaTurno_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaTurno</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaAlunos">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaAlunos</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaAlunos</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaAlunos_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaAlunos_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaAlunos</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaLocCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaLocCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaNumero1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaNumero1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaLocCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaLocCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaNumero2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaNumero2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaLocCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaLocCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaNumero3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaNumero3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="salaStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>salaStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaNumero">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaNumero</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaNumero_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaNumero_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaNumero</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFsalaLocCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFsalaLocCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:salaLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaTurno1</Name>
+        <Description>sala Turno1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaLocCodigo1</Name>
+        <Description>sala Loc Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaNumero1</Name>
+        <Description>sala Numero1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaStatus1</Name>
+        <Description>sala Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaTurno2</Name>
+        <Description>sala Turno2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaLocCodigo2</Name>
+        <Description>sala Loc Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaNumero2</Name>
+        <Description>sala Numero2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaStatus2</Name>
+        <Description>sala Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaTurno3</Name>
+        <Description>sala Turno3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaLocCodigo3</Name>
+        <Description>sala Loc Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaNumero3</Name>
+        <Description>sala Numero3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>salaStatus3</Name>
+        <Description>sala Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaLocCodigo</Name>
+        <Description>TFsala Loc Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaLocCodigo_Sel</Name>
+        <Description>TFsala Loc Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaNumero</Name>
+        <Description>TFsala Numero</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaNumero_Sel</Name>
+        <Description>TFsala Numero_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaTurno_Sels</Name>
+        <Description>TFsala Turno_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaAlunos</Name>
+        <Description>TFsala Alunos</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaAlunos_To</Name>
+        <Description>TFsala Alunos_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFsalaStatus_Sels</Name>
+        <Description>TFsala Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnssalasWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnssalas</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

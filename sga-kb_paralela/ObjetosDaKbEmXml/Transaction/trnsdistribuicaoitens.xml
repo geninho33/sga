@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-25T15:51:42.0000000Z" lastUpdate="2025-06-25T14:57:32.0000000Z" checksum="d32904bb4de81f1d0f463158804947ce" fullyQualifiedName="trnsdistribuicaoitens" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a4aa6152-3e53-eb9f-721b-f91fd1432d26" name="trnsdistribuicaoitens" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Itens da Distribuição" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsdistribuicaoitens" Type="trnsdistribuicaoitens" Description="Itens da Distribuição" Guid="a4aa6152-3e53-eb9f-721b-f91fd1432d26">
+      <Properties />
+      <Attribute key="True" guid="c8a4131f-9674-4a54-894c-4dae8ac78cee">distCodigo</Attribute>
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="4643d0b3-263a-63b9-1c6a-c9008381c0df">distItemProduto</Attribute>
+      <Attribute key="False" guid="9facefd0-fbb1-421f-8cc7-c836947e86d1">distItemProdutoDescricao</Attribute>
+      <Attribute key="False" guid="1f58204d-82c5-4f50-b068-99df047c745b">distItemProdutoUN</Attribute>
+      <Attribute key="False" guid="dc9507ae-0e3b-4c54-9a2e-8dfedb0982b4">distItemProdutoUNPeso</Attribute>
+      <Attribute key="False" guid="c03fc097-1537-4c6d-96ec-34965097c70a">distItemProdutoPeso</Attribute>
+      <Attribute key="False" guid="c9b7494b-0a44-41b5-a4d8-8f9cd01b1fde">distItemTipoRemessa</Attribute>
+      <Attribute key="False" guid="6506273a-ae82-a03b-954c-7e0845fc9005" isNullable="True">distItemQuantidade</Attribute>
+      <Attribute key="False" guid="1be8bd27-b255-4a74-b2f1-487e30d47811" isNullable="True">distItemQtdeAntes</Attribute>
+      <Attribute key="False" guid="cb4db41e-18e7-408a-aa3c-7e683f524ae9">distItemPesoTotal</Attribute>
+      <Attribute key="False" guid="90fc9453-7d0f-41a6-9c23-6e1fe08e3723" isNullable="True">distItemValidade</Attribute>
+      <Attribute key="False" guid="f254a7e4-b076-4ad7-9c06-a43d71564126" isNullable="True">distItemLote</Attribute>
+      <Attribute key="False" guid="e06700a9-a923-6ad9-56e9-16f70b277ae0" isNullable="True">distItemStatus</Attribute>
+      <Attribute key="False" guid="e384d4cc-16d6-4105-8ece-a8191bd22751">distItemProdutoPesoTotal</Attribute>
+      <Attribute key="False" guid="ee0357b2-6f7f-4e09-94e0-12b26e0be36e" isNullable="True">distItemQtdeEmEstoque</Attribute>
+      <Attribute key="False" guid="6488ab98-350b-4eb7-b135-1daf5e4129e0" isNullable="True">distItemQtdeVezes</Attribute>
+      <Attribute key="False" guid="0cc59988-7961-4cf3-af42-9548dbc06229" isNullable="True">distItemPerCapta</Attribute>
+      <Attribute key="False" guid="71d43006-7df5-4342-adb2-b3666e617e99" isNullable="True">distItemAreEnsCodigo</Attribute>
+      <Attribute key="False" guid="729bbc60-55c4-48a5-a72f-f92cd6c16ea7" isNullable="True">distiItemAreEnsSequencial</Attribute>
+      <Attribute key="False" guid="ec0094c4-245e-497b-97e9-6dc48f51a0fe" isNullable="True">distiItemSaldoAntes</Attribute>
+      <Attribute key="False" guid="f4174362-8ddc-4956-8f4c-cb5f9a714607" isNullable="True">distiItemSaldoDepois</Attribute>
+      <Attribute key="False" guid="c926b764-b0df-4949-b5f9-27b4afb11719">distItemLocCodigo</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellClass="DataContentCell"><data attribute="distCodigo" labelCaption="Listagem de Distribuição" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedprefCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockprefCodigo" caption="Prefeitura" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_prefCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;trnsdistribuicaoitensLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListGXProc&lt;/Name&gt;&lt;Value&gt;84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsdistribuicaoitensLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProcParametersPrefix&lt;/Name&gt;&lt;Value&gt; &quot;ComboName&quot;: &quot;prefCodigo&quot;, &quot;TrnMode&quot;: &quot;INS&quot;, &quot;IsDynamicCall&quot;: true, &quot;distCodigo&quot;: 0, &quot;prefCodigo&quot;: 0, &quot;distItemProduto&quot;: 0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsTitleSettingsIcons&lt;/Name&gt;&lt;Value&gt;&amp;amp;DDO_TitleSettingsIcons&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;prefCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="prefCodigo" labelPosition="None" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplitteddistItemProduto" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockdistItemProduto" caption="Produto" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_distItemProduto&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;trnsdistribuicaoitensLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListGXProc&lt;/Name&gt;&lt;Value&gt;84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsdistribuicaoitensLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsTitleSettingsIcons&lt;/Name&gt;&lt;Value&gt;&amp;amp;DDO_TitleSettingsIcons&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;distItemProduto_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="distItemProduto" labelPosition="None" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="distItemProdutoDescricao" labelCaption="Descrição" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="distItemProdutoUN" labelCaption="UN" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="distItemQuantidade" labelCaption="dist Item Quantidade" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="distItemStatus" labelCaption="dist Item Status" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><div id="SectionAttribute_prefCodigo"><gxAttribute AttID="&amp;ComboprefCodigo" /></div><div id="SectionAttribute_distItemProduto"><gxAttribute AttID="&amp;CombodistItemProduto" /></div></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Document>
+      <Form>
+        <Type>Windows</Type>
+        <Class>Windows</Class>
+        <ClassGuid>4df66249-100d-407d-8ce0-41ec76938671</ClassGuid>
+        <SizeUnit>px</SizeUnit>
+        <Info>
+          <Properties>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>True</Value>
+            </Property>
+            <Property>
+              <Name>Defaults</Name>
+              <Value>gx:TrnDefaultWindowsForm.dkt</Value>
+            </Property>
+          </Properties>
+        </Info>
+      </Form>
+    </Document>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+[web]
+{
+parm(in:&Mode, in:&distCodigo, in:&prefCodigo, in:&distItemProduto);
+
+distCodigo = &distCodigo if not &distCodigo.IsEmpty();
+noaccept(distCodigo) if not &distCodigo.IsEmpty();
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+distItemProduto = &distItemProduto if not &distItemProduto.IsEmpty();
+noaccept(distItemProduto) if not &distItemProduto.IsEmpty();
+
+prefCodigo = &ComboprefCodigo;
+distItemProduto = &CombodistItemProduto;
+}
+
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+Error('Informe a quantidade do produto!') 
+	If distItemQuantidade <= 0;
+
+Error('Informe a Unidade!') 
+	If distItemProdutoUN = 0;
+
+/*
+Error('Quantidade informada maior que saldo disponível!')
+	if distItemQuantidade > 0 and not PRCDTemSaldoEmEstoque(prefCodigo,distItemProduto,distItemQuantidade);
+*/
+
+// Processando o insert
+distiItemSaldoAntes = PRCDBuscarSaldoProdutoUE(prefCodigo,distItemProduto,distItemLocCodigo) 
+	on BeforeInsert, BeforeUpdate;
+
+distiItemSaldoDepois = distItemQuantidade + PRCDBuscarSaldoProdutoUE(prefCodigo,distItemProduto,distItemLocCodigo) 
+	on BeforeInsert, afterUpdate;
+
+// Salvando a quantidade anterior
+// distItemQtdeAntes = distItemQuantidade
+//	on BeforeUpdate, BeforeDelete;
+
+// Processando o update
+// distiItemSaldoDepois = distItemQuantidade - PRCDBuscarSaldoProdutoUE(prefCodigo,distItemProduto,distItemLocCodigo) 
+// on BeforeUpdate;
+
+PRCDEstoqueMovimentacao( distCodigo,distItemProduto,0,distItemQuantidade,'D','N', distItemQtdeAntes)
+	on afterinsert, afterUpdate;
+
+PRCDEstoqueMovimentacao( distCodigo,distItemProduto,0,distItemQuantidade,'D','I',distItemQtdeAntes)
+	on beforeDelete;
+
+// PRCDEstoqueMovimentacao( distCodigo,distItemProduto,distItemLocCodigo, distItemQuantidade,'DD','N')
+//	on beforeDelete, beforeUpdate;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	[web]
+	{
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	Combo_distItemProduto.GAMOAuthToken = &GAMSession.Token
+	distItemProduto.Visible = False
+	&CombodistItemProduto.SetEmpty()
+	&CombodistItemProduto.Visible = False
+	Combo_prefCodigo.GAMOAuthToken = &GAMSession.Token
+	prefCodigo.Visible = False
+	&ComboprefCodigo.SetEmpty()
+	&ComboprefCodigo.Visible = False
+	Do 'LoadComboprefCodigo'
+	Do 'LoadCombodistItemProduto'
+	}
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+   [web]
+   {
+	
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsdistribuicaoitensWW.Call(prefCodigo, distCodigo)
+	Endif
+
+	Return
+   }
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+[web]
+{
+
+Event Combo_distItemProduto.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&CombodistItemProduto.FromString(Combo_distItemProduto.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_prefCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Cond_prefCodigo = prefCodigo
+	&ComboprefCodigo.FromString(Combo_prefCodigo.SelectedValue_get)
+	If &Cond_prefCodigo <> &ComboprefCodigo
+		&CombodistItemProduto.SetEmpty()
+		Combo_distItemProduto.SelectedValue_set = ''
+		Combo_distItemProduto.SelectedText_set = ''
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadCombodistItemProduto'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Combo_distItemProduto.DataListProcParametersPrefix = format(!' "ComboName": "distItemProduto", "TrnMode": "INS", "IsDynamicCall": true, "distCodigo": 0, "prefCodigo": 0, "distItemProduto": 0, "Cond_prefCodigo": "#%1#"', prefCodigo.InternalName)
+	&Combo_DataJson = trnsdistribuicaoitensLoadDVCombo(!'distItemProduto', &Mode, false, &distCodigo, &prefCodigo, &distItemProduto, prefCodigo, '', &ComboSelectedValue, &ComboSelectedText)
+	Combo_distItemProduto.SelectedValue_set = &ComboSelectedValue
+	Combo_distItemProduto.SelectedText_set = &ComboSelectedText
+	&CombodistItemProduto.FromString(&ComboSelectedValue)
+	If &Mode <> TrnMode.Insert Or Not &distItemProduto.IsEmpty()
+		Combo_distItemProduto.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboprefCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Combo_DataJson = trnsdistribuicaoitensLoadDVCombo(!'prefCodigo', &Mode, false, &distCodigo, &prefCodigo, &distItemProduto, prefCodigo, '', &ComboSelectedValue, &ComboSelectedText)
+	Combo_prefCodigo.SelectedValue_set = &ComboSelectedValue
+	Combo_prefCodigo.SelectedText_set = &ComboSelectedText
+	&ComboprefCodigo.FromString(&ComboSelectedValue)
+	If &Mode <> TrnMode.Insert Or Not &prefCodigo.IsEmpty()
+		Combo_prefCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+}
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProduto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombodistCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombodistCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Cond_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Cond_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProduto_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProduto_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombodistItemProduto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombodistItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicaoitens</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Itens da Distribuição</Value>
+    </Property>
+    <Property>
+      <Name>idISBUSINESSCOMPONENT</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnsdistribuicaoitensWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>SEARCH_VIEWER</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-trnsdistribuicaoitensView</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

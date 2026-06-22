@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e8866ed8-be94-04cb-3059-f02ce9fc053b" user="GERSONFETTER\Administrador" versionDate="2024-08-05T05:08:41.0000000Z" lastUpdate="2024-08-05T04:10:20.0000000Z" checksum="795e46fd3d599b3b63c54d357eecafe0" fullyQualifiedName="trnsfornecedoresWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="59a92314-071d-422b-87d1-2f8b54847f3c" name="trnsfornecedoresWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsfornecedores WWDS" parent="WorkWithPlustrnsfornecedores" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like '%' +  &forNome1.ToLower() when &DynamicFiltersSelector1 = !'FORNOME' AND &DynamicFiltersOperator1 = 0 AND (not &forNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &forNome1.ToLower() when &DynamicFiltersSelector1 = !'FORNOME' AND &DynamicFiltersOperator1 = 1 AND (not &forNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCodigo = &forCodigo1 when &DynamicFiltersSelector1 = !'FORCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &forCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade.ToLower() like '%' +  &forCidade1.ToLower() when &DynamicFiltersSelector1 = !'FORCIDADE' AND &DynamicFiltersOperator1 = 0 AND (not &forCidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade.ToLower() like &forCidade1.ToLower() when &DynamicFiltersSelector1 = !'FORCIDADE' AND &DynamicFiltersOperator1 = 1 AND (not &forCidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf.ToLower() like '%' +  &forCnpjcpf1.ToLower() when &DynamicFiltersSelector1 = !'FORCNPJCPF' AND &DynamicFiltersOperator1 = 0 AND (not &forCnpjcpf1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf.ToLower() like &forCnpjcpf1.ToLower() when &DynamicFiltersSelector1 = !'FORCNPJCPF' AND &DynamicFiltersOperator1 = 1 AND (not &forCnpjcpf1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail.ToLower() like '%' +  &forEmail1.ToLower() when &DynamicFiltersSelector1 = !'FOREMAIL' AND &DynamicFiltersOperator1 = 0 AND (not &forEmail1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail.ToLower() like &forEmail1.ToLower() when &DynamicFiltersSelector1 = !'FOREMAIL' AND &DynamicFiltersOperator1 = 1 AND (not &forEmail1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forBairro.ToLower() like '%' +  &forBairro1.ToLower() when &DynamicFiltersSelector1 = !'FORBAIRRO' AND &DynamicFiltersOperator1 = 0 AND (not &forBairro1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forBairro.ToLower() like &forBairro1.ToLower() when &DynamicFiltersSelector1 = !'FORBAIRRO' AND &DynamicFiltersOperator1 = 1 AND (not &forBairro1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone.ToLower() like '%' +  &forTelefone1.ToLower() when &DynamicFiltersSelector1 = !'FORTELEFONE' AND &DynamicFiltersOperator1 = 0 AND (not &forTelefone1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone.ToLower() like &forTelefone1.ToLower() when &DynamicFiltersSelector1 = !'FORTELEFONE' AND &DynamicFiltersOperator1 = 1 AND (not &forTelefone1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like '%' +  &forNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORNOME' AND &DynamicFiltersOperator2 = 0 AND (not &forNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &forNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORNOME' AND &DynamicFiltersOperator2 = 1 AND (not &forNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCodigo = &forCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &forCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade.ToLower() like '%' +  &forCidade2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORCIDADE' AND &DynamicFiltersOperator2 = 0 AND (not &forCidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade.ToLower() like &forCidade2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORCIDADE' AND &DynamicFiltersOperator2 = 1 AND (not &forCidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf.ToLower() like '%' +  &forCnpjcpf2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORCNPJCPF' AND &DynamicFiltersOperator2 = 0 AND (not &forCnpjcpf2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf.ToLower() like &forCnpjcpf2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORCNPJCPF' AND &DynamicFiltersOperator2 = 1 AND (not &forCnpjcpf2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail.ToLower() like '%' +  &forEmail2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FOREMAIL' AND &DynamicFiltersOperator2 = 0 AND (not &forEmail2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail.ToLower() like &forEmail2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FOREMAIL' AND &DynamicFiltersOperator2 = 1 AND (not &forEmail2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forBairro.ToLower() like '%' +  &forBairro2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORBAIRRO' AND &DynamicFiltersOperator2 = 0 AND (not &forBairro2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forBairro.ToLower() like &forBairro2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORBAIRRO' AND &DynamicFiltersOperator2 = 1 AND (not &forBairro2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone.ToLower() like '%' +  &forTelefone2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORTELEFONE' AND &DynamicFiltersOperator2 = 0 AND (not &forTelefone2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone.ToLower() like &forTelefone2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'FORTELEFONE' AND &DynamicFiltersOperator2 = 1 AND (not &forTelefone2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like '%' +  &forNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORNOME' AND &DynamicFiltersOperator3 = 0 AND (not &forNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &forNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORNOME' AND &DynamicFiltersOperator3 = 1 AND (not &forNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCodigo = &forCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &forCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade.ToLower() like '%' +  &forCidade3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORCIDADE' AND &DynamicFiltersOperator3 = 0 AND (not &forCidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade.ToLower() like &forCidade3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORCIDADE' AND &DynamicFiltersOperator3 = 1 AND (not &forCidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf.ToLower() like '%' +  &forCnpjcpf3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORCNPJCPF' AND &DynamicFiltersOperator3 = 0 AND (not &forCnpjcpf3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf.ToLower() like &forCnpjcpf3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORCNPJCPF' AND &DynamicFiltersOperator3 = 1 AND (not &forCnpjcpf3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail.ToLower() like '%' +  &forEmail3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FOREMAIL' AND &DynamicFiltersOperator3 = 0 AND (not &forEmail3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail.ToLower() like &forEmail3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FOREMAIL' AND &DynamicFiltersOperator3 = 1 AND (not &forEmail3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forBairro.ToLower() like '%' +  &forBairro3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORBAIRRO' AND &DynamicFiltersOperator3 = 0 AND (not &forBairro3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forBairro.ToLower() like &forBairro3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORBAIRRO' AND &DynamicFiltersOperator3 = 1 AND (not &forBairro3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone.ToLower() like '%' +  &forTelefone3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORTELEFONE' AND &DynamicFiltersOperator3 = 0 AND (not &forTelefone3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone.ToLower() like &forTelefone3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'FORTELEFONE' AND &DynamicFiltersOperator3 = 1 AND (not &forTelefone3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCodigo >= &TFforCodigo when not &TFforCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCodigo <= &TFforCodigo_To when not &TFforCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome.ToLower() like &TFforNome.ToLower() when &TFforNome_Sel.IsEmpty() AND (not &TFforNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forNome = &TFforNome_Sel when not &TFforNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forContato.ToLower() like &TFforContato.ToLower() when &TFforContato_Sel.IsEmpty() AND (not &TFforContato.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forContato = &TFforContato_Sel when not &TFforContato_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf.ToLower() like &TFforCnpjcpf.ToLower() when &TFforCnpjcpf_Sel.IsEmpty() AND (not &TFforCnpjcpf.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCnpjcpf = &TFforCnpjcpf_Sel when not &TFforCnpjcpf_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade.ToLower() like &TFforCidade.ToLower() when &TFforCidade_Sel.IsEmpty() AND (not &TFforCidade.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forCidade = &TFforCidade_Sel when not &TFforCidade_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEstado.ToLower() like &TFforEstado.ToLower() when &TFforEstado_Sel.IsEmpty() AND (not &TFforEstado.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEstado = &TFforEstado_Sel when not &TFforEstado_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone.ToLower() like &TFforTelefone.ToLower() when &TFforTelefone_Sel.IsEmpty() AND (not &TFforTelefone.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forTelefone = &TFforTelefone_Sel when not &TFforTelefone_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail.ToLower() like &TFforEmail.ToLower() when &TFforEmail_Sel.IsEmpty() AND (not &TFforEmail.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forEmail = &TFforEmail_Sel when not &TFforEmail_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[forStatus in &TFforStatus_Sels when &TFforStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forTelefone1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forTelefone1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forBairro1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forBairro1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCidade1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCidade1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCnpjcpf1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCnpjcpf1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCnpjcpf</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forEmail1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forEmail1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forTelefone2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forTelefone2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forBairro2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forBairro2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCidade2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCidade2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCnpjcpf2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCnpjcpf2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCnpjcpf</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forEmail2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forEmail2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forTelefone3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forTelefone3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forBairro3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forBairro3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCidade3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCidade3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forCnpjcpf3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forCnpjcpf3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCnpjcpf</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="forEmail3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>forEmail3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforCnpjcpf">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforCnpjcpf</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCnpjcpf</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforCnpjcpf_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforCnpjcpf_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCnpjcpf</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforCidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforCidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforCidade_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforCidade_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forCidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforEstado">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforEstado</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forEstado</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforEstado_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforEstado_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forEstado</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforTelefone">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforTelefone</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforTelefone_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforTelefone_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforContato">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforContato</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forContato</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforContato_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforContato_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forContato</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforEmail">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforEmail</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforEmail_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforEmail_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFforStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFforStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:forStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forNome1</Name>
+        <Description>for Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCodigo1</Name>
+        <Description>for Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCidade1</Name>
+        <Description>for Cidade1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCnpjcpf1</Name>
+        <Description>for Cnpjcpf1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forEmail1</Name>
+        <Description>for Email1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forBairro1</Name>
+        <Description>for Bairro1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forTelefone1</Name>
+        <Description>for Telefone1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forNome2</Name>
+        <Description>for Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCodigo2</Name>
+        <Description>for Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCidade2</Name>
+        <Description>for Cidade2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCnpjcpf2</Name>
+        <Description>for Cnpjcpf2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forEmail2</Name>
+        <Description>for Email2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forBairro2</Name>
+        <Description>for Bairro2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forTelefone2</Name>
+        <Description>for Telefone2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forNome3</Name>
+        <Description>for Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCodigo3</Name>
+        <Description>for Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCidade3</Name>
+        <Description>for Cidade3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forCnpjcpf3</Name>
+        <Description>for Cnpjcpf3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forEmail3</Name>
+        <Description>for Email3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forBairro3</Name>
+        <Description>for Bairro3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>forTelefone3</Name>
+        <Description>for Telefone3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforCodigo</Name>
+        <Description>TFfor Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforCodigo_To</Name>
+        <Description>TFfor Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforNome</Name>
+        <Description>TFfor Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforNome_Sel</Name>
+        <Description>TFfor Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforContato</Name>
+        <Description>TFfor Contato</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforContato_Sel</Name>
+        <Description>TFfor Contato_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforCnpjcpf</Name>
+        <Description>TFfor Cnpjcpf</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforCnpjcpf_Sel</Name>
+        <Description>TFfor Cnpjcpf_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforCidade</Name>
+        <Description>TFfor Cidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforCidade_Sel</Name>
+        <Description>TFfor Cidade_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforEstado</Name>
+        <Description>TFfor Estado</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforEstado_Sel</Name>
+        <Description>TFfor Estado_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforTelefone</Name>
+        <Description>TFfor Telefone</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforTelefone_Sel</Name>
+        <Description>TFfor Telefone_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforEmail</Name>
+        <Description>TFfor Email</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforEmail_Sel</Name>
+        <Description>TFfor Email_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFforStatus_Sels</Name>
+        <Description>TFfor Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsfornecedoresWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsfornecedores</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

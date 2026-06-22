@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c3fa211c-9713-4e6b-a173-da675eaad2be" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:40:10.0000000Z" checksum="bd02f027c3663c2128230c7a54401c48" fullyQualifiedName="WorkWithPlusWPRelatorioMovimentacaoEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c4e9798c-c1ef-06f0-157b-dc507c504dc3" name="WorkWithPlusWPRelatorioMovimentacaoEstoque" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPRelatorio Movimentacao Estoque" parent="WPRelatorioMovimentacaoEstoque" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPRelatorioMovimentacaoEstoque" defaultSecFuntionKey="WPRelatorioMovimentacaoEstoque" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table name="TableMainSecundary" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <table name="cPanelOpcoes" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Opções de Impressão" cellWidth_E="67%" cellWidth_S="67%" cellWidth_M="67%" cellWidth_L="67%">
+          <table name="groupFiltro" isGroup="True" numberOfColumns="1" type="Responsive" title="Opções ">
+            <variable name="produto" description="Produto" defaultDescription="Produto" dataType="Basic" defaultDataType="Basic" basicLength="8" defaultBasicLength="8" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';" defaultConditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';" controlEmptyItem="True" defaultControlEmptyItem="True" controlEmptyItemText="Todos" defaultControlEmptyItemText="Todos" descriptionWidth="25%" />
+            <variable name="ordemData" description="Ordem" defaultDescription="Ordem" dataType="Basic" defaultDataType="Basic" basicType="Character" defaultBasicType="Character" basicCLength="1" defaultBasicCLength="1" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Combo Box" controlValues="Crescente:C,Descrescrente:D" defaultControlValues="Crescente:C,Descrescrente:D" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodGrupCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodGrupCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodGrupdescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodGrupdescricao" conditions="prodGrupStatus = 'A';" defaultConditions="prodGrupStatus = 'A';" controlEmptyItem="False" controlEmptyItemText="Todos" defaultControlEmptyItemText="Todos" descriptionWidth="25%" />
+            <variable name="tipoMovimentacao" description="Tipo de Movimentação" defaultDescription="Tipo de Movimentação" dataType="Basic" defaultDataType="Basic" basicType="Character" defaultBasicType="Character" basicCLength="1" defaultBasicCLength="1" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Combo Box" controlValues="Todos:T,Entrada:E,Saida:S" defaultControlValues="Todos:T,Entrada:E,Saida:S" descriptionWidth="25%" />
+          </table>
+          <table name="groupPeriodo" isGroup="True" numberOfColumns="1" type="Responsive" title="Periodo">
+            <variable name="dataIncial" description="Data Inicial: " defaultDescription="Data Inicial: " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" defaultControlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" descriptionWidth="17%" defaultDescriptionWidth="17%" />
+            <variable name="dataFinal" description="Data Final" defaultDescription="Data Final" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" basicCLength="1" defaultBasicCLength="1" controlInfoDef="Based on" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" defaultControlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" controlType="Edit" defaultControlType="Edit" controlValues="Todas:T,Entrada:E,Saida:S" defaultControlValues="Todas:T,Entrada:E,Saida:S" descriptionWidth="17%" defaultDescriptionWidth="17%" />
+          </table>
+          <userAction caption="Imprimir" name="btnImprimir" />
+        </table>
+      </table>
+      <userControl controlName="InNewWindow" ucName="InNewWindow" ucId="-667710712" ucProperties="Name:_blank,Fullscreen:True,Location:False,MenuBar:False,TitleBar:False,ToolBar:False,directories:False,fitscreen:True" />
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPRelatorioMovimentacaoEstoque</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPRelatorioMovimentacaoEstoque</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

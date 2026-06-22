@@ -1,0 +1,3811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ca2417ff-53d6-013a-1088-edc7ebb19da7" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-23T03:09:41.0000000Z" lastUpdate="2025-04-21T23:44:04.0000000Z" checksum="a9b0d9330acae101b08ebfc44f1a7771" fullyQualifiedName="AtendimentoWW" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a3e21c99-593e-4706-9bc5-273c6419e351" name="AtendimentoWW" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description=" Atendimento" parent="WorkWithPlusAtendimento" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_FilterOptions&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableHeader" tableType="Flex" flexDirection="Column" containerSlotName="TableHeader"><row><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableActions" tableType="Flex"><row><cell flexGrow="0"><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell><cell flexGrow="0"><table controlName="TableRightHeader" tableType="Flex" flexWrap="Wrap"><row><cell cellClass="CellAlignTopPaddingTop2"><ucw gxControlType="1204120062" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;ddo_ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconType&lt;/Name&gt;&lt;Value&gt;FontIcon&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Icon&lt;/Name&gt;&lt;Value&gt;fas fa-filter&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Tooltip&lt;/Name&gt;&lt;Value&gt;WWP_ManageFiltersTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ManageFiltersData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><table controlName="TableFilters"><row><cell><table controlName="TableDynamicFilters" class="TableDynamicFiltersFlex" tableType="Flex" flexDirection="Column"><row><cell cellClass="DynRowVisible"><table controlName="TableDynamicFiltersRow1" tableType="Flex"><row><cell><textblock controlName="DynamicFiltersPrefix1" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell><data attribute="&amp;DynamicFiltersSelector1" labelPosition="None" class="Attribute" /></cell><cell><textblock controlName="DynamicFiltersMiddle1" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell><table controlName="TableMergedDynamicFilters1" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_locDescricao1_Cell"><data attribute="&amp;locDescricao1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_AreEnsNome1_Cell"><data attribute="&amp;AreEnsNome1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_carGruDescricao1_Cell"><data attribute="&amp;carGruDescricao1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_AreEnsEtapaNome1_Cell"><data attribute="&amp;AreEnsEtapaNome1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_carGruQtdeItens1_Cell"><data attribute="&amp;carGruQtdeItens1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter1_Cell"><image controlName="AddDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter1_Cell"><image controlName="RemoveDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow2" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix2" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector2" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle2" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters2" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_locDescricao2_Cell"><data attribute="&amp;locDescricao2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_AreEnsNome2_Cell"><data attribute="&amp;AreEnsNome2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_carGruDescricao2_Cell"><data attribute="&amp;carGruDescricao2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_AreEnsEtapaNome2_Cell"><data attribute="&amp;AreEnsEtapaNome2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_carGruQtdeItens2_Cell"><data attribute="&amp;carGruQtdeItens2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter2_Cell"><image controlName="AddDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter2_Cell"><image controlName="RemoveDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow3" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix3" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector3" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle3" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters3" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_locDescricao3_Cell"><data attribute="&amp;locDescricao3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_AreEnsNome3_Cell"><data attribute="&amp;AreEnsNome3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_carGruDescricao3_Cell"><data attribute="&amp;carGruDescricao3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_AreEnsEtapaNome3_Cell"><data attribute="&amp;AreEnsEtapaNome3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_carGruQtdeItens3_Cell"><data attribute="&amp;carGruQtdeItens3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_RemoveFilter3_Cell"><image controlName="RemoveDynamicFilters3" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters3'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="GridTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithPaginationBar GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;Atendimento&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;AtendimentoCodigo  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoCodigo)  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = True&#xD;&#xA;locDescricao  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(locDescricao)  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AreEnsNome  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AreEnsNome)  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AreEnsEtapaNome  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AreEnsEtapaNome)  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoTurno  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoTurno)  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = True&#xD;&#xA;carGruCodigo  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(carGruCodigo)  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoFuncionariosSegunda  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoFuncionariosSegunda)  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoNormalSegunda  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoNormalSegunda)  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoColesterolSegunda  when &amp;amp;OrderedBy = 9 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoColesterolSegunda)  when &amp;amp;OrderedBy = 9 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoDiabeticoSegunda  when &amp;amp;OrderedBy = 10 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoDiabeticoSegunda)  when &amp;amp;OrderedBy = 10 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoGlutenSegunda  when &amp;amp;OrderedBy = 11 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoGlutenSegunda)  when &amp;amp;OrderedBy = 11 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoLactoseSegunda  when &amp;amp;OrderedBy = 12 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoLactoseSegunda)  when &amp;amp;OrderedBy = 12 AND &amp;amp;OrderedDsc = True&#xD;&#xA;AtendimentoStatus  when &amp;amp;OrderedBy = 13 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(AtendimentoStatus)  when &amp;amp;OrderedBy = 13 AND &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-AtendimentoWWDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;DynamicFiltersSelector1, &amp;amp;DynamicFiltersOperator1, &amp;amp;locDescricao1, &amp;amp;AreEnsNome1, &amp;amp;carGruDescricao1, &amp;amp;AreEnsEtapaNome1, &amp;amp;carGruQtdeItens1, &amp;amp;DynamicFiltersEnabled2, &amp;amp;DynamicFiltersSelector2, &amp;amp;DynamicFiltersOperator2, &amp;amp;locDescricao2, &amp;amp;AreEnsNome2, &amp;amp;carGruDescricao2, &amp;amp;AreEnsEtapaNome2, &amp;amp;carGruQtdeItens2, &amp;amp;DynamicFiltersEnabled3, &amp;amp;DynamicFiltersSelector3, &amp;amp;DynamicFiltersOperator3, &amp;amp;locDescricao3, &amp;amp;AreEnsNome3, &amp;amp;carGruDescricao3, &amp;amp;AreEnsEtapaNome3, &amp;amp;carGruQtdeItens3, &amp;amp;TFAtendimentoCodigo, &amp;amp;TFAtendimentoCodigo_To, &amp;amp;TFlocDescricao, &amp;amp;TFlocDescricao_Sel, &amp;amp;TFAreEnsNome, &amp;amp;TFAreEnsNome_Sel, &amp;amp;TFAreEnsEtapaNome, &amp;amp;TFAreEnsEtapaNome_Sel, &amp;amp;TFAtendimentoTurno_Sels, &amp;amp;TFcarGruCodigo, &amp;amp;TFcarGruCodigo_Sel, &amp;amp;TFAtendimentoFuncionariosSegunda, &amp;amp;TFAtendimentoFuncionariosSegunda_To, &amp;amp;TFAtendimentoNormalSegunda, &amp;amp;TFAtendimentoNormalSegunda_To, &amp;amp;TFAtendimentoColesterolSegunda, &amp;amp;TFAtendimentoColesterolSegunda_To, &amp;amp;TFAtendimentoDiabeticoSegunda, &amp;amp;TFAtendimentoDiabeticoSegunda_To, &amp;amp;TFAtendimentoGlutenSegunda, &amp;amp;TFAtendimentoGlutenSegunda_To, &amp;amp;TFAtendimentoLactoseSegunda, &amp;amp;TFAtendimentoLactoseSegunda_To, &amp;amp;TFAtendimentoStatus_Sels&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;EditableGridCancel" titleExp="" class="DeleteAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridCancel'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Update" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_update&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnAlunos" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Alunos&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Delete" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigo" titleExp="Prefeitura" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoCodigo" titleExp="Atendimento" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="locDescricao" titleExp="Unidade Escolar" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AreEnsEtapaNivel" titleExp="Nível" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="carGruDescricao" titleExp="Grupo Cardápio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AreEnsEtapaNumero" titleExp="Etapa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="locCodigo" titleExp="Local" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AreEnsSequencial" titleExp="Etapa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;AreEnsSequencial&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;AreEnsEtapaNome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AreEnsCodigo" titleExp="Área" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;AreEnsCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;AreEnsNome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AreEnsNome" titleExp="Área " class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AreEnsEtapaNome" titleExp="Etapa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoTurno" titleExp="Turno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="carGruCodigo" titleExp="Grupo Cardápio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;carGruCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;carGruDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoFuncionariosSegunda" titleExp="Func." class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoNormalSegunda" titleExp="Normal" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoColesterolSegunda" titleExp="Colesterol" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoDiabeticoSegunda" titleExp="Diabético" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoGlutenSegunda" titleExp="Gluten" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoLactoseSegunda" titleExp="Lactose" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="AtendimentoStatus" titleExp="Situação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EditableGridConfirm" titleExp="" class="SelectAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridConfirm'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="ActionGroupGrouped"><item><action controlName="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_insert&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnImportarSGE" onClickEvent="'DoImportarSGE'" caption="Importar" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Importar os dados do SGE&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxTextBlock GxFormat="HTML" id="JSDynamicFilters" CaptionExpression="JSDynamicFilters" /><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="5:AtendimentoCodigo|6:locDescricao|13:AreEnsNome|14:AreEnsEtapaNome|15:AtendimentoTurno|16:carGruCodigo|17:AtendimentoFuncionariosSegunda|18:AtendimentoNormalSegunda|19:AtendimentoColesterolSegunda|20:AtendimentoDiabeticoSegunda|21:AtendimentoGlutenSegunda|22:AtendimentoLactoseSegunda|23:AtendimentoStatus" ColumnsSortValues="1|2|3|4|5|6|7|8|9|10|11|12|13" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T" IncludeFilter="T|T|T|T||T|T|T|T|T|T|T|" FilterType="Numeric|Character|Character|Character||Character|Numeric|Numeric|Numeric|Numeric|Numeric|Numeric|" FilterIsRange="T||||||T|T|T|T|T|T|" IncludeDataList="|T|T|T|T|T|||||||T" DataListType="|Dynamic|Dynamic|Dynamic|FixedValues|Dynamic|||||||FixedValues" AllowMultipleSelection="||||T||||||||T" DataListFixedValues="||||1:Matutino,2:Vespertino,3:Noturno,4:Integral,5:Interm. Matutino,6:Interm. Vespertino||||||||A:Ativo,I:Inativo" DataListProc="AtendimentoWWGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-AtendimentoWWGetFilterData" Format="8.0||||||4.0|4.0|4.0|4.0|4.0|4.0|" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+
+	If &HTTPRequest.Method = HttpMethod.Get
+		Do 'LoadSavedFilters'
+	EndIf
+
+	JSDynamicFilters.Caption = ''
+	&DynamicFiltersSelector1 = !'LOCDESCRICAO'
+	Do 'EnableDynamicFilters1'
+	&DynamicFiltersSelector2 = !'LOCDESCRICAO'
+	Do 'EnableDynamicFilters2'
+	&DynamicFiltersSelector3 = !'LOCDESCRICAO'
+	Do 'EnableDynamicFilters3'
+	
+	AddDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 2, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	AddDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters3.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = ' Atendimento'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	If &OrderedBy < 1
+		&OrderedBy = 1
+		Do 'SetDDOSortedStatus'
+	EndIf
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	GridPaginationBar.RowsPerPageSelectedValue = Grid.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: LoadPrefeitura
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'CheckSecurityForActions'
+
+	Do Case
+		Case &ManageFiltersExecutionStep = 1
+			&ManageFiltersExecutionStep = 2
+		Case &ManageFiltersExecutionStep = 2
+			&ManageFiltersExecutionStep = 0
+			Do 'LoadSavedFilters'
+	EndCase
+
+	&DynamicFiltersOperator1.Clear()
+	Do Case
+		Case &DynamicFiltersSelector1 = !'LOCDESCRICAO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'AREENSNOME'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'CARGRUDESCRICAO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'AREENSETAPANOME'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'CARGRUQTDEITENS'
+			&DynamicFiltersOperator1.AddItem(0, "<")
+			&DynamicFiltersOperator1.AddItem(1, "=")
+			&DynamicFiltersOperator1.AddItem(2, ">")
+	EndCase
+	If &DynamicFiltersEnabled2
+		&DynamicFiltersOperator2.Clear()
+		Do Case
+			Case &DynamicFiltersSelector2 = !'LOCDESCRICAO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'AREENSNOME'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'CARGRUDESCRICAO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'AREENSETAPANOME'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'CARGRUQTDEITENS'
+				&DynamicFiltersOperator2.AddItem(0, "<")
+				&DynamicFiltersOperator2.AddItem(1, "=")
+				&DynamicFiltersOperator2.AddItem(2, ">")
+		EndCase
+		If &DynamicFiltersEnabled3
+			&DynamicFiltersOperator3.Clear()
+			Do Case
+				Case &DynamicFiltersSelector3 = !'LOCDESCRICAO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'AREENSNOME'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'CARGRUDESCRICAO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'AREENSETAPANOME'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'CARGRUQTDEITENS'
+					&DynamicFiltersOperator3.AddItem(0, "<")
+					&DynamicFiltersOperator3.AddItem(1, "=")
+					&DynamicFiltersOperator3.AddItem(2, ">")
+			EndCase
+		EndIf
+	EndIf
+	Do 'SaveGridState'
+
+	If &EditableGrid_Mode.IsEmpty()
+		&EditableGrid_Mode = !'TrnMode.Display'
+	EndIf
+	If &EditableGrid_Mode <> !'TrnMode.Display'
+		BtnInsert.Visible = False
+	EndIf
+	&GridCurrentPage = Grid.CurrentPage
+	&GridPageCount = Grid.PageCount
+	&GridAppliedFilters = WWP_GetAppliedFiltersDescription(&Pgmname)
+	&Update.Visible = (&IsAuthorized_Update AND &EditableGrid_Mode = !'TrnMode.Display')
+	&btnAlunos.Visible = (&IsAuthorized_btnAlunos AND &EditableGrid_Mode = !'TrnMode.Display')
+	&Delete.Visible = (&EditableGrid_Mode = !'TrnMode.Display')
+	&EditableGridCancel.Visible = (&EditableGrid_Mode <> !'TrnMode.Display')
+	&EditableGridConfirm.Visible = (&EditableGrid_Mode <> !'TrnMode.Display')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridPaginationBar.SelectedPage = !'Previous'
+			Grid.PreviousPage()
+		Case GridPaginationBar.SelectedPage = !'Next'
+			Grid.NextPage()
+		Otherwise
+			&PageToGo.FromString(GridPaginationBar.SelectedPage)
+			Grid.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = GridPaginationBar.RowsPerPageSelectedValue
+	Grid.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedBy.FromString(DDO_Grid.SelectedValue_get)
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'AtendimentoCodigo'
+					&TFAtendimentoCodigo.FromString(DDO_Grid.FilteredText_get)
+					&TFAtendimentoCodigo_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'locDescricao'
+					&TFlocDescricao = DDO_Grid.FilteredText_get
+					&TFlocDescricao_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'AreEnsNome'
+					&TFAreEnsNome = DDO_Grid.FilteredText_get
+					&TFAreEnsNome_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'AreEnsEtapaNome'
+					&TFAreEnsEtapaNome = DDO_Grid.FilteredText_get
+					&TFAreEnsEtapaNome_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'AtendimentoTurno'
+					&TFAtendimentoTurno_SelsJson = DDO_Grid.SelectedValue_get
+					&TFAtendimentoTurno_Sels.FromJson(&TFAtendimentoTurno_SelsJson.Replace(!'"', ''))
+				Case DDO_Grid.SelectedColumn = !'carGruCodigo'
+					&TFcarGruCodigo = DDO_Grid.FilteredText_get
+					&TFcarGruCodigo_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFcarGruCodigo_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'AtendimentoFuncionariosSegunda'
+					&TFAtendimentoFuncionariosSegunda.FromString(DDO_Grid.FilteredText_get)
+					&TFAtendimentoFuncionariosSegunda_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'AtendimentoNormalSegunda'
+					&TFAtendimentoNormalSegunda.FromString(DDO_Grid.FilteredText_get)
+					&TFAtendimentoNormalSegunda_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'AtendimentoColesterolSegunda'
+					&TFAtendimentoColesterolSegunda.FromString(DDO_Grid.FilteredText_get)
+					&TFAtendimentoColesterolSegunda_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'AtendimentoDiabeticoSegunda'
+					&TFAtendimentoDiabeticoSegunda.FromString(DDO_Grid.FilteredText_get)
+					&TFAtendimentoDiabeticoSegunda_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'AtendimentoGlutenSegunda'
+					&TFAtendimentoGlutenSegunda.FromString(DDO_Grid.FilteredText_get)
+					&TFAtendimentoGlutenSegunda_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'AtendimentoLactoseSegunda'
+					&TFAtendimentoLactoseSegunda.FromString(DDO_Grid.FilteredText_get)
+					&TFAtendimentoLactoseSegunda_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'AtendimentoStatus'
+					&TFAtendimentoStatus_SelsJson = DDO_Grid.SelectedValue_get
+					&TFAtendimentoStatus_Sels.FromJson(&TFAtendimentoStatus_SelsJson)
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&EditableGridCancel.FromImage(ActionCancel)
+	&EditableGridCancel.TooltipText = "GX_BtnCancel"
+	
+	&Update = !'<i class="fa fa-pen"></i>'
+	If (&IsAuthorized_Update)
+		&Update.Link = Atendimento.Link(TrnMode.Update, prefCodigo, AtendimentoCodigo)
+	Endif
+	&btnAlunos = !'<i class="fas fa-user-graduate"></i>'
+	If (&IsAuthorized_btnAlunos)
+		&btnAlunos.Link = trnsalunoWW.Link(prefCodigo, AtendimentoCodigo)
+	Endif
+	&Delete = !'<i class="fa fa-times"></i>'
+	
+	&EditableGridConfirm.FromImage(SelectRow)
+	&EditableGridConfirm.TooltipText = "GX_BtnEnter"
+	
+	If &EditableGrid_Mode <> !'TrnMode.Display'
+		&IsCurrentRecordSelected = False
+		If &EditableGrid_Mode <> !'TrnMode.Insert' AND &prefCodigo_SelectedLine = prefCodigo AND &AtendimentoCodigo_SelectedLine = AtendimentoCodigo
+			&IsCurrentRecordSelected = True
+		EndIf
+		If &EditableGrid_Mode = !'TrnMode.Delete'
+			AtendimentoCodigo.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			locDescricao.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AreEnsNome.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AreEnsEtapaNome.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoTurno.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			carGruCodigo.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoFuncionariosSegunda.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoNormalSegunda.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoColesterolSegunda.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoDiabeticoSegunda.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoGlutenSegunda.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoLactoseSegunda.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			AtendimentoStatus.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+		EndIf
+		&EditableGridCancel.Class = iif(&IsCurrentRecordSelected, !'DeleteAttribute ActionBaseColorAttribute', !'Invisible')
+		&EditableGridConfirm.Class = iif(&IsCurrentRecordSelected, !'SelectAttribute ActionBaseColorAttribute', !'Invisible')
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &Delete.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prefCodigo_SelectedLine = prefCodigo
+	&AtendimentoCodigo_SelectedLine = AtendimentoCodigo
+	&EditableGrid_Mode = !'TrnMode.Delete'
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridConfirm'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&AtendimentoEditableGrid.Load(prefCodigo, AtendimentoCodigo)
+	&Messages = new()
+	If &AtendimentoEditableGrid.Success()
+		&AtendimentoEditableGrid.Delete()
+		If &AtendimentoEditableGrid.Success()
+			&EditableGrid_Mode = !'TrnMode.Display'
+			&prefCodigo_SelectedLine.SetEmpty()
+			&AtendimentoCodigo_SelectedLine.SetEmpty()
+			Commit
+			Refresh
+		Else
+			&Messages = &AtendimentoEditableGrid.GetMessages()
+		EndIf
+	Else
+		&Messages = &AtendimentoEditableGrid.GetMessages()
+	EndIf
+	If &Messages.Count > 0
+		&prefCodigo_SelectedLine = prefCodigo
+		&AtendimentoCodigo_SelectedLine = AtendimentoCodigo
+		Do 'Show Messages'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridCancel'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prefCodigo_SelectedLine.SetEmpty()
+	&AtendimentoCodigo_SelectedLine.SetEmpty()
+	&EditableGrid_Mode = !'TrnMode.Display'
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = True
+	AddDynamicFilters1.Visible = False
+	RemoveDynamicFilters1.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersIgnoreFirst = True
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	&DynamicFiltersIgnoreFirst = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector1.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled3 = True
+	AddDynamicFilters2.Visible = False
+	RemoveDynamicFilters2.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled2 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector2.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled3 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector3.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_ManageFilters.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Clean#>'
+			Do 'CleanFilters'
+			Grid.FirstPage()
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Save#>'
+			Do 'SaveGridState'
+			SaveFilterAs.Popup(!'AtendimentoWWFilters', &PgmName + !"GridState")
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Manage#>'
+			ManageFilters.Popup(!'AtendimentoWWFilters')
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Otherwise
+			&ManageFiltersXml = GetFilterByName(!'AtendimentoWWFilters', ddo_ManageFilters.ActiveEventKey)
+			If &ManageFiltersXml.IsEmpty()
+				msg('WWP_FilterNotExist')
+			Else
+				Do 'CleanFilters'
+				SaveGridState.Call(&PgmName + !"GridState",  &ManageFiltersXml)
+				&GridState.FromXml(&ManageFiltersXml)
+				&OrderedBy = &GridState.OrderedBy
+				&OrderedDsc = &GridState.OrderedDsc
+				Do 'SetDDOSortedStatus' 
+				Do 'LoadRegFiltersState'
+				Do 'LoadDynFiltersState'
+				Grid.FirstPage()
+			EndIf
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoInsert'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		Atendimento.Call(TrnMode.Insert, &prefCodigo, nullvalue(AtendimentoCodigo))
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoImportarSGE'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_ImportarSGE)
+		ImportarQtdeAlunosSGE.PopUp(&prefCodigo)
+		Refresh
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = &OrderedBy.ToString().Trim() + !':' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&IsAuthorized_Update = SecGAMIsAuthByFunctionalityKey.Udp(!'atendimentoww_Update')
+	If not (&IsAuthorized_Update)
+		&Update.Visible = False
+	Endif 
+	&IsAuthorized_btnAlunos = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnAlunos)
+		&btnAlunos.Visible = False
+	Endif 
+	BtnInsert.Visible = True
+	&IsAuthorized_Insert = SecGAMIsAuthByFunctionalityKey.Udp(!'atendimentoww_Insert')
+	If not (&IsAuthorized_Insert)
+		BtnInsert.Visible = False
+	Endif
+	&IsAuthorized_ImportarSGE = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_ImportarSGE)
+		BtnImportarSGE.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'Show Messages'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &Message in &Messages
+		msg(&Message.Description)
+	endfor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&locDescricao1.Visible = False
+	&AreEnsNome1.Visible = False
+	&carGruDescricao1.Visible = False
+	&AreEnsEtapaNome1.Visible = False
+	&carGruQtdeItens1.Visible = False
+	&DynamicFiltersOperator1.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector1 = !'LOCDESCRICAO'
+		&locDescricao1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'AREENSNOME'
+		&AreEnsNome1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'CARGRUDESCRICAO'
+		&carGruDescricao1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'AREENSETAPANOME'
+		&AreEnsEtapaNome1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'CARGRUQTDEITENS'
+		&carGruQtdeItens1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&locDescricao2.Visible = False
+	&AreEnsNome2.Visible = False
+	&carGruDescricao2.Visible = False
+	&AreEnsEtapaNome2.Visible = False
+	&carGruQtdeItens2.Visible = False
+	&DynamicFiltersOperator2.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector2 = !'LOCDESCRICAO'
+		&locDescricao2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'AREENSNOME'
+		&AreEnsNome2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'CARGRUDESCRICAO'
+		&carGruDescricao2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'AREENSETAPANOME'
+		&AreEnsEtapaNome2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'CARGRUQTDEITENS'
+		&carGruQtdeItens2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&locDescricao3.Visible = False
+	&AreEnsNome3.Visible = False
+	&carGruDescricao3.Visible = False
+	&AreEnsEtapaNome3.Visible = False
+	&carGruQtdeItens3.Visible = False
+	&DynamicFiltersOperator3.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector3 = !'LOCDESCRICAO'
+		&locDescricao3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'AREENSNOME'
+		&AreEnsNome3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'CARGRUDESCRICAO'
+		&carGruDescricao3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'AREENSETAPANOME'
+		&AreEnsEtapaNome3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'CARGRUQTDEITENS'
+		&carGruQtdeItens3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'ResetDynFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = False
+	&DynamicFiltersSelector2 = !'LOCDESCRICAO'
+	&DynamicFiltersOperator2 = 0
+	&locDescricao2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	&DynamicFiltersEnabled3 = False
+	&DynamicFiltersSelector3 = !'LOCDESCRICAO'
+	&DynamicFiltersOperator3 = 0
+	&locDescricao3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadSavedFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ManageFiltersData = WWP_ManageFiltersLoadSavedFilters(!'AtendimentoWWFilters', !"WWPDynFilterHideAll_AL('%1', 3, 0)", TableDynamicFilters.InternalName, False)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CleanFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TFAtendimentoCodigo.SetEmpty()
+	&TFAtendimentoCodigo_To.SetEmpty()
+	&TFlocDescricao.SetEmpty()
+	&TFlocDescricao_Sel.SetEmpty()
+	&TFAreEnsNome.SetEmpty()
+	&TFAreEnsNome_Sel.SetEmpty()
+	&TFAreEnsEtapaNome.SetEmpty()
+	&TFAreEnsEtapaNome_Sel.SetEmpty()
+	&TFAtendimentoTurno_Sels = new()
+	&TFcarGruCodigo.SetEmpty()
+	&TFcarGruCodigo_Sel.SetEmpty()
+	&TFAtendimentoFuncionariosSegunda.SetEmpty()
+	&TFAtendimentoFuncionariosSegunda_To.SetEmpty()
+	&TFAtendimentoNormalSegunda.SetEmpty()
+	&TFAtendimentoNormalSegunda_To.SetEmpty()
+	&TFAtendimentoColesterolSegunda.SetEmpty()
+	&TFAtendimentoColesterolSegunda_To.SetEmpty()
+	&TFAtendimentoDiabeticoSegunda.SetEmpty()
+	&TFAtendimentoDiabeticoSegunda_To.SetEmpty()
+	&TFAtendimentoGlutenSegunda.SetEmpty()
+	&TFAtendimentoGlutenSegunda_To.SetEmpty()
+	&TFAtendimentoLactoseSegunda.SetEmpty()
+	&TFAtendimentoLactoseSegunda_To.SetEmpty()
+	&TFAtendimentoStatus_Sels = new()
+	DDO_Grid.SelectedValue_set = ''
+	DDO_Grid.FilteredText_set = ''
+	DDO_Grid.FilteredTextTo_set = ''
+
+	&DynamicFiltersSelector1 = !'LOCDESCRICAO'
+	&DynamicFiltersOperator1 = 0
+	&locDescricao1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+	Do 'ResetDynFilters'
+	&GridState.DynamicFilters.Clear()
+	Do 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+
+	&OrderedBy = &GridState.OrderedBy
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+	Do 'LoadRegFiltersState'
+	Do 'LoadDynFiltersState'
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadRegFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTOCODIGO"
+				&TFAtendimentoCodigo.FromString(&GridStateFilterValue.Value)
+				&TFAtendimentoCodigo_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFLOCDESCRICAO"
+				&TFlocDescricao.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFLOCDESCRICAO_SEL"
+				&TFlocDescricao_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFAREENSNOME"
+				&TFAreEnsNome.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFAREENSNOME_SEL"
+				&TFAreEnsNome_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFAREENSETAPANOME"
+				&TFAreEnsEtapaNome.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFAREENSETAPANOME_SEL"
+				&TFAreEnsEtapaNome_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTOTURNO_SEL"
+				&TFAtendimentoTurno_SelsJson = &GridStateFilterValue.Value
+				&TFAtendimentoTurno_Sels.FromJson(&TFAtendimentoTurno_SelsJson)
+			Case &GridStateFilterValue.Name = !"TFCARGRUCODIGO"
+				&TFcarGruCodigo.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFCARGRUCODIGO_SEL"
+				&TFcarGruCodigo_Sel.FromString(&GridStateFilterValue.Value)
+					&TFcarGruCodigo_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTOFUNCIONARIOSSEGUNDA"
+				&TFAtendimentoFuncionariosSegunda.FromString(&GridStateFilterValue.Value)
+				&TFAtendimentoFuncionariosSegunda_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTONORMALSEGUNDA"
+				&TFAtendimentoNormalSegunda.FromString(&GridStateFilterValue.Value)
+				&TFAtendimentoNormalSegunda_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTOCOLESTEROLSEGUNDA"
+				&TFAtendimentoColesterolSegunda.FromString(&GridStateFilterValue.Value)
+				&TFAtendimentoColesterolSegunda_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTODIABETICOSEGUNDA"
+				&TFAtendimentoDiabeticoSegunda.FromString(&GridStateFilterValue.Value)
+				&TFAtendimentoDiabeticoSegunda_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTOGLUTENSEGUNDA"
+				&TFAtendimentoGlutenSegunda.FromString(&GridStateFilterValue.Value)
+				&TFAtendimentoGlutenSegunda_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTOLACTOSESEGUNDA"
+				&TFAtendimentoLactoseSegunda.FromString(&GridStateFilterValue.Value)
+				&TFAtendimentoLactoseSegunda_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFATENDIMENTOSTATUS_SEL"
+				&TFAtendimentoStatus_SelsJson = &GridStateFilterValue.Value
+				&TFAtendimentoStatus_Sels.FromJson(&TFAtendimentoStatus_SelsJson)
+		EndCase
+	EndFor
+	DDO_Grid.SelectedText_set = !'|||||' + iif(&TFcarGruCodigo_Sel.IsEmpty(), '', &TFcarGruCodigo_SelDsc) + !'|||||||'
+	DDO_Grid.SelectedValue_set = !'|' + WWP_GetFilterVal(&TFlocDescricao_Sel.IsEmpty(), &TFlocDescricao_Sel) + !'|' + WWP_GetFilterVal(&TFAreEnsNome_Sel.IsEmpty(), &TFAreEnsNome_Sel) + !'|' + WWP_GetFilterVal(&TFAreEnsEtapaNome_Sel.IsEmpty(), &TFAreEnsEtapaNome_Sel) + !'|' + iif(&TFAtendimentoTurno_Sels.Count = 0, '', &TFAtendimentoTurno_SelsJson) + !'|' + iif(&TFcarGruCodigo_Sel.IsEmpty(), '', &TFcarGruCodigo_Sel.ToString()) + !'|||||||' + WWP_GetFilterVal(&TFAtendimentoStatus_Sels.Count = 0, &TFAtendimentoStatus_SelsJson)
+	DDO_Grid.FilteredText_set = iif(&TFAtendimentoCodigo.IsEmpty(), '', &TFAtendimentoCodigo.ToString()) + !'|' + WWP_GetFilterVal(&TFlocDescricao.IsEmpty(), &TFlocDescricao) + !'|' + WWP_GetFilterVal(&TFAreEnsNome.IsEmpty(), &TFAreEnsNome) + !'|' + WWP_GetFilterVal(&TFAreEnsEtapaNome.IsEmpty(), &TFAreEnsEtapaNome) + !'||' + WWP_GetFilterVal(&TFcarGruCodigo.IsEmpty(), &TFcarGruCodigo) + !'|' + iif(&TFAtendimentoFuncionariosSegunda.IsEmpty(), '', &TFAtendimentoFuncionariosSegunda.ToString()) + !'|' + iif(&TFAtendimentoNormalSegunda.IsEmpty(), '', &TFAtendimentoNormalSegunda.ToString()) + !'|' + iif(&TFAtendimentoColesterolSegunda.IsEmpty(), '', &TFAtendimentoColesterolSegunda.ToString()) + !'|' + iif(&TFAtendimentoDiabeticoSegunda.IsEmpty(), '', &TFAtendimentoDiabeticoSegunda.ToString()) + !'|' + iif(&TFAtendimentoGlutenSegunda.IsEmpty(), '', &TFAtendimentoGlutenSegunda.ToString()) + !'|' + iif(&TFAtendimentoLactoseSegunda.IsEmpty(), '', &TFAtendimentoLactoseSegunda.ToString()) + !'|'
+	DDO_Grid.FilteredTextTo_set = iif(&TFAtendimentoCodigo_To.IsEmpty(), '', &TFAtendimentoCodigo_To.ToString()) + !'||||||' + iif(&TFAtendimentoFuncionariosSegunda_To.IsEmpty(), '', &TFAtendimentoFuncionariosSegunda_To.ToString()) + !'|' + iif(&TFAtendimentoNormalSegunda_To.IsEmpty(), '', &TFAtendimentoNormalSegunda_To.ToString()) + !'|' + iif(&TFAtendimentoColesterolSegunda_To.IsEmpty(), '', &TFAtendimentoColesterolSegunda_To.ToString()) + !'|' + iif(&TFAtendimentoDiabeticoSegunda_To.IsEmpty(), '', &TFAtendimentoDiabeticoSegunda_To.ToString()) + !'|' + iif(&TFAtendimentoGlutenSegunda_To.IsEmpty(), '', &TFAtendimentoGlutenSegunda_To.ToString()) + !'|' + iif(&TFAtendimentoLactoseSegunda_To.IsEmpty(), '', &TFAtendimentoLactoseSegunda_To.ToString()) + !'|'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	AddDynamicFilters1.Visible = True
+	RemoveDynamicFilters1.Visible = False
+	AddDynamicFilters2.Visible = True
+	RemoveDynamicFilters2.Visible = False
+
+	If &GridState.DynamicFilters.Count >= 1
+		&GridStateDynamicFilter = &GridState.DynamicFilters.Item(1)
+		&DynamicFiltersSelector1 = &GridStateDynamicFilter.Selected
+		Do Case
+			Case &DynamicFiltersSelector1 = !'LOCDESCRICAO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&locDescricao1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'AREENSNOME'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&AreEnsNome1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'CARGRUDESCRICAO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&carGruDescricao1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'AREENSETAPANOME'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&AreEnsEtapaNome1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'CARGRUQTDEITENS'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&carGruQtdeItens1.FromString(&GridStateDynamicFilter.Value)
+		EndCase
+		Do 'EnableDynamicFilters1'
+			If &GridState.DynamicFilters.Count >= 2
+				JSDynamicFilters.Caption = !'<script type="text/javascript">$(document).ready(function() {'
+				JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 2, 0);", TableDynamicFilters.InternalName)
+				AddDynamicFilters1.Visible = False
+				RemoveDynamicFilters1.Visible = True
+				&DynamicFiltersEnabled2 = True
+				&GridStateDynamicFilter = &GridState.DynamicFilters.Item(2)
+				&DynamicFiltersSelector2 = &GridStateDynamicFilter.Selected
+				Do Case
+					Case &DynamicFiltersSelector2 = !'LOCDESCRICAO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&locDescricao2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'AREENSNOME'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&AreEnsNome2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'CARGRUDESCRICAO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&carGruDescricao2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'AREENSETAPANOME'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&AreEnsEtapaNome2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'CARGRUQTDEITENS'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&carGruQtdeItens2.FromString(&GridStateDynamicFilter.Value)
+				EndCase
+				Do 'EnableDynamicFilters2'
+				If &GridState.DynamicFilters.Count >= 3
+					JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 3, 0);", TableDynamicFilters.InternalName)
+					AddDynamicFilters2.Visible = False
+					RemoveDynamicFilters2.Visible = True
+					&DynamicFiltersEnabled3 = True
+					&GridStateDynamicFilter = &GridState.DynamicFilters.Item(3)
+					&DynamicFiltersSelector3 = &GridStateDynamicFilter.Selected
+					Do Case
+						Case &DynamicFiltersSelector3 = !'LOCDESCRICAO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&locDescricao3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'AREENSNOME'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&AreEnsNome3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'CARGRUDESCRICAO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&carGruDescricao3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'AREENSETAPANOME'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&AreEnsEtapaNome3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'CARGRUQTDEITENS'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&carGruQtdeItens3.FromString(&GridStateDynamicFilter.Value)
+					EndCase
+					Do 'EnableDynamicFilters3'
+				EndIf
+				JSDynamicFilters.Caption += !'});</script>'
+			EndIf
+	EndIf
+	If &DynamicFiltersRemoving
+		JSDynamicFilters.Caption = ''
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedBy = &OrderedBy
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTOCODIGO", "Atendimento", not (&TFAtendimentoCodigo.IsEmpty() AND &TFAtendimentoCodigo_To.IsEmpty()), 0, &TFAtendimentoCodigo.ToString().Trim(), iif(&TFAtendimentoCodigo.IsEmpty(), '', trim(&TFAtendimentoCodigo.ToFormattedString())), True, &TFAtendimentoCodigo_To.ToString().Trim(), iif(&TFAtendimentoCodigo_To.IsEmpty(), '', trim(&TFAtendimentoCodigo_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFLOCDESCRICAO", "Unidade Escolar", not &TFlocDescricao.IsEmpty(), 0, &TFlocDescricao, &TFlocDescricao, False, '', '', not &TFlocDescricao_Sel.IsEmpty(), &TFlocDescricao_Sel, &TFlocDescricao_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFAREENSNOME", "Área ", not &TFAreEnsNome.IsEmpty(), 0, &TFAreEnsNome, &TFAreEnsNome, False, '', '', not &TFAreEnsNome_Sel.IsEmpty(), &TFAreEnsNome_Sel, &TFAreEnsNome_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFAREENSETAPANOME", "Etapa", not &TFAreEnsEtapaNome.IsEmpty(), 0, &TFAreEnsEtapaNome, &TFAreEnsEtapaNome, False, '', '', not &TFAreEnsEtapaNome_Sel.IsEmpty(), &TFAreEnsEtapaNome_Sel, &TFAreEnsEtapaNome_Sel)
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTOTURNO_SEL", "Turno", not &TFAtendimentoTurno_Sels.Count = 0, 0, &TFAtendimentoTurno_Sels.ToJson(), iif(&TFAtendimentoTurno_Sels.Count = 1, format(!'%' + Trim(Str(&TFAtendimentoTurno_Sels.Item(1))), "Matutino", "Vespertino", "Noturno", "Integral", "Interm. Matutino", "Interm. Vespertino"), 'WWP_FilterValueDescription_MultipleValues'), False, '', '')
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFCARGRUCODIGO", "Grupo Cardápio", not &TFcarGruCodigo.IsEmpty(), 0, &TFcarGruCodigo.ToString().Trim(), trim(&TFcarGruCodigo.ToFormattedString()), False, '', '', not &TFcarGruCodigo_Sel.IsEmpty(), &TFcarGruCodigo_Sel.ToString().Trim(), &TFcarGruCodigo_SelDsc)
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTOFUNCIONARIOSSEGUNDA", "Func.", not (&TFAtendimentoFuncionariosSegunda.IsEmpty() AND &TFAtendimentoFuncionariosSegunda_To.IsEmpty()), 0, &TFAtendimentoFuncionariosSegunda.ToString().Trim(), iif(&TFAtendimentoFuncionariosSegunda.IsEmpty(), '', trim(&TFAtendimentoFuncionariosSegunda.ToFormattedString())), True, &TFAtendimentoFuncionariosSegunda_To.ToString().Trim(), iif(&TFAtendimentoFuncionariosSegunda_To.IsEmpty(), '', trim(&TFAtendimentoFuncionariosSegunda_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTONORMALSEGUNDA", "Normal", not (&TFAtendimentoNormalSegunda.IsEmpty() AND &TFAtendimentoNormalSegunda_To.IsEmpty()), 0, &TFAtendimentoNormalSegunda.ToString().Trim(), iif(&TFAtendimentoNormalSegunda.IsEmpty(), '', trim(&TFAtendimentoNormalSegunda.ToFormattedString())), True, &TFAtendimentoNormalSegunda_To.ToString().Trim(), iif(&TFAtendimentoNormalSegunda_To.IsEmpty(), '', trim(&TFAtendimentoNormalSegunda_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTOCOLESTEROLSEGUNDA", "Colesterol", not (&TFAtendimentoColesterolSegunda.IsEmpty() AND &TFAtendimentoColesterolSegunda_To.IsEmpty()), 0, &TFAtendimentoColesterolSegunda.ToString().Trim(), iif(&TFAtendimentoColesterolSegunda.IsEmpty(), '', trim(&TFAtendimentoColesterolSegunda.ToFormattedString())), True, &TFAtendimentoColesterolSegunda_To.ToString().Trim(), iif(&TFAtendimentoColesterolSegunda_To.IsEmpty(), '', trim(&TFAtendimentoColesterolSegunda_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTODIABETICOSEGUNDA", "Diabético", not (&TFAtendimentoDiabeticoSegunda.IsEmpty() AND &TFAtendimentoDiabeticoSegunda_To.IsEmpty()), 0, &TFAtendimentoDiabeticoSegunda.ToString().Trim(), iif(&TFAtendimentoDiabeticoSegunda.IsEmpty(), '', trim(&TFAtendimentoDiabeticoSegunda.ToFormattedString())), True, &TFAtendimentoDiabeticoSegunda_To.ToString().Trim(), iif(&TFAtendimentoDiabeticoSegunda_To.IsEmpty(), '', trim(&TFAtendimentoDiabeticoSegunda_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTOGLUTENSEGUNDA", "Gluten", not (&TFAtendimentoGlutenSegunda.IsEmpty() AND &TFAtendimentoGlutenSegunda_To.IsEmpty()), 0, &TFAtendimentoGlutenSegunda.ToString().Trim(), iif(&TFAtendimentoGlutenSegunda.IsEmpty(), '', trim(&TFAtendimentoGlutenSegunda.ToFormattedString())), True, &TFAtendimentoGlutenSegunda_To.ToString().Trim(), iif(&TFAtendimentoGlutenSegunda_To.IsEmpty(), '', trim(&TFAtendimentoGlutenSegunda_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTOLACTOSESEGUNDA", "Lactose", not (&TFAtendimentoLactoseSegunda.IsEmpty() AND &TFAtendimentoLactoseSegunda_To.IsEmpty()), 0, &TFAtendimentoLactoseSegunda.ToString().Trim(), iif(&TFAtendimentoLactoseSegunda.IsEmpty(), '', trim(&TFAtendimentoLactoseSegunda.ToFormattedString())), True, &TFAtendimentoLactoseSegunda_To.ToString().Trim(), iif(&TFAtendimentoLactoseSegunda_To.IsEmpty(), '', trim(&TFAtendimentoLactoseSegunda_To.ToFormattedString())))
+	&AuxText = iif(&TFAtendimentoStatus_Sels.Count = 1, !'[' + &TFAtendimentoStatus_Sels.Item(1) + !']', 'WWP_FilterValueDescription_MultipleValues')
+	WWP_GridStateAddFilterValue(&GridState, !"TFATENDIMENTOSTATUS_SEL", "Situação", not &TFAtendimentoStatus_Sels.Count = 0, 0, &TFAtendimentoStatus_Sels.ToJson(), iif(&AuxText = '', '', &AuxText.Replace(!"[A]", "Ativo").Replace(!"[I]", "Inativo")), False, '', '')
+
+	Do 'SaveDynFiltersState'
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.DynamicFilters.Clear()
+	If not &DynamicFiltersIgnoreFirst
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector1
+		Do Case
+			Case &DynamicFiltersSelector1 = !'LOCDESCRICAO' AND not &locDescricao1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Local", &DynamicFiltersOperator1, &locDescricao1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &locDescricao1, "WWP_FilterContains" + !' ' + &locDescricao1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'AREENSNOME' AND not &AreEnsNome1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Área Ensino", &DynamicFiltersOperator1, &AreEnsNome1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &AreEnsNome1, "WWP_FilterContains" + !' ' + &AreEnsNome1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'CARGRUDESCRICAO' AND not &carGruDescricao1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Grupo", &DynamicFiltersOperator1, &carGruDescricao1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &carGruDescricao1, "WWP_FilterContains" + !' ' + &carGruDescricao1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'AREENSETAPANOME' AND not &AreEnsEtapaNome1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Nome Etapa", &DynamicFiltersOperator1, &AreEnsEtapaNome1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &AreEnsEtapaNome1, "WWP_FilterContains" + !' ' + &AreEnsEtapaNome1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'CARGRUQTDEITENS' AND not &carGruQtdeItens1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Qtde Itens", &DynamicFiltersOperator1, &carGruQtdeItens1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "<" + !' ' + trim(&carGruQtdeItens1.ToFormattedString()), "=" + !' ' + trim(&carGruQtdeItens1.ToFormattedString()), ">" + !' ' + trim(&carGruQtdeItens1.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled2
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector2
+		Do Case
+			Case &DynamicFiltersSelector2 = !'LOCDESCRICAO' AND not &locDescricao2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Local", &DynamicFiltersOperator2, &locDescricao2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &locDescricao2, "WWP_FilterContains" + !' ' + &locDescricao2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'AREENSNOME' AND not &AreEnsNome2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Área Ensino", &DynamicFiltersOperator2, &AreEnsNome2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &AreEnsNome2, "WWP_FilterContains" + !' ' + &AreEnsNome2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'CARGRUDESCRICAO' AND not &carGruDescricao2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Grupo", &DynamicFiltersOperator2, &carGruDescricao2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &carGruDescricao2, "WWP_FilterContains" + !' ' + &carGruDescricao2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'AREENSETAPANOME' AND not &AreEnsEtapaNome2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Nome Etapa", &DynamicFiltersOperator2, &AreEnsEtapaNome2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &AreEnsEtapaNome2, "WWP_FilterContains" + !' ' + &AreEnsEtapaNome2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'CARGRUQTDEITENS' AND not &carGruQtdeItens2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Qtde Itens", &DynamicFiltersOperator2, &carGruQtdeItens2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "<" + !' ' + trim(&carGruQtdeItens2.ToFormattedString()), "=" + !' ' + trim(&carGruQtdeItens2.ToFormattedString()), ">" + !' ' + trim(&carGruQtdeItens2.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled3
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector3
+		Do Case
+			Case &DynamicFiltersSelector3 = !'LOCDESCRICAO' AND not &locDescricao3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Local", &DynamicFiltersOperator3, &locDescricao3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &locDescricao3, "WWP_FilterContains" + !' ' + &locDescricao3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'AREENSNOME' AND not &AreEnsNome3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Área Ensino", &DynamicFiltersOperator3, &AreEnsNome3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &AreEnsNome3, "WWP_FilterContains" + !' ' + &AreEnsNome3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'CARGRUDESCRICAO' AND not &carGruDescricao3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Grupo", &DynamicFiltersOperator3, &carGruDescricao3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &carGruDescricao3, "WWP_FilterContains" + !' ' + &carGruDescricao3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'AREENSETAPANOME' AND not &AreEnsEtapaNome3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Nome Etapa", &DynamicFiltersOperator3, &AreEnsEtapaNome3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &AreEnsEtapaNome3, "WWP_FilterContains" + !' ' + &AreEnsEtapaNome3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'CARGRUQTDEITENS' AND not &carGruQtdeItens3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Qtde Itens", &DynamicFiltersOperator3, &carGruQtdeItens3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "<" + !' ' + trim(&carGruQtdeItens3.ToFormattedString()), "=" + !' ' + trim(&carGruQtdeItens3.ToFormattedString()), ">" + !' ' + trim(&carGruQtdeItens3.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"Atendimento"
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event AreEnsCodigo.Click()
+
+	  &AreEnsCodigo = AreEnsCodigo
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+prefCodigo = &prefCodigo;
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateDynamicFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateDynamicFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.DynamicFilter, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedByAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedByAux</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Local:LOCDESCRICAO,Área Ensino:AREENSNOME,Grupo:CARGRUDESCRICAO,Nome Etapa:AREENSETAPANOME,Qtde Itens:CARGRUQTDEITENS</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator1</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoNormalDomingo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoNormalDomingo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoNormalDomingo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locDescricao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locDescricao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruDescricao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruDescricao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Local:LOCDESCRICAO,Área Ensino:AREENSNOME,Grupo:CARGRUDESCRICAO,Nome Etapa:AREENSETAPANOME,Qtde Itens:CARGRUQTDEITENS</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator2</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoNormalDomingo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoNormalDomingo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoNormalDomingo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locDescricao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locDescricao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruDescricao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruDescricao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Local:LOCDESCRICAO,Área Ensino:AREENSNOME,Grupo:CARGRUDESCRICAO,Nome Etapa:AREENSETAPANOME,Qtde Itens:CARGRUQTDEITENS</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator3</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoNormalDomingo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoNormalDomingo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoNormalDomingo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locDescricao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locDescricao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruDescricao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruDescricao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersRemoving">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersRemoving</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersIgnoreFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersIgnoreFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelFilename">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelFilename</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>512</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>512</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorXML">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorXML</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserCustomValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserCustomValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelector">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelector</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorAux</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersXml">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersXml</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersExecutionStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersExecutionStep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefNome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefNome_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefNome_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFlocDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFlocDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFlocDescricao_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFlocDescricao_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFcarGruDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFcarGruDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFcarGruDescricao_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFcarGruDescricao_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoStatus_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoStatus_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoStatus_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoStatus_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoStatus</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportDataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportDataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoTurno1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoTurno1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoTurno2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoTurno2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoTurno3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoTurno3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoTurno_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoTurno_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoTurno_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoTurno_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTurno</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Insert">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Insert</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Display">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Display</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNumero1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNumero1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNumero</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNumero2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNumero2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNumero</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNumero3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNumero3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNumero</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsSequencial_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsSequencial_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsEtapaNumero">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsEtapaNumero</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNumero</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsEtapaNumero_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsEtapaNumero_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNumero</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsEtapaNivel_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsEtapaNivel_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsEtapaNivel_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsEtapaNivel_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNivel</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsNome1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsNome1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsNome2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsNome2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsNome3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsNome3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNome1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNome1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNome2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNome2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNome3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNome3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsNome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsNome_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsNome_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsEtapaNome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsEtapaNome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsEtapaNome_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsEtapaNome_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFlocCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFlocCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFlocCodigo_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFlocCodigo_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsCodigo_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsCodigo_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsSequencial_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsSequencial_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFcarGruCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFcarGruCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFcarGruCodigo_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFcarGruCodigo_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoColesterolTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoColesterolTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoColesterolTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoColesterolTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoDiabeticoTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoDiabeticoTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoDiabeticoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoDiabeticoTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoDiabeticoTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoDiabeticoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoGlutenTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoGlutenTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoGlutenTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoGlutenTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoGlutenTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoGlutenTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoLactoseTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoLactoseTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoLactoseTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoLactoseTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoLactoseTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoLactoseTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFlocCodigo_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFlocCodigo_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsCodigo_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsCodigo_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAreEnsSequencial_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAreEnsSequencial_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFcarGruCodigo_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFcarGruCodigo_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TempBoolean">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TempBoolean</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGrid_Mode">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGrid_Mode</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Messages">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Messages</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsCurrentRecordSelected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsCurrentRecordSelected</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoEditableGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoEditableGrid</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Atendimento</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_SelectedLine">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_SelectedLine</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoCodigo_SelectedLine">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoCodigo_SelectedLine</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGrid_IsNotFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGrid_IsNotFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoColesterolTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoColesterolTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoDiabeticoTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoDiabeticoTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoDiabeticoTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoGlutenTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoGlutenTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoGlutenTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoLactoseTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoLactoseTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoLactoseTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoTurno_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoTurno_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoTurno_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoTurno_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruCodigo_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruCodigo_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruCodigo_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruCodigo_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoStatus_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoStatus_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoStatus_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoStatus_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridCancel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridCancel</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnCancel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridCancel2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridCancel2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnCancel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridConfirm">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridConfirm</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnEnter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridConfirm2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridConfirm2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnEnter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoNormalSegunda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoNormalSegunda</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoNormalSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoNormalSegunda_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoNormalSegunda_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoNormalSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoColesterolSegunda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoColesterolSegunda</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoColesterolSegunda_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoColesterolSegunda_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoDiabeticoSegunda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoDiabeticoSegunda</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoDiabeticoSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoDiabeticoSegunda_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoDiabeticoSegunda_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoDiabeticoSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoGlutenSegunda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoGlutenSegunda</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoGlutenSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoGlutenSegunda_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoGlutenSegunda_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoGlutenSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoLactoseSegunda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoLactoseSegunda</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoLactoseSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoLactoseSegunda_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoLactoseSegunda_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoLactoseSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoNormalSegunda_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoNormalSegunda_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoNormalSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoNormalSegunda_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoNormalSegunda_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoNormalSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoColesterolSegunda_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoColesterolSegunda_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoColesterolSegunda_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoColesterolSegunda_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoDiabeticoSegunda_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoDiabeticoSegunda_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoDiabeticoSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoDiabeticoSegunda_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoDiabeticoSegunda_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoDiabeticoSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoGlutenSegunda_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoGlutenSegunda_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoGlutenSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoGlutenSegunda_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoGlutenSegunda_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoGlutenSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoLactoseSegunda_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoLactoseSegunda_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoLactoseSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoLactoseSegunda_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoLactoseSegunda_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoLactoseSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área de Ensino</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_AtendimentoTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_AtendimentoTurno</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_ImportarSGE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_ImportarSGE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruQtdeItens1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruQtdeItens1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruQtdeItens</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruQtdeItens2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruQtdeItens2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruQtdeItens</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruQtdeItens3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruQtdeItens3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruQtdeItens</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoFuncionariosSegunda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoFuncionariosSegunda</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoFuncionariosSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFAtendimentoFuncionariosSegunda_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFAtendimentoFuncionariosSegunda_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoFuncionariosSegunda</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuxText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuxText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnAlunos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnAlunos</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnAlunos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnAlunos</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>AtendimentoWW</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value> Atendimento</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusAtendimento</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>Selection</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

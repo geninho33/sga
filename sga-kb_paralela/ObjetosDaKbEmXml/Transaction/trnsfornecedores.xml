@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-08-05T13:45:14.0000000Z" checksum="efad54444a682f82e37ac1cedaa72367" fullyQualifiedName="trnsfornecedores" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="ef953648-e868-4c50-8451-f61bcb069a46" name="trnsfornecedores" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Cadastro de Fornecedor" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsfornecedores" Type="trnsfornecedores" Description="Cadastro de Fornecedor" Guid="ef953648-e868-4c50-8451-f61bcb069a46">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="a1ba8a6a-0912-1d3c-8632-6d3ce0572e26">forCodigo</Attribute>
+      <Attribute key="False" guid="85992035-92fb-8dee-6097-c5c4ee34744b">forNome</Attribute>
+      <Attribute key="False" guid="d5e99961-d56a-489d-fb38-6be5e96bce57">forAbreviatura</Attribute>
+      <Attribute key="False" guid="e86d6227-11bd-376f-bd05-ea443ab7b20d">forCnpjcpf</Attribute>
+      <Attribute key="False" guid="956f2bfd-f1f1-a71b-2d63-362c117e6872" isNullable="True">forDocumento</Attribute>
+      <Attribute key="False" guid="674fd321-42bb-3080-86e5-9dde63ef3e6f">forFisicaJuridica</Attribute>
+      <Attribute key="False" guid="ddfdcc3f-ad7e-3c28-4b7e-bdeaf786e9e2">forEndereco</Attribute>
+      <Attribute key="False" guid="f6c1b210-6598-fb2d-66f6-4c6c2cc60ef1">forComplemento</Attribute>
+      <Attribute key="False" guid="6dbff9e1-1c72-6735-fef9-d8d961ba5030">forBairro</Attribute>
+      <Attribute key="False" guid="b42dec5c-c5f3-fcc2-adbc-8533a3d99a06">forCidade</Attribute>
+      <Attribute key="False" guid="250f67a6-ca6b-c20e-87bd-0f201dae9740">forEstado</Attribute>
+      <Attribute key="False" guid="b63897e5-f9a7-5a1c-15c0-3320c2585528">forCep</Attribute>
+      <Attribute key="False" guid="f4609fd3-a0fb-5e2f-183c-0444907ff29a">forTelefone</Attribute>
+      <Attribute key="False" guid="f3f23e05-7fae-d4ae-ce15-7f7ec1358b94">forContato</Attribute>
+      <Attribute key="False" guid="796f217e-d400-ae39-9325-dbae30b50023" isNullable="True">forEmail</Attribute>
+      <Attribute key="False" guid="92feabbe-2e72-6f57-a862-e35ef23a428f">forTipo</Attribute>
+      <Attribute key="False" guid="b77dfebf-c6fa-c882-0486-430d66413b65">forCooperativa</Attribute>
+      <Attribute key="False" guid="1aee1741-c478-6475-336a-292d2303c903">forDap</Attribute>
+      <Attribute key="False" guid="510ff3a9-f2ec-9bfa-efe5-eb685de33668" isNullable="True">forCertificadoNumero</Attribute>
+      <Attribute key="False" guid="cc28c341-c137-526c-54d4-70a25fa9a4cf" isNullable="True">forCertificadoValidade</Attribute>
+      <Attribute key="False" guid="e4350f3b-2ab9-4e52-0a8d-24374f4d975a">forStatus</Attribute>
+      <Attribute key="False" guid="281ec832-032f-cac0-c734-58258c1f4d1f">forDataCad</Attribute>
+      <Attribute key="False" guid="6ee10cb9-c4a3-0333-2e61-c5a3548bea21">forDataAlt</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellControlName="forCodigo_Cell"><data attribute="forCodigo" labelCaption="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell"><data attribute="forNome" labelCaption="Nome" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forAbreviatura" labelCaption="Abreviatura" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="forCnpjcpf" labelCaption="CNPJ ou CPF" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forDocumento" labelCaption="Documento" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="forFisicaJuridica" labelCaption="Tipo de CNPJ ou CPF" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forEndereco" labelCaption="Endereco" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="forComplemento" labelCaption="Complemento" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forBairro" labelCaption="Bairro" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="forCidade" labelCaption="Cidade" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forEstado" labelCaption="Estado" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="forCep" labelCaption="CEP" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forTelefone" labelCaption="Telefone" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="forContato" labelCaption="Contato" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="forEmail" labelCaption="Email" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="forStatus" labelCaption="Situacao" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault hidden-xs hidden-sm hidden-md hidden-lg" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="forTipo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="forCooperativa" /><gxAttribute ControlType="Edit" InputType="Values" AttID="forDap" /><gxAttribute ControlType="Edit" InputType="Values" AttID="forCertificadoNumero" /><gxAttribute ControlType="Edit" InputType="Values" AttID="forCertificadoValidade" /><gxAttribute ControlType="Edit" InputType="Values" AttID="forDataCad" /><gxAttribute ControlType="Edit" InputType="Values" AttID="forDataAlt" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Document>
+      <Form>
+        <Type>Windows</Type>
+        <Class>Windows</Class>
+        <ClassGuid>4df66249-100d-407d-8ce0-41ec76938671</ClassGuid>
+        <SizeUnit>px</SizeUnit>
+        <Info>
+          <Properties>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>True</Value>
+            </Property>
+            <Property>
+              <Name>Defaults</Name>
+              <Value>gx:TrnDefaultWindowsForm.dkt</Value>
+            </Property>
+          </Properties>
+        </Info>
+      </Form>
+    </Document>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&prefCodigo, in:&forCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+forCodigo = &forCodigo if not &forCodigo.IsEmpty();
+noaccept(forCodigo) if not &forCodigo.IsEmpty();
+
+forCodigo.Visible = forCodigo<>0;
+forCodigo_Cell.Class = !'Invisible' If not(forCodigo<>0);
+forCodigo_Cell.Class = !'col-xs-12 col-sm-6 DataContentCell' If forCodigo<>0;
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+forDataCad = serverNow() 
+	on beforeInsert;
+
+forDataAlt = serverNow() 
+	on beforeUpdate;
+
+forCodigo = PRCDGerarNovoCodigo('fornecedor')  
+	on BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	
+	forTipo.Visible = False
+	forCooperativa.Visible = False
+	forDap.Visible = False
+	forCertificadoNumero.Visible = False
+	forCertificadoValidade.Visible = False
+	forDataCad.Visible = False
+	forDataAlt.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsfornecedoresWW.Call()
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	forCodigo.Visible = False
+	forCodigo_Cell.Class = !'Invisible'
+	If Not SecGAMIsAuthByFunctionalityKey(!'Ttrue')
+		forCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="forCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>forCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:forCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="usuPrefeitura">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>usuPrefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:usuPrefeitura</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsfornecedores</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Cadastro de Fornecedor</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnsfornecedoresWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

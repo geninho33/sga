@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-15T15:23:56.0000000Z" lastUpdate="2025-04-16T02:03:39.0000000Z" checksum="94e81183bd5a48c708c4733026770d71" fullyQualifiedName="DIAGNOSTICO" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="62aadc02-69ba-4d7a-ab73-c829609d0faa" name="DIAGNOSTICO" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="DIAGNOSTICO" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="202b6ed9-cfa1-be61-84f0-17488626f146">DiagAnos</Item>
+      <Item guid="73096f26-85da-0184-1c92-6af34d2c6da6">DiagMeses</Item>
+      <Item guid="b0448d28-6fef-a21f-b9b4-262ed5dc010a">DiagSexo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-04-16T02:03:39.0000000Z" checksum="f857fdfcfa0dc1e3372167da907bf46d" fullyQualifiedName="PK_DIAGNOST_58B258DE270679A9" moduleGuid="00000000-0000-0000-0000-000000000000" guid="a2dfca3d-249a-4629-a347-95e0e382c031" name="PK_DIAGNOST_58B258DE270679A9" type="9e750647-3679-0000-0100-2529de263960" description="PK_DIAGNOST_58 B258 DE270679 A9">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">DiagAnos</Member>
+              <Member Order="Ascending">DiagMeses</Member>
+              <Member Order="Ascending">DiagSexo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>PK_DIAGNOST_58B258DE270679A9</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>DIAGNOSTICO</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>DIAGNOSTICO</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="9211032f-0b5e-112b-409c-44b42a9a31e4" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-04-23T22:16:24.0000000Z" checksum="748425d09353ddf7927567a5eb11ac3c" fullyQualifiedName="trnslocalWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2684e4fe-e947-4ee4-bbf1-98b753995dc8" name="trnslocalWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnslocal WWDS" parent="WorkWithPlustrnslocal" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like '%' +  &locDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LOCDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &locDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &locDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LOCDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &locDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigoLargada = &locCodigoLargada1 when &DynamicFiltersSelector1 = !'LOCCODIGOLARGADA' AND &DynamicFiltersOperator1 = 0 AND (not &locCodigoLargada1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigo = &locCodigo1 when &DynamicFiltersSelector1 = !'LOCCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &locCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locEmail.ToLower() like '%' +  &locEmail1.ToLower() when &DynamicFiltersSelector1 = !'LOCEMAIL' AND &DynamicFiltersOperator1 = 0 AND (not &locEmail1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locEmail.ToLower() like &locEmail1.ToLower() when &DynamicFiltersSelector1 = !'LOCEMAIL' AND &DynamicFiltersOperator1 = 1 AND (not &locEmail1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locFreezer = &locFreezer1 when &DynamicFiltersSelector1 = !'LOCFREEZER' AND (not &locFreezer1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locForno = &locForno1 when &DynamicFiltersSelector1 = !'LOCFORNO' AND (not &locForno1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone.ToLower() like '%' +  &locTelefone1.ToLower() when &DynamicFiltersSelector1 = !'LOCTELEFONE' AND &DynamicFiltersOperator1 = 0 AND (not &locTelefone1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone.ToLower() like &locTelefone1.ToLower() when &DynamicFiltersSelector1 = !'LOCTELEFONE' AND &DynamicFiltersOperator1 = 1 AND (not &locTelefone1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro.ToLower() like '%' +  &locBairro1.ToLower() when &DynamicFiltersSelector1 = !'LOCBAIRRO' AND &DynamicFiltersOperator1 = 0 AND (not &locBairro1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro.ToLower() like &locBairro1.ToLower() when &DynamicFiltersSelector1 = !'LOCBAIRRO' AND &DynamicFiltersOperator1 = 1 AND (not &locBairro1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTipoUnidade = &locTipoUnidade1 when &DynamicFiltersSelector1 = !'LOCTIPOUNIDADE' AND (not &locTipoUnidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locNota = &locNota1 when &DynamicFiltersSelector1 = !'LOCNOTA' AND &DynamicFiltersOperator1 = 0 AND (not &locNota1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like '%' +  &locDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &locDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &locDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &locDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigoLargada = &locCodigoLargada2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCCODIGOLARGADA' AND &DynamicFiltersOperator2 = 0 AND (not &locCodigoLargada2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigo = &locCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &locCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locEmail.ToLower() like '%' +  &locEmail2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCEMAIL' AND &DynamicFiltersOperator2 = 0 AND (not &locEmail2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locEmail.ToLower() like &locEmail2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCEMAIL' AND &DynamicFiltersOperator2 = 1 AND (not &locEmail2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locFreezer = &locFreezer2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCFREEZER' AND (not &locFreezer2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locForno = &locForno2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCFORNO' AND (not &locForno2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone.ToLower() like '%' +  &locTelefone2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCTELEFONE' AND &DynamicFiltersOperator2 = 0 AND (not &locTelefone2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone.ToLower() like &locTelefone2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCTELEFONE' AND &DynamicFiltersOperator2 = 1 AND (not &locTelefone2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro.ToLower() like '%' +  &locBairro2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCBAIRRO' AND &DynamicFiltersOperator2 = 0 AND (not &locBairro2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro.ToLower() like &locBairro2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCBAIRRO' AND &DynamicFiltersOperator2 = 1 AND (not &locBairro2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTipoUnidade = &locTipoUnidade2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCTIPOUNIDADE' AND (not &locTipoUnidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locNota = &locNota2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCNOTA' AND &DynamicFiltersOperator2 = 0 AND (not &locNota2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like '%' +  &locDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &locDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &locDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &locDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigoLargada = &locCodigoLargada3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCCODIGOLARGADA' AND &DynamicFiltersOperator3 = 0 AND (not &locCodigoLargada3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigo = &locCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &locCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locEmail.ToLower() like '%' +  &locEmail3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCEMAIL' AND &DynamicFiltersOperator3 = 0 AND (not &locEmail3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locEmail.ToLower() like &locEmail3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCEMAIL' AND &DynamicFiltersOperator3 = 1 AND (not &locEmail3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locFreezer = &locFreezer3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCFREEZER' AND (not &locFreezer3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locForno = &locForno3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCFORNO' AND (not &locForno3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone.ToLower() like '%' +  &locTelefone3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCTELEFONE' AND &DynamicFiltersOperator3 = 0 AND (not &locTelefone3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone.ToLower() like &locTelefone3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCTELEFONE' AND &DynamicFiltersOperator3 = 1 AND (not &locTelefone3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro.ToLower() like '%' +  &locBairro3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCBAIRRO' AND &DynamicFiltersOperator3 = 0 AND (not &locBairro3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro.ToLower() like &locBairro3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCBAIRRO' AND &DynamicFiltersOperator3 = 1 AND (not &locBairro3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTipoUnidade = &locTipoUnidade3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCTIPOUNIDADE' AND (not &locTipoUnidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locNota = &locNota3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCNOTA' AND &DynamicFiltersOperator3 = 0 AND (not &locNota3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigo >= &TFlocCodigo when not &TFlocCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigo <= &TFlocCodigo_To when not &TFlocCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigoLargada >= &TFlocCodigoLargada when not &TFlocCodigoLargada.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locCodigoLargada <= &TFlocCodigoLargada_To when not &TFlocCodigoLargada_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &TFlocDescricao.ToLower() when &TFlocDescricao_Sel.IsEmpty() AND (not &TFlocDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao = &TFlocDescricao_Sel when not &TFlocDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTipoUnidade in &TFlocTipoUnidade_Sels when &TFlocTipoUnidade_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone.ToLower() like &TFlocTelefone.ToLower() when &TFlocTelefone_Sel.IsEmpty() AND (not &TFlocTelefone.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locTelefone = &TFlocTelefone_Sel when not &TFlocTelefone_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro.ToLower() like &TFlocBairro.ToLower() when &TFlocBairro_Sel.IsEmpty() AND (not &TFlocBairro.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locBairro = &TFlocBairro_Sel when not &TFlocBairro_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locUsuario.ToLower() like &TFlocUsuario.ToLower() when &TFlocUsuario_Sel.IsEmpty() AND (not &TFlocUsuario.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locUsuario = &TFlocUsuario_Sel when not &TFlocUsuario_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locForno in &TFlocForno_Sels when &TFlocForno_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locNota >= &TFlocNota when not &TFlocNota.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locNota <= &TFlocNota_To when not &TFlocNota_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locStatus in &TFlocStatus_Sels when &TFlocStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locUeCod >= &TFlocUeCod when not &TFlocUeCod.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locUeCod <= &TFlocUeCod_To when not &TFlocUeCod_To.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocTelefone">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocTelefone</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocTelefone_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocTelefone_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocBairro">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocBairro</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocBairro_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocBairro_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocTipoUnidade_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocTipoUnidade_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTipoUnidade</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocForno_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocForno_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locForno</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locEmail1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locEmail1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locFreezer1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locFreezer1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locFreezer</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locForno1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locForno1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locForno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locTelefone1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locTelefone1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locBairro1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locBairro1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locTipoUnidade1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locTipoUnidade1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTipoUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locEmail2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locEmail2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locFreezer2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locFreezer2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locFreezer</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locForno2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locForno2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locForno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locTelefone2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locTelefone2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locBairro2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locBairro2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locTipoUnidade2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locTipoUnidade2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTipoUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locEmail3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locEmail3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locEmail</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locFreezer3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locFreezer3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locFreezer</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locForno3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locForno3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locForno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locTelefone3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locTelefone3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTelefone</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locBairro3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locBairro3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locBairro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locTipoUnidade3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locTipoUnidade3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locTipoUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocUsuario">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocUsuario</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocUsuario_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocUsuario_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocNota">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocNota</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locNota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocNota_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocNota_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locNota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locUeCod1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locUeCod1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locUeCod</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locUeCod2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locUeCod2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locUeCod</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locUeCod3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locUeCod3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locUeCod</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocUeCod">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocUeCod</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locUeCod</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocUeCod_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocUeCod_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locUeCod</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locCodigoLargada1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locCodigoLargada1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigoLargada</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locCodigoLargada2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locCodigoLargada2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigoLargada</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locCodigoLargada3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locCodigoLargada3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigoLargada</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocCodigoLargada">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocCodigoLargada</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigoLargada</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocCodigoLargada_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocCodigoLargada_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigoLargada</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locNota1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locNota1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locNota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locNota2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locNota2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locNota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locNota3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locNota3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locNota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocNota_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocNota_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locNota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locNota">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locNota</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locNota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locDescricao1</Name>
+        <Description>loc Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locCodigoLargada1</Name>
+        <Description>loc Codigo Largada1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locCodigo1</Name>
+        <Description>loc Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locEmail1</Name>
+        <Description>loc Email1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locFreezer1</Name>
+        <Description>loc Freezer1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locForno1</Name>
+        <Description>loc Forno1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locTelefone1</Name>
+        <Description>loc Telefone1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locBairro1</Name>
+        <Description>loc Bairro1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locTipoUnidade1</Name>
+        <Description>loc Tipo Unidade1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locNota1</Name>
+        <Description>loc Nota1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locDescricao2</Name>
+        <Description>loc Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locCodigoLargada2</Name>
+        <Description>loc Codigo Largada2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locCodigo2</Name>
+        <Description>loc Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locEmail2</Name>
+        <Description>loc Email2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locFreezer2</Name>
+        <Description>loc Freezer2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locForno2</Name>
+        <Description>loc Forno2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locTelefone2</Name>
+        <Description>loc Telefone2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locBairro2</Name>
+        <Description>loc Bairro2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locTipoUnidade2</Name>
+        <Description>loc Tipo Unidade2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locNota2</Name>
+        <Description>loc Nota2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locDescricao3</Name>
+        <Description>loc Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locCodigoLargada3</Name>
+        <Description>loc Codigo Largada3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locCodigo3</Name>
+        <Description>loc Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locEmail3</Name>
+        <Description>loc Email3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locFreezer3</Name>
+        <Description>loc Freezer3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locForno3</Name>
+        <Description>loc Forno3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locTelefone3</Name>
+        <Description>loc Telefone3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locBairro3</Name>
+        <Description>loc Bairro3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locTipoUnidade3</Name>
+        <Description>loc Tipo Unidade3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locNota3</Name>
+        <Description>loc Nota3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocCodigo</Name>
+        <Description>TFloc Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocCodigo_To</Name>
+        <Description>TFloc Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocCodigoLargada</Name>
+        <Description>TFloc Codigo Largada</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocCodigoLargada_To</Name>
+        <Description>TFloc Codigo Largada_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocDescricao</Name>
+        <Description>TFloc Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocDescricao_Sel</Name>
+        <Description>TFloc Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocTipoUnidade_Sels</Name>
+        <Description>TFloc Tipo Unidade_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocTelefone</Name>
+        <Description>TFloc Telefone</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocTelefone_Sel</Name>
+        <Description>TFloc Telefone_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocBairro</Name>
+        <Description>TFloc Bairro</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocBairro_Sel</Name>
+        <Description>TFloc Bairro_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocUsuario</Name>
+        <Description>TFloc Usuario</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocUsuario_Sel</Name>
+        <Description>TFloc Usuario_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocForno_Sels</Name>
+        <Description>TFloc Forno_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocNota</Name>
+        <Description>TFloc Nota</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocNota_To</Name>
+        <Description>TFloc Nota_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocStatus_Sels</Name>
+        <Description>TFloc Status_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocUeCod</Name>
+        <Description>TFloc Ue Cod</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocUeCod_To</Name>
+        <Description>TFloc Ue Cod_To</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnslocalWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnslocal</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

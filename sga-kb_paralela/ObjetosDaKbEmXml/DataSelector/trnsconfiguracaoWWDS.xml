@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="56692fe2-726b-04c4-1bc3-71c8ae875c7d" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-09T02:23:08.0000000Z" lastUpdate="2024-10-05T05:24:00.0000000Z" checksum="f1c32595d6a3248db440d0a349f387ab" fullyQualifiedName="trnsconfiguracaoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5103880a-c490-43f6-a389-cf7e7e31da80" name="trnsconfiguracaoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsconfiguracao WWDS" parent="WorkWithPlustrnsconfiguracao" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[psCodigo = &psCodigo1 when &DynamicFiltersSelector1 = !'PSCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &psCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome.ToLower() like &psNome1.ToLower() when &DynamicFiltersSelector1 = !'PSNOME' AND &DynamicFiltersOperator1 = 0 AND (not &psNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome.ToLower() like '%' +  &psNome1.ToLower() when &DynamicFiltersSelector1 = !'PSNOME' AND &DynamicFiltersOperator1 = 1 AND (not &psNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao.ToLower() like &psDescricao1.ToLower() when &DynamicFiltersSelector1 = !'PSDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &psDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao.ToLower() like '%' +  &psDescricao1.ToLower() when &DynamicFiltersSelector1 = !'PSDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &psDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psStatus = &psStatus1 when &DynamicFiltersSelector1 = !'PSSTATUS' AND (not &psStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psValor.ToLower() like &psValor1.ToLower() when &DynamicFiltersSelector1 = !'PSVALOR' AND &DynamicFiltersOperator1 = 0 AND (not &psValor1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psValor.ToLower() like '%' +  &psValor1.ToLower() when &DynamicFiltersSelector1 = !'PSVALOR' AND &DynamicFiltersOperator1 = 1 AND (not &psValor1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psCodigo = &psCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &psCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome.ToLower() like &psNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSNOME' AND &DynamicFiltersOperator2 = 0 AND (not &psNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome.ToLower() like '%' +  &psNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSNOME' AND &DynamicFiltersOperator2 = 1 AND (not &psNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao.ToLower() like &psDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &psDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao.ToLower() like '%' +  &psDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &psDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psStatus = &psStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSSTATUS' AND (not &psStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psValor.ToLower() like &psValor2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSVALOR' AND &DynamicFiltersOperator2 = 0 AND (not &psValor2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psValor.ToLower() like '%' +  &psValor2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PSVALOR' AND &DynamicFiltersOperator2 = 1 AND (not &psValor2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psCodigo = &psCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &psCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome.ToLower() like &psNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSNOME' AND &DynamicFiltersOperator3 = 0 AND (not &psNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome.ToLower() like '%' +  &psNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSNOME' AND &DynamicFiltersOperator3 = 1 AND (not &psNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao.ToLower() like &psDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &psDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao.ToLower() like '%' +  &psDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &psDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psStatus = &psStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSSTATUS' AND (not &psStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psValor.ToLower() like &psValor3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSVALOR' AND &DynamicFiltersOperator3 = 0 AND (not &psValor3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psValor.ToLower() like '%' +  &psValor3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PSVALOR' AND &DynamicFiltersOperator3 = 1 AND (not &psValor3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psCodigo >= &TFpsCodigo when not &TFpsCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psCodigo <= &TFpsCodigo_To when not &TFpsCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome.ToLower() like &TFpsNome.ToLower() when &TFpsNome_Sel.IsEmpty() AND (not &TFpsNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psNome = &TFpsNome_Sel when not &TFpsNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao.ToLower() like &TFpsDescricao.ToLower() when &TFpsDescricao_Sel.IsEmpty() AND (not &TFpsDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psDescricao = &TFpsDescricao_Sel when not &TFpsDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psAtributo in &TFpsAtributo_Sels when &TFpsAtributo_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[psStatus in &TFpsStatus_Sels when &TFpsStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psValor1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psValor1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psValor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psValor2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psValor2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psValor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="psValor3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>psValor3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psValor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsAtributo_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsAtributo_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psAtributo</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpsStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpsStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:psStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psCodigo1</Name>
+        <Description>ps Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psNome1</Name>
+        <Description>ps Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psDescricao1</Name>
+        <Description>ps Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psStatus1</Name>
+        <Description>ps Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psValor1</Name>
+        <Description>ps Valor1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psCodigo2</Name>
+        <Description>ps Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psNome2</Name>
+        <Description>ps Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psDescricao2</Name>
+        <Description>ps Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psStatus2</Name>
+        <Description>ps Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psValor2</Name>
+        <Description>ps Valor2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psCodigo3</Name>
+        <Description>ps Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psNome3</Name>
+        <Description>ps Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psDescricao3</Name>
+        <Description>ps Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psStatus3</Name>
+        <Description>ps Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>psValor3</Name>
+        <Description>ps Valor3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsCodigo</Name>
+        <Description>TFps Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsCodigo_To</Name>
+        <Description>TFps Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsNome</Name>
+        <Description>TFps Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsNome_Sel</Name>
+        <Description>TFps Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsDescricao</Name>
+        <Description>TFps Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsDescricao_Sel</Name>
+        <Description>TFps Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsAtributo_Sels</Name>
+        <Description>TFps Atributo_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpsStatus_Sels</Name>
+        <Description>TFps Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsconfiguracaoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsconfiguracao</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

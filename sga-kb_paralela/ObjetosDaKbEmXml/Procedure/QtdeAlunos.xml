@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="1d998af6-bf9c-458d-a414-a34ae3d15717" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-09-04T11:39:58.0000000Z" checksum="0dc75fd9959cd6202d87f87e867c16de" fullyQualifiedName="QtdeAlunos" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7811b11e-a0b5-4b93-ae89-cedd5ff418f6" name="QtdeAlunos" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Qtde Alunos" parent="Views" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+Xfor first "Alunos_Diabetes_8183"
+	Where Alunos_Diabetes_8183_Ano 	  = &Ano 
+	Where Alunos_Diabetes_8183_Escola = &Escola 
+	Where Alunos_Diabetes_8183_Area   = &Area 
+	Where Alunos_Diabetes_8183_Nivel  = &Nivel 
+	Where Alunos_Diabetes_8183_Turno  = &Turno 
+	Where Alunos_Diabetes_8183_Etapa  = &Etapa
+	
+	&Alunos_Diabetes = Alunos_Diabetes
+When none
+	&Alunos_Diabetes = 0
+Xendfor
+
+Xfor first "Alunos_Gluten_8183"
+	Where Alunos_Gluten_8183_Ano 	  = &Ano 
+	Where Alunos_Gluten_8183_Escola   = &Escola 
+	Where Alunos_Gluten_8183_Area     = &Area 
+	Where Alunos_Gluten_8183_Nivel    = &Nivel 
+	Where Alunos_Gluten_8183_Turno    = &Turno 
+	Where Alunos_Gluten_8183_Etapa    = &Etapa
+	
+	&Alunos_Gluten = Alunos_Gluten
+When none
+	&Alunos_Gluten = 0
+Xendfor
+
+Xfor first "Alunos_Lactose_8183"
+	Where Alunos_Lactose_8183_Ano 	  = &Ano 
+	Where Alunos_Lactose_8183_Escola  = &Escola 
+	Where Alunos_Lactose_8183_Area    = &Area 
+	Where Alunos_Lactose_8183_Nivel   = &Nivel 
+	Where Alunos_Lactose_8183_Turno   = &Turno 
+	Where Alunos_Lactose_8183_Etapa   = &Etapa
+	
+	&Alunos_Lactose = Alunos_Lactose
+When none
+	&Alunos_Lactose = 0
+Xendfor
+
+Xfor first "Alunos_Normal_8183"
+	Where Alunos_Normal_8183_Ano 	  = &Ano 
+	Where Alunos_Normal_8183_Escola   = &Escola 
+	Where Alunos_Normal_8183_Area     = &Area 
+	Where Alunos_Normal_8183_Nivel    = &Nivel 
+	Where Alunos_Normal_8183_Turno    = &Turno 
+	Where Alunos_Normal_8183_Etapa    = &Etapa
+	
+	&Alunos_Normal = Alunos_Normal
+When none
+	&Alunos_Normal = 0
+Xendfor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&Ano, in:&Escola, in:&Area, in:&Nivel, in:&Turno, in:&Etapa, 
+	out:&Alunos_Diabetes, out:&Alunos_Gluten, out:&Alunos_Lactose, out:&Alunos_Normal);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Alunos_Diabetes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Diabetes</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Diabetes</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Gluten">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Gluten</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Glúten</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Gluten</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Lactose">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Lactose</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Lactose</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Lactose</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Normal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Normal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Normal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Normal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Ano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Ano</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Area">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Area</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Area</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Area</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Escola">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Escola</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Escola</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Escola</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Etapa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Etapa</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Etapa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Nivel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Nivel</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Nivel</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Nivel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Turno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Turno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>QtdeAlunos</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

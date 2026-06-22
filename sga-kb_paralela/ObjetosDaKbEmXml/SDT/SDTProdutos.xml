@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="da2bbf54-ab54-4d23-bae5-cddd3d944e1c" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-07-02T05:51:10.0000000Z" lastUpdate="2025-07-02T03:25:36.0000000Z" checksum="bd54d51bf6564e2cb2d8f64a09c33766" fullyQualifiedName="SDTProdutos" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="71979274-6667-4818-ba83-f30b76b9f161" name="SDTProdutos" type="447527b5-9210-4523-898b-5dccb17be60a" description="Listagem de Produtos" parent="SDT" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="SDTProdutos">
+      <LevelInfo guid="287bfe88-dafe-4c85-a0e0-4b8f8b46e758" name="SDTProdutos" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="SDTProdutos" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>SDTProdutos</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+          <Property>
+            <Name>idCollectionItemName</Name>
+            <Value>Item</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="befdc84a-1932-42c4-aba0-b8cd4d2853cd" name="prodCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Código</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="28c9533a-ec4b-4501-add6-0f2295e311b8" name="prefCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Código</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="bfeefdb0-c970-42af-83ce-22dbf9bfb843" name="prodDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodDescricao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Descrição</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="4bf1c084-04b7-4c1b-9d0f-0c7b5a4968f3" name="Grupo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Nome do Grupo" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Grupo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Nome do Grupo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodGrupdescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="c1ef9d7b-a838-4062-8462-001e785b5049" name="QtdeMinimo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Estoque Mínimo" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>QtdeMinimo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Estoque Mínimo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodQtdeMinimo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="8ceadcb4-ad1d-4fd0-a79e-c7c6407b82dd" name="prodLocalSaldo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Saldo" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodLocalSaldo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Saldo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodLocalSaldo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="81a04c14-e4e1-44fe-aa06-e3777284d65e" name="QtdeMaximo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Estoque Máxímo" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>QtdeMaximo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Estoque Máxímo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodQtdeMaximo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="8f3e9bef-2ada-458c-8a89-1754bf641687" name="UNCompra" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="UNCompra" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>UNCompra</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>20</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>20</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="d50fcfca-4b69-44ca-818d-c02eddc59d5d" name="UNDistribuicao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="UNDistribuicao" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>UNDistribuicao</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>20</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>20</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="52fa253b-fded-4943-9960-70180acb2bd7" name="prodLocalCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Local" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodLocalCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Local</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodLocalCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="b58820d1-79af-4fe4-99d0-da2fe17fc5fa" name="LocalNome" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="nome" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>LocalNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:nome</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="92fbf180-08bb-404a-9693-486213873dd0" name="checar" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>checar</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value />
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="f8fcd256-db0a-4c09-b736-e791df92459f" name="estoUeCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Codigo" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="f92cec3a-9278-4f31-8862-4ed6e8b3e67d" name="qtdeEntrada" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Entrada ( Compra / Romaneio / Ajuste )" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>qtdeEntrada</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Entrada ( Compra / Romaneio / Ajuste )</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodQtdeMaximo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="060b351c-f538-41b4-abc7-aae966449086" name="qtdeSaida" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Saida ( Distribuição / Ajuste )" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>qtdeSaida</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Saida ( Distribuição / Ajuste )</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodQtdeMaximo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="ab5f1b05-c8ca-442a-9f60-8b1b909e4362" name="check" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="check" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>check</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Item>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>SDTProdutos</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Listagem de Produtos</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

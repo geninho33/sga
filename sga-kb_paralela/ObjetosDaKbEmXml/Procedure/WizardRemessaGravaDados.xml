@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-25T15:51:42.0000000Z" lastUpdate="2025-06-25T04:09:21.0000000Z" checksum="7ed75ee99f3f2157d6289ad874353445" fullyQualifiedName="WizardRemessaGravaDados" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="aee86a57-7edc-4241-a0a3-b9820803a69b" name="WizardRemessaGravaDados" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Wizard Remessa Grava Dados" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+// Carrega dados Context
+LoadWWPContext(&WWPContext)
+&prefCodigo = &WWPContext.prefCodigo
+
+// Carrega dados do WizardData e das guias
+&WizardData.FromXML(FileXmlToWizardData(&WebSessionKey))
+//&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+//&GuiasGrid.FromJson(&WebSession.Get(&WebSessionKey + !'_Guias'))
+//&WizardData.Guias.Grid.FromJson(&GuiasGrid.ToJson())
+//log.Info(&WizardData.ToJson(),&Pgmname+'.WIZARDDATA')
+
+/* Carrega coleção de grupos de Cardápio do período */
+&CarGruCodigoCollection.FromJson(&Websession.Get(!'WizardRemessa_carDapGruCodigoCollection'))
+
+do 'GeraRemessa'
+
+do 'GeraDistribuicao'
+
+&IsSucess = true
+&Message.Type = MessageTypes.Info
+&Message.Id = 'OK'
+&Message.Description = 'Processo finalizado com sucesso!'
+
+
+Sub 'GeraRemessa'
+
+	/* Registra remessa */
+	&dataInicial = &WizardData.Periodo.DataInicial
+	&dataFinal   = &WizardData.Periodo.DataFinal
+	&remCodigo	 = PRCDGerarNovoCodigo('remessas')
+
+	New
+		prefCodigo		 = &prefCodigo
+		remCodigo		 = &remCodigo
+		remStatus		 = Status.Ativo
+		remCadastro		 = ServerDate()
+		remAlteracao	 = ServerDate()
+		remUsuario		 = &WWPContext.UserName +' | IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+		remGerSemana1Ini = &dataInicial
+		remGerSemana1Fim = remGerSemana1Ini.AddDays(6)
+
+		if remGerSemana1Fim < &dataFinal
+			remGerSemana2Ini = remGerSemana1Fim.AddDays(1)
+			remGerSemana2Fim = iif(remGerSemana2Ini.AddDays(6) > &dataFinal,&dataFinal,remGerSemana2Ini.AddDays(6))
+		endif
+
+		if not remGerSemana2Fim.IsEmpty() and remGerSemana2Fim < &dataFinal
+			remGerSemana3Ini = remGerSemana2Fim.AddDays(1)
+			remGerSemana3Fim = iif(remGerSemana3Ini.AddDays(6) > &dataFinal,&dataFinal,remGerSemana3Ini.AddDays(6))
+		endif
+
+		if not remGerSemana3Fim.IsEmpty() and remGerSemana3Fim < &dataFinal
+			remGerSemana4Ini = remGerSemana3Fim.AddDays(1)
+			remGerSemana4Fim = iif(remGerSemana4Ini.AddDays(6) > &dataFinal,&dataFinal,remGerSemana4Ini.AddDays(6))
+		endif
+
+		if not remGerSemana4Fim.IsEmpty() and remGerSemana4Fim < &dataFinal
+			remGerSemana5Ini = remGerSemana4Fim.AddDays(1)
+			remGerSemana5Fim = &dataFinal
+		endif
+
+		remRancho		 = true
+	EndNew
+
+	/* Registra atendimento da remessa */
+	&AtendimentoCodigoCollection.FromJson(&WizardData.Atendimento.IgnorarAtendimentoJson)
+
+	for &GridLocaisItem in &WizardData.Atendimento.GridLocais
+
+		For each Atendimento
+			Where prefCodigo = &prefCodigo
+			Where locCodigo = &GridLocaisItem.locCodigo
+			Where carGruCodigo in &CarGruCodigoCollection
+			Where carGruStatus = Status.Ativo
+			Where not AtendimentoCodigo in &AtendimentoCodigoCollection
+
+			New
+				prefCodigo			= &prefCodigo
+				remCodigo			= &remCodigo
+				remLocal			= locCodigo
+				remAreEnsCodigo		= AreEnsCodigo
+				remAreEnsSequencial = AreEnsSequencial
+				remAreEnsTurno		= AtendimentoTurno
+				remNormal			= AtendimentoNormalSegunda
+			Endnew
+		Endfor
+
+	endfor
+
+	/* Registra itens da remessa */
+	for &GuiasGridItem in &WizardData.Guias.Grid
+
+		For each trnsremessaitem
+			where prefCodigo	 = &prefCodigo
+			where remCodigo  	 = &remCodigo
+			where remItemProduto = &GuiasGridItem.prodCodigo
+				remItemQtde		 += &GuiasGridItem.Quantidade
+				remItemPesoTotal += &GuiasGridItem.Quantidade * &GuiasGridItem.prodPesoConsumo
+		When none
+			New
+				prefCodigo		 = &prefCodigo
+				remCodigo		 = &remCodigo
+				remItemCodigo	 = PRCDGerarNovoCodigo('remessaItem')
+				remItemPeriodo	 = format('%1 a %2',&dataInicial.ToString(),&dataFinal.ToString())
+				remItemProduto	 = &GuiasGridItem.prodCodigo
+				remItemQtde		 = &GuiasGridItem.Quantidade
+				remItemPesoTotal = &GuiasGridItem.Quantidade * &GuiasGridItem.prodPesoConsumo
+			EndNew
+		Endfor
+
+	endfor
+
+Endsub
+
+Sub 'GeraDistribuicao'
+
+	&distDataEnvio  = &WizardData.Periodo.DataEnvio
+	&remTipoRemessa = &WizardData.Alimentos.prodCodigoTipoRemessa
+
+	/* Busca local de origem */
+	For each
+		Where prefCodigo = &prefCodigo
+	  	&distLocalOrigem = prefLocalDeposito
+  	When none
+	  	&distLocalOrigem = 0
+	Endfor
+
+	&locCodigo = 0
+	for &GuiasGridItem in &WizardData.Guias.Grid
+
+		if &GuiasGridItem.locCodigo <> &locCodigo
+
+			/* Registra cabeçalho da Distribuição */
+			&distCodigo = PRCDGerarNovoCodigo('distribuicao')
+			&locCodigo	= &GuiasGridItem.locCodigo
+			&distObservacao = &GuiasGridItem.distObservacao
+
+			New
+				prefCodigo 		      = &prefCodigo
+				distCodigo            = &distCodigo
+				distDataEnvio         = &distDataEnvio
+				distRemCodigo	      = &remCodigo
+				distLocalOrigem       = &distLocalOrigem
+				distLocalDestino      = &locCodigo
+				distRotaCodigo        = PRCDBuscarRota(&prefCodigo,&locCodigo)
+				distStatus            = Status.Ativo
+				distPeriodo           = format('%1 a %2',&dataInicial.ToString(),&dataFinal.ToString())
+				distCodigoTipoRemessa = &remTipoRemessa
+				distDataCadastro      = serverNow()
+				distDataAlteracao     = serverNow()
+				distUserName          = &WWPContext.UserName +' | IP : ' + RemoteAddr() + ' | H:M:S : '+ Time()
+				distObservacao		  = &distObservacao
+			Endnew
+
+		endif
+
+		/* Grava produto */
+		New
+			distCodigo			= &distCodigo
+			prefCodigo			= &prefCodigo
+			distItemProduto		= &GuiasGridItem.prodCodigo
+			distItemQuantidade	= &GuiasGridItem.Quantidade
+			distItemPesoTotal	= (&GuiasGridItem.prodPesoConsumo * &GuiasGridItem.Quantidade)
+			distItemStatus		= Status.Ativo
+		EndNew
+
+		/* Atualiza estoque */
+		PRCDEstoqueMovimentacao(&distCodigo,&GuiasGridItem.prodCodigo,&distLocalOrigem,&GuiasGridItem.Quantidade,'D','N',0,&Retorno)
+
+	endfor
+
+Endsub
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&WebSessionKey, out:&remCodigo, out:&Message, out:&IsSucess);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="WebSessionKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSessionKey</Value>
+        </Property>
+        <Property>
+          <Name>IsStandardVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>IsStandardVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSucess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSucess</Value>
+        </Property>
+        <Property>
+          <Name>IsStandardVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WizardData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WizardData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GuiasGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GuiasGrid</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Guias.GridItem</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridLocaisItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridLocaisItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Atendimento.GridLocaisItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoCodigoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoCodigoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CarGruCodigoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CarGruCodigoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GuiasGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GuiasGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WizardRemessaData.Guias.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Envio</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo de Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigem</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Origem</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distObservacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distObservacao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Observação</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Retorno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Retorno</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WizardRemessaGravaDados</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

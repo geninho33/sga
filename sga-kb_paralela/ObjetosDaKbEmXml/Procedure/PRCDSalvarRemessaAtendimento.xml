@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-07T02:03:03.0000000Z" checksum="b120fd978a9e69848144da96c8d01eae" fullyQualifiedName="PRCDSalvarRemessaAtendimento" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fd100d88-ca40-45f4-908f-bf201b95a054" name="PRCDSalvarRemessaAtendimento" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Salvar Remessa de Atendimento" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[for each
+	where prefCodigo 		  = &prefCodigo 
+	where remCodigo  		  = &remCodigo 
+	where remLocal   		  = &remLocal
+    where remAreEnsCodigo 	  = &remAreEnsCodigo
+	where remAreEnsSequencial = &remAreEnsSequencial
+	where remAreEnsTurno 	  = &remAreEnsTurno	
+	      exit
+		  /*
+		  remNormal     += &remNormal
+		  remColesterol += &remColesterol
+		  remDiabetico  += &remDiabetico
+		  remGluten     += &remGluten
+		  remLactose    += &remLactose
+		  */
+when none
+	new
+	  prefCodigo    	  = &prefCodigo 
+	  remCodigo    		  = &remCodigo 
+      remAreEnsCodigo 	  = &remAreEnsCodigo
+      remAreEnsSequencial = &remAreEnsSequencial
+	  remAreEnsTurno	  = &remAreEnsTurno		  
+	  remLocal      	  = &remLocal
+	  remNormal     	  = &remNormal
+	  remColesterol 	  = &remColesterol
+	  remDiabetico  	  = &remDiabetico
+	  remGluten           = &remGluten
+	  remLactose    	  = &remLactose	
+	Endnew  
+endFor		  
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm( in:&prefCodigo, 
+	  in:&remCodigo, 
+	  in:&remLocal,
+	  in:&remAreEnsCodigo,
+	  in:&remAreEnsSequencial,
+	  in:&remAreEnsTurno,
+	  in:&remNormal,
+	  in:&remColesterol, 
+	  in:&remDiabetico, 
+	  in:&remGluten,
+	  in:&remLactose);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remLocal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remLocal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Local</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remLocal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remColesterol">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remColesterol</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Colesterol</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remColesterol</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remNormal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remNormal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Normal</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remNormal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remDiabetico">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remDiabetico</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Diabetico</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remDiabetico</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remGluten">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remGluten</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Gluten</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remGluten</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remLactose">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remLactose</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Lactose</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remLactose</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remAreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remAreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remAreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remAreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remAreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Etapa</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remAreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remAreEnsTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remAreEnsTurno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remAreEnsTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDSalvarRemessaAtendimento</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Salvar Remessa de Atendimento</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="08d5c3a9-9778-aca8-3e7d-33683c43391f" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-01T12:39:08.0000000Z" checksum="5673174c4e5a733b8245266523705711" fullyQualifiedName="WorkWithPlustrnscardapiogrupo" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="0fc69b39-c184-e433-8a75-355f1eb9a662" name="WorkWithPlustrnscardapiogrupo" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnscardapiogrupo" parent="trnscardapiogrupo" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnscardapiogrupo" defaultSecFuntionKey="WWtrnscardapiogrupo" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnscardapiogrupo" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnscardapiogrupo" SecFuntionKeyINS="WWtrnscardapiogrupo_Insert" defaultSecFuntionKeyINS="WWtrnscardapiogrupo_Insert" SecFuntionKeyUPD="WWtrnscardapiogrupo_Update" defaultSecFuntionKeyUPD="WWtrnscardapiogrupo_Update" SecFuntionKeyDLT="WWtrnscardapiogrupo_Delete" defaultSecFuntionKeyDLT="WWtrnscardapiogrupo_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;carGruCodigo-2;22;carGruDescricao-2;22;carDapCodigo-2;22;carDapMesAno-2;22;carGruCozinhaCentral-2;22;carGruNutricionista-2;22;carGruStatus-2;22;carGruDataCad-2;22;carGruDataAlt">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="Prefeitura" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruCodigo" description="Código" defaultDescription="=Attribute.ContextualTitle" visibleCondition="carGruCodigo&lt;&gt;0" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDescricao" description="Descrição" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carDapCodigo" description="=Attribute.Title" defaultDescription="Cadastro de Cardápio" visible="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-carDapCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-carDapDescricaoReduzido" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;carDapStatus = 'A';" controlEmptyItem="True" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carDapMesAno" description="=Attribute.Title" defaultDescription="=Attribute.Title" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" showDescription="True" descriptionWidth="17%" mergeWithPrevious="False" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruCozinhaCentral" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruNutricionista" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruStatus" description="Situação" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;carGruDescricao-4;39;" id="08d5c3a9-9778-aca8-3e7d-33683c43391f:1" name="trnscardapiogrupo">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDescricao" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description="Listagem de Grupos de Cardápio" defaultDescription=" Cadastro Grupo de Cardápio" childrenOrderedList="4;02;Main Table" level="root:trnscardapiogrupo" defaultLevel="root:trnscardapiogrupo" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Export" />
+                  <standardAction popup="True" defaultPopup="True" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="ExportReport" />
+                </actionGroup>
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=carGruDescricao.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;carGruDescricao;=carGruDescricao.ContextualTitle" name="=carGruDescricao.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDescricao" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;carGruDescricao-4;99;carDapDescricao">
+                  <filterAttribute name="carGruCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;carGruCodigo;LowerThan-4;96;4;99;carGruCodigo;Equals-4;96;4;99;carGruCodigo;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                  <filterAttribute name="carGruDescricao" description="Descrição" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;carGruDescricao;StartsWith-4;96;4;99;carGruDescricao;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="carDapDescricao" description="=Attribute.Title" defaultDescription="=Attribute.Title" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;carDapDescricao;StartsWith-4;96;4;99;carDapDescricao;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="carGruCozinhaCentral" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" allValue="True" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" />
+                  <filterAttribute name="carGruStatus" description="Situação" defaultDescription="=Attribute.ContextualTitle" allValue="True" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" />
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;carGruCodigo-4;23;carGruDescricao-4;23;carDapCodigo-4;23;carGruCozinhaCentral-4;23;carGruNutricionista-4;23;carGruStatus-4;23;carGruDataCad-4;23;carGruDataAlt-4;23;carDapDescricao-4;23;carDapMesAno">
+          <standardAction name="Update" />
+          <standardAction name="Delete" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ColumnTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="carGruCodigo &gt;= &amp;TFcarGruCodigo when not &amp;TFcarGruCodigo.IsEmpty();carGruCodigo &lt;= &amp;TFcarGruCodigo_To when not &amp;TFcarGruCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDescricao" description="Descrição" defaultDescription="=Attribute.ContextualTitle" defaultFilterCondition="carGruDescricao.ToLower() like &amp;TFcarGruDescricao.ToLower() when not &amp;TFcarGruDescricao.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carDapCodigo" description="Cardápio" defaultDescription="=Attribute.ColumnTitle" autolink="False" visible="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-carDapCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-carDapDescricaoReduzido" conditions="prefCodigo = &amp;prefCodigo" controlEmptyItem="True" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="carDapCodigo &gt;= &amp;TFcarDapCodigo when not &amp;TFcarDapCodigo.IsEmpty();carDapCodigo &lt;= &amp;TFcarDapCodigo_To when not &amp;TFcarDapCodigo_To.IsEmpty()" defaultFilterCondition="carDapCodigo &gt;= &amp;TFcarDapCodigo when not &amp;TFcarDapCodigo.IsEmpty();carDapCodigo &lt;= &amp;TFcarDapCodigo_To when not &amp;TFcarDapCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carDapMesAno" description="=Attribute.ColumnTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="carDapMesAno &gt;= &amp;TFcarDapMesAno when not &amp;TFcarDapMesAno.IsEmpty();carDapMesAno &lt;= &amp;TFcarDapMesAno_To when not &amp;TFcarDapMesAno_To.IsEmpty()" defaultFilterCondition="carDapMesAno &gt;= &amp;TFcarDapMesAno when not &amp;TFcarDapMesAno.IsEmpty();carDapMesAno &lt;= &amp;TFcarDapMesAno_To when not &amp;TFcarDapMesAno_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruCozinhaCentral" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruNutricionista" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" controlInfoDef="Based on" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-usuCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-usuNome" defaultCellVisible_E="False" defaultFilterCondition="carGruNutricionista &gt;= &amp;TFcarGruNutricionista when not &amp;TFcarGruNutricionista.IsEmpty();carGruNutricionista &lt;= &amp;TFcarGruNutricionista_To when not &amp;TFcarGruNutricionista_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruStatus" description="Situação" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="carGruDataCad &gt;= &amp;TFcarGruDataCad when not &amp;TFcarGruDataCad.IsEmpty();carGruDataCad &lt;= &amp;TFcarGruDataCad_To when not &amp;TFcarGruDataCad_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="carGruDataAlt &gt;= &amp;TFcarGruDataAlt when not &amp;TFcarGruDataAlt.IsEmpty();carGruDataAlt &lt;= &amp;TFcarGruDataAlt_To when not &amp;TFcarGruDataAlt_To.IsEmpty()" />
+        </grid>
+      </table>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnscardapiogrupo</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnscardapiogrupo</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-25T15:51:42.0000000Z" lastUpdate="2025-06-25T03:55:43.0000000Z" checksum="c5f79b6782219262c634d80faa0fcf58" fullyQualifiedName="PRCDAplicarAjusteDistribuicaoEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="53b44be7-298e-492b-bde0-8471c93b88d4" name="PRCDAplicarAjusteDistribuicaoEstoque" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Aplicar ajuste de distribuição e estoque">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&tem = False
+
+// varrendo os produtos distribuição
+For Each
+	   Where distRemCodigo    = &lanestRemessa
+	   Where distLocalDestino = &lanestItemLocCodigo
+	   Where prefCodigo       = &prefCodigo
+	   Where distStatus       = 'A'
+       &distCodigo      = distCodigo
+	   For Each
+		   Where prefCodigo      = &prefCodigo
+		   Where distCodigo      = &distCodigo
+		   Where distItemProduto = &lanestItemProdCodigo
+		         distItemQtdeAntes  = distItemQuantidade
+				 distItemQuantidade = (distItemQuantidade - &lanestItemQuantidade)
+				 PRCDEstoqueMovimentacao(&distCodigo, &lanestItemProdCodigo, 0, &lanestItemQuantidade,'DD','N',distItemQtdeAntes)
+				 &tem = True
+	   EndFor
+EndFor
+
+if &tem
+	for each
+		where prefCodigo           = &prefCodigo
+		where lanestcodigo         = &lanestCodigo
+		where lanestItemLocCodigo  = &lanestItemLocCodigo
+		where lanestItemProdCodigo = &lanestItemProdCodigo
+              lanestItemStatus     = status.Ativo
+	endfor
+endif
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&lanestRemessa,
+	 in:&lanestItemLocCodigo,
+	 in:&prefCodigo,
+	 in:&lanestCodigo,
+	 in:&lanestItemProdCodigo,
+	 in:&lanestItemQuantidade);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="lanestRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestItemLocCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemLocCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Local</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemLocCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestItemProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestItemQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestItemQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestItemQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="lanestCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>lanestCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Lançamento</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:lanestcodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDAplicarAjusteDistribuicaoEstoque</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Aplicar ajuste de distribuição e estoque</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

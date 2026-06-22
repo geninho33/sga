@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="15234b14-479f-08ea-1bb1-e8499edfd4ba" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-09T21:48:51.0000000Z" checksum="714fa9bd7c7ffbbb34e25d99b0936979" fullyQualifiedName="trnsnotaitensWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="d0c729e2-9d7c-43a5-abee-a2c54672aa94" name="trnsnotaitensWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsnotaitens WWDS" parent="WorkWithPlustrnsnotaitens" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaCodigo = &notaCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemProduto >= &TFnotaItemProduto when not &TFnotaItemProduto.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemProduto <= &TFnotaItemProduto_To when not &TFnotaItemProduto_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[uniDescricao.ToLower() like &TFnotaItemProdutoUnidade.ToLower() when &TFnotaItemProdutoUnidade_Sel.IsEmpty() AND (not &TFnotaItemProdutoUnidade.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemProdutoUnidade = &TFnotaItemProdutoUnidade_Sel when not &TFnotaItemProdutoUnidade_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemProdutoUndPeso.ToLower() like &TFnotaItemProdutoUndPeso.ToLower() when &TFnotaItemProdutoUndPeso_Sel.IsEmpty() AND (not &TFnotaItemProdutoUndPeso.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemProdutoUndPeso = &TFnotaItemProdutoUndPeso_Sel when not &TFnotaItemProdutoUndPeso_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemProdutoPeso >= &TFnotaItemProdutoPeso when not &TFnotaItemProdutoPeso.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemProdutoPeso <= &TFnotaItemProdutoPeso_To when not &TFnotaItemProdutoPeso_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemLote.ToLower() like &TFnotaItemLote.ToLower() when &TFnotaItemLote_Sel.IsEmpty() AND (not &TFnotaItemLote.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemLote = &TFnotaItemLote_Sel when not &TFnotaItemLote_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemValidade >= &TFnotaItemValidade when not &TFnotaItemValidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemValidade <= &TFnotaItemValidade_To when not &TFnotaItemValidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemQtde >= &TFnotaItemQtde when not &TFnotaItemQtde.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemQtde <= &TFnotaItemQtde_To when not &TFnotaItemQtde_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemValor >= &TFnotaItemValor when not &TFnotaItemValor.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemValor <= &TFnotaItemValor_To when not &TFnotaItemValor_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemTotal >= &TFnotaItemTotal when not &TFnotaItemTotal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemTotal <= &TFnotaItemTotal_To when not &TFnotaItemTotal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemPesoTotal >= &TFnotaItemPesoTotal when not &TFnotaItemPesoTotal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[notaItemPesoTotal <= &TFnotaItemPesoTotal_To when not &TFnotaItemPesoTotal_To.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="TFnotaItemProduto">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProduto</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemQtde">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemQtde</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemQtde_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemQtde_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemValor">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemValor</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemValor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemValor_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemValor_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemValor</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemTotal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemTotal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemTotal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemTotal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="notaCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>notaCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProduto_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProduto_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProdutoUnidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProdutoUnidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:uniDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProdutoUnidade_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProdutoUnidade_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProdutoUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProdutoUndPeso">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProdutoUndPeso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProdutoUndPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProdutoUndPeso_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProdutoUndPeso_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProdutoUndPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProdutoPeso">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProdutoPeso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProdutoPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProdutoPeso_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProdutoPeso_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProdutoPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemPesoTotal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemPesoTotal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemPesoTotal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemPesoTotal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemValidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemValidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemValidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemValidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemLote">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemLote</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemLote_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemLote_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProdutoUnidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProdutoUnidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProdutoUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFnotaItemProduto_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFnotaItemProduto_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:notaItemProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>notaCodigo</Name>
+        <Description>nota Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProduto</Name>
+        <Description>TFnota Item Produto</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProduto_To</Name>
+        <Description>TFnota Item Produto_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProdutoUnidade</Name>
+        <Description>TFnota Item Produto Unidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProdutoUnidade_Sel</Name>
+        <Description>TFnota Item Produto Unidade_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProdutoUndPeso</Name>
+        <Description>TFnota Item Produto Und Peso</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProdutoUndPeso_Sel</Name>
+        <Description>TFnota Item Produto Und Peso_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProdutoPeso</Name>
+        <Description>TFnota Item Produto Peso</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemProdutoPeso_To</Name>
+        <Description>TFnota Item Produto Peso_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemLote</Name>
+        <Description>TFnota Item Lote</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemLote_Sel</Name>
+        <Description>TFnota Item Lote_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemValidade</Name>
+        <Description>TFnota Item Validade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemValidade_To</Name>
+        <Description>TFnota Item Validade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemQtde</Name>
+        <Description>TFnota Item Qtde</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemQtde_To</Name>
+        <Description>TFnota Item Qtde_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemValor</Name>
+        <Description>TFnota Item Valor</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemValor_To</Name>
+        <Description>TFnota Item Valor_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemTotal</Name>
+        <Description>TFnota Item Total</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemTotal_To</Name>
+        <Description>TFnota Item Total_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemPesoTotal</Name>
+        <Description>TFnota Item Peso Total</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFnotaItemPesoTotal_To</Name>
+        <Description>TFnota Item Peso Total_To</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsnotaitensWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsnotaitens</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

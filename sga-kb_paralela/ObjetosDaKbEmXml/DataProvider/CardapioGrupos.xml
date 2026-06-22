@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="06be50bc-f023-46c5-aecb-856b093eec03" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-31T18:45:27.0000000Z" checksum="b73b620cdde6dc84f58f07c7ce19c077" fullyQualifiedName="CardapioGrupos" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8d9c7efe-a37c-4432-a709-598076d081e1" name="CardapioGrupos" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Cardapio Grupos" parent="Movimentacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[CardapioGrupos
+{
+	GrupoCardapio
+	Where prefCodigo = &prefCodigo
+	Where carGruQtdeItens > 0
+	{
+		carGruCodigo
+		carGruDescricao
+	}
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&prefCodigo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>CardapioGrupos</Value>
+    </Property>
+    <Property>
+      <Name>idINFER_SDT</Name>
+      <Value>idINFER_STRUCTURE_IF_SDT_IS_DYNAMIC</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-GrupoCardapio</Value>
+    </Property>
+    <Property>
+      <Name>OutputCollection</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ac68d54c-5158-4987-9d87-36cdf405a067" user="JORGE-AVELL\joadh" versionDate="2024-07-15T20:24:13.0000000Z" lastUpdate="2024-07-11T15:07:53.0000000Z" checksum="30ca62273b2450e44bb9a70f858c4009" fullyQualifiedName="WizardRemessaData" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="d1cc9435-90ec-4483-9a78-8ddfaaef6059" name="WizardRemessaData" type="447527b5-9210-4523-898b-5dccb17be60a" description="Wizard Remessa Data" parent="WorkWithPlusWizardRemessa" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="WizardRemessaData">
+      <LevelInfo guid="7bef3091-f64c-46bd-94e0-9bdba16451d1" name="WizardRemessaData" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Wizard Remessa Data" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>WizardRemessaData</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Level Name="Periodo">
+        <LevelInfo guid="1459a107-6a36-4ddc-9123-b32483298d40" name="Periodo" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Periodo" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Periodo</Value>
+            </Property>
+          </Properties>
+        </LevelInfo>
+        <Item guid="039369d1-b8ac-4d30-a8e2-5ae6f16be3bc" name="DataInicial" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Data Inicial" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>DataInicial</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:Date</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="c1c66bc0-7da3-41fa-82c4-07cbcde7d9ba" name="DataFinal" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Data Final" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>DataFinal</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:Date</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="49ff2e0d-6218-49fa-9ff0-6a1cfab1033c" name="DataEnvio" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Data Envio" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>DataEnvio</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:Date</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="59a8ca8e-219e-4e62-8bc7-cb2b0fa86452" name="Mes" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Mes" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Mes</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:Numeric</Value>
+            </Property>
+            <Property>
+              <Name>Length</Name>
+              <Value>2</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="2fd776eb-991a-455d-a124-9448bfa197af" name="Ano" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Ano" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Ano</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:Numeric</Value>
+            </Property>
+          </Properties>
+        </Item>
+      </Level>
+      <Level Name="Atendimento">
+        <LevelInfo guid="a0d7fe65-877b-4679-840a-ee22644a75fd" name="Atendimento" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Atendimento" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Atendimento</Value>
+            </Property>
+          </Properties>
+        </LevelInfo>
+        <Item guid="2c2332ea-eeba-4f13-adea-90a81d594c46" name="IgnorarAtendimentoJson" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Ignorar Atendimento Json" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IgnorarAtendimentoJson</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:LongVarChar</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="799973a1-53e5-420f-9bf6-bd7b663131a1" name="rotaCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>rotaCodigo</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:rotaCodigo</Value>
+            </Property>
+            <Property>
+              <Name>AttCollection</Name>
+              <Value>True</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="fd1685af-78c2-4c70-adce-203ce3f33ad0" name="Rotas" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Rotas" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Rotas</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:VarChar</Value>
+            </Property>
+            <Property>
+              <Name>Length</Name>
+              <Value>1024</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Level Name="GridLocais">
+          <LevelInfo guid="038f7f82-ca85-4acc-8cff-52ce71ae2ff9" name="GridLocais" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Grid Locais" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>GridLocais</Value>
+              </Property>
+              <Property>
+                <Name>AttCollection</Name>
+                <Value>True</Value>
+              </Property>
+            </Properties>
+          </LevelInfo>
+          <Item guid="d0b0e020-3b1d-41b5-857d-0f598b40b75b" name="locCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>locCodigo</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:locCodigo</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="e9af0c3a-fea6-4441-8c9f-efdb553a50fa" name="locDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Local Nome" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>locDescricao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:locDescricao</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="b485294b-fb85-4c10-931f-58f2d78a75bb" name="rotaDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>rotaDescricao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:rotaDescricao</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="052ea041-f7e3-40ed-8390-980374dfc4e5" name="LocObservacaoGuia" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Observação Guia" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>LocObservacaoGuia</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:LocObservacaoGuia</Value>
+              </Property>
+            </Properties>
+          </Item>
+        </Level>
+      </Level>
+      <Level Name="Alimentos">
+        <LevelInfo guid="b9a8e2cc-3639-41c2-a57b-72e98c9bdef9" name="Alimentos" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Alimentos" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Alimentos</Value>
+            </Property>
+          </Properties>
+        </LevelInfo>
+        <Item guid="d833ce8b-7033-421e-8cdf-e2223b79d1af" name="IgnorarPercaptaJson" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Ignorar Percapta Json" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IgnorarPercaptaJson</Value>
+            </Property>
+            <Property>
+              <Name>ATTCUSTOMTYPE</Name>
+              <Value>bas:LongVarChar</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="152ba51c-dc67-4437-94e5-194e5e703b25" name="prodCodigoTipoRemessa" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Tipo de Remessa" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>prodCodigoTipoRemessa</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:prodCodigoTipoRemessa</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Item guid="3c942448-24f0-4b28-b375-b2e5eefdc709" name="disTipDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>disTipDescricao</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:disTipDescricao</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Level Name="GridAlimentos">
+          <LevelInfo guid="cbf8247c-9333-4008-ac8d-148fe06ce925" name="GridAlimentos" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Grid Alimentos" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>GridAlimentos</Value>
+              </Property>
+              <Property>
+                <Name>AttCollection</Name>
+                <Value>True</Value>
+              </Property>
+            </Properties>
+          </LevelInfo>
+          <Item guid="9540ae9d-72e0-4e20-a8e7-543d90433286" name="prodCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>prodCodigo</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:prodCodigo</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="b1b17296-f698-401a-8b1c-48829cef6087" name="prodDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>prodDescricao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:prodDescricao</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="b6103855-89a8-49be-b3ac-c20d543c3949" name="prodPesoConsumo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Peso Consumo" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>prodPesoConsumo</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:prodPesoConsumo</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="c2ecc6ec-99ef-4a21-a9d3-b82223f777b8" name="uniDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>uniDescricao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:uniDescricao</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="99cb9801-4b5e-47db-8d45-ddf6b3a4f7b3" name="Selecionavel" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Selecionavel" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>Selecionavel</Value>
+              </Property>
+              <Property>
+                <Name>ATTCUSTOMTYPE</Name>
+                <Value>bas:Boolean</Value>
+              </Property>
+            </Properties>
+          </Item>
+        </Level>
+      </Level>
+      <Level Name="Guias">
+        <LevelInfo guid="f57e0a71-ad5e-4a8c-af68-98082060d92f" name="Guias" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Guias" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Guias</Value>
+            </Property>
+          </Properties>
+        </LevelInfo>
+        <Item guid="224e5b44-4709-41c7-ba3f-44109ebf2850" name="remCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="DESKTOP-OQ270FR\Geninho">
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>remCodigo</Value>
+            </Property>
+            <Property>
+              <Name>idBasedOn</Name>
+              <Value>Attribute:remCodigo</Value>
+            </Property>
+          </Properties>
+        </Item>
+        <Level Name="FreeStyleGridLocais">
+          <LevelInfo guid="e9e4c5ed-016f-4a6a-9fc5-ee9dc5d17ce3" name="FreeStyleGridLocais" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Free Style Grid Locais" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>FreeStyleGridLocais</Value>
+              </Property>
+              <Property>
+                <Name>AttCollection</Name>
+                <Value>True</Value>
+              </Property>
+            </Properties>
+          </LevelInfo>
+          <Item guid="aba585ba-17ba-4a5d-857d-0c784af39791" name="Locais_locCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>Locais_locCodigo</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:locCodigo</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="172fd3d6-77c6-4fe8-9639-3483ff4fb9d3" name="Locais_Observacao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Observação" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>Locais_Observacao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:distObservacao</Value>
+              </Property>
+            </Properties>
+          </Item>
+        </Level>
+        <Level Name="Grid">
+          <LevelInfo guid="21323aa6-1c81-442c-8ff2-cac38794e89b" name="Grid" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Grid" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>Grid</Value>
+              </Property>
+              <Property>
+                <Name>AttCollection</Name>
+                <Value>True</Value>
+              </Property>
+            </Properties>
+          </LevelInfo>
+          <Item guid="c08d89c3-cd59-4863-ab01-55e01dd24508" name="locCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>locCodigo</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:locCodigo</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="112cbbe6-698a-4517-88d4-42e84dcf4308" name="prodCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>prodCodigo</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:prodCodigo</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="d3be2ed4-a56d-4642-a346-ef74965badf2" name="prodDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>prodDescricao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:prodDescricao</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="eb146357-e1c4-4e8e-bc30-30cbe9844ad1" name="Quantidade" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Quantidade" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>Quantidade</Value>
+              </Property>
+              <Property>
+                <Name>ATTCUSTOMTYPE</Name>
+                <Value>bas:Numeric</Value>
+              </Property>
+              <Property>
+                <Name>Length</Name>
+                <Value>8</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="63ff4ea7-deec-400e-963b-ccfb3b787777" name="uniDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>uniDescricao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:uniDescricao</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="051eb86e-00d0-40c2-b9b3-91b7b10c96cb" name="distObservacao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Observação" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>distObservacao</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:distObservacao</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="d63bb2cf-e531-4c2e-a6ce-914dbb18379a" name="prodPesoConsumo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Peso Consumo" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>prodPesoConsumo</Value>
+              </Property>
+              <Property>
+                <Name>idBasedOn</Name>
+                <Value>Attribute:prodPesoConsumo</Value>
+              </Property>
+            </Properties>
+          </Item>
+          <Item guid="9cbb9ff9-0702-446f-b363-c0834a5b4be0" name="QtdeOferta" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Qtde Oferta" user="DESKTOP-OQ270FR\Geninho">
+            <Properties>
+              <Property>
+                <Name>Name</Name>
+                <Value>QtdeOferta</Value>
+              </Property>
+              <Property>
+                <Name>ATTCUSTOMTYPE</Name>
+                <Value>bas:Numeric</Value>
+              </Property>
+            </Properties>
+          </Item>
+        </Level>
+      </Level>
+      <Item guid="841a3947-2684-47f3-a46f-eb6ba26c49de" name="AuxiliarData" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Auxiliar Data" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AuxiliarData</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>sdt:WizardAuxiliarData, WWPBaseObjects</Value>
+          </Property>
+        </Properties>
+      </Item>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WizardRemessaData</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusWizardRemessa</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/WPRoot[1]</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>WizardData</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

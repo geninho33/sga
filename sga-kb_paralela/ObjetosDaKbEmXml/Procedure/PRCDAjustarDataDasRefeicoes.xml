@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-03-09T04:17:54.0000000Z" lastUpdate="2026-03-09T04:01:39.0000000Z" checksum="ab88c7bcba3fdbca6108cac40620eec6" fullyQualifiedName="PRCDAjustarDataDasRefeicoes" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="576a9bc6-9c43-4db1-b02f-6ba5ce27cd75" name="PRCDAjustarDataDasRefeicoes" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Ajustar a data das refeições" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&temRefeicao = false
+
+For Each trnscardapioprato
+	where prefCodigo   = &prefCodigo
+	Where carDapCodigo = &carDapCodigo		
+		  if carPratoData.Month() <> &carDapMesAno.Month() or carPratoData.Year()<>&carDapMesAno.Year()  
+			 &temRefeicao = True
+			 exit
+		  endif	  
+EndFor
+
+If &temRefeicao		
+	
+	&ultimaData = Ctod('01/01/1973')
+	&ultimaGeracao = Ctod('01/01/1973')
+	
+	For Each trnscardapioprato
+		Order carDapCodigo, carPratoData
+		where prefCodigo   = &prefCodigo
+		Where carDapCodigo = &carDapCodigo
+
+			// log.Info('prefCodigo : ' + &prefCodigo.ToString() 
+			// +' | carDapCodigo' + &carDapCodigo.ToString() + ' | CarDapMesAno ' 
+			// + &carDapMesAno.ToString() +' | carPratoData : ' + carPratoData.ToString(), 'Teste4' )
+		
+			&datas = carPratoData.Day().ToString()+'/'+ &carDapMesAno.Month().ToString() + '/'+&carDapMesAno.Year().ToString()
+			&dataGerada = CToD( &datas )
+	
+			If Dow( &dataGerada ) = 1
+					&dataGerada = &dataGerada.AddDays( 1 )
+			Else 
+				if Dow( &dataGerada ) = 7						
+					&dataGerada = &dataGerada.AddDays( 2 )
+				EndIf				
+			EndIf
+		
+		    //verifica a ultima geração
+			if &dataGerada = &ultimaData and &ultimaData<>carPratoData
+			   &dataGerada = &dataGerada.AddDays( 1 )
+			   If Dow( &dataGerada ) = 7						
+				  &dataGerada = &dataGerada.AddDays( 2 )
+			   Else 
+				  If Dow( &dataGerada ) = 1
+				     &dataGerada = &dataGerada.AddDays( 1 )
+				  EndIf							     		   
+			   EndIf							   
+			endif   			
+		
+			carPratoData = &dataGerada
+		
+		    if &ultimaData<>carPratoData
+		       &ultimaGeracao = &dataGerada
+			endif		
+			&ultimaData = carPratoData
+	EndFor
+EndIf
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo, in:&carDapCodigo, in:&carDapMesAno );
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="carDapCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapMesAno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapMesAno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Mês e Ano</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapMesAno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="temRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>temRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataGerada">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataGerada</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="datas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>datas</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ultimaData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ultimaData</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ultimaGeracao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ultimaGeracao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDAjustarDataDasRefeicoes</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Ajustar a data das refeições</Value>
+    </Property>
+    <Property>
+      <Name>CommitOnExit</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

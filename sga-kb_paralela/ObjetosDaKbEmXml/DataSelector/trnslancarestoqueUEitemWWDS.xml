@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ea84d874-41cf-0b22-0b1a-032d38d19f59" user="JORGE-AVELL\joadh" versionDate="2024-11-01T20:26:43.0000000Z" lastUpdate="2024-08-19T17:13:58.0000000Z" checksum="f1c400cb4ea96f84ca7c82cad9944879" fullyQualifiedName="trnslancarestoqueUEitemWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="81f84949-1e20-4f0f-9aaa-6b83c5dea645" name="trnslancarestoqueUEitemWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnslancarestoque UEitem WWDS" parent="WorkWithPlustrnslancarestoqueUEitem" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestcodigo = &lanestcodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao.ToLower() like &lanestItemLocDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LANESTITEMLOCDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &lanestItemLocDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao.ToLower() like '%' +  &lanestItemLocDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LANESTITEMLOCDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &lanestItemLocDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao.ToLower() like &lanestItemProdDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LANESTITEMPRODDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &lanestItemProdDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao.ToLower() like '%' +  &lanestItemProdDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LANESTITEMPRODDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &lanestItemProdDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdCodigo = &lanestItemProdCodigo1 when &DynamicFiltersSelector1 = !'LANESTITEMPRODCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &lanestItemProdCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao.ToLower() like &lanestItemLocDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTITEMLOCDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &lanestItemLocDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao.ToLower() like '%' +  &lanestItemLocDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTITEMLOCDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &lanestItemLocDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao.ToLower() like &lanestItemProdDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTITEMPRODDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &lanestItemProdDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao.ToLower() like '%' +  &lanestItemProdDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTITEMPRODDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &lanestItemProdDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdCodigo = &lanestItemProdCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LANESTITEMPRODCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &lanestItemProdCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao.ToLower() like &lanestItemLocDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTITEMLOCDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &lanestItemLocDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao.ToLower() like '%' +  &lanestItemLocDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTITEMLOCDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &lanestItemLocDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao.ToLower() like &lanestItemProdDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTITEMPRODDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &lanestItemProdDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao.ToLower() like '%' +  &lanestItemProdDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTITEMPRODDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &lanestItemProdDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdCodigo = &lanestItemProdCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LANESTITEMPRODCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &lanestItemProdCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdCodigo >= &TFlanestItemProdCodigo when not &TFlanestItemProdCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdCodigo <= &TFlanestItemProdCodigo_To when not &TFlanestItemProdCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao.ToLower() like &TFlanestItemProdDescricao.ToLower() when &TFlanestItemProdDescricao_Sel.IsEmpty() AND (not &TFlanestItemProdDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdDescricao = &TFlanestItemProdDescricao_Sel when not &TFlanestItemProdDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdUni >= &TFlanestItemProdUni when not &TFlanestItemProdUni.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemProdUni <= &TFlanestItemProdUni_To when not &TFlanestItemProdUni_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemQuantidade >= &TFlanestItemQuantidade when not &TFlanestItemQuantidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemQuantidade <= &TFlanestItemQuantidade_To when not &TFlanestItemQuantidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemValidade >= &TFlanestItemValidade when not &TFlanestItemValidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemValidade <= &TFlanestItemValidade_To when not &TFlanestItemValidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemObservacao.ToLower() like &TFlanestItemObservacao.ToLower() when &TFlanestItemObservacao_Sel.IsEmpty() AND (not &TFlanestItemObservacao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemObservacao = &TFlanestItemObservacao_Sel when not &TFlanestItemObservacao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao.ToLower() like &TFlanestItemLocDescricao.ToLower() when &TFlanestItemLocDescricao_Sel.IsEmpty() AND (not &TFlanestItemLocDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[lanestItemLocDescricao = &TFlanestItemLocDescricao_Sel when not &TFlanestItemLocDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdUni1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdUni1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdUni</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdUni2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdUni2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdUni</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdUni3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdUni3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdUni</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemLocCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemLocCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemLocCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemLocCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemProdCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemProdCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemProdCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemProdCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemProdDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemProdDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemProdDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemProdDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemProdUni">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemProdUni</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdUni</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemProdUni_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemProdUni_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdUni</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemPeso">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemPeso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemPeso_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemPeso_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemPesoUni">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemPesoUni</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemPesoUni</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemPesoUni_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemPesoUni_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemPesoUni</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemQuantidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemQuantidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemQuantidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemQuantidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemValidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemValidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemValidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemValidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemTipoRemessa">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemTipoRemessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemTipoRemessa_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemTipoRemessa_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemObservacao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemObservacao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemObservacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemObservacao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemObservacao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemObservacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemCadastro">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemCadastro</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemCadastro_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemCadastro_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemAlteracao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemAlteracao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemAlteracao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemAlteracao_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemAlteracao_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemAlteracao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemUserName">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemUserName</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemUserName</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemUserName_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemUserName_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemUserName</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestcodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestcodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestcodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemLocCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemLocCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemLocCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemLocCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemLocCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemLocCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemProdCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemProdCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemLocCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemLocCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemLocDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemLocDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemLocDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemLocDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="lanestItemLocDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lanestItemLocDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemLocDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemLocDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlanestItemLocDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlanestItemLocDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:lanestItemLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestcodigo</Name>
+        <Description>lanestcodigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemLocDescricao1</Name>
+        <Description>lanest Item Loc Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemProdDescricao1</Name>
+        <Description>lanest Item Prod Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemProdCodigo1</Name>
+        <Description>lanest Item Prod Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemLocDescricao2</Name>
+        <Description>lanest Item Loc Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemProdDescricao2</Name>
+        <Description>lanest Item Prod Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemProdCodigo2</Name>
+        <Description>lanest Item Prod Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemLocDescricao3</Name>
+        <Description>lanest Item Loc Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemProdDescricao3</Name>
+        <Description>lanest Item Prod Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>lanestItemProdCodigo3</Name>
+        <Description>lanest Item Prod Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemProdCodigo</Name>
+        <Description>TFlanest Item Prod Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemProdCodigo_To</Name>
+        <Description>TFlanest Item Prod Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemProdDescricao</Name>
+        <Description>TFlanest Item Prod Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemProdDescricao_Sel</Name>
+        <Description>TFlanest Item Prod Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemProdUni</Name>
+        <Description>TFlanest Item Prod Uni</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemProdUni_To</Name>
+        <Description>TFlanest Item Prod Uni_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemQuantidade</Name>
+        <Description>TFlanest Item Quantidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemQuantidade_To</Name>
+        <Description>TFlanest Item Quantidade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemValidade</Name>
+        <Description>TFlanest Item Validade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemValidade_To</Name>
+        <Description>TFlanest Item Validade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemObservacao</Name>
+        <Description>TFlanest Item Observacao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemObservacao_Sel</Name>
+        <Description>TFlanest Item Observacao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemLocDescricao</Name>
+        <Description>TFlanest Item Loc Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlanestItemLocDescricao_Sel</Name>
+        <Description>TFlanest Item Loc Descricao_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnslancarestoqueUEitemWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnslancarestoqueUEitem</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f38004a4-7174-d154-96dc-1a468828c9b7" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-03-12T20:01:06.0000000Z" checksum="188e55ed130dc46cd9b2b885abf60044" fullyQualifiedName="SGE_API.TotalizadoresGetTotalAlunosPorAreaEnsino" moduleGuid="f9930193-9b65-447d-ba4d-d82204bcc1e0" guid="52c80d85-2877-9656-8a67-16dc109d5fa1" name="TotalizadoresGetTotalAlunosPorAreaEnsino" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Get_TotalAlunosPorAreaEnsino" parent="SGE_API.Api" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+
+&localVarPath = !"/Get_TotalAlunosPorAreaEnsino"
+
+
+
+&localVarHeaders.Set(!"Authorization", OpenAPICommon.VarCharToJsonFormat(&oAuthGXGAM))
+
+
+&localVarQueryParams.Set(!"Curano", (OpenAPICommon.NumericToJsonFormat(&Curano)))
+&localVarQueryParams.Set(!"Uecod", (OpenAPICommon.NumericToJsonFormat(&Uecod)))
+&localVarQueryParams.Set(!"Areenscodcollection", (OpenAPICommon.NumericToJsonFormat(&Areenscodcollection)))
+
+
+
+
+&localVarResponse = OpenAPICommon.CallApi(HttpMethod.Get, OpenAPICommon.ProcessServer(ApiBaseUrl(format(!"%1 - %2",&localVarPath.Trim(),HttpMethod.Get)),&ServerUrlTemplatingVar) + &localVarPath, &localVarHeaders, &localVarPathParams, &localVarQueryParams, &localFileFormParams, &localVarFormParams,, "", 0, 0)
+
+&localVarStatusCode = &localVarResponse.StatusCode
+
+if (&localVarStatusCode >=200 AND &localVarStatusCode <300)
+   &IsSuccess = true
+else
+   &IsSuccess =false 
+   &HttpMessage.Type = MessageTypes.Error
+endif
+
+Do Case
+   Case &localVarStatusCode =200
+      &HttpMessage.Id=!"200"
+      &HttpMessage.Description="Successful operation"
+      &TotalAlunosAreaEnsino_AreaEnsinoOUT.FromJson(&localVarResponse.Content)
+   Case &localVarStatusCode =404
+      &HttpMessage.Id=!"404"
+      &HttpMessage.Description="Not found"
+      
+
+   Otherwise
+      &HttpMessage.Description = &localVarResponse.ErrorMessage
+      &HttpMessage.Id = &localVarStatusCode.ToString()
+Endcase
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&ServerUrlTemplatingVar,  in:&Curano,  in:&Uecod,  in:&Areenscodcollection,  in:&oAuthGXGAM, out:&TotalAlunosAreaEnsino_AreaEnsinoOUT, out:&HttpMessage, out:&IsSuccess);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Curano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Curano</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Numeric</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Uecod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Uecod</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Numeric</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Areenscodcollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Areenscodcollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Numeric</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="oAuthGXGAM">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>oAuthGXGAM</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotalAlunosAreaEnsino_AreaEnsinoOUT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotalAlunosAreaEnsino_AreaEnsinoOUT</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:TotalAlunosAreaEnsino_AreaEnsino, SGE_API</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ServerUrlTemplatingVar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ServerUrlTemplatingVar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localVarPath">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localVarPath</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localVarPathParams">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localVarPathParams</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localVarQueryParams">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localVarQueryParams</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localVarResponse">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localVarResponse</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ApiResponse, OpenAPICommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localVarStatusCode">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localVarStatusCode</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localVarFormParams">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localVarFormParams</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localFileFormParams">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localFileFormParams</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="localVarHeaders">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>localVarHeaders</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Properties</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSuccess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSuccess</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HttpMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HttpMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>TotalizadoresGetTotalAlunosPorAreaEnsino</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Get_TotalAlunosPorAreaEnsino</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

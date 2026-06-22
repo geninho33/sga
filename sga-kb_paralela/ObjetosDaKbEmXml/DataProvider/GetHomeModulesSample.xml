@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="79d5711b-6e55-4e09-b69c-929b90f68fdc" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2018-11-06T20:19:19.0000000Z" checksum="3ff067c891596795e32a06b8202a9a8e" fullyQualifiedName="WWPBaseObjects.GetHomeModulesSample" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="61f41b9c-8dde-45e0-b967-3f74371b5ffd" name="GetHomeModulesSample" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Get Home Modules Sample" parent="WWPBaseObjects.HomeSampleData" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[HomeModulesSDT
+{
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Dashboards"
+		OptionIconThemeClass = !"fa fa-home"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+		OptionBackgroundImage = HomeModulesBackground1.Link()
+		OptionDescription = !'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam.'
+	}
+	HomeModulesSDTItem 
+	{
+		OptionTitle = !"Lists"
+		OptionIconThemeClass = !"fa fa-tasks"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+		OptionBackgroundImage = HomeModulesBackground2.Link()
+		OptionDescription = !'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam.'
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Feature of Lists"
+		OptionIconThemeClass = !"fa fa-tags"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.TwoBlocks
+		OptionBackgroundImage = HomeModulesBackground3.Link()
+		OptionDescription = !'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam.'
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Wizards"
+		OptionIconThemeClass = !"fa fa-briefcase"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+		OptionBackgroundImage = HomeModulesBackground4.Link()
+		OptionDescription = !'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam.'
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Associations"
+		OptionIconThemeClass = !"fas fa-exchange-alt"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+		OptionBackgroundImage = HomeModulesBackground5.Link()
+		OptionDescription = !'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam.'
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Sales Invoice"
+		OptionIconThemeClass = !"fa fa-credit-card"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+		OptionBackgroundImage = HomeModulesBackground6.Link()
+		OptionDescription = !'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestib ulum mauris quis aliquam.'
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Users"
+		OptionIconThemeClass = !"fa fa-user"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = "Issues"
+		OptionDescription = "Opened Issues: 24"
+		OptionType = WWPCardsMenuOptionType.ProgressBar
+		OptionSize = WWPCardsMenuSize.TwoBlocks
+		OptionProgressValue = 24
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Roles"
+		OptionIconThemeClass = !"fa fa-cog"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Repository"
+		OptionIconThemeClass = !"fa fa-database"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Other Configs"
+		OptionIconThemeClass = !"fa fa-bullseye"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Change Password"
+		OptionIconThemeClass = !"fa fa-key"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Applications"
+		OptionIconThemeClass = !"fa fa-file"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = "Active Sales"
+		OptionType = WWPCardsMenuOptionType.ProgressCircle
+		OptionSize = WWPCardsMenuSize.OneBlock
+		OptionProgressValue = 46
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Create a User"
+		OptionIconThemeClass = !"fa fa-user-plus"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Comments"
+		OptionIconThemeClass = !"fa fa-comments"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Social Media"
+		OptionIconThemeClass = !"fa fa-rss"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.TwoBlocks
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Trips"
+		OptionIconThemeClass = !"fa fa-plane"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = "Accounts"
+		OptionDescription = "Accounts that will expire: 56"
+		OptionType = WWPCardsMenuOptionType.ProgressBar
+		OptionSize = WWPCardsMenuSize.TwoBlocks
+		OptionProgressValue = 56
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Emails"
+		OptionIconThemeClass = !"fa fa-envelope"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"My Profile"
+		OptionIconThemeClass = !"far fa-id-card"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.OneBlock
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = "Pending receipts"
+		OptionType = WWPCardsMenuOptionType.ProgressCircle
+		OptionSize = WWPCardsMenuSize.OneBlock
+		OptionProgressValue = 15
+	}
+	HomeModulesSDTItem
+	{
+		OptionTitle = !"Projects & Expirations"
+		OptionIconThemeClass = !"far fa-calendar-alt"
+		OptionType = WWPCardsMenuOptionType.IconAndTitle
+		OptionSize = WWPCardsMenuSize.TwoBlocks
+	}
+}
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="MaxItemsToGet">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MaxItemsToGet</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Count">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Count</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GetHomeModulesSample</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-WWPBaseObjects.HomeModulesSDT</Value>
+    </Property>
+    <Property>
+      <Name>SPC_WARNINGS_DISABLED</Name>
+      <Value>spc0096 spc0107 spc0142 spc0217</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

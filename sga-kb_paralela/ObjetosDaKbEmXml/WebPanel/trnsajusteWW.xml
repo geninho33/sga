@@ -1,0 +1,2723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="53cb377d-4940-0152-151f-17cc868494f2" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-18T04:27:15.0000000Z" lastUpdate="2025-06-18T03:17:28.0000000Z" checksum="6bd80b9ec911f7335db20bcd680d58b1" fullyQualifiedName="trnsajusteWW" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="58a901bb-5af0-4b94-b2d5-ae65e5fee98d" name="trnsajusteWW" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Listagem de Ajustes de Estoque" parent="WorkWithPlustrnsajuste" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_FilterOptions&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableHeader" tableType="Flex" flexDirection="Column" containerSlotName="TableHeader"><row><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableActions" tableType="Flex"><row><cell flexGrow="0"><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell><cell flexGrow="0"><table controlName="TableRightHeader" tableType="Flex" flexWrap="Wrap"><row><cell cellClass="CellAlignTopPaddingTop2"><ucw gxControlType="1204120062" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;ddo_ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconType&lt;/Name&gt;&lt;Value&gt;FontIcon&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Icon&lt;/Name&gt;&lt;Value&gt;fas fa-filter&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Tooltip&lt;/Name&gt;&lt;Value&gt;WWP_ManageFiltersTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ManageFiltersData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><table controlName="TableFilters"><row><cell><table controlName="TableDynamicFilters" class="TableDynamicFiltersFlex" tableType="Flex" flexDirection="Column"><row><cell cellClass="DynRowVisible"><table controlName="TableDynamicFiltersRow1" tableType="Flex"><row><cell><textblock controlName="DynamicFiltersPrefix1" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell><data attribute="&amp;DynamicFiltersSelector1" labelPosition="None" class="Attribute" /></cell><cell><textblock controlName="DynamicFiltersMiddle1" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell><table controlName="TableMergedDynamicFilters1" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_tipajuNome1_Cell"><data attribute="&amp;tipajuNome1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_ajusLocaDescricao1_Cell"><data attribute="&amp;ajusLocaDescricao1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_ajusCodigo1_Cell"><data attribute="&amp;ajusCodigo1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter1_Cell"><image controlName="AddDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter1_Cell"><image controlName="RemoveDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow2" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix2" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector2" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle2" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters2" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_tipajuNome2_Cell"><data attribute="&amp;tipajuNome2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_ajusLocaDescricao2_Cell"><data attribute="&amp;ajusLocaDescricao2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_ajusCodigo2_Cell"><data attribute="&amp;ajusCodigo2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter2_Cell"><image controlName="AddDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter2_Cell"><image controlName="RemoveDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow3" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix3" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector3" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle3" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters3" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_tipajuNome3_Cell"><data attribute="&amp;tipajuNome3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_ajusLocaDescricao3_Cell"><data attribute="&amp;ajusLocaDescricao3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_ajusCodigo3_Cell"><data attribute="&amp;ajusCodigo3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_RemoveFilter3_Cell"><image controlName="RemoveDynamicFilters3" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters3'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="GridTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithPaginationBar GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;trnsajuste&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;tipajuNome  when &amp;amp;OrderedBy = 1&#xD;&#xA;ajusCodigo  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(ajusCodigo)  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = True&#xD;&#xA;ajusData  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(ajusData)  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = True&#xD;&#xA;tipajuCodigo  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(tipajuCodigo)  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = True&#xD;&#xA;tipajuAcao  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(tipajuAcao)  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = True&#xD;&#xA;ajusLocaCodigo  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(ajusLocaCodigo)  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-trnsajusteWWDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;DynamicFiltersSelector1, &amp;amp;DynamicFiltersOperator1, &amp;amp;tipajuNome1, &amp;amp;ajusLocaDescricao1, &amp;amp;ajusCodigo1, &amp;amp;DynamicFiltersEnabled2, &amp;amp;DynamicFiltersSelector2, &amp;amp;DynamicFiltersOperator2, &amp;amp;tipajuNome2, &amp;amp;ajusLocaDescricao2, &amp;amp;ajusCodigo2, &amp;amp;DynamicFiltersEnabled3, &amp;amp;DynamicFiltersSelector3, &amp;amp;DynamicFiltersOperator3, &amp;amp;tipajuNome3, &amp;amp;ajusLocaDescricao3, &amp;amp;ajusCodigo3, &amp;amp;TFajusCodigo, &amp;amp;TFajusCodigo_To, &amp;amp;TFajusData, &amp;amp;TFajusData_To, &amp;amp;TFtipajuCodigo, &amp;amp;TFtipajuCodigo_Sel, &amp;amp;TFtipajuAcao_Sels, &amp;amp;TFajusLocaCodigo, &amp;amp;TFajusLocaCodigo_Sel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;Update" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Cabeçalho&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Delete" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;UserActionItens" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Itens da Nota&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnCancelar" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Cancelar o ajuste&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnImprimir" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Imprimir&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigo" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusData" titleExp="Data" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="tipajuCodigo" titleExp="Tipo Ajuste" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;tipajuCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;tipajuNome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlSortDescription&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="tipajuAcao" titleExp="Ação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusLocaCodigo" titleExp="Local" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusLocaDescricao" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusStatus" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Ativo:A,Inativo:I&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusOBS" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusDataCadastro" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="ajusUserName" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="ActionGroupGrouped"><item><action controlName="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_insert&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnAGExport" caption="WWP_ExportData" class="ColumnsSelector" /></item><item><action controlName="BtnEditColumns" caption="WWP_EditColumnsCaption" class="hidden-xs" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_EditColumnsTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GXBootstrap.DDORegular ControlName="ddo_AGExport" IconType="FontIcon" Icon="fas fa-download" Caption="WWP_ExportData" DropDownOptionsData="&amp;AGExportData" Cls="ColumnsSelector" /><gxTextBlock GxFormat="HTML" id="JSDynamicFilters" CaptionExpression="JSDynamicFilters" /><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="6:ajusCodigo|7:ajusData|8:tipajuCodigo|9:tipajuAcao|10:ajusLocaCodigo" ColumnsSortValues="2|3|4|5|6" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T" IncludeFilter="T|T|T||T" FilterType="Numeric|Date|Character||Character" FilterIsRange="T|P|||" IncludeDataList="||T|T|T" DataListType="||Dynamic|FixedValues|Dynamic" AllowMultipleSelection="|||T|" DataListFixedValues="|||E:Entrada,S:Saída|" DataListProc="trnsajusteWWGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsajusteWWGetFilterData" Format="8.0||||" Fixable="T" /><gxInNewWindow ControlName="InNewWindow1" /><gxDVelop.GXBootstrap.DDOGridColumnsSelector ControlName="DDO_GridColumnsSelector" Caption="WWP_EditColumnsCaption" Tooltip="WWP_EditColumnsTooltip" DropDownOptionsData="&amp;ColumnsSelector" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" DropDownOptionsType="GridColumnsSelector" Cls="ColumnsSelector hidden-xs" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" HasColumnsSelector="True" /><DIV classref="Invisible" id="DDO_ajusDataAuxDates"><gxAttribute AttID="&amp;DDO_ajusDataAuxDateText" /><gxWWP.DateRangePicker ControlName="TFajusData_RangePicker" DateRangePickerStartDate="&amp;DDO_ajusDataAuxDate" DateRangePickerEndDate="&amp;DDO_ajusDataAuxDateTo" /></DIV></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	TFajusData_RangePicker.Attach(&DDO_ajusDataAuxDateText.InternalName)
+	
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	DDO_GridColumnsSelector.GridInternalName = Grid.InternalName
+
+	If &HTTPRequest.Method = HttpMethod.Get
+		Do 'LoadSavedFilters'
+	EndIf
+
+	JSDynamicFilters.Caption = ''
+	&DynamicFiltersSelector1 = !'TIPAJUNOME'
+	Do 'EnableDynamicFilters1'
+	&DynamicFiltersSelector2 = !'TIPAJUNOME'
+	Do 'EnableDynamicFilters2'
+	&DynamicFiltersSelector3 = !'TIPAJUNOME'
+	Do 'EnableDynamicFilters3'
+	
+	AddDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 2, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	AddDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters3.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	ddo_AGExport.TitleControlIdToReplace = BtnAGExport.InternalName
+	&AGExportData = new()
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportCaption'
+	&AGExportDataItem.Icon = ActionExport.Link()
+	&AGExportDataItem.EventKey = !'Export'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportReportCaption'
+	&AGExportDataItem.Icon = ActionExportReport.Link()
+	&AGExportDataItem.EventKey = !'ExportReport'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = 'Listagem de Ajustes de Estoque'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	If &OrderedBy < 1
+		&OrderedBy = 1
+		Do 'SetDDOSortedStatus'
+	EndIf
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	DDO_GridColumnsSelector.TitleControlIdToReplace = BtnEditColumns.InternalName
+	GridPaginationBar.RowsPerPageSelectedValue = Grid.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: LoadPrefeitura
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'CheckSecurityForActions'
+
+	Do Case
+		Case &ManageFiltersExecutionStep = 1
+			&ManageFiltersExecutionStep = 2
+		Case &ManageFiltersExecutionStep = 2
+			&ManageFiltersExecutionStep = 0
+			Do 'LoadSavedFilters'
+	EndCase
+
+	&DynamicFiltersOperator1.Clear()
+	Do Case
+		Case &DynamicFiltersSelector1 = !'TIPAJUNOME'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'AJUSLOCADESCRICAO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'AJUSCODIGO'
+			&DynamicFiltersOperator1.AddItem(0, "=")
+	EndCase
+	If &DynamicFiltersEnabled2
+		&DynamicFiltersOperator2.Clear()
+		Do Case
+			Case &DynamicFiltersSelector2 = !'TIPAJUNOME'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'AJUSLOCADESCRICAO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'AJUSCODIGO'
+				&DynamicFiltersOperator2.AddItem(0, "=")
+		EndCase
+		If &DynamicFiltersEnabled3
+			&DynamicFiltersOperator3.Clear()
+			Do Case
+				Case &DynamicFiltersSelector3 = !'TIPAJUNOME'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'AJUSLOCADESCRICAO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'AJUSCODIGO'
+					&DynamicFiltersOperator3.AddItem(0, "=")
+			EndCase
+		EndIf
+	EndIf
+	Do 'SaveGridState'
+
+	
+	If &Session.Get(!'trnsajusteWWColumnsSelector') <> ''
+		&ColumnsSelectorXML = &Session.Get(!'trnsajusteWWColumnsSelector')
+		&ColumnsSelector.FromXml(&ColumnsSelectorXML)
+	Else
+		Do 'InitializeColumnsSelector'
+	EndIf
+	ajusCodigo.Visible = &ColumnsSelector.Columns.Item(1).IsVisible
+	ajusData.Visible = &ColumnsSelector.Columns.Item(2).IsVisible
+	tipajuCodigo.Visible = &ColumnsSelector.Columns.Item(3).IsVisible
+	tipajuAcao.Visible = &ColumnsSelector.Columns.Item(4).IsVisible
+	ajusLocaCodigo.Visible = &ColumnsSelector.Columns.Item(5).IsVisible
+	&GridCurrentPage = Grid.CurrentPage
+	&GridPageCount = Grid.PageCount
+	&GridAppliedFilters = WWP_GetAppliedFiltersDescription(&Pgmname)
+	&Update.ColumnHeaderClass = !'WWIconActionColumn'
+	&Delete.ColumnHeaderClass = !'WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg'
+	&UserActionItens.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnCancelar.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnImprimir.ColumnHeaderClass = !'WWIconActionColumn'
+	ajusCodigo.ColumnHeaderClass = !'WWColumn'
+	ajusData.ColumnHeaderClass = !'WWColumn hidden-xs'
+	tipajuCodigo.ColumnHeaderClass = !'WWColumn hidden-xs'
+	tipajuAcao.ColumnHeaderClass = !'WWColumn hidden-xs'
+	ajusLocaCodigo.ColumnHeaderClass = !'WWColumn'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridPaginationBar.SelectedPage = !'Previous'
+			Grid.PreviousPage()
+		Case GridPaginationBar.SelectedPage = !'Next'
+			Grid.NextPage()
+		Otherwise
+			&PageToGo.FromString(GridPaginationBar.SelectedPage)
+			Grid.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = GridPaginationBar.RowsPerPageSelectedValue
+	Grid.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedBy.FromString(DDO_Grid.SelectedValue_get)
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'ajusCodigo'
+					&TFajusCodigo.FromString(DDO_Grid.FilteredText_get)
+					&TFajusCodigo_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'ajusData'
+					&TFajusData.FromString(DDO_Grid.FilteredText_get)
+					&TFajusData_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'tipajuCodigo'
+					&TFtipajuCodigo = DDO_Grid.FilteredText_get
+					&TFtipajuCodigo_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFtipajuCodigo_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'tipajuAcao'
+					&TFtipajuAcao_SelsJson = DDO_Grid.SelectedValue_get
+					&TFtipajuAcao_Sels.FromJson(&TFtipajuAcao_SelsJson)
+				Case DDO_Grid.SelectedColumn = !'ajusLocaCodigo'
+					&TFajusLocaCodigo = DDO_Grid.FilteredText_get
+					&TFajusLocaCodigo_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFajusLocaCodigo_SelDsc = DDO_Grid.SelectedText_get
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Update = !'<i class="fa fa-pen"></i>'
+	If (&IsAuthorized_Update)
+		&Update.Link = trnsajuste.Link(TrnMode.Update, prefCodigo, ajusCodigo)
+	Endif
+	&Delete = !'<i class="fa fa-times"></i>'
+	If (&IsAuthorized_Delete)
+		&Delete.Link = trnsajuste.Link(TrnMode.Delete, prefCodigo, ajusCodigo)
+	Endif
+	&UserActionItens = !'<i class="fas fa-tasks"></i>'
+	If (&IsAuthorized_UserActionItens)
+		&UserActionItens.Link = trnsajusteitensWW.Link(prefCodigo, ajusCodigo)
+	Endif
+	&btnCancelar = !'<i class="fas fa-ban"></i>'
+	If &IsAuthorized_btnCancelar
+		If (ajusStatus <>'C')
+			&btnCancelar.Link = trnsajusteCancelar.Link(prefCodigo, ajusCodigo)
+			&btnCancelar.Class = !'Attribute'
+		Else
+			&btnCancelar.Link = ""
+			&btnCancelar.Class = !'Invisible'
+		Endif
+	EndIf
+	&btnImprimir = !'<i class="fas fa-print"></i>'
+	
+	&Update.ColumnClass = iif(ajusStatus = 'C', !'WWIconActionColumn WWColumnWarning WWColumnWarningFirstColumn', !'WWIconActionColumn')
+	&Delete.ColumnClass = iif(ajusStatus = 'C', !'WWIconActionColumn WWColumnWarning hidden-xs hidden-sm hidden-md hidden-lg', !'WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg')
+	&UserActionItens.ColumnClass = iif(ajusStatus = 'C', !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	&btnCancelar.ColumnClass = iif(ajusStatus = 'C', !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	&btnImprimir.ColumnClass = iif(ajusStatus = 'C', !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	ajusCodigo.ColumnClass = iif(ajusStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	ajusData.ColumnClass = iif(ajusStatus = 'C', !'WWColumn WWColumnWarning hidden-xs', !'WWColumn hidden-xs')
+	tipajuCodigo.ColumnClass = iif(ajusStatus = 'C', !'WWColumn WWColumnWarning hidden-xs', !'WWColumn hidden-xs')
+	tipajuAcao.ColumnClass = iif(ajusStatus = 'C', !'WWColumn WWColumnWarning hidden-xs', !'WWColumn hidden-xs')
+	ajusLocaCodigo.ColumnClass = iif(ajusStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_GridColumnsSelector.OnColumnsChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ColumnsSelectorXML = DDO_GridColumnsSelector.ColumnsSelectorValues
+	&ColumnsSelector.FromJson(&ColumnsSelectorXML)
+	SaveColumnsSelectorState(!'trnsajusteWWColumnsSelector', iif(&ColumnsSelectorXML.IsEmpty(), '', &ColumnsSelector.ToXml()))
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = True
+	AddDynamicFilters1.Visible = False
+	RemoveDynamicFilters1.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersIgnoreFirst = True
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	&DynamicFiltersIgnoreFirst = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector1.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled3 = True
+	AddDynamicFilters2.Visible = False
+	RemoveDynamicFilters2.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled2 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector2.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled3 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector3.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_ManageFilters.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Clean#>'
+			Do 'CleanFilters'
+			Grid.FirstPage()
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Save#>'
+			Do 'SaveGridState'
+			SaveFilterAs.Popup(!'trnsajusteWWFilters', &PgmName + !"GridState")
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Manage#>'
+			ManageFilters.Popup(!'trnsajusteWWFilters')
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Otherwise
+			&ManageFiltersXml = GetFilterByName(!'trnsajusteWWFilters', ddo_ManageFilters.ActiveEventKey)
+			If &ManageFiltersXml.IsEmpty()
+				msg('WWP_FilterNotExist')
+			Else
+				Do 'CleanFilters'
+				SaveGridState.Call(&PgmName + !"GridState",  &ManageFiltersXml)
+				&GridState.FromXml(&ManageFiltersXml)
+				&OrderedBy = &GridState.OrderedBy
+				&OrderedDsc = &GridState.OrderedDsc
+				Do 'SetDDOSortedStatus' 
+				Do 'LoadRegFiltersState'
+				Do 'LoadDynFiltersState'
+				Grid.FirstPage()
+			EndIf
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnImprimir.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_btnImprimir)
+		PRINTGuiaAjuste.PopUp(prefCodigo, ajusCodigo)
+		Refresh
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoInsert'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		trnsajuste.Call(TrnMode.Insert, &prefCodigo)
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_AGExport.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_AGExport.ActiveEventKey = !'Export'
+			Do 'DoExport'
+		Case ddo_AGExport.ActiveEventKey = !'ExportReport'
+			Do 'DoExportReport'
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = &OrderedBy.ToString().Trim() + !':' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'InitializeColumnsSelector'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ColumnsSelector = new WWPColumnsSelector()
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"ajusCodigo", '', !'Código', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"ajusData", '', !'Data', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"tipajuCodigo", '', !'Tipo Ajuste', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"tipajuAcao", '', !'Ação', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"ajusLocaCodigo", '', !'Local', True, '')
+		
+	&UserCustomValue = LoadColumnsSelectorState.Udp(!'trnsajusteWWColumnsSelector')
+	If not(&UserCustomValue.IsEmpty())
+		&ColumnsSelectorAux.FromXml(&UserCustomValue)
+		WWP_ColumnSelector_UpdateColumns(&ColumnsSelectorAux, &ColumnsSelector)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&IsAuthorized_Update = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsajusteww_Update')
+	If not (&IsAuthorized_Update)
+		&Update.Visible = False
+	Endif 
+	&IsAuthorized_Delete = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsajusteww_Delete')
+	If not (&IsAuthorized_Delete)
+		&Delete.Visible = False
+	Endif 
+	&IsAuthorized_UserActionItens = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_UserActionItens)
+		&UserActionItens.Visible = False
+	Endif 
+	&IsAuthorized_btnCancelar = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnCancelar)
+		&btnCancelar.Visible = False
+	Endif 
+	&IsAuthorized_btnImprimir = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnImprimir)
+		&btnImprimir.Visible = False
+	Endif 
+	&IsAuthorized_Insert = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsajusteww_Insert')
+	If not (&IsAuthorized_Insert)
+		BtnInsert.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&tipajuNome1.Visible = False
+	&ajusLocaDescricao1.Visible = False
+	&ajusCodigo1.Visible = False
+	&DynamicFiltersOperator1.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector1 = !'TIPAJUNOME'
+		&tipajuNome1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'AJUSLOCADESCRICAO'
+		&ajusLocaDescricao1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'AJUSCODIGO'
+		&ajusCodigo1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&tipajuNome2.Visible = False
+	&ajusLocaDescricao2.Visible = False
+	&ajusCodigo2.Visible = False
+	&DynamicFiltersOperator2.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector2 = !'TIPAJUNOME'
+		&tipajuNome2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'AJUSLOCADESCRICAO'
+		&ajusLocaDescricao2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'AJUSCODIGO'
+		&ajusCodigo2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&tipajuNome3.Visible = False
+	&ajusLocaDescricao3.Visible = False
+	&ajusCodigo3.Visible = False
+	&DynamicFiltersOperator3.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector3 = !'TIPAJUNOME'
+		&tipajuNome3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'AJUSLOCADESCRICAO'
+		&ajusLocaDescricao3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'AJUSCODIGO'
+		&ajusCodigo3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'ResetDynFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = False
+	&DynamicFiltersSelector2 = !'TIPAJUNOME'
+	&DynamicFiltersOperator2 = 0
+	&tipajuNome2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	&DynamicFiltersEnabled3 = False
+	&DynamicFiltersSelector3 = !'TIPAJUNOME'
+	&DynamicFiltersOperator3 = 0
+	&tipajuNome3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadSavedFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ManageFiltersData = WWP_ManageFiltersLoadSavedFilters(!'trnsajusteWWFilters', !"WWPDynFilterHideAll_AL('%1', 3, 0)", TableDynamicFilters.InternalName, False)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CleanFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TFajusCodigo.SetEmpty()
+	&TFajusCodigo_To.SetEmpty()
+	&TFajusData.SetEmpty()
+	&TFajusData_To.SetEmpty()
+	&TFtipajuCodigo.SetEmpty()
+	&TFtipajuCodigo_Sel.SetEmpty()
+	&TFtipajuAcao_Sels = new()
+	&TFajusLocaCodigo.SetEmpty()
+	&TFajusLocaCodigo_Sel.SetEmpty()
+	DDO_Grid.SelectedValue_set = ''
+	DDO_Grid.FilteredText_set = ''
+	DDO_Grid.FilteredTextTo_set = ''
+
+	&DynamicFiltersSelector1 = !'TIPAJUNOME'
+	&DynamicFiltersOperator1 = 0
+	&tipajuNome1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+	Do 'ResetDynFilters'
+	&GridState.DynamicFilters.Clear()
+	Do 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+
+	&OrderedBy = &GridState.OrderedBy
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+	Do 'LoadRegFiltersState'
+	Do 'LoadDynFiltersState'
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadRegFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"TFAJUSCODIGO"
+				&TFajusCodigo.FromString(&GridStateFilterValue.Value)
+				&TFajusCodigo_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFAJUSDATA"
+				&TFajusData.FromString(&GridStateFilterValue.Value)
+				&TFajusData_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFTIPAJUCODIGO"
+				&TFtipajuCodigo.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFTIPAJUCODIGO_SEL"
+				&TFtipajuCodigo_Sel.FromString(&GridStateFilterValue.Value)
+					&TFtipajuCodigo_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFTIPAJUACAO_SEL"
+				&TFtipajuAcao_SelsJson = &GridStateFilterValue.Value
+				&TFtipajuAcao_Sels.FromJson(&TFtipajuAcao_SelsJson)
+			Case &GridStateFilterValue.Name = !"TFAJUSLOCACODIGO"
+				&TFajusLocaCodigo.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFAJUSLOCACODIGO_SEL"
+				&TFajusLocaCodigo_Sel.FromString(&GridStateFilterValue.Value)
+					&TFajusLocaCodigo_SelDsc = &GridStateFilterValue.ValueTo
+		EndCase
+	EndFor
+	DDO_Grid.SelectedText_set = !'||' + iif(&TFtipajuCodigo_Sel.IsEmpty(), '', &TFtipajuCodigo_SelDsc) + !'||' + iif(&TFajusLocaCodigo_Sel.IsEmpty(), '', &TFajusLocaCodigo_SelDsc)
+	DDO_Grid.SelectedValue_set = !'||' + iif(&TFtipajuCodigo_Sel.IsEmpty(), '', &TFtipajuCodigo_Sel.ToString()) + !'|' + WWP_GetFilterVal(&TFtipajuAcao_Sels.Count = 0, &TFtipajuAcao_SelsJson) + !'|' + iif(&TFajusLocaCodigo_Sel.IsEmpty(), '', &TFajusLocaCodigo_Sel.ToString())
+	DDO_Grid.FilteredText_set = iif(&TFajusCodigo.IsEmpty(), '', &TFajusCodigo.ToString()) + !'|' + iif(&TFajusData.IsEmpty(), '', &TFajusData.ToString()) + !'|' + WWP_GetFilterVal(&TFtipajuCodigo.IsEmpty(), &TFtipajuCodigo) + !'||' + WWP_GetFilterVal(&TFajusLocaCodigo.IsEmpty(), &TFajusLocaCodigo)
+	DDO_Grid.FilteredTextTo_set = iif(&TFajusCodigo_To.IsEmpty(), '', &TFajusCodigo_To.ToString()) + !'|' + iif(&TFajusData_To.IsEmpty(), '', &TFajusData_To.ToString()) + !'|||'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	AddDynamicFilters1.Visible = True
+	RemoveDynamicFilters1.Visible = False
+	AddDynamicFilters2.Visible = True
+	RemoveDynamicFilters2.Visible = False
+
+	If &GridState.DynamicFilters.Count >= 1
+		&GridStateDynamicFilter = &GridState.DynamicFilters.Item(1)
+		&DynamicFiltersSelector1 = &GridStateDynamicFilter.Selected
+		Do Case
+			Case &DynamicFiltersSelector1 = !'TIPAJUNOME'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&tipajuNome1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'AJUSLOCADESCRICAO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&ajusLocaDescricao1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'AJUSCODIGO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&ajusCodigo1.FromString(&GridStateDynamicFilter.Value)
+		EndCase
+		Do 'EnableDynamicFilters1'
+			If &GridState.DynamicFilters.Count >= 2
+				JSDynamicFilters.Caption = !'<script type="text/javascript">$(document).ready(function() {'
+				JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 2, 0);", TableDynamicFilters.InternalName)
+				AddDynamicFilters1.Visible = False
+				RemoveDynamicFilters1.Visible = True
+				&DynamicFiltersEnabled2 = True
+				&GridStateDynamicFilter = &GridState.DynamicFilters.Item(2)
+				&DynamicFiltersSelector2 = &GridStateDynamicFilter.Selected
+				Do Case
+					Case &DynamicFiltersSelector2 = !'TIPAJUNOME'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&tipajuNome2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'AJUSLOCADESCRICAO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&ajusLocaDescricao2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'AJUSCODIGO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&ajusCodigo2.FromString(&GridStateDynamicFilter.Value)
+				EndCase
+				Do 'EnableDynamicFilters2'
+				If &GridState.DynamicFilters.Count >= 3
+					JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 3, 0);", TableDynamicFilters.InternalName)
+					AddDynamicFilters2.Visible = False
+					RemoveDynamicFilters2.Visible = True
+					&DynamicFiltersEnabled3 = True
+					&GridStateDynamicFilter = &GridState.DynamicFilters.Item(3)
+					&DynamicFiltersSelector3 = &GridStateDynamicFilter.Selected
+					Do Case
+						Case &DynamicFiltersSelector3 = !'TIPAJUNOME'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&tipajuNome3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'AJUSLOCADESCRICAO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&ajusLocaDescricao3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'AJUSCODIGO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&ajusCodigo3.FromString(&GridStateDynamicFilter.Value)
+					EndCase
+					Do 'EnableDynamicFilters3'
+				EndIf
+				JSDynamicFilters.Caption += !'});</script>'
+			EndIf
+	EndIf
+	If &DynamicFiltersRemoving
+		JSDynamicFilters.Caption = ''
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedBy = &OrderedBy
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValue(&GridState, !"TFAJUSCODIGO", "Código", not (&TFajusCodigo.IsEmpty() AND &TFajusCodigo_To.IsEmpty()), 0, &TFajusCodigo.ToString().Trim(), iif(&TFajusCodigo.IsEmpty(), '', trim(&TFajusCodigo.ToFormattedString())), True, &TFajusCodigo_To.ToString().Trim(), iif(&TFajusCodigo_To.IsEmpty(), '', trim(&TFajusCodigo_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFAJUSDATA", "Data", not (&TFajusData.IsEmpty() AND &TFajusData_To.IsEmpty()), 0, &TFajusData.ToString().Trim(), iif(&TFajusData.IsEmpty(), '', trim(&TFajusData.ToFormattedString())), True, &TFajusData_To.ToString().Trim(), iif(&TFajusData_To.IsEmpty(), '', trim(&TFajusData_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFTIPAJUCODIGO", "Tipo Ajuste", not &TFtipajuCodigo.IsEmpty(), 0, &TFtipajuCodigo.ToString().Trim(), trim(&TFtipajuCodigo.ToFormattedString()), False, '', '', not &TFtipajuCodigo_Sel.IsEmpty(), &TFtipajuCodigo_Sel.ToString().Trim(), &TFtipajuCodigo_SelDsc)
+	&AuxText = iif(&TFtipajuAcao_Sels.Count = 1, !'[' + &TFtipajuAcao_Sels.Item(1) + !']', 'WWP_FilterValueDescription_MultipleValues')
+	WWP_GridStateAddFilterValue(&GridState, !"TFTIPAJUACAO_SEL", "Ação", not &TFtipajuAcao_Sels.Count = 0, 0, &TFtipajuAcao_Sels.ToJson(), iif(&AuxText = '', '', &AuxText.Replace(!"[E]", "Entrada").Replace(!"[S]", "Saída")), False, '', '')
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFAJUSLOCACODIGO", "Local", not &TFajusLocaCodigo.IsEmpty(), 0, &TFajusLocaCodigo.ToString().Trim(), trim(&TFajusLocaCodigo.ToFormattedString()), False, '', '', not &TFajusLocaCodigo_Sel.IsEmpty(), &TFajusLocaCodigo_Sel.ToString().Trim(), &TFajusLocaCodigo_SelDsc)
+
+	Do 'SaveDynFiltersState'
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.DynamicFilters.Clear()
+	If not &DynamicFiltersIgnoreFirst
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector1
+		Do Case
+			Case &DynamicFiltersSelector1 = !'TIPAJUNOME' AND not &tipajuNome1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Tipo", &DynamicFiltersOperator1, &tipajuNome1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &tipajuNome1, "WWP_FilterContains" + !' ' + &tipajuNome1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'AJUSLOCADESCRICAO' AND not &ajusLocaDescricao1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Local", &DynamicFiltersOperator1, &ajusLocaDescricao1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &ajusLocaDescricao1, "WWP_FilterContains" + !' ' + &ajusLocaDescricao1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'AJUSCODIGO' AND not &ajusCodigo1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator1, &ajusCodigo1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "=" + !' ' + trim(&ajusCodigo1.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled2
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector2
+		Do Case
+			Case &DynamicFiltersSelector2 = !'TIPAJUNOME' AND not &tipajuNome2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Tipo", &DynamicFiltersOperator2, &tipajuNome2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &tipajuNome2, "WWP_FilterContains" + !' ' + &tipajuNome2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'AJUSLOCADESCRICAO' AND not &ajusLocaDescricao2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Local", &DynamicFiltersOperator2, &ajusLocaDescricao2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &ajusLocaDescricao2, "WWP_FilterContains" + !' ' + &ajusLocaDescricao2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'AJUSCODIGO' AND not &ajusCodigo2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator2, &ajusCodigo2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "=" + !' ' + trim(&ajusCodigo2.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled3
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector3
+		Do Case
+			Case &DynamicFiltersSelector3 = !'TIPAJUNOME' AND not &tipajuNome3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Tipo", &DynamicFiltersOperator3, &tipajuNome3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &tipajuNome3, "WWP_FilterContains" + !' ' + &tipajuNome3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'AJUSLOCADESCRICAO' AND not &ajusLocaDescricao3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Local", &DynamicFiltersOperator3, &ajusLocaDescricao3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &ajusLocaDescricao3, "WWP_FilterContains" + !' ' + &ajusLocaDescricao3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'AJUSCODIGO' AND not &ajusCodigo3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator3, &ajusCodigo3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "=" + !' ' + trim(&ajusCodigo3.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"trnsajuste"
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate Excel spreadsheet and download it.
+	Do 'LoadGridState'
+	trnsajusteWWExport.Call(&ExcelFilename, &ErrorMessage)
+	If (&ExcelFilename <> "")
+		Link(&ExcelFilename)
+	Else
+		msg(&ErrorMessage)
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExportReport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate PDF file.
+	Do 'LoadGridState'
+	InNewWindow1.Target = trnsajusteWWExportReport.Link()
+	InNewWindow1.Height = !'600'
+	InNewWindow1.Width = !'800'
+	InNewWindow1.OpenWindow()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+prefCodigo = &prefCodigo;
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateDynamicFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateDynamicFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.DynamicFilter, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedByAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedByAux</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Tipo:TIPAJUNOME,Local:AJUSLOCADESCRICAO,Código:AJUSCODIGO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator1</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData_To1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData_To1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Tipo:TIPAJUNOME,Local:AJUSLOCADESCRICAO,Código:AJUSCODIGO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator2</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData_To2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData_To2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Tipo:TIPAJUNOME,Local:AJUSLOCADESCRICAO,Código:AJUSCODIGO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator3</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>WWP_FilterLike:0,WWP_FilterContains:1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData_To3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData_To3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersRemoving">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersRemoving</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersIgnoreFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersIgnoreFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelFilename">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelFilename</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>512</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>512</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorXML">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorXML</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserCustomValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserCustomValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelector">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelector</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorAux</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersXml">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersXml</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersExecutionStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersExecutionStep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusData</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusData_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusData_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusData</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_ajusDataAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_ajusDataAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_ajusDataAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_ajusDataAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_ajusDataAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_ajusDataAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusTipo_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusTipo_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusLocaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusLocaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusLocaCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusLocaCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusLocaDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusLocaDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusLocaDescricao_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusLocaDescricao_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusStatus_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusStatus_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusStatus_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusStatus_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusStatus</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusOBS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusOBS</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusOBS</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusOBS_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusOBS_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusOBS</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportDataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportDataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData_RangeText1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData_RangeText1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData_RangeText2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData_RangeText2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusData_RangeText3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusData_RangeText3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Insert">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Insert</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserActionItens">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserActionItens</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusDataCadastro">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusDataCadastro</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusDataCadastro</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusDataCadastro_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusDataCadastro_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusDataCadastro</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_ajusDataCadastroAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_ajusDataCadastroAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_ajusDataCadastroAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_ajusDataCadastroAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_ajusDataCadastroAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_ajusDataCadastroAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusUserName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusUserName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusUserName</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusUserName_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusUserName_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusUserName</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusCodigo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusCodigo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusLocaCodigo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusLocaCodigo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusStatus1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusStatus1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusLocaCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusLocaCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusStatus2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusStatus2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusCodigo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusCodigo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusLocaCodigo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusLocaCodigo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusStatus3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusStatus3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusLocaCodigo_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusLocaCodigo_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFajusLocaCodigo_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFajusLocaCodigo_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnImprimir">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnImprimir</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFtipajuCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFtipajuCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tipajuNome</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFtipajuCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFtipajuCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tipajuCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFtipajuCodigo_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFtipajuCodigo_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tipajuCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFtipajuCodigo_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFtipajuCodigo_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFtipajuAcao_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFtipajuAcao_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFtipajuAcao_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFtipajuAcao_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tipajuAcao</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipajuNome1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipajuNome1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tipajuNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipajuNome2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipajuNome2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tipajuNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipajuNome3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipajuNome3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:tipajuNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusLocaDescricao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusLocaDescricao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusLocaDescricao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusLocaDescricao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ajusLocaDescricao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ajusLocaDescricao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:ajusLocaDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_UserActionItens">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_UserActionItens</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnImprimir">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnImprimir</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_ajusData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_ajusData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuxText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuxText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnCancelar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnCancelar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnCancelar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnCancelar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsajusteWW</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Listagem de Ajustes de Estoque</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsajuste</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>Selection</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

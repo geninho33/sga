@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="53596921-3424-4ba6-a1d9-1d13c10dfda4" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-02T02:52:57.0000000Z" lastUpdate="2024-08-02T02:48:45.0000000Z" checksum="8996f7fbd068b3ad7c663cc7c3ee3396" fullyQualifiedName="WorkWithPlusInventario" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="544a31b1-62d8-033d-15d1-1b24e3f762d9" name="WorkWithPlusInventario" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus Inventario" parent="Inventario" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsprodutos" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsprodutos">
+    <table defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" />
+  </transaction>
+  <level childrenOrderedList="4;39;" id="b2f0eae3-8148-82da-fc68-ce52d1677920:1" name="Inventario">
+    <selection Template="InfiniteScrolling" description="Inventário" defaultDescription=" Alimentos" page="50" defaultPage="50" pagingType="Infinite scrolling (form scroll bar)" defaultPagingType="Infinite scrolling (form scroll bar)" childrenOrderedList="4;02;Main Table" level="root:trnsprodutos" defaultLevel="root:trnsprodutos" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" panelTheme="PanelNoHeader" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions" />
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="CleanFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" numberOfColumns="3" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" cellVisible_E="False" defaultCellVisible_E="False" cellThemeClass="CellMarginLeft" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=prodPrograma.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;prodPrograma;=prodPrograma.ContextualTitle" name="=prodPrograma.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" />
+                  </order>
+                </orders>
+                <filterAttribute name="prodTipo" description="Grupo" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="prodTipo = &amp;prodTipo when not &amp;prodTipo.IsEmpty();" defaultCondition="&lt;default&gt;" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodGrupCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodGrupCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodGrupdescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodGrupdescricao" controlEmptyItem="True" defaultControlEmptyItem="True" controlEmptyItemText="Todos" defaultControlEmptyItemText="Todos" />
+                <filterAttribute name="prodClassificacao" description="Classificação" defaultDescription="=Attribute.ContextualTitle" allValue="True" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="prodClassificacao = &amp;prodClassificacao when not &amp;prodClassificacao.IsEmpty();" defaultCondition="&lt;default&gt;" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Combo Box" controlValues="Perecíveis:2,Semi-perecíveis:4,Não perecíveis:3" defaultControlValues="Perecíveis:2,Semi-perecíveis:4,Não perecíveis:3" controlEmptyItem="True" defaultControlEmptyItem="True" controlEmptyItemText="Todos" defaultControlEmptyItemText="Todos" cellThemeClass="CellMarginLeft" descriptionWidth="33%" />
+                <filterAttribute name="prodDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;12;prodDescricao;StartsWith-4;96;4;12;prodDescricao;Contains">
+                  <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                </filterAttribute>
+              </table>
+              <standardAction name="Search" cellThemeClass="CellMarginLeft" />
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid includePaginationBar="True" defaultIncludePaginationBar="False" defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;prodCodigo-4;23;prodPrograma-4;23;prodPrograma_exclusivo-4;23;prodDescricao-4;23;prodUnidMedCompra-4;23;prodPesoCompra-4;23;prodObsCompra-4;23;prodEmbalagemCompra-4;23;prodObsEmbalagem-4;23;prodQtdeEmbalagemCompra-4;23;prodUnidMedConsumo-4;23;prodPesoConsumo-4;23;prodObsConsumo-4;23;prodPesoUnidade-4;23;prodUnidMedEstocagem-4;23;prodPesoEstocagem-4;23;prodObsEstocagem-4;23;prodTipo-4;23;prodLoteCompra-4;23;prodClassificacao-4;23;prodTipoRemessa-4;23;prodTiipoCompra-4;23;prodFracaoEstocagem-4;23;prodFracaoConsumo-4;23;prodArredConsumo-4;23;prodEspecificacao-4;23;prodValorunitario-4;23;prodArredondaOcorrencia-4;23;prodCalculoDifer-4;23;prodOrigem-4;23;prodZonaUrbana-4;23;prodZonaRural-4;23;prodAcucar-4;23;prodCaloria-4;23;prodCarboidrato-4;23;prodGorduraTrans-4;23;prodGorduraSaturada-4;23;prodProteina-4;23;prodSal-4;23;prodPotassio-4;23;prodCalcio-4;23;prodFerro-4;23;prodVitaminaA-4;23;prodNpcal-4;23;prodNdpcal-4;23;prodLipidio-4;23;prodFibra-4;23;prodVitaminaC-4;23;prodMagnesio-4;23;prodZinco-4;23;prodTipoIndice-4;23;prodIndice-4;23;prodTaco-4;23;prodStatus-4;23;prodDataCad-4;23;prodDataAlt-4;23;prodCodigoTipoRemessa-4;23;prodSaldo-4;23;prodQtdeMinimo-4;23;prodQtdeMaximo-4;23;prodPesoEstoque-4;23;prodDescricaoSaldo">
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False" defaultFilterCondition="prodCodigo &gt;= &amp;TFprodCodigo when not &amp;TFprodCodigo.IsEmpty();prodCodigo &lt;= &amp;TFprodCodigo_To when not &amp;TFprodCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultCellVisible_E="False" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False" defaultFilterCondition="prodDescricao.ToLower() like &amp;TFprodDescricao.ToLower() when not &amp;TFprodDescricao.IsEmpty()" />
+          <gridVariable name="prodGrupdescricao" description="Grupo" defaultDescription="prod Grupdescricao" domain="adbb33c9-0906-4971-833c-998de27e0676-prodGrupdescricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prodGrupdescricao" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False"><![CDATA[&prodGrupdescricao = find(prodGrupdescricao,prodGrupCodigo = prodTipo,'Inexistente')]]]]><![CDATA[><![CDATA[&prodGrupdescricao = find(prodGrupdescricao,prodGrupCodigo = prodTipo,'Inexistente')]]]]><![CDATA[></gridVariable>
+          <gridVariable name="locDescricao" description="Local Estoque" defaultDescription="Local" domain="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False"><![CDATA[&locDescricao = find(locDescricao,locCodigo = prefLocalDeposito,'Inexistente')]]]]><![CDATA[><![CDATA[&locDescricao = find(locDescricao,locCodigo = prefLocalDeposito,'Inexistente')]]]]><![CDATA[></gridVariable>
+          <gridVariable name="uniDescricao" description="Unid." defaultDescription="uni Descricao" domain="adbb33c9-0906-4971-833c-998de27e0676-uniDescricao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-uniDescricao" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False"><![CDATA[&uniDescricao = find(uniDescricao,uniCodigo = prodUnidMedCompra,'Inexistente')]]]]><![CDATA[><![CDATA[&uniDescricao = find(uniDescricao,uniCodigo = prodUnidMedCompra,'Inexistente')]]]]><![CDATA[></gridVariable>
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodQtdeMinimo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False" defaultFilterCondition="prodQtdeMinimo &gt;= &amp;TFprodQtdeMinimo when not &amp;TFprodQtdeMinimo.IsEmpty();prodQtdeMinimo &lt;= &amp;TFprodQtdeMinimo_To when not &amp;TFprodQtdeMinimo_To.IsEmpty()" />
+          <gridVariable name="prodSaldo" description="Quantidade" defaultDescription="Saldo" domain="adbb33c9-0906-4971-833c-998de27e0676-prodSaldo" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prodSaldo" readOnly="False" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False"><![CDATA[&prodSaldo = prodSaldo
+&prodSaldo.Enabled = true]]]]><![CDATA[><![CDATA[&prodSaldo = prodSaldo
+&prodSaldo.Enabled = true]]]]><![CDATA[></gridVariable>
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodQtdeMaximo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" sortableByTitle="False" includeInExport="False" includeInExportReport="False" includeInExportCSV="False" includeTitleFilter="False" defaultFilterCondition="prodQtdeMaximo &gt;= &amp;TFprodQtdeMaximo when not &amp;TFprodQtdeMaximo.IsEmpty();prodQtdeMaximo &lt;= &amp;TFprodQtdeMaximo_To when not &amp;TFprodQtdeMaximo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodSaldo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prodSaldo &gt;= &amp;TFprodSaldo when not &amp;TFprodSaldo.IsEmpty();prodSaldo &lt;= &amp;TFprodSaldo_To when not &amp;TFprodSaldo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefLocalDeposito" description="=Attribute.ColumnTitle" visible="False" />
+        </grid>
+        <table name="TableOptions" numberOfColumns="2" height="50px" type="Responsive" cellThemeClass="CellMarginTop">
+          <table name="TableSalvar">
+            <userAction caption="Salvar " name="btnSalvar" confirm="True" confirmMessage="Deseja realmente salvar os ajustes de Inventário ?" confirmTitle="Inventário" />
+            <variable name="ImprimirConferencia" dataType="Basic" basicType="Boolean" rightText="Imprimir conferência ao salvar" showDescription="False" mergeWithPrevious="True" />
+          </table>
+          <table name="TableImprimir">
+            <userAction tooltip="Imprimir inventário" caption="Imprimir" name="Imprimir" />
+            <variable name="ComSaldo" description="" dataType="Basic" basicType="Boolean" rightText="Imprimir apenas produtos com saldo" showDescription="False" mergeWithPrevious="True" />
+            <variable name="ContagemEstoque" dataType="Basic" basicType="Boolean" rightText="Contagem de estoque" showDescription="False" mergeWithPrevious="True" />
+          </table>
+        </table>
+        <userControl controlName="InNewWindow" ucName="InNewWindow" ucId="-667710712" ucProperties="Name:_blank,Fullscreen:True,Location:False,MenuBar:False,TitleBar:False,ToolBar:False,directories:False,fitscreen:True" />
+      </table>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusInventario</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-Inventario</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

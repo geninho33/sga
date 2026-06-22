@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="06be50bc-f023-46c5-aecb-856b093eec03" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-23T03:09:41.0000000Z" lastUpdate="2025-04-21T23:44:04.0000000Z" checksum="d89c8ab2d4c13e2ff9482d4f3432a234" fullyQualifiedName="Atendimento" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="cd374f6f-052a-49a1-a480-ebf0c94b02da" name="Atendimento" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Atendimento" parent="Movimentacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="Atendimento" Type="Atendimento" Description="Atendimento" Guid="cd374f6f-052a-49a1-a480-ebf0c94b02da">
+      <Properties />
+      <AttributeProperties Attribute="carGruQtdeItens">
+        <Properties>
+          <Property>
+            <Name>IncludeInForms</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </AttributeProperties>
+      <AttributeProperties Attribute="AtendimentoDataCadastro">
+        <Properties>
+          <Property>
+            <Name>IncludeInForms</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </AttributeProperties>
+      <AttributeProperties Attribute="AtendimentoDataAlteracao">
+        <Properties>
+          <Property>
+            <Name>IncludeInForms</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </AttributeProperties>
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="dee034a2-65bd-40fe-a6eb-0bdf954df6a1">AtendimentoCodigo</Attribute>
+      <Attribute key="False" guid="25d849a1-401b-4d4d-8238-af54563aef89">prefNome</Attribute>
+      <Attribute key="False" guid="232b58a2-07f8-491a-815f-1546af99cc40">prefMunCod</Attribute>
+      <Attribute key="False" guid="7cd5d6cc-528a-3959-078c-2d03ac1fc912">locCodigo</Attribute>
+      <Attribute key="False" guid="3c15e0be-8960-422b-9dd1-952a7ba92718">locUeCod</Attribute>
+      <Attribute key="False" guid="36ddee25-c76a-df91-eb52-d4681dd54193">locDescricao</Attribute>
+      <Attribute key="False" guid="00d57801-278a-440b-a64b-bbdde282992f">AreEnsCodigo</Attribute>
+      <Attribute key="False" guid="d7001d90-d75a-493b-89ad-384f3c42e842">AreEnsNome</Attribute>
+      <Attribute key="False" guid="74dd0306-5a76-4748-befb-385ecdee2cc4">AreEnsSequencial</Attribute>
+      <Attribute key="False" guid="8b6bf975-ee35-4406-a0fa-7d4a008b7ce1">AreEnsEtapaNumero</Attribute>
+      <Attribute key="False" guid="1b54b7b2-9c15-4b77-b898-f182865e066f">AreEnsEtapaNivel</Attribute>
+      <Attribute key="False" guid="b1a8d273-ad65-43f2-a32d-94cd1ebbb03f">AreEnsEtapaNome</Attribute>
+      <Attribute key="False" guid="e751d524-d609-85c9-0696-cf5b71c9c40e">carGruCodigo</Attribute>
+      <Attribute key="False" guid="b3c916b6-98c0-3c49-3366-9a87d11d47f2">carGruDescricao</Attribute>
+      <Attribute key="False" guid="6487454a-0b05-464e-8919-1878647820e3">carGruQtdeItens</Attribute>
+      <Attribute key="False" guid="9ef616e3-6b19-4ce7-96b2-10cab811deae">carDapCodigo</Attribute>
+      <Attribute key="False" guid="64a584fc-2bb0-474b-b835-c4778923f8ce">carDapDescricao</Attribute>
+      <Attribute key="False" guid="7576f971-74bb-40e4-8205-73264e5475b9">carDapMesAno</Attribute>
+      <Attribute key="False" guid="0e00c50e-4387-4b80-ba27-b7197590d411">AtendimentoTurno</Attribute>
+      <Attribute key="False" guid="aa92263f-5044-4c10-9a05-b0dd2a56e62c">AtendimentoNormalDomingo</Attribute>
+      <Attribute key="False" guid="085f9fbe-52b5-43dc-a0e9-d6e9ed98eeed">AtendimentoNormalSegunda</Attribute>
+      <Attribute key="False" guid="52fa1243-f954-4ed6-8125-9f9b26694c76">AtendimentoNormalTerca</Attribute>
+      <Attribute key="False" guid="1650dbe4-20be-46e5-a732-12482558822f">AtendimentoNormalQuarta</Attribute>
+      <Attribute key="False" guid="68a01aaa-01bd-44d0-a9c8-c02b933f266d">AtendimentoNormalQuinta</Attribute>
+      <Attribute key="False" guid="8da603b0-b855-4751-ac85-b5fdb0d73515">AtendimentoNormalSexta</Attribute>
+      <Attribute key="False" guid="a7716ac1-a5af-4491-bbb1-f0239c899d8d">AtendimentoNormalSabado</Attribute>
+      <Attribute key="False" guid="1168a4a2-8a3b-440c-b62b-11d7903f343c">AtendimentoNormalTotal</Attribute>
+      <Attribute key="False" guid="5d14f692-4ccf-43ba-8fb7-390680675693">AtendimentoGlutenDomingo</Attribute>
+      <Attribute key="False" guid="4db461e7-a67a-4354-9d3c-39f88fed8b3a">AtendimentoGlutenSegunda</Attribute>
+      <Attribute key="False" guid="4b25f818-50ca-4463-9658-ff3194c4b391">AtendimentoGlutenTerca</Attribute>
+      <Attribute key="False" guid="d82773b1-ed2c-418f-95c3-18325face145">AtendimentoGlutenQuarta</Attribute>
+      <Attribute key="False" guid="56cc6a6c-fc5e-49fa-b45b-058bd092d19c">AtendimentoGlutenQuinta</Attribute>
+      <Attribute key="False" guid="52ca4ee3-1471-4c67-a18f-1453018fbfe9">AtendimentoGlutenSexta</Attribute>
+      <Attribute key="False" guid="88858683-3ce7-4f3f-ae70-fae1b7ba1f6e">AtendimentoGlutenSabado</Attribute>
+      <Attribute key="False" guid="594951cb-1fad-4fdc-b3b6-d0f5b094a7ce">AtendimentoGlutenTotal</Attribute>
+      <Attribute key="False" guid="bc59f953-1652-481c-b382-23aef646d2cc">AtendimentoLactoseDomingo</Attribute>
+      <Attribute key="False" guid="0f9adcbe-5a66-4763-b8a4-7539db8b144d">AtendimentoLactoseSegunda</Attribute>
+      <Attribute key="False" guid="2d800658-acc4-42bb-8ad5-ab8a097a6038">AtendimentoLactoseTerca</Attribute>
+      <Attribute key="False" guid="825fe1e5-670e-4fcd-8460-03b8db34c33b">AtendimentoLactoseQuarta</Attribute>
+      <Attribute key="False" guid="b7741838-8924-47dc-9528-197f400df02c">AtendimentoLactoseQuinta</Attribute>
+      <Attribute key="False" guid="ab8d5fb7-2065-4995-ac86-96f2f6e902d8">AtendimentoLactoseSexta</Attribute>
+      <Attribute key="False" guid="3392a478-ccb1-45a2-8450-a8794f9d1bd1">AtendimentoLactoseSabado</Attribute>
+      <Attribute key="False" guid="9bbb84c0-b818-4437-8214-7c2c0c90ec08">AtendimentoLactoseTotal</Attribute>
+      <Attribute key="False" guid="a9a51430-72c8-45c2-996a-83c4486cb758">AtendimentoDiabeticoDomingo</Attribute>
+      <Attribute key="False" guid="7f782616-2083-4832-bf49-5acb64275e8a">AtendimentoDiabeticoSegunda</Attribute>
+      <Attribute key="False" guid="9ca3d253-8e5b-454c-a24e-552064791f20">AtendimentoDiabeticoTerca</Attribute>
+      <Attribute key="False" guid="d9a133b6-3418-4061-8408-1dfab69dde63">AtendimentoDiabeticoQuarta</Attribute>
+      <Attribute key="False" guid="f3de1279-f85d-455d-9e33-9bfc4d98ea3a">AtendimentoDiabeticoQuinta</Attribute>
+      <Attribute key="False" guid="1f3eef58-44fb-4c4a-beee-85f1cf793981">AtendimentoDiabeticoSexta</Attribute>
+      <Attribute key="False" guid="0144d15b-cd9b-4fff-acbe-e44d19a8e7d2">AtendimentoDiabeticoSabado</Attribute>
+      <Attribute key="False" guid="6838f0dc-d465-4777-a1dd-ca506e5e5ada">AtendimentoDiabeticoTotal</Attribute>
+      <Attribute key="False" guid="fe58b4d1-c736-4a28-9926-34228a7086d3">AtendimentoColesterolDomingo</Attribute>
+      <Attribute key="False" guid="0e8cb25e-3e83-4df1-8a8b-3f6824ee15b0">AtendimentoColesterolSegunda</Attribute>
+      <Attribute key="False" guid="6ef52c39-603f-45b7-9078-dc0d3efe6be7">AtendimentoColesterolTerca</Attribute>
+      <Attribute key="False" guid="03ecf7ff-48d0-4dfb-9971-77d1fc894b18">AtendimentoColesterolQuarta</Attribute>
+      <Attribute key="False" guid="83cfe6db-f622-47a3-a8cf-6af1edf95ab8">AtendimentoColesterolQuinta</Attribute>
+      <Attribute key="False" guid="c3712a8a-c0a0-4dc1-ba5d-1e54646d1dd4">AtendimentoColesterolSexta</Attribute>
+      <Attribute key="False" guid="e03066e2-8713-408d-9d0c-d5921311601a">AtendimentoColesterolSabado</Attribute>
+      <Attribute key="False" guid="5a506639-7723-46ea-8a14-4ddeb0e5ef27">AtendimentoColesterolTotal</Attribute>
+      <Attribute key="False" guid="580418fa-a723-422d-b33f-e6725068099d">AtendimentoTotal</Attribute>
+      <Attribute key="False" guid="acad911a-68a3-482e-ac85-26c111f68a06">AtendimentoDataCadastro</Attribute>
+      <Attribute key="False" guid="5216e015-c325-45b9-a707-e0852a4a2133">AtendimentoDataAlteracao</Attribute>
+      <Attribute key="False" guid="cefd2bbb-d37a-48fe-a382-8164c19f0f56">AtendimentoStatus</Attribute>
+      <Attribute key="False" guid="18fde04f-e53f-445c-8b5c-93db4b320d54">AtendimentoFuncionariosSegunda</Attribute>
+      <Attribute key="False" guid="a72499a2-c547-40de-937e-571c63386cfa">AtendimentoFuncionariosTerca</Attribute>
+      <Attribute key="False" guid="eb198fa4-9d99-42d0-b20d-fb55a471693a">AtendimentoFuncionariosQuarta</Attribute>
+      <Attribute key="False" guid="f9d699e9-8f61-4f5b-877e-f068bb40be5c">AtendimentoFuncionariosQuinta</Attribute>
+      <Attribute key="False" guid="3beb5d95-7d7b-46d6-a563-cc7daa60860c">AtendimentoFuncionariosSexta</Attribute>
+      <Attribute key="False" guid="c9a91153-2300-4c47-8e97-643efb9008e0">AtendimentoFuncionariosSabado</Attribute>
+      <Attribute key="False" guid="f4aec44e-6a63-400b-8053-88fa76229e23">AtendimentoFuncionariosDomingo</Attribute>
+      <Attribute key="False" guid="7f5947d0-2353-4384-9a6e-08c59f14da17">AtendimentoFuncionariosTotal</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableTotal" tableType="Responsive" responsiveSizes="[]"><row><cell cellControlName="AtendimentoCodigo_Cell"><data attribute="AtendimentoCodigo" labelCaption="Atendimento" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedlocCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlocklocCodigo" caption="Locais (Escolas)" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;locCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="locCodigo" labelPosition="None" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="carGruCodigo" labelCaption="Grupo de Cardápio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;carGruCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;carGruDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;carGruStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="AreEnsCodigo" labelCaption="Áreas Ensino" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;AreEnsCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;AreEnsNome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;ArenEnsStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="AreEnsSequencial" labelCaption="Etapa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;AreEnsSequencial&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;AreEnsEtapaNome&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="AtendimentoTurno" labelCaption="Turno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="AtendimentoStatus" labelCaption="Situação" class="AttributeRealWidth" /></cell></row></table></cell><cell><table controlName="TableQuantidadesAlunos" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[{&quot;label&quot;:33}]]}]"><row><cell><group controlName="UnnamedGroup2" caption="Quantidades (Alunos)" class="Group"><table controlName="TableQuantidades" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:100}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:true},{&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false}],[{&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;visible&quot;:true},{&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false},{&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;width&quot;:83,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:17,&quot;visible&quot;:true},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false},{&quot;width&quot;:8,&quot;visible&quot;:false}],[{&quot;visible&quot;:true},{&quot;visible&quot;:true}]]}]"><row><cell cellClass="DataContentCell"><textblock controlName="TextBlock6" caption=" " class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock8" caption="Qtde" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock7" caption="Dom." class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock9" caption="3f" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock10" caption="4f" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock11" caption="5f" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock12" caption="6f" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock13" caption="Sáb." class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Center"><textblock controlName="TextBlock14" caption="Total" class="FontSizeSelectorMedium" /></cell></row><row><cell cellClass="DataContentCell"><textblock controlName="TextBlock1" caption="Normal" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalDomingo" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalSegunda" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalTerca" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalQuarta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalQuinta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalSexta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalSabado" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoNormalTotal" labelPosition="None" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><textblock controlName="TextBlock2" caption="Glúten" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenDomingo" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenSegunda" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenTerca" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenQuarta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenQuinta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenSexta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenSabado" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoGlutenTotal" labelPosition="None" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><textblock controlName="TextBlock3" caption="Lactose" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseDomingo" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseSegunda" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseTerca" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseQuarta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseQuinta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseSexta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseSabado" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoLactoseTotal" labelPosition="None" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><textblock controlName="TextBlock4" caption="Diabético" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoDomingo" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoSegunda" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoTerca" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoQuarta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoQuinta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoSexta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoSabado" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoDiabeticoTotal" labelPosition="None" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><textblock controlName="TextBlock5" caption="Colesterol" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolDomingo" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolSegunda" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolTerca" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolQuarta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolQuinta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolSexta" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolSabado" labelPosition="None" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="AtendimentoColesterolTotal" labelPosition="None" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><textblock controlName="TextBlock15" caption="Total" class="FontSizeSelectorMedium" /></cell><cell cellClass="DataContentCell" hAlign="Right"><data attribute="AtendimentoTotal" labelPosition="None" class="AttributeRealWidth" /></cell></row></table></group></cell></row><row><cell cellClass="DataContentCell"><data attribute="AtendimentoFuncionariosSegunda" labelCaption="Quantidade de Funcionários" class="AttributeRealWidth" /></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault hidden-xs hidden-sm hidden-md hidden-lg" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><div id="SectionAttribute_locCodigo"><gxAttribute ControlType="Edit" AttID="&amp;CombolocCodigo" /></div><gxAttribute ControlType="Edit" InputType="Values" AttID="prefCodigo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="AtendimentoDataCadastro" /><gxAttribute ControlType="Edit" InputType="Values" AttID="AtendimentoDataAlteracao" /><gxAttribute AttID="AreEnsEtapaNivel" /><gxAttribute ControlType="Edit" InputType="Values" AttID="AreEnsEtapaNumero" /><gxAttribute ControlType="Edit" InputType="Values" AttID="prefMunCod" /><gxAttribute ControlType="Edit" InputType="Values" AttID="carGruQtdeItens" /><gxAttribute ControlType="Edit" InputType="Values" AttID="carDapMesAno" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+[web]
+{
+parm(in:&Mode, in:&prefCodigo, in:&AtendimentoCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+AtendimentoCodigo = &AtendimentoCodigo if not &AtendimentoCodigo.IsEmpty();
+noaccept(AtendimentoCodigo) if not &AtendimentoCodigo.IsEmpty();
+
+locCodigo = &Insert_locCodigo if &Mode = TrnMode.Insert and not &Insert_locCodigo.IsEmpty();
+noaccept(locCodigo) if &Mode = TrnMode.Insert and not &Insert_locCodigo.IsEmpty();
+AreEnsCodigo = &Insert_AreEnsCodigo if &Mode = TrnMode.Insert and not &Insert_AreEnsCodigo.IsEmpty();
+noaccept(AreEnsCodigo) if &Mode = TrnMode.Insert and not &Insert_AreEnsCodigo.IsEmpty();
+AreEnsSequencial = &Insert_AreEnsSequencial if &Mode = TrnMode.Insert and not &Insert_AreEnsSequencial.IsEmpty();
+noaccept(AreEnsSequencial) if &Mode = TrnMode.Insert and not &Insert_AreEnsSequencial.IsEmpty();
+carGruCodigo = &Insert_carGruCodigo if &Mode = TrnMode.Insert and not &Insert_carGruCodigo.IsEmpty();
+noaccept(carGruCodigo) if &Mode = TrnMode.Insert and not &Insert_carGruCodigo.IsEmpty();
+AtendimentoCodigo.Visible = AtendimentoCodigo <> 0;
+AtendimentoCodigo_Cell.Class = !'Invisible' If not(AtendimentoCodigo <> 0);
+AtendimentoCodigo_Cell.Class = !'col-xs-12 DataContentCell' If AtendimentoCodigo <> 0;
+locCodigo = &CombolocCodigo;
+}
+
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+Default(AtendimentoStatus,Status.Ativo);
+
+AtendimentoDataCadastro = ServerNow() 
+	on beforeInsert;
+
+AtendimentoDataAlteracao = ServerNow() 
+	on beforeUpdate;
+
+AtendimentoCodigo = PRCDGerarNovoCodigo(!'atendimento')
+	on BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	[web]
+	{
+	locCodigo.Visible = False
+	&CombolocCodigo.SetEmpty()
+	&CombolocCodigo.Visible = False
+	Do 'LoadCombolocCodigo'
+	}
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	If (&TrnContext.TransactionName = &Pgmname and &Mode = TrnMode.Insert)
+		For &TrnContextAtt in &TrnContext.Attributes
+			Do Case
+				// When inserting with instantiated locCodigo
+				Case &TrnContextAtt.AttributeName = !"locCodigo"
+					&Insert_locCodigo.FromString(&TrnContextAtt.AttributeValue)
+					[web]
+					{
+					If not &Insert_locCodigo.IsEmpty()
+						&CombolocCodigo = &Insert_locCodigo
+						Combo_locCodigo.SelectedValue_set = &CombolocCodigo.ToString().Trim()
+						Combo_locCodigo.Enabled = False
+					EndIf
+					}
+				// When inserting with instantiated AreEnsCodigo
+				Case &TrnContextAtt.AttributeName = !"AreEnsCodigo"
+					&Insert_AreEnsCodigo.FromString(&TrnContextAtt.AttributeValue)
+				// When inserting with instantiated AreEnsSequencial
+				Case &TrnContextAtt.AttributeName = !"AreEnsSequencial"
+					&Insert_AreEnsSequencial.FromString(&TrnContextAtt.AttributeValue)
+				// When inserting with instantiated carGruCodigo
+				Case &TrnContextAtt.AttributeName = !"carGruCodigo"
+					&Insert_carGruCodigo.FromString(&TrnContextAtt.AttributeValue)
+			Endcase
+		Endfor
+	Endif
+	
+    [web]
+    {
+	prefCodigo.Visible = False
+	AtendimentoDataCadastro.Visible = False
+	AtendimentoDataAlteracao.Visible = False
+	AreEnsEtapaNivel.Visible = False
+	AreEnsEtapaNumero.Visible = False
+	prefMunCod.Visible = False
+	carGruQtdeItens.Visible = False
+	carDapMesAno.Visible = False
+	}
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+   [web]
+   {
+	
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		AtendimentoWW.Call()
+	Endif
+
+	Return
+   }
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+[web]
+{
+	AtendimentoCodigo.Visible = False
+	AtendimentoCodigo_Cell.Class = !'Invisible'
+	
+}
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+[web]
+{
+
+Event Combo_locCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&CombolocCodigo.FromString(Combo_locCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadCombolocCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&locCodigo_Data = AtendimentoLoadDVCombo(!'locCodigo', &Mode, &prefCodigo, &AtendimentoCodigo, &ComboSelectedValue)
+	Combo_locCodigo.SelectedValue_set = &ComboSelectedValue
+	&CombolocCodigo.FromString(&ComboSelectedValue)
+	If &Mode = TrnMode.Display OR &Mode = TrnMode.Delete
+		Combo_locCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+}
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="AtendimentoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_AreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_carGruCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_carGruCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MunCod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MunCod</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UeCod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UeCod</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CurAno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CurAno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Nivel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Nivel</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Nivel</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Diabetes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Diabetes</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Diabetes</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Gluten">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Gluten</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Glúten</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Gluten</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Lactose">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Lactose</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Lactose</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Lactose</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Normal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Normal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Normal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Normal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ObjectName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ObjectName</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:ObjectName, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Colesterol">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Colesterol</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombolocCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombolocCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Atendimento</Value>
+    </Property>
+    <Property>
+      <Name>idISBUSINESSCOMPONENT</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsMain</Name>
+      <Value>False</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>AtendimentoWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>SEARCHABLE</Name>
+      <Value>0</Value>
+    </Property>
+    <Property>
+      <Name>SEARCH_VIEWER</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-AtendimentoView</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="781dfc19-8b9a-0cba-27b3-3352d8fecac4" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-12-16T15:17:37.0000000Z" checksum="902530b478bcdd06cb010e5e603fa355" fullyQualifiedName="trnspratopercaptaWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="193877ab-8890-4b37-a1cc-fc757d339f38" name="trnspratopercaptaWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnspratopercapta WWDS" parent="WorkWithPlustrnspratopercapta" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCodigo = &pratoCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like &TFAreEnsNome.ToLower() when &TFAreEnsNome_Sel.IsEmpty() AND (not &TFAreEnsNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome = &TFAreEnsNome_Sel when not &TFAreEnsNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsCodigo >= &TFAreEnsCodigo when not &TFAreEnsCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsCodigo <= &TFAreEnsCodigo_To when not &TFAreEnsCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsSequencial >= &TFAreEnsSequencial when not &TFAreEnsSequencial.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsSequencial <= &TFAreEnsSequencial_To when not &TFAreEnsSequencial_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &TFAreEnsEtapaNome.ToLower() when &TFAreEnsEtapaNome_Sel.IsEmpty() AND (not &TFAreEnsEtapaNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome = &TFAreEnsEtapaNome_Sel when not &TFAreEnsEtapaNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruTurno in &TFcarGruTurno_Sels when &TFcarGruTurno_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratPerCapta >= &TFpratPerCapta when not &TFpratPerCapta.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratPerCapta <= &TFpratPerCapta_To when not &TFpratPerCapta_To.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="TFAreEnsCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsSequencial">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsSequencial</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsSequencial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarGruTurno_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarGruTurno_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruTurno</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratPerCapta">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratPerCapta</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratPerCapta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratPerCapta_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratPerCapta_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratPerCapta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsSequencial_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsSequencial_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsSequencial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsEtapaNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsEtapaNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsEtapaNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsEtapaNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCodigo</Name>
+        <Description>prato Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsNome</Name>
+        <Description>TFAre Ens Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsNome_Sel</Name>
+        <Description>TFAre Ens Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsCodigo</Name>
+        <Description>TFAre Ens Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsCodigo_To</Name>
+        <Description>TFAre Ens Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsSequencial</Name>
+        <Description>TFAre Ens Sequencial</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsSequencial_To</Name>
+        <Description>TFAre Ens Sequencial_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsEtapaNome</Name>
+        <Description>TFAre Ens Etapa Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsEtapaNome_Sel</Name>
+        <Description>TFAre Ens Etapa Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarGruTurno_Sels</Name>
+        <Description>TFcar Gru Turno_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratPerCapta</Name>
+        <Description>TFprat Per Capta</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratPerCapta_To</Name>
+        <Description>TFprat Per Capta_To</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnspratopercaptaWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnspratopercapta</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

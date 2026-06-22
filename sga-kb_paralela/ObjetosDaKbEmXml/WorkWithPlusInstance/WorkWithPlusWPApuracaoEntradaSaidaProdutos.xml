@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="81e80a83-82ec-4c09-874f-5d63d78d350d" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-07-02T05:51:10.0000000Z" lastUpdate="2025-07-02T03:38:15.0000000Z" checksum="3ed7ea6e27e84b30fcd5e6a8de207e09" fullyQualifiedName="WorkWithPlusWPApuracaoEntradaSaidaProdutos" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="86fb5213-d410-0492-3347-5b54f577aa70" name="WorkWithPlusWPApuracaoEntradaSaidaProdutos" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPApuracao Entrada Saida Produtos" parent="WPApuracaoEntradaSaidaProdutos" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPApuracaoEntradaSaidaProdutos" defaultSecFuntionKey="WPApuracaoEntradaSaidaProdutos" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table type="Responsive" includeInPanel="True" panelTitle="">
+        <table isGroup="True" numberOfColumns="5" type="Responsive" title="Informe as opções abaixo">
+          <variable name="classificacao" description="Classificação" defaultDescription="Classificação" dataType="Basic" defaultDataType="Basic" domain="adbb33c9-0906-4971-833c-998de27e0676-prodClassificacao" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prodClassificacao" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Combo Box" controlValues="Perecíveis:2,Semi-perecíveis:4,Não perecíveis:3" defaultControlValues="Perecíveis:2,Semi-perecíveis:4,Não perecíveis:3" controlEmptyItem="True" defaultControlEmptyItem="True" startCol="0" descriptionWidth="25%" />
+          <variable name="prodCodigo" description="Produto" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prodStatus = 'A' and prefCodigo = &amp;prefCodigo;" controlEmptyItem="True" controlEmptyItemText="Todos" cellWidth_S="25%" align="Left" descriptionWidth="17%" />
+          <variable name="dtInicial" description="De " dataType="Basic" basicType="Date" controlInfoDef="Based on" controlType="Edit" align="Right" descriptionWidth="17%" />
+          <variable name="dtFinal" description="   a       " dataType="Basic" basicType="Date" align="Left" mergeWithPrevious="False" />
+          <userAction caption="Processar" name="btnProcessar" mergeWithPrevious="False" />
+        </table>
+        <table name="cpResultadoBusca" type="Responsive" includeInPanel="True" panelTitle="Resultado do Processamento">
+          <grid name="GridSDTProdutoss" SDTCollection="&amp;SDTProdutos">
+            <gridVariable name="SDTProdutos" description="Seleção" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" controlInfoDef="Custom" controlType="Check Box" readOnly="False" sdtItem="item(0).check" defaultSdtItem="item(0).prodCodigo" />
+            <gridVariable name="SDTProdutos" description="Código" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).prodCodigo" defaultSdtItem="item(0).prodCodigo" />
+            <gridVariable name="SDTProdutos" description="Descrição" defaultDescription="Descrição" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).prodDescricao" defaultSdtItem="item(0).prodDescricao" />
+            <gridVariable name="SDTProdutos" description="UN Entrada" defaultDescription="UNCompra" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).UNCompra" defaultSdtItem="item(0).UNCompra" />
+            <gridVariable name="SDTProdutos" description="UN Saida" defaultDescription="UNDistribuicao" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).UNDistribuicao" defaultSdtItem="item(0).UNDistribuicao" />
+            <gridVariable name="SDTProdutos" description="Entrada ( Compra / Romaneio / Ajuste )" defaultDescription="Entrada ( Compra / Romaneio / Ajuste )" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).qtdeEntrada" defaultSdtItem="item(0).qtdeEntrada" />
+            <gridVariable name="SDTProdutos" description="Saida ( Distribuição / Ajuste )" defaultDescription="Saida ( Distribuição / Ajuste )" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).qtdeSaida" defaultSdtItem="item(0).qtdeSaida" />
+            <gridVariable name="SDTProdutos" description="Saldo" defaultDescription="Saldo" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).prodLocalSaldo" defaultSdtItem="item(0).prodLocalSaldo" />
+            <gridVariable name="SDTProdutos" description="Qtde Antiga" defaultDescription="Saldo" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" visible="False" sdtItem="item(0).QtdeMaximo" defaultSdtItem="item(0).prodLocalSaldo" />
+          </grid>
+        </table>
+        <userAction caption="Aplicar o saldo no estoque" name="btnAplicar" />
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPApuracaoEntradaSaidaProdutos</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPApuracaoEntradaSaidaProdutos</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

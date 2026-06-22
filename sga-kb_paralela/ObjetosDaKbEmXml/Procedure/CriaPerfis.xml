@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c28b8302-236a-4eee-8dd9-14758a8a5c57" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-15T13:23:58.0000000Z" checksum="90072cd4b8cbe7103968d091a1641a1c" fullyQualifiedName="CriaPerfis" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f82417fe-6301-482d-b5cd-6c89232fbabb" name="CriaPerfis" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Sigma Cria Perfis Copy1" parent="Perfil" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&GAMRepository = GAMRepository.Get()
+
+&GAMRoleName = 'AdministradorAlimentacao'
+Do 'Role'
+&Permissoes = PermissoesADM()
+PermissoesInsUpd(&GAMKeyNumLong, &Permissoes)
+&GAMKeyNumLong.SetEmpty()
+
+Sub 'Role'
+	&GAMKeyNumLong.SetEmpty()
+	&GAMRoleFilter.Name = &GAMRoleName.Trim()
+	&GAMRoles = &GAMRepository.GetRoles(&GAMRoleFilter, &GAMError)
+	If &GAMRoles.Count > 0
+		For &GAMRoleItem in &GAMRoles
+			&GAMRole.Load(&GAMRoleItem.Id)
+		EndFor
+	Else
+		&GAMRole = New()
+	Endif
+	&GAMRole.Name = &GAMRoleName
+	&GAMRole.Description = &GAMRoleName
+	&GAMRole.Save()
+	if &GAMRole.Success()
+		&GAMKeyNumLong = &GAMRole.Id
+	else
+		&GAMError = &GAMRole.GetErrors()
+		For &aGamError in &GAMError
+			Log.Error(Format("Error Saving GAM Role %1: (%2) %3",&GAMRole.Name, &aGamError.Code, &aGAMError.Message),&Pgmname)
+		EndFOr
+	endif
+EndSub
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="aGamError">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>aGamError</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMError">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMError</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMKeyNumLong">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMKeyNumLong</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMKeyNumLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMRepository">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMRepository</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMRepository, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMRole">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMRole</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMRole, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMRoleFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMRoleFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMRoleFilter, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMRoleItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMRoleItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMRole, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMRoleName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMRoleName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMDescriptionLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMRoles">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMRoles</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMRole, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Nome">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Nome</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>nome</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMDescriptionLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Permissoes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Permissoes</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMDescriptionLong, GeneXusSecurityCommon</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>CriaPerfis</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Sigma Cria Perfis Copy1</Value>
+    </Property>
+    <Property>
+      <Name>IsMain</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>CALL_PROTOCOL</Name>
+      <Value>CLINE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f7f3960f-5d7a-4f3d-877c-d685d9f8d51a" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:25:35.0000000Z" checksum="e3cdecd0e8f3c18966b2093bb0595d9b" fullyQualifiedName="GAMUserTOTPActivation" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2b32f807-91e0-49c1-bb1e-a6245777604c" name="GAMUserTOTPActivation" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="TOTP activation" parent="GAM_Passwords" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" class="Table TableTransactionTemplate" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellControlName="Image_Cell"><data attribute="&amp;Image" labelPosition="None" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;UserGUID" labelCaption="WWP_GAM_GUID" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;UserNameSpace" labelCaption="WWP_GAM_Namespace" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell cellControlName="AuthenticationTypeName_Cell"><data attribute="&amp;AuthenticationTypeName" labelCaption="WWP_GAM_AuthType" readonly="True" class="ReadonlyAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;Name" labelCaption="WWP_GAM_UserName" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;Email" labelCaption="WWP_GAM_Email" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;ExternalId" labelCaption="WWP_GAM_ExternalId" readonly="True" class="ReadonlyAttribute" /></cell></row></table></ucw></cell><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_GAM_DataCard&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Enable TOTP authenticator&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="GAM_DataCard" tableType="Responsive" responsiveSizes="[]" containerSlotName="GAM_DataCard"><row><cell hAlign="Center"><textblock controlName="QRimage" caption=" " class="TextBlock" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;Raw HTML&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;SecretKey" labelCaption="Secret key" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;TOTPCode" labelCaption="Type a code" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnEnter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnCancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[ Parm(in:&UserGUID);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	&GAMUser.Load(&UserGUID)
+	&AuthenticationTypeName = &GAMUser.AuthenticationTypeName
+	&AuthenticationTypeName 		= &GAMUser.AuthenticationTypeName			
+	&UserNameSpace  = &GAMUser.NameSpace
+	&Name 			= &GAMUser.Name
+	&EMail	 		= &GAMUser.EMail
+	&FirstName 		= &GAMUser.FirstName
+	&LastName		= &GAMUser.LastName
+	If not &GAMUser.URLImage.IsEmpty()
+		&Image.FromURL(&GAMUser.URLImage)
+	Endif
+	&ExternalId				= &GAMUser.ExternalId
+	Do 'ValidIsLocalAuthentication'
+	
+	&GAMApplication = GAMApplication.Get()
+	&UserName 		= &GAMUser.Name
+	&UserEmail 		= &GAMUser.EMail
+	If &GAMUser.GenerateQRDataTOTP(&GAMApplication.Name, &SecretKey, &QRString, &GAMErrorCollection)
+		QRimage.caption = Format('<img src="%1" width="200px"></img>', &QRString)
+	Else
+		Do 'ShowMessages'
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+
+	Do 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If Not (Not &GAMUser.URLImage.IsEmpty())
+		&Image.Visible = False
+		Image_Cell.Class = !'Invisible'
+	Else
+		&Image.Visible = True
+		Image_Cell.Class = !'col-xs-12 DataContentCell'
+	EndIf
+	If Not (&AuthenticationTypeName.Count > 1)
+		&AuthenticationTypeName.Visible = False
+		AuthenticationTypeName_Cell.Class = !'Invisible'
+	Else
+		&AuthenticationTypeName.Visible = True
+		AuthenticationTypeName_Cell.Class = !'col-xs-12 DataContentCell'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event Enter
+
+	&GAMUser.Load(&UserGUID)
+	If &GAMUser.ValidateTOTPCode(&TOTPCode, &GAMErrorCollection)
+		If &GAMUser.EnableTOTPAuthenticator(&GAMErrorCollection)
+			BtnEnter.Visible = False
+			Msg(DVMessageGetBasicNotificationMsg('', "TOTP authenticator enabled!", DVMessageType.success, '', DVMessageBoolean.True, ''))
+			GAMUserEntry(GAMAPIMode.Display, &UserGUID)
+		Else
+			Do 'ShowMessages'
+		Endif
+	Else
+		Do 'ShowMessages'
+	Endif
+
+EndEvent
+
+Sub 'ShowMessages'
+
+	&GAMErrorCollection = GAMRepository.GetLastErrors()
+	If &GAMErrorCollection.Count > 0
+		For &GAMError in &GAMErrorCollection
+			Msg(DVMessageGetBasicNotificationMsg('Error', &GAMError.Message, DVMessageType.Error, '', DVMessageBoolean.True, ''))
+			exit
+		Endfor
+	Else
+		&Message = &WebSession.Get(GAM.GAMMessageType.Message) 
+		If not &Message.IsEmpty()
+			Msg(DVMessageGetBasicNotificationMsg('Information', &Message, DVMessageType.Information, '', DVMessageBoolean.True, ''))
+			&WebSession.Remove(GAM.GAMMessageType.Message) 
+		Endif
+		&Warning = &WebSession.Get(GAM.GAMMessageType.Warning)
+		If not &Warning.IsEmpty()
+			Msg(DVMessageGetBasicNotificationMsg('Warning', &Warning, DVMessageType.regular, '', DVMessageBoolean.True, ''))
+			&WebSession.Remove(GAM.GAMMessageType.Warning) 
+		Endif
+		&ErrorMsg = &WebSession.Get(GAM.GAMMessageType.Error)
+		If not &ErrorMsg.IsEmpty()
+			Msg(DVMessageGetBasicNotificationMsg('Error', &ErrorMsg, DVMessageType.Error, '', DVMessageBoolean.True, ''))
+			&WebSession.Remove(GAM.GAMMessageType.Error) 
+		Endif
+	Endif
+
+EndSub
+
+Sub 'ValidIsLocalAuthentication'
+
+	&isLocalAuthentication = False
+	&AuthenticationTypes = GAMRepository.GetEnabledAuthenticationTypes(&Language, &GAMErrorCollection)
+	If &GAMErrorCollection.Count > 0
+		Do 'ShowMessages'
+	Else
+		For &AuthenticationTypeSimple in &AuthenticationTypes
+			If &AuthenticationTypeSimple.Name = &AuthenticationTypeName
+				If not &AuthenticationTypeSimple.Impersonate.IsEmpty()
+					If &AuthenticationTypeSimple.Impersonate = !"local"
+						&isLocalAuthentication = True
+					Endif
+				Else
+					If &AuthenticationTypeSimple.Type = GAMAuthenticationTypes.GAMLocal
+						&isLocalAuthentication = True
+					Endif
+				Endif
+				Exit
+			Endif
+		EndFor
+	Endif
+
+EndSub
+
+// Generate de Key for the user and the associated QR
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="AuthenticationTypeName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuthenticationTypeName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMAuthenticationTypeName, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuthenticationTypes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuthenticationTypes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMAuthenticationTypeSimple, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuthenticationTypeSimple">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuthenticationTypeSimple</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMAuthenticationTypeSimple, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplication">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplication</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplication, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrorCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrorCollection</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMUser">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMUser</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMUser, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="isLocalAuthentication">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>isLocalAuthentication</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Language">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Language</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMLanguageCulture, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="QRString">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>QRString</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecretKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecretKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>256</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>256</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TOTPCode">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TOTPCode</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserEmail">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserEmail</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Email</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMEMail, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserGUID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserGUID</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>GUID User </Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMGUID, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMUserIdentification, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMError">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMError</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Warning">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Warning</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>400</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>400</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMsg">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMsg</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>400</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>400</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>400</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>400</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Image">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Image</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserNameSpace">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserNameSpace</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMRepositoryNameSpace, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Name">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Name</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMUserIdentification, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Email">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Email</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMEMail, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExternalId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExternalId</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMUserIdentification, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GAMUserTOTPActivation</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>TOTP activation</Value>
+    </Property>
+    <Property>
+      <Name>URLAccess</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>GAMUserTOTPActivation</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+  <Categories>GAM_Samples-web</Categories>
+</Object>

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-23T03:09:41.0000000Z" lastUpdate="2025-04-23T03:01:15.0000000Z" checksum="a36e42a3fea2fff327de1d1b9cdb0d8c" fullyQualifiedName="trnsalunomedidas" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="3e6bda70-966e-40fa-b50d-73ab70cc2783" name="trnsalunomedidas" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="trnsalunomedidas">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsalunomedidas" Type="trnsalunomedidas" Description="trnsalunomedidas" Guid="3e6bda70-966e-40fa-b50d-73ab70cc2783">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="ff885b59-ebe9-4a22-9d1a-126f73101a65">alunCodigo</Attribute>
+      <Attribute key="True" guid="c55dcd48-74d4-41cd-be0a-3c559d07a8f0">mediAlunColeta</Attribute>
+      <Attribute key="False" guid="6889d275-b2e4-47e5-9b66-01ceeb2f368d" isNullable="True">mediAlunAno</Attribute>
+      <Attribute key="False" guid="50c33942-69b6-440a-abc3-90e1152c227a" isNullable="True">mediAlunData</Attribute>
+      <Attribute key="False" guid="7068b0f9-481c-46d3-bfe5-82f28fee3ebd" isNullable="True">mediAlunAltura</Attribute>
+      <Attribute key="False" guid="7aaa91d9-149e-48fc-adbe-03de740a6490" isNullable="True">mediAlunPeso</Attribute>
+      <Attribute key="False" guid="02272b00-f084-48e8-a998-5d03440d9065" isNullable="True">mediAlunCircunferencia</Attribute>
+      <Attribute key="False" guid="cb9febd3-e212-4fbd-90d8-c8f365e22b81" isNullable="True">mediAlunDobraAbdominal</Attribute>
+      <Attribute key="False" guid="59f3a0bb-c2c0-4e5f-88ee-bc324d33a083" isNullable="True">mediAlunDobrasSupra</Attribute>
+      <Attribute key="False" guid="0131c19d-2c59-4d1b-bd96-69e87216419e" isNullable="True">mediAlunDobrasTriciptal</Attribute>
+      <Attribute key="False" guid="510acf9c-e01c-4f01-b678-7a74c3d2ff85" isNullable="True">mediAlunAtivExtras</Attribute>
+      <Attribute key="False" guid="4fefbcb0-9ce7-47a3-9f73-e09a760a89c1" isNullable="True">mediAlunIMC</Attribute>
+      <Attribute key="False" guid="cac1b990-db69-46f5-b547-a6d34a297a64">mediAlunUserName</Attribute>
+      <Attribute key="False" guid="8d934b2a-eef0-44ea-97f4-a748e66b3410">mediAlunStatus</Attribute>
+      <Attribute key="False" guid="afbb2d88-aa11-4986-9020-29d22bfff275">mediAlunDataCadastro</Attribute>
+      <Attribute key="False" guid="e31a2b99-aa27-4592-a518-c8afab1733e3">mediAlunDataAlteracao</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[],[],[],[],[],[],[],[],[],[],[{&quot;visible&quot;:false}],[],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:false}]]}]" containerSlotName="TableAttributes"><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedprefCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockprefCodigo" caption="Prefeitura" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_prefCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;trnsalunomedidasLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListGXProc&lt;/Name&gt;&lt;Value&gt;84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsalunomedidasLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProcParametersPrefix&lt;/Name&gt;&lt;Value&gt; &quot;ComboName&quot;: &quot;prefCodigo&quot;, &quot;TrnMode&quot;: &quot;INS&quot;, &quot;IsDynamicCall&quot;: true, &quot;prefCodigo&quot;: 0, &quot;alunCodigo&quot;: 0, &quot;mediAlunColeta&quot;: 0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsTitleSettingsIcons&lt;/Name&gt;&lt;Value&gt;&amp;amp;DDO_TitleSettingsIcons&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;prefCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="prefCodigo" labelPosition="None" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="alunCodigo" labelCaption="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunColeta" labelCaption="Coleta" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellControlName="mediAlunAno_Cell"><data attribute="mediAlunAno" labelCaption="Ano" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunData" labelCaption="Data" class="AttributeRealWidthDate" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunAltura" labelCaption="Altura" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunPeso" labelCaption="Peso" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunCircunferencia" labelCaption="Circunferência" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunDobraAbdominal" labelCaption="Abdominal" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunDobrasSupra" labelCaption="Supra" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunDobrasTriciptal" labelCaption="Triciptal" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunAtivExtras" labelCaption="Extras" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunIMC" labelCaption="IMC" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunUserName" labelCaption="Name" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunStatus" labelCaption="Situação" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunDataCadastro" labelCaption="do Cadastro" class="AttributeRealWidthDateTime" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="mediAlunDataAlteracao" labelCaption="de Alteração" class="AttributeRealWidthDateTime" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><div id="SectionAttribute_prefCodigo"><gxAttribute AttID="&amp;ComboprefCodigo" /></div></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+[web]
+{
+parm(in:&Mode, in:&prefCodigo, in:&alunCodigo, in:&mediAlunColeta);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+alunCodigo = &alunCodigo if not &alunCodigo.IsEmpty();
+noaccept(alunCodigo) if not &alunCodigo.IsEmpty();
+mediAlunColeta = &mediAlunColeta if not &mediAlunColeta.IsEmpty();
+noaccept(mediAlunColeta) if not &mediAlunColeta.IsEmpty();
+
+mediAlunAno.Visible = mediAlunAno<>0;
+mediAlunAno_Cell.Class = !'Invisible' If not(mediAlunAno<>0);
+mediAlunAno_Cell.Class = !'col-xs-12 DataContentCell' If mediAlunAno<>0;
+prefCodigo = &ComboprefCodigo;
+}
+
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+mediAlunDataCadastro = serverNow() 
+	on beforeInsert;
+
+mediAlunDataAlteracao = serverNow() 
+	on beforeUpdate, beforeInsert;
+
+mediAlunColeta = PRCDGerarNovoCodigo('alunoMedidas')  	
+	on BeforeInsert;
+
+mediAlunUserName =  GAMUser.GetLogin()
+	on BeforeInsert, beforeUpdate;	
+
+mediAlunAno = mediAlunData.Year()
+	on BeforeInsert, beforeUpdate;	
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	[web]
+	{
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	Combo_prefCodigo.GAMOAuthToken = &GAMSession.Token
+	prefCodigo.Visible = False
+	&ComboprefCodigo.SetEmpty()
+	&ComboprefCodigo.Visible = False
+	Do 'LoadComboprefCodigo'
+	}
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+   [web]
+   {
+	
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsalunomedidasWW.Call(prefCodigo, alunCodigo)
+	Endif
+
+	Return
+   }
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+[web]
+{
+	mediAlunAno.Visible = False
+	mediAlunAno_Cell.Class = !'Invisible'
+	If Not SecGAMIsAuthByFunctionalityKey(!'False')
+		mediAlunAno.Enabled = False
+	EndIf
+	
+}
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+[web]
+{
+
+Event Combo_prefCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ComboprefCodigo.FromString(Combo_prefCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadComboprefCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Combo_DataJson = trnsalunomedidasLoadDVCombo(!'prefCodigo', &Mode, false, &prefCodigo, &alunCodigo, &mediAlunColeta, '', &ComboSelectedValue, &ComboSelectedText)
+	Combo_prefCodigo.SelectedValue_set = &ComboSelectedValue
+	Combo_prefCodigo.SelectedText_set = &ComboSelectedText
+	&ComboprefCodigo.FromString(&ComboSelectedValue)
+	If &Mode <> TrnMode.Insert Or Not &prefCodigo.IsEmpty()
+		Combo_prefCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+}
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="alunCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>alunCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:alunCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="mediAlunColeta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>mediAlunColeta</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:mediAlunColeta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsalunomedidas</Value>
+    </Property>
+    <Property>
+      <Name>idISBUSINESSCOMPONENT</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

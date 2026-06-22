@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-03-18T23:00:52.0000000Z" checksum="60024757941a26353b28ef982fe0b5d3" fullyQualifiedName="WorkWithPlusDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="22d1176e-5dfc-4215-9560-e201d3128350" name="WorkWithPlusDS" type="78b3fa0e-174c-4b2b-8716-718167a428b5" description="Work With Plus DS">
+  <Part type="75e52d99-6edd-4bad-a1d7-dcc9b7f000ef">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c6b14574-4f5f-4e35-aaa7-e322e88a9a10">
+    <Source><![CDATA[styles WorkWithPlusDS
+{
+	@import WWPBaseObjects.WorkWithPlusBaseDS;
+
+    DIV.gx-mask
+    {
+        background-color: black;
+        background-image: gx-image(LoadingGif);
+        background-repeat: no-repeat;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        animation:  entermask 1s;
+        -webkit-animation:  entermask 1s;
+        -ms-filter: "alpha(opacity=10)";
+        opacity: .30;
+        display: inline-block;
+        background-position: center;
+        background-size: 64px;
+    }
+    .MinWidth-25perc
+    {
+        min-width: 25%;
+    }
+    .MinWidth-8perc
+    {
+        min-width: 8%;
+    }
+    .FixedFreeStyleColumn-100
+    {
+        width: 100px;
+        overflow-wrap: anywhere;
+        padding-bottom: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 2px;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+    .FixedFreeStyleCell-65
+    {
+        @include FixedFreeStyleColumn-100;
+        width: 65px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+    .FixedFreeStyleCell-35
+    {
+        @include FixedFreeStyleColumn-100;
+        width: 35px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+    .RightTextDataDescription
+    {
+        // @include DataDescription;
+        white-space: normal;
+        font-size: $fontSizes.s;
+        font-weight: normal;
+        display: block;
+        padding-left: 20px;
+        color: $colors.gray07;
+    }
+}]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="36982745-cb77-47a3-bc04-9d0d764ff532">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusDS</Value>
+    </Property>
+    <Property>
+      <Name>BaseCssLibrary</Name>
+      <Value>idBootstrap</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

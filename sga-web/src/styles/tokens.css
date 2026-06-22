@@ -1,0 +1,236 @@
+/* ============================================================
+   SGE — Design Tokens
+   Sistema de Gestão Escolar · IntelliBR
+   Paleta moderna mantendo o espírito institucional (verde).
+   Tudo em oklch para harmonia de matiz/croma.
+   ============================================================ */
+
+:root {
+  /* ---- Tipografia ---- */
+  --font-sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --text-2xs: 0.6875rem;  /* 11px */
+  --text-xs:  0.75rem;    /* 12px */
+  --text-sm:  0.8125rem;  /* 13px */
+  --text-base:0.875rem;   /* 14px */
+  --text-md:  0.9375rem;  /* 15px */
+  --text-lg:  1.0625rem;  /* 17px */
+  --text-xl:  1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 1.875rem;   /* 30px */
+  --text-4xl: 2.375rem;   /* 38px */
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extra: 800;
+
+  --leading-tight: 1.18;
+  --leading-snug: 1.35;
+  --leading-normal: 1.55;
+
+  --tracking-tight: -0.02em;
+  --tracking-snug: -0.01em;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.08em;
+
+  /* ---- Espaçamento (base 4) — densidade confortável ---- */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+  --space-12: 80px;
+
+  /* densidade — sobreposta por [data-density] */
+  --row-h: 48px;
+  --control-h: 40px;
+  --control-h-sm: 32px;
+  --pad-y: 12px;
+  --pad-x: 14px;
+
+  /* ---- Raio ---- */
+  --radius-xs: 5px;
+  --radius-sm: 8px;
+  --radius-md: 11px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 999px;
+
+  /* ---- Layout ---- */
+  --topbar-h: 60px;
+  --rail-w: 76px;
+  --sidebar-w: 270px;
+  --content-max: 1280px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 130ms;
+  --dur: 220ms;
+  --dur-slow: 360ms;
+
+  /* ============================================================
+     PALETA — escalas
+     ============================================================ */
+
+  /* Verde institucional (âncora da marca, modernizado) */
+  --green-50:  oklch(0.972 0.020 162);
+  --green-100: oklch(0.940 0.040 162);
+  --green-200: oklch(0.890 0.070 162);
+  --green-300: oklch(0.810 0.100 162);
+  --green-400: oklch(0.700 0.120 162);
+  --green-500: oklch(0.620 0.128 162);
+  --green-600: oklch(0.540 0.122 162);
+  --green-700: oklch(0.460 0.108 162);
+  --green-800: oklch(0.380 0.088 163);
+  --green-900: oklch(0.300 0.066 164);
+
+  /* Âmbar (acento — herdeiro modernizado do laranja) */
+  --amber-50:  oklch(0.972 0.030 78);
+  --amber-100: oklch(0.940 0.060 78);
+  --amber-200: oklch(0.890 0.100 76);
+  --amber-400: oklch(0.800 0.140 72);
+  --amber-500: oklch(0.760 0.150 68);
+  --amber-600: oklch(0.700 0.150 60);
+  --amber-700: oklch(0.600 0.130 55);
+
+  /* Semânticas */
+  --red-50:  oklch(0.962 0.020 22);
+  --red-100: oklch(0.920 0.045 22);
+  --red-500: oklch(0.630 0.190 25);
+  --red-600: oklch(0.560 0.190 26);
+
+  --blue-50:  oklch(0.962 0.022 240);
+  --blue-100: oklch(0.920 0.045 240);
+  --blue-500: oklch(0.620 0.140 240);
+  --blue-600: oklch(0.540 0.140 252);
+
+  --gold-50:  oklch(0.965 0.030 85);
+  --gold-100: oklch(0.925 0.060 85);
+  --gold-500: oklch(0.760 0.130 83);
+  --gold-600: oklch(0.680 0.130 75);
+
+  /* Acento configurável (tweaks) — default âmbar */
+  --accent-500: var(--amber-500);
+  --accent-600: var(--amber-600);
+  --accent-100: var(--amber-100);
+  --accent-50:  var(--amber-50);
+  --accent-contrast: oklch(0.28 0.05 60);
+}
+
+/* ============================================================
+   TEMA CLARO (default)
+   ============================================================ */
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg:        oklch(0.985 0.005 165);
+  --bg-tint:   oklch(0.965 0.010 165);
+  --surface:   oklch(1 0 0);
+  --surface-2: oklch(0.978 0.006 165);
+  --surface-3: oklch(0.962 0.008 165);
+  --overlay:   oklch(0.22 0.02 165 / 0.42);
+
+  --border:        oklch(0.918 0.006 165);
+  --border-strong: oklch(0.860 0.010 165);
+  --border-accent: var(--green-600);
+
+  --text:   oklch(0.265 0.022 165);
+  --text-2: oklch(0.470 0.018 165);
+  --text-3: oklch(0.600 0.014 165);
+  --text-on-brand: oklch(0.99 0.01 165);
+
+  --brand:        var(--green-600);
+  --brand-hover:  var(--green-700);
+  --brand-soft:   var(--green-50);
+  --brand-soft-2: var(--green-100);
+  --brand-text:   var(--green-700);
+
+  --focus-ring: oklch(0.62 0.128 162 / 0.45);
+
+  --shadow-xs: 0 1px 2px oklch(0.30 0.03 165 / 0.06);
+  --shadow-sm: 0 1px 3px oklch(0.30 0.03 165 / 0.08), 0 1px 2px oklch(0.30 0.03 165 / 0.04);
+  --shadow-md: 0 4px 14px oklch(0.30 0.03 165 / 0.09), 0 2px 5px oklch(0.30 0.03 165 / 0.05);
+  --shadow-lg: 0 14px 40px oklch(0.25 0.04 165 / 0.14), 0 6px 14px oklch(0.25 0.04 165 / 0.08);
+  --shadow-pop: 0 18px 50px oklch(0.22 0.04 165 / 0.20);
+
+  --success-bg: var(--green-50);   --success-fg: var(--green-700);   --success-bd: var(--green-200);
+  --warning-bg: var(--gold-50);    --warning-fg: var(--gold-600);    --warning-bd: var(--gold-100);
+  --danger-bg:  var(--red-50);     --danger-fg:  var(--red-600);     --danger-bd:  var(--red-100);
+  --info-bg:    var(--blue-50);    --info-fg:    var(--blue-600);    --info-bd:    var(--blue-100);
+}
+
+/* ============================================================
+   TEMA ESCURO
+   ============================================================ */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg:        oklch(0.175 0.012 165);
+  --bg-tint:   oklch(0.205 0.014 165);
+  --surface:   oklch(0.215 0.014 165);
+  --surface-2: oklch(0.250 0.016 165);
+  --surface-3: oklch(0.290 0.018 165);
+  --overlay:   oklch(0.10 0.02 165 / 0.62);
+
+  --border:        oklch(0.310 0.016 165);
+  --border-strong: oklch(0.400 0.020 165);
+  --border-accent: var(--green-400);
+
+  --text:   oklch(0.955 0.008 165);
+  --text-2: oklch(0.760 0.014 165);
+  --text-3: oklch(0.620 0.014 165);
+  --text-on-brand: oklch(0.16 0.02 165);
+
+  --brand:        var(--green-400);
+  --brand-hover:  var(--green-300);
+  --brand-soft:   oklch(0.300 0.050 163);
+  --brand-soft-2: oklch(0.360 0.066 163);
+  --brand-text:   var(--green-300);
+
+  --focus-ring: oklch(0.70 0.120 162 / 0.55);
+
+  --shadow-xs: 0 1px 2px oklch(0 0 0 / 0.30);
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.40), 0 1px 2px oklch(0 0 0 / 0.30);
+  --shadow-md: 0 6px 18px oklch(0 0 0 / 0.45), 0 2px 6px oklch(0 0 0 / 0.30);
+  --shadow-lg: 0 16px 44px oklch(0 0 0 / 0.55), 0 6px 16px oklch(0 0 0 / 0.35);
+  --shadow-pop: 0 22px 56px oklch(0 0 0 / 0.62);
+
+  --accent-500: var(--amber-400);
+  --accent-600: var(--amber-500);
+  --accent-100: oklch(0.360 0.080 72);
+  --accent-50:  oklch(0.300 0.060 72);
+  --accent-contrast: oklch(0.20 0.03 72);
+
+  --success-bg: oklch(0.30 0.05 162);  --success-fg: var(--green-300);  --success-bd: oklch(0.40 0.07 162);
+  --warning-bg: oklch(0.33 0.06 84);   --warning-fg: var(--gold-100);   --warning-bd: oklch(0.43 0.08 84);
+  --danger-bg:  oklch(0.32 0.07 25);   --danger-fg:  oklch(0.80 0.10 25); --danger-bd: oklch(0.42 0.10 25);
+  --info-bg:    oklch(0.31 0.06 245);  --info-fg:    oklch(0.80 0.09 245); --info-bd:  oklch(0.42 0.09 245);
+}
+
+/* ============================================================
+   DENSIDADE
+   ============================================================ */
+[data-density="compact"] {
+  --row-h: 38px;
+  --control-h: 34px;
+  --control-h-sm: 28px;
+  --pad-y: 8px;
+  --pad-x: 11px;
+}
+
+/* ============================================================
+   RAIO configurável (tweaks)
+   ============================================================ */
+[data-radius="sharp"]  { --radius-sm: 4px; --radius-md: 5px; --radius-lg: 7px; --radius-xl: 9px; }
+[data-radius="round"]  { --radius-sm: 12px; --radius-md: 16px; --radius-lg: 22px; --radius-xl: 30px; }

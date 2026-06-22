@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-11-04T02:47:33.0000000Z" lastUpdate="2025-10-31T22:01:32.0000000Z" checksum="41cc86b9c0ddb8f85283d9745d4231cf" fullyQualifiedName="VinculaRomaneioNotaProcesso" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="3d322d54-4a59-477d-ab9d-370d540ae564" name="VinculaRomaneioNotaProcesso" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Vincula Romaneio Nota Processo" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+if &Vincular
+	do 'Vincular'
+else
+	do 'Desvincular'
+endif
+
+
+Sub 'Vincular'
+	&IsSucess = true
+	For each Romaneio
+		Where prefCodigo = &prefCodigo
+		Where romanCodigo in &romanCodigoCollection
+
+		notaCodigo = &notaCodigo
+	When none
+		&IsSucess = false
+		&Message.Type = MessageTypes.Warning
+		&Message.Description = 'Nenhum Romaneio foi localizado. Processo não executado.'
+	EndFor
+EndSub
+
+Sub 'Desvincular'
+	&IsSucess = true
+	For each Romaneio
+		Where prefCodigo = &prefCodigo
+		Where romanCodigo in &romanCodigoCollection
+
+		For each Romaneio.Item
+			&notaItemProduto = prodCodigo
+			&notaItemQtde	 = romanItemQuantidade
+			// do 'RemoveQtde'
+
+			if not &IsSucess
+				Exit
+			endif
+//		When none
+//			&IsSucess = false
+//			&Message.Type = MessageTypes.Warning
+//			&Message.Description = 'Itens do Romaneio não foram localizados. Processo cancelado.'
+		Endfor
+
+		if not &IsSucess
+			Exit
+		endif
+
+		notaCodigo.SetNull()
+	When none
+		&IsSucess = false
+		&Message.Type = MessageTypes.Warning
+		&Message.Description = 'Nenhum Romaneio foi localizado. Processo não executado.'
+	EndFor
+EndSub
+
+Sub 'RemoveQtde'
+	For each trnsnotaitens
+		Where prefCodigo = &prefCodigo
+		Where notaCodigo = &notaCodigo
+		Where notaItemProduto = &notaItemProduto
+
+		if notaItemQtde > &notaItemQtde
+			notaItemQtde -= &notaItemQtde
+		else
+			Delete
+		endif
+//	When none
+//		&IsSucess = false
+//		&Message.Type = MessageTypes.Error
+//		&Message.Description = format('Produto %1 da Nota %2 não foi localizado. Processo cancelado.',&notaItemProduto.ToString(),&notaCodigo)
+	Endfor
+EndSub
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&Vincular, in:&prefCodigo, in:&notaCodigo, in:&romanCodigoCollection, out:&Message, out:&IsSucess);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="romanCodigoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>romanCodigoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Número romaneio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:romanCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSucess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSucess</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemProduto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Produto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="notaItemQtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>notaItemQtde</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:notaItemQtde</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Vincular">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Vincular</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>VinculaRomaneioNotaProcesso</Value>
+    </Property>
+    <Property>
+      <Name>CommitOnExit</Name>
+      <Value>No</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

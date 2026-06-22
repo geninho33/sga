@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="08629a8b-61b5-4523-ae89-383d7b25cf40" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-08-19T13:12:02.0000000Z" checksum="f0edbc153977d3d314f42c7cbf61a1d3" fullyQualifiedName="WWPBaseObjects.Subscriptions.WorkWithPlusWWP_SubscriptionsSettings" moduleGuid="02a4ed1a-a050-4e84-93ab-fc6083c4c0a1" guid="c3433101-3549-4bd4-850a-2ab0a61ef66c" name="WorkWithPlusWWP_SubscriptionsSettings" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WWP_Subscriptions Settings" parent="WWPBaseObjects.Subscriptions.WWP_SubscriptionsSettings" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="3;40;">
+  <level childrenOrderedList="4;39;" id="No_TRN" name="WWP_SubscriptionsSettings">
+    <selection Template="Main;InfiniteScrolling" description="Manage my Subscriptions" defaultDescription="Manage my Subscriptions" page="50" defaultPage="50" defaultPagingType="Infinite scrolling (form scroll bar)" childrenOrderedList="4;02;Main Table" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" numberOfColumns="0" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table flexWrap="Wrap" flexJustifyContent="Space Between" type="Flex" includeInPanel="True" panelTitle="Receive notifications by">
+          <variable name="Mail" dataType="Basic" basicType="Boolean" themeClass="AttributeCheckNoBorder" controlInfoDef="Custom" controlType="Check Box" controlControlTitle="Email" showDescription="False" flexGrow="0" />
+          <variable name="Sms" dataType="Basic" basicType="Boolean" themeClass="AttributeCheckNoBorder" controlInfoDef="Custom" controlType="Check Box" controlControlTitle="SMS" showDescription="False" flexGrow="0" />
+          <variable name="Desktop" dataType="Basic" basicType="Boolean" themeClass="AttributeCheckNoBorder" controlInfoDef="Custom" controlType="Check Box" controlControlTitle="Desktop notifications" showDescription="False" flexGrow="0" />
+          <variable name="SD" dataType="Basic" basicType="Boolean" themeClass="AttributeCheckNoBorder" controlInfoDef="Custom" controlType="Check Box" controlControlTitle="Mobile notifications" showDescription="False" flexGrow="0" />
+        </table>
+        <table type="Responsive" includeInPanel="True" panelTheme="PanelNoHeader" cellThemeClass="CellMarginTop">
+          <table name="TableHeader" numberOfColumns="0" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" flexWrap="No Wrap" flexJustifyContent="Space Between" type="Flex" defaultType="Flex" includeInPanel="False" defaultIncludeInPanel="True" defaultPanelTitle="WWP_FilterOptions" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+            <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+              <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+                <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns">
+                  <standardAction name="Insert" />
+                  <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                    <standardAction name="Export" />
+                    <standardAction popup="True" defaultPopup="True" name="ExportReport" />
+                  </actionGroup>
+                  <standardAction cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+                </actionGroup>
+              </table>
+              <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+                <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+                <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;">
+                  <orders descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top" />
+                </table>
+              </table>
+            </table>
+            <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+            <filterAttribute name="NotifShowOnlySubscribedEvents" dataType="Basic" defaultDataType="Basic" basicType="Boolean" defaultBasicType="Boolean" themeClass="AttributeCheckNoBorder" defaultThemeClass="Attribute" inviteMessage="WWP_Search" defaultInviteMessage="WWP_Search" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Check Box" defaultControlType="Check Box" controlControlTitle="Show only my subscribed events" defaultControlControlTitle="Show only my subscribed events" showDescription="True" descriptionWidth="6%" flexGrow="0" />
+            <FilterFullText themeClass="Attribute" defaultThemeClass="Attribute" inviteMessage="WWP_Search" defaultInviteMessage="WWP_Search" showDescription="True" flexGrow="0" />
+          </table>
+          <grid includePaginationBar="False" defaultIncludePaginationBar="False" groupField="WWPNotificationEntity" cellThemeClass="SectionGrid GridNoBorderCell GridNoTitleCell CellMarginTop" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete" columnSelector="False">
+            <standardAction name="Update" />
+            <standardAction name="Delete" />
+            <gridVariable name="WWPEntityName" description="Entity" defaultDescription="WWPNotification Entity" domain="adbb33c9-0906-4971-833c-998de27e0676-WWPEntityName" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-WWPNotificationEntity" />
+            <gridVariable name="WWPEntityId" domain="adbb33c9-0906-4971-833c-998de27e0676-WWPEntityId" visible="False" />
+            <standardAction name="DetailWebComponent" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.Subscriptions.WWP_SubscriptionsSettingsWC">
+              <parameters>
+                <parameter name="&amp;WWPEntityId" />
+                <parameter name="&amp;NotifShowOnlySubscribedEvents" />
+              </parameters>
+            </standardAction>
+          </grid>
+        </table>
+      </table>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWWP_SubscriptionsSettings</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.Subscriptions.WWP_SubscriptionsSettings</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

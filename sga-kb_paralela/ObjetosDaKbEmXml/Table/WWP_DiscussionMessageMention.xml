@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:27.0000000Z" checksum="2ab320b2771ea1553cf781006ecf54d8" fullyQualifiedName="WWP_DiscussionMessageMention" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="379da17b-084c-47a8-b127-dae15fcff5a6" name="WWP_DiscussionMessageMention" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="WWP_DiscussionMessageMention">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="43d9d515-e39b-4e3c-ba1c-bbf465efefa9">WWPDiscussionMessageId</Item>
+      <Item guid="9e7d6d61-de09-4de0-99e0-cfef2005be79">WWPDiscussionMentionUserId</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:23.0000000Z" checksum="d198410975c61cd88f8650e6ccf2d2f1" fullyQualifiedName="IWWP_DiscussionMessageMention" moduleGuid="00000000-0000-0000-0000-000000000000" guid="0c2e0b3b-bdb0-48ab-9683-7cf2b43a5444" name="IWWP_DiscussionMessageMention" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Discussion Message Mention">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPDiscussionMessageId</Member>
+              <Member Order="Ascending">WWPDiscussionMentionUserId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_DiscussionMessageMention</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:23.0000000Z" checksum="743be38a964f726145c1dacabad2b52c" fullyQualifiedName="IWWP_DiscussionMessageMention2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="63287aea-4809-4e98-9d41-85792ab9bd50" name="IWWP_DiscussionMessageMention2" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Discussion Message Mention2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPDiscussionMessageId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_DiscussionMessageMention2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:23.0000000Z" checksum="dbf3a5d04583e47254f9622f1bf88cda" fullyQualifiedName="IWWP_DiscussionMessageMention1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="74450cf4-4786-4306-8631-1a2135530e02" name="IWWP_DiscussionMessageMention1" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Discussion Message Mention1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPDiscussionMentionUserId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_DiscussionMessageMention1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_DiscussionMessageMention</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>WWP_DiscussionMessageMention</Value>
+    </Property>
+  </Properties>
+</Object>

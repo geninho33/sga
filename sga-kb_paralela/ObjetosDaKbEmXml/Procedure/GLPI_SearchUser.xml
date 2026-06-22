@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-05T05:49:41.0000000Z" lastUpdate="2025-10-05T04:24:28.0000000Z" checksum="f817cb89db3a24ac2c273f6207376c52" fullyQualifiedName="GLPI_SearchUser" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="e6c0b16d-c7db-4bc4-beee-2a84e1eba786" name="GLPI_SearchUser" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Procurando o usuário" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[// Declaração de variáveis (devem estar definidas no contexto ou como parâmetros)
+LoadWWPContext( &wwPContext )
+
+// Declaração de variáveis
+&HttpClient = new()
+&SEARCH_URL = &wwPContext.GLPI_URL + "/search/User?criteria[0][field]=9&criteria[0][searchtype]=equals&criteria[0][value]=" + &wwPContext.login
+&HTTP_METHOD = "GET"
+&HTTP_STATUS = 0
+&HTTP_RESPONSE = ""
+&USER_ID = 0
+&SUCCESS = False
+&ERROR_MESSAGE = ""
+
+// Configurar headers
+&HttpClient.AddHeader("App-Token", &wwPContext.APP_TOKEN)
+&HttpClient.AddHeader("Session-Token", &wwPContext.USER_TOKEN)
+
+
+// Executar requisição
+&HttpClient.Execute(&HTTP_METHOD, &SEARCH_URL)
+
+// Obter status e resposta
+&HTTP_STATUS = &HttpClient.StatusCode
+&HTTP_RESPONSE = &HttpClient.ToString()
+
+If &HTTP_STATUS = 200
+    &UserSearchResponse = new()
+    &UserSearchResponse.FromJson(&HTTP_RESPONSE)
+
+    If &UserSearchResponse.Count > 0
+       &USER_ID = &UserSearchResponse.Item(1).id
+       &SUCCESS = True
+       &ERROR_MESSAGE = ""
+    Else
+       &USER_ID = 0
+       &SUCCESS = True
+       &ERROR_MESSAGE = "Usuário não encontrado"
+    EndIf
+Else
+    &SUCCESS = False
+    &ERROR_MESSAGE = "Erro HTTP: " + &HTTP_STATUS.ToString()
+EndIf
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(  out:&USER_ID, out:&SUCCESS, out:&ERROR_MESSAGE );
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="HTTP_URL">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_URL</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="wwPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>wwPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_METHOD">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_METHOD</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_STATUS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_STATUS</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Situacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_RESPONSE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_RESPONSE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SUCCESS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SUCCESS</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ERROR_MESSAGE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ERROR_MESSAGE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SESSION_TOKEN">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SESSION_TOKEN</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HttpClient">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HttpClient</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpClient</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="JSON_SDT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>JSON_SDT</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_JSON_RESPONSE</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserInput">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserInput</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_UserInput</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Payload">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Payload</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_UserInput</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserResponse">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserResponse</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_UserResponse</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SEARCH_URL">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SEARCH_URL</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserSearchResponse">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserSearchResponse</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_UserSearchResponse.SDT_UserItem</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="USER_LOGIN">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>USER_LOGIN</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GLPI_SearchUser</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Procurando o usuário</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

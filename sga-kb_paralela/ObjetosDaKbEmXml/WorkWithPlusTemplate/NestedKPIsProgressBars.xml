@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="af997b28-ed1b-448c-b37b-acde00ed085c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-01-26T03:30:15.0000000Z" checksum="ffd2dd0b4a46925176dac06e817f8402" fullyQualifiedName="WWPBaseObjects.NestedKPIsProgressBars" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="8c01c408-0d4a-4170-b811-7b112b4ffdce" name="NestedKPIsProgressBars" type="083f1b21-5715-45e1-8a8d-ceadef141e02" description="Nested KPIs with progress bars" parent="WWPBaseObjects.Other" parentType="00000000-0000-0000-0000-000000000008">
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>NestedKPIsProgressBars</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Nested KPIs with progress bars</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Category</Name>
+      <Value>Grid nested components/KPIs</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_CategoryOrder</Name>
+      <Value>500</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Type</Name>
+      <Value>Regular</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_TemplateXml</Name>
+      <Value>
+        &lt;template Name="NestedKPIsProgressBars"&gt;      &lt;table name="TableMain" type="Responsive"&gt;         &lt;table name="TableCards" numberOfColumns="5" type="Flex" flexWrap="Wrap" flexJustifyContent="Space Between" includeInPanel="True" editProps=";" panelTheme="PanelNoHeader" cellWidth_S="100%" cellThemeClass="CellMarginTop"&gt;			&lt;component name="Progress1" compName="ProgressBar" propValues="DescriptionProgressBar:caption:Added Products:Unknown;DescriptionProgressBar:themeClass:ProgressBarAdminV2Description:Unknown;Value:&amp;lt;Att_Template&amp;gt;:Value:LocalVariable;TotalValue:&amp;lt;Att_Template&amp;gt;:TotalValue:LocalVariable;ProgressBar:UCP\gCls:ProgressBar ProgressBarWarning:Unknown;ProgressBar:cellThemeClass:ProgressBarWidthNormal:Unknown" cellThemeClass="TableCardProgress" /&gt;			&lt;component name="Progress2" compName="ProgressBar" propValues="DescriptionProgressBar:caption:Complete Purchase:Unknown;DescriptionProgressBar:themeClass:ProgressBarAdminV2Description:Unknown;Value:&amp;lt;Att_Template&amp;gt;:Value:LocalVariable;TotalValue:&amp;lt;Att_Template&amp;gt;:TotalValue:LocalVariable;ProgressBar:UCP\gCls:ProgressBar ProgressBarDanger:Unknown;ProgressBar:cellThemeClass:ProgressBarWidthNormal:Unknown" cellThemeClass="TableCardProgress" /&gt;			&lt;component name="Progress3" compName="ProgressBar" propValues="DescriptionProgressBar:caption:Like to Page:Unknown;DescriptionProgressBar:themeClass:ProgressBarAdminV2Description:Unknown;Value:&amp;lt;Att_Template&amp;gt;:Value:LocalVariable;TotalValue:&amp;lt;Att_Template&amp;gt;:TotalValue:LocalVariable;ProgressBar:UCP\gCls:ProgressBar ProgressBarSuccess:Unknown;ProgressBar:cellThemeClass:ProgressBarWidthNormal:Unknown" cellThemeClass="TableCardProgress" /&gt;         &lt;/table&gt;      &lt;/table&gt;      &lt;events /&gt;      &lt;variables /&gt;   &lt;/template&gt;</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_PreviewImage</Name>
+      <Value>data:image/octet-stream;base64,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</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

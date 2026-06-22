@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="06be50bc-f023-46c5-aecb-856b093eec03" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:52:15.0000000Z" checksum="e3ab94a8e2a596d20cfcc6cecd5d0435" fullyQualifiedName="ImportarQtdeAlunosSGE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fa39caa0-b636-4bdd-8970-6ad4cf0ae676" name="ImportarQtdeAlunosSGE" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Importar Qtde Alunos SGE" parent="Movimentacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" class="Table TableTransactionTemplate" tableType="Responsive" formClass="FormNoBackgroundColor" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransactionPopUp" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellMarginTop"><table controlName="TableTotal" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedlocCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockCombo_locCodigo" caption="Local (Escola)" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;locCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;AreEnsCodigo" labelCaption="Áreas Ensino" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;AreEnsCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;AreEnsNome&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;ArenEnsStatus = Status.Ativo;&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;AreEnsSequencial" labelCaption="Etapa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;AreEnsSequencial&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;AreEnsEtapaNome&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedAtendimentoTurno" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockAtendimentoTurno" caption="Turno" class="Label" /></cell><cell><table controlName="TableMergedAtendimentoTurno" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;AtendimentoTurno" labelPosition="None" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><action controlName="BtnPesquisar" onClickEvent="'DoPesquisar'" caption="Pesquisar" /></cell></row></table></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;carGruCodigo" labelCaption="Grupo de Cardápio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;carGruCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;carGruDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;carGruStatus = Status.Ativo;&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell><cell><group controlName="UnnamedGroup2" caption="Quantidades (Alunos)" class="Group"><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><data attribute="&amp;Alunos_Normal" labelCaption="Normal:" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;Alunos_Gluten" labelCaption="Glúten:" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;Alunos_Lactose" labelCaption="Lactose:" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;Alunos_Diabetes" labelCaption="Diabético:" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;Alunos_Colesterol" labelCaption="Colesterol:" class="AttributeRealWidth" /></cell></row></table></group></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnEnter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnCancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute AttID="&amp;locCodigo" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(In:&prefCodigo);
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+
+	&locCodigo.Visible = False
+	Do 'LoadCombolocCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	&AtendimentoTurno = turno.Mat
+
+EndEvent
+
+Event 'DoPesquisar'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	if &locCodigo.IsEmpty()
+		msg('Faltou selecionar o Local (Escola).')
+	else
+		&UeCod = PRCRetornaUeCod(&prefCodigo, &locCodigo)
+		if &UeCod = 0
+			msg('Falta definir "Cod.SGE" para o Local (Escola) selecionado.')
+		else
+			&AreEnsEtapaNivel = find(AreEnsEtapaNivel,prefCodigo = &prefCodigo and AreEnsCodigo = &AreEnsCodigo and AreEnsSequencial = &AreEnsSequencial)
+			
+			&Ano   = Year(Serverdate())
+			&Area  = &AreEnsCodigo.ToString().Trim()
+			&Nivel = &AreEnsEtapaNivel.ToString().Trim()
+			&Etapa = &AreEnsSequencial.ToString().Trim()
+			
+			QtdeAlunos.Call(&Ano,&UeCod,&Area,&Nivel,&AtendimentoTurno,&Etapa,&Alunos_Diabetes,&Alunos_Gluten,&Alunos_Lactose,&Alunos_Normal)
+			if (&Alunos_Diabetes + &Alunos_Gluten + &Alunos_Lactose + &Alunos_Normal) = 0
+				msg('Nenhuma informação foi localizada.')
+			endif
+		endif
+	endif
+
+EndEvent
+
+Event Combo_locCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&locCodigo.FromString(Combo_locCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	&UeCod = PRCRetornaUeCod(&prefCodigo, &locCodigo)
+
+EndEvent
+
+Sub 'LoadCombolocCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//&locCodigo initial value has to be loaded manually at the beginning of this Subrutine
+	For Each
+		Order locDescricao
+		Where prefCodigo = &prefCodigo and locStatus = Status.Ativo
+		&Combo_DataItem = new()
+		&Combo_DataItem.ID = locCodigo.ToString().Trim()
+		&Combo_DataItem.Title = locDescricao
+		&locCodigo_Data.Add(&Combo_DataItem)
+	EndFor
+	Combo_locCodigo.SelectedValue_set = iif(&locCodigo.IsEmpty(), '', &locCodigo.ToString().Trim())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event Enter
+
+	do case
+		case (&Alunos_Colesterol + &Alunos_Diabetes + &Alunos_Gluten + &Alunos_Lactose + &Alunos_Normal) = 0	
+			msg('Falta informr a quantidade de alunos.')
+		otherwise
+			&Atendimento.locCodigo = &locCodigo
+			&Atendimento.carGruCodigo = &carGruCodigo
+			&Atendimento.AreEnsCodigo = &AreEnsCodigo
+			&Atendimento.AreEnsSequencial = &AreEnsSequencial
+			&Atendimento.AtendimentoTurno = &AtendimentoTurno
+			&Atendimento.AtendimentoNormalSegunda = &Alunos_Normal
+			&Atendimento.AtendimentoGlutenSegunda = &Alunos_Gluten
+			&Atendimento.AtendimentoLactoseSegunda = &Alunos_Lactose
+			&Atendimento.AtendimentoDiabeticoSegunda = &Alunos_Diabetes
+			&Atendimento.AtendimentoColesterolSegunda = &Alunos_Colesterol
+			&Atendimento.Insert()
+			
+			if &Atendimento.Success()
+				Commit
+				Return
+			else
+				for &Message in &Atendimento.GetMessages()
+					msg(&Message.Description)
+				endfor
+				Rollback
+			endif
+	endcase
+
+EndEvent
+
+Event &AreEnsCodigo.ControlValueChanged
+
+	&AreEnsEtapaNivel = find(AreEnsEtapaNivel,prefCodigo = &prefCodigo and AreEnsCodigo = &AreEnsCodigo and AreEnsSequencial = &AreEnsSequencial)
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Alunos_Diabetes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Diabetes</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Diabetes</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Gluten">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Gluten</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Glúten</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Gluten</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Lactose">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Lactose</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Lactose</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Lactose</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Normal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Normal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Alunos Normal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Normal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Ano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Ano</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Area">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Area</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Area</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Area</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Etapa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Etapa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Etapa</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Etapa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Nivel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Nivel</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Nivel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:Alunos_Diabetes_8183_Nivel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Alunos_Colesterol">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Alunos_Colesterol</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoColesterolSegunda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoTurno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AtendimentoTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Atendimento">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Atendimento</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:Atendimento</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UeCod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UeCod</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade Escolar</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:UeCod</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsEtapaNivel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsEtapaNivel</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Nível</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsEtapaNivel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>ImportarQtdeAlunosSGE</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPagePrompt</Value>
+    </Property>
+    <Property>
+      <Name>SHOWMASTERPAGE_POPUP</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

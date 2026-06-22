@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a4aa6152-3e53-eb9f-721b-f91fd1432d26" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:35:13.0000000Z" checksum="6506cfd46db848003402400562e4342b" fullyQualifiedName="WorkWithPlustrnsdistribuicaoitens" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a3b939c2-68af-a304-c613-ff28f3b9b25b" name="WorkWithPlustrnsdistribuicaoitens" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnsdistribuicaoitens" parent="trnsdistribuicaoitens" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnsdistribuicaoitens" defaultSecFuntionKey="WWtrnsdistribuicaoitens" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsdistribuicaoitens" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsdistribuicaoitens" SecFuntionKeyINS="WWtrnsdistribuicaoitens_Insert" defaultSecFuntionKeyINS="WWtrnsdistribuicaoitens_Insert" SecFuntionKeyUPD="WWtrnsdistribuicaoitens_Update" defaultSecFuntionKeyUPD="WWtrnsdistribuicaoitens_Update" SecFuntionKeyDLT="WWtrnsdistribuicaoitens_Delete" defaultSecFuntionKeyDLT="WWtrnsdistribuicaoitens_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;distCodigo-2;22;prefCodigo-2;22;distItemProduto-2;22;distItemProdutoDescricao-2;22;distItemProdutoUN-2;22;distItemQuantidade-2;22;distItemStatus-2;22;distItemProdutoUNPeso-2;22;distItemProdutoPeso-2;22;distItemTipoRemessa-2;22;distItemPesoTotal-2;22;distItemValidade-2;22;distItemLote-2;22;distItemProdutoPesoTotal-2;22;distItemQtdeEmEstoque-2;22;distItemQtdeVezes-2;22;distItemPerCapta-2;22;distItemAreEnsCodigo-2;22;distiItemAreEnsSequencial">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distCodigo" description="Listagem de Distribuição" defaultDescription="Listagem de Distribuição" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProduto" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoUN" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemQuantidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;distItemProdutoDescricao-4;39;-5;41;" id="a4aa6152-3e53-eb9f-721b-f91fd1432d26:1" name="trnsdistribuicaoitens">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoDescricao" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description="Itens da Distribuição" defaultDescription=" Itens da Distribuição" childrenOrderedList="4;02;Main Table" level="root:trnsdistribuicaoitens" defaultLevel="root:trnsdistribuicaoitens" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table isGroup="True" numberOfColumns="1" type="Responsive" title="Distribuição ">
+            <variable name="dadosNota" description="" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-distDSCancelamento" basicType="VarChar" basicCLength="150" showDescription="False" descriptionWidth="25%" readOnly="True" />
+          </table>
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction condition="&amp;distStatus&lt;&gt;'C'&#xD;&#xA;" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" InLine="True" />
+                <userAction caption="Retornar" name="btnRetornar" />
+              </actionGroup>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+          <grid includePaginationBar="False" defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;distCodigo-4;23;prefCodigo-4;23;distItemProduto-4;23;distItemProdutoDescricao-4;23;distItemProdutoUN-4;23;distItemProdutoUNPeso-4;23;distItemProdutoPeso-4;23;distItemTipoRemessa-4;23;distItemQuantidade-4;23;distItemPesoTotal-4;23;distItemValidade-4;23;distItemLote-4;23;distItemStatus-4;23;distItemProdutoPesoTotal-4;23;distItemQtdeEmEstoque-4;23;distItemQtdeVezes-4;23;distItemPerCapta-4;23;distItemAreEnsCodigo-4;23;distiItemAreEnsSequencial">
+            <standardAction name="Update" condition="&amp;distStatus&lt;&gt;'C'" InLine="True" />
+            <standardAction name="Delete" condition="&amp;distStatus&lt;&gt;'C'" InLine="True" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="distCodigo &gt;= &amp;TFdistCodigo when not &amp;TFdistCodigo.IsEmpty();distCodigo &lt;= &amp;TFdistCodigo_To when not &amp;TFdistCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProduto" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';" defaultCellVisible_E="False" defaultFilterCondition="distItemProduto &gt;= &amp;TFdistItemProduto when not &amp;TFdistItemProduto.IsEmpty();distItemProduto &lt;= &amp;TFdistItemProduto_To when not &amp;TFdistItemProduto_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" defaultFilterCondition="distItemProdutoDescricao.ToLower() like &amp;TFdistItemProdutoDescricao.ToLower() when not &amp;TFdistItemProdutoDescricao.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoUN" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-uniCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-uniDescricao" conditions="prefCodigo=&amp;prefCodigo;" defaultCellVisible_E="False" defaultFilterCondition="distItemProdutoUN &gt;= &amp;TFdistItemProdutoUN when not &amp;TFdistItemProdutoUN.IsEmpty();distItemProdutoUN &lt;= &amp;TFdistItemProdutoUN_To when not &amp;TFdistItemProdutoUN_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoUNPeso" description="Und Peso " defaultDescription="=Attribute.ContextualTitle" autolink="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="distItemProdutoUNPeso.ToLower() like &amp;TFdistItemProdutoUNPeso.ToLower() when not &amp;TFdistItemProdutoUNPeso.IsEmpty()" defaultFilterCondition="distItemProdutoUNPeso.ToLower() like &amp;TFdistItemProdutoUNPeso.ToLower() when not &amp;TFdistItemProdutoUNPeso.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoPeso" description="Peso " defaultDescription="=Attribute.ContextualTitle" autolink="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="distItemProdutoPeso &gt;= &amp;TFdistItemProdutoPeso when not &amp;TFdistItemProdutoPeso.IsEmpty();distItemProdutoPeso &lt;= &amp;TFdistItemProdutoPeso_To when not &amp;TFdistItemProdutoPeso_To.IsEmpty()" defaultFilterCondition="distItemProdutoPeso &gt;= &amp;TFdistItemProdutoPeso when not &amp;TFdistItemProdutoPeso.IsEmpty();distItemProdutoPeso &lt;= &amp;TFdistItemProdutoPeso_To when not &amp;TFdistItemProdutoPeso_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemQuantidade" description="Qtde" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultCellVisible_E="False" defaultFilterCondition="distItemQuantidade &gt;= &amp;TFdistItemQuantidade when not &amp;TFdistItemQuantidade.IsEmpty();distItemQuantidade &lt;= &amp;TFdistItemQuantidade_To when not &amp;TFdistItemQuantidade_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemValidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="distItemValidade &gt;= &amp;TFdistItemValidade when not &amp;TFdistItemValidade.IsEmpty();distItemValidade &lt;= &amp;TFdistItemValidade_To when not &amp;TFdistItemValidade_To.IsEmpty()" defaultFilterCondition="distItemValidade &gt;= &amp;TFdistItemValidade when not &amp;TFdistItemValidade.IsEmpty();distItemValidade &lt;= &amp;TFdistItemValidade_To when not &amp;TFdistItemValidade_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemLote" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="distItemLote.ToLower() like &amp;TFdistItemLote.ToLower() when not &amp;TFdistItemLote.IsEmpty()" defaultFilterCondition="distItemLote.ToLower() like &amp;TFdistItemLote.ToLower() when not &amp;TFdistItemLote.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="distItemStatus.ToLower() like &amp;TFdistItemStatus.ToLower() when not &amp;TFdistItemStatus.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-distItemProdutoPesoTotal" description="Peso Total" defaultDescription="=Attribute.ContextualTitle" autolink="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="distItemProdutoPesoTotal &gt;= &amp;TFdistItemProdutoPesoTotal when not &amp;TFdistItemProdutoPesoTotal.IsEmpty();distItemProdutoPesoTotal &lt;= &amp;TFdistItemProdutoPesoTotal_To when not &amp;TFdistItemProdutoPesoTotal_To.IsEmpty()" defaultFilterCondition="distItemProdutoPesoTotal &gt;= &amp;TFdistItemProdutoPesoTotal when not &amp;TFdistItemProdutoPesoTotal.IsEmpty();distItemProdutoPesoTotal &lt;= &amp;TFdistItemProdutoPesoTotal_To when not &amp;TFdistItemProdutoPesoTotal_To.IsEmpty()" />
+          </grid>
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+      </table>
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="distCodigo" />
+      </parameters>
+    </selection>
+    <view childrenOrderedList="5;14;distCodigo;5;41;-5;14;prefCodigo;5;41;-5;14;distItemProduto;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="distItemProdutoDescricao.ToString()" defaultCaption="distItemProdutoDescricao.ToString()">
+      <parameters>
+        <parameter name="distCodigo" />
+        <parameter name="prefCodigo" />
+        <parameter name="distItemProduto" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsdistribuicaoitensGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Itens da Distribuição" defaultCaption="Ir a Itens da Distribuição" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsdistribuicaoitensGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsdistribuicaoitensGeneral;42;General">
+        <tabularTab childrenOrderedList="trnsdistribuicaoitensGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsdistribuicaoitensGeneral" defaultWcname="trnsdistribuicaoitensGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsdistribuicaoitensGeneral;126;-trnsdistribuicaoitensGeneral;88;Actions">
+            <transactionDetailData />
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsdistribuicaoitensGeneral;91;Update-trnsdistribuicaoitensGeneral;91;Delete">
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsdistribuicaoitens</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsdistribuicaoitens</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

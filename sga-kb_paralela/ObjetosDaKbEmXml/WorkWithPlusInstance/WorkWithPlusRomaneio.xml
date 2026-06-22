@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ab74e3d5-db78-4e5f-873d-e5c873048d29" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-05-08T02:25:57.0000000Z" lastUpdate="2025-05-08T02:11:13.0000000Z" checksum="429102f37843679c350d991bebab81fd" fullyQualifiedName="WorkWithPlusRomaneio" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="ac67bb45-8d84-06c4-3335-e3ff51fe1254" name="WorkWithPlusRomaneio" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus Romaneio" parent="Romaneio" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWRomaneio" defaultSecFuntionKey="WWRomaneio" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-Romaneio" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-Romaneio" SecFuntionKeyINS="WWRomaneio_Insert" defaultSecFuntionKeyINS="WWRomaneio_Insert" SecFuntionKeyUPD="WWRomaneio_Update" defaultSecFuntionKeyUPD="WWRomaneio_Update" SecFuntionKeyDLT="WWRomaneio_Delete" defaultSecFuntionKeyDLT="WWRomaneio_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;01;TableLeafLevel_Item-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" numberOfColumns="2" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;romanCodigo-2;22;romanData-2;22;forCodigo-2;22;romanLocal-2;22;notaCodigo-2;22;notaSerie-2;22;notaData-2;22;forStatus-2;22;romanLocalDescricao-2;22;romanDataCadastro-2;22;romanDataAlteracao-2;22;romanUserName">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanData" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" isRequired="True" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" description="Fornecedor" defaultDescription="Cadastro de Fornecedor" controlInfoDef="Custom" controlType="DVelop Combo" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-forNome" conditions="prefCodigo = &amp;prefCodigo and&#xD;&#xA;forStatus = 'A';" controlEmptyItem="True" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanLocal" description="=Attribute.Title" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <table name="TableNota" isGroup="True" numberOfColumns="3" visibleCondition="" isVInitialValue="Not visible" type="Responsive" title="Nota Fiscal de Compra">
+            <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaCodigo" description="=Attribute.ContextualTitle" defaultDescription="Lançamento de Nota de Compra" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+            <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaNumero" description="Nota nº" defaultDescription="=Attribute.Title" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+            <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaSerie" description="=Attribute.Title" defaultDescription="=Attribute.Title" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+            <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaData" description="=Attribute.Title" defaultDescription="=Attribute.Title" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          </table>
+        </table>
+      </table>
+      <table name="TableLeafLevel_Item" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" defaultCellWidth_S="75%" cellThemeClass="CellMarginTop" defaultCellThemeClass="CellMarginTop" childrenOrderedList="2;15;GridLevel_Item">
+        <gridLevel childrenOrderedList="2;81;prodCodigo-2;81;prodUnidMedCompra-2;81;prodDescricao-2;81;romanItemQuantidade" name="GridLevel_Item" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders">
+          <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" description="=Attribute.ColumnTitle" defaultDescription="=Attribute.ColumnTitle" controlInfoDef="Custom" controlType="DVelop Combo" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo=&amp;prefCodigo and &#xD;&#xA;prodStatus = 'A';" autoprompt="True" />
+          <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-prodUnidMedCompra" description="=Attribute.Title" defaultDescription="=Attribute.ColumnTitle" />
+          <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" description="=Attribute.ColumnTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" />
+          <gridAttribute attTemplate="!GridAttributes" attribute="adbb33c9-0906-4971-833c-998de27e0676-romanItemQuantidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" isRequired="True" />
+        </gridLevel>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;romanData-4;39;" id="ab74e3d5-db78-4e5f-873d-e5c873048d29:1" name="Romaneio">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanData" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-romanData" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Romaneio" defaultDescription=" Romaneio" childrenOrderedList="4;02;Main Table" level="root:Romaneio" defaultLevel="root:Romaneio" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert">
+                  <parameters>
+                    <parameter type="In" name="TrnMode.Insert" />
+                    <parameter type="In" name="&amp;prefCodigo" />
+                    <parameter type="In" name="nullvalue(romanCodigo)" />
+                  </parameters>
+                </standardAction>
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=romanData.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;romanData;=romanData.ContextualTitle" name="=romanData.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanCodigo" ascending="False" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;romanData-4;99;forNome-4;99;notaNumero">
+                  <filterAttribute name="romanData" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;romanData;Past-4;96;4;99;romanData;Today-4;96;4;99;romanData;InTheFuture-4;96;4;99;romanData;RangePicker">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="RangePicker" defaultPredefinedOperator="RangePicker" />
+                  </filterAttribute>
+                  <filterAttribute name="forNome" description="=Attribute.Title" defaultDescription="=Attribute.Title" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forNome;StartsWith-4;96;4;99;forNome;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                  <filterAttribute name="notaNumero" description="=Attribute.Title" defaultDescription="=Attribute.Title" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;notaNumero;StartsWith-4;96;4;99;notaNumero;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;romanCodigo-4;23;romanData-4;23;forCodigo-4;23;forNome-4;23;forStatus-4;23;romanLocal-4;23;romanLocalDescricao-4;23;romanDataCadastro-4;23;romanDataAlteracao-4;23;romanUserName-4;23;notaCodigo-4;23;notaNumero-4;23;notaSerie-4;23;notaData" columnSelector="False">
+          <standardAction name="Display" condition="not notaCodigo.IsEmpty()" />
+          <standardAction name="Update" condition="notaCodigo.IsEmpty()" />
+          <standardAction name="Delete" condition="notaCodigo.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="romanCodigo &gt;= &amp;TFromanCodigo when not &amp;TFromanCodigo.IsEmpty();romanCodigo &lt;= &amp;TFromanCodigo_To when not &amp;TFromanCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanData" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultFilterCondition="romanData &gt;= &amp;TFromanData when not &amp;TFromanData.IsEmpty();romanData &lt;= &amp;TFromanData_To when not &amp;TFromanData_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanLocalDescricao" description="=Attribute.Title" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" sortableByTitle="False" includeTitleFilter="False" filterCondition="romanLocalDescricao.ToLower() like &amp;TFromanLocalDescricao.ToLower() when not &amp;TFromanLocalDescricao.IsEmpty()" defaultFilterCondition="romanLocalDescricao.ToLower() like &amp;TFromanLocalDescricao.ToLower() when not &amp;TFromanLocalDescricao.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forNome" description="=Attribute.Title" defaultDescription="=Attribute.ColumnTitle" defaultCellVisible_E="False" defaultFilterCondition="forNome.ToLower() like &amp;TFforNome.ToLower() when not &amp;TFforNome.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaNumero" description="=Attribute.Title" defaultDescription="=Attribute.ColumnTitle" defaultCellVisible_E="False" defaultFilterCondition="notaNumero.ToLower() like &amp;TFnotaNumero.ToLower() when not &amp;TFnotaNumero.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaSerie" description="=Attribute.ColumnTitle" defaultDescription="=Attribute.ColumnTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="notaSerie.ToLower() like &amp;TFnotaSerie.ToLower() when not &amp;TFnotaSerie.IsEmpty()" defaultFilterCondition="notaSerie.ToLower() like &amp;TFnotaSerie.ToLower() when not &amp;TFnotaSerie.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-romanLocal" description="=Attribute.Title" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="romanLocal &gt;= &amp;TFromanLocal when not &amp;TFromanLocal.IsEmpty();romanLocal &lt;= &amp;TFromanLocal_To when not &amp;TFromanLocal_To.IsEmpty()" />
+        </grid>
+      </table>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusRomaneio</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-Romaneio</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

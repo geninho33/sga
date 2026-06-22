@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="b124c8ef-84c5-4ea4-a23b-3272514d3471" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:36:09.0000000Z" checksum="fee6a3f8d28c9464935182ddbaa90412" fullyQualifiedName="WorkWithPlustrnsremessaproduto" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b637907f-d239-063f-1633-344573b7ab0c" name="WorkWithPlustrnsremessaproduto" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnsremessaproduto" parent="trnsremessaproduto" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnsremessaproduto" defaultSecFuntionKey="WWtrnsremessaproduto" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsremessaproduto" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsremessaproduto" SecFuntionKeyINS="WWtrnsremessaproduto_Insert" defaultSecFuntionKeyINS="WWtrnsremessaproduto_Insert" SecFuntionKeyUPD="WWtrnsremessaproduto_Update" defaultSecFuntionKeyUPD="WWtrnsremessaproduto_Update" SecFuntionKeyDLT="WWtrnsremessaproduto_Delete" defaultSecFuntionKeyDLT="WWtrnsremessaproduto_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;remCodigo-2;22;remProdCodigo-2;22;remProdAreEnsCodigo-2;22;remProdAreEnsSequencial-2;22;remProdAreEnsTurno-2;22;remProdDescricao-2;22;remProdUnPeso-2;22;remProdQtde-2;22;remProdPerCapta">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remCodigo" description="Remessa de Alimentação" defaultDescription="Remessa de Alimentação" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdAreEnsCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdAreEnsSequencial" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdAreEnsTurno" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdUnPeso" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdQtde" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdPerCapta" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;remProdDescricao-4;39;-5;41;" id="b124c8ef-84c5-4ea4-a23b-3272514d3471:1" name="trnsremessaproduto">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdDescricao" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-remProdDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Lançamento de Produtos" defaultDescription=" Lançamento de Produtos" childrenOrderedList="4;02;Main Table" level="root:trnsremessaproduto" defaultLevel="root:trnsremessaproduto" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table isGroup="True" numberOfColumns="1" type="Responsive" title="Cardápio  ">
+            <variable name="carDapDescricao" dataType="Basic" basicType="VarChar" basicCLength="200" showDescription="False" descriptionWidth="6%" readOnly="True" />
+          </table>
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="Insert" />
+                <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Export" />
+                  <standardAction popup="True" defaultPopup="True" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="ExportReport" />
+                </actionGroup>
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="EditColumns" />
+                <userAction caption="Retornar" name="btnRetornar" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=remProdDescricao.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;remProdDescricao;=remProdDescricao.ContextualTitle" name="=remProdDescricao.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdDescricao" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;remProdDescricao">
+                  <filterAttribute name="remProdDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;remProdDescricao;StartsWith-4;96;4;99;remProdDescricao;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+          <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;remCodigo-4;23;remProdCodigo-4;23;remProdAreEnsCodigo-4;23;remProdAreEnsSequencial-4;23;remProdAreEnsTurno-4;23;remProdDescricao-4;23;remProdUnPeso-4;23;remProdQtde-4;23;remProdPerCapta">
+            <standardAction name="Update" />
+            <standardAction name="Delete" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultCellVisible_E="False" defaultFilterCondition="remProdCodigo &gt;= &amp;TFremProdCodigo when not &amp;TFremProdCodigo.IsEmpty();remProdCodigo &lt;= &amp;TFremProdCodigo_To when not &amp;TFremProdCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdDescricao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultFilterCondition="remProdDescricao.ToLower() like &amp;TFremProdDescricao.ToLower() when not &amp;TFremProdDescricao.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdUnPeso" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultCellVisible_E="False" defaultFilterCondition="remProdUnPeso.ToLower() like &amp;TFremProdUnPeso.ToLower() when not &amp;TFremProdUnPeso.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdAreEnsCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" defaultCellVisible_E="False" defaultFilterCondition="remProdAreEnsCodigo &gt;= &amp;TFremProdAreEnsCodigo when not &amp;TFremProdAreEnsCodigo.IsEmpty();remProdAreEnsCodigo &lt;= &amp;TFremProdAreEnsCodigo_To when not &amp;TFremProdAreEnsCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdAreEnsSequencial" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSequencial" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNome" defaultCellVisible_E="False" defaultFilterCondition="remProdAreEnsSequencial &gt;= &amp;TFremProdAreEnsSequencial when not &amp;TFremProdAreEnsSequencial.IsEmpty();remProdAreEnsSequencial &lt;= &amp;TFremProdAreEnsSequencial_To when not &amp;TFremProdAreEnsSequencial_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdAreEnsTurno" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" controlInfoDef="Custom" controlType="Combo Box" controlValues="Matutino:1,Vespertino:2,Noturno:3,Integral:4,Interm. Matutino:5,Interm. Vespertino:6" defaultCellVisible_E="False" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdQtde" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultCellVisible_E="False" defaultFilterCondition="remProdQtde &gt;= &amp;TFremProdQtde when not &amp;TFremProdQtde.IsEmpty();remProdQtde &lt;= &amp;TFremProdQtde_To when not &amp;TFremProdQtde_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-remProdPerCapta" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultCellVisible_E="False" defaultFilterCondition="remProdPerCapta &gt;= &amp;TFremProdPerCapta when not &amp;TFremProdPerCapta.IsEmpty();remProdPerCapta &lt;= &amp;TFremProdPerCapta_To when not &amp;TFremProdPerCapta_To.IsEmpty()" />
+          </grid>
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+      </table>
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="remCodigo" />
+      </parameters>
+    </selection>
+    <view childrenOrderedList="5;14;prefCodigo;5;41;-5;14;remCodigo;5;41;-5;14;remProdCodigo;5;41;-5;14;remProdAreEnsCodigo;5;41;-5;14;remProdAreEnsSequencial;5;41;-5;14;remProdAreEnsTurno;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="remProdDescricao.ToString()" defaultCaption="remProdDescricao.ToString()">
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="remCodigo" />
+        <parameter name="remProdCodigo" />
+        <parameter name="remProdAreEnsCodigo" />
+        <parameter name="remProdAreEnsSequencial" />
+        <parameter name="remProdAreEnsTurno" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsremessaprodutoGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Lançamento de Produtos" defaultCaption="Ir a Lançamento de Produtos" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsremessaprodutoGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsremessaprodutoGeneral;42;General">
+        <tabularTab childrenOrderedList="trnsremessaprodutoGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsremessaprodutoGeneral" defaultWcname="trnsremessaprodutoGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsremessaprodutoGeneral;126;-trnsremessaprodutoGeneral;88;Actions">
+            <transactionDetailData />
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsremessaprodutoGeneral;91;Update-trnsremessaprodutoGeneral;91;Delete">
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsremessaproduto</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsremessaproduto</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

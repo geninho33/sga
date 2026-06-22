@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-14T12:17:17.0000000Z" checksum="b5e0fe1958b4980266057b861c44fa4a" fullyQualifiedName="LocaisIgnorarGridSDT" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="ba775479-a730-43de-bf0e-3209d58929d7" name="LocaisIgnorarGridSDT" type="447527b5-9210-4523-898b-5dccb17be60a" description="Locais Ignorar Grid SDT" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="LocaisIgnorarGridSDT">
+      <LevelInfo guid="a39f3d4e-7261-45bb-a382-3ef5c204b3b2" name="LocaisIgnorarGridSDT" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Locais Ignorar Grid SDT" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>LocaisIgnorarGridSDT</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="14dec21b-2607-42a5-b65c-4357853c7bfa" name="Selected" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Selected" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Selected</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="e8124531-335d-4185-bfe2-55c6b216c00f" name="locCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="d5b32931-f51c-4e1a-8bac-aab008ab11cc" name="locDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Local Nome" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="d409a7ba-28ab-4c15-957c-bccb0185a469" name="Calculo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Calculo" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Calculo</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Numeric</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>6</Value>
+          </Property>
+        </Properties>
+      </Item>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>LocaisIgnorarGridSDT</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

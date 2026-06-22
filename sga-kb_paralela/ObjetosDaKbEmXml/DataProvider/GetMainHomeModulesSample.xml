@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="79d5711b-6e55-4e09-b69c-929b90f68fdc" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2018-11-06T21:00:14.0000000Z" checksum="e0b73f1ed9ad71a2b8106669218afe99" fullyQualifiedName="WWPBaseObjects.GetMainHomeModulesSample" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="21d54640-528e-445a-8469-371d2e0d41b9" name="GetMainHomeModulesSample" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Get Main Home Modules Sample" parent="WWPBaseObjects.HomeSampleData" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[HomeModulesSDT
+{
+	&HomeModulesSDT = GetHomeModulesSample()
+	HomeModulesSDTItem [Count=3] Input &HomeModulesSDTItem in &HomeModulesSDT
+	{
+		OptionTitle = &HomeModulesSDTItem.OptionTitle
+		OptionIconThemeClass = &HomeModulesSDTItem.OptionIconThemeClass
+		OptionDescription = &HomeModulesSDTItem.OptionDescription
+		OptionWCLink = &HomeModulesSDTItem.OptionWCLink
+	}
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="HomeModulesSDT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HomeModulesSDT</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:HomeModulesSDT, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HomeModulesSDTItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HomeModulesSDTItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:HomeModulesSDT.HomeModulesSDTItem, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GetMainHomeModulesSample</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Get Main Home Modules Sample</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-WWPBaseObjects.HomeModulesSDT</Value>
+    </Property>
+    <Property>
+      <Name>SPC_WARNINGS_DISABLED</Name>
+      <Value>spc0096 spc0107 spc0142 spc0217</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

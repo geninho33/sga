@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="b5e3b273-d7b4-ca41-4860-c865f39de65d" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-02T02:14:49.0000000Z" lastUpdate="2024-09-25T16:46:08.0000000Z" checksum="7236ce023e12be4e479ba7e769db2c0f" fullyQualifiedName="trnsprodutosWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c6637a91-935f-4818-ba48-9497e4ef7678" name="trnsprodutosWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsprodutos WWDS" parent="WorkWithPlustrnsprodutos" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prodCodigo = &prodCodigo1 when &DynamicFiltersSelector1 = !'PRODCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &prodCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like '%' +  &prodDescricao1.ToLower() when &DynamicFiltersSelector1 = !'PRODDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &prodDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like &prodDescricao1.ToLower() when &DynamicFiltersSelector1 = !'PRODDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &prodDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodTipo = &prodTipo1 when &DynamicFiltersSelector1 = !'PRODTIPO' AND &DynamicFiltersOperator1 = 0 AND (not &prodTipo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodOrigem = &prodOrigem1 when &DynamicFiltersSelector1 = !'PRODORIGEM' AND &DynamicFiltersOperator1 = 0 AND (not &prodOrigem1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodClassificacao = &prodClassificacao1 when &DynamicFiltersSelector1 = !'PRODCLASSIFICACAO' AND (not &prodClassificacao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodStatus = &prodStatus1 when &DynamicFiltersSelector1 = !'PRODSTATUS' AND (not &prodStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodCodigo = &prodCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRODCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &prodCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like '%' +  &prodDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRODDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &prodDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like &prodDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRODDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &prodDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodTipo = &prodTipo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRODTIPO' AND &DynamicFiltersOperator2 = 0 AND (not &prodTipo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodOrigem = &prodOrigem2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRODORIGEM' AND &DynamicFiltersOperator2 = 0 AND (not &prodOrigem2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodClassificacao = &prodClassificacao2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRODCLASSIFICACAO' AND (not &prodClassificacao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodStatus = &prodStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRODSTATUS' AND (not &prodStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodCodigo = &prodCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRODCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &prodCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like '%' +  &prodDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRODDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &prodDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like &prodDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRODDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &prodDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodTipo = &prodTipo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRODTIPO' AND &DynamicFiltersOperator3 = 0 AND (not &prodTipo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodOrigem = &prodOrigem3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRODORIGEM' AND &DynamicFiltersOperator3 = 0 AND (not &prodOrigem3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodClassificacao = &prodClassificacao3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRODCLASSIFICACAO' AND (not &prodClassificacao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodStatus = &prodStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRODSTATUS' AND (not &prodStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodCodigo >= &TFprodCodigo when not &TFprodCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodCodigo <= &TFprodCodigo_To when not &TFprodCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao.ToLower() like &TFprodDescricao.ToLower() when &TFprodDescricao_Sel.IsEmpty() AND (not &TFprodDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodDescricao = &TFprodDescricao_Sel when not &TFprodDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodPesoConsumo >= &TFprodPesoConsumo when not &TFprodPesoConsumo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodPesoConsumo <= &TFprodPesoConsumo_To when not &TFprodPesoConsumo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodPesoEstocagem >= &TFprodPesoEstocagem when not &TFprodPesoEstocagem.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodPesoEstocagem <= &TFprodPesoEstocagem_To when not &TFprodPesoEstocagem_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodGrupdescricao.ToLower() like &TFprodTipo.ToLower() when &TFprodTipo_Sel.IsEmpty() AND (not &TFprodTipo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodTipo = &TFprodTipo_Sel when not &TFprodTipo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodOrigDescricao.ToLower() like &TFprodOrigem.ToLower() when &TFprodOrigem_Sel.IsEmpty() AND (not &TFprodOrigem.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodOrigem = &TFprodOrigem_Sel when not &TFprodOrigem_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodClassificacao in &TFprodClassificacao_Sels when &TFprodClassificacao_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like &TFprodCodigoTipoRemessa.ToLower() when &TFprodCodigoTipoRemessa_Sel.IsEmpty() AND (not &TFprodCodigoTipoRemessa.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodCodigoTipoRemessa = &TFprodCodigoTipoRemessa_Sel when not &TFprodCodigoTipoRemessa_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[prodStatus in &TFprodStatus_Sels when &TFprodStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodTipo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodTipo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodGrupdescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodOrigem">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodOrigem</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodOrigDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodClassificacao_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodClassificacao_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodClassificacao</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodTipo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodTipo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodOrigem_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodOrigem_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodCodigoTipoRemessa">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodCodigoTipoRemessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodCodigoTipoRemessa_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodCodigoTipoRemessa_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigoTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodCodigoTipoRemessa1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigoTipoRemessa1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigoTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodOrigem1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodOrigem1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodTipo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodTipo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodClassificacao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodClassificacao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodClassificacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodCodigoTipoRemessa2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigoTipoRemessa2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigoTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodOrigem2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodOrigem2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodTipo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodTipo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodClassificacao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodClassificacao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodClassificacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodCodigoTipoRemessa3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigoTipoRemessa3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigoTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodOrigem3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodOrigem3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodOrigem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodTipo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodTipo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodClassificacao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodClassificacao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodClassificacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prodCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodFracaoConsumo_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodFracaoConsumo_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodFracaoConsumo</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodFracaoEstocagem_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodFracaoEstocagem_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodFracaoEstocagem</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodPesoConsumo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodPesoConsumo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodPesoConsumo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodPesoConsumo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodPesoConsumo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodPesoConsumo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodPesoEstocagem">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodPesoEstocagem</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodPesoEstocagem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprodPesoEstocagem_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprodPesoEstocagem_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodPesoEstocagem</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodCodigo1</Name>
+        <Description>prod Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodDescricao1</Name>
+        <Description>prod Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodTipo1</Name>
+        <Description>prod Tipo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodOrigem1</Name>
+        <Description>prod Origem1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodClassificacao1</Name>
+        <Description>prod Classificacao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodStatus1</Name>
+        <Description>prod Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodCodigo2</Name>
+        <Description>prod Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodDescricao2</Name>
+        <Description>prod Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodTipo2</Name>
+        <Description>prod Tipo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodOrigem2</Name>
+        <Description>prod Origem2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodClassificacao2</Name>
+        <Description>prod Classificacao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodStatus2</Name>
+        <Description>prod Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodCodigo3</Name>
+        <Description>prod Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodDescricao3</Name>
+        <Description>prod Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodTipo3</Name>
+        <Description>prod Tipo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodOrigem3</Name>
+        <Description>prod Origem3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodClassificacao3</Name>
+        <Description>prod Classificacao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prodStatus3</Name>
+        <Description>prod Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodCodigo</Name>
+        <Description>TFprod Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodCodigo_To</Name>
+        <Description>TFprod Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodDescricao</Name>
+        <Description>TFprod Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodDescricao_Sel</Name>
+        <Description>TFprod Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodPesoConsumo</Name>
+        <Description>TFprod Peso Consumo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodPesoConsumo_To</Name>
+        <Description>TFprod Peso Consumo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodPesoEstocagem</Name>
+        <Description>TFprod Peso Estocagem</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodPesoEstocagem_To</Name>
+        <Description>TFprod Peso Estocagem_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodTipo</Name>
+        <Description>TFprod Tipo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodTipo_Sel</Name>
+        <Description>TFprod Tipo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodOrigem</Name>
+        <Description>TFprod Origem</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodOrigem_Sel</Name>
+        <Description>TFprod Origem_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodClassificacao_Sels</Name>
+        <Description>TFprod Classificacao_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodCodigoTipoRemessa</Name>
+        <Description>TFprod Codigo Tipo Remessa</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodCodigoTipoRemessa_Sel</Name>
+        <Description>TFprod Codigo Tipo Remessa_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprodStatus_Sels</Name>
+        <Description>TFprod Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsprodutosWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsprodutos</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

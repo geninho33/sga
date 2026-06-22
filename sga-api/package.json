@@ -1,0 +1,27 @@
+{
+  "name": "sga-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "API Node.js do SGA — Alimentação Escolar",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "migrate": "node scripts/migrate.mjs up",
+    "migrate:status": "node scripts/migrate.mjs status",
+    "set-password": "node scripts/set-user-password.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "gx-twofish64": "^1.0.2",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.14.0",
+    "pdfkit": "^0.19.1"
+  }
+}

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a3b939c2-68af-a304-c613-ff28f3b9b25b" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:35:11.0000000Z" checksum="1f68c22cbf50c8064a684e728e69b430" fullyQualifiedName="trnsdistribuicaoitensWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f6736e95-7e71-4ba6-81d7-961dfea0cbf5" name="trnsdistribuicaoitensWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsdistribuicaoitens WWDS" parent="WorkWithPlustrnsdistribuicaoitens" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distCodigo = &distCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoDescricao.ToLower() like &TFdistItemProduto.ToLower() when &TFdistItemProduto_Sel.IsEmpty() AND (not &TFdistItemProduto.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProduto = &TFdistItemProduto_Sel when not &TFdistItemProduto_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[uniDescricao.ToLower() like &TFdistItemProdutoUN.ToLower() when &TFdistItemProdutoUN_Sel.IsEmpty() AND (not &TFdistItemProdutoUN.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoUN = &TFdistItemProdutoUN_Sel when not &TFdistItemProdutoUN_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoUNPeso.ToLower() like &TFdistItemProdutoUNPeso.ToLower() when &TFdistItemProdutoUNPeso_Sel.IsEmpty() AND (not &TFdistItemProdutoUNPeso.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoUNPeso = &TFdistItemProdutoUNPeso_Sel when not &TFdistItemProdutoUNPeso_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoPeso >= &TFdistItemProdutoPeso when not &TFdistItemProdutoPeso.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoPeso <= &TFdistItemProdutoPeso_To when not &TFdistItemProdutoPeso_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemQuantidade >= &TFdistItemQuantidade when not &TFdistItemQuantidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemQuantidade <= &TFdistItemQuantidade_To when not &TFdistItemQuantidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemValidade >= &TFdistItemValidade when not &TFdistItemValidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemValidade <= &TFdistItemValidade_To when not &TFdistItemValidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemLote.ToLower() like &TFdistItemLote.ToLower() when &TFdistItemLote_Sel.IsEmpty() AND (not &TFdistItemLote.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemLote = &TFdistItemLote_Sel when not &TFdistItemLote_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoPesoTotal >= &TFdistItemProdutoPesoTotal when not &TFdistItemProdutoPesoTotal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distItemProdutoPesoTotal <= &TFdistItemProdutoPesoTotal_To when not &TFdistItemProdutoPesoTotal_To.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="TFdistItemProduto">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProduto</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProduto_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProduto_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoUN">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoUN</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:uniDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemQuantidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemQuantidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemQuantidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemQuantidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoUN_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoUN_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProdutoUN</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoPeso">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoPeso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProdutoPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoPeso_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoPeso_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProdutoPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoPesoTotal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoPesoTotal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProdutoPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoPesoTotal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoPesoTotal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProdutoPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoUNPeso">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoUNPeso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProdutoUNPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemProdutoUNPeso_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemProdutoUNPeso_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemProdutoUNPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemValidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemValidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemValidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemValidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemLote">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemLote</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistItemLote_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistItemLote_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distItemLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distCodigo</Name>
+        <Description>dist Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProduto</Name>
+        <Description>TFdist Item Produto</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProduto_Sel</Name>
+        <Description>TFdist Item Produto_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoUN</Name>
+        <Description>TFdist Item Produto UN</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoUN_Sel</Name>
+        <Description>TFdist Item Produto UN_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoUNPeso</Name>
+        <Description>TFdist Item Produto UNPeso</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoUNPeso_Sel</Name>
+        <Description>TFdist Item Produto UNPeso_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoPeso</Name>
+        <Description>TFdist Item Produto Peso</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoPeso_To</Name>
+        <Description>TFdist Item Produto Peso_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemQuantidade</Name>
+        <Description>TFdist Item Quantidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemQuantidade_To</Name>
+        <Description>TFdist Item Quantidade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemValidade</Name>
+        <Description>TFdist Item Validade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemValidade_To</Name>
+        <Description>TFdist Item Validade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemLote</Name>
+        <Description>TFdist Item Lote</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemLote_Sel</Name>
+        <Description>TFdist Item Lote_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoPesoTotal</Name>
+        <Description>TFdist Item Produto Peso Total</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistItemProdutoPesoTotal_To</Name>
+        <Description>TFdist Item Produto Peso Total_To</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicaoitensWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsdistribuicaoitens</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

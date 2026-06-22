@@ -1,0 +1,1076 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="049ec3a1-dccd-03dd-3296-f80ce5970a89" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-11-05T16:09:04.0000000Z" lastUpdate="2024-11-05T15:35:15.0000000Z" checksum="5876e33b952f07d2e1cd044b3dd7c640" fullyQualifiedName="trnsPerguntaRespostaWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a79241ca-d728-4193-af7c-b18177edba8a" name="trnsPerguntaRespostaWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trns Pergunta Resposta WWDS" parent="WorkWithPlustrnsPerguntaResposta" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao.ToLower() like '%' +  &perResLocDescricao1.ToLower() when &DynamicFiltersSelector1 = !'PERRESLOCDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &perResLocDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao.ToLower() like &perResLocDescricao1.ToLower() when &DynamicFiltersSelector1 = !'PERRESLOCDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &perResLocDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResAssunto = &perResAssunto1 when &DynamicFiltersSelector1 = !'PERRESASSUNTO' AND (not &perResAssunto1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResStatus = &perResStatus1 when &DynamicFiltersSelector1 = !'PERRESSTATUS' AND (not &perResStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData >= &perResData1 when &DynamicFiltersSelector1 = !'PERRESDATA' AND &DynamicFiltersOperator1 = 0 AND (not &perResData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData <= &perResData_To1 when &DynamicFiltersSelector1 = !'PERRESDATA' AND &DynamicFiltersOperator1 = 0 AND (not &perResData_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResPergunta.ToLower() like '%' +  &perResPergunta1.ToLower() when &DynamicFiltersSelector1 = !'PERRESPERGUNTA' AND &DynamicFiltersOperator1 = 0 AND (not &perResPergunta1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResResposta.ToLower() like '%' +  &perResResposta1.ToLower() when &DynamicFiltersSelector1 = !'PERRESRESPOSTA' AND &DynamicFiltersOperator1 = 0 AND (not &perResResposta1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao.ToLower() like '%' +  &perResLocDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESLOCDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &perResLocDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao.ToLower() like &perResLocDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESLOCDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &perResLocDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResAssunto = &perResAssunto2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESASSUNTO' AND (not &perResAssunto2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResStatus = &perResStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESSTATUS' AND (not &perResStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData >= &perResData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESDATA' AND &DynamicFiltersOperator2 = 0 AND (not &perResData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData <= &perResData_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESDATA' AND &DynamicFiltersOperator2 = 0 AND (not &perResData_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResPergunta.ToLower() like '%' +  &perResPergunta2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESPERGUNTA' AND &DynamicFiltersOperator2 = 0 AND (not &perResPergunta2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResResposta.ToLower() like '%' +  &perResResposta2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PERRESRESPOSTA' AND &DynamicFiltersOperator2 = 0 AND (not &perResResposta2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao.ToLower() like '%' +  &perResLocDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESLOCDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &perResLocDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao.ToLower() like &perResLocDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESLOCDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &perResLocDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResAssunto = &perResAssunto3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESASSUNTO' AND (not &perResAssunto3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResStatus = &perResStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESSTATUS' AND (not &perResStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData >= &perResData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESDATA' AND &DynamicFiltersOperator3 = 0 AND (not &perResData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData <= &perResData_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESDATA' AND &DynamicFiltersOperator3 = 0 AND (not &perResData_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResPergunta.ToLower() like '%' +  &perResPergunta3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESPERGUNTA' AND &DynamicFiltersOperator3 = 0 AND (not &perResPergunta3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResResposta.ToLower() like '%' +  &perResResposta3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PERRESRESPOSTA' AND &DynamicFiltersOperator3 = 0 AND (not &perResResposta3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResCodigo >= &TFperResCodigo when not &TFperResCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResCodigo <= &TFperResCodigo_To when not &TFperResCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData >= &TFperResData when not &TFperResData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResData <= &TFperResData_To when not &TFperResData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao.ToLower() like &TFperResLocDescricao.ToLower() when &TFperResLocDescricao_Sel.IsEmpty() AND (not &TFperResLocDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResLocDescricao = &TFperResLocDescricao_Sel when not &TFperResLocDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResUsuario.ToLower() like &TFperResUsuario.ToLower() when &TFperResUsuario_Sel.IsEmpty() AND (not &TFperResUsuario.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResUsuario = &TFperResUsuario_Sel when not &TFperResUsuario_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResAssunto in &TFperResAssunto_Sels when &TFperResAssunto_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResPergunta.ToLower() like &TFperResPergunta.ToLower() when &TFperResPergunta_Sel.IsEmpty() AND (not &TFperResPergunta.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResPergunta = &TFperResPergunta_Sel when not &TFperResPergunta_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResResposta.ToLower() like &TFperResResposta.ToLower() when &TFperResResposta_Sel.IsEmpty() AND (not &TFperResResposta.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResResposta = &TFperResResposta_Sel when not &TFperResResposta_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[perResStatus in &TFperResStatus_Sels when &TFperResStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResAssunto1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResAssunto1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResAssunto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResData1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResData1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResData_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResData_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResPergunta1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResPergunta1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResPergunta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResResposta1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResResposta1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResResposta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResAssunto2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResAssunto2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResAssunto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResData2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResData2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResData_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResData_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResPergunta2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResPergunta2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResPergunta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResResposta2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResResposta2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResResposta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResAssunto3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResAssunto3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResAssunto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResData3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResData3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResData_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResData_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResPergunta3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResPergunta3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResPergunta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResResposta3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResResposta3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResResposta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResLocCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResLocCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResLocCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResLocCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResAssunto_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResAssunto_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResAssunto</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResPergunta">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResPergunta</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResPergunta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResPergunta_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResPergunta_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResPergunta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResResposta">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResResposta</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResResposta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResResposta_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResResposta_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResResposta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResLocCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResLocCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResLocCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResLocCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResLocCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResLocCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResLocCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResLocCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResLocDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResLocDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResLocDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResLocDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="perResLocDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perResLocDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResLocDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResLocDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResLocDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResLocDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResLocDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResUsuario">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResUsuario</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResUsuario_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResUsuario_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResUsuario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFperResCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFperResCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:perResCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResLocDescricao1</Name>
+        <Description>per Res Loc Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResAssunto1</Name>
+        <Description>per Res Assunto1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResStatus1</Name>
+        <Description>per Res Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResData1</Name>
+        <Description>per Res Data1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResData_To1</Name>
+        <Description>per Res Data_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResPergunta1</Name>
+        <Description>per Res Pergunta1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResResposta1</Name>
+        <Description>per Res Resposta1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResLocDescricao2</Name>
+        <Description>per Res Loc Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResAssunto2</Name>
+        <Description>per Res Assunto2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResStatus2</Name>
+        <Description>per Res Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResData2</Name>
+        <Description>per Res Data2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResData_To2</Name>
+        <Description>per Res Data_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResPergunta2</Name>
+        <Description>per Res Pergunta2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResResposta2</Name>
+        <Description>per Res Resposta2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResLocDescricao3</Name>
+        <Description>per Res Loc Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResAssunto3</Name>
+        <Description>per Res Assunto3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResStatus3</Name>
+        <Description>per Res Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResData3</Name>
+        <Description>per Res Data3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResData_To3</Name>
+        <Description>per Res Data_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResPergunta3</Name>
+        <Description>per Res Pergunta3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>perResResposta3</Name>
+        <Description>per Res Resposta3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResCodigo</Name>
+        <Description>TFper Res Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResCodigo_To</Name>
+        <Description>TFper Res Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResData</Name>
+        <Description>TFper Res Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResData_To</Name>
+        <Description>TFper Res Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResLocDescricao</Name>
+        <Description>TFper Res Loc Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResLocDescricao_Sel</Name>
+        <Description>TFper Res Loc Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResUsuario</Name>
+        <Description>TFper Res Usuario</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResUsuario_Sel</Name>
+        <Description>TFper Res Usuario_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResAssunto_Sels</Name>
+        <Description>TFper Res Assunto_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResPergunta</Name>
+        <Description>TFper Res Pergunta</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResPergunta_Sel</Name>
+        <Description>TFper Res Pergunta_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResResposta</Name>
+        <Description>TFper Res Resposta</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResResposta_Sel</Name>
+        <Description>TFper Res Resposta_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFperResStatus_Sels</Name>
+        <Description>TFper Res Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsPerguntaRespostaWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsPerguntaResposta</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="da2bbf54-ab54-4d23-bae5-cddd3d944e1c" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-28T03:20:36.0000000Z" lastUpdate="2025-10-21T01:54:35.0000000Z" checksum="b6757b86722d2eb2576a0f42976ae00b" fullyQualifiedName="SDTMovimentacaoUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1cdce5b3-476c-463d-b126-d58b2138baa9" name="SDTMovimentacaoUE" type="447527b5-9210-4523-898b-5dccb17be60a" description="Movimentação de Estoque da Unidade Escolar" parent="SDT" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="SDTMovimentacaoUE">
+      <LevelInfo guid="1f9a7055-0322-47e1-97a3-0a57c48f1486" name="SDTMovimentacaoUE" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="SDTMovimentacao UE" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>SDTMovimentacaoUE</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+          <Property>
+            <Name>idCollectionItemName</Name>
+            <Value>item</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="01c8fea4-360b-4a48-a028-53f6c27f1d18" name="data" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="data" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>data</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Date</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="8bf0c9aa-11b1-47e4-a299-b25b67154716" name="Tipo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Tipo" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Tipo</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>8</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>8</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="76927db7-ce78-4d9c-af65-22f349de519e" name="Codigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="(D)istribuição/(E)stoque Inicial/(M)apa Consumo" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Codigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>(D)istribuição/(E)stoque Inicial/(M)apa Consumo</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>20</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>20</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="75346ece-4fdb-4f55-a67c-201064008577" name="Quantidade" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Quantidade" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Quantidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Domain:Qtde, WWPBaseObjects</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="7ffd9627-2d7f-4a0d-8116-43c20290a40d" name="SaldoAntes" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Saldo Antes" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>SaldoAntes</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Domain:Qtde, WWPBaseObjects</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="de6a681e-f6bd-43cf-b9f0-316843f94e1d" name="SaldoDepois" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Saldo Depois" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>SaldoDepois</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Domain:Qtde, WWPBaseObjects</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="797da9bb-f85e-4e17-8958-9bdd063cc17a" name="lancamento" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Lancamento( Data/Hora)" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>lancamento</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Lancamento( Data/Hora)</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>18</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>18</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="dfd2dfb3-5898-4d5c-b766-01b510714fb2" name="Descricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Descricao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Descrição</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:descricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="d9ca4e55-f6cb-4a36-8a7b-35eb98dbbf6e" name="Unidade" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Unidade</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>10</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>10</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="664e3ee2-350e-4e24-be88-1f2f690c8b26" name="Periodo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Periodo" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Periodo</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>30</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>30</Value>
+          </Property>
+        </Properties>
+      </Item>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>SDTMovimentacaoUE</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Movimentação de Estoque da Unidade Escolar</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

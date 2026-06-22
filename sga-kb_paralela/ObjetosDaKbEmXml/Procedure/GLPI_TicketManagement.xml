@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-05T05:49:41.0000000Z" lastUpdate="2025-10-02T04:06:47.0000000Z" checksum="f97e4861bdef8f2bb2ff3174c4f61bcd" fullyQualifiedName="GLPI_TicketManagement" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="92bf64a9-754e-45b7-a849-da41f5542e9b" name="GLPI_TicketManagement" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Ticket Management" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[// ==========================================
+// PROCEDURE: GLPI_TicketManagement
+// ==========================================
+// Gerencia chamados/tickets do GLPI
+
+// ==========================================
+// MÉTODO: CreateTicket
+// ==========================================
+// Cria novo chamado no GLPI
+Sub 'CreateTicket'
+    // Declaração de variáveis
+    &HttpClient = new()
+    &HTTP_URL = &GLPI_URL + "/Ticket"
+    &HTTP_METHOD = "POST"
+    &HTTP_STATUS = 0
+    &HTTP_RESPONSE = ""
+    &TICKET_ID = 0
+    &SUCCESS = False
+    &ERROR_MESSAGE = ""
+
+    // Configurar headers
+    &HttpClient.AddHeader("App-Token", &APP_TOKEN)
+    &HttpClient.AddHeader("Session-Token", &SESSION_TOKEN)
+    &HttpClient.AddHeader("Content-Type", "application/json")
+
+    // Construir payload JSON com SDT
+    &TicketInput = new()
+    &TicketInput.name = &TICKET_TITLE
+    &TicketInput.content = &TICKET_DESCRIPTION
+    &TicketInput.priority = 3 // Média
+    &TicketInput.requesttypes_id = 1 // Solicitação
+    &TicketInput.type = 1 // Incidente
+    &TicketInput.users_id_recipient = &USER_ID
+    &TicketInput.entities_id = &ENTITY_ID
+
+    // Wrap input em um objeto "input"
+    &Payload = new()
+    &Payload.Add( &TicketInput )
+    &HttpClient.AddString(&Payload.ToJson()) 
+
+    // Executar requisição
+    &HttpClient.Execute(&HTTP_METHOD, &HTTP_URL)
+
+    // Obter status e resposta
+    &HTTP_STATUS = &HttpClient.StatusCode
+    &HTTP_RESPONSE = &HttpClient.ToString()
+
+    If &HTTP_STATUS = 201 // Created
+        &TicketResponse = new()
+        &TicketResponse.FromJson(&HTTP_RESPONSE)
+
+        If &TicketResponse.id > 0
+            &TICKET_ID = &TicketResponse.id
+            &SUCCESS = True
+            &ERROR_MESSAGE = ""
+        Else
+            &SUCCESS = False
+            &ERROR_MESSAGE = "Erro ao processar resposta da API"
+        EndIf
+    Else
+        &SUCCESS = False
+        &ERROR_MESSAGE = "Erro HTTP: " + &HTTP_STATUS.ToString() + " - " + &HTTP_RESPONSE
+    EndIf
+EndSub
+
+// Regra de parâmetros
+// parm(in:&GLPI_URL, in:&SESSION_TOKEN, in:&APP_TOKEN, in:&TICKET_TITLE, in:&TICKET_DESCRIPTION, in:&USER_ID, in:&ENTITY_ID, out:&TICKET_ID, out:&SUCCESS, out:&ERROR_MESSAGE);
+
+// ==========================================
+// MÉTODO: SearchTicketsByStatus
+// ==========================================
+// Consulta chamados por status vinculados ao usuário
+Sub 'SearchTicketsByStatus'
+    // Declaração de variáveis
+    &HttpClient = new()
+    &SEARCH_URL = &GLPI_URL + "/search/Ticket?criteria[0][field]=12&criteria[0][searchtype]=equals&criteria[0][value]=" + &USER_ID.ToString() + "&criteria[1][link]=AND&criteria[1][field]=3&criteria[1][searchtype]=equals&criteria[1][value]=" + &STATUS_ID.ToString()
+    &HTTP_METHOD = "GET"
+    &HTTP_STATUS = 0
+    &HTTP_RESPONSE = ""
+    &TICKETS_COLLECTION = new()
+    &SUCCESS = False
+    &ERROR_MESSAGE = ""
+
+    // Configurar headers
+    &HttpClient.AddHeader("App-Token", &APP_TOKEN)
+    &HttpClient.AddHeader("Session-Token", &SESSION_TOKEN)
+
+    // Executar requisição
+    &HttpClient.Execute(&HTTP_METHOD, &SEARCH_URL)
+
+    // Obter status e resposta
+    &HTTP_STATUS = &HttpClient.StatusCode
+    &HTTP_RESPONSE = &HttpClient.ToString()
+
+    If &HTTP_STATUS = 200
+        &TICKETS_COLLECTION.FromJson(&HTTP_RESPONSE)
+
+        If &TICKETS_COLLECTION.Count > 0
+            &SUCCESS = True
+            &ERROR_MESSAGE = ""
+        Else
+            &SUCCESS = False
+            &ERROR_MESSAGE = "Nenhum ticket encontrado ou erro ao processar resposta"
+        EndIf
+    Else
+        &SUCCESS = False
+        &ERROR_MESSAGE = "Erro HTTP: " + &HTTP_STATUS.ToString()
+    EndIf
+EndSub
+
+// Regra de parâmetros
+// parm(in:&GLPI_URL, in:&SESSION_TOKEN, in:&APP_TOKEN, in:&USER_ID, in:&STATUS_ID, out:&TICKETS_COLLECTION, out:&SUCCESS, out:&ERROR_MESSAGE);
+
+// ==========================================
+// MÉTODO: GetTicketDetails
+// ==========================================
+// Obtém detalhes de um chamado específico
+Sub 'GetTicketDetails'
+    // Declaração de variáveis
+    &HttpClient = new()
+    &HTTP_URL = &GLPI_URL + "/Ticket/" + &TICKET_ID.ToString()
+    &HTTP_METHOD = "GET"
+    &HTTP_STATUS = 0
+    &HTTP_RESPONSE = ""
+    &TICKET_DETAILS = new()
+    &SUCCESS = False
+
+    // Configurar headers
+    &HttpClient.AddHeader("App-Token", &APP_TOKEN)
+    &HttpClient.AddHeader("Session-Token", &SESSION_TOKEN)
+
+    // Executar requisição
+    &HttpClient.Execute(&HTTP_METHOD, &HTTP_URL)
+
+    // Obter status e resposta
+    &HTTP_STATUS = &HttpClient.StatusCode
+    &HTTP_RESPONSE = &HttpClient.ToString()
+
+    If &HTTP_STATUS = 200
+        &TICKET_DETAILS.FromJson(&HTTP_RESPONSE)
+
+        If &TICKET_DETAILS.id > 0
+            &SUCCESS = True
+        Else
+            &SUCCESS = False
+        EndIf
+    Else
+        &SUCCESS = False
+    EndIf
+EndSub
+
+// Regra de parâmetros
+// parm(in:&GLPI_URL, in:&SESSION_TOKEN, in:&APP_TOKEN, in:&TICKET_ID, out:&TICKET_DETAILS, out:&SUCCESS);
+
+// ==========================================
+// MÉTODO: UpdateTicketStatus
+// ==========================================
+// Atualiza status de um chamado
+Sub 'UpdateTicketStatus'
+    // Declaração de variáveis
+    &HttpClient = new()
+    &HTTP_URL = &GLPI_URL + "/Ticket/" + &TICKET_ID.ToString()
+    &HTTP_METHOD = "PUT"
+    &HTTP_STATUS = 0
+    &HTTP_RESPONSE = ""
+    &SUCCESS = False
+    &ERROR_MESSAGE = ""
+
+    // Configurar headers
+    &HttpClient.AddHeader("App-Token", &APP_TOKEN)
+    &HttpClient.AddHeader("Session-Token", &SESSION_TOKEN)
+    &HttpClient.AddHeader("Content-Type", "application/json")
+
+    // Construir payload JSON com SDT
+    &TicketInput = new SDT_TicketInput()
+    &TicketInput.status = &NEW_STATUS
+    &Payload = new()
+    &Payload.Add( &TicketInput )
+    &HttpClient.AddString( &Payload.ToJson() )
+
+    // Executar requisição
+    &HttpClient.Execute(&HTTP_METHOD, &HTTP_URL)
+
+    // Obter status e resposta
+    &HTTP_STATUS = &HttpClient.StatusCode
+    &HTTP_RESPONSE = &HttpClient.ToString()
+
+    If &HTTP_STATUS = 200
+        &SUCCESS = True
+        &ERROR_MESSAGE = ""
+    Else
+        &SUCCESS = False
+        &ERROR_MESSAGE = "Erro HTTP: " + &HTTP_STATUS.ToString() + " - " + &HTTP_RESPONSE
+    EndIf
+EndSub
+
+// Regra de parâmetros
+// parm(in:&GLPI_URL, in:&SESSION_TOKEN, in:&APP_TOKEN, in:&TICKET_ID, in:&NEW_STATUS, out:&SUCCESS, out:&ERROR_MESSAGE);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(
+    in:&GLPI_URL, 
+    in:&SESSION_TOKEN, 
+    in:&APP_TOKEN, 
+    in:&TICKET_TITLE, 
+    in:&TICKET_DESCRIPTION, 
+    in:&USER_ID, 
+    in:&ENTITY_ID, 
+    in:&STATUS_ID, 
+    in:&TICKET_ID, 
+    in:&NEW_STATUS, 
+    out:&TICKET_ID, 
+    out:&TICKETS_COLLECTION, 
+    out:&TICKET_DETAILS, 
+    out:&SUCCESS, 
+    out:&ERROR_MESSAGE
+);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="GLPI_URL">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GLPI_URL</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TICKET_TITLE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TICKET_TITLE</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Title</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TICKET_DESCRIPTION">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TICKET_DESCRIPTION</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Description, GeneXusUnanimo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="NEW_STATUS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>NEW_STATUS</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Situacao</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:status</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HttpClient">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HttpClient</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpClient</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_URL">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_URL</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_STATUS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_STATUS</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Situacao</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:status</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SEARCH_URL">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SEARCH_URL</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TicketInput">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TicketInput</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_TicketInput</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Payload">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Payload</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_TicketInput</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TICKETS_COLLECTION">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TICKETS_COLLECTION</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_TicketSearchResponse</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TICKET_DETAILS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TICKET_DETAILS</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_TicketResponse</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_RESPONSE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_RESPONSE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>500</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>500</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SUCCESS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SUCCESS</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ERROR_MESSAGE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ERROR_MESSAGE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TicketResponse">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TicketResponse</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_TicketResponse</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="USER_ID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>USER_ID</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="STATUS_ID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>STATUS_ID</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TICKET_ID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TICKET_ID</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GLPI_TicketManagement</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Ticket Management</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

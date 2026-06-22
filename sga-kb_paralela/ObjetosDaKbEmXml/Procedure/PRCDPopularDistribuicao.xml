@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-06-24T01:35:26.0000000Z" lastUpdate="2024-06-18T04:15:12.0000000Z" checksum="142bac6da1e8516019e655ec27f15d39" fullyQualifiedName="PRCDPopularDistribuicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="191cc600-b40d-47d4-adb5-8808b0d87816" name="PRCDPopularDistribuicao" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Populando a Distribuição de Alimentos para as Unidades" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[LoadWWPContext.Call(&WWPContext)
+&prefCodigo = &WWPContext.prefCodigo
+
+// Log.Write(!"Write message", !"MyCompany.Test.TestLoggingWrite",LogLEvel.DEBUG)
+
+&totalProdutos  = 0
+&locCodigo2     = 0
+&remItemPeriodo = &dataInicial.ToString() +  ' a ' + &dataFinal.ToString()
+&carGru.Clear()
+
+
+// Buscando a área de acordo com o atendimento
+for each trnsremessaatendimento
+	order prefCodigo,remCodigo,remLocal,remAreEnsCodigo,remAreEnsSequencial
+	where prefCodigo  = &prefCodigo
+	where remCodigo   = &remCodigo
+
+	  // Log.Error(!"Error message",!"Remessa : " + &remCodigo.ToString() )
+	  &AtendimentoNormalSegunda = remNormal
+	  &AtendimentoNormalSegunda += remColesterol
+	  &AtendimentoNormalSegunda += remDiabetico
+	  &AtendimentoNormalSegunda += remGluten
+	  &AtendimentoNormalSegunda += remLactose
+
+	  if &AtendimentoNormalSegunda > 0
+		  if remLocal<>&locCodigo2 or &locCodigo2 = 0
+			 &distCodigo      = PRCDSalvarCabecalhoDistribuicao( &prefCodigo,&remCodigo,remLocal,&dataEnvio,&locCodigo,&disTipNumero,&dataInicial,&dataFinal,'')
+			 &totalProdutos  += 1
+		  endif
+
+		  // buscando o prato
+		  for each trnscardapio, trnscardapioprato
+			  order prefCodigo, carDapCodigo, carPratoData
+			  where prefCodigo   = &prefCodigo
+			  where carPratoData >= &dataInicial and carPratoData <= &dataFinal
+			  where carDapStatus = 'A'
+	  		  where carDapGruCodigo<>0
+			        &codigoGrupo =  PRCDBuscarGrupo(&prefCodigo, remLocal, remAreEnsCodigo, remAreEnsSequencial, carDapCodigo)
+					if &codigoGrupo > 0						
+						&carPratoRefeicao = carPratoRefeicao
+						//Log.Error(!"Error message",!"Cardapio tem grupo : " + carDapCodigo.ToString() )
+						&carGru.Add( PRCDBuscarGrupo(&prefCodigo, remLocal, remAreEnsCodigo, remAreEnsSequencial, carDapCodigo) )
+
+						// buscando os ingredientes
+						for each trnspratosingredientes
+							order prefCodigo, pratoCodigo, AreEnsCodigo, AreEnsSequencial
+							where prefCodigo          = &prefCodigo
+							where AreEnsCodigo        = remAreEnsCodigo
+							where AreEnsSequencial    = remAreEnsSequencial when remAreEnsSequencial<>0
+							where pratoCodigo         = &carPratoRefeicao
+							where pratIngrQuantidade  > 0							
+							where pratIngrTipoRemessa = &disTipNumero
+							      &pratIngrQuantidade = pratIngrQuantidade
+						 	      &pratIngrProdCodigo = pratIngrProdCodigo
+
+								  // Log.Error(!"Error message",!"Ingrediente : " + pratIngrProdCodigo.ToString() + ' Distribuição : ' + &distCodigo.ToString() )
+		
+								  // Calculando as quantidades
+								  PRCDSalvarRemessaAlimentos( &prefCodigo,
+															  &remCodigo,
+															  &pratIngrProdCodigo,
+															  remAreEnsCodigo,
+															  remAreEnsSequencial,
+															  0,
+															  &AtendimentoNormalSegunda,
+															  &pratIngrQuantidade,
+															  &distCodigo,
+															  &dataInicial,
+															  &dataFinal,
+															  0)
+						endfor
+					endif
+		  endfor
+      endif
+      &AtendimentoNormalSegunda = 0
+      &locCodigo2  = remLocal
+endfor
+
+if &carGru.count = 0
+   msg('Não tem cardápio gerado para este período em nenhum grupo!')
+endif
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&remCodigo,in:&dataEnvio,in:&locCodigo,in:&dataInicial,in:&dataFinal,in:&disTipNumero);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="totalLocais">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>totalLocais</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="totalProdutos">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>totalProdutos</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AtendimentoNormalSegunda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AtendimentoNormalSegunda</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Normal Segunda</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratIngrQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:codigoMaior</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remessas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remessas</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGru">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGru</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remItemPeriodo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remItemPeriodo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Periodo de Consumo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remItemPeriodo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="disTipNumero">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>disTipNumero</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Número</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:disTipNumero</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratIngrProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Produto</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carPratoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carPratoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Refeição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carPratoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="codigoGrupo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>codigoGrupo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDPopularDistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Populando a Distribuição de Alimentos para as Unidades</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

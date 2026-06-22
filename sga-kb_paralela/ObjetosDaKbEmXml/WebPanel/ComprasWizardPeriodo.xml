@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="7cc46d2a-3bcf-0604-399b-537f7d1576db" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-14T14:04:33.0000000Z" checksum="bd94002a5ade7401210db70d4f06845d" fullyQualifiedName="ComprasWizardPeriodo" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1352e35b-8c56-4544-a07e-21c087bd8de8" name="ComprasWizardPeriodo" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Compras Wizard Periodo" parent="WorkWithPlusComprasWizard" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;PanelNoHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[{&quot;width&quot;:50,&quot;label&quot;:42}]]}]" containerSlotName="TableAttributes"><row><cell><group controlName="UnnamedGroup1" caption="Período" class="Group"><table controlName="TableMesAno" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><table controlName="UnnamedTableMes" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="MergeLabelCell CellWidth_12_5"><textblock controlName="TextBlockMes" caption="Mês" class="Label" /></cell><cell cellClass="CellWidth_87_5"><data attribute="&amp;Mes" labelPosition="None" class="AttributeRealWidth" /></cell></row></table></cell><cell cellClass="DataContentCell"><data attribute="&amp;Ano" labelCaption="Ano" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell"><data attribute="&amp;Semana" labelCaption="Semana" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;Todas&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></group></cell></row><row><cell cellClass="RequiredDataContentCell" hAlign="Right"><data attribute="&amp;DataEnvio" labelCaption="Data Envio" class="AttributeRealWidthDate" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell cellClass="CellWizardActions"><table controlName="TableActions" tableType="Flex" flexWrap="Wrap" justifyContent="Space Between"><row><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardFirstPrevious&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;BeforeIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Event&lt;/Name&gt;&lt;Value&gt;'WizardPrevious'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;BtnDefault ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardNext&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AfterIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GXM_next&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;Button ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute AttID="&amp;DataInicial" /><gxAttribute AttID="&amp;DataFinal" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&WebSessionKey, in:&PreviousStep, in:&GoingBack);
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call(&WWPContext)
+   	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'LoadVariablesFromWizardData'
+	&DataInicial.Visible = False
+	&DataFinal.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	if &Ano.IsEmpty()
+		&Ano = year(serverdate())
+	endif
+
+	if &Mes.IsEmpty()
+		&Mes = Meses.Convert(month(serverdate()))
+	endif
+
+	if &DataEnvio.IsEmpty()
+		&DataEnvio = serverdate()
+	endif
+
+	if &Ano.Count = 0
+		&Ano.AddItem(&Ano,&Ano.ToString())
+		if &Mes = Meses.Dezembro
+			&Ano.AddItem((&Ano+1),Str((&Ano+1),4,0))
+		endif
+	endif
+
+	do 'MontarSemanas'
+
+	BtnWizardFirstPrevious.Visible = false
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Enter
+
+	if &Semana = 0
+		&DataInicial.Set(&Ano,Meses.Convert(&Mes),1)
+		&DataFinal = &DataInicial.EndOfMonth()
+	else
+		&DataInicial = &DataInicialCollection.Item(&Semana)
+		&DataFinal 	 = &DataFinalCollection.Item(&Semana)
+	endif
+
+	// Valida data de envio
+	if &DataEnvio < &DataInicial.AddDays(-7)
+		msg('A data de envio não pode ser anterior a 7 dias do início do período informado.')
+		&HasValidationErrors = true
+	else
+		&HasValidationErrors = false
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'CheckRequiredFields'
+	If &CheckRequiredFieldsResult AND not &HasValidationErrors
+		Do 'SaveVariablesToWizardData'
+		ComprasWizard(!'Periodo', !'Locais', false)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'WizardPrevious'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If not (not &GoingBack)
+		BtnWizardFirstPrevious.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadVariablesFromWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&DataInicial = &WizardData.Periodo.DataInicial
+	&DataFinal = &WizardData.Periodo.DataFinal
+	&DataEnvio = &WizardData.Periodo.DataEnvio
+	&Mes = &WizardData.Periodo.Mes
+	&Ano = &WizardData.Periodo.Ano
+	&Semana = &WizardData.Periodo.Semana
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveVariablesToWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&WizardData.Periodo.DataInicial = &DataInicial
+	&WizardData.Periodo.DataFinal = &DataFinal
+	&WizardData.Periodo.DataEnvio = &DataEnvio
+	&WizardData.Periodo.Mes = &Mes
+	&WizardData.Periodo.Ano = &Ano
+	&WizardData.Periodo.Semana = &Semana
+	&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckRequiredFields'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&CheckRequiredFieldsResult = True
+	If &DataEnvio.IsEmpty()
+		Msg(DVMessageGetBasicNotificationMsg('', Format('WWP_RequiredAttribute','Data Envio'), DVMessageType.error, &DataEnvio.InternalName, DVMessageBoolean.True, ''))
+		&CheckRequiredFieldsResult = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event &Mes.ControlValueChanged
+
+	do 'MontarSemanas'
+
+EndEvent
+
+Event &Ano.Click
+
+	do 'MontarSemanas'
+
+EndEvent
+
+Sub 'MontarSemanas'
+
+	&DataInicialCollection.Clear()
+	&DataFinalCollection.Clear()
+	&Semana.Clear()
+
+	/* Data base */
+	&DataBase.Set(&Ano,Meses.Convert(&Mes),1)
+
+	/* Todas */
+	&Semana.AddItem(0,'Todas')
+
+	/* Semana 1 */
+	&DataInicial = &DataBase
+	&DataFinal  = &DataInicial.AddDays((7 - &DataInicial.DayOfWeek()))
+	&DataInicialCollection.Add(&DataInicial)
+	&DataFinalCollection.Add(&DataFinal)
+	&Semana.AddItem(1,format('Semana 1 (%1 a %2)',&DataInicial.ToFormattedString(),&DataFinal.ToFormattedString()))
+
+	/* Semana 2 */
+	&DataInicial = &DataFinal.AddDays(1)
+	&DataFinal 	 = &DataInicial.AddDays((7 - &DataInicial.DayOfWeek()))
+	&DataInicialCollection.Add(&DataInicial)
+	&DataFinalCollection.Add(&DataFinal)
+	&Semana.AddItem(2,format('Semana 2 (%1 a %2)',&DataInicial.ToFormattedString(),&DataFinal.ToFormattedString()))
+
+	/* Semana 3 */
+	&DataInicial = &DataFinal.AddDays(1)
+	&DataFinal 	 = &DataInicial.AddDays((7 - &DataInicial.DayOfWeek()))
+	&DataInicialCollection.Add(&DataInicial)
+	&DataFinalCollection.Add(&DataFinal)
+	&Semana.AddItem(3,format('Semana 3 (%1 a %2)',&DataInicial.ToFormattedString(),&DataFinal.ToFormattedString()))
+
+	/* Semana 4 */
+	&DataInicial = &DataFinal.AddDays(1)
+	&DataFinal 	 = &DataInicial.AddDays((7 - &DataInicial.DayOfWeek()))
+	if &DataFinal > &DataBase.EndOfMonth()
+		&DataFinal = &DataBase.EndOfMonth()
+	endif
+	&DataInicialCollection.Add(&DataInicial)
+	&DataFinalCollection.Add(&DataFinal)
+	&Semana.AddItem(4,format('Semana 4 (%1 a %2)',&DataInicial.ToFormattedString(),&DataFinal.ToFormattedString()))
+
+	/* Semana 5 */
+	if &DataFinal < &DataBase.EndOfMonth()
+		&DataInicial = &DataFinal.AddDays(1)
+		&DataFinal 	 = &DataInicial.AddDays((7 - &DataInicial.DayOfWeek()))
+		if &DataFinal > &DataBase.EndOfMonth()
+			&DataFinal = &DataBase.EndOfMonth()
+		endif
+		&DataInicialCollection.Add(&DataInicial)
+		&DataFinalCollection.Add(&DataFinal)
+		&Semana.AddItem(5,format('Semana 5 (%1 a %2)',&DataInicial.ToFormattedString(),&DataFinal.ToFormattedString()))
+	else
+		&DataInicial.SetEmpty()
+		&DataFinal.SetEmpty()
+	endif
+
+	/* Semana 6 */
+	if not &DataFinal.IsEmpty() and &DataFinal < &DataBase.EndOfMonth()
+		&DataInicial = &DataFinal.AddDays(1)
+		&DataFinal 	 = &DataBase.EndOfMonth()
+		&DataInicialCollection.Add(&DataInicial)
+		&DataFinalCollection.Add(&DataFinal)
+		&Semana.AddItem(6,format('Semana 6 (%1 a %2)',&DataInicial.ToFormattedString(),&DataFinal.ToFormattedString()))
+	endif
+
+	&DataInicial.SetEmpty()
+	&DataFinal.SetEmpty()
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[prefCodigo = &prefCodigo; 
+RanchoStatus = Status.Ativo;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Ano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Ano</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GoingBack">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GoingBack</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HasValidationErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HasValidationErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Mes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Mes</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Meses</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_START</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_STEP</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AUTONUMBER_FORREPLICATION</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>AttValueRange</Name>
+          <Value>1 2 3 4 5 6 7 8 9 10 11 12</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PreviousStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PreviousStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSessionKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSessionKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WizardData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WizardData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ComprasWizardData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CheckRequiredFieldsResult">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CheckRequiredFieldsResult</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Semana">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Semana</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataInicialCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataInicialCollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataFinalCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataFinalCollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataBase">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataBase</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CurrentStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CurrentStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>ComprasWizardPeriodo</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusComprasWizard</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/WPRoot[1]/steps/step[@Name="Periodo"]</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>WizardStep</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

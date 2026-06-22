@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="062c3167-36e3-0c23-2d2c-4947ef3809b0" user="JORGE-AVELL\joadh" versionDate="2025-02-19T00:13:32.0000000Z" lastUpdate="2025-01-20T20:23:07.0000000Z" checksum="4b2ce1abe4fa3d92307d574792fb1297" fullyQualifiedName="DiagnosticoNutricionalDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1492da81-84b6-4d6b-9856-0f88551b81ed" name="DiagnosticoNutricionalDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Diagnostico Nutricional DS" parent="WorkWithPlusDiagnosticoNutricional" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[diag_nutricional_Ano = &diag_nutricional_Ano when not &diag_nutricional_Ano.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[diag_nutricional_Escola = &diag_nutricional_Escola when not &diag_nutricional_Escola.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[diag_nutricional_NumColeta >= &diag_nutricional_NumColeta when not &diag_nutricional_NumColeta.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[diag_nutricional_AlunoNome.ToLower() like &TFdiag_nutricional_AlunoNome.ToLower() when &TFdiag_nutricional_AlunoNome_Sel.IsEmpty() AND (not &TFdiag_nutricional_AlunoNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[diag_nutricional_AlunoNome = &TFdiag_nutricional_AlunoNome_Sel when not &TFdiag_nutricional_AlunoNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="diag_nutricional_Ano">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>diag_nutricional_Ano</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:diag_nutricional_Ano</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="diag_nutricional_Escola">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>diag_nutricional_Escola</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:diag_nutricional_Escola</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="diag_nutricional_NumColeta">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>diag_nutricional_NumColeta</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:diag_nutricional_NumColeta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdiag_nutricional_AlunoNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdiag_nutricional_AlunoNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:diag_nutricional_AlunoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdiag_nutricional_AlunoNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdiag_nutricional_AlunoNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:diag_nutricional_AlunoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>diag_nutricional_Ano</Name>
+        <Description>diag_nutricional_Ano</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>diag_nutricional_Escola</Name>
+        <Description>diag_nutricional_Escola</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>diag_nutricional_NumColeta</Name>
+        <Description>diag_nutricional_Num Coleta</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdiag_nutricional_AlunoNome</Name>
+        <Description>TFdiag_nutricional_Aluno Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdiag_nutricional_AlunoNome_Sel</Name>
+        <Description>TFdiag_nutricional_Aluno Nome_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>DiagnosticoNutricionalDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusDiagnosticoNutricional</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

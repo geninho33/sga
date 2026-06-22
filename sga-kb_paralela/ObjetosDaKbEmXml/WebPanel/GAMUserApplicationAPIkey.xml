@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="b82081db-9db5-4f7d-aa4f-8e1a3caf3ceb" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T19:25:33.0000000Z" checksum="3890ee82827817c7371b60680ff072fd" fullyQualifiedName="GAMUserApplicationAPIkey" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="411767f9-44a6-485b-b2ad-df05e49e3057" name="GAMUserApplicationAPIkey" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Application API key" parent="GAM_Users" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" class="Table TableTransactionTemplate" tableType="Responsive" formClass="FormNoBackgroundColor" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransactionPopUp" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><data attribute="&amp;GAMUserEmail" labelCaption="WWP_GAM_Email" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;ClientID" labelCaption="WWP_GAM_ClientId" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell><table controlName="TblRESTScopes" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TblRESTPredScopes" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellMarginTop"><textblock controlName="TextBlock1" caption="GAM_Alloweduserscopes" class="TextBlock AttributeSizeLarge" /></cell></row><row><cell><table controlName="UnnamedTable1" tableType="Flex"><row><cell cellClass="DataContentCell"><data attribute="&amp;ClientAllowGetUserDataREST" labelPosition="None" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Check Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlTitle&lt;/Name&gt;&lt;Value&gt;WWP_GAM_Userdata&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell"><data attribute="&amp;ClientAllowGetUserAddDataREST" labelPosition="None" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Check Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlTitle&lt;/Name&gt;&lt;Value&gt;WWP_GAM_Useradditionaldata&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell"><data attribute="&amp;ClientAllowGetUserRolesRest" labelPosition="None" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Check Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlTitle&lt;/Name&gt;&lt;Value&gt;WWP_GAM_UserRoles&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;ClientAllowGetSessionIniPropREST" labelPosition="None" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Check Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlTitle&lt;/Name&gt;&lt;Value&gt;WWP_GAM_Sessioninitialproperties&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell"><data attribute="&amp;ClientAllowGetSessionAppDataREST" labelPosition="None" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Check Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlTitle&lt;/Name&gt;&lt;Value&gt;WWP_GAM_Sessionapplicationdata&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell cellClass="CellMarginBottom15"><data attribute="&amp;ClientAllowAdditionalScopeREST" labelCaption="WWP_GAM_Additionaluserscopes" class="AttributeRealWidth" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;Expires" labelCaption="WWP_GAM_Expires" readonly="True" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="&amp;APIkey" labelCaption="WWP_GAM_APIkey" readonly="True" class="ReadonlyAttribute" /></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnEnter" onClickEvent="Enter" caption="WWP_GAM_Generate" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnCancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&UserGUID, in:&ClientID);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	TblRESTScopes.Visible				= False
+	&Expires.Visible 					= False
+
+	&GAMUser.Load(&UserGUID)
+	If &GAMUser.Success()
+		&GAMUserEmail = &GAMUser.EMail
+	Else
+		Return
+	Endif
+	&GAMApplication = GAMApplication.GetByClientId(&ClientID, &GAMErrorCollection)
+	If &GAMErrorCollection.Count = 0
+		Form.Caption 	= Format("WWP_GAM_1applicationAPIkeyfor2", &GAMApplication.Name, &GAMUser.Name)
+		//The application must have the property APIKeyEnable=true and ClientAllowRemoteRESTAuthentication=true
+		If &GAMApplication.APIKeyEnable  AND  &GAMApplication.ClientAllowRemoteRESTAuthentication
+			If &GAMApplication.APIKeyAllowScopeCustomization
+				&ClientAllowGetUserDataREST			= &GAMApplication.ClientAllowGetUserDataREST
+				&ClientAllowGetUserAddDataREST 		= &GAMApplication.ClientAllowGetUserAdditionalDataREST
+				&ClientAllowGetUserRolesREST		= &GAMApplication.ClientAllowGetUserRolesREST
+				&ClientAllowGetSessionIniPropREST	= &GAMApplication.ClientAllowGetSessionInitialPropertiesREST
+				&ClientAllowGetSessionAppDataREST	= &GAMApplication.ClientAllowGetSessionApplicationDataREST
+				&ClientAllowAdditionalScopeREST		= &GAMApplication.ClientAllowAdditionalScopeREST
+
+				If not &ClientAllowGetUserDataREST
+					&ClientAllowGetUserDataREST.Visible = False
+				Endif
+				If not &ClientAllowGetUserAddDataREST
+					&ClientAllowGetUserAddDataREST.Visible = False
+				Endif
+				If not &ClientAllowGetUserRolesREST
+					&ClientAllowGetUserRolesREST.Visible = False
+				Endif
+				If not &ClientAllowGetSessionIniPropREST
+					&ClientAllowGetSessionIniPropREST.Visible = False
+				Endif
+				If not &ClientAllowGetSessionAppDataREST
+					&ClientAllowGetSessionAppDataREST.Visible = False
+				Endif
+				If not &ClientAllowGetUserDataREST  AND  not &ClientAllowGetUserAddDataREST  AND  not &ClientAllowGetUserRolesREST AND
+				   not &ClientAllowGetSessionIniPropREST  AND  not &ClientAllowGetSessionAppDataREST
+					TblRESTPredScopes.Visible	= False
+				Else
+					TblRESTScopes.Visible		= True
+				Endif
+				If not &ClientAllowAdditionalScopeREST.IsEmpty()
+					TblRESTScopes.Visible		= True
+				Endif
+			Endif
+		Else
+			Return
+		Endif
+	Else
+		Return
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'Confirm'
+
+	&GAMUser.Load(&UserGUID)
+	If &GAMUser.Success()
+		GeneXusSecurity.GAM.BuildDetailedScope(&ClientAllowGetUserDataREST, &ClientAllowGetUserAddDataREST, &ClientAllowGetUserRolesREST, &ClientAllowGetSessionIniPropREST, &ClientAllowGetSessionAppDataREST, &ClientAllowAdditionalScopeREST, &DetailedScope)
+		&GenerateAPIKeyOK = &GAMUser.GenerateApplicationAPIkey(&ClientID, &DetailedScope, &UserAPIkey, &UserAPIkeyExpires, &GAMErrorCollection)
+		If &GenerateAPIKeyOK
+			Commit
+			&APIkey = &UserAPIkey
+			&ClientAllowGetUserDataREST.Enabled 		= False
+			&ClientAllowGetUserAddDataREST.Enabled 		= False
+			&ClientAllowGetUserRolesREST.Enabled 		= False
+			&ClientAllowGetSessionIniPropREST.Enabled	= False
+			&ClientAllowGetSessionAppDataREST.Enabled	= False
+			&ClientAllowAdditionalScopeREST.Enabled		= False
+			If not &UserAPIkeyExpires.IsEmpty()
+				&Expires			= &UserAPIkeyExpires
+				&Expires.Visible 	= True
+			Endif
+			BtnEnter.Visible 			= False
+			BtnCancel.Caption			= "WWP_GAM_Close"
+			msg("WWP_GAM_YourAPIkeywasgeneratedsuccessfully")
+		Endif
+	Endif
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="APIkey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>APIkey</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMPropertyValue, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientID</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Client ID</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMClientApplicationId, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientSecret">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientSecret</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Client secret</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMClientApplicationSecret, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Expires">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Expires</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMDateTime, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplication">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplication</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplication, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrorCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrorCollection</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMUser">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMUser</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMUser, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMUserEmail">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMUserEmail</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>EMail</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMUserIdentification, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserGUID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserGUID</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMGUID, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientAllowGetUserDataREST">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientAllowGetUserDataREST</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>User data</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMBoolean, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientAllowGetUserAddDataREST">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientAllowGetUserAddDataREST</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>User additional data</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMBoolean, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientAllowGetUserRolesRest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientAllowGetUserRolesRest</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>User roles</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMBoolean, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientAllowGetSessionIniPropREST">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientAllowGetSessionIniPropREST</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Session initial properties</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMBoolean, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientAllowGetSessionAppDataREST">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientAllowGetSessionAppDataREST</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Session application data</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMBoolean, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ClientAllowAdditionalScopeREST">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ClientAllowAdditionalScopeREST</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Additional user scopes</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMPropertyValue, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DetailedScope">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DetailedScope</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMPropertyValue, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GenerateAPIKeyOK">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GenerateAPIKeyOK</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMBoolean, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserAPIkey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserAPIkey</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMPropertyValue, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserAPIkeyExpires">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserAPIkeyExpires</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMDateTime, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Scope">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Scope</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMPropertyValue, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GAMUserApplicationAPIkey</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Application API key</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPagePrompt</Value>
+    </Property>
+    <Property>
+      <Name>SHOWMASTERPAGE_POPUP</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>GAMExampleUserEntry</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+  <Categories>GAM_Samples-web</Categories>
+</Object>

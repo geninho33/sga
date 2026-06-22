@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="36bf3172-e1f9-47ab-98af-7a8621b6718c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2020-11-16T13:06:49.0000000Z" checksum="b6d9076402495bf2cbcb61056f0a7745" fullyQualifiedName="WWPBaseObjects.Discussions.WWP_CreateAndNotifyDiscussionMessage" moduleGuid="e2da86dd-2537-4d5a-8e82-35fda77dc9e5" guid="368a941a-9d93-421f-8a31-538dbc74a574" name="WWP_CreateAndNotifyDiscussionMessage" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Create and notify a DiscussionMessage" parent="WWPBaseObjects.Discussions.Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&WWPDiscussionMessage = new()
+&WWPDiscussionMessage.WWPEntityId = &WWPEntityId
+&WWPDiscussionMessage.WWPDiscussionMessageEntityRecordId = &WWPDiscussionMessageEntityRecordId
+&WWPDiscussionMessage.WWPDiscussionMessageThreadId = &WWPDiscussionMessageThreadId
+&WWPDiscussionMessage.WWPDiscussionMessageMessage = &Message
+&WWPDiscussionMessage.Save()
+If &WWPDiscussionMessage.Success()
+	If Not &MentionWWPUserExtendedIdCollectionJson.IsEmpty()
+		&MentionWWPUserExtendedIdCollection.FromJson(&MentionWWPUserExtendedIdCollectionJson)
+		&ExcludedWWPUserExtendedIdCollection = new()
+		For &WWPUserExtendedId in &MentionWWPUserExtendedIdCollection
+			&WWPDiscussionMessageMention = New()
+			&WWPDiscussionMessageMention.WWPDiscussionMessageId = &WWPDiscussionMessage.WWPDiscussionMessageId
+			&WWPDiscussionMessageMention.WWPDiscussionMentionUserId = &WWPUserExtendedId
+			&WWPDiscussionMessageMention.Save()
+			
+			&ExcludedWWPUserExtendedIdCollection.Add(&WWPUserExtendedId.Trim())
+		EndFor
+	EndIf
+
+	Commit
+	WWP_NotifyDiscussionMessage(&WWPDiscussionMessage.WWPUserExtendedFullName, &WWPDiscussionMessage.WWPEntityName, &WWPDiscussionMessageEntityRecordId, &ExcludedWWPUserExtendedIdCollection.ToJson(), &SessionValue, &NotificationTitle, &WWPSubscriptionEntityRecordDescription, &WWPNotificationLink)
+	&DiscussionMessageCreated = True
+Endif
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&WWPEntityId, in:&WWPDiscussionMessageThreadId, in:&WWPDiscussionMessageEntityRecordId, in:&Message, in:&MentionWWPUserExtendedIdCollectionJson, in:&SessionValue, in:&NotificationTitle, in:&WWPSubscriptionEntityRecordDescription, in:&WWPNotificationLink, out:&DiscussionMessageCreated);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="ExcludedWWPUserExtendedIdCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcludedWWPUserExtendedIdCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>User Id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedId</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionMessage</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:WWP_DiscussionMessage, WWPBaseObjects.Discussions</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionMessageMention">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionMessageMention</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:WWP_DiscussionMessageMention, WWPBaseObjects.Discussions</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DiscussionMessageCreated">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DiscussionMessageCreated</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MentionWWPUserExtendedIdCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MentionWWPUserExtendedIdCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPUser Extended Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedId</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MentionWWPUserExtendedIdCollectionJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MentionWWPUserExtendedIdCollectionJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>400</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>400</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SessionValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SessionValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionMessageEntityRecordId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionMessageEntityRecordId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPDiscussion Message Entity Record Id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPDiscussionMessageEntityRecordId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPDiscussionMessageThreadId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPDiscussionMessageThreadId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPDiscussion Message Thread Id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPDiscussionMessageThreadId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPEntityId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPEntityId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPEntity Id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPEntityId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="NotificationTitle">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>NotificationTitle</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPNotificationLink">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationLink</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Link</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationLink</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPSubscriptionEntityRecordDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPSubscriptionEntityRecordDescription</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPSubscription Entity Record Description</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPSubscriptionEntityRecordDescription</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPUserExtendedId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPUserExtendedId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPUser Extended Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPUserExtendedId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_CreateAndNotifyDiscussionMessage</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Create and notify a DiscussionMessage</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

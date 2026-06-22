@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-01-09T01:03:37.0000000Z" checksum="dc31f8021ee12ebbff2e6461cce6dbea" fullyQualifiedName="PGeraLog" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="01717d7c-0a37-41cf-9596-53415a4fe249" name="PGeraLog" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="PGera Log">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+&File.Source="log"
+//msg("&File: " + &File.GetAbsoluteName(), nowait)
+
+&Directory.Source = &File.GetAbsoluteName()
+if not &Directory.Exists()
+	&Directory.Create()
+
+	//msg("if", nowait)
+else
+	//msg("else", nowait)
+endif
+
+//msg("&Directory: " + &Directory.GetAbsoluteName(), nowait)
+
+
+&ServerDate = ServerDate()
+&File.Source= &Directory.GetAbsoluteName() + "\log_"+&ServerDate.year().ToString().Trim()+&ServerDate.Month().ToString().PadLeft(2,"0")+&ServerDate.Day().ToString().PadLeft(2,"0")+'.txt'
+//msg("&File: " + &File.GetAbsoluteName(), nowait)
+if not &File.Exists()
+	&File.Create()
+
+	//msg("if", nowait)
+else
+	//msg("else", nowait)
+endif
+
+&Texto += " - " + &Txt
+
+
+&ServerNow = ServerNow()
+
+&File.OpenWrite()
+&File.WriteLine(&ServerNow.ToFormattedString()+ ' ** ' + &programa + ' ** ' + &Texto)
+&File.Close()
+
+//&append   = 1
+////&TramiteEtapaItem.FromJson(&Txt)
+//&DataHora = ServerNow()
+//&Texto = &DataHora.ToFormattedString()
+//&Texto += " - " + &Txt
+//&FlagFile = DFWOpen('D:\LOG\log.txt', ' ', ' ', &append, 'UTF8')
+//&FlagFile = DFWPTxt(&Texto)
+//&FlagFile = DFWNext()
+//&FlagFile = DFWClose()
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(In:&programa, In:&Txt);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Txt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Txt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Texto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Texto</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataHora">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataHora</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:DateTime</Value>
+        </Property>
+        <Property>
+          <Name>idDATEPRECISION</Name>
+          <Value>idDATEPRECISION_MILLISECONDS</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+        <Property>
+          <Name>idHOURFORMAT</Name>
+          <Value>idHOURFORMAT_HOURMINSECMIL</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FlagFile">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FlagFile</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Numeric</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="append">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>append</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="File">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>File</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:File</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Directory">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Directory</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Directory</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ServerDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ServerDate</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="programa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>programa</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>128</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>128</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ServerNow">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ServerNow</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:DateTime</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PGeraLog</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

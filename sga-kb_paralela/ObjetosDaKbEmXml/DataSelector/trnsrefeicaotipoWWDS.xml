@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e3ae01b9-9d81-ad01-2bbf-66fb91017008" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-02T05:03:28.0000000Z" lastUpdate="2025-04-02T03:38:47.0000000Z" checksum="1a36810207ad0eacebe26e05cea56f63" fullyQualifiedName="trnsrefeicaotipoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2b12f5c6-3463-4475-a954-1074de60767d" name="trnsrefeicaotipoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsrefeicaotipo WWDS" parent="WorkWithPlustrnsrefeicaotipo" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[refTipCodigo = &refTipCodigo1 when &DynamicFiltersSelector1 = !'REFTIPCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &refTipCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like &refTipDescricao1.ToLower() when &DynamicFiltersSelector1 = !'REFTIPDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &refTipDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like '%' +  &refTipDescricao1.ToLower() when &DynamicFiltersSelector1 = !'REFTIPDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &refTipDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipperiodo = &refTipperiodo1 when &DynamicFiltersSelector1 = !'REFTIPPERIODO' AND (not &refTipperiodo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipstatus = &refTipstatus1 when &DynamicFiltersSelector1 = !'REFTIPSTATUS' AND (not &refTipstatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipCodigo = &refTipCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REFTIPCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &refTipCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like &refTipDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REFTIPDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &refTipDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like '%' +  &refTipDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REFTIPDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &refTipDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipperiodo = &refTipperiodo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REFTIPPERIODO' AND (not &refTipperiodo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipstatus = &refTipstatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REFTIPSTATUS' AND (not &refTipstatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipCodigo = &refTipCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REFTIPCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &refTipCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like &refTipDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REFTIPDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &refTipDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like '%' +  &refTipDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REFTIPDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &refTipDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipperiodo = &refTipperiodo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REFTIPPERIODO' AND (not &refTipperiodo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipstatus = &refTipstatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REFTIPSTATUS' AND (not &refTipstatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipCodigo >= &TFrefTipCodigo when not &TFrefTipCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipCodigo <= &TFrefTipCodigo_To when not &TFrefTipCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipAbreviatura.ToLower() like &TFrefTipAbreviatura.ToLower() when &TFrefTipAbreviatura_Sel.IsEmpty() AND (not &TFrefTipAbreviatura.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipAbreviatura = &TFrefTipAbreviatura_Sel when not &TFrefTipAbreviatura_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like &TFrefTipDescricao.ToLower() when &TFrefTipDescricao_Sel.IsEmpty() AND (not &TFrefTipDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao = &TFrefTipDescricao_Sel when not &TFrefTipDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipperiodo in &TFrefTipperiodo_Sels when &TFrefTipperiodo_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipHorario >= &TFrefTipHorario when not &TFrefTipHorario.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipHorario <= &TFrefTipHorario_To when not &TFrefTipHorario_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipHorario2 >= &TFrefTipHorario2 when not &TFrefTipHorario2.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipHorario2 <= &TFrefTipHorario2_To when not &TFrefTipHorario2_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipstatus in &TFrefTipstatus_Sels when &TFrefTipstatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipAbreviatura">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipAbreviatura</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipAbreviatura</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipAbreviatura_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipAbreviatura_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipAbreviatura</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipperiodo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipperiodo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipperiodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipstatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipstatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipstatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipperiodo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipperiodo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipperiodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipstatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipstatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipstatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipperiodo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipperiodo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipperiodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="refTipstatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>refTipstatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipstatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipperiodo_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipperiodo_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipperiodo</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipstatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipstatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipstatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipHorario">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipHorario</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipHorario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipHorario_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipHorario_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipHorario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipHorario2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipHorario2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipHorario2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFrefTipHorario2_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFrefTipHorario2_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipHorario2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipCodigo1</Name>
+        <Description>ref Tip Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipDescricao1</Name>
+        <Description>ref Tip Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipperiodo1</Name>
+        <Description>ref Tipperiodo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipstatus1</Name>
+        <Description>ref Tipstatus1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipCodigo2</Name>
+        <Description>ref Tip Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipDescricao2</Name>
+        <Description>ref Tip Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipperiodo2</Name>
+        <Description>ref Tipperiodo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipstatus2</Name>
+        <Description>ref Tipstatus2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipCodigo3</Name>
+        <Description>ref Tip Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipDescricao3</Name>
+        <Description>ref Tip Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipperiodo3</Name>
+        <Description>ref Tipperiodo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>refTipstatus3</Name>
+        <Description>ref Tipstatus3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipCodigo</Name>
+        <Description>TFref Tip Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipCodigo_To</Name>
+        <Description>TFref Tip Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipAbreviatura</Name>
+        <Description>TFref Tip Abreviatura</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipAbreviatura_Sel</Name>
+        <Description>TFref Tip Abreviatura_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipDescricao</Name>
+        <Description>TFref Tip Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipDescricao_Sel</Name>
+        <Description>TFref Tip Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipperiodo_Sels</Name>
+        <Description>TFref Tipperiodo_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipHorario</Name>
+        <Description>TFref Tip Horario</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipHorario_To</Name>
+        <Description>TFref Tip Horario_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipHorario2</Name>
+        <Description>TFref Tip Horario2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipHorario2_To</Name>
+        <Description>TFref Tip Horario2_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFrefTipstatus_Sels</Name>
+        <Description>TFref Tipstatus_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsrefeicaotipoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsrefeicaotipo</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

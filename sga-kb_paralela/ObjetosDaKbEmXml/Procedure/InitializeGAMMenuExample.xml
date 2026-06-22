@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="159fad11-329d-4b0f-ab38-2a38d2f35f3d" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2017-08-14T16:24:57.0000000Z" checksum="be1973c4131484a7fbf451ce2479c4db" fullyQualifiedName="WWPBaseObjects.InitializeGAMMenuExample" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="a283cd34-2903-4a18-9963-1ddcd596cc92" name="InitializeGAMMenuExample" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Initialize GAMMenu Example" parent="WWPBaseObjects.MenuData" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&Link = ''
+&GAMApplication = GAMApplication.Get() 
+
+&MenuItemName = "GAM_Repository"
+do 'CreateMenu'
+&RepositoryAppMenuId = &GAMApplicationMenu.Id
+&AppMenuId  = &RepositoryAppMenuId
+
+&MenuItemName = "Configuration"
+&GAMPermissionName = !"gamrepositoryconfiguration_Execute"
+do 'CreateMenuItem'
+
+&MenuItemName = "Connections"
+&GAMPermissionName = !"gamwwconnections_Execute"
+do 'CreateMenuItem'
+
+&MenuItemName = "Change Repository"
+&GAMPermissionName = !"gamchangerepository_Execute"
+do 'CreateMenuItem'
+
+&MenuItemName = "GAM_OtherConfigurations"
+do 'CreateMenu'
+&OtherConfigsAppMenuId = &GAMApplicationMenu.Id
+&AppMenuId  = &GAMApplicationMenu.Id
+
+&MenuItemName = "Security Policies"
+&GAMPermissionName = !"gamwwsecuritypolicy_Execute"
+do 'CreateMenuItem'
+
+&MenuItemName = "Authentication Types"
+&GAMPermissionName = !"gamwwauthtypes_Execute"
+do 'CreateMenuItem'
+
+&MenuItemName = "Event Subscriptions"
+&GAMPermissionName = !"gamwweventsubscriptions_Execute"
+do 'CreateMenuItem'
+
+      
+
+&MenuItemName = "GAM_Security"
+do 'CreateMenu'
+&SecurityMenuID = &GAMApplicationMenu.Id
+&AppMenuId  = &GAMApplicationMenu.Id
+
+&MenuItemName = "Users"
+&GAMPermissionName = !"gamwwusers_Execute"
+do 'CreateMenuItem'
+
+&MenuItemName = "Roles"
+&GAMPermissionName = !"gamwwroles_Execute"
+do 'CreateMenuItem'
+
+&MenuItemName = "Applications"
+&GAMPermissionName = !"gamwwapplications_Execute"
+do 'CreateMenuItem' 
+   
+
+&MenuItemName = "Repository"
+&AppSubMenuId = &RepositoryAppMenuId
+do 'CreateMenuSubmenu'
+
+&MenuItemName = "Other Configurations"
+&AppSubMenuId = &OtherConfigsAppMenuId
+do 'CreateMenuSubmenu'
+
+&MenuItemName = !"MainMenu"
+do 'CreateMenu'
+&AppMenuId  = &GAMApplicationMenu.Id
+
+&MenuItemName = "Home"
+&GAMPermissionName = !"home_Execute"
+&IconClass = !"menu-icon fa fa-home"
+do 'CreateMenuItem'
+
+&MenuItemName = "Security"
+&AppSubMenuId = &SecurityMenuID
+&IconClass = !"menu-icon fa fa-key"
+do 'CreateMenuSubmenu'
+
+&GAMApplication.Load(&GAMApplication.Id)
+&GAMApplication.MainMenuId = &GAMApplicationMenu.Id
+&GAMApplication.Save()
+Commit
+
+Sub 'CreateMenu'
+	&GAMApplicationMenu = new()
+	&GAMApplicationMenu.Name = &MenuItemName
+	&IsOk = &GAMApplication.AddMenu(&GAMApplicationMenu, &GAMErrorCollection)
+	if &IsOk
+		Commit
+	else
+		Do 'Errors'
+	endif
+EndSub
+
+Sub 'CreateMenuSubmenu'
+	&GAMApplicationMenuOption = new()
+	&GAMApplicationMenuOption.Name = &MenuItemName
+	&GAMApplicationMenuOption.Type = GamMenuOptionType.Menu
+	&GAMApplicationMenuOption.SubMenuId	= &AppSubMenuId
+	
+	&GAMProperty = new()
+	&GAMProperty.Id = "IconClass"
+	&GAMProperty.Value = &IconClass
+	&GAMApplicationMenuOption.Properties.Add(&GAMProperty)
+	
+	&GAMProperty = new()
+	&GAMProperty.Id = "Link"
+	&GAMProperty.Value = &Link
+	&GAMApplicationMenuOption.Properties.Add(&GAMProperty)
+	
+	&GAMApplication.AddMenuOption(&AppMenuId, &GAMApplicationMenuOption, &GAMErrorCollection)
+	if &IsOk
+		Commit
+	else
+		Do 'Errors'
+	endif
+EndSub
+
+Sub 'CreateMenuItem'
+	&GAMApplicationMenuOption = new()
+	&GAMApplicationMenuOption.Name = &MenuItemName
+	&GAMApplicationMenuOption.Type = GamMenuOptionType.Simple
+	&GAMApplicationPermission = &GAMApplication.GetPermissionByName(&GAMPermissionName, &GAMErrorCollection)
+	&GAMApplicationMenuOption.PermissionResourceGUID = &GAMApplicationPermission.GUID
+	&GAMApplicationMenuOption.Resource	= Trim(&GAMApplicationPermission.Resource)
+	
+	If (not &IconClass.IsEmpty())
+		&GAMProperty = new()
+		&GAMProperty.Id = "IconClass"
+		&GAMProperty.Value = &IconClass
+		&GAMApplicationMenuOption.Properties.Add(&GAMProperty)
+		
+		&GAMProperty = new()
+		&GAMProperty.Id = "Link"
+		&GAMProperty.Value = &Link
+		&GAMApplicationMenuOption.Properties.Add(&GAMProperty)
+	EndIf
+
+	&IsOk = &GAMApplication.AddMenuOption(&AppMenuId, &GAMApplicationMenuOption, &GAMErrorCollection)
+	
+	if &IsOk
+		Commit
+	else
+		Do 'Errors'
+	endif
+EndSub
+
+
+Sub 'Errors'
+	For &Error in &GAMErrorCollection
+		Msg(Format(!"%1 (GAM%2)", &Error.Message, &Error.Code))
+	EndFor
+endsub
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="GAMApplicationMenuOption">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplicationMenuOption</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplicationMenuOption, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AppMenuId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AppMenuId</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMKeyNumLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AppSubMenuId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AppSubMenuId</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMKeyNumLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Error">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Error</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplication">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplication</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplication, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplicationMenu">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplicationMenu</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplicationMenu, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplicationMenu_OtherConfigs">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplicationMenu_OtherConfigs</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplicationMenu, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplicationMenu_Repository">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplicationMenu_Repository</Value>
+        </Property>
+        <Property>
+          <Name>EmptyAsNull</Name>
+          <Value>Yes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplicationMenu, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>254</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>254</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>0</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplicationPermission">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplicationPermission</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplicationPermission, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplicationSubmenu">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplicationSubmenu</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplicationMenu, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrorCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrorCollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMPermissionName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMPermissionName</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMDescriptionLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMProperty">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMProperty</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMProperty, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IconClass">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IconClass</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsOk">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsOk</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Link">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Link</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MenuItemName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MenuItemName</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OtherConfigsAppMenuId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OtherConfigsAppMenuId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PermissionFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PermissionFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplicationPermissionFilter, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="RepositoryAppMenuId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>RepositoryAppMenuId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityMenuID">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityMenuID</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>InitializeGAMMenuExample</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

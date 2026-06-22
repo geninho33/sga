@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="bc5bda93-cfa3-29e5-6f28-34c3a40d3c8e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-06-20T16:41:15.0000000Z" checksum="1cb8b612db962d826ea7ca4e458e345c" fullyQualifiedName="trnscalendarioletivoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2a904f85-7fb5-469b-ab7f-f9b57816ac1b" name="trnscalendarioletivoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnscalendarioletivo WWDS" parent="WorkWithPlustrnscalendarioletivo" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[calDescricao.ToLower() like &calDescricao1.ToLower() when &DynamicFiltersSelector1 = !'CALDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &calDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDescricao.ToLower() like '%' +  &calDescricao1.ToLower() when &DynamicFiltersSelector1 = !'CALDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &calDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData < &calData1 when &DynamicFiltersSelector1 = !'CALDATA' AND &DynamicFiltersOperator1 = 0 AND (not &calData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData = &calData1 when &DynamicFiltersSelector1 = !'CALDATA' AND &DynamicFiltersOperator1 = 1 AND (not &calData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData > &calData1 when &DynamicFiltersSelector1 = !'CALDATA' AND &DynamicFiltersOperator1 = 2 AND (not &calData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData >= &calData1 when &DynamicFiltersSelector1 = !'CALDATA' AND &DynamicFiltersOperator1 = 3 AND (not &calData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData <= &calData_To1 when &DynamicFiltersSelector1 = !'CALDATA' AND &DynamicFiltersOperator1 = 3 AND (not &calData_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDiautil = &calDiautil1 when &DynamicFiltersSelector1 = !'CALDIAUTIL' AND (not &calDiautil1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calFeriado = &calFeriado1 when &DynamicFiltersSelector1 = !'CALFERIADO' AND (not &calFeriado1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDescricao.ToLower() like &calDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &calDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDescricao.ToLower() like '%' +  &calDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &calDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData < &calData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDATA' AND &DynamicFiltersOperator2 = 0 AND (not &calData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData = &calData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDATA' AND &DynamicFiltersOperator2 = 1 AND (not &calData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData > &calData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDATA' AND &DynamicFiltersOperator2 = 2 AND (not &calData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData >= &calData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDATA' AND &DynamicFiltersOperator2 = 3 AND (not &calData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData <= &calData_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDATA' AND &DynamicFiltersOperator2 = 3 AND (not &calData_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDiautil = &calDiautil2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALDIAUTIL' AND (not &calDiautil2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calFeriado = &calFeriado2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CALFERIADO' AND (not &calFeriado2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDescricao.ToLower() like &calDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &calDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDescricao.ToLower() like '%' +  &calDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &calDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData < &calData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDATA' AND &DynamicFiltersOperator3 = 0 AND (not &calData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData = &calData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDATA' AND &DynamicFiltersOperator3 = 1 AND (not &calData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData > &calData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDATA' AND &DynamicFiltersOperator3 = 2 AND (not &calData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData >= &calData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDATA' AND &DynamicFiltersOperator3 = 3 AND (not &calData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData <= &calData_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDATA' AND &DynamicFiltersOperator3 = 3 AND (not &calData_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDiautil = &calDiautil3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALDIAUTIL' AND (not &calDiautil3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calFeriado = &calFeriado3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CALFERIADO' AND (not &calFeriado3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calAno >= &TFcalAno when not &TFcalAno.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calAno <= &TFcalAno_To when not &TFcalAno_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData >= &TFcalData when not &TFcalData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calData <= &TFcalData_To when not &TFcalData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDescricao.ToLower() like &TFcalDescricao.ToLower() when &TFcalDescricao_Sel.IsEmpty() AND (not &TFcalDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDescricao = &TFcalDescricao_Sel when not &TFcalDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calDiautil in &TFcalDiautil_Sels when &TFcalDiautil_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calFeriado in &TFcalFeriado_Sels when &TFcalFeriado_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[calStatus in &TFcalStatus_Sels when &TFcalStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalDiautil_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalDiautil_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDiautil</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalFeriado_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalFeriado_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calFeriado</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calData1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calData1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calData_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calData_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calDiautil1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calDiautil1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDiautil</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calFeriado1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calFeriado1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calFeriado</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calData2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calData2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calData_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calData_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calDiautil2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calDiautil2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDiautil</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calFeriado2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calFeriado2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calFeriado</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calData3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calData3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calData_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calData_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calDiautil3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calDiautil3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calDiautil</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="calFeriado3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>calFeriado3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calFeriado</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalAno">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalAno</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcalAno_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcalAno_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:calAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calDescricao1</Name>
+        <Description>cal Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calData1</Name>
+        <Description>cal Data1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calData_To1</Name>
+        <Description>cal Data_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calDiautil1</Name>
+        <Description>cal Diautil1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calFeriado1</Name>
+        <Description>cal Feriado1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calDescricao2</Name>
+        <Description>cal Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calData2</Name>
+        <Description>cal Data2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calData_To2</Name>
+        <Description>cal Data_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calDiautil2</Name>
+        <Description>cal Diautil2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calFeriado2</Name>
+        <Description>cal Feriado2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calDescricao3</Name>
+        <Description>cal Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calData3</Name>
+        <Description>cal Data3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calData_To3</Name>
+        <Description>cal Data_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calDiautil3</Name>
+        <Description>cal Diautil3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>calFeriado3</Name>
+        <Description>cal Feriado3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalAno</Name>
+        <Description>TFcal Ano</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalAno_To</Name>
+        <Description>TFcal Ano_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalData</Name>
+        <Description>TFcal Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalData_To</Name>
+        <Description>TFcal Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalDescricao</Name>
+        <Description>TFcal Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalDescricao_Sel</Name>
+        <Description>TFcal Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalDiautil_Sels</Name>
+        <Description>TFcal Diautil_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalFeriado_Sels</Name>
+        <Description>TFcal Feriado_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcalStatus_Sels</Name>
+        <Description>TFcal Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscalendarioletivoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnscalendarioletivo</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

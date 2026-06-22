@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="bd8fa2de-4109-4e1b-ac09-959be8f1f66f" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-05T05:49:41.0000000Z" lastUpdate="2025-10-04T18:49:33.0000000Z" checksum="50a7dcaf8372b0d6906aa6a40ad94bdd" fullyQualifiedName="trnsusuarios" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="076e25e8-eac2-4b3d-114c-973869d57e27" name="trnsusuarios" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Cadastro de Usuários" parent="Configuracoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnsusuarios" Type="trnsusuarios" Description="Cadastro de Usuários" Guid="076e25e8-eac2-4b3d-114c-973869d57e27">
+      <Properties />
+      <AttributeProperties Attribute="usuUnidade">
+        <Properties>
+          <Property>
+            <Name>IncludeInForms</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </AttributeProperties>
+      <Attribute key="True" guid="e13d0263-3eab-4a51-96f3-399efc35fd0b">usuCodigo</Attribute>
+      <Attribute key="False" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="False" guid="a616c77b-8c2e-3889-32ae-969ed7ac8727">usuUsuario</Attribute>
+      <Attribute key="False" guid="542bd457-6991-cdb5-6733-33e82d5c4799">usuNome</Attribute>
+      <Attribute key="False" guid="29aa55ad-7bbe-93c7-9af8-e812a42d5757">usuSenha</Attribute>
+      <Attribute key="False" guid="fdff006e-baf8-e93d-bb42-f92b2c3ceefe">usuValidadeSenha</Attribute>
+      <Attribute key="False" guid="a926e053-fd29-3f47-9bb5-b7b7d53d4f1d">usuGrupo</Attribute>
+      <Attribute key="False" guid="c4727156-fbe9-39a8-18fa-ab429d24c6af">usuUnidade</Attribute>
+      <Attribute key="False" guid="284253e3-db52-4dd2-94f1-93c4054fd007">usuUnidadesPermitidas</Attribute>
+      <Attribute key="False" guid="0eb110ed-4bb0-3e51-a01d-b7110a103223">usuCargo</Attribute>
+      <Attribute key="False" guid="48d8e5ad-931b-1811-edb0-608dd8e682da">usuInscricao</Attribute>
+      <Attribute key="False" guid="a6026ce3-25df-d57c-2a12-2a741caa4f17">usuDataAcesso</Attribute>
+      <Attribute key="False" guid="894e0440-9e52-c0f7-da16-6c874e4aadac">usuEmail</Attribute>
+      <Attribute key="False" guid="6e5766ae-9984-aa01-00b3-f9d9a9dd142a">usuStatus</Attribute>
+      <Attribute key="False" guid="4a252e49-154a-df49-83ad-0034022f8d7e">usuDataCad</Attribute>
+      <Attribute key="False" guid="957d86c8-c871-0b7a-1c25-35350d5ef671">usuDataAlt</Attribute>
+      <Attribute key="False" guid="c2d7eeba-cf68-4962-8e48-525d2992a39d" isNullable="True">usuGUID</Attribute>
+      <Attribute key="False" guid="59052c92-cf05-4835-bcbe-2ccc9b2c3272" isNullable="True">usuGLPI_USER_ID</Attribute>
+      <Attribute key="False" guid="62e8339f-e52a-455d-adc1-85432e40918d" isNullable="True">usuAssinatura</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellControlName="usuCodigo_Cell"><data attribute="usuCodigo" labelCaption="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuUsuario" labelCaption="Usuário" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuNome" labelCaption="Nome" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell ExtendedComboCell"><table controlName="TableSplittedprefCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockprefCodigo" caption="Prefeitura" class="Label" /></cell><cell><ucw gxControlType="-1912433058" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Combo_prefCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ExtendedCombo AttributeRealWidth&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProc&lt;/Name&gt;&lt;Value&gt;trnsusuariosLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListGXProc&lt;/Name&gt;&lt;Value&gt;84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsusuariosLoadDVCombo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DataListProcParametersPrefix&lt;/Name&gt;&lt;Value&gt; &quot;ComboName&quot;: &quot;prefCodigo&quot;, &quot;TrnMode&quot;: &quot;INS&quot;, &quot;IsDynamicCall&quot;: true, &quot;usuCodigo&quot;: 0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItem&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsTitleSettingsIcons&lt;/Name&gt;&lt;Value&gt;&amp;amp;DDO_TitleSettingsIcons&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;prefCodigo_Data&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="Invisible"><data attribute="prefCodigo" labelPosition="None" /></cell></row></table></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuGrupo" labelCaption="Grupo" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuCargo" labelCaption="Cargo" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuInscricao" labelCaption="Documento" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuEmail" labelCaption="Email" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuGUID" labelCaption="Usuário  GAM" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuAssinatura" labelCaption="Assinatura" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="usuStatus" labelCaption="Situacao" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><div id="SectionAttribute_prefCodigo"><gxAttribute AttID="&amp;ComboprefCodigo" /></div><gxAttribute ControlType="Edit" InputType="Values" AttID="usuUnidade" /><gxAttribute ControlType="Edit" InputType="Values" AttID="usuSenha" /><gxAttribute ControlType="Edit" InputType="Values" AttID="usuValidadeSenha" /><gxAttribute ControlType="Edit" InputType="Values" AttID="usuDataAcesso" /><gxAttribute ControlType="Edit" InputType="Values" AttID="usuDataCad" /><gxAttribute ControlType="Edit" InputType="Values" AttID="usuDataAlt" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Document>
+      <Form>
+        <Type>Windows</Type>
+        <Class>Windows</Class>
+        <ClassGuid>4df66249-100d-407d-8ce0-41ec76938671</ClassGuid>
+        <SizeUnit>px</SizeUnit>
+        <Info>
+          <Properties>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>True</Value>
+            </Property>
+            <Property>
+              <Name>Defaults</Name>
+              <Value>gx:TrnDefaultWindowsForm.dkt</Value>
+            </Property>
+          </Properties>
+        </Info>
+      </Form>
+    </Document>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&usuCodigo);
+
+usuCodigo = &usuCodigo if not &usuCodigo.IsEmpty();
+noaccept(usuCodigo);
+noprompt(usuCodigo);
+
+prefCodigo = &Insert_prefCodigo if &Mode = TrnMode.Insert and not &Insert_prefCodigo.IsEmpty();
+noaccept(prefCodigo) if &Mode = TrnMode.Insert and not &Insert_prefCodigo.IsEmpty();
+usuCodigo.Visible = usuCodigo<>0;
+usuCodigo_Cell.Class = !'Invisible' If not(usuCodigo<>0);
+usuCodigo_Cell.Class = !'col-xs-12 DataContentCell' If usuCodigo<>0;
+prefCodigo = &ComboprefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+usuDataCad = serverNow() 
+	on beforeInsert;
+
+usuDataAlt = serverNow() 
+	on beforeUpdate;
+
+usuCodigo = PRCDGerarNovoCodigo('usuario')  
+	on BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	 LoadWWPContext.Call(&WWPContext) 
+     &prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	Combo_prefCodigo.GAMOAuthToken = &GAMSession.Token
+	prefCodigo.Visible = False
+	&ComboprefCodigo.SetEmpty()
+	&ComboprefCodigo.Visible = False
+	Do 'LoadComboprefCodigo'
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	If (&TrnContext.TransactionName = &Pgmname and &Mode = TrnMode.Insert)
+		For &TrnContextAtt in &TrnContext.Attributes
+			Do Case
+				// When inserting with instantiated prefCodigo
+				Case &TrnContextAtt.AttributeName = !"prefCodigo"
+					&Insert_prefCodigo.FromString(&TrnContextAtt.AttributeValue)
+					If not &Insert_prefCodigo.IsEmpty()
+						&ComboprefCodigo = &Insert_prefCodigo
+						Combo_prefCodigo.SelectedValue_set = &ComboprefCodigo.ToString().Trim()
+						&Combo_DataJson = trnsusuariosLoadDVCombo(!'prefCodigo', !'GET', false, &usuCodigo, &TrnContextAtt.AttributeValue, &ComboSelectedValue, &ComboSelectedText)
+						Combo_prefCodigo.SelectedText_set = &ComboSelectedText
+						Combo_prefCodigo.Enabled = False
+					EndIf
+			Endcase
+		Endfor
+	Endif
+	
+	usuUnidade.Visible = False
+	usuSenha.Visible = False
+	usuValidadeSenha.Visible = False
+	usuDataAcesso.Visible = False
+	usuDataCad.Visible = False
+	usuDataAlt.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnsusuariosWW.Call()
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Combo_prefCodigo.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ComboprefCodigo.FromString(Combo_prefCodigo.SelectedValue_get)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	usuCodigo.Visible = False
+	usuCodigo_Cell.Class = !'Invisible'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadComboprefCodigo'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Combo_DataJson = trnsusuariosLoadDVCombo(!'prefCodigo', &Mode, false, &usuCodigo, '', &ComboSelectedValue, &ComboSelectedText)
+	Combo_prefCodigo.SelectedValue_set = &ComboSelectedValue
+	Combo_prefCodigo.SelectedText_set = &ComboSelectedText
+	&ComboprefCodigo.FromString(&ComboSelectedValue)
+	If &Mode = TrnMode.Display OR &Mode = TrnMode.Delete
+		Combo_prefCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="usuCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>usuCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:usuCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="usuUnidadesPermitidas_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>usuUnidadesPermitidas_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombousuUnidadesPermitidas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombousuUnidadesPermitidas</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:usuUnidadesPermitidas</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="usuPref_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>usuPref_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CombousuPref">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CombousuPref</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:usuPref</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Cond_usuPref">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Cond_usuPref</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:usuPref</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SelectedTextCol">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SelectedTextCol</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsusuarios</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Cadastro de Usuários</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnsusuariosWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

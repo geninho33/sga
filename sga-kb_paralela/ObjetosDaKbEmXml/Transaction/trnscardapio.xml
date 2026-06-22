@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="06be50bc-f023-46c5-aecb-856b093eec03" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-03-06T03:46:01.0000000Z" lastUpdate="2026-03-05T23:55:34.0000000Z" checksum="6df35be51321981ee48796ec008b93df" fullyQualifiedName="trnscardapio" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c110e462-54c9-4d83-b16c-25bd4bf89516" name="trnscardapio" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Cadastro de Cardápio" parent="Movimentacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnscardapio" Type="trnscardapio" Description="Cadastro de Cardápio" Guid="c110e462-54c9-4d83-b16c-25bd4bf89516">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="9ef616e3-6b19-4ce7-96b2-10cab811deae">carDapCodigo</Attribute>
+      <Attribute key="False" guid="64a584fc-2bb0-474b-b835-c4778923f8ce">carDapDescricao</Attribute>
+      <Attribute key="False" guid="3db5d2ce-4a71-49a8-9d14-f0ff786e77a6">carDapUsuario</Attribute>
+      <Attribute key="False" guid="6c6ee473-cf40-4741-8d88-8b4147d29ad2">carDapNutricionista</Attribute>
+      <Attribute key="False" guid="7576f971-74bb-40e4-8205-73264e5475b9">carDapMesAno</Attribute>
+      <Attribute key="False" guid="56692280-98c6-47e9-a386-979d33fa387b">carDapNecessidade</Attribute>
+      <Attribute key="False" guid="5ef832f0-b756-4508-a69b-33a392dc0e4e">carDapStatus</Attribute>
+      <Attribute key="False" guid="c6e0ed47-79c5-4974-8c33-8e5c30afb044">carDapDataAlteracao</Attribute>
+      <Attribute key="False" guid="8130ff6b-f654-4df7-9236-ad93b40d01cd">carDapDataCadastro</Attribute>
+      <Attribute key="False" guid="20dfd7bb-8a53-433b-a9bd-09d85c08a471">carDapGruCodigo</Attribute>
+      <Attribute key="False" guid="3785413f-311b-4f70-ae0a-6c1eceb3d29f" isNullable="True">carDapNutricionista1</Attribute>
+      <Attribute key="False" guid="6da29f6f-edba-4f5a-9112-377a236afdaf" isNullable="True">carDapNutricionista2</Attribute>
+      <Attribute key="False" guid="9ee646c3-c703-44d8-b619-7a6d85df7120" isNullable="True">carDapNutricionista3</Attribute>
+      <Attribute key="False" guid="db3d91e4-a103-4635-8c3c-885e879c00de" isNullable="True">carDapLiberarAcesso</Attribute>
+      <Attribute key="False" guid="f0a398cc-090d-43ed-81dd-79c033881da7" isNullable="True">carDapArquivo</Attribute>
+      <Attribute key="False" guid="dfa2cbae-a271-44ed-addf-a3a7e1699f3d">carDapDescricaoReduzido</Attribute>
+      <Attribute key="False" guid="1d58ab9e-9d80-4960-99e9-b129e762679d">carDapDescricaoPeriodo</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><tab controlName="GXUITabsPanel_Tabs1"><item itemControlName="abaDadosGerais" caption="Dados Gerais"><table controlName="UnnamedTable3" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100},{&quot;width&quot;:50}],[{&quot;width&quot;:100}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{},{&quot;width&quot;:50}]]}]" containerSlotName="TableAttributes"><row><cell><table controlName="tableCol1" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;label&quot;:100}],[{&quot;label&quot;:100}]]}]"><row><cell cellControlName="carDapCodigo_Cell"><data attribute="carDapCodigo" labelCaption="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell DscTop"><data attribute="carDapDescricao" labelCaption="Descrição" class="AttributeRealWidth" /></cell></row></table></cell><cell><table controlName="tableCol2" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:33},{&quot;width&quot;:100},{&quot;width&quot;:100}],[{&quot;width&quot;:100},{&quot;width&quot;:100},{&quot;width&quot;:100}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:33,&quot;label&quot;:100},{&quot;label&quot;:100},{&quot;label&quot;:100}],[{&quot;label&quot;:100},{&quot;label&quot;:100},{&quot;label&quot;:100}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;width&quot;:33}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;width&quot;:33}]]}]"><row><cell cellClass="DataContentCell DscTop"><data attribute="carDapMesAno" labelCaption="Período (Mês e Ano)" class="AttributeRealWidthDate" /></cell><cell cellClass="DataContentCell DscTop"><data attribute="carDapNecessidade" labelCaption="Necessidade" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell DscTop"><data attribute="carDapStatus" labelCaption="Situação" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell DscTop"><data attribute="carDapGruCodigo" labelCaption="Grupo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;carGruCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;carGruDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo and&#xD;&#xA;carGruStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell DscTop"><data attribute="carDapArquivo" labelCaption="Anexar Arquivo" class="BlobInputAttribute" /></cell><cell cellClass="DataContentCell DscTop"><data attribute="carDapLiberarAcesso" labelCaption="Liberar Acesso" class="AttributeRealWidth" /></cell></row></table></cell></row><row><cell><textblock controlName="TextBlock1" caption="* No campo PERÌODO informe apenas uma data do mês  para o cardápio." class="gx-grid" /></cell></row></table></ucw></cell></row></table></item><item itemControlName="TabNutricionista" caption="Nutricionistas"><table controlName="UnnamedTable2" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cpanelNutricionistas&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Informe o(s)/a(s) nutricionista(s) &lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cpanelNutricionistas" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;label&quot;:100}],[{&quot;label&quot;:100}],[{&quot;label&quot;:100}],[{&quot;label&quot;:100}]]}]" containerSlotName="cpanelNutricionistas"><row><cell cellClass="DataContentCell DscTop"><data attribute="carDapNutricionista" labelCaption="Nutricionista" class="AttributeRealWidth" /></cell></row><row><cell cellControlName="carDapNutricionista1_Cell"><data attribute="carDapNutricionista1" labelCaption="Nutricionista" class="AttributeRealWidth" /></cell></row><row><cell cellControlName="carDapNutricionista2_Cell"><data attribute="carDapNutricionista2" labelCaption="Nutricionista" class="AttributeRealWidth" /></cell></row><row><cell cellControlName="carDapNutricionista3_Cell"><data attribute="carDapNutricionista3" labelCaption="Nutricionista" class="AttributeRealWidth" /></cell></row></table></ucw></cell></row></table></item><item itemControlName="abaMacrosMicrosNutrientes" caption="Macros e Micros Nutrientes ( Média Semanal  )"><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]"><row><cell><component controlName="WCWCMacroMicroNutrientes" /></cell></row></table></item></tab></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault hidden-xs hidden-sm hidden-md hidden-lg" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="carDapDataAlteracao" /><gxAttribute ControlType="Edit" InputType="Values" AttID="carDapDataCadastro" /><gxAttribute ControlType="Edit" InputType="Values" AttID="carDapUsuario" /><gxAttribute ControlType="Edit" InputType="Values" AttID="prefCodigo" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&prefCodigo, in:&carDapCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+carDapCodigo = &carDapCodigo if not &carDapCodigo.IsEmpty();
+noaccept(carDapCodigo) if not &carDapCodigo.IsEmpty();
+
+carDapNutricionista1.Visible = carDapNutricionista<>0;
+carDapNutricionista1_Cell.Class = !'Invisible' If not(carDapNutricionista<>0);
+carDapNutricionista1_Cell.Class = !'col-xs-12 DataContentCell DscTop' If carDapNutricionista<>0;
+carDapNutricionista2.Visible = carDapNutricionista1<>0 and carDapNutricionista<>0;
+carDapNutricionista2_Cell.Class = !'Invisible' If not(carDapNutricionista1<>0 and carDapNutricionista<>0);
+carDapNutricionista2_Cell.Class = !'col-xs-12 DataContentCell DscTop' If carDapNutricionista1<>0 and carDapNutricionista<>0;
+carDapNutricionista3.Visible = carDapNutricionista1<>0 and carDapNutricionista<>0 and carDapNutricionista2<>0;
+carDapNutricionista3_Cell.Class = !'Invisible' If not(carDapNutricionista1<>0 and carDapNutricionista<>0 and carDapNutricionista2<>0);
+carDapNutricionista3_Cell.Class = !'col-xs-12 DataContentCell DscTop' If carDapNutricionista1<>0 and carDapNutricionista<>0 and carDapNutricionista2<>0;
+carDapCodigo.Visible = carDapCodigo<>0;
+carDapCodigo_Cell.Class = !'Invisible' If not(carDapCodigo<>0);
+carDapCodigo_Cell.Class = !'col-xs-12 DataContentCell DscTop' If carDapCodigo<>0;
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+Error('Este usuário não tem permissão !') 
+	If not PRCDNutricionista() on beforeInsert, beforeUpdate; 
+
+Error('Informe a descrição do cardpápio !') 
+	If  carDapDescricao.IsEmpty();
+
+carDapDataCadastro = serverNow() 
+	on beforeInsert;
+
+carDapDataAlteracao = serverNow() 
+	on beforeUpdate;
+
+carDapCodigo = PRCDGerarNovoCodigo('cardapio')  
+	on BeforeInsert;
+	
+carDapUsuario =  GAMUser.GetLogin()
+	on BeforeInsert, beforeUpdate;	
+
+/*
+Error('Informe o Nutricionista !') 
+	If carDapNutricionista.IsEmpty();
+*/	
+
+&AdmLogCha = carDapCodigo.ToFormattedString()
+ on AfterInsert, AfterUpdate, AfterDelete;
+&AdmLogDad = carDapMesAno.ToFormattedString() + '-' + carDapNecessidade.ToFormattedString() + '-' + carDapDescricao.Trim() + '-' + carDapGruCodigo.ToFormattedString() + '-' + carDapLiberarAcesso + '-' + carDapStatus
+ on AfterInsert, AfterUpdate, AfterDelete;
+PRC_AliEscGravaLog(&AdmLogCha, &Pgmname, &Mode, &AdmLogDad)
+ on AfterInsert, AfterUpdate, AfterDelete;
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	
+	carDapDataAlteracao.Visible = False
+	carDapDataCadastro.Visible = False
+	carDapUsuario.Visible = False
+	prefCodigo.Visible = False
+	WCWCMacroMicroNutrientes.Object = WCMacroMicroNutrientes.Create(&prefCodigo, &carDapCodigo)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+   if &Mode = trnmode.Update
+      PRCDAjustarDataDasRefeicoes(&prefCodigo, carDapCodigo, carDapMesAno) 
+   endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnscardapioWW.Call()
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	carDapNutricionista1.Visible = False
+	carDapNutricionista1_Cell.Class = !'Invisible'
+	carDapNutricionista2.Visible = False
+	carDapNutricionista2_Cell.Class = !'Invisible'
+	carDapNutricionista3.Visible = False
+	carDapNutricionista3_Cell.Class = !'Invisible'
+	carDapCodigo.Visible = False
+	carDapCodigo_Cell.Class = !'Invisible'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Insert_AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Insert_AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboAreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboAreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Cond_AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Cond_AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogCha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogCha</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Chave</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogCha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogDad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogDad</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Dados</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogDad</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <InnerHtml><![CDATA[<FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>Event</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> </FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>Start</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P>LoadWWPContext.Call(</FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;WWPContext</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>) </P>
+<P></FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;prefCodigo</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> = </FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;WWPContext</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>.prefCodigo</P>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>//Code block: EditFormClass</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>[web]{</P>
+<P>LayoutMainTable.Class = LayoutMainTable.Class + </FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>" "</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> + ThemeClass:EditForm</P>
+<P>}</P>
+<P>　</P>
+<P>LoadWWPContext.Call(</FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;WWPContext</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>)</P>
+<P>　</P>
+<P></FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;DDO_TitleSettingsIcons</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> = GetWWPTitleSettingsIcons()</P>
+<P></FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;GAMSession</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> = GAMSession.Get(</FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;GAMErrors</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>)</P>
+<P>Combo_AreEnsSequencial.GAMOAuthToken = </FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;GAMSession</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>.Token</P>
+<P>Combo_AreEnsSequencial.TitleControlIdToReplace = AreEnsSequencial.InternalName</P>
+<P>AreEnsSequencial.HorizontalAlignment = !</FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>'Left'</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>Combo_AreEnsCodigo.GAMOAuthToken = </FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;GAMSession</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>.Token</P>
+<P>Combo_AreEnsCodigo.TitleControlIdToReplace = AreEnsCodigo.InternalName</P>
+<P>AreEnsCodigo.HorizontalAlignment = !</FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>'Left'</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P></FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>Do</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> </FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>'LoadComboAreEnsSequencial'</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P></FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>Do</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> </FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>'AttributesSecurityCode'</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;TrnContext</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>.FromXml(</FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;WebSession</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>.Get(</FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>!"TrnContext"</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>))</P>
+<P></P>
+<P>prefCodigo.Visible = </FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>False</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>carDapDataAlteracao.Visible = </FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>False</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>carDapDataCadastro.Visible = </FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>False</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>carDapUsuario.Visible = </FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>False</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [End] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>EndEvent</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>Event</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> </FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>After Trn</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>If</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> (</FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;Mode</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> = TrnMode.Delete and not </FONT></FONT><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas><FONT color=#808000 size=4 face=Consolas>&amp;TrnContext</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>.CallerOnDelete)</P>
+<P>trnscardapioWW.Call()</P>
+<P></FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>Endif</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>Return</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [End] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>EndEvent</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>Event</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> AreEnsCodigo.ControlValueChanged</P>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P>AreEnsSequencial.SetEmpty()</P>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [End] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>EndEvent</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>Sub</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> </FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>'AttributesSecurityCode'</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P>carDapCodigo.Visible = </FONT></FONT><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas><FONT color=#000080 size=4 face=Consolas>False</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>carDapCodigo_Cell.Class = !</FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>'Invisible'</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [End] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>EndSub</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>Sub</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas> </FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>'LoadComboAreEnsSequencial'</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P>Combo_AreEnsSequencial.DataListProcParametersPrefix = </FONT></FONT><FONT color=#a52a2a size=4 face=Consolas><FONT color=#a52a2a size=4 face=Consolas><FONT color=#a52a2a size=4 face=Consolas>format</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>(!</FONT></FONT><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas><FONT color=#8b0000 size=4 face=Consolas>' "ComboName": "AreEnsSequencial", "TrnMode": "INS", "IsDynamicCall": true, "prefCodigo": 0, "carDapCodigo": 0, "Cond_AreEnsCodigo": "#%1#"'</FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>, AreEnsCodigo.InternalName)</P>
+<P>　</P>
+<P></FONT></FONT><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas><FONT color=#008000 size=4 face=Consolas>/* Generated by DVelop Work With Plus Pattern [End] - Do not change */</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P></FONT></FONT><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas><FONT color=#800080 size=4 face=Consolas>
+<P>EndSub</P></FONT></FONT></FONT><FONT size=4 face=Consolas><FONT size=4 face=Consolas>
+<P>　</P>
+<P>　</P></FONT></FONT>]]></InnerHtml>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscardapio</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Cadastro de Cardápio</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnscardapioWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

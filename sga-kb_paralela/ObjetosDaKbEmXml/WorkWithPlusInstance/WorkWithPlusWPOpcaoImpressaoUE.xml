@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="3508a419-d678-4d06-857e-346544190686" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-28T03:20:36.0000000Z" lastUpdate="2025-10-28T02:32:58.0000000Z" checksum="f48ac3d71ef0e6eba10b225eec12afcd" fullyQualifiedName="WorkWithPlusWPOpcaoImpressaoUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="321bfc89-8084-059d-3176-325266e399fb" name="WorkWithPlusWPOpcaoImpressaoUE" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPOpcao Impressao UE" parent="WPOpcaoImpressaoUE" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPOpcaoImpressaoUE" defaultSecFuntionKey="WPOpcaoImpressaoUE" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table name="cPanelOpcoes" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Opções de Impressão" cellWidth_E="67%" cellWidth_S="67%" cellWidth_M="67%" cellWidth_L="67%">
+        <table name="groupPeriodo" isGroup="True" numberOfColumns="1" type="Responsive" title="Informe os dados abaixo : ">
+          <variable name="dataIncial" description="Data Inicial: " defaultDescription="Data Inicial: " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" defaultControlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" descriptionWidth="25%" defaultDescriptionWidth="12%" />
+          <variable name="dataFinal" description="Data Final" defaultDescription="Data Final" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" basicCLength="1" defaultBasicCLength="1" controlInfoDef="Based on" controlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" defaultControlInfo="adbb33c9-0906-4971-833c-998de27e0676-distDataEnvio" controlType="Edit" defaultControlType="Edit" controlValues="Todas:T,Entrada:E,Saida:S" defaultControlValues="Todas:T,Entrada:E,Saida:S" descriptionWidth="25%" defaultDescriptionWidth="12%" />
+          <variable name="localDestino" description="Unidade Educativa" defaultDescription="Local (Destino)" dataType="Basic" defaultDataType="Basic" basicLength="8" defaultBasicLength="8" visibleCondition="&amp;rotaCodigo=0" defaultVisibleCondition="&amp;rotaCodigo=0" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;locStatus = 'A';" defaultConditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;locStatus = 'A';" controlEmptyItem="True" defaultControlEmptyItem="True" controlEmptyItemText="Todos" defaultControlEmptyItemText="Todos" rightText="" defaultRightText="* Só é possível lançar o local, quando não tiver ROTA." descriptionWidth="25%" defaultDescriptionWidth="12%" />
+          <variable name="tipo" description="Tipo" dataType="Basic" basicType="Character" basicCLength="1" controlInfoDef="Custom" controlType="Combo Box" controlValues="Todas:T,Entrada:E,Saída:S" />
+        </table>
+        <table name="groupFiltro" isGroup="True" numberOfColumns="1" type="Responsive" title="Selecione os Produtos" align="Left">
+          <grid includePaginationBar="False" includeRowsPerPageSelector="False" name="GridSDTProdutoss" page="&lt;unlimited&gt;" pagingType="One page at a time" SDTCollection="&amp;SDTProdutos">
+            <gridVariable name="SDTProdutos" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" readOnly="False" sdtItem="item(0).checar" defaultSdtItem="item(0).checar" />
+            <gridVariable name="SDTProdutos" description="Código" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).prodCodigo" defaultSdtItem="item(0).prodCodigo" />
+            <gridVariable name="SDTProdutos" description="Código" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" visible="False" sdtItem="item(0).prefCodigo" defaultSdtItem="item(0).prefCodigo" />
+            <gridVariable name="SDTProdutos" description="Descrição" defaultDescription="Descrição" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTProdutos" sdtItem="item(0).prodDescricao" defaultSdtItem="item(0).prodDescricao" />
+          </grid>
+        </table>
+        <userAction caption="Imprimir" name="btnImprimir" />
+        <userControl controlName="novaAba" ucName="InNewWindow" ucId="-667710712" />
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPOpcaoImpressaoUE</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPOpcaoImpressaoUE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

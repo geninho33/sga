@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="da2bbf54-ab54-4d23-bae5-cddd3d944e1c" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-29T05:27:13.0000000Z" lastUpdate="2024-10-29T02:58:10.0000000Z" checksum="bf3af8c9676870f15d9f3a9f1769197c" fullyQualifiedName="SDTEstoqueUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a702f2a5-c89b-4795-ac0c-a38c6d816363" name="SDTEstoqueUE" type="447527b5-9210-4523-898b-5dccb17be60a" description="SDT de Estoque de UE" parent="SDT" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="SDTEstoqueUE">
+      <LevelInfo guid="8d5fffb4-2e37-44c9-aab6-37063901cba9" name="SDTEstoqueUE" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="SDTEstoque UE" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>SDTEstoqueUE</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+          <Property>
+            <Name>idCollectionItemName</Name>
+            <Value>estoque</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="01ee635a-6478-4a19-a17d-e4c2a92a348f" name="prefCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Prefeitura" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Prefeitura</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="7748656f-e657-4721-93d1-c1b61c18d8c7" name="estoUeCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Codigo" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Codigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="2d17fad0-0d1e-4513-8913-4b2159e8f2ac" name="estoUeProdCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Codigo Produto" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeProdCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Codigo Produto</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="05a5d950-24d6-46dc-a888-0fc2768b8d97" name="estoUeTipoRemessa" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Tipo de Remessa" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeTipoRemessa</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Tipo de Remessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="9bb7ea55-2772-4df2-bfcb-e482bf926c4f" name="estoUeProdDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descrição" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeProdDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="120333c3-8033-4955-9605-1c22634d721b" name="estoUeUniDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeUniDescricao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Unidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:uniDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="f971fc8c-3f2f-41c3-8ab3-9e5fbf54c5af" name="estoUeSaldo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Saldo" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeSaldo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Saldo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeSaldo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="5ce274b9-f58c-4b0a-ae73-44827a7fbced" name="estoUeAlteracao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Data Alteração" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeAlteracao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Data Alteração</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeAlteracao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="ab06df30-7659-4638-8b17-0a27d6d2cab9" name="estoUeQtdeFixo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Qtde Fixa" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUeQtdeFixo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Qtde Fixa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeSaldo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="c6f61322-2a14-4608-9917-3bf86fe23da5" name="estoUePrevisao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Previsão" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUePrevisao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Previsão</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeSaldo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="fa9f022f-5ee8-46cb-9d78-66895bc38ff7" name="estoUelocCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Unidade Escolar" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUelocCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUeLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="c8646a70-01af-4d7d-97d9-c3db97c493b5" name="estoUelocDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Descricao" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoUelocDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:descricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <InnerHtml><![CDATA[]]></InnerHtml>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>SDTEstoqueUE</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>SDT de Estoque de UE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f991bcc0-18bd-065a-0add-8f679ef1a224" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:35:54.0000000Z" checksum="598e2d71999ad4ca90371e5314122bd0" fullyQualifiedName="trnsremessaitemWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="3fa6656f-0d54-4ee8-84aa-83cc034a10dd" name="trnsremessaitemWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsremessaitem WWDS" parent="WorkWithPlustrnsremessaitem" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remCodigo = &remCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPeriodo.ToLower() like &remItemPeriodo1.ToLower() when &DynamicFiltersSelector1 = !'REMITEMPERIODO' AND &DynamicFiltersOperator1 = 0 AND (not &remItemPeriodo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPeriodo.ToLower() like '%' +  &remItemPeriodo1.ToLower() when &DynamicFiltersSelector1 = !'REMITEMPERIODO' AND &DynamicFiltersOperator1 = 1 AND (not &remItemPeriodo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade < &remItemValidade1 when &DynamicFiltersSelector1 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator1 = 0 AND (not &remItemValidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade = &remItemValidade1 when &DynamicFiltersSelector1 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator1 = 1 AND (not &remItemValidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade > &remItemValidade1 when &DynamicFiltersSelector1 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator1 = 2 AND (not &remItemValidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade >= &remItemValidade1 when &DynamicFiltersSelector1 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator1 = 3 AND (not &remItemValidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade <= &remItemValidade_To1 when &DynamicFiltersSelector1 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator1 = 3 AND (not &remItemValidade_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remTipoRemessa = &remTipoRemessa1 when &DynamicFiltersSelector1 = !'REMTIPOREMESSA' AND &DynamicFiltersOperator1 = 0 AND (not &remTipoRemessa1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemLote.ToLower() like &remItemLote1.ToLower() when &DynamicFiltersSelector1 = !'REMITEMLOTE' AND &DynamicFiltersOperator1 = 0 AND (not &remItemLote1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemLote.ToLower() like '%' +  &remItemLote1.ToLower() when &DynamicFiltersSelector1 = !'REMITEMLOTE' AND &DynamicFiltersOperator1 = 1 AND (not &remItemLote1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPeriodo.ToLower() like &remItemPeriodo2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMPERIODO' AND &DynamicFiltersOperator2 = 0 AND (not &remItemPeriodo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPeriodo.ToLower() like '%' +  &remItemPeriodo2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMPERIODO' AND &DynamicFiltersOperator2 = 1 AND (not &remItemPeriodo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade < &remItemValidade2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator2 = 0 AND (not &remItemValidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade = &remItemValidade2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator2 = 1 AND (not &remItemValidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade > &remItemValidade2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator2 = 2 AND (not &remItemValidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade >= &remItemValidade2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator2 = 3 AND (not &remItemValidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade <= &remItemValidade_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator2 = 3 AND (not &remItemValidade_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remTipoRemessa = &remTipoRemessa2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMTIPOREMESSA' AND &DynamicFiltersOperator2 = 0 AND (not &remTipoRemessa2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemLote.ToLower() like &remItemLote2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMLOTE' AND &DynamicFiltersOperator2 = 0 AND (not &remItemLote2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemLote.ToLower() like '%' +  &remItemLote2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'REMITEMLOTE' AND &DynamicFiltersOperator2 = 1 AND (not &remItemLote2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPeriodo.ToLower() like &remItemPeriodo3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMPERIODO' AND &DynamicFiltersOperator3 = 0 AND (not &remItemPeriodo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPeriodo.ToLower() like '%' +  &remItemPeriodo3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMPERIODO' AND &DynamicFiltersOperator3 = 1 AND (not &remItemPeriodo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade < &remItemValidade3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator3 = 0 AND (not &remItemValidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade = &remItemValidade3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator3 = 1 AND (not &remItemValidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade > &remItemValidade3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator3 = 2 AND (not &remItemValidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade >= &remItemValidade3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator3 = 3 AND (not &remItemValidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemValidade <= &remItemValidade_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMVALIDADE' AND &DynamicFiltersOperator3 = 3 AND (not &remItemValidade_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remTipoRemessa = &remTipoRemessa3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMTIPOREMESSA' AND &DynamicFiltersOperator3 = 0 AND (not &remTipoRemessa3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemLote.ToLower() like &remItemLote3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMLOTE' AND &DynamicFiltersOperator3 = 0 AND (not &remItemLote3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemLote.ToLower() like '%' +  &remItemLote3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'REMITEMLOTE' AND &DynamicFiltersOperator3 = 1 AND (not &remItemLote3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemProduto >= &TFremItemProduto when not &TFremItemProduto.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemProduto <= &TFremItemProduto_To when not &TFremItemProduto_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemProdutoDescricao.ToLower() like &TFremItemProdutoDescricao.ToLower() when &TFremItemProdutoDescricao_Sel.IsEmpty() AND (not &TFremItemProdutoDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemProdutoDescricao = &TFremItemProdutoDescricao_Sel when not &TFremItemProdutoDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[uniFracao.ToLower() like &TFremItemUnidade.ToLower() when &TFremItemUnidade_Sel.IsEmpty() AND (not &TFremItemUnidade.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemUnidade = &TFremItemUnidade_Sel when not &TFremItemUnidade_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemQtdeEmbalagens >= &TFremItemQtdeEmbalagens when not &TFremItemQtdeEmbalagens.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemQtdeEmbalagens <= &TFremItemQtdeEmbalagens_To when not &TFremItemQtdeEmbalagens_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPesoUnidade.ToLower() like &TFremItemPesoUnidade.ToLower() when &TFremItemPesoUnidade_Sel.IsEmpty() AND (not &TFremItemPesoUnidade.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPesoUnidade = &TFremItemPesoUnidade_Sel when not &TFremItemPesoUnidade_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPesoConsumo >= &TFremItemPesoConsumo when not &TFremItemPesoConsumo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPesoConsumo <= &TFremItemPesoConsumo_To when not &TFremItemPesoConsumo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPesoTotal >= &TFremItemPesoTotal when not &TFremItemPesoTotal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remItemPesoTotal <= &TFremItemPesoTotal_To when not &TFremItemPesoTotal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[disTipDescricao.ToLower() like &TFremTipoRemessa.ToLower() when &TFremTipoRemessa_Sel.IsEmpty() AND (not &TFremTipoRemessa.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[remTipoRemessa = &TFremTipoRemessa_Sel when not &TFremTipoRemessa_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemProdutoDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemProdutoDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemProdutoDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemProdutoDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemProdutoDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemProdutoDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemProduto">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemProduto</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemProduto_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemProduto_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemPesoTotal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemPesoTotal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemPesoTotal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemPesoTotal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemValidade1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemValidade1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemValidade_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemValidade_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remTipoRemessa1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remTipoRemessa1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemLote1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemLote1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemValidade2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemValidade2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemValidade_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemValidade_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remTipoRemessa2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remTipoRemessa2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemLote2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemLote2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemValidade3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemValidade3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemValidade_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemValidade_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remTipoRemessa3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remTipoRemessa3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemLote3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemLote3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemProdutoDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemProdutoDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemProdutoDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemProdutoDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemPesoUnidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemPesoUnidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPesoUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremTipoRemessa">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremTipoRemessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:disTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemPesoUnidade_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemPesoUnidade_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPesoUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremTipoRemessa_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremTipoRemessa_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remTipoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemUnidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemUnidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:uniFracao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemUnidade_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemUnidade_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemUnidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemPesoConsumo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemPesoConsumo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPesoConsumo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemPesoConsumo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemPesoConsumo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPesoConsumo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemQtdeEmbalagens">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemQtdeEmbalagens</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemQtdeEmbalagens</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFremItemQtdeEmbalagens_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFremItemQtdeEmbalagens_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemQtdeEmbalagens</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemPeriodo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemPeriodo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemPeriodo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemPeriodo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="remItemPeriodo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>remItemPeriodo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:remItemPeriodo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remCodigo</Name>
+        <Description>rem Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemPeriodo1</Name>
+        <Description>rem Item Periodo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemValidade1</Name>
+        <Description>rem Item Validade1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemValidade_To1</Name>
+        <Description>rem Item Validade_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remTipoRemessa1</Name>
+        <Description>rem Tipo Remessa1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemLote1</Name>
+        <Description>rem Item Lote1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemPeriodo2</Name>
+        <Description>rem Item Periodo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemValidade2</Name>
+        <Description>rem Item Validade2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemValidade_To2</Name>
+        <Description>rem Item Validade_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remTipoRemessa2</Name>
+        <Description>rem Tipo Remessa2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemLote2</Name>
+        <Description>rem Item Lote2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemPeriodo3</Name>
+        <Description>rem Item Periodo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemValidade3</Name>
+        <Description>rem Item Validade3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemValidade_To3</Name>
+        <Description>rem Item Validade_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remTipoRemessa3</Name>
+        <Description>rem Tipo Remessa3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>remItemLote3</Name>
+        <Description>rem Item Lote3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemProduto</Name>
+        <Description>TFrem Item Produto</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemProduto_To</Name>
+        <Description>TFrem Item Produto_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemProdutoDescricao</Name>
+        <Description>TFrem Item Produto Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemProdutoDescricao_Sel</Name>
+        <Description>TFrem Item Produto Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemUnidade</Name>
+        <Description>TFrem Item Unidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemUnidade_Sel</Name>
+        <Description>TFrem Item Unidade_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemQtdeEmbalagens</Name>
+        <Description>TFrem Item Qtde Embalagens</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemQtdeEmbalagens_To</Name>
+        <Description>TFrem Item Qtde Embalagens_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemPesoUnidade</Name>
+        <Description>TFrem Item Peso Unidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemPesoUnidade_Sel</Name>
+        <Description>TFrem Item Peso Unidade_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemPesoConsumo</Name>
+        <Description>TFrem Item Peso Consumo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemPesoConsumo_To</Name>
+        <Description>TFrem Item Peso Consumo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemPesoTotal</Name>
+        <Description>TFrem Item Peso Total</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremItemPesoTotal_To</Name>
+        <Description>TFrem Item Peso Total_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremTipoRemessa</Name>
+        <Description>TFrem Tipo Remessa</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFremTipoRemessa_Sel</Name>
+        <Description>TFrem Tipo Remessa_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsremessaitemWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsremessaitem</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="9211032f-0b5e-112b-409c-44b42a9a31e4" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-11-06T04:29:22.0000000Z" lastUpdate="2024-11-06T03:08:23.0000000Z" checksum="fd119d8d00779fbaccbdb7ebb9067ac9" fullyQualifiedName="trnslocalGeneral" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7d54a52d-c458-48f9-af01-7c155e88f464" name="trnslocalGeneral" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="trnslocal General" parent="WorkWithPlustrnslocal" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="Table" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TransactionDetail_TableAttributes" tableType="Responsive" responsiveSizes="[]"><row><cell cellControlName="locCodigo_Cell"><data attribute="locCodigo" labelCaption="ID" class="ReadonlyAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell"><data attribute="locDescricao" labelCaption="Descrição" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locTipoUnidade" labelCaption="Tipo Unidade" class="ReadonlyAttribute" /></cell><cell cellClass="DataContentCell"><data attribute="locResponsavel" labelCaption="Responsável " class="ReadonlyAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locEndereco" labelCaption="Endereço" class="ReadonlyAttribute" /></cell><cell cellClass="DataContentCell"><data attribute="locBairro" labelCaption="Bairro" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locCep" labelCaption="Cep" class="ReadonlyAttribute" /></cell><cell cellClass="DataContentCell"><data attribute="locNota" labelCaption="Rota Entrega" class="ReadonlyAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locEmail" labelCaption="Email" class="ReadonlyAttribute" /></cell><cell cellClass="DataContentCell"><data attribute="locDiretor" labelCaption="Diretor" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locTelefone" labelCaption="Telefones" class="ReadonlyAttribute" /></cell><cell cellClass="DataContentCell"><data attribute="locComplemento" labelCaption="Celuar" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locUeCod" labelCaption="Cód. SGE" class="ReadonlyAttribute" /></cell><cell cellClass="DataContentCell"><data attribute="locCodigoLargada" labelCaption="Código Largada" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="LocObservacaoGuia" labelCaption="Observação Guia" class="ReadonlyAttribute" /></cell><cell cellClass="DataContentCell"><data attribute="locStatus" labelCaption="Situação" class="ReadonlyAttribute" /></cell></row><row><cell><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]"><row><cell><group controlName="UnnamedGroup3" caption="Situação da Cozinha" class="Group"><table controlName="UnnamedTable2" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><data attribute="locFreezer" labelCaption="Tem Freezer" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locForno" labelCaption="Tem Forno" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locVinculada" labelCaption="Vinculada" class="ReadonlyAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;locStatus = 'A';&#xD;&#xA;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></group></cell><cell><group controlName="UnnamedGroup5" caption="Dados de Login " class="Group"><table controlName="UnnamedTable4" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><data attribute="locUsuario" labelCaption="Usuario" class="ReadonlyAttribute" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locSenha" labelCaption="Senha" class="ReadonlyAttribute" /></cell></row></table></group></cell></row></table></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnUpdate" onClickEvent="'DoUpdate'" caption="GXM_update" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_update&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnDelete" onClickEvent="'DoDelete'" caption="GX_BtnDelete" class="BtnDefault hidden-xs hidden-sm hidden-md hidden-lg" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="prefCodigo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locInep" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locArea" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locUnidadeCentral" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locSecretaria" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locNotaSequencia" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locAbreviatura" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locDataCad" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locDataAlt" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+parm(in:prefCodigo, in:locCodigo);
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	LoadWWPContext.Call(&WWPContext)
+	Do 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	prefCodigo.Visible = False
+	locInep.Visible = False
+	locArea.Visible = False
+	locUnidadeCentral.Visible = False
+	locSecretaria.Visible = False
+	locNotaSequencia.Visible = False
+	locAbreviatura.Visible = False
+	locDataCad.Visible = False
+	locDataAlt.Visible = False
+
+	// Security check for 'Actions'
+	&IsAuthorized_Update = SecGAMIsAuthByFunctionalityKey.Udp(!'trnslocalww_Update')
+	If not (&IsAuthorized_Update)
+		BtnUpdate.Visible = False
+	Endif
+	&IsAuthorized_Delete = SecGAMIsAuthByFunctionalityKey.Udp(!'trnslocalww_Delete')
+	If not (&IsAuthorized_Delete)
+		BtnDelete.Visible = False
+	Endif
+	 
+
+	// Visible Conditions
+	If Not (locCodigo<>0)
+		locCodigo.Visible = False
+		locCodigo_Cell.Class = !'Invisible'
+	Else
+		locCodigo.Visible = True
+		locCodigo_Cell.Class = !'col-xs-12 col-sm-6 DataContentCell'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoUpdate'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Update)
+		trnslocal.Call(TrnMode.Update, prefCodigo, locCodigo)
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		BtnUpdate.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoDelete'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Delete)
+		trnslocal.Call(TrnMode.Delete, prefCodigo, locCodigo)
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		BtnDelete.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = False
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"trnslocal"
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TempBoolean">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TempBoolean</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnslocalGeneral</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnslocal</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/view/tabs/tabularTab[@code="General"]</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>TabTabular</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

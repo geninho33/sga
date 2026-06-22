@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="41c8b8d2-67bc-44a8-8146-3591f89af77d" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-26T19:59:19.0000000Z" checksum="564cb2aad71b089519987d4ae4689aec" fullyQualifiedName="WorkWithPlus.WorkWithPlusWWP_EditConfFormattingValues" moduleGuid="f2dbe4f8-39a7-43c8-8e3e-c44ea2a6d2f4" guid="46dbe042-3140-0c33-354e-33a6da606800" name="WorkWithPlusWWP_EditConfFormattingValues" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WWP_Edit Conf Formatting Values" parent="WorkWithPlus.WWP_EditConfFormattingValues" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WWP_EditConfFormattingValues" defaultSecFuntionKey="WWP_EditConfFormattingValues" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <grid includePaginationBar="False" name="Grids" page="&lt;unlimited&gt;" SDTCollection="&amp;ConfFormattingVariables">
+          <gridVariable name="ConfFormattingVariables" description="Description" defaultDescription="Description" domain="447527b5-9210-4523-898b-5dccb17be60a-WorkWithPlus.WWPConfFormattingVariable" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-WorkWithPlus.WWPConfFormattingVariable" width="300" defaultWidth="300" sdtItem="item(0).Description" defaultSdtItem="item(0).Description" />
+          <gridVariable name="DefaultValue" dataType="Basic" defaultDataType="Basic" basicLength="10" defaultBasicLength="10" readOnly="False" defaultReadOnly="False" />
+        </grid>
+      </table>
+      <actionGroup name="ActionGroup1" cellThemeClass="CellMarginTop">
+        <userAction caption="Cancelar" buttonClass="BtnDefault" name="UserAction1" />
+        <userAction caption="Reset" buttonClass="BtnDefault" name="UserActionReset" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Enter" />
+      </actionGroup>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWWP_EditConfFormattingValues</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WorkWithPlus.WWP_EditConfFormattingValues</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

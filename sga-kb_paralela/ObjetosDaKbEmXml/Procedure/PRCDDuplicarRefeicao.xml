@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2026-04-14T01:22:21.0000000Z" checksum="e35359c414d23cab464d75704e152b39" fullyQualifiedName="PRCDDuplicarRefeicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="14a2ec41-c8c0-472c-b986-49f54980dbbe" name="PRCDDuplicarRefeicao" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Duplicar Refeição" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[LoadWWPContext.Call(&WWPContext)
+
+For each
+	where prefCodigo  = &prefCodigo
+	where pratoCodigo = &pratoCodigo
+	
+		  &pratoDscricao 	   = '( Cópia ) ' + pratoDscricao
+		  &pratoComFreezer     = pratoComFreezer
+		  &pratoSemFreezer 	   = pratoSemFreezer
+		  &pratoForno		   = pratoForno
+		  &pratoModoDeFazer    = pratoModoDeFazer
+		  &pratoRepeticao 	   = pratoRepeticao
+		  &pratoCozinhaCentral = pratoCozinhaCentral
+		  &pratoCodigoPai	   = pratoCodigoPai
+		  &pratoCodigoPaiAtend = pratoCodigoPaiAtend
+		  &pratoTipoRefeicao   = pratoTipoRefeicao
+		  &pratoStatus 		   = pratoStatus
+		  &pratoDataCad		   = pratoDataCad
+		  &pratoDataAlt		   = pratoDataAlt		
+		  &pratoCodigo2 	   = PRCDGerarNovoCodigo('prato')  	
+
+		  new
+			prefCodigo 		    = &prefCodigo
+			pratoCodigo 		= &pratoCodigo2
+		    pratoDscricao 		= &pratoDscricao
+		    pratoComFreezer 	= &pratoComFreezer
+		    pratoSemFreezer 	= &pratoSemFreezer
+		    pratoForno 			= &pratoForno
+		    pratoModoDeFazer 	= &pratoModoDeFazer
+		    pratoRepeticao 		= &pratoRepeticao
+		    pratoCozinhaCentral = &pratoCozinhaCentral
+		    pratoCodigoPai 		= &pratoCodigoPai
+		    pratoCodigoPaiAtend = &pratoCodigoPaiAtend
+		    pratoTipoRefeicao 	= &pratoTipoRefeicao
+		    pratoStatus 		= status.Ativo
+		    pratoDataCad 		= serverNow()
+		    pratoDataAlt 		= serverNow()
+		  endNew
+
+		  For each trnspratosingredientes
+			where prefCodigo   = &prefCodigo
+			where pratoCodigo  = &pratoCodigo	  
+		
+				&pratIngrProdCodigo 	   = pratIngrProdCodigo
+				&AreEnsCodigo 			   = AreEnsCodigo
+				&AreEnsSequencial 		   = AreEnsSequencial
+				&carGruTurno			   = carGruTurno
+				&pratIngrProdDescricaoItem = pratIngrProdDescricaoItem
+				&pratIngrTipoRemessa 	   = pratIngrTipoRemessa
+				&pratIngrQuantidade 	   = pratIngrQuantidade
+	
+				new
+					prefCodigo 	     		  = &prefCodigo
+					pratoCodigo      		  = &pratoCodigo2
+					//  pratIngrProdCodigo 		  = &pratIngrProdCodigo
+					AreEnsCodigo 			  = &AreEnsCodigo
+					AreEnsSequencial 		  = &AreEnsSequencial
+					carGruTurno 			  = &carGruTurno
+					// pratIngrProdDescricaoItem = &pratIngrProdDescricaoItem
+					// pratIngrTipoRemessa 	  = &pratIngrTipoRemessa
+					pratIngrQuantidade 		  = &pratIngrQuantidade
+					pratIngrStatus 			  = status.Ativo
+					pratIngrDataCad			  = serverNow()
+					pratIngrDataAlt 		  = serverNow()
+				endNew
+		  EndFor
+	msg('Duplicação realizada com sucesso !')
+EndFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo,in:&pratoCodigo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapNutricionista2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapNutricionista2</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>car Dap Nutricionista2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapNutricionista2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapNutricionista3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapNutricionista3</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>car Dap Nutricionista3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapNutricionista3</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogCha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogCha</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Chave</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogCha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogDad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogDad</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Dados</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogDad</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carDapLiberarAcesso">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carDapLiberarAcesso</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Liberar Acesso</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carDapLiberarAcesso</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código do Prato </Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoDscricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoDscricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Nome</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDscricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoComFreezer">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoComFreezer</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Com Freezer</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoComFreezer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoSemFreezer">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoSemFreezer</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Sem Freezer</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoSemFreezer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoForno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoForno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Utiliza Forno</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoForno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoModoDeFazer">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoModoDeFazer</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Modo de Preparo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoModoDeFazer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoRepeticao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoRepeticao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Permite Repetição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoRepeticao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCozinhaCentral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCozinhaCentral</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Cozinha</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCozinhaCentral</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigoPai">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigoPai</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Pai</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigoPai</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigoPaiAtend">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigoPaiAtend</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Pai do Tipo Atendimento</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigoPaiAtend</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoTipoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoTipoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo de Refeição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoTipoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoStatus">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoStatus</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Situação</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoDataCad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoDataCad</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Data Cadastro</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDataCad</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoDataAlt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoDataAlt</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Data Alteração</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDataAlt</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratIngrProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Produto</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área de Ensino</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Sequencial</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruTurno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratIngrProdDescricaoItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrProdDescricaoItem</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrProdDescricaoItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratIngrTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratIngrQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDDuplicarRefeicao</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Duplicar Refeição</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

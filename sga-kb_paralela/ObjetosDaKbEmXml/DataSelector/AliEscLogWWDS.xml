@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="4830aebe-9b61-0a07-0997-7091f9d445d5" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-11T04:12:20.0000000Z" lastUpdate="2024-10-11T03:10:44.0000000Z" checksum="0ddb9ae0aab47e59cb070bb274e10c2a" fullyQualifiedName="Auditoria.AliEscLogWWDS" moduleGuid="66f38372-7994-4e31-ae9a-30f397eb8805" guid="428a62c4-71e2-4ef6-b5a5-36f905a53158" name="AliEscLogWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Ali Esc Log WWDS" parent="Auditoria.WorkWithPlusAliEscLog" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[AdmLogIP.ToLower() like &AdmLogIP1.ToLower() when &DynamicFiltersSelector1 = !'ADMLOGIP' AND &DynamicFiltersOperator1 = 0 AND (not &AdmLogIP1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogIP.ToLower() like '%' +  &AdmLogIP1.ToLower() when &DynamicFiltersSelector1 = !'ADMLOGIP' AND &DynamicFiltersOperator1 = 1 AND (not &AdmLogIP1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogTip = &AdmLogTip1 when &DynamicFiltersSelector1 = !'ADMLOGTIP' AND (not &AdmLogTip1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu.ToLower() like &AdmLogUsu1.ToLower() when &DynamicFiltersSelector1 = !'ADMLOGUSU' AND &DynamicFiltersOperator1 = 0 AND (not &AdmLogUsu1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu.ToLower() like '%' +  &AdmLogUsu1.ToLower() when &DynamicFiltersSelector1 = !'ADMLOGUSU' AND &DynamicFiltersOperator1 = 1 AND (not &AdmLogUsu1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr >= &AdmLogDtHr1 when &DynamicFiltersSelector1 = !'ADMLOGDTHR' AND &DynamicFiltersOperator1 = 0 AND (not &AdmLogDtHr1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr <= &AdmLogDtHr_To1 when &DynamicFiltersSelector1 = !'ADMLOGDTHR' AND &DynamicFiltersOperator1 = 0 AND (not &AdmLogDtHr_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha.ToLower() like &AdmLogCha1.ToLower() when &DynamicFiltersSelector1 = !'ADMLOGCHA' AND &DynamicFiltersOperator1 = 0 AND (not &AdmLogCha1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha.ToLower() like '%' +  &AdmLogCha1.ToLower() when &DynamicFiltersSelector1 = !'ADMLOGCHA' AND &DynamicFiltersOperator1 = 1 AND (not &AdmLogCha1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogIP.ToLower() like &AdmLogIP2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGIP' AND &DynamicFiltersOperator2 = 0 AND (not &AdmLogIP2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogIP.ToLower() like '%' +  &AdmLogIP2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGIP' AND &DynamicFiltersOperator2 = 1 AND (not &AdmLogIP2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogTip = &AdmLogTip2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGTIP' AND (not &AdmLogTip2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu.ToLower() like &AdmLogUsu2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGUSU' AND &DynamicFiltersOperator2 = 0 AND (not &AdmLogUsu2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu.ToLower() like '%' +  &AdmLogUsu2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGUSU' AND &DynamicFiltersOperator2 = 1 AND (not &AdmLogUsu2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr >= &AdmLogDtHr2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGDTHR' AND &DynamicFiltersOperator2 = 0 AND (not &AdmLogDtHr2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr <= &AdmLogDtHr_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGDTHR' AND &DynamicFiltersOperator2 = 0 AND (not &AdmLogDtHr_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha.ToLower() like &AdmLogCha2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGCHA' AND &DynamicFiltersOperator2 = 0 AND (not &AdmLogCha2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha.ToLower() like '%' +  &AdmLogCha2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ADMLOGCHA' AND &DynamicFiltersOperator2 = 1 AND (not &AdmLogCha2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogIP.ToLower() like &AdmLogIP3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGIP' AND &DynamicFiltersOperator3 = 0 AND (not &AdmLogIP3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogIP.ToLower() like '%' +  &AdmLogIP3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGIP' AND &DynamicFiltersOperator3 = 1 AND (not &AdmLogIP3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogTip = &AdmLogTip3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGTIP' AND (not &AdmLogTip3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu.ToLower() like &AdmLogUsu3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGUSU' AND &DynamicFiltersOperator3 = 0 AND (not &AdmLogUsu3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu.ToLower() like '%' +  &AdmLogUsu3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGUSU' AND &DynamicFiltersOperator3 = 1 AND (not &AdmLogUsu3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr >= &AdmLogDtHr3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGDTHR' AND &DynamicFiltersOperator3 = 0 AND (not &AdmLogDtHr3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr <= &AdmLogDtHr_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGDTHR' AND &DynamicFiltersOperator3 = 0 AND (not &AdmLogDtHr_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha.ToLower() like &AdmLogCha3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGCHA' AND &DynamicFiltersOperator3 = 0 AND (not &AdmLogCha3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha.ToLower() like '%' +  &AdmLogCha3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ADMLOGCHA' AND &DynamicFiltersOperator3 = 1 AND (not &AdmLogCha3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha.ToLower() like &TFAdmLogCha.ToLower() when &TFAdmLogCha_Sel.IsEmpty() AND (not &TFAdmLogCha.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogCha = &TFAdmLogCha_Sel when not &TFAdmLogCha_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogObj.ToLower() like &TFAdmLogObj.ToLower() when &TFAdmLogObj_Sel.IsEmpty() AND (not &TFAdmLogObj.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogObj = &TFAdmLogObj_Sel when not &TFAdmLogObj_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu.ToLower() like &TFAdmLogUsu.ToLower() when &TFAdmLogUsu_Sel.IsEmpty() AND (not &TFAdmLogUsu.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogUsu = &TFAdmLogUsu_Sel when not &TFAdmLogUsu_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogTip in &TFAdmLogTip_Sels when &TFAdmLogTip_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr >= &TFAdmLogDtHr when not &TFAdmLogDtHr.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDtHr <= &TFAdmLogDtHr_To when not &TFAdmLogDtHr_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogIP.ToLower() like &TFAdmLogIP.ToLower() when &TFAdmLogIP_Sel.IsEmpty() AND (not &TFAdmLogIP.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogIP = &TFAdmLogIP_Sel when not &TFAdmLogIP_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDad.ToLower() like &TFAdmLogDad.ToLower() when &TFAdmLogDad_Sel.IsEmpty() AND (not &TFAdmLogDad.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AdmLogDad = &TFAdmLogDad_Sel when not &TFAdmLogDad_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogIP1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogIP1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogIP</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogTip1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogTip1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogTip</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogUsu1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogUsu1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogUsu</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogDtHr1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogDtHr1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogDtHr_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogDtHr_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogCha1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogCha1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogCha</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogIP2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogIP2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogIP</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogTip2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogTip2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogTip</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogUsu2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogUsu2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogUsu</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogDtHr2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogDtHr2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogDtHr_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogDtHr_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogCha2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogCha2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogCha</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogIP3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogIP3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogIP</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogTip3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogTip3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogTip</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogUsu3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogUsu3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogUsu</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogDtHr3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogDtHr3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogDtHr_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogDtHr_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AdmLogCha3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AdmLogCha3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogCha</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogCha">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogCha</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogCha</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogCha_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogCha_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogCha</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogObj">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogObj</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogObj</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogObj_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogObj_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogObj</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogUsu">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogUsu</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogUsu</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogUsu_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogUsu_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogUsu</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogTip_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogTip_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogTip</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogDtHr">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogDtHr</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogDtHr_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogDtHr_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDtHr</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogIP">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogIP</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogIP</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogIP_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogIP_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogIP</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogDad">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogDad</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDad</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAdmLogDad_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAdmLogDad_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AdmLogDad</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogIP1</Name>
+        <Description>Adm Log IP1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogTip1</Name>
+        <Description>Adm Log Tip1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogUsu1</Name>
+        <Description>Adm Log Usu1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogDtHr1</Name>
+        <Description>Adm Log Dt Hr1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogDtHr_To1</Name>
+        <Description>Adm Log Dt Hr_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogCha1</Name>
+        <Description>Adm Log Cha1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogIP2</Name>
+        <Description>Adm Log IP2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogTip2</Name>
+        <Description>Adm Log Tip2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogUsu2</Name>
+        <Description>Adm Log Usu2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogDtHr2</Name>
+        <Description>Adm Log Dt Hr2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogDtHr_To2</Name>
+        <Description>Adm Log Dt Hr_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogCha2</Name>
+        <Description>Adm Log Cha2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogIP3</Name>
+        <Description>Adm Log IP3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogTip3</Name>
+        <Description>Adm Log Tip3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogUsu3</Name>
+        <Description>Adm Log Usu3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogDtHr3</Name>
+        <Description>Adm Log Dt Hr3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogDtHr_To3</Name>
+        <Description>Adm Log Dt Hr_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AdmLogCha3</Name>
+        <Description>Adm Log Cha3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogCha</Name>
+        <Description>TFAdm Log Cha</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogCha_Sel</Name>
+        <Description>TFAdm Log Cha_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogObj</Name>
+        <Description>TFAdm Log Obj</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogObj_Sel</Name>
+        <Description>TFAdm Log Obj_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogUsu</Name>
+        <Description>TFAdm Log Usu</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogUsu_Sel</Name>
+        <Description>TFAdm Log Usu_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogTip_Sels</Name>
+        <Description>TFAdm Log Tip_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogDtHr</Name>
+        <Description>TFAdm Log Dt Hr</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogDtHr_To</Name>
+        <Description>TFAdm Log Dt Hr_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogIP</Name>
+        <Description>TFAdm Log IP</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogIP_Sel</Name>
+        <Description>TFAdm Log IP_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogDad</Name>
+        <Description>TFAdm Log Dad</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAdmLogDad_Sel</Name>
+        <Description>TFAdm Log Dad_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>AliEscLogWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-Auditoria.WorkWithPlusAliEscLog</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

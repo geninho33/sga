@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="9946ab31-5b1b-4b91-a7c2-fb201a86bf92" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-24T14:44:46.0000000Z" checksum="12e2530503cf110790006d65f2106009" fullyQualifiedName="WWPBaseObjects.Discussions.WorkWithPlusWWP_DiscussionsWC" moduleGuid="e2da86dd-2537-4d5a-8e82-35fda77dc9e5" guid="9e55f3a1-0de7-030a-13ca-fd17387c20ef" name="WorkWithPlusWWP_DiscussionsWC" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WWP_Discussions WC" parent="WWPBaseObjects.Discussions.WWP_DiscussionsWC" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;">
+  <transaction childrenOrderedList="2;01;Main Table" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-WWPBaseObjects.Discussions.WWP_DiscussionMessage" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-WWPBaseObjects.Discussions.WWP_DiscussionMessage">
+    <table defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" />
+  </transaction>
+  <level childrenOrderedList="4;39;" id="eaaf8060-5b8f-48d2-8b34-febd8695fe03:1" name="WWP_DiscussionsWC">
+    <selection Template="CardWithSmallImage" description="Discussions of a record" defaultDescription=" Discussion Message" childrenOrderedList="4;02;Main Table" level="root:WWP_DiscussionMessage" defaultLevel="root:WWP_DiscussionMessage" GenerateDataSelectorForConditions="False" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMainDiscussions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" type="Responsive" defaultType="Responsive" includeInPanel="False" panelTitle="Discussions" childrenOrderedList="4;28;ErrorViewer-4;32;">
+        <table type="Flex">
+          <textBlock controlName="DiscussionsTitle" caption="Discussions" themeClass="TextBlockTitleWWP" />
+          <textBlock controlName="NewThread" caption="Start a new thread" flexGrow="0" flexAlignSelf="Flex End" />
+        </table>
+        <freeStyleGrid type="Responsive" defaultType="Responsive" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" defaultFSColumns_S="2" defaultFSColumns_M="3" defaultFSColumns_L="3" cellId="GridCell" cellThemeClass="DiscussionsGridCell" childrenOrderedList="4;141;4;32;-4;140;4;32;MainLayout">
+          <table name="DiscussionCard" themeClass="DiscussionCardTable" type="Responsive" cellId="DiscussionCardCell" cellThemeClass="CellMarginBottom15">
+            <table name="TableCard" defaultThemeClass="SimpleCardTable" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Responsive" cellThemeClass="CellMarginTop" defaultCellThemeClass="CellMarginTop">
+              <variable attTemplate="Image" name="UserExtendedPhoto" domain="adbb33c9-0906-4971-833c-998de27e0676-WWPUserExtendedPhoto" themeClass="AttributeDiscussionImage" defaultThemeClass="CardSmallImageAttribute" cellThemeClass="CellPaddingTop5" showDescription="False" defaultShowDescription="False" flexGrow="0" readOnly="True" />
+              <table name="TableTitle" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+                <attribute attTemplate="Title" attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPUserExtendedFullName" description="=Attribute.Title" defaultDescription="=Attribute.Title" themeClass="SimpleCardAttributeTitle" defaultThemeClass="SimpleCardAttributeTitle" showDescription="False" defaultShowDescription="False" />
+                <attribute attTemplate="Subtitle" attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPDiscussionMessageDate" description="=Attribute.Title" defaultDescription="=Attribute.Title" autolink="False" themeClass="AttributeDiscussionDate" defaultThemeClass="SimpleCardAttributeSubtitle" showDescription="False" defaultShowDescription="False" mergeWithPrevious="True" />
+                <attribute attTemplate="Description" attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPDiscussionMessageMessage" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="AttributeDiscussionDescription" defaultThemeClass="CardSmallImageAttributeDescription" showDescription="False" defaultShowDescription="False" />
+              </table>
+            </table>
+            <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-WWPDiscussionMessageId" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultVisible="False" />
+            <webComponent name="WCDiscussionsOneThreadWC" cellId="WCDiscussionsOneThreadCell">
+              <parameters />
+            </webComponent>
+            <webComponent name="DiscussionsOneThreadCollapsedWC" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.Discussions.WWP_DiscussionsOneThreadCollapsedWC" cellId="DiscussionsOneThreadCollapsedWCCell">
+              <parameters>
+                <parameter name="WWPDiscussionMessageId" />
+              </parameters>
+            </webComponent>
+          </table>
+          <variable name="IsDiscussionAnswersWCLoaded" dataType="Basic" basicType="Boolean" visible="False" />
+        </freeStyleGrid>
+        <table name="TableNewThread" flexDirection="Column" flexWrap="Wrap" type="Flex" cellId="NewThreadCell" cellThemeClass="DiscussionNewMessageCell">
+          <variable name="Message" dataType="Basic" basicType="VarChar" basicCLength="400" themeClass="Attribute" inviteMessage="Type a message to create a new thread..." cellThemeClass="CellMarginTop" showDescription="False" />
+          <standardAction imageClass="fas fa-paper-plane DiscussionsSendIcon" buttonClass="ButtonMaterial CellMarginRight0" ControlType="Image" name="Enter" imageType="Font icon" flexGrow="0" flexAlignSelf="Flex End" />
+        </table>
+        <userControl controlName="UCMentions" ucName="WWP.Suggest" ucProperties="DataListProc:WWPBaseObjects.Discussions.WWP_GetUsersForDiscussionMentions" />
+      </table>
+      <parameters>
+        <parameter name="&amp;WWPEntityName" />
+        <parameter name="WWPDiscussionMessageEntityRecordId" />
+        <parameter name="&amp;WWPSubscriptionEntityRecordDescription" />
+        <parameter name="&amp;WWPNotificationLink" />
+      </parameters>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWWP_DiscussionsWC</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.Discussions.WWP_DiscussionsWC</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

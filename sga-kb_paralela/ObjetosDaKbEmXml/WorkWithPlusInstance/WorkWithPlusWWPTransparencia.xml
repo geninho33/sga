@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="543502c9-4876-48a4-af64-172f694ee53f" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-03-09T23:51:09.0000000Z" lastUpdate="2025-03-09T16:47:00.0000000Z" checksum="ed3088f0e3325ce85d42e2d13234b6d3" fullyQualifiedName="WorkWithPlusWWPTransparencia" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="6839803c-a18a-4fbc-825b-f1d6d8fd37d5" name="WorkWithPlusWWPTransparencia" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WWPTransparencia" parent="WWPTransparencia" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WorkWithPlusMasterPage" defaultSecFuntionKey="WorkWithPlusMasterPage">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <table name="TableHeader" themeClass="TableHeader" type="Flex" cellWidth_S="100%" cellThemeClass="MasterHeaderCell navbar-fixed-top">
+        <table type="Flex">
+          <variable name="prefLogo" description="Logo" defaultDescription="Logo" domain="adbb33c9-0906-4971-833c-998de27e0676-prefLogo" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-prefLogo" themeClass="ImageTop" defaultThemeClass="ImageTop" showDescription="False" defaultShowDescription="False" readOnly="True" defaultReadOnly="True" />
+          <userAction imageClass="fa fa-bars ImageMenuIcon" ControlType="Image" name="ShowMenu" imageType="Font icon" cellThemeClass="ShowMenuImageCell" mergeWithPrevious="False" flexGrow="0" />
+        </table>
+        <table name="TableUserRole" themeClass="CellHeaderBar hidden-xs" numberOfColumns="4" flexJustifyContent="Flex End" type="Flex" flexGrow="0">
+          <userAction tooltip="WWP_StyleCustomizations" fontIcon="fa fa-cog RuntimeSettingsIcon" buttonClass="ActionGroupHeader" ControlType="DropDownComponent" name="RuntimeDesignSettings" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WWPBaseObjects.WWP_MasterPageRuntimeSettings" imageType="Font icon" popupWidth="240" cellThemeClass="MasterTopIconsCell" />
+        </table>
+      </table>
+      <table name="TableContent" themeClass="page-content" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" cellThemeClass="CellTableContentMaster CellTableContentWithFooter">
+        <variable name="locaDescricao" description="" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-locaDescricao" themeClass="TextBlockTitleMaster" cellThemeClass="CellTitleMaster" showDescription="False" flexAlignSelf="Center" readOnly="True" />
+        <textBlock controlName="TextblockTitle" caption=" Title" themeClass="TextBlockTitleMaster" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" cellThemeClass="CellTitleMaster" />
+        <userControl controlName="ContentHolder" ucName="Content Place Holder" />
+      </table>
+      <userControl controlName="UCMenu" ucName="DVelop.GXBootstrap.SidebarMenu" ucProperties="SearchServiceUrl:xxx,SearchMinChars:0,SearchHelperDescription:WWP_SearchMenuOption,SidebarMainClass:page-sidebar sidebar-fixed,ScrollWidth:5,ScrollAlwaysVisible:True,HideScrollInCompactMenu:False,SidebarMenuOptionsData:&amp;DVelop_Menu,SidebarMenuUserData:&amp;DVelop_Menu_UserData" cellThemeClass="CellWidthAuto" />
+      <table name="TableFooter" flexJustifyContent="Flex End" type="Flex" cellThemeClass="MasterFooterCellFixedVM page-content">
+        <textBlock controlName="TextBlockFooter" caption="Copyright 2024 © VIZIV TI e Software" themeClass="FooterText" flexGrow="0" />
+      </table>
+      <userControl controlName="UCMessage" ucName="DVelop.DVMessage" ucProperties="StopOnError:True" />
+      <userControl controlName="UCTooltip" ucName="DVelop.GXBootstrap.Tooltip" />
+      <userControl controlName="WWPUtilities" ucName="WWP.WorkWithPlusUtilities_FAL" ucProperties="EnableFixObjectFitCover:True,EmpowerTabs:True,EnableConvertComboToBootstrapSelect:True,EnableUpdateRowSelectionStatus:True,AllowColumnReordering:True,AllowColumnDragging:True,AllowColumnResizing:True,AllowColumnsRestore:True,PagBarIncludeGoTo:True" />
+      <userControl controlName="WWPDatePicker" ucName="WWP.DatePicker" />
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWWPTransparencia</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WWPTransparencia</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

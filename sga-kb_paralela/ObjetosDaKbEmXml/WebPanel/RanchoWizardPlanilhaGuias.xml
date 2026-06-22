@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="41a15ceb-7c94-4da6-9d39-7e991a197d28" user="JORGE-AVELL\joadh" versionDate="2025-08-27T00:53:12.0000000Z" lastUpdate="2025-08-26T22:38:21.0000000Z" checksum="4d0db2ed448cb73c0a899db1b3bf87ee" fullyQualifiedName="RanchoWizardPlanilhaGuias" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="edc33148-7f73-41c2-982b-731d2b809d94" name="RanchoWizardPlanilhaGuias" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Rancho Wizard Planilha Guias" parent="WorkWithPlusRanchoWizardPlanilha" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" class="Table TableWithSelectableGrid" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableGrid" tableType="Responsive" responsiveSizes="[]"><row><cell><grid controlName="FreeStyleGridLocais" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;SflRender&lt;/Name&gt;&lt;Value&gt;FlexGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FlexGrid_flexWrap&lt;/Name&gt;&lt;Value&gt;wrap&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FlexGrid_justifyContent&lt;/Name&gt;&lt;Value&gt;space-around&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="FreeStyleGridLocaisLayoutTable" tableType="Flex"><row><cell cellClass="Invisible"><table controlName="UnnamedTableContentFSFreeStyleGridLocais"><row><cell><data attribute="&amp;Locais_locCodigo" labelPosition="None" /></cell></row></table></cell><cell cellClass="CellMarginTop"><table controlName="TableCard" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[],[],[{&quot;label&quot;:100}]]}]"><row><cell cellClass="DataContentCell MinWidth-25perc"><textblock controlName="Local" caption="Local:" class="Attribute" /></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><simplegrid controlName="Grid" class="GridWithBorderColor WorkWith"><item attribute="&amp;GridSelected" titleExp="" class="AttributeCheckBox" /><item attribute="&amp;locCodigo" titleExp="Unidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;prodDescricao" titleExp="Alimento" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Quantidade" titleExp="Quantidade" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;uniDescricao" titleExp="Und." class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xQuantidade" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distObservacao" titleExp="Observação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell cellClass="CellMarginTop10 DscTop"><data attribute="&amp;Locais_Observacao" labelCaption="Observação" class="AttributeRealWidth" /></cell></row></table></cell></row></table></grid></cell></row><row><cell hAlign="Center"><textblock controlName="LabelGridEmpty" caption="Nenhuma Guia foi gerada!" class="TextBlockTitleMaster" /></cell></row></table></cell></row><row><cell cellClass="CellWizardActions"><table controlName="TableActions" tableType="Flex" flexWrap="Wrap" justifyContent="Space Between"><row><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardPrevious&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;BeforeIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Event&lt;/Name&gt;&lt;Value&gt;'WizardPrevious'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GXM_previous&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;BtnDefault ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardNext&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AfterIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;Finalizar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;Button ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute AttID="&amp;remCodigo" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&WebSessionKey, in:&PreviousStep, in:&GoingBack);
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call(&WWPContext)
+   	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'LoadVariablesFromWizardData'
+
+	Do 'AttributesSecurityCode'
+	&remCodigo.Visible = False
+	&Locais_locCodigo.Visible = False
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	Grid.Rows = 0
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	/* Padrão sem guias */
+	LabelGridEmpty.Visible = true
+	BtnWizardNext.Visible = false
+
+EndEvent
+
+Event FreeStyleGridLocais.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	for &GridLocaisItem in &WizardData.Locais.GridLocais
+
+		// Localiza quantidade de pessoas do local
+		for &PessoasGridItem in &WizardData.Pessoas2.Grid
+
+			if &PessoasGridItem.locCodigo = &GridLocaisItem.locCodigo and &PessoasGridItem.TotalPessoas > 0
+				&Locais_locCodigo = &GridLocaisItem.locCodigo
+				&Locais_Observacao = &GridLocaisItem.LocObservacaoGuia
+
+				Do 'ValidaGuia'
+
+				if &GerarGuia
+					LabelGridEmpty.Visible = false
+					BtnWizardNext.Visible = true
+					Local.Caption = format('LOCAL: %1 (%2) - %3',&GridLocaisItem.locDescricao,&GridLocaisItem.locCodigo.ToString().Trim(),&GridLocaisItem.rotaDescricao)
+					FreeStyleGridLocais.Load()
+				endif
+
+				Exit
+			endif
+
+		endfor
+
+	endfor
+
+EndEvent
+
+Event Grid.Load
+
+	if 1=2 // Inutiliza código do WWPLus
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	&GridSelected = false
+	&Quantidade.SetEmpty()
+	For &GridSelectedRow in &WizardData.Guias.Grid
+		If &GridSelectedRow.locCodigo = &locCodigo
+			AND &GridSelectedRow.prodCodigo = &prodCodigo
+			AND &GridSelectedRow.prodDescricao = &prodDescricao
+			AND &GridSelectedRow.uniDescricao = &uniDescricao
+			AND &GridSelectedRow.xQuantidade = &xQuantidade
+			AND &GridSelectedRow.distObservacao = &distObservacao
+			&GridSelected = True
+			&Quantidade = &GridSelectedRow.Quantidade
+			Exit
+		EndIf
+	EndFor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	Endif
+
+	&locCodigo = &Locais_locCodigo
+	&distObservacao = &Locais_Observacao
+
+	// Calcula quantidades por produto
+	for &GridAlimentosItem in &WizardData.Alimentos.GridAlimentos
+
+		&GridSelected	= true
+		&prodCodigo 	= &GridAlimentosItem.prodCodigo
+		&prodDescricao 	= &GridAlimentosItem.prodDescricao
+		&uniDescricao	= &GridAlimentosItem.uniDescricao
+		&Quantidade		= 0
+		&ValorPerCapta 	= 0
+		&xQuantidade	= 0
+
+		for &PercaptaGridItem in &WizardData.PerCapta2.Grid
+
+			if &PercaptaGridItem.prodCodigo = &prodCodigo
+				&locCodigoCollection.FromJson(&PercaptaGridItem.locCodigoCollectionJson)
+
+				/* Verifica se o produto tem estoque */
+				if (&GridAlimentosItem.prodSaldo > 0) and (not &locCodigo in &locCodigoCollection)
+
+					/* soma Percapta */
+					&ValorPerCapta += ((&PercaptaGridItem.Bercario1PerCapta * &PessoasGridItem.Bercario1) * &PercaptaGridItem.Bercario1Oferta)
+					&ValorPerCapta += ((&PercaptaGridItem.Bercario2PerCapta * &PessoasGridItem.Bercario2) * &PercaptaGridItem.Bercario2Oferta)
+					&ValorPerCapta += ((&PercaptaGridItem.CrechePerCapta * &PessoasGridItem.Creche) * &PercaptaGridItem.CrecheOferta)
+					&ValorPerCapta += ((&PercaptaGridItem.EmebPerCapta * &PessoasGridItem.Emeb) * &PercaptaGridItem.EmebOferta)
+					&ValorPerCapta += ((&PercaptaGridItem.IntegralPerCapta * &PessoasGridItem.Integral) * &PercaptaGridItem.IntegralOferta)
+					&ValorPerCapta += ((&PercaptaGridItem.FuncionarioPerCapta * &PessoasGridItem.Funcionarios) * &PercaptaGridItem.FuncionarioOferta)
+				endif
+
+				Exit
+
+			endif
+
+		endfor
+
+		if &ValorPerCapta > 0
+			&Quantidade = round(((&ValorPerCapta / &GridAlimentosItem.QtdeEmbalagem) + 0.49),0)
+			if &Quantidade = 0
+				&Quantidade = 1
+			endif
+
+			&xQuantidade = &Quantidade
+			Load
+		Endif
+
+	endfor
+
+EndEvent
+
+Event Enter
+
+	// Grava os dados e gera a distribuição
+	Do 'SaveVariablesToWizardData'
+	&HasValidationErrors = false
+	&IsSucess = RanchoWizardPlanilhaGravaDados(&WebSessionKey,&remCodigo,&Messages)
+	if not &IsSucess
+		&HasValidationErrors = true
+		for &Message in &Messages
+			msg(&Message.Description)
+		endfor
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If not &HasValidationErrors
+		Do 'SaveVariablesToWizardData'
+		RanchoWizardPlanilha(!'Guias', !'Conclusao', false)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'WizardPrevious'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'SaveVariablesToWizardData'
+	RanchoWizardPlanilha(!'Guias', !'PerCapta2', true)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadGridSelectedRows'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.Guias.Grid.Clear()
+	For Each Line in Grid
+		If (&GridSelected)
+			&GridSelectedRow = new()
+
+			&GridSelectedRow.locCodigo = &locCodigo
+			&GridSelectedRow.prodCodigo = &prodCodigo
+			&GridSelectedRow.prodDescricao = &prodDescricao
+			&GridSelectedRow.Quantidade = &Quantidade
+			&GridSelectedRow.uniDescricao = &uniDescricao
+			&GridSelectedRow.xQuantidade = &xQuantidade
+			&GridSelectedRow.distObservacao = &distObservacao
+
+			&WizardData.Guias.Grid.Add(&GridSelectedRow)
+		Endif
+	Endfor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadVariablesFromWizardData'
+
+	/* Carrega dados do XML */
+	&WizardData.FromXml(FileXMLToWizardData(&WebSessionKey))
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&remCodigo = &WizardData.Guias.remCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveVariablesToWizardData'
+
+	if 1=2 // Inutiliza código do WWPLus
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&WizardData.Guias.remCodigo = &remCodigo
+	&WizardData.Guias.FreeStyleGridLocais.Clear()
+	For Each Line in FreeStyleGridLocais
+		&FreeStyleGridLocaisItem = new()
+		&FreeStyleGridLocaisItem.Locais_locCodigo = &Locais_locCodigo
+		&FreeStyleGridLocaisItem.Locais_Observacao = &Locais_Observacao
+
+		&WizardData.Guias.FreeStyleGridLocais.Add(&FreeStyleGridLocaisItem)
+	EndFor
+	Do 'LoadGridSelectedRows'
+	&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	endif
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&WizardData.Guias.remCodigo = &remCodigo
+	&WizardData.Guias.FreeStyleGridLocais.Clear()
+	&WizardData.Guias.Grid.Clear()
+//	&GuiasGrid = new()
+
+	For each line in FreeStyleGridLocais
+
+		For Each Line in Grid
+			If (&GridSelected)
+				&GridSelectedRow = new()
+
+				&GridSelectedRow.locCodigo = &locCodigo
+				&GridSelectedRow.prodCodigo = &prodCodigo
+				&GridSelectedRow.prodDescricao = &prodDescricao
+				&GridSelectedRow.Quantidade = &Quantidade
+				&GridSelectedRow.xQuantidade = &xQuantidade
+				&GridSelectedRow.distObservacao = &Locais_Observacao
+
+				&WizardData.Guias.Grid.Add(&GridSelectedRow)
+//				&GuiasGrid.Add(&GridSelectedRow)
+			Endif
+		Endfor
+
+	Endfor
+
+	/* Grava para arquivo XML */
+	WizardDataToFileXML(&WebSessionKey,&WizardData.ToXml())
+
+	&WizardData.Guias.Grid.Clear()
+	&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+//	&WebSession.Set(&WebSessionKey + !'_Guias', &GuiasGrid.ToJson())
+
+EndSub
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event GlobalEvents.ForceUpdateWizardData
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: ForceUpdateWizardDataGlobalEvent
+	do 'SaveVariablesToWizardData'
+	do 'LoadVariablesFromWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'ValidaGuia'
+
+	&GerarGuia = false
+	for &GridAlimentosItem in &WizardData.Alimentos.GridAlimentos
+
+		if &GridAlimentosItem.prodSaldo > 0
+
+			for &PercaptaGridItem in &WizardData.PerCapta2.Grid
+
+				if &PercaptaGridItem.prodCodigo = &GridAlimentosItem.prodCodigo
+					&locCodigoCollection.FromJson(&PercaptaGridItem.locCodigoCollectionJson)
+
+					if 	(not &Locais_locCodigo in &locCodigoCollection) and
+						(((&PercaptaGridItem.Bercario1PerCapta * &PessoasGridItem.Bercario1) * &PercaptaGridItem.Bercario1Oferta) +
+						((&PercaptaGridItem.Bercario2PerCapta * &PessoasGridItem.Bercario2) * &PercaptaGridItem.Bercario2Oferta) +
+						((&PercaptaGridItem.CrechePerCapta * &PessoasGridItem.Creche) * &PercaptaGridItem.CrecheOferta) +
+						((&PercaptaGridItem.EmebPerCapta * &PessoasGridItem.Emeb) * &PercaptaGridItem.EmebOferta) +
+						((&PercaptaGridItem.IntegralPerCapta * &PessoasGridItem.Integral) * &PercaptaGridItem.IntegralOferta) +
+						((&PercaptaGridItem.FuncionarioPerCapta * &PessoasGridItem.Funcionarios) * &PercaptaGridItem.FuncionarioOferta)) > 0
+
+						&GerarGuia = true
+					endif
+
+					Exit
+
+				endif
+
+			endfor
+
+			if &GerarGuia
+				Exit
+			endif
+
+		endif
+
+	endfor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="CurrentStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CurrentStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distObservacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distObservacao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FreeStyleGridLocaisItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FreeStyleGridLocaisItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Guias.FreeStyleGridLocaisItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GerarGuia">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GerarGuia</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GoingBack">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GoingBack</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAlimentosItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAlimentosItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Alimentos.GridAlimentosItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridLocaisItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridLocaisItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Locais.GridLocaisItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSelected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSelected</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSelectedRow">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSelectedRow</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Guias.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GuiasGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GuiasGrid</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Guias.GridItem</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HasValidationErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HasValidationErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSucess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSucess</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Locais_locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Locais_locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Locais_Observacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Locais_Observacao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distObservacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Messages">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Messages</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PercaptaGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PercaptaGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.PerCapta2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PessoasGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PessoasGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData.Pessoas2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PreviousStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PreviousStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Quantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="remCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>remCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:remCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="uniDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>uniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValorPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValorPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:PerCapta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSessionKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSessionKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WizardData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WizardData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:RanchoWizardPlanilhaData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RanchoWizardPlanilhaGuias</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>KEY_ENTER</Name>
+      <Value>N</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusRanchoWizardPlanilha</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/WPRoot[1]/steps/step[@Name="Guias"]</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>WizardStep</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

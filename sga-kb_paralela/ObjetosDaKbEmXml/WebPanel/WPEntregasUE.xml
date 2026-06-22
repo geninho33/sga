@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="1ab375f4-744e-4841-ad42-cc7bb54e1bd2" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-03-06T03:46:01.0000000Z" lastUpdate="2026-02-03T17:35:34.0000000Z" checksum="19c65e36348e35df2e72cb16ca831bbb" fullyQualifiedName="WPEntregasUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="24d8e64b-58c3-4694-86fb-492b3e1a0355" name="WPEntregasUE" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Entrega de Alimentos" parent="WebPanel" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" tableType="Responsive" responsiveSizes="[]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_cPanelEntregas&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Listagem de Entregas&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="cPanelEntregas" tableType="Responsive" responsiveSizes="[]" containerSlotName="cPanelEntregas"><row><cell hAlign="Right"><action controlName="BtnbtnAjuda" onClickEvent="'DobtnAjuda'" caption="Ajuda" /></cell></row><row><cell><table controlName="TableSplitteddistCodigo" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:17},{&quot;width&quot;:83}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlockdistCodigo" caption="Informe o número da Guia" class="Label" /></cell><cell><table controlName="TableMergeddistCodigo" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="&amp;distCodigo" labelPosition="None" class="AttributeRealWidth" /></cell><cell><action controlName="BtnbtnBuscar" onClickEvent="'DobtnBuscar'" caption="Buscar " /></cell></row></table></cell></row></table></cell></row><row><cell><tab controlName="GXUITabsPanel_Tabs1"><item itemControlName="abaGuias" caption="Entregas"><table controlName="abaProdutos" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="HasGridEmpowerer"><simplegrid controlName="GridSDTEntregasUEs" class="GridWithBorderColor WorkWith" collection="&amp;SDTEntregasUE"><item attribute="&amp;btnReceber" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Receber Entrega&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnImprimir" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Imprimir Guia&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distCodigo" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distCodigo" titleExp="Guia nr." class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distSituacao" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distSituacao" titleExp="Situação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distCodigoTipoRemessa" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distCodigoTipoRemessa" titleExp="Tipo de Remessa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distLocalOrigem" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distLocalOrigem" titleExp="Origem" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distLocalDestino" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distLocalDestino" titleExp=" Destino" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distDataEnvio" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distDataEnvio" titleExp="Envio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distDataRecepcao" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distDataRecepcao" titleExp="Recepção" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distRecebedor" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distRecebedor" titleExp="Recebedor" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distVincDescricao" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distVincDescricao" titleExp="Unidade Vinculada" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTEntregasUE__distObservacao" attribute="&amp;SDTEntregasUE" fieldSpecifier="item(0).distObservacao" titleExp="Observação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></item></tab></cell></row></table></ucw></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><table id="TableDVelop_ConfirmPanel_btnReceber"><tbody><tr><td align="Center"><gxDVelop.GXBootstrap.ConfirmPanel ControlName="DVelop_ConfirmPanel_btnReceber" Title="Confirmação" ConfirmationText="Confirma o recebimento dos Produtos ?" YesButtonCaption="WWP_ConfirmTextYes" NoButtonCaption="WWP_ConfirmTextNo" CancelButtonCaption="WWP_ConfirmTextCancel" YesButtonPosition="Left" ConfirmType="YesNo"><container containerId="Body" /></gxDVelop.GXBootstrap.ConfirmPanel></td></tr></tbody></table><gxWWP.GridEmpowerer ControlName="GridSDTEntregasUEs_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call( &WWPContext )
+
+	if &WWPContext.prefCodigo.IsEmpty()
+	   WPLoginUE()
+	else
+	    &distCodigo       = 0
+	    &prefCodigo       = &WWPContext.prefCodigo
+		&locCodigo        = &WWPContext.locCodigo
+		&locVinculada     = &WWPContext.locVinculada
+		&locVincDescricao = &WWPContext.locVincDescricao
+		Do 'Popular'
+		&codigoAjuda   = 3
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	GridSDTEntregasUEs_Empowerer.GridInternalName = GridSDTEntregasUEs.InternalName
+	GridSDTEntregasUEs.Rows = 0
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&btnReceber.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnImprimir.ColumnHeaderClass = !'WWIconActionColumn'
+	SDTEntregasUE__distCodigo.ColumnHeaderClass = !'WWColumn'
+	SDTEntregasUE__distSituacao.ColumnHeaderClass = !'WWColumn'
+	SDTEntregasUE__distCodigoTipoRemessa.ColumnHeaderClass = !'WWColumn'
+	SDTEntregasUE__distDataEnvio.ColumnHeaderClass = !'WWColumn'
+	SDTEntregasUE__distDataRecepcao.ColumnHeaderClass = !'WWColumn'
+	SDTEntregasUE__distRecebedor.ColumnHeaderClass = !'WWColumn'
+	SDTEntregasUE__distVincDescricao.ColumnHeaderClass = !'WWColumn'
+	SDTEntregasUE__distObservacao.ColumnHeaderClass = !'WWColumn'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTEntregasUEs.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+	&btnReceber = !'<i class="fas fa-check"></i>'
+	
+	&btnImprimir = !'<i class="fas fa-print"></i>'
+
+	&btnReceber.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWIconActionColumn WWColumnWarning WWColumnWarningFirstColumn', !'WWIconActionColumn')
+	&btnImprimir.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	SDTEntregasUE__distCodigo.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+	SDTEntregasUE__distSituacao.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+	SDTEntregasUE__distCodigoTipoRemessa.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+	SDTEntregasUE__distDataEnvio.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+	SDTEntregasUE__distDataRecepcao.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+	SDTEntregasUE__distRecebedor.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+	SDTEntregasUE__distVincDescricao.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+	SDTEntregasUE__distObservacao.ColumnClass = iif(&SDTEntregasUE.CurrentItem.distReceber in ( 'N', ''), !'WWColumn WWColumnWarning', !'WWColumn')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnAjuda'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	WPAjudaUE.PopUp(&prefCodigo, &codigoAjuda)
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnBuscar'
+
+	Do 'Popular'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnReceber.Click
+
+//    If &SDTEntregasUE.CurrentItem.distReceber in ('N','')
+//	   if ( &SDTEntregasUE.CurrentItem.distDataEnvio.Month()>9 and
+//		    &SDTEntregasUE.CurrentItem.distDataEnvio.Year()=2024 ) or
+//		    &SDTEntregasUE.CurrentItem.distDataEnvio.Year()>2024
+//	        PRCDConfirmarEntrega(&prefCodigo, &SDTEntregasUE.CurrentItem.distCodigo)
+//	        Do 'Popular'
+//	   endif
+//	Else
+//	   msg('Essa entrega já foi confirmada !')
+//    Endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DVelop_ConfirmPanel_btnReceber.Confirm()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DVelop_ConfirmPanel_btnReceber.Close
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If DVelop_ConfirmPanel_btnReceber.Result = !'Yes'
+		Do 'Do btnReceber'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'Do btnReceber'
+
+    If &SDTEntregasUE.CurrentItem.distReceber in ('N')
+       PRCDConfirmarEntrega(&prefCodigo, &SDTEntregasUE.CurrentItem.distCodigo,'E', &SDTEntregasUE.CurrentItem.distLocalDestino )
+       Do 'Popular'
+	Else
+	   msg('Essa entrega já foi confirmada !')
+    Endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event &btnImprimir.Click
+
+	  PRINTGuiaDistribuicaoUE.Popup( &prefCodigo, &SDTEntregasUE.CurrentItem.distCodigo )
+
+EndEvent
+
+Sub 'Popular'
+
+	&SDTEntregasUE.Clear()
+	&dataBusca = now()
+	&dataBusca = &dataBusca - 30
+
+	for each
+		order prefCodigo, (distCodigo)
+		where prefCodigo       = &prefCodigo
+		where distLocalDestino = &locCodigo or distLocalDestino = &locVinculada
+		where distStatus       = 'A'
+		where distCodigo       = &distCodigo when &distCodigo<>0
+		where ( distDataEnvio.Year() = &dataBusca.Year() ) or ( distDataEnvio.Year() = &dataBusca.Year() and distDataCadastro.Year() = &dataBusca.Year() ) when &distCodigo = 0
+		      &entregas                       = new()
+		      &entregas.distCodigo            = distCodigo
+			  &entregas.distCodigoTipoRemessa = distCodigoTipoRemessa
+			  &entregas.distDataEnvio         = distDataEnvio
+			  &entregas.distDataRecepcao      = distDataRecepcao
+			  &entregas.distLocalDestino      = &locCodigo
+			  // &entregas.distLocalDestino   = distLocalDestino
+			  &entregas.distLocalOrigem       = distLocalOrigem
+			  &entregas.distObservacao        = distObservacao
+			  if distLocalDestino = &locVinculada
+				 &entregas.distVincDescricao = &locVincDescricao
+			  endif
+
+			  &entregas.distRecebedor         = distRecebedor
+			  &entregas.distReceber           = distReceber
+			  if distReceber = 'S'
+				 &entregas.distSituacao = 'Recebido'
+			  else
+				 &entregas.distSituacao = 'Aguardando'
+			  endif
+	   		  &SDTEntregasUE.Add( &entregas )
+    endFor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnImprimir">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnImprimir</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnItens">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnItens</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnItensNota">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnItensNota</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnPrint">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnPrint</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="entregas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>entregas</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTEntregasUE.Entrega</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEntregassAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEntregassAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEntregassCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEntregassCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEntregassPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEntregassPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEntregasUEsAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEntregasUEsAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEntregasUEsCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEntregasUEsCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridSDTEntregasUEsPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridSDTEntregasUEsPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnItens">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnItens</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnPrint">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnPrint</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserAction1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserAction1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SDTEntregasUE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SDTEntregasUE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDTEntregasUE</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnReceber">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnReceber</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="codigoAjuda">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>codigoAjuda</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="hoje">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>hoje</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dataBusca">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dataBusca</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locVinculada">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locVinculada</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade Vinculada</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locVinculada</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locVincDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locVincDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descricao</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:descricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WPEntregasUE</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Entrega de Alimentos</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPageUE</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityNone</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

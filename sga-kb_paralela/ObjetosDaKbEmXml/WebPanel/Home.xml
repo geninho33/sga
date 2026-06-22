@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="f952860a-9553-4095-82c8-dedaadd8cf64" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-11-01T03:58:22.0000000Z" lastUpdate="2024-11-01T03:28:30.0000000Z" checksum="707d34aaf7dadf20fffc24ce1eea1727" fullyQualifiedName="WWPBaseObjects.Home" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="f9f26d7b-33ba-47ce-951b-26085044b2bd" name="Home" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Gestão Alimentação Escolar" parent="WWPBaseObjects" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" formClass="FormBGHome" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[],[],[{&quot;visible&quot;:false},{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100,&quot;visible&quot;:true}],[{&quot;width&quot;:58,&quot;visible&quot;:true},{&quot;width&quot;:42,&quot;visible&quot;:true}],[{&quot;visible&quot;:false},{&quot;width&quot;:100,&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:true}],[{&quot;width&quot;:50,&quot;visible&quot;:true},{&quot;width&quot;:50,&quot;visible&quot;:true}],[{&quot;width&quot;:58,&quot;visible&quot;:false},{&quot;width&quot;:42,&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:true}],[{&quot;width&quot;:33,&quot;visible&quot;:true},{&quot;width&quot;:67,&quot;visible&quot;:true}],[{&quot;width&quot;:67,&quot;visible&quot;:false},{&quot;width&quot;:33,&quot;visible&quot;:false}]]}]"><row><cell><table controlName="TableCards" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:50},{&quot;width&quot;:50},{&quot;width&quot;:50},{&quot;width&quot;:50}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:50},{&quot;width&quot;:50},{&quot;width&quot;:50},{&quot;width&quot;:50}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:25},{&quot;width&quot;:25},{&quot;width&quot;:25}]]}]"><row><cell><table controlName="Card1_MainTable" class="TableCardProgressAdminBaseColor"><row><cell cellClass="ProgressCardCell"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Card1_Progress&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;50%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressWhite&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="ProgressCardContentCell"><table controlName="Card1_TableP" tableType="Flex" justifyContent="Flex End"><row><cell><table controlName="Card1_TablePContent" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:83}]]}]"><row><cell><data attribute="&amp;Card1_Value" labelPosition="None" readonly="True" class="DashboardNumber" /></cell></row><row><cell><textblock controlName="Card1_Description" caption="Total de Compras Anual  ( R$ )" class="TextBlockDashboardDescription" /></cell></row></table></cell><cell flexGrow="0"><textblock controlName="Card1_Icon" caption="&lt;i class='ProgressCardIcon fa fa-shopping-cart' style='font-size: 19px'&gt;&lt;/i&gt;" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;Raw HTML&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="Card2_MainTable" class="TableCardProgressAdminDanger"><row><cell cellClass="ProgressCardCell"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Card2_Progress&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;50%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressWhite&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="ProgressCardContentCell"><table controlName="Card2_TableP" tableType="Flex" justifyContent="Flex End"><row><cell><table controlName="Card2_TablePContent" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:83}]]}]"><row><cell><data attribute="&amp;Card2_Value" labelPosition="None" readonly="True" class="DashboardNumber" /></cell></row><row><cell><textblock controlName="Card2_Description" caption="Total de Unidades Atendidas" class="TextBlockDashboardDescription" /></cell></row></table></cell><cell flexGrow="0"><textblock controlName="Card2_Icon" caption="&lt;i class='ProgressCardIcon fas fa-school' style='font-size: 19px'&gt;&lt;/i&gt;" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;Raw HTML&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell cellClass="CellMarginTopMedium"><table controlName="Card3_MainTable" class="TableCardProgressAdminSuccess"><row><cell cellClass="ProgressCardCell"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Card3_Progress&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;50%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressWhite&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="ProgressCardContentCell"><table controlName="Card3_TableP" tableType="Flex" justifyContent="Flex End"><row><cell><table controlName="Card3_TablePContent" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:83}]]}]"><row><cell><data attribute="&amp;Card3_Value" labelPosition="None" readonly="True" class="DashboardNumber" /></cell></row><row><cell><textblock controlName="Card3_Description" caption="Total de Refeições" class="TextBlockDashboardDescription" /></cell></row></table></cell><cell flexGrow="0"><textblock controlName="Card3_Icon" caption="&lt;i class='ProgressCardIcon fas fa-utensils' style='font-size: 19px'&gt;&lt;/i&gt;" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;Raw HTML&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell cellClass="CellMarginTopMedium"><table controlName="Card4_MainTable" class="TableCardProgressAdminInfoLight"><row><cell cellClass="ProgressCardCell"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Card4_Progress&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;50%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressWhite&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;50&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="ProgressCardContentCell"><table controlName="Card4_TableP" tableType="Flex" justifyContent="Flex End"><row><cell><table controlName="Card4_TablePContent" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:83}]]}]"><row><cell><data attribute="&amp;Card4_Value" labelPosition="None" readonly="True" class="DashboardNumber" /></cell></row><row><cell><textblock controlName="Card4_Description" caption="Total de Estudantes atendidos" class="TextBlockDashboardDescription" /></cell></row></table></cell><cell flexGrow="0"><textblock controlName="Card4_Icon" caption="&lt;i class='ProgressCardIcon fas fa-user-graduate' style='font-size: 19px'&gt;&lt;/i&gt;" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;Raw HTML&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row></table></cell></row><row><cell cellClass="CellMarginTop"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableChart1&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;PanelWithBorder Panel_BaseColor&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Produtos mais distribuídos&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableChart1" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableChart1"><row><cell><ucw gxControlType="-2065241387" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;UTChartDoughnut&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Object&lt;/Name&gt;&lt;Value&gt;2a9e9aba-d2de-4801-ae7f-5e3819222daf-WWPBaseObjects.GetHomeSampleNameValueData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Axes&lt;/Name&gt;&lt;Value&gt;&amp;amp;Elements&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Parameters&lt;/Name&gt;&lt;Value&gt;&amp;amp;Parameters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Height&lt;/Name&gt;&lt;Value&gt;250px&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Type&lt;/Name&gt;&lt;Value&gt;Chart&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowValues&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ChartType&lt;/Name&gt;&lt;Value&gt;Doughnut&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemDoubleClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemDoubleClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DragAndDropData&lt;/Name&gt;&lt;Value&gt;&amp;amp;DragAndDropData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterChangedData&lt;/Name&gt;&lt;Value&gt;&amp;amp;FilterChangedData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemExpandData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemExpandData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemCollapseData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemCollapseData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></ucw></cell><cell cellClass="CellMarginTop"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableChartProgress&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;PanelWithBorder Panel_BaseColor&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Distribuição Mensal &lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableChartProgress" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false},{&quot;width&quot;:100,&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100,&quot;visible&quot;:false},{&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;width&quot;:67,&quot;visible&quot;:true},{&quot;width&quot;:33,&quot;visible&quot;:true}]]}]" containerSlotName="TableChartProgress"><row><cell><table controlName="TableReport" tableType="Responsive" responsiveSizes="[]"><row><cell hAlign="Center"><textblock controlName="ChartTitle" caption="Sales: Last Month" class="ProgressBarAdminV2Title" /></cell></row><row><cell cellClass="CellMarginTop"><ucw gxControlType="-2065241387" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;UTChartSmoothArea&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Object&lt;/Name&gt;&lt;Value&gt;2a9e9aba-d2de-4801-ae7f-5e3819222daf-WWPBaseObjects.GetHomeSampleDataService&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Axes&lt;/Name&gt;&lt;Value&gt;&amp;amp;Elements&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Parameters&lt;/Name&gt;&lt;Value&gt;&amp;amp;Parameters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Height&lt;/Name&gt;&lt;Value&gt;240px&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Type&lt;/Name&gt;&lt;Value&gt;Chart&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ChartType&lt;/Name&gt;&lt;Value&gt;SmoothArea&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemDoubleClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemDoubleClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DragAndDropData&lt;/Name&gt;&lt;Value&gt;&amp;amp;DragAndDropData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterChangedData&lt;/Name&gt;&lt;Value&gt;&amp;amp;FilterChangedData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemExpandData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemExpandData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemCollapseData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemCollapseData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell><cell cellClass="CellPaddingRight30"><table controlName="TableReportGoals" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]"><row><cell hAlign="Center"><textblock controlName="IndicatorsTitle" caption="Comparativos" class="ProgressBarAdminV2Title" /></cell></row><row><cell cellClass="CellMarginTop"><table controlName="Progress1_TableMain" class="ProgressBarNotRounded" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:58},{&quot;width&quot;:42}],[{&quot;width&quot;:100}]]}]"><row><cell><textblock controlName="Progress1_DescriptionProgressBar" caption="Total Distribuido das Compras" class="ProgressBarAdminV2Description" /></cell><cell><table controlName="Progress1_TableTotal" tableType="Flex" justifyContent="Flex End"><row><cell flexGrow="0"><data attribute="&amp;Progress1_Value" labelPosition="None" readonly="True" class="ProgressBarAdminV2Number" /></cell><cell flexGrow="0"><textblock controlName="Progress1_SeparatorProgressBar" caption="/" class="ProgressBarAdminV2NumberTotal" /></cell><cell flexGrow="0"><data attribute="&amp;Progress1_TotalValue" labelPosition="None" readonly="True" class="ProgressBarAdminV2NumberTotal" /></cell></row></table></cell></row><row><cell cellClass="ProgressBarWidthNormal"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Progress1_ProgressBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Type&lt;/Name&gt;&lt;Value&gt;Bar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressBar ProgressBarWarning&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;83&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="Progress2_TableMain" class="ProgressBarNotRounded" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:58},{&quot;width&quot;:42}],[{&quot;width&quot;:100}]]}]"><row><cell><textblock controlName="Progress2_DescriptionProgressBar" caption="Uso de Recursos Próprios" class="ProgressBarAdminV2Description" /></cell><cell><table controlName="Progress2_TableTotal" tableType="Flex" justifyContent="Flex End"><row><cell flexGrow="0"><data attribute="&amp;Progress2_Value" labelPosition="None" readonly="True" class="ProgressBarAdminV2Number" /></cell><cell flexGrow="0"><textblock controlName="Progress2_SeparatorProgressBar" caption="/" class="ProgressBarAdminV2NumberTotal" /></cell><cell flexGrow="0"><data attribute="&amp;Progress2_TotalValue" labelPosition="None" readonly="True" class="ProgressBarAdminV2NumberTotal" /></cell></row></table></cell></row><row><cell cellClass="ProgressBarWidthNormal"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Progress2_ProgressBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Type&lt;/Name&gt;&lt;Value&gt;Bar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressBar ProgressBarDanger&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;83&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="Progress3_TableMain" class="ProgressBarNotRounded" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:58},{&quot;width&quot;:42}],[{&quot;width&quot;:100}]]}]"><row><cell><textblock controlName="Progress3_DescriptionProgressBar" caption="Uso de Recursos Federais" class="ProgressBarAdminV2Description" /></cell><cell><table controlName="Progress3_TableTotal" tableType="Flex" justifyContent="Flex End"><row><cell flexGrow="0"><data attribute="&amp;Progress3_Value" labelPosition="None" readonly="True" class="ProgressBarAdminV2Number" /></cell><cell flexGrow="0"><textblock controlName="Progress3_SeparatorProgressBar" caption="/" class="ProgressBarAdminV2NumberTotal" /></cell><cell flexGrow="0"><data attribute="&amp;Progress3_TotalValue" labelPosition="None" readonly="True" class="ProgressBarAdminV2NumberTotal" /></cell></row></table></cell></row><row><cell cellClass="ProgressBarWidthNormal"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Progress3_ProgressBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Type&lt;/Name&gt;&lt;Value&gt;Bar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressBar ProgressBarSuccess&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;83&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell><table controlName="Progress4_TableMain" class="ProgressBarNotRounded" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;width&quot;:58},{&quot;width&quot;:42}],[{&quot;width&quot;:100}]]}]"><row><cell><textblock controlName="Progress4_DescriptionProgressBar" caption="Uso de Outros Recursos" class="ProgressBarAdminV2Description" /></cell><cell><table controlName="Progress4_TableTotal" tableType="Flex" justifyContent="Flex End"><row><cell flexGrow="0"><data attribute="&amp;Progress4_Value" labelPosition="None" readonly="True" class="ProgressBarAdminV2Number" /></cell><cell flexGrow="0"><textblock controlName="Progress4_SeparatorProgressBar" caption="/" class="ProgressBarAdminV2NumberTotal" /></cell><cell flexGrow="0"><data attribute="&amp;Progress4_TotalValue" labelPosition="None" readonly="True" class="ProgressBarAdminV2NumberTotal" /></cell></row></table></cell></row><row><cell cellClass="ProgressBarWidthNormal"><ucw gxControlType="1262914573" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;Progress4_ProgressBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Type&lt;/Name&gt;&lt;Value&gt;Bar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ProgressBar ProgressBarInfoLight&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Percentage&lt;/Name&gt;&lt;Value&gt;83&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row><row><cell cellClass="CellMarginTop"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableChart2&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;PanelFilled Panel_BaseColor&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Sales Table&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableChart2" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableChart2"><row><cell><ucw gxControlType="-2065241387" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;UTChartColumnLine&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Object&lt;/Name&gt;&lt;Value&gt;2a9e9aba-d2de-4801-ae7f-5e3819222daf-WWPBaseObjects.GetHomeSampleDataService&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Axes&lt;/Name&gt;&lt;Value&gt;&amp;amp;Elements&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Parameters&lt;/Name&gt;&lt;Value&gt;&amp;amp;Parameters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Height&lt;/Name&gt;&lt;Value&gt;400px&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Type&lt;/Name&gt;&lt;Value&gt;Chart&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ChartType&lt;/Name&gt;&lt;Value&gt;ColumnLine&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemDoubleClickData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemDoubleClickData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DragAndDropData&lt;/Name&gt;&lt;Value&gt;&amp;amp;DragAndDropData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;FilterChangedData&lt;/Name&gt;&lt;Value&gt;&amp;amp;FilterChangedData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemExpandData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemExpandData&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ItemCollapseData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ItemCollapseData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></ucw></cell><cell cellClass="CellMarginTop"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableNotifications&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;Notificações&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableNotifications" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableNotifications"><row><cell><textblock controlName="NotificationsSubtitle" caption="WWP_Notifications_NewNotifications" class="TextBlockDashboardDescriptionCard" /></cell></row><row><cell cellClass="GridNoBorderNoHeader CellMarginTop HasGridEmpowerer"><simplegrid controlName="GridSDTNotificationsDatas" class="GridWithBorderColor WorkWith" collection="&amp;SDTNotificationsData"><item attribute="&amp;NotificationIcon" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTNotificationsData__NotificationIconClass" attribute="&amp;SDTNotificationsData" fieldSpecifier="item(0).NotificationIconClass" titleExp="Notification Icon Class" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTNotificationsData__NotificationTitle" attribute="&amp;SDTNotificationsData" fieldSpecifier="item(0).NotificationTitle" titleExp="Notification Title" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item controlName="SDTNotificationsData__NotificationDatetime" attribute="&amp;SDTNotificationsData" fieldSpecifier="item(0).NotificationDatetime" titleExp="Notification Datetime" class="AttributeSecondary" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></ucw></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxWWP.GridEmpowerer ControlName="GridSDTNotificationsDatas_Empowerer" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	&Card1_Value  = 0
+	&Card2_Value  = 0
+	&Card3_Value  = 0
+	&Card4_Value  = 0
+
+	TableChart1.Visible = 0
+	TableChart2.Visible = 0
+	TableChartProgress.Visible = 0
+
+	LoadWWPContext.Call(&WWPContext)
+
+	&prefCodigo = &WWPContext.prefCodigo
+
+	for each
+		where prefCodigo = &prefCodigo
+		where notaData.Year() = &Today.Year()
+		where notaStatus<>'C'
+		      &Card1_Value += notaTotal
+    endfor
+
+    for each
+		where prefCodigo = &prefCodigo
+		where locStatus  = 'A'
+		where locNota<>0
+		      &Card2_Value += 1
+	endFor
+
+	if &prefCodigo <> 26
+	   for each
+		   where prefCodigo = &prefCodigo
+		   where AtendimentoStatus = 'A'
+			 &Card4_Value += AtendimentoColesterolSegunda
+			 &Card4_Value += AtendimentoDiabeticoSegunda
+			 &Card4_Value += AtendimentoGlutenSegunda
+			 &Card4_Value += AtendimentoLactoseSegunda
+			 &Card4_Value += AtendimentoNormalSegunda
+	   endFor
+    else
+		&hoje = now()
+		for each
+			where prefCodigo = &prefCodigo
+		    where RanchoMes  = &hoje.Month()
+			where RanchoAno  =  &hoje.Year()
+			where RanchoAreasEnsinoCodigo<>99999997
+			      &Card4_Value += RanchoAreasEnsinoPessoasQuantidade
+		endFor
+	endif
+
+    for each
+		where prefCodigo = &prefCodigo
+		where carPratoData.Year() = &Today.Year()
+              &Card3_Value += 1
+	endFor
+
+    if &Card4_Value<>0
+	    &Card3_Value = &Card3_Value*&Card4_Value
+	endif
+
+    &visivelFundo = true
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	TableChart2.Height = 412
+	TableChart1.Height = 275
+	GridSDTNotificationsDatas_Empowerer.GridInternalName = GridSDTNotificationsDatas.InternalName
+	GridSDTNotificationsDatas.Rows = 0
+
+	//Code block: AssignProgressUCValue - Progress1
+	Progress1_ProgressBar.Percentage = (&Progress1_Value / &Progress1_TotalValue) * 100
+
+	//Code block: AssignProgressUCValue - Progress2
+	Progress2_ProgressBar.Percentage = (&Progress2_Value / &Progress2_TotalValue) * 100
+
+	//Code block: AssignProgressUCValue - Progress3
+	Progress3_ProgressBar.Percentage = (&Progress3_Value / &Progress3_TotalValue) * 100
+
+	//Code block: AssignProgressUCValue - Progress4
+	Progress4_ProgressBar.Percentage = (&Progress4_Value / &Progress4_TotalValue) * 100
+
+	//Code block: AssignProgressUCValue - Card1
+	Card1_Progress.Percentage = &Card1_ProgressValue
+	Card1_Progress.Caption = &Card1_ProgressValue.ToFormattedString()
+
+	//Code block: AssignProgressUCValue - Card2
+	Card2_Progress.Percentage = &Card2_ProgressValue
+	Card2_Progress.Caption = &Card2_ProgressValue.ToFormattedString()
+
+	//Code block: AssignProgressUCValue - Card3
+	Card3_Progress.Percentage = &Card3_ProgressValue
+	Card3_Progress.Caption = &Card3_ProgressValue.ToFormattedString()
+
+	//Code block: AssignProgressUCValue - Card4
+	Card4_Progress.Percentage = &Card4_ProgressValue
+	Card4_Progress.Caption = &Card4_ProgressValue.ToFormattedString()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridSDTNotificationsDatas.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	
+	&NotificationIcon.Format = 2
+	&NotificationIcon = Format(!'<i class="%1 %2"></i>', &SDTNotificationsData.CurrentItem.NotificationIconClass, ThemeClass:NotificationFontIconGrid)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="HomeSampleData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HomeSampleData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:HomeSampleData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="NotificationIcon">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>NotificationIcon</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SDTNotificationsData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SDTNotificationsData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWP_SDTNotificationsDataSample, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueCard1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueCard1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPINumericValue</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueCard2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueCard2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPIPrice</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueCard3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueCard3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPIVarchar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueCard4">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueCard4</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPINumericValue</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Axes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Axes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerElements, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Axis">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Axis</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerElements.Element, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HomeSampleNameValueData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HomeSampleNameValueData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:HomeSampleNameValueData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueProgressBar4">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueProgressBar4</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotalValueProgressBar4">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotalValueProgressBar4</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueProgressBar3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueProgressBar3</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotalValueProgressBar3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotalValueProgressBar3</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueProgressBar2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueProgressBar2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotalValueProgressBar2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotalValueProgressBar2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ValueProgressBar1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ValueProgressBar1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotalValueProgressBar1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotalValueProgressBar1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Elements">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Elements</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerElements, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Parameters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Parameters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerParameters, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemClickData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemClickData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemClickData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemDoubleClickData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemDoubleClickData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemDoubleClickData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DragAndDropData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DragAndDropData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerDragAndDropData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterChangedData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterChangedData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerFilterChangedData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemExpandData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemExpandData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemExpandData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ItemCollapseData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ItemCollapseData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerItemCollapseData, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Parameter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Parameter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerParameters.Parameter, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Element">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Element</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:QueryViewerElements.Element, GeneXusReporting</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card1_ProgressValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card1_ProgressValue</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:WWPPercentage, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card2_ProgressValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card2_ProgressValue</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:WWPPercentage, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card3_ProgressValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card3_ProgressValue</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:WWPPercentage, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card4_ProgressValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card4_ProgressValue</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:WWPPercentage, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress4_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress4_Value</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress4_TotalValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress4_TotalValue</Value>
+        </Property>
+        <Property>
+          <Name>ATT_INITIAL_VALUE</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress3_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress3_Value</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress3_TotalValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress3_TotalValue</Value>
+        </Property>
+        <Property>
+          <Name>ATT_INITIAL_VALUE</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress2_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress2_Value</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress2_TotalValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress2_TotalValue</Value>
+        </Property>
+        <Property>
+          <Name>ATT_INITIAL_VALUE</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress1_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress1_Value</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Progress1_TotalValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Progress1_TotalValue</Value>
+        </Property>
+        <Property>
+          <Name>ATT_INITIAL_VALUE</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card4_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card4_Value</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPINumericValue</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card3_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card3_Value</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPINumericValue</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card2_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card2_Value</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPINumericValue</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Card1_Value">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Card1_Value</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:KPINumericValue</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="visivelFundo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>visivelFundo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="hoje">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>hoje</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Home</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Gestão Alimentação Escolar</Value>
+    </Property>
+    <Property>
+      <Name>IsMain</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

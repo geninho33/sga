@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="DESKTOP-OQ270FR\Geninho" versionDate="2026-03-11T02:22:56.0000000Z" lastUpdate="2026-03-11T00:36:15.0000000Z" checksum="dcbbdfe81cd97557e811aca9e09e8562" fullyQualifiedName="LargadaGeraExcel" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8e4519e5-ea78-4a02-aac8-3f4cd646e161" name="LargadaGeraExcel" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Largada Gera Excel" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+&DataInicial.Set(&distDataEnvio.Year(),&distDataEnvio.Month(),1)
+&DataFinal = &DataInicial.EndOfMonth()
+&rotaCodigo.FromJson(&rotaCodigoJson)
+&Linha = 0
+&Coluna = 0
+&Locais = 0
+&Titulo1 = 'Alimentação Escolar - Largada %1'
+&IsSucess = true
+
+For each
+	Where disTipNumero = &distItemTipoRemessa
+
+	&Titulo1 = format(&Titulo1,disTipDescricao)
+When none
+	&Titulo1 = format(&Titulo1,'(Desconhecido)')
+Endfor
+
+&ExcelDocument.Open(&Arquivo)
+&ExcelDocument.AutoFit = true
+
+/* Rotas */
+For each trnsdistribuicao
+	Order distRotaCodigo
+	Unique distRotaCodigo
+	Where prefCodigo 	= &prefCodigo
+	Where distRotaCodigo in &rotaCodigo
+	Where distCodigoTipoRemessa = &distItemTipoRemessa
+	Where distStatus	= Status.Ativo
+	where distCodigo    = &distCodigo when not &distCodigo.IsEmpty()
+	Where distDataEnvio = &distDataEnvio When not &Mensal
+	Where distDataEnvio >= &DataInicial and distDataEnvio <= &DataFinal When &Mensal
+
+	&distRotaCodigo = distRotaCodigo
+	if &Mensal
+		&Titulo2 = format('Rota: %1 - Mes/Ano: %2/%3',&distRotaCodigo.ToString().Trim(),&distDataEnvio.MonthName(),&distDataEnvio.Year().ToString().Trim())
+	else
+		&Titulo2 = format('Rota: %1 - Data: %2',&distRotaCodigo.ToString().Trim(),&distDataEnvio.ToFormattedString())
+	endif
+
+	&Linha += 1
+	&ExcelDocument.Cells(&Linha,2).Text = &Titulo1
+	&ExcelDocument.Cells(&Linha,2).Bold = true
+	&ExcelDocument.Cells(&Linha,2).Size = 15
+	&Linha += 1
+	&ExcelDocument.Cells(&Linha,2).Text = &Titulo2
+	&ExcelDocument.Cells(&Linha,2).Bold = true
+	&ExcelDocument.Cells(&Linha,2).Size = 15
+
+	&Linha += 1 // Linha em branco
+
+	do 'LocaisHeader'
+	if not &IsSucess
+		Exit
+	endif
+
+	do 'Produtos'
+	if not &IsSucess
+		Exit
+	endif
+
+	&Linha += 2 // Linhas em branco
+
+	do 'Legenda'
+
+	&Linha += 5 // Linhas em branco
+When none
+	&Message.Type = MessageTypes.Error
+	&Message.Id = 'Rotas'
+	&Message.Description = 'Nenhuma rota localizada'
+	&IsSucess = False
+Endfor
+
+// Grava e fecha a planilha
+&ExcelDocument.Close()
+
+if not &IsSucess
+	&File.Source = &Arquivo
+	&File.Delete()
+endif
+
+
+Sub 'Produtos'
+
+	&Item = 0
+	For each trnsdistribuicaoitens
+		Order distItemProdutoDescricao
+		Unique distItemProduto, distItemProdutoDescricao
+		Where prefCodigo 	 = &prefCodigo
+		Where distDataEnvio  = &distDataEnvio When not &Mensal
+		Where distDataEnvio >= &DataInicial and distDataEnvio <= &DataFinal When &Mensal
+		Where distRotaCodigo = &distRotaCodigo
+		where distCodigo    = &distCodigo when not &distCodigo.IsEmpty()
+		Where distItemTipoRemessa = &distItemTipoRemessa
+
+		&Item += 1
+		&distItemProduto = distItemProduto
+
+		&Linha += 1
+		&ExcelDocument.Cells(&Linha,2).Number = &Item
+		&ExcelDocument.Cells(&Linha,2).Size = 12
+
+		&ExcelDocument.Cells(&Linha,3).Text = distItemProdutoDescricao
+		&ExcelDocument.Cells(&Linha,3).Size = 12
+
+		&Coluna = 3
+		do 'Locais'
+
+	When none
+		&Message.Type = MessageTypes.Error
+		&Message.Id = 'Produtos'
+		&Message.Description = format('Não existem registros de Produtos para a Rota: %1',&distRotaCodigo.ToString().Trim())
+		&IsSucess = False
+	Endfor
+
+Endsub
+
+Sub 'Locais'
+
+	&TotaldistItemQuantidade = 0
+	for &distLocalDestino in &distLocalDestinoCollection
+
+		&Coluna += 1
+		&SomadistItemQuantidade = 0
+
+		For each trnsdistribuicaoitens
+			Where prefCodigo 	 = &prefCodigo
+			Where distDataEnvio  = &distDataEnvio When not &Mensal
+			Where distDataEnvio >= &DataInicial and distDataEnvio <= &DataFinal When &Mensal
+			Where distRotaCodigo = &distRotaCodigo
+			where distCodigo    = &distCodigo when not &distCodigo.IsEmpty()
+			Where distLocalDestino = &distLocalDestino
+			Where distItemProduto = &distItemProduto
+
+			&SomadistItemQuantidade += distItemQuantidade
+		Endfor
+
+		if &SomadistItemQuantidade > 0
+			&ExcelDocument.Cells(&Linha,&Coluna).Number = &SomadistItemQuantidade
+			&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+
+			&TotaldistItemQuantidade += &SomadistItemQuantidade
+		endif
+
+	endfor
+
+	&Coluna += 1
+	&ExcelDocument.Cells(&Linha,&Coluna).Number = &TotaldistItemQuantidade
+	&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+
+Endsub
+
+Sub 'LocaisHeader'
+
+	&distLocalDestinoCollection.Clear()
+	&Coluna = 3
+	&Linha += 1
+	&ExcelDocument.Cells(&Linha,&Coluna).Text = 'Itens'
+	&ExcelDocument.Cells(&Linha,&Coluna).Bold = true
+	&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+
+	For each trnsdistribuicao
+		Order distLocalDestino
+		Unique distLocalDestino
+		Where prefCodigo 	 = &prefCodigo
+		Where distDataEnvio  = &distDataEnvio When not &Mensal
+		Where distDataEnvio >= &DataInicial and distDataEnvio <= &DataFinal When &Mensal
+		Where distRotaCodigo = &distRotaCodigo
+		where distCodigo    = &distCodigo when not &distCodigo.IsEmpty()
+		Where distCodigoTipoRemessa = &distItemTipoRemessa
+
+		&distLocalDestinoCollection.Add(distLocalDestino)
+
+		&locCodigo = distLocalDestino
+		do 'BuscaCodigoLargada'
+
+		&Coluna += 1
+		&ExcelDocument.Cells(&Linha,&Coluna).Number = iif(&locCodigoLargada.IsEmpty(),distLocalDestino,&locCodigoLargada)
+		&ExcelDocument.Cells(&Linha,&Coluna).Bold = true
+		&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+
+	When none
+		&Message.Type = MessageTypes.Error
+		&Message.Id = 'LocaisHeader'
+		&Message.Description = format('Não existem registros de Locais para a Rota: %1',&distRotaCodigo.ToString().Trim())
+		&IsSucess = False
+	Endfor
+
+	&Coluna += 1
+	&ExcelDocument.Cells(&Linha,&Coluna).Text = '      Total'
+	&ExcelDocument.Cells(&Linha,&Coluna).Bold = true
+	&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+
+Endsub
+
+Sub 'Legenda'
+	&Locais = 0
+	&Coluna = 2
+	&Linha += 1
+	&ExcelDocument.Cells(&Linha,&Coluna).Text = 'Unidades (locais):'
+	&ExcelDocument.Cells(&Linha,&Coluna).Bold = true
+	&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+	&Coluna = 4	
+	&ExcelDocument.Cells(&Linha,&Coluna).Text = 'Seq'
+	&ExcelDocument.Cells(&Linha,&Coluna).Bold = true
+	&ExcelDocument.Cells(&Linha,&Coluna).Size = 12	
+
+	For each trnslocal
+		Where prefCodigo = &prefCodigo
+		Where locCodigo in &distLocalDestinoCollection
+		
+		&Locais += 1
+		&Coluna = 2
+		&Linha += 1
+		if not locCodigoLargada.IsEmpty()
+			&ExcelDocument.Cells(&Linha,&Coluna).Number = locCodigoLargada
+		else
+			&ExcelDocument.Cells(&Linha,&Coluna).Number = locCodigo
+		endif
+		&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+		&Coluna = 3
+		&ExcelDocument.Cells(&Linha,&Coluna).Text = locDescricao
+		&ExcelDocument.Cells(&Linha,&Coluna).Size = 12
+		&Coluna = 4
+		&ExcelDocument.Cells(&Linha,&Coluna).Text = &Locais.ToString().Trim()
+		&ExcelDocument.Cells(&Linha,&Coluna).Size = 12		
+
+	Endfor
+
+EndSub
+
+Sub 'BuscaCodigoLargada'
+	&locCodigoLargada = find(locCodigoLargada,prefCodigo = &prefCodigo and locCodigo = &locCodigo)
+Endsub
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&prefCodigo,in:&rotaCodigoJson,in:&Mensal,in:&distDataEnvio,in:&distItemTipoRemessa,in:&Arquivo,in:&distCodigo,out:&Message,out:&IsSucess);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Arquivo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Arquivo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>250</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>250</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Coluna">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Coluna</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Envio</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProduto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Produto</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>tipo Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestino">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestino</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value> Destino</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestinoCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestinoCollection</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value> Destino</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRotaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Rota</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRotaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelDocument">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelDocument</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:ExcelDocument</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Item">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Item</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Linha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Linha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="rotaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>rotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:rotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="rotaCodigoJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>rotaCodigoJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1000</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1000</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SomadistItemQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SomadistItemQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Titulo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Titulo1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Titulo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Titulo2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotaldistItemQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotaldistItemQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoPesoTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsSucess">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsSucess</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="File">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>File</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:File</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigoLargada">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigoLargada</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Largada</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigoLargada</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Mensal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Mensal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataInicial</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DataFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DataFinal</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Locais">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Locais</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>LargadaGeraExcel</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

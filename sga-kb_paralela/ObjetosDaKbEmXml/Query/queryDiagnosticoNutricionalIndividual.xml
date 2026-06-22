@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="457961d6-1008-4712-aa78-123a82962b7f" user="JORGE-AVELL\joadh" versionDate="2025-02-19T20:03:43.0000000Z" lastUpdate="2025-02-19T17:15:19.0000000Z" checksum="bacd230ff9c80fa9cee5b1f4226d5f8f" fullyQualifiedName="queryDiagnosticoNutricionalIndividual" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c79ba5ad-dcc7-418d-a7a9-6923150d1160" name="queryDiagnosticoNutricionalIndividual" type="926a06b9-3417-4ab4-9f8c-09c2f626bb1c" description="Diagnóstico Nutricional Individual" parent="QueryViewer" parentType="00000000-0000-0000-0000-000000000008">
+  <Part MaxRows="" RemoveDuplicates="False" TextForNullValues="" Type="id_CHART" ChartType="id_PIE_3D" Paging="True" PageSize="20" ShowDataLabelsIn="id_COLUMNS" TotalForRows="id_YES" TotalForColumns="id_YES" Title="Diagnóstico Nutricional - IMC" PlotSeries="id_SAME_CHART" XAxisLabels="id_HORIZONTALLY" XAxisIntersectionAtZero="False" ShowValues="True" XAxisTitle="" YAxisTitle="" ShowDataAs="id_VALUES" Orientation="id_HORIZONTAL" IncludeTrend="False" TrendPeriod="id_SINCE_THE_BEGINNING" IncludeSparkline="False" IncludeMaxAndMin="False" MapType="id_CHOROPLETH" Region="id_WORLD" Country="id_US" Continent="id_NORTHAMERICA" type="447a71af-018d-4f65-9579-3f9216f7c854">
+    <Name>Structure</Name>
+    <Filter Operator="id_AND">
+      <FilterRangesChild Operator="id_AND">
+        <Properties>
+          <Property>
+            <Name>QueryFilterRangeCollectionLogicOperator</Name>
+            <Value>id_AND</Value>
+          </Property>
+        </Properties>
+      </FilterRangesChild>
+      <OtherFiltersChilds>
+        <QueryElement AggregatedByIsDefinedBy="True" Name="" Description="diag_nutricional_Ano = &amp;Ano" ShowAllValues="False" UseDomainDescriptions="True" CompleteDescription="" FilterType="id_None" RankingCount="" RankingOrder="id_Top" FunctionType="None" AggregationType="Count" IsFilter="True" Order="Ascending" FilterlistvaluesWithIN="True" IsTreeFirstLevel="True" IsNameDefault="True" DefaultName="" IsDescriptionDefault="True" IsNodeChildOfFiltersNode="False" DefaultDescription="" Percentage="False" CalculationGroup="">
+          <FilterRanges Operator="id_AND">
+            <Properties>
+              <Property>
+                <Name>QueryFilterRangeCollectionLogicOperator</Name>
+                <Value>id_AND</Value>
+              </Property>
+            </Properties>
+          </FilterRanges>
+          <Expression>diag_nutricional_Ano = &amp;Ano</Expression>
+          <ExpressionTokens>[{"data":"ca9d1048-2226-be4b-fafd-005210c5c8cf","type":0},{"data":"=","type":17},{"data":"Ano","type":11}]</ExpressionTokens>
+          <Format Visible="True" Visibility="Yes" Type="Axis" Axis="Rows" ExpandCollapse="ExpandAllValues" FilterType="ShowAllValues" TargetValue="0" MaximumValue="0" Picture="" Subtotals="Yes" CanDragToPages="True" OrderType="None" Style="" OrderValues="[]" ExpandedValues="[]" ValuesStyles="[]" ConditionalStyles="[]" ShowedValues="[]" />
+          <Actions RaiseItemClick="True" />
+          <Analytics ShowValuesAs="NoCalculation" RollingAverageType="Simple" RollingAverageTerms="10" DifferenceFrom="PreviousValue" ShowAsPercentage="No" />
+          <Grouping GroupByYear="False" GroupByYearTitle="Year" GroupBySemester="False" GroupBySemesterTitle="Semester" GroupByQuarter="False" GroupByQuarterTitle="Quarter" GroupByMonth="False" GroupByMonthTitle="Month" GroupByDayOfWeek="False" GroupByDayOfWeekTitle="Day of week" HideValue="False" />
+          <Properties>
+            <Property>
+              <Name>QueryElementIsOrderNode</Name>
+              <Value>False</Value>
+            </Property>
+            <Property>
+              <Name>QueryElementIsFilter</Name>
+              <Value>True</Value>
+            </Property>
+          </Properties>
+        </QueryElement>
+        <QueryElement AggregatedByIsDefinedBy="True" Name="" Description="diag_nutricional_Escola = &amp;Escola when not &amp;Escola.IsEmpty()" ShowAllValues="False" UseDomainDescriptions="True" CompleteDescription="" FilterType="id_None" RankingCount="" RankingOrder="id_Top" FunctionType="None" AggregationType="Count" IsFilter="True" Order="Ascending" FilterlistvaluesWithIN="True" IsTreeFirstLevel="True" IsNameDefault="True" DefaultName="" IsDescriptionDefault="True" IsNodeChildOfFiltersNode="False" DefaultDescription="" Percentage="False" CalculationGroup="">
+          <FilterRanges Operator="id_AND">
+            <Properties>
+              <Property>
+                <Name>QueryFilterRangeCollectionLogicOperator</Name>
+                <Value>id_AND</Value>
+              </Property>
+            </Properties>
+          </FilterRanges>
+          <Expression>diag_nutricional_Escola = &amp;Escola when not &amp;Escola.IsEmpty()</Expression>
+          <ExpressionTokens>[{"data":"c002e0be-0852-bda3-e402-4f6299287081","type":0},{"data":"=","type":17},{"data":"Escola","type":11},{"data":"","type":24},{"data":"not","type":16},{"data":"Escola","type":11},{"data":"","type":12},{"data":"IsEmpty","type":21},{"data":"","type":3},{"data":"","type":4}]</ExpressionTokens>
+          <Format Visible="True" Visibility="Yes" Type="Axis" Axis="Rows" ExpandCollapse="ExpandAllValues" FilterType="ShowAllValues" TargetValue="0" MaximumValue="0" Picture="" Subtotals="Yes" CanDragToPages="True" OrderType="None" Style="" OrderValues="[]" ExpandedValues="[]" ValuesStyles="[]" ConditionalStyles="[]" ShowedValues="[]" />
+          <Actions RaiseItemClick="True" />
+          <Analytics ShowValuesAs="NoCalculation" RollingAverageType="Simple" RollingAverageTerms="10" DifferenceFrom="PreviousValue" ShowAsPercentage="No" />
+          <Grouping GroupByYear="False" GroupByYearTitle="Year" GroupBySemester="False" GroupBySemesterTitle="Semester" GroupByQuarter="False" GroupByQuarterTitle="Quarter" GroupByMonth="False" GroupByMonthTitle="Month" GroupByDayOfWeek="False" GroupByDayOfWeekTitle="Day of week" HideValue="False" />
+          <Properties>
+            <Property>
+              <Name>QueryElementIsOrderNode</Name>
+              <Value>False</Value>
+            </Property>
+            <Property>
+              <Name>QueryElementIsFilter</Name>
+              <Value>True</Value>
+            </Property>
+          </Properties>
+        </QueryElement>
+        <QueryElement AggregatedByIsDefinedBy="True" Name="" Description="diag_nutricional_Sexo = &amp;Sexo when not &amp;Sexo.IsEmpty()" ShowAllValues="False" UseDomainDescriptions="True" CompleteDescription="" FilterType="id_None" RankingCount="" RankingOrder="id_Top" FunctionType="None" AggregationType="Count" IsFilter="True" Order="Ascending" FilterlistvaluesWithIN="True" IsTreeFirstLevel="True" IsNameDefault="True" DefaultName="" IsDescriptionDefault="True" IsNodeChildOfFiltersNode="False" DefaultDescription="" Percentage="False" CalculationGroup="">
+          <FilterRanges Operator="id_AND">
+            <Properties>
+              <Property>
+                <Name>QueryFilterRangeCollectionLogicOperator</Name>
+                <Value>id_AND</Value>
+              </Property>
+            </Properties>
+          </FilterRanges>
+          <Expression>diag_nutricional_Sexo = &amp;Sexo when not &amp;Sexo.IsEmpty()</Expression>
+          <ExpressionTokens>[{"data":"2371e21e-f874-c72d-7684-a9a5e047c5a5","type":0},{"data":"=","type":17},{"data":"Sexo","type":11},{"data":"","type":24},{"data":"not","type":16},{"data":"Sexo","type":11},{"data":"","type":12},{"data":"IsEmpty","type":21},{"data":"","type":3},{"data":"","type":4}]</ExpressionTokens>
+          <Format Visible="True" Visibility="Yes" Type="Axis" Axis="Rows" ExpandCollapse="ExpandAllValues" FilterType="ShowAllValues" TargetValue="0" MaximumValue="0" Picture="" Subtotals="Yes" CanDragToPages="True" OrderType="None" Style="" OrderValues="[]" ExpandedValues="[]" ValuesStyles="[]" ConditionalStyles="[]" ShowedValues="[]" />
+          <Actions RaiseItemClick="True" />
+          <Analytics ShowValuesAs="NoCalculation" RollingAverageType="Simple" RollingAverageTerms="10" DifferenceFrom="PreviousValue" ShowAsPercentage="No" />
+          <Grouping GroupByYear="False" GroupByYearTitle="Year" GroupBySemester="False" GroupBySemesterTitle="Semester" GroupByQuarter="False" GroupByQuarterTitle="Quarter" GroupByMonth="False" GroupByMonthTitle="Month" GroupByDayOfWeek="False" GroupByDayOfWeekTitle="Day of week" HideValue="False" />
+          <Properties>
+            <Property>
+              <Name>QueryElementIsOrderNode</Name>
+              <Value>False</Value>
+            </Property>
+            <Property>
+              <Name>QueryElementIsFilter</Name>
+              <Value>True</Value>
+            </Property>
+          </Properties>
+        </QueryElement>
+        <QueryElement AggregatedByIsDefinedBy="True" Name="" Description="diag_nutricional_NumColeta = &amp;Coleta when not &amp;Coleta.IsEmpty()" ShowAllValues="False" UseDomainDescriptions="True" CompleteDescription="" FilterType="id_None" RankingCount="" RankingOrder="id_Top" FunctionType="None" AggregationType="Count" IsFilter="True" Order="Ascending" FilterlistvaluesWithIN="True" IsTreeFirstLevel="True" IsNameDefault="True" DefaultName="" IsDescriptionDefault="True" IsNodeChildOfFiltersNode="False" DefaultDescription="" Percentage="False" CalculationGroup="">
+          <FilterRanges Operator="id_AND">
+            <Properties>
+              <Property>
+                <Name>QueryFilterRangeCollectionLogicOperator</Name>
+                <Value>id_AND</Value>
+              </Property>
+            </Properties>
+          </FilterRanges>
+          <Expression>diag_nutricional_NumColeta = &amp;Coleta when not &amp;Coleta.IsEmpty()</Expression>
+          <ExpressionTokens>[{"data":"b54c406c-0f04-40c3-c4ae-96221388a31b","type":0},{"data":"=","type":17},{"data":"Coleta","type":11},{"data":"","type":24},{"data":"not","type":16},{"data":"Coleta","type":11},{"data":"","type":12},{"data":"IsEmpty","type":21},{"data":"","type":3},{"data":"","type":4}]</ExpressionTokens>
+          <Format Visible="True" Visibility="Yes" Type="Axis" Axis="Rows" ExpandCollapse="ExpandAllValues" FilterType="ShowAllValues" TargetValue="0" MaximumValue="0" Picture="" Subtotals="Yes" CanDragToPages="True" OrderType="None" Style="" OrderValues="[]" ExpandedValues="[]" ValuesStyles="[]" ConditionalStyles="[]" ShowedValues="[]" />
+          <Actions RaiseItemClick="True" />
+          <Analytics ShowValuesAs="NoCalculation" RollingAverageType="Simple" RollingAverageTerms="10" DifferenceFrom="PreviousValue" ShowAsPercentage="No" />
+          <Grouping GroupByYear="False" GroupByYearTitle="Year" GroupBySemester="False" GroupBySemesterTitle="Semester" GroupByQuarter="False" GroupByQuarterTitle="Quarter" GroupByMonth="False" GroupByMonthTitle="Month" GroupByDayOfWeek="False" GroupByDayOfWeekTitle="Day of week" HideValue="False" />
+          <Properties>
+            <Property>
+              <Name>QueryElementIsOrderNode</Name>
+              <Value>False</Value>
+            </Property>
+            <Property>
+              <Name>QueryElementIsFilter</Name>
+              <Value>True</Value>
+            </Property>
+          </Properties>
+        </QueryElement>
+      </OtherFiltersChilds>
+      <Properties />
+    </Filter>
+    <VersionInfo>4</VersionInfo>
+    <Parameters>
+      <Parameter BasedOnType="None">
+        <Name>Ano</Name>
+        <Description>Ano</Description>
+        <Type>NUMERIC</Type>
+        <Length>4</Length>
+        <Decimals>0</Decimals>
+        <Signed>False</Signed>
+        <IsCollection>False</IsCollection>
+        <Value>2025</Value>
+        <ValueDate />
+        <ValueCollection>[]</ValueCollection>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Ano</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Ano</Value>
+          </Property>
+          <Property>
+            <Name>QueryParameterValue</Name>
+            <Value>2025</Value>
+          </Property>
+        </Properties>
+      </Parameter>
+      <Parameter BasedOnType="None">
+        <Name>Escola</Name>
+        <Description>Escola</Description>
+        <Type>NUMERIC</Type>
+        <Length>9</Length>
+        <Decimals>0</Decimals>
+        <Signed>False</Signed>
+        <IsCollection>False</IsCollection>
+        <Value>0</Value>
+        <ValueDate />
+        <ValueCollection>[]</ValueCollection>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Escola</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Escola</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>9</Value>
+          </Property>
+        </Properties>
+      </Parameter>
+      <Parameter BasedOnType="None">
+        <Name>Sexo</Name>
+        <Description>Sexo</Description>
+        <Type>NUMERIC</Type>
+        <Length>4</Length>
+        <Decimals>0</Decimals>
+        <Signed>False</Signed>
+        <IsCollection>False</IsCollection>
+        <Value>0</Value>
+        <ValueDate />
+        <ValueCollection>[]</ValueCollection>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Sexo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Sexo</Value>
+          </Property>
+        </Properties>
+      </Parameter>
+      <Parameter BasedOnType="None">
+        <Name>Coleta</Name>
+        <Description>Coleta</Description>
+        <Type>NUMERIC</Type>
+        <Length>4</Length>
+        <Decimals>0</Decimals>
+        <Signed>False</Signed>
+        <IsCollection>False</IsCollection>
+        <Value>0</Value>
+        <ValueDate />
+        <ValueCollection>[]</ValueCollection>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Coleta</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Coleta</Value>
+          </Property>
+        </Properties>
+      </Parameter>
+    </Parameters>
+    <OutputFormats>
+      <QueryOutputFormat>
+        <Id>00000000-0000-0000-0000-000000000000</Id>
+        <Title>Diagnóstico Nutricional - IMC</Title>
+        <OutputType>OutputTypeChartPie3D</OutputType>
+        <Paging>True</Paging>
+        <PageSize>20</PageSize>
+        <ShowDataLabelsIn>Columns</ShowDataLabelsIn>
+        <TotalForRows>Yes</TotalForRows>
+        <TotalForColumns>Yes</TotalForColumns>
+        <PlotSeries>InTheSameChart</PlotSeries>
+        <XAxisLabels>Horizontally</XAxisLabels>
+        <XAxisIntersectionAtZero>False</XAxisIntersectionAtZero>
+        <ShowValues>True</ShowValues>
+        <XAxisTitle />
+        <YAxisTitle />
+        <Orientation>Horizontal</Orientation>
+        <IncludeTrend>False</IncludeTrend>
+        <TrendPeriod>SinceTheBeginning</TrendPeriod>
+        <IncludeSparkline>False</IncludeSparkline>
+        <IncludeMaxAndMin>False</IncludeMaxAndMin>
+        <Region>World</Region>
+        <Country>US</Country>
+        <Continent>NorthAmerica</Continent>
+        <MapType>Choropleth</MapType>
+        <IsDefault>True</IsDefault>
+        <Properties />
+      </QueryOutputFormat>
+    </OutputFormats>
+    <Elements>
+      <QueryElement AggregatedByIsDefinedBy="True" Name="Diagnostico" Description="Diagnóstico" ShowAllValues="False" UseDomainDescriptions="True" CompleteDescription="" FilterType="id_None" RankingCount="" RankingOrder="id_Top" FunctionType="None" AggregationType="Count" IsFilter="False" Order="Ascending" FilterlistvaluesWithIN="True" IsTreeFirstLevel="True" IsNameDefault="True" DefaultName="" IsDescriptionDefault="True" IsNodeChildOfFiltersNode="False" DefaultDescription="" Percentage="False" CalculationGroup="">
+        <FilterRanges Operator="id_AND">
+          <Properties>
+            <Property>
+              <Name>QueryFilterRangeCollectionLogicOperator</Name>
+              <Value>id_AND</Value>
+            </Property>
+          </Properties>
+        </FilterRanges>
+        <Expression>diag_nutricional_DiagnosticoIMC</Expression>
+        <ExpressionTokens>[{"data":"5bf1dc8e-a434-476a-8f64-96ec143658ec","type":0}]</ExpressionTokens>
+        <Format Visible="True" Visibility="Yes" Type="Axis" Axis="Rows" ExpandCollapse="ExpandAllValues" FilterType="ShowAllValues" TargetValue="0" MaximumValue="0" Picture="" Subtotals="Yes" CanDragToPages="True" OrderType="None" Style="" OrderValues="[]" ExpandedValues="[]" ValuesStyles="[]" ConditionalStyles="[]" ShowedValues="[]" />
+        <Actions RaiseItemClick="True" />
+        <Analytics ShowValuesAs="NoCalculation" RollingAverageType="Simple" RollingAverageTerms="10" DifferenceFrom="PreviousValue" ShowAsPercentage="No" />
+        <Grouping GroupByYear="False" GroupByYearTitle="Year" GroupBySemester="False" GroupBySemesterTitle="Semester" GroupByQuarter="False" GroupByQuarterTitle="Quarter" GroupByMonth="False" GroupByMonthTitle="Month" GroupByDayOfWeek="False" GroupByDayOfWeekTitle="Day of week" HideValue="False" />
+        <Properties>
+          <Property>
+            <Name>QueryElementIsOrderNode</Name>
+            <Value>False</Value>
+          </Property>
+          <Property>
+            <Name>Name</Name>
+            <Value>Diagnostico</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Diagnóstico</Value>
+          </Property>
+          <Property>
+            <Name>QueryElementIsFilter</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </QueryElement>
+      <QueryElement AggregatedByIsDefinedBy="True" Name="Percentual" Description="Percentual" ShowAllValues="False" UseDomainDescriptions="True" CompleteDescription="" FilterType="id_None" RankingCount="" RankingOrder="id_Top" FunctionType="None" AggregationType="Count" IsFilter="False" Order="Ascending" FilterlistvaluesWithIN="True" IsTreeFirstLevel="True" IsNameDefault="True" DefaultName="" IsDescriptionDefault="True" IsNodeChildOfFiltersNode="False" DefaultDescription="" Percentage="True" CalculationGroup="">
+        <FilterRanges Operator="id_AND">
+          <Properties>
+            <Property>
+              <Name>QueryFilterRangeCollectionLogicOperator</Name>
+              <Value>id_AND</Value>
+            </Property>
+          </Properties>
+        </FilterRanges>
+        <Expression>Count(diag_nutricional_Aluno)</Expression>
+        <ExpressionTokens>[{"data":"Count","type":19},{"data":"","type":3},{"data":"8f5ed6c4-f157-4691-99ab-148e892c2532","type":0},{"data":"","type":4}]</ExpressionTokens>
+        <Format Visible="True" Visibility="Yes" Type="Datum" Axis="Rows" ExpandCollapse="ExpandAllValues" FilterType="ShowAllValues" TargetValue="0" MaximumValue="0" Picture="ZZZZZZZZZZZZZZ9.99" Subtotals="Yes" CanDragToPages="True" OrderType="None" Style="" OrderValues="[]" ExpandedValues="[]" ValuesStyles="[]" ConditionalStyles="[]" ShowedValues="[]" />
+        <Actions RaiseItemClick="True" />
+        <Analytics ShowValuesAs="NoCalculation" RollingAverageType="Simple" RollingAverageTerms="10" DifferenceFrom="PreviousValue" ShowAsPercentage="No" />
+        <Grouping GroupByYear="False" GroupByYearTitle="Year" GroupBySemester="False" GroupBySemesterTitle="Semester" GroupByQuarter="False" GroupByQuarterTitle="Quarter" GroupByMonth="False" GroupByMonthTitle="Month" GroupByDayOfWeek="False" GroupByDayOfWeekTitle="Day of week" HideValue="False" />
+        <Properties>
+          <Property>
+            <Name>QueryElementIsOrderNode</Name>
+            <Value>False</Value>
+          </Property>
+          <Property>
+            <Name>Name</Name>
+            <Value>Percentual</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Percentual</Value>
+          </Property>
+          <Property>
+            <Name>QueryElementPercentage</Name>
+            <Value>True</Value>
+          </Property>
+          <Property>
+            <Name>QueryElementIsFilter</Name>
+            <Value>False</Value>
+          </Property>
+        </Properties>
+      </QueryElement>
+      <QueryElement AggregatedByIsDefinedBy="True" Name="Quantidade" Description="Total" ShowAllValues="False" UseDomainDescriptions="True" CompleteDescription="" FilterType="id_None" RankingCount="" RankingOrder="id_Top" FunctionType="None" AggregationType="Count" IsFilter="False" Order="Ascending" FilterlistvaluesWithIN="True" IsTreeFirstLevel="True" IsNameDefault="True" DefaultName="" IsDescriptionDefault="True" IsNodeChildOfFiltersNode="False" DefaultDescription="" Percentage="False" CalculationGroup="">
+        <FilterRanges Operator="id_AND">
+          <Properties>
+            <Property>
+              <Name>QueryFilterRangeCollectionLogicOperator</Name>
+              <Value>id_AND</Value>
+            </Property>
+          </Properties>
+        </FilterRanges>
+        <Expression>Count(diag_nutricional_Aluno)</Expression>
+        <ExpressionTokens>[{"data":"Count","type":19},{"data":"","type":3},{"data":"8f5ed6c4-f157-4691-99ab-148e892c2532","type":0},{"data":"","type":4}]</ExpressionTokens>
+        <Format Visible="True" Visibility="Yes" Type="Axis" Axis="Rows" ExpandCollapse="ExpandAllValues" FilterType="ShowAllValues" TargetValue="0" MaximumValue="0" Picture="ZZZZZZZZZZZZZZ9" Subtotals="Yes" CanDragToPages="True" OrderType="None" Style="" OrderValues="[]" ExpandedValues="[]" ValuesStyles="[]" ConditionalStyles="[]" ShowedValues="[]" />
+        <Actions RaiseItemClick="True" />
+        <Analytics ShowValuesAs="NoCalculation" RollingAverageType="Simple" RollingAverageTerms="10" DifferenceFrom="FirstValue" ShowAsPercentage="Yes" />
+        <Grouping GroupByYear="False" GroupByYearTitle="Year" GroupBySemester="False" GroupBySemesterTitle="Semester" GroupByQuarter="False" GroupByQuarterTitle="Quarter" GroupByMonth="False" GroupByMonthTitle="Month" GroupByDayOfWeek="False" GroupByDayOfWeekTitle="Day of week" HideValue="False" />
+        <Properties>
+          <Property>
+            <Name>QueryElementIsOrderNode</Name>
+            <Value>False</Value>
+          </Property>
+          <Property>
+            <Name>Name</Name>
+            <Value>Quantidade</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Total</Value>
+          </Property>
+          <Property>
+            <Name>QueryElementIsFilter</Name>
+            <Value>False</Value>
+          </Property>
+          <Property>
+            <Name>QueryElementType</Name>
+            <Value>Axis</Value>
+          </Property>
+          <Property>
+            <Name>QueryElementDifferenceFrom</Name>
+            <Value>FirstValue</Value>
+          </Property>
+          <Property>
+            <Name>QueryElementShowAsPercentage</Name>
+            <Value>Yes</Value>
+          </Property>
+        </Properties>
+      </QueryElement>
+    </Elements>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="24f60a53-4735-4f95-b03b-b8862c6bd27c">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="09f1039f-ce72-48d4-953e-c1035be9111d">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="025b1afc-982f-4bdb-8fa0-4c1712cb94fc">
+    <Properties />
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>queryDiagnosticoNutricionalIndividual</Value>
+    </Property>
+    <Property>
+      <Name>idQueryOutputType</Name>
+      <Value>id_CHART</Value>
+    </Property>
+    <Property>
+      <Name>idQueryTitle</Name>
+      <Value>Diagnóstico Nutricional - IMC</Value>
+    </Property>
+    <Property>
+      <Name>idQueryOutputChartType</Name>
+      <Value>id_PIE_3D</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Diagnóstico Nutricional Individual</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

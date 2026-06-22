@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="2b9294cf-0aa3-0caf-3fda-e7850ff5803c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-03-19T17:47:06.0000000Z" checksum="8782fcb3607d4bf0354fc926d3c57aaf" fullyQualifiedName="RanchoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fa4ebbee-c7d0-47d6-a298-cfb551946e0d" name="RanchoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Rancho WWDS" parent="WorkWithPlusRancho" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio < &RanchoDataEnvio1 when &DynamicFiltersSelector1 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator1 = 0 AND (not &RanchoDataEnvio1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio = &RanchoDataEnvio1 when &DynamicFiltersSelector1 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator1 = 1 AND (not &RanchoDataEnvio1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio > &RanchoDataEnvio1 when &DynamicFiltersSelector1 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator1 = 2 AND (not &RanchoDataEnvio1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio >= &RanchoDataEnvio1 when &DynamicFiltersSelector1 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator1 = 3 AND (not &RanchoDataEnvio1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio <= &RanchoDataEnvio_To1 when &DynamicFiltersSelector1 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator1 = 3 AND (not &RanchoDataEnvio_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio < &RanchoDataEnvio2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator2 = 0 AND (not &RanchoDataEnvio2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio = &RanchoDataEnvio2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator2 = 1 AND (not &RanchoDataEnvio2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio > &RanchoDataEnvio2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator2 = 2 AND (not &RanchoDataEnvio2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio >= &RanchoDataEnvio2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator2 = 3 AND (not &RanchoDataEnvio2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio <= &RanchoDataEnvio_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator2 = 3 AND (not &RanchoDataEnvio_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio < &RanchoDataEnvio3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator3 = 0 AND (not &RanchoDataEnvio3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio = &RanchoDataEnvio3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator3 = 1 AND (not &RanchoDataEnvio3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio > &RanchoDataEnvio3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator3 = 2 AND (not &RanchoDataEnvio3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio >= &RanchoDataEnvio3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator3 = 3 AND (not &RanchoDataEnvio3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio <= &RanchoDataEnvio_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'RANCHODATAENVIO' AND &DynamicFiltersOperator3 = 3 AND (not &RanchoDataEnvio_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoAno >= &TFRanchoAno when not &TFRanchoAno.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoAno <= &TFRanchoAno_To when not &TFRanchoAno_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoMes in &TFRanchoMes_Sels when &TFRanchoMes_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio >= &TFRanchoDataEnvio when not &TFRanchoDataEnvio.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoDataEnvio <= &TFRanchoDataEnvio_To when not &TFRanchoDataEnvio_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[RanchoStatus in &TFRanchoStatus_Sels when &TFRanchoStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="RanchoDataEnvio1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>RanchoDataEnvio1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="RanchoDataEnvio_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>RanchoDataEnvio_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="RanchoDataEnvio2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>RanchoDataEnvio2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="RanchoDataEnvio_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>RanchoDataEnvio_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="RanchoDataEnvio3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>RanchoDataEnvio3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="RanchoDataEnvio_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>RanchoDataEnvio_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprefCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprefCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFRanchoAno">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFRanchoAno</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFRanchoAno_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFRanchoAno_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFRanchoMes_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFRanchoMes_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoMes</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFRanchoDataEnvio">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFRanchoDataEnvio</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFRanchoDataEnvio_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFRanchoDataEnvio_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoDataEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFRanchoStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFRanchoStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:RanchoStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>RanchoDataEnvio1</Name>
+        <Description>Rancho Data Envio1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>RanchoDataEnvio_To1</Name>
+        <Description>Rancho Data Envio_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>RanchoDataEnvio2</Name>
+        <Description>Rancho Data Envio2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>RanchoDataEnvio_To2</Name>
+        <Description>Rancho Data Envio_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>RanchoDataEnvio3</Name>
+        <Description>Rancho Data Envio3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>RanchoDataEnvio_To3</Name>
+        <Description>Rancho Data Envio_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFRanchoAno</Name>
+        <Description>TFRancho Ano</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFRanchoAno_To</Name>
+        <Description>TFRancho Ano_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFRanchoMes_Sels</Name>
+        <Description>TFRancho Mes_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFRanchoDataEnvio</Name>
+        <Description>TFRancho Data Envio</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFRanchoDataEnvio_To</Name>
+        <Description>TFRancho Data Envio_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFRanchoStatus_Sels</Name>
+        <Description>TFRancho Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RanchoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusRancho</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

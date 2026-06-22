@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="74a196bb-b7c0-7215-1700-47f369d99430" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-21T12:38:07.0000000Z" checksum="99e6ac6077c8a6590a6a2765247a47a6" fullyQualifiedName="trnspratosWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="161fdacc-5651-4059-ac17-380ee7d669c9" name="trnspratosWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnspratos WWDS" parent="WorkWithPlustrnspratos" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[pratoCodigo = &pratoCodigo1 when &DynamicFiltersSelector1 = !'PRATOCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &pratoCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao.ToLower() like &pratoDscricao1.ToLower() when &DynamicFiltersSelector1 = !'PRATODSCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &pratoDscricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao.ToLower() like '%' +  &pratoDscricao1.ToLower() when &DynamicFiltersSelector1 = !'PRATODSCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &pratoDscricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoComFreezer = &pratoComFreezer1 when &DynamicFiltersSelector1 = !'PRATOCOMFREEZER' AND (not &pratoComFreezer1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCozinhaCentral = &pratoCozinhaCentral1 when &DynamicFiltersSelector1 = !'PRATOCOZINHACENTRAL' AND (not &pratoCozinhaCentral1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoForno = &pratoForno1 when &DynamicFiltersSelector1 = !'PRATOFORNO' AND (not &pratoForno1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoRepeticao = &pratoRepeticao1 when &DynamicFiltersSelector1 = !'PRATOREPETICAO' AND (not &pratoRepeticao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoTipoRefeicao = &pratoTipoRefeicao1 when &DynamicFiltersSelector1 = !'PRATOTIPOREFEICAO' AND &DynamicFiltersOperator1 = 0 AND (not &pratoTipoRefeicao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCodigo = &pratoCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATOCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &pratoCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao.ToLower() like &pratoDscricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATODSCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &pratoDscricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao.ToLower() like '%' +  &pratoDscricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATODSCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &pratoDscricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoComFreezer = &pratoComFreezer2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATOCOMFREEZER' AND (not &pratoComFreezer2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCozinhaCentral = &pratoCozinhaCentral2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATOCOZINHACENTRAL' AND (not &pratoCozinhaCentral2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoForno = &pratoForno2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATOFORNO' AND (not &pratoForno2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoRepeticao = &pratoRepeticao2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATOREPETICAO' AND (not &pratoRepeticao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoTipoRefeicao = &pratoTipoRefeicao2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATOTIPOREFEICAO' AND &DynamicFiltersOperator2 = 0 AND (not &pratoTipoRefeicao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCodigo = &pratoCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATOCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &pratoCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao.ToLower() like &pratoDscricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATODSCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &pratoDscricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao.ToLower() like '%' +  &pratoDscricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATODSCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &pratoDscricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoComFreezer = &pratoComFreezer3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATOCOMFREEZER' AND (not &pratoComFreezer3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCozinhaCentral = &pratoCozinhaCentral3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATOCOZINHACENTRAL' AND (not &pratoCozinhaCentral3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoForno = &pratoForno3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATOFORNO' AND (not &pratoForno3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoRepeticao = &pratoRepeticao3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATOREPETICAO' AND (not &pratoRepeticao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoTipoRefeicao = &pratoTipoRefeicao3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATOTIPOREFEICAO' AND &DynamicFiltersOperator3 = 0 AND (not &pratoTipoRefeicao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCodigo >= &TFpratoCodigo when not &TFpratoCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCodigo <= &TFpratoCodigo_To when not &TFpratoCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao.ToLower() like &TFpratoDscricao.ToLower() when &TFpratoDscricao_Sel.IsEmpty() AND (not &TFpratoDscricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoDscricao = &TFpratoDscricao_Sel when not &TFpratoDscricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[refTipDescricao.ToLower() like &TFpratoTipoRefeicao.ToLower() when &TFpratoTipoRefeicao_Sel.IsEmpty() AND (not &TFpratoTipoRefeicao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoTipoRefeicao = &TFpratoTipoRefeicao_Sel when not &TFpratoTipoRefeicao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoStatus in &TFpratoStatus_Sels when &TFpratoStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratoCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratoCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratoCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratoDscricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratoDscricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoDscricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratoDscricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratoDscricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoDscricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratoStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratoStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoComFreezer1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoComFreezer1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoComFreezer</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCozinhaCentral1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCozinhaCentral1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCozinhaCentral</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoForno1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoForno1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoForno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoRepeticao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoRepeticao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoRepeticao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoComFreezer2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoComFreezer2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoComFreezer</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCozinhaCentral2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCozinhaCentral2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCozinhaCentral</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoForno2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoForno2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoForno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoRepeticao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoRepeticao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoRepeticao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoComFreezer3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoComFreezer3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoComFreezer</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCozinhaCentral3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCozinhaCentral3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCozinhaCentral</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoForno3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoForno3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoForno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoRepeticao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoRepeticao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoRepeticao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratoTipoRefeicao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratoTipoRefeicao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratoTipoRefeicao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratoTipoRefeicao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoTipoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoDscricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoDscricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoDscricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoTipoRefeicao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoTipoRefeicao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoTipoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoDscricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoDscricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoDscricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoTipoRefeicao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoTipoRefeicao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoTipoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoDscricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoDscricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoDscricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoTipoRefeicao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoTipoRefeicao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoTipoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCodigo1</Name>
+        <Description>prato Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoDscricao1</Name>
+        <Description>prato Dscricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoComFreezer1</Name>
+        <Description>prato Com Freezer1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCozinhaCentral1</Name>
+        <Description>prato Cozinha Central1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoForno1</Name>
+        <Description>prato Forno1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoRepeticao1</Name>
+        <Description>prato Repeticao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoTipoRefeicao1</Name>
+        <Description>prato Tipo Refeicao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCodigo2</Name>
+        <Description>prato Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoDscricao2</Name>
+        <Description>prato Dscricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoComFreezer2</Name>
+        <Description>prato Com Freezer2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCozinhaCentral2</Name>
+        <Description>prato Cozinha Central2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoForno2</Name>
+        <Description>prato Forno2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoRepeticao2</Name>
+        <Description>prato Repeticao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoTipoRefeicao2</Name>
+        <Description>prato Tipo Refeicao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCodigo3</Name>
+        <Description>prato Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoDscricao3</Name>
+        <Description>prato Dscricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoComFreezer3</Name>
+        <Description>prato Com Freezer3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCozinhaCentral3</Name>
+        <Description>prato Cozinha Central3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoForno3</Name>
+        <Description>prato Forno3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoRepeticao3</Name>
+        <Description>prato Repeticao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoTipoRefeicao3</Name>
+        <Description>prato Tipo Refeicao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratoCodigo</Name>
+        <Description>TFprato Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratoCodigo_To</Name>
+        <Description>TFprato Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratoDscricao</Name>
+        <Description>TFprato Dscricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratoDscricao_Sel</Name>
+        <Description>TFprato Dscricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratoTipoRefeicao</Name>
+        <Description>TFprato Tipo Refeicao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratoTipoRefeicao_Sel</Name>
+        <Description>TFprato Tipo Refeicao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratoStatus_Sels</Name>
+        <Description>TFprato Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnspratosWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnspratos</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

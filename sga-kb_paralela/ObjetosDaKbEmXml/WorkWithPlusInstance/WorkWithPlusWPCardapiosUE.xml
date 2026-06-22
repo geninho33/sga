@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e47241b7-7fa5-4360-9587-f7d559b09bf1" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-03-09T23:51:09.0000000Z" lastUpdate="2025-03-09T23:26:42.0000000Z" checksum="f9499df2d22d440ab0bb8fd4277bb2bf" fullyQualifiedName="WorkWithPlusWPCardapiosUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="d142cfdf-07a9-4b24-a4bb-a9ce01a24d43" name="WorkWithPlusWPCardapiosUE" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPCardapios UE" parent="WPCardapiosUE" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPDistribuicao" defaultSecFuntionKey="WPDistribuicao" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <table name="cPanelEntregas" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Listagem de Cardápios" collapsable="True">
+          <userAction fontIcon="fas fa-info-circle" caption="Ajuda" ControlType="Button" name="btnAjuda" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WPAjudaUE" imageType="Font icon" popup="True" align="Right">
+            <parameters>
+              <parameter type="In" name="&amp;prefCodigo" />
+              <parameter type="In" name="&amp;codigoAjuda" />
+            </parameters>
+          </userAction>
+          <table name="groupOption" isGroup="True" numberOfColumns="3" type="Responsive" title="Opções ">
+            <variable name="options" dataType="Basic" basicLength="1" controlInfoDef="Custom" controlType="Radio Button" controlValues="Todos:0,Emeb:1,Ceim:2" controlRadioDir="Horizontal" controlEmptyItem="False" descriptionWidth="6%" />
+          </table>
+          <grid includePaginationBar="&lt;default&gt;" type="&lt;default&gt;" align="Left" name="GridSDTCardapiosUEs" page="&lt;default&gt;" pagingType="&lt;default&gt;" SDTCollection="&amp;SDTCardapiosUE">
+            <userAction tooltip="Imprimir Cardápio" fontIcon="fas fa-print" ControlType="Image" name="btnImprimir" imageType="Font icon" />
+            <gridVariable name="SDTCardapiosUE" description="Código" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" visible="False" sdtItem="item(0).prefCodigo" defaultSdtItem="item(0).prefCodigo" />
+            <gridVariable name="SDTCardapiosUE" description="Código" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" sdtItem="item(0).carDapCodigo" defaultSdtItem="item(0).carDapCodigo" />
+            <gridVariable name="SDTCardapiosUE" description="Descrição" defaultDescription="Descrição" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" sdtItem="item(0).carDapDescricao" defaultSdtItem="item(0).carDapDescricao" />
+            <gridVariable name="SDTCardapiosUE" description="Mês e Ano" defaultDescription="Mês e Ano" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" sdtItem="item(0).carDapMesAno" defaultSdtItem="item(0).carDapMesAno" />
+            <gridVariable name="SDTCardapiosUE" description="Nutricionista" defaultDescription="car Dap Nutricionista1" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" visible="False" sdtItem="item(0).carDapNutricionista1" defaultSdtItem="item(0).carDapNutricionista1" />
+            <gridVariable name="SDTCardapiosUE" description="Liberar Acesso" defaultDescription="car Dap Nutricionista1" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" visible="False" sdtItem="item(0).carDapLiberarAcesso" defaultSdtItem="item(0).carDapNutricionista1" />
+            <gridVariable name="SDTCardapiosUE" description="Anexar Arquivo" defaultDescription="Anexar Arquivo" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapiosUE" visible="False" sdtItem="item(0).carDapArquivo" defaultSdtItem="item(0).carDapArquivo" />
+          </grid>
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPCardapiosUE</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPCardapiosUE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

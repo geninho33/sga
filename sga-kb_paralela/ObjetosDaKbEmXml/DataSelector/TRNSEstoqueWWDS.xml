@@ -1,0 +1,1234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="8d282d47-2829-0eb7-0093-dbc84c72dba5" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-12T15:37:38.0000000Z" lastUpdate="2025-06-11T04:30:52.0000000Z" checksum="b982ad97b93a4b506d662689aadc4c78" fullyQualifiedName="TRNSEstoqueWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="309d953e-8f99-409c-b0dd-791082d70c2a" name="TRNSEstoqueWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="TRNSEstoque WWDS" parent="WorkWithPlusTRNSEstoque" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[estoProduto = &estoProduto1 when &DynamicFiltersSelector1 = !'ESTOPRODUTO' AND &DynamicFiltersOperator1 = 0 AND (not &estoProduto1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao.ToLower() like '%' +  &estoProdutoDescricao1.ToLower() when &DynamicFiltersSelector1 = !'ESTOPRODUTODESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &estoProdutoDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao.ToLower() like &estoProdutoDescricao1.ToLower() when &DynamicFiltersSelector1 = !'ESTOPRODUTODESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &estoProdutoDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoQuantidade = &estoQuantidade1 when &DynamicFiltersSelector1 = !'ESTOQUANTIDADE' AND &DynamicFiltersOperator1 = 0 AND (not &estoQuantidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCadastro >= &estoCadastro1 when &DynamicFiltersSelector1 = !'ESTOCADASTRO' AND &DynamicFiltersOperator1 = 0 AND (not &estoCadastro1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCadastro <= &estoCadastro_To1 when &DynamicFiltersSelector1 = !'ESTOCADASTRO' AND &DynamicFiltersOperator1 = 0 AND (not &estoCadastro_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoTipo = &estoTipo1 when &DynamicFiltersSelector1 = !'ESTOTIPO' AND (not &estoTipo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoLocal = &estoLocal1 when &DynamicFiltersSelector1 = !'ESTOLOCAL' AND &DynamicFiltersOperator1 = 0 AND (not &estoLocal1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProduto = &estoProduto2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOPRODUTO' AND &DynamicFiltersOperator2 = 0 AND (not &estoProduto2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao.ToLower() like '%' +  &estoProdutoDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOPRODUTODESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &estoProdutoDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao.ToLower() like &estoProdutoDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOPRODUTODESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &estoProdutoDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoQuantidade = &estoQuantidade2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOQUANTIDADE' AND &DynamicFiltersOperator2 = 0 AND (not &estoQuantidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCadastro >= &estoCadastro2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOCADASTRO' AND &DynamicFiltersOperator2 = 0 AND (not &estoCadastro2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCadastro <= &estoCadastro_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOCADASTRO' AND &DynamicFiltersOperator2 = 0 AND (not &estoCadastro_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoTipo = &estoTipo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOTIPO' AND (not &estoTipo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoLocal = &estoLocal2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ESTOLOCAL' AND &DynamicFiltersOperator2 = 0 AND (not &estoLocal2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProduto = &estoProduto3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOPRODUTO' AND &DynamicFiltersOperator3 = 0 AND (not &estoProduto3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao.ToLower() like '%' +  &estoProdutoDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOPRODUTODESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &estoProdutoDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao.ToLower() like &estoProdutoDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOPRODUTODESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &estoProdutoDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoQuantidade = &estoQuantidade3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOQUANTIDADE' AND &DynamicFiltersOperator3 = 0 AND (not &estoQuantidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCadastro >= &estoCadastro3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOCADASTRO' AND &DynamicFiltersOperator3 = 0 AND (not &estoCadastro3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCadastro <= &estoCadastro_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOCADASTRO' AND &DynamicFiltersOperator3 = 0 AND (not &estoCadastro_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoTipo = &estoTipo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOTIPO' AND (not &estoTipo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoLocal = &estoLocal3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ESTOLOCAL' AND &DynamicFiltersOperator3 = 0 AND (not &estoLocal3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCodigo >= &TFestoCodigo when not &TFestoCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoCodigo <= &TFestoCodigo_To when not &TFestoCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoAlteracao >= &TFestoAlteracao when not &TFestoAlteracao.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoAlteracao <= &TFestoAlteracao_To when not &TFestoAlteracao_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProduto >= &TFestoProduto when not &TFestoProduto.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProduto <= &TFestoProduto_To when not &TFestoProduto_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao.ToLower() like &TFestoProdutoDescricao.ToLower() when &TFestoProdutoDescricao_Sel.IsEmpty() AND (not &TFestoProdutoDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoProdutoDescricao = &TFestoProdutoDescricao_Sel when not &TFestoProdutoDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoUnidadeSigla.ToLower() like &TFestoUnidadeSigla.ToLower() when &TFestoUnidadeSigla_Sel.IsEmpty() AND (not &TFestoUnidadeSigla.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoUnidadeSigla = &TFestoUnidadeSigla_Sel when not &TFestoUnidadeSigla_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoSaldo >= &TFestoSaldo when not &TFestoSaldo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoSaldo <= &TFestoSaldo_To when not &TFestoSaldo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoQuantidade >= &TFestoQuantidade when not &TFestoQuantidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoQuantidade <= &TFestoQuantidade_To when not &TFestoQuantidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoSaldoAtual >= &TFestoSaldoAtual when not &TFestoSaldoAtual.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoSaldoAtual <= &TFestoSaldoAtual_To when not &TFestoSaldoAtual_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoLancamento.ToLower() like &TFestoLancamento.ToLower() when &TFestoLancamento_Sel.IsEmpty() AND (not &TFestoLancamento.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoLancamento = &TFestoLancamento_Sel when not &TFestoLancamento_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoObservacao.ToLower() like &TFestoObservacao.ToLower() when &TFestoObservacao_Sel.IsEmpty() AND (not &TFestoObservacao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[estoObservacao = &TFestoObservacao_Sel when not &TFestoObservacao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoProduto1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoProduto1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoQuantidade1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoQuantidade1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoCadastro1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoCadastro1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoCadastro_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoCadastro_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoTipo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoTipo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoLocal1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoLocal1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoLocal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoProduto2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoProduto2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoQuantidade2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoQuantidade2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoCadastro2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoCadastro2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoCadastro_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoCadastro_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoTipo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoTipo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoLocal2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoLocal2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoLocal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoProduto3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoProduto3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoQuantidade3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoQuantidade3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoCadastro3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoCadastro3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoCadastro_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoCadastro_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCadastro</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoTipo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoTipo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoTipo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoLocal3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoLocal3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoLocal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoAlteracao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoAlteracao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoAlteracao</Value>
+          </Property>
+          <Property>
+            <Name>ATT_INITIAL_VALUE</Name>
+            <Value>ctod('')</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoAlteracao_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoAlteracao_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoAlteracao</Value>
+          </Property>
+          <Property>
+            <Name>ATT_INITIAL_VALUE</Name>
+            <Value>ctod('')</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoProduto">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoProduto</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoProduto_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoProduto_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProduto</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoProdutoDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoProdutoDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoProdutoDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoProdutoDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoQuantidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoQuantidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoQuantidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoQuantidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoProdutoDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoProdutoDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoProdutoDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoProdutoDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="estoProdutoDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>estoProdutoDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoSaldo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoSaldo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoSaldo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoSaldo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoSaldo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoSaldo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoSaldoAtual">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoSaldoAtual</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoSaldoAtual</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoSaldoAtual_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoSaldoAtual_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoSaldoAtual</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoUnidadeSigla">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoUnidadeSigla</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUnidadeSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoUnidadeSigla_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoUnidadeSigla_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoUnidadeSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoNfCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoNfCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoNfCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoNfCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoNfCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoNfCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoDistCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoDistCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoDistCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoDistCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoDistCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoDistCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoRomanCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoRomanCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoRomanCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoRomanCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoRomanCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoRomanCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoAjusCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoAjusCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoAjusCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoAjusCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoAjusCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoAjusCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoObservacao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoObservacao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoObservacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoObservacao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoObservacao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoObservacao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoLancamento">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoLancamento</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoLancamento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFestoLancamento_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFestoLancamento_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:estoLancamento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoProduto1</Name>
+        <Description>esto Produto1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoProdutoDescricao1</Name>
+        <Description>esto Produto Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoQuantidade1</Name>
+        <Description>esto Quantidade1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoCadastro1</Name>
+        <Description>esto Cadastro1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoCadastro_To1</Name>
+        <Description>esto Cadastro_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoTipo1</Name>
+        <Description>esto Tipo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoLocal1</Name>
+        <Description>esto Local1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoProduto2</Name>
+        <Description>esto Produto2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoProdutoDescricao2</Name>
+        <Description>esto Produto Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoQuantidade2</Name>
+        <Description>esto Quantidade2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoCadastro2</Name>
+        <Description>esto Cadastro2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoCadastro_To2</Name>
+        <Description>esto Cadastro_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoTipo2</Name>
+        <Description>esto Tipo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoLocal2</Name>
+        <Description>esto Local2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoProduto3</Name>
+        <Description>esto Produto3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoProdutoDescricao3</Name>
+        <Description>esto Produto Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoQuantidade3</Name>
+        <Description>esto Quantidade3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoCadastro3</Name>
+        <Description>esto Cadastro3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoCadastro_To3</Name>
+        <Description>esto Cadastro_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoTipo3</Name>
+        <Description>esto Tipo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>estoLocal3</Name>
+        <Description>esto Local3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoCodigo</Name>
+        <Description>TFesto Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoCodigo_To</Name>
+        <Description>TFesto Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoAlteracao</Name>
+        <Description>TFesto Alteracao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoAlteracao_To</Name>
+        <Description>TFesto Alteracao_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoProduto</Name>
+        <Description>TFesto Produto</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoProduto_To</Name>
+        <Description>TFesto Produto_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoProdutoDescricao</Name>
+        <Description>TFesto Produto Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoProdutoDescricao_Sel</Name>
+        <Description>TFesto Produto Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoUnidadeSigla</Name>
+        <Description>TFesto Unidade Sigla</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoUnidadeSigla_Sel</Name>
+        <Description>TFesto Unidade Sigla_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoSaldo</Name>
+        <Description>TFesto Saldo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoSaldo_To</Name>
+        <Description>TFesto Saldo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoQuantidade</Name>
+        <Description>TFesto Quantidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoQuantidade_To</Name>
+        <Description>TFesto Quantidade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoSaldoAtual</Name>
+        <Description>TFesto Saldo Atual</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoSaldoAtual_To</Name>
+        <Description>TFesto Saldo Atual_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoLancamento</Name>
+        <Description>TFesto Lancamento</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoLancamento_Sel</Name>
+        <Description>TFesto Lancamento_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoObservacao</Name>
+        <Description>TFesto Observacao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFestoObservacao_Sel</Name>
+        <Description>TFesto Observacao_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>TRNSEstoqueWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusTRNSEstoque</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

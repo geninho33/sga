@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="9741b569-5301-4af5-ab66-acfdad37eaba" user="JORGE-AVELL\joadh" versionDate="2024-07-16T21:59:41.0000000Z" lastUpdate="2024-07-16T20:22:18.0000000Z" checksum="fd6047f45ade777042832f0a20f30b4c" fullyQualifiedName="WorkWithPlusAtendimentoPorUnidadeWC" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="9052edf9-05fd-026e-1f6e-aaca8fcd75c7" name="WorkWithPlusAtendimentoPorUnidadeWC" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus Atendimento Por Unidade WC" parent="AtendimentoPorUnidadeWC" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="AtendimentoPorUnidade" defaultSecFuntionKey="AtendimentoPorUnidade" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <grid includePaginationBar="False" defaultIncludePaginationBar="False" defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" conditions="carGruCodigo in GruposCardapioRefrenteMesAno(&amp;prefCodigo,&amp;Mes,&amp;Ano);&#xD;&#xA;carGruStatus = Status.Ativo;&#xD;&#xA;">
+        <gridVariable name="GridSelected" dataType="Basic" basicType="Boolean" readOnly="False"><![CDATA[&GridSelected = (&AtendimentoCodigoCollection.IndexOf(AtendimentoCodigo) = 0)]]]]><![CDATA[><![CDATA[&GridSelected = (&AtendimentoCodigoCollection.IndexOf(AtendimentoCodigo) = 0)]]]]><![CDATA[></gridVariable>
+        <gridVariable name="AreEnsNome" description="Área " defaultDescription="Nome" domain="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" visible="True" cellVisible_E="False" defaultCellVisible_E="False"><![CDATA[&AreEnsNome = concat(AreEnsCodigo.ToString().Trim(),AreEnsNome,'-')]]]]><![CDATA[><![CDATA[&AreEnsNome = concat(AreEnsCodigo.ToString().Trim(),AreEnsNome,'-')]]]]><![CDATA[></gridVariable>
+        <gridVariable name="AreEnsEtapaNome" description="Etapa" defaultDescription="Nome Etapa" domain="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNome" visible="True" cellVisible_E="False" defaultCellVisible_E="False"><![CDATA[&AreEnsEtapaNome = concat(AreEnsSequencial.ToString().Trim(),AreEnsEtapaNome,'-')]]]]><![CDATA[><![CDATA[&AreEnsEtapaNome = concat(AreEnsSequencial.ToString().Trim(),AreEnsEtapaNome,'-')]]]]><![CDATA[></gridVariable>
+        <gridVariable name="TurnoDescricao" description="Turno" dataType="Basic" basicType="VarChar"><![CDATA[&TurnoDescricao = concat(AtendimentoTurno.ToString().Trim(),Turno.EnumerationDescription(AtendimentoTurno),'-')]]]]><![CDATA[><![CDATA[&TurnoDescricao = concat(AtendimentoTurno.ToString().Trim(),Turno.EnumerationDescription(AtendimentoTurno),'-')]]]]><![CDATA[></gridVariable>
+        <gridVariable name="carGruDescricao" description="Grupo Cardápio" defaultDescription="car Gru Codigo" domain="adbb33c9-0906-4971-833c-998de27e0676-carGruDescricao" visible="True" defaultControlInfoDef="Custom" defaultControlType="Dynamic Combo Box" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-carGruCodigo" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-carGruDescricao" defaultConditions="prefCodigo = &amp;prefCodigo;"><![CDATA[&carGruDescricao = concat(carGruCodigo.ToString().Trim(),carGruDescricao,'-')]]]]><![CDATA[><![CDATA[&carGruDescricao = concat(carGruCodigo.ToString().Trim(),carGruDescricao,'-')]]]]><![CDATA[></gridVariable>
+        <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AtendimentoNormalSegunda" description="Qtd. Alunos" defaultDescription="Normal Segunda" defaultCellVisible_E="False" totalizer="Sum" defaultTotalizer="Sum" />
+        <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AtendimentoCodigo" description="=Attribute.ColumnTitle" visible="False" />
+      </grid>
+    </table>
+    <steps />
+    <parameters>
+      <parameter type="In" name="prefCodigo" />
+      <parameter type="In" name="locCodigo" />
+      <parameter type="In" name="&amp;IgnorarAtendimentoJson" />
+    </parameters>
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusAtendimentoPorUnidadeWC</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-AtendimentoPorUnidadeWC</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

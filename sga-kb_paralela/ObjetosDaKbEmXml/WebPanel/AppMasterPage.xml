@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a676350a-d3a1-4850-9f51-4cef8688b224" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2011-12-12T19:36:00.0000000Z" checksum="ce836e776cbf78d74a729746b75d0fa8" fullyQualifiedName="AppMasterPage" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="0d98c411-d9b1-4077-beb3-8a6b3751d736" name="AppMasterPage" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Application Master Page " parent="Web" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<BODY leftMargin="0" rightMargin="0" bottomMargin="0" topMargin="0" classref="Form"><TABLE cellSpacing="0" id="Table1" cellPadding="0" align="Center" classref="Table960"><TBODY><TR><TD><TABLE cellSpacing="0" id="Table2" border="0" cellPadding="0" classref="TableTop" style="HEIGHT: 63px"><TBODY><TR><TD>  <gxTextBlock Class="TextBlockHeader" id="ApplicationHeader" CaptionExpression="Application Header" /></TD><TD align="Right">                                  <TABLE id="Table3" classref="Table" style="BACKGROUND-COLOR: Transparent"><TBODY><TR><TD colspan="3"><gxTextBlock Class="SmallText" id="English" CaptionExpression="English" /></TD><TD><gxTextBlock Class="" id="pipe" CaptionExpression="" /></TD><TD><gxTextBlock Class="SmallText" id="Spanish" CaptionExpression="Español" /></TD><TD><gxTextBlock Class="" id="pipe2" CaptionExpression="" /></TD><TD><gxTextBlock Class="SmallText" id="Portuguese" CaptionExpression="Português" /></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><TABLE border="0" id="Table4" rules="None" classref="TableBlackHeader"><TBODY><TR><TD><gxTextBlock Class="MenuOption" Caption="First Option" CaptionExpression="First Option" id="FirstText" />  </TD><TD><gxTextBlock Class="MenuOption" Caption="Second Option" CaptionExpression="Second Option" id="SecondText" /></TD><TD><gxTextBlock Class="MenuOption" Caption="Third Option" CaptionExpression="Third Option" id="ThirdText" />  </TD><TD><gxTextBlock Class="MenuOption" Caption="Fourth Option" CaptionExpression="Fourth Option" id="FourthText" /></TD></TR></TBODY></TABLE></TD></TR><TR><TD colspan="2"><gxWebComponent ControlName="WCRecentLinks" /></TD></TR><TR><TD style="HEIGHT: 14px; WIDTH: 100%"><gxContentPlaceHolder ControlName="ContentHolder" /></TD></TR><TR><TD style="HEIGHT: 15px" /></TR><TR><TD colspan="2"><TABLE cellSpacing="0" id="Table6" cellPadding="0" classref="TableBlackFooter"><TBODY><TR><TD><P /></TD></TR></TBODY></TABLE></TD></TR><TR><TD colspan="2"><TABLE cellSpacing="0" id="Table7" cellPadding="0" classref="TableGreyFooter"><TBODY><TR><TD align="Center"><gxTextBlock Class="FooterText" id="TextBlock1" CaptionExpression="Footer Info" /></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><P /></BODY>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[Event Start
+	Pipe.Caption = "|" 
+	Pipe2.Caption = "|"
+	   
+	//  Link To Home Page (for example)
+	//ApplicationHeader.Link = Home.Link()
+	
+	// Sample Code for Runtime Translation
+	
+	//	&BrowserLanguage = &Httprequest.GetHeader("Accept-Language")
+	//	if &Session.Get("firstTime") <> "true"
+	//		Do case
+	//			Case &BrowserLanguage like 'es'
+	//				&Language = 'Spanish'
+	//			Case &BrowserLanguage like 'pt'
+	//				&Language = 'Portuguese'
+	//			Otherwise
+	//				&Language = 'English'
+	//		Endcase
+	//		
+	//		if SetLanguage(&Language) <> 0
+	//		msg('The language is not available')
+	//		else
+	//			&Session.Set("firstTime","true")
+	//		endif
+	//	endif
+	
+EndEvent
+
+Event Refresh
+	// Create web components that need init
+	// Form.Caption is set in ContentHolder's Event Start
+	WCRecentLinks.Object = RecentLinks.Create(Form.Caption, ContentHolder.Pgmname)
+EndEvent
+
+// Sample Code for Runtime Translation
+
+//Event English.Click
+//	if SetLanguage('English') <> 0 
+//	    msg('The language is not available')
+//    else
+//	    refresh 
+//	endif
+//EndEvent
+//
+//Event Spanish.Click
+//	if SetLanguage('Spanish') <> 0 
+//	    msg('The language is not available')
+//    else
+//	    refresh 
+//	endif
+//EndEvent
+//
+//Event Portuguese.Click
+//	if SetLanguage('Portuguese') <> 0 
+//	    msg('The language is not available')
+//    else
+//	    refresh 
+//	endif
+//EndEvent
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>AppMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Application Master Page </Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Master</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

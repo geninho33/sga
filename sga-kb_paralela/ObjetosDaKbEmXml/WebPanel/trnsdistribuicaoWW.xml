@@ -1,0 +1,3708 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="e6f750f0-840b-0ede-332f-71e27cb3dfe4" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-16T05:38:51.0000000Z" lastUpdate="2025-10-15T01:18:35.0000000Z" checksum="5c02978f471fc387a7988a1284050bd2" fullyQualifiedName="trnsdistribuicaoWW" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="989f6f86-45ba-43a2-b719-a628bddcf274" name="trnsdistribuicaoWW" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Listagem de Distribuição" parent="WorkWithPlustrnsdistribuicao" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_FilterOptions&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableHeader" tableType="Flex" flexDirection="Column" containerSlotName="TableHeader"><row><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableActions" tableType="Flex"><row><cell flexGrow="0"><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell><cell flexGrow="0"><table controlName="TableRightHeader" tableType="Flex" flexWrap="Wrap"><row><cell cellClass="CellAlignTopPaddingTop2"><ucw gxControlType="1204120062" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;ddo_ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconType&lt;/Name&gt;&lt;Value&gt;FontIcon&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Icon&lt;/Name&gt;&lt;Value&gt;fas fa-filter&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Tooltip&lt;/Name&gt;&lt;Value&gt;WWP_ManageFiltersTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ManageFiltersData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><table controlName="TableFilters"><row><cell><table controlName="TableDynamicFilters" class="TableDynamicFiltersFlex" tableType="Flex" flexDirection="Column"><row><cell cellClass="DynRowVisible"><table controlName="TableDynamicFiltersRow1" tableType="Flex"><row><cell><textblock controlName="DynamicFiltersPrefix1" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell><data attribute="&amp;DynamicFiltersSelector1" labelPosition="None" class="Attribute" /></cell><cell><textblock controlName="DynamicFiltersMiddle1" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell><table controlName="TableMergedDynamicFilters1" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distCodigo1_Cell"><data attribute="&amp;distCodigo1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distRemCodigo1_Cell"><data attribute="&amp;distRemCodigo1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distDataEnvio1_Cell"><table controlName="TableMergedDynamicFiltersdistDataEnvio1" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellControlName="distDataEnvio_Range_Cell1" cellClass="MergeDataCell"><data attribute="&amp;distDataEnvio_RangeText1" labelPosition="None" class="Attribute" /></cell></row></table></cell><cell cellControlName="Filter_distDataRecepcao1_Cell"><table controlName="TableMergedDynamicFiltersdistDataRecepcao1" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellControlName="distDataRecepcao_Range_Cell1" cellClass="MergeDataCell"><data attribute="&amp;distDataRecepcao_RangeText1" labelPosition="None" class="Attribute" /></cell></row></table></cell><cell cellControlName="Filter_distRotaCodigo1_Cell"><data attribute="&amp;distRotaCodigo1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distPeriodo1_Cell"><data attribute="&amp;distPeriodo1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distLocalOrigemNome1_Cell"><data attribute="&amp;distLocalOrigemNome1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distLocalDestinoNome1_Cell"><data attribute="&amp;distLocalDestinoNome1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distReceber1_Cell"><data attribute="&amp;distReceber1" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Recebido:S,Aguardando:N&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_AddFilter1_Cell"><image controlName="AddDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter1_Cell"><image controlName="RemoveDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow2" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix2" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector2" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle2" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters2" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distCodigo2_Cell"><data attribute="&amp;distCodigo2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distRemCodigo2_Cell"><data attribute="&amp;distRemCodigo2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distDataEnvio2_Cell"><table controlName="TableMergedDynamicFiltersdistDataEnvio2" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellControlName="distDataEnvio_Range_Cell2" cellClass="MergeDataCell"><data attribute="&amp;distDataEnvio_RangeText2" labelPosition="None" class="Attribute" /></cell></row></table></cell><cell cellControlName="Filter_distDataRecepcao2_Cell"><table controlName="TableMergedDynamicFiltersdistDataRecepcao2" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellControlName="distDataRecepcao_Range_Cell2" cellClass="MergeDataCell"><data attribute="&amp;distDataRecepcao_RangeText2" labelPosition="None" class="Attribute" /></cell></row></table></cell><cell cellControlName="Filter_distRotaCodigo2_Cell"><data attribute="&amp;distRotaCodigo2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distPeriodo2_Cell"><data attribute="&amp;distPeriodo2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distLocalOrigemNome2_Cell"><data attribute="&amp;distLocalOrigemNome2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distLocalDestinoNome2_Cell"><data attribute="&amp;distLocalDestinoNome2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distReceber2_Cell"><data attribute="&amp;distReceber2" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Recebido:S,Aguardando:N&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_AddFilter2_Cell"><image controlName="AddDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter2_Cell"><image controlName="RemoveDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow3" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix3" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector3" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle3" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters3" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distCodigo3_Cell"><data attribute="&amp;distCodigo3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distRemCodigo3_Cell"><data attribute="&amp;distRemCodigo3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distDataEnvio3_Cell"><table controlName="TableMergedDynamicFiltersdistDataEnvio3" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellControlName="distDataEnvio_Range_Cell3" cellClass="MergeDataCell"><data attribute="&amp;distDataEnvio_RangeText3" labelPosition="None" class="Attribute" /></cell></row></table></cell><cell cellControlName="Filter_distDataRecepcao3_Cell"><table controlName="TableMergedDynamicFiltersdistDataRecepcao3" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellControlName="distDataRecepcao_Range_Cell3" cellClass="MergeDataCell"><data attribute="&amp;distDataRecepcao_RangeText3" labelPosition="None" class="Attribute" /></cell></row></table></cell><cell cellControlName="Filter_distRotaCodigo3_Cell"><data attribute="&amp;distRotaCodigo3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distPeriodo3_Cell"><data attribute="&amp;distPeriodo3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distLocalOrigemNome3_Cell"><data attribute="&amp;distLocalOrigemNome3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distLocalDestinoNome3_Cell"><data attribute="&amp;distLocalDestinoNome3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_distReceber3_Cell"><data attribute="&amp;distReceber3" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Recebido:S,Aguardando:N&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter3_Cell"><image controlName="RemoveDynamicFilters3" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters3'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell><cell><ucw gxControlType="-667710712" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;novaAba&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="GridTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithPaginationBar GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;trnsdistribuicao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;distCodigo  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distCodigo)  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distRemCodigo  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distRemCodigo)  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distPeriodo  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distPeriodo)  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distLocalOrigem  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distLocalOrigem)  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distDataEnvio  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distDataEnvio)  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distLocalDestino  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distLocalDestino)  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distDataRecepcao  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distDataRecepcao)  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distRecebedor  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distRecebedor)  when &amp;amp;OrderedBy = 8 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distRotaCodigo  when &amp;amp;OrderedBy = 9 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distRotaCodigo)  when &amp;amp;OrderedBy = 9 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distReceber  when &amp;amp;OrderedBy = 10 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distReceber)  when &amp;amp;OrderedBy = 10 AND &amp;amp;OrderedDsc = True&#xD;&#xA;distStatus  when &amp;amp;OrderedBy = 11 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(distStatus)  when &amp;amp;OrderedBy = 11 AND &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-trnsdistribuicaoWWDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;DynamicFiltersSelector1, &amp;amp;DynamicFiltersOperator1, &amp;amp;distCodigo1, &amp;amp;distRemCodigo1, &amp;amp;distDataEnvio1, &amp;amp;distDataEnvio_To1, &amp;amp;distDataRecepcao1, &amp;amp;distDataRecepcao_To1, &amp;amp;distRotaCodigo1, &amp;amp;distPeriodo1, &amp;amp;distLocalOrigemNome1, &amp;amp;distLocalDestinoNome1, &amp;amp;distReceber1, &amp;amp;DynamicFiltersEnabled2, &amp;amp;DynamicFiltersSelector2, &amp;amp;DynamicFiltersOperator2, &amp;amp;distCodigo2, &amp;amp;distRemCodigo2, &amp;amp;distDataEnvio2, &amp;amp;distDataEnvio_To2, &amp;amp;distDataRecepcao2, &amp;amp;distDataRecepcao_To2, &amp;amp;distRotaCodigo2, &amp;amp;distPeriodo2, &amp;amp;distLocalOrigemNome2, &amp;amp;distLocalDestinoNome2, &amp;amp;distReceber2, &amp;amp;DynamicFiltersEnabled3, &amp;amp;DynamicFiltersSelector3, &amp;amp;DynamicFiltersOperator3, &amp;amp;distCodigo3, &amp;amp;distRemCodigo3, &amp;amp;distDataEnvio3, &amp;amp;distDataEnvio_To3, &amp;amp;distDataRecepcao3, &amp;amp;distDataRecepcao_To3, &amp;amp;distRotaCodigo3, &amp;amp;distPeriodo3, &amp;amp;distLocalOrigemNome3, &amp;amp;distLocalDestinoNome3, &amp;amp;distReceber3, &amp;amp;TFdistCodigo, &amp;amp;TFdistCodigo_To, &amp;amp;TFdistRemCodigo, &amp;amp;TFdistRemCodigo_To, &amp;amp;TFdistPeriodo, &amp;amp;TFdistPeriodo_Sel, &amp;amp;TFdistLocalOrigem, &amp;amp;TFdistLocalOrigem_Sel, &amp;amp;TFdistDataEnvio, &amp;amp;TFdistDataEnvio_To, &amp;amp;TFdistLocalDestino, &amp;amp;TFdistLocalDestino_Sel, &amp;amp;TFdistDataRecepcao, &amp;amp;TFdistDataRecepcao_To, &amp;amp;TFdistRecebedor, &amp;amp;TFdistRecebedor_Sel, &amp;amp;TFdistRotaCodigo, &amp;amp;TFdistRotaCodigo_Sel, &amp;amp;TFdistReceber_Sels, &amp;amp;TFdistStatus_Sels&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;Update" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_update&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnItens" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Ítens da Guia&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnCancelar" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Cancelar Guia&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnPrint" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Imprimir Guia&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnPrint2via" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;2 guias em uma folha&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnExcluirRemessa" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Cancelar Remessa&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigo" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distRemCodigo" titleExp="Remessa" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distPeriodo" titleExp="Período" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distLocalOrigem" titleExp="Origem" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo=&amp;amp;prefCodigo;&#xD;&#xA;locStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distDataEnvio" titleExp="Envio" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distLocalDestino" titleExp="Destino " class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo=&amp;amp;prefCodigo;&#xD;&#xA;locStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distDataRecepcao" titleExp="Recepção" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distRecebedor" titleExp="Recebedor" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distUserName" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distRotaCodigo" titleExp="Rota" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;rotaCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;rotaDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distReceber" titleExp="Recebimento UE" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Recebido:S,Aguardando:N&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distStatus" titleExp="Situação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distDataCadastro" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distDataAlteracao" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;checkBox" titleExp="Imprimir" class="AttributeRealWidthCheckBox" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="ActionGroupGrouped"><item><action controlName="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_insert&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnAGExport" caption="WWP_ExportData" class="ColumnsSelector" /></item><item><action controlName="BtnEditColumns" caption="WWP_EditColumnsCaption" class="hidden-xs" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_EditColumnsTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnUserAction1" onClickEvent="'DoUserAction1'" caption="Imprimir" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GXBootstrap.DDORegular ControlName="ddo_AGExport" IconType="FontIcon" Icon="fas fa-download" Caption="WWP_ExportData" DropDownOptionsData="&amp;AGExportData" Cls="ColumnsSelector" /><gxWWP.DateRangePicker ControlName="distDataEnvio_RangePicker1" DateRangePickerStartDate="&amp;distDataEnvio1" DateRangePickerEndDate="&amp;distDataEnvio_To1" /><gxWWP.DateRangePicker ControlName="distDataRecepcao_RangePicker1" DateRangePickerStartDate="&amp;distDataRecepcao1" DateRangePickerEndDate="&amp;distDataRecepcao_To1" /><gxWWP.DateRangePicker ControlName="distDataEnvio_RangePicker2" DateRangePickerStartDate="&amp;distDataEnvio2" DateRangePickerEndDate="&amp;distDataEnvio_To2" /><gxWWP.DateRangePicker ControlName="distDataRecepcao_RangePicker2" DateRangePickerStartDate="&amp;distDataRecepcao2" DateRangePickerEndDate="&amp;distDataRecepcao_To2" /><gxWWP.DateRangePicker ControlName="distDataEnvio_RangePicker3" DateRangePickerStartDate="&amp;distDataEnvio3" DateRangePickerEndDate="&amp;distDataEnvio_To3" /><gxWWP.DateRangePicker ControlName="distDataRecepcao_RangePicker3" DateRangePickerStartDate="&amp;distDataRecepcao3" DateRangePickerEndDate="&amp;distDataRecepcao_To3" /><gxTextBlock GxFormat="HTML" id="JSDynamicFilters" CaptionExpression="JSDynamicFilters" /><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="7:distCodigo|8:distRemCodigo|9:distPeriodo|10:distLocalOrigem|11:distDataEnvio|12:distLocalDestino|13:distDataRecepcao|14:distRecebedor|16:distRotaCodigo|17:distReceber|18:distStatus|21:checkBox" ColumnsSortValues="1|2|3|4|5|6|7|8|9|10|11|" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T|T|T|T|T|T|T|T|T|T|T|" IncludeFilter="T|T|T|T|T|T|T|T|T|||" FilterType="Numeric|Numeric|Character|Character|Date|Character|Date|Character|Character|||" FilterIsRange="T|T|||P||P|||||" IncludeDataList="||T|T||T||T|T|T|T|" DataListType="||Dynamic|Dynamic||Dynamic||Dynamic|Dynamic|FixedValues|FixedValues|" AllowMultipleSelection="|||||||||T|T|" DataListFixedValues="|||||||||S:Recebido,N:Aguardando|A:Ativo,I:Inativo,C:Cancelada|" DataListProc="trnsdistribuicaoWWGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsdistribuicaoWWGetFilterData" Format="8.0|8.0||||||||||" Fixable="T" /><gxInNewWindow ControlName="InNewWindow1" /><gxDVelop.GXBootstrap.DDOGridColumnsSelector ControlName="DDO_GridColumnsSelector" Caption="WWP_EditColumnsCaption" Tooltip="WWP_EditColumnsTooltip" DropDownOptionsData="&amp;ColumnsSelector" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" DropDownOptionsType="GridColumnsSelector" Cls="ColumnsSelector hidden-xs" /><table id="TableDVelop_ConfirmPanel_btnExcluirRemessa"><tbody><tr><td align="Center"><gxDVelop.GXBootstrap.ConfirmPanel ControlName="DVelop_ConfirmPanel_btnExcluirRemessa" Title="Cancelamento de Remessa" ConfirmationText="Deseja realmente cancelar a remessa?" YesButtonCaption="WWP_ConfirmTextYes" NoButtonCaption="WWP_ConfirmTextNo" CancelButtonCaption="WWP_ConfirmTextCancel" YesButtonPosition="Left" ConfirmType="YesNo"><container containerId="Body" /></gxDVelop.GXBootstrap.ConfirmPanel></td></tr></tbody></table><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" HasColumnsSelector="True" /><DIV classref="Invisible" id="DDO_distDataEnvioAuxDates"><gxAttribute AttID="&amp;DDO_distDataEnvioAuxDateText" /><gxWWP.DateRangePicker ControlName="TFdistDataEnvio_RangePicker" DateRangePickerStartDate="&amp;DDO_distDataEnvioAuxDate" DateRangePickerEndDate="&amp;DDO_distDataEnvioAuxDateTo" /></DIV><DIV classref="Invisible" id="DDO_distDataRecepcaoAuxDates"><gxAttribute AttID="&amp;DDO_distDataRecepcaoAuxDateText" /><gxWWP.DateRangePicker ControlName="TFdistDataRecepcao_RangePicker" DateRangePickerStartDate="&amp;DDO_distDataRecepcaoAuxDate" DateRangePickerEndDate="&amp;DDO_distDataRecepcaoAuxDateTo" /></DIV></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	TFdistDataRecepcao_RangePicker.Attach(&DDO_distDataRecepcaoAuxDateText.InternalName)
+	TFdistDataEnvio_RangePicker.Attach(&DDO_distDataEnvioAuxDateText.InternalName)
+	
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	DDO_GridColumnsSelector.GridInternalName = Grid.InternalName
+
+	If &HTTPRequest.Method = HttpMethod.Get
+		Do 'LoadSavedFilters'
+	EndIf
+
+	JSDynamicFilters.Caption = ''
+	distDataEnvio_RangePicker1.Attach(&distDataEnvio_RangeText1.InternalName)
+	distDataRecepcao_RangePicker1.Attach(&distDataRecepcao_RangeText1.InternalName)
+	&DynamicFiltersSelector1 = !'DISTCODIGO'
+	Do 'EnableDynamicFilters1'
+	distDataEnvio_RangePicker2.Attach(&distDataEnvio_RangeText2.InternalName)
+	distDataRecepcao_RangePicker2.Attach(&distDataRecepcao_RangeText2.InternalName)
+	&DynamicFiltersSelector2 = !'DISTCODIGO'
+	Do 'EnableDynamicFilters2'
+	distDataEnvio_RangePicker3.Attach(&distDataEnvio_RangeText3.InternalName)
+	distDataRecepcao_RangePicker3.Attach(&distDataRecepcao_RangeText3.InternalName)
+	&DynamicFiltersSelector3 = !'DISTCODIGO'
+	Do 'EnableDynamicFilters3'
+	
+	AddDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 2, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	AddDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters3.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	ddo_AGExport.TitleControlIdToReplace = BtnAGExport.InternalName
+	&AGExportData = new()
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportCaption'
+	&AGExportDataItem.Icon = ActionExport.Link()
+	&AGExportDataItem.EventKey = !'Export'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportReportCaption'
+	&AGExportDataItem.Icon = ActionExportReport.Link()
+	&AGExportDataItem.EventKey = !'ExportReport'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = 'Listagem de Distribuição'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	If &OrderedBy < 1
+		&OrderedBy = 1
+		&OrderedDsc = True
+		Do 'SetDDOSortedStatus'
+	EndIf
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	DDO_GridColumnsSelector.TitleControlIdToReplace = BtnEditColumns.InternalName
+	GridPaginationBar.RowsPerPageSelectedValue = Grid.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	// Se o Webpanel for chamado a partir do Rancho carrega variável de pesquisa por remessa
+	&distRemCodigo1.FromString(&Websession.Get(!'Wizard_remCodigo'))
+	if &distRemCodigo1 <> 0
+		&Websession.Remove(!'Wizard_remCodigo')
+		&DynamicFiltersSelector1 = !'DISTREMCODIGO'
+		Do 'EnableDynamicFilters1'
+	endif
+
+   LoadWWPContext.Call(&WWPContext)
+   &prefCodigo = &WWPContext.prefCodigo
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: LoadPrefeitura
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'CheckSecurityForActions'
+
+	Do Case
+		Case &ManageFiltersExecutionStep = 1
+			&ManageFiltersExecutionStep = 2
+		Case &ManageFiltersExecutionStep = 2
+			&ManageFiltersExecutionStep = 0
+			Do 'LoadSavedFilters'
+	EndCase
+
+	&DynamicFiltersOperator1.Clear()
+	Do Case
+		Case &DynamicFiltersSelector1 = !'DISTCODIGO'
+			&DynamicFiltersOperator1.AddItem(0, "=")
+		Case &DynamicFiltersSelector1 = !'DISTREMCODIGO'
+			&DynamicFiltersOperator1.AddItem(0, "=")
+		Case &DynamicFiltersSelector1 = !'DISTDATAENVIO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterRange")
+		Case &DynamicFiltersSelector1 = !'DISTDATARECEPCAO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterRange")
+		Case &DynamicFiltersSelector1 = !'DISTROTACODIGO'
+			&DynamicFiltersOperator1.AddItem(0, "=")
+		Case &DynamicFiltersSelector1 = !'DISTPERIODO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'DISTLOCALORIGEMNOME'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterContains")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterLike")
+		Case &DynamicFiltersSelector1 = !'DISTLOCALDESTINONOME'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterContains")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterLike")
+	EndCase
+	If &DynamicFiltersEnabled2
+		&DynamicFiltersOperator2.Clear()
+		Do Case
+			Case &DynamicFiltersSelector2 = !'DISTCODIGO'
+				&DynamicFiltersOperator2.AddItem(0, "=")
+			Case &DynamicFiltersSelector2 = !'DISTREMCODIGO'
+				&DynamicFiltersOperator2.AddItem(0, "=")
+			Case &DynamicFiltersSelector2 = !'DISTDATAENVIO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterRange")
+			Case &DynamicFiltersSelector2 = !'DISTDATARECEPCAO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterRange")
+			Case &DynamicFiltersSelector2 = !'DISTROTACODIGO'
+				&DynamicFiltersOperator2.AddItem(0, "=")
+			Case &DynamicFiltersSelector2 = !'DISTPERIODO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'DISTLOCALORIGEMNOME'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterContains")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterLike")
+			Case &DynamicFiltersSelector2 = !'DISTLOCALDESTINONOME'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterContains")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterLike")
+		EndCase
+		If &DynamicFiltersEnabled3
+			&DynamicFiltersOperator3.Clear()
+			Do Case
+				Case &DynamicFiltersSelector3 = !'DISTCODIGO'
+					&DynamicFiltersOperator3.AddItem(0, "=")
+				Case &DynamicFiltersSelector3 = !'DISTREMCODIGO'
+					&DynamicFiltersOperator3.AddItem(0, "=")
+				Case &DynamicFiltersSelector3 = !'DISTDATAENVIO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterRange")
+				Case &DynamicFiltersSelector3 = !'DISTDATARECEPCAO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterRange")
+				Case &DynamicFiltersSelector3 = !'DISTROTACODIGO'
+					&DynamicFiltersOperator3.AddItem(0, "=")
+				Case &DynamicFiltersSelector3 = !'DISTPERIODO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'DISTLOCALORIGEMNOME'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterContains")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterLike")
+				Case &DynamicFiltersSelector3 = !'DISTLOCALDESTINONOME'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterContains")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterLike")
+			EndCase
+		EndIf
+	EndIf
+	Do 'SaveGridState'
+
+	
+	If &Session.Get(!'trnsdistribuicaoWWColumnsSelector') <> ''
+		&ColumnsSelectorXML = &Session.Get(!'trnsdistribuicaoWWColumnsSelector')
+		&ColumnsSelector.FromXml(&ColumnsSelectorXML)
+	Else
+		Do 'InitializeColumnsSelector'
+	EndIf
+	distCodigo.Visible = &ColumnsSelector.Columns.Item(1).IsVisible
+	distRemCodigo.Visible = &ColumnsSelector.Columns.Item(2).IsVisible
+	distPeriodo.Visible = &ColumnsSelector.Columns.Item(3).IsVisible
+	distLocalOrigem.Visible = &ColumnsSelector.Columns.Item(4).IsVisible
+	distDataEnvio.Visible = &ColumnsSelector.Columns.Item(5).IsVisible
+	distLocalDestino.Visible = &ColumnsSelector.Columns.Item(6).IsVisible
+	distDataRecepcao.Visible = &ColumnsSelector.Columns.Item(7).IsVisible
+	distRecebedor.Visible = &ColumnsSelector.Columns.Item(8).IsVisible
+	distRotaCodigo.Visible = &ColumnsSelector.Columns.Item(9).IsVisible
+	distReceber.Visible = &ColumnsSelector.Columns.Item(10).IsVisible
+	distStatus.Visible = &ColumnsSelector.Columns.Item(11).IsVisible
+	&checkBox.Visible = &ColumnsSelector.Columns.Item(12).IsVisible
+	&GridCurrentPage = Grid.CurrentPage
+	&GridPageCount = Grid.PageCount
+	&GridAppliedFilters = WWP_GetAppliedFiltersDescription(&Pgmname)
+	&Update.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnItens.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnCancelar.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnPrint.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnPrint2via.ColumnHeaderClass = !'WWIconActionColumn'
+	&btnExcluirRemessa.ColumnHeaderClass = !'WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg'
+	distCodigo.ColumnHeaderClass = !'WWColumn'
+	distRemCodigo.ColumnHeaderClass = !'WWColumn hidden-xs'
+	distPeriodo.ColumnHeaderClass = !'WWColumn hidden-xs'
+	distLocalOrigem.ColumnHeaderClass = !'WWColumn'
+	distDataEnvio.ColumnHeaderClass = !'WWColumn'
+	distLocalDestino.ColumnHeaderClass = !'WWColumn'
+	distDataRecepcao.ColumnHeaderClass = !'WWColumn'
+	distRecebedor.ColumnHeaderClass = !'WWColumn'
+	distRotaCodigo.ColumnHeaderClass = !'WWColumn hidden-xs'
+	distReceber.ColumnHeaderClass = !'WWColumn'
+	distStatus.ColumnHeaderClass = !'WWColumn'
+	&checkBox.ColumnHeaderClass = !'WWColumn'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridPaginationBar.SelectedPage = !'Previous'
+			Grid.PreviousPage()
+		Case GridPaginationBar.SelectedPage = !'Next'
+			Grid.NextPage()
+		Otherwise
+			&PageToGo.FromString(GridPaginationBar.SelectedPage)
+			Grid.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = GridPaginationBar.RowsPerPageSelectedValue
+	Grid.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedBy.FromString(DDO_Grid.SelectedValue_get)
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'distCodigo'
+					&TFdistCodigo.FromString(DDO_Grid.FilteredText_get)
+					&TFdistCodigo_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'distRemCodigo'
+					&TFdistRemCodigo.FromString(DDO_Grid.FilteredText_get)
+					&TFdistRemCodigo_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'distPeriodo'
+					&TFdistPeriodo = DDO_Grid.FilteredText_get
+					&TFdistPeriodo_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'distLocalOrigem'
+					&TFdistLocalOrigem = DDO_Grid.FilteredText_get
+					&TFdistLocalOrigem_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFdistLocalOrigem_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'distDataEnvio'
+					&TFdistDataEnvio.FromString(DDO_Grid.FilteredText_get)
+					&TFdistDataEnvio_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'distLocalDestino'
+					&TFdistLocalDestino = DDO_Grid.FilteredText_get
+					&TFdistLocalDestino_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFdistLocalDestino_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'distDataRecepcao'
+					&TFdistDataRecepcao.FromString(DDO_Grid.FilteredText_get)
+					&TFdistDataRecepcao_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'distRecebedor'
+					&TFdistRecebedor = DDO_Grid.FilteredText_get
+					&TFdistRecebedor_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'distRotaCodigo'
+					&TFdistRotaCodigo = DDO_Grid.FilteredText_get
+					&TFdistRotaCodigo_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFdistRotaCodigo_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'distReceber'
+					&TFdistReceber_SelsJson = DDO_Grid.SelectedValue_get
+					&TFdistReceber_Sels.FromJson(&TFdistReceber_SelsJson)
+				Case DDO_Grid.SelectedColumn = !'distStatus'
+					&TFdistStatus_SelsJson = DDO_Grid.SelectedValue_get
+					&TFdistStatus_Sels.FromJson(&TFdistStatus_SelsJson)
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Update = !'<i class="fa fa-pen"></i>'
+	If &IsAuthorized_Update
+		If (distStatus<>'C')
+			&Update.Link = trnsdistribuicao.Link(TrnMode.Update, prefCodigo, distCodigo)
+			&Update.Class = !'Attribute'
+		Else
+			&Update.Link = ""
+			&Update.Class = !'Invisible'
+		Endif
+	EndIf
+	&btnItens = !'<i class="fas fa-tasks"></i>'
+	If (&IsAuthorized_btnItens)
+		&btnItens.Link = trnsdistribuicaoitensWW.Link(prefCodigo, distCodigo)
+	Endif
+	&btnCancelar = !'<i class="fas fa-ban"></i>'
+	If &IsAuthorized_btnCancelar
+		If (distStatus <>'C')
+			&btnCancelar.Link = trnsdistribuicaoCancelar.Link(prefCodigo, distCodigo)
+			&btnCancelar.Class = !'Attribute'
+		Else
+			&btnCancelar.Link = ""
+			&btnCancelar.Class = !'Invisible'
+		Endif
+	EndIf
+	&btnPrint = !'<i class="fas fa-print"></i>'
+	If &IsAuthorized_btnPrint
+		If (distStatus<>'C')
+			&btnPrint.Class = !'Attribute'
+		Else
+			&btnPrint.Class = !'Invisible'
+		Endif
+	EndIf
+	&btnPrint2via = !'<i class="fas fa-newspaper"></i>'
+	If &IsAuthorized_btnPrint2via
+		If (distStatus<>'C')
+			&btnPrint2via.Class = !'Attribute'
+		Else
+			&btnPrint2via.Class = !'Invisible'
+		Endif
+	EndIf
+	&btnExcluirRemessa = !'<i class="fas fa-store-slash"></i>'
+	
+	&Update.ColumnClass = iif(distStatus = 'C', !'WWIconActionColumn WWColumnWarning WWColumnWarningFirstColumn', !'WWIconActionColumn')
+	&btnItens.ColumnClass = iif(distStatus = 'C', !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	&btnCancelar.ColumnClass = iif(distStatus = 'C', !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	&btnPrint.ColumnClass = iif(distStatus = 'C', !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	&btnPrint2via.ColumnClass = iif(distStatus = 'C', !'WWIconActionColumn WWColumnWarning', !'WWIconActionColumn')
+	&btnExcluirRemessa.ColumnClass = iif(distStatus = 'C', !'WWIconActionColumn WWColumnWarning hidden-xs hidden-sm hidden-md hidden-lg', !'WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg')
+	distCodigo.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	distRemCodigo.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning hidden-xs', !'WWColumn hidden-xs')
+	distPeriodo.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning hidden-xs', !'WWColumn hidden-xs')
+	distLocalOrigem.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	distDataEnvio.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	distLocalDestino.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	distDataRecepcao.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	distRecebedor.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	distRotaCodigo.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning hidden-xs', !'WWColumn hidden-xs')
+	distReceber.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	distStatus.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+	&checkBox.ColumnClass = iif(distStatus = 'C', !'WWColumn WWColumnWarning', !'WWColumn')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_GridColumnsSelector.OnColumnsChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ColumnsSelectorXML = DDO_GridColumnsSelector.ColumnsSelectorValues
+	&ColumnsSelector.FromJson(&ColumnsSelectorXML)
+	SaveColumnsSelectorState(!'trnsdistribuicaoWWColumnsSelector', iif(&ColumnsSelectorXML.IsEmpty(), '', &ColumnsSelector.ToXml()))
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = True
+	AddDynamicFilters1.Visible = False
+	RemoveDynamicFilters1.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersIgnoreFirst = True
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	&DynamicFiltersIgnoreFirst = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector1.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event distDataEnvio_RangePicker1.DateRangeChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distDataEnvio1 = &distDataEnvio1
+	&distDataEnvio_To1 = &distDataEnvio_To1
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event distDataRecepcao_RangePicker1.DateRangeChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distDataRecepcao1 = &distDataRecepcao1
+	&distDataRecepcao_To1 = &distDataRecepcao_To1
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled3 = True
+	AddDynamicFilters2.Visible = False
+	RemoveDynamicFilters2.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled2 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector2.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event distDataEnvio_RangePicker2.DateRangeChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distDataEnvio2 = &distDataEnvio2
+	&distDataEnvio_To2 = &distDataEnvio_To2
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event distDataRecepcao_RangePicker2.DateRangeChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distDataRecepcao2 = &distDataRecepcao2
+	&distDataRecepcao_To2 = &distDataRecepcao_To2
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled3 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector3.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event distDataEnvio_RangePicker3.DateRangeChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distDataEnvio3 = &distDataEnvio3
+	&distDataEnvio_To3 = &distDataEnvio_To3
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event distDataRecepcao_RangePicker3.DateRangeChanged
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distDataRecepcao3 = &distDataRecepcao3
+	&distDataRecepcao_To3 = &distDataRecepcao_To3
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_ManageFilters.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Clean#>'
+			Do 'CleanFilters'
+			Grid.FirstPage()
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Save#>'
+			Do 'SaveGridState'
+			SaveFilterAs.Popup(!'trnsdistribuicaoWWFilters', &PgmName + !"GridState")
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Manage#>'
+			ManageFilters.Popup(!'trnsdistribuicaoWWFilters')
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Otherwise
+			&ManageFiltersXml = GetFilterByName(!'trnsdistribuicaoWWFilters', ddo_ManageFilters.ActiveEventKey)
+			If &ManageFiltersXml.IsEmpty()
+				msg('WWP_FilterNotExist')
+			Else
+				Do 'CleanFilters'
+				SaveGridState.Call(&PgmName + !"GridState",  &ManageFiltersXml)
+				&GridState.FromXml(&ManageFiltersXml)
+				&OrderedBy = &GridState.OrderedBy
+				&OrderedDsc = &GridState.OrderedDsc
+				Do 'SetDDOSortedStatus' 
+				Do 'LoadRegFiltersState'
+				Do 'LoadDynFiltersState'
+				Grid.FirstPage()
+			EndIf
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnPrint.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_btnPrint)
+		PRINTGuiaDistribuicao.PopUp(prefCodigo, distCodigo)
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnPrint2via.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_btnPrint2via)
+		PRINTGuiaDistribuicao2vias.PopUp(prefCodigo, distCodigo)
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnExcluirRemessa.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prefCodigo_Selected = prefCodigo
+	&distRemCodigo_Selected = distRemCodigo
+	DVelop_ConfirmPanel_btnExcluirRemessa.Confirm()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DVelop_ConfirmPanel_btnExcluirRemessa.Close
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If DVelop_ConfirmPanel_btnExcluirRemessa.Result = !'Yes'
+		Do 'Do btnExcluirRemessa'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoInsert'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		trnsdistribuicao.Call(TrnMode.Insert, nullvalue(prefCodigo), nullvalue(distCodigo))
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_AGExport.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_AGExport.ActiveEventKey = !'Export'
+			Do 'DoExport'
+		Case ddo_AGExport.ActiveEventKey = !'ExportReport'
+			Do 'DoExportReport'
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoUserAction1'
+
+	&distCodigo.Clear()
+	for each line in grid
+	    if &checkBox
+		   &distCodigo.Add( distCodigo )
+		endif
+	endFor
+
+    if &distCodigo.Count>0
+		&WWPContext.distcodigo.FromJson( &distCodigo.ToJson() )
+		setWWPContext(&WWPContext)
+	    novaAba.Target =  PRINTGuiaDistribuicaoMultiplas.Link(&prefCodigo )
+		novaAba.OpenWindow()
+	else
+		msg("Nenhuma guia foi selecionada !")
+    endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = &OrderedBy.ToString().Trim() + !':' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'InitializeColumnsSelector'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ColumnsSelector = new WWPColumnsSelector()
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distCodigo", '', !'Código', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distRemCodigo", '', !'Remessa', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distPeriodo", '', !'Período', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distLocalOrigem", '', !'Origem', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distDataEnvio", '', !'Envio', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distLocalDestino", '', !'Destino ', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distDataRecepcao", '', !'Recepção', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distRecebedor", '', !'Recebedor', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distRotaCodigo", '', !'Rota', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distReceber", '', !'Recebimento UE', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"distStatus", '', !'Situação', True, '')
+	WWP_ColumnsSelector_Add(&ColumnsSelector, !"&checkBox", '', !'Imprimir', True, '')
+		
+	&UserCustomValue = LoadColumnsSelectorState.Udp(!'trnsdistribuicaoWWColumnsSelector')
+	If not(&UserCustomValue.IsEmpty())
+		&ColumnsSelectorAux.FromXml(&UserCustomValue)
+		WWP_ColumnSelector_UpdateColumns(&ColumnsSelectorAux, &ColumnsSelector)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&IsAuthorized_Update = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsdistribuicaoww_Update')
+	If not (&IsAuthorized_Update)
+		&Update.Visible = False
+	Endif 
+	&IsAuthorized_btnItens = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnItens)
+		&btnItens.Visible = False
+	Endif 
+	&IsAuthorized_btnCancelar = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnCancelar)
+		&btnCancelar.Visible = False
+	Endif 
+	&IsAuthorized_btnPrint = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnPrint)
+		&btnPrint.Visible = False
+	Endif 
+	&IsAuthorized_btnPrint2via = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnPrint2via)
+		&btnPrint2via.Visible = False
+	Endif 
+	&IsAuthorized_Insert = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsdistribuicaoww_Insert')
+	If not (&IsAuthorized_Insert)
+		BtnInsert.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distCodigo1.Visible = False
+	&distRemCodigo1.Visible = False
+	TableMergedDynamicFiltersdistDataEnvio1.Visible = False
+	TableMergedDynamicFiltersdistDataRecepcao1.Visible = False
+	&distRotaCodigo1.Visible = False
+	&distPeriodo1.Visible = False
+	&distLocalOrigemNome1.Visible = False
+	&distLocalDestinoNome1.Visible = False
+	&distReceber1.Visible = False
+	&DynamicFiltersOperator1.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector1 = !'DISTCODIGO'
+		&distCodigo1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTREMCODIGO'
+		&distRemCodigo1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTDATAENVIO'
+		TableMergedDynamicFiltersdistDataEnvio1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTDATARECEPCAO'
+		TableMergedDynamicFiltersdistDataRecepcao1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTROTACODIGO'
+		&distRotaCodigo1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTPERIODO'
+		&distPeriodo1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTLOCALORIGEMNOME'
+		&distLocalOrigemNome1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTLOCALDESTINONOME'
+		&distLocalDestinoNome1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'DISTRECEBER'
+		&distReceber1.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distCodigo2.Visible = False
+	&distRemCodigo2.Visible = False
+	TableMergedDynamicFiltersdistDataEnvio2.Visible = False
+	TableMergedDynamicFiltersdistDataRecepcao2.Visible = False
+	&distRotaCodigo2.Visible = False
+	&distPeriodo2.Visible = False
+	&distLocalOrigemNome2.Visible = False
+	&distLocalDestinoNome2.Visible = False
+	&distReceber2.Visible = False
+	&DynamicFiltersOperator2.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector2 = !'DISTCODIGO'
+		&distCodigo2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTREMCODIGO'
+		&distRemCodigo2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTDATAENVIO'
+		TableMergedDynamicFiltersdistDataEnvio2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTDATARECEPCAO'
+		TableMergedDynamicFiltersdistDataRecepcao2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTROTACODIGO'
+		&distRotaCodigo2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTPERIODO'
+		&distPeriodo2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTLOCALORIGEMNOME'
+		&distLocalOrigemNome2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTLOCALDESTINONOME'
+		&distLocalDestinoNome2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'DISTRECEBER'
+		&distReceber2.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distCodigo3.Visible = False
+	&distRemCodigo3.Visible = False
+	TableMergedDynamicFiltersdistDataEnvio3.Visible = False
+	TableMergedDynamicFiltersdistDataRecepcao3.Visible = False
+	&distRotaCodigo3.Visible = False
+	&distPeriodo3.Visible = False
+	&distLocalOrigemNome3.Visible = False
+	&distLocalDestinoNome3.Visible = False
+	&distReceber3.Visible = False
+	&DynamicFiltersOperator3.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector3 = !'DISTCODIGO'
+		&distCodigo3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTREMCODIGO'
+		&distRemCodigo3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTDATAENVIO'
+		TableMergedDynamicFiltersdistDataEnvio3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTDATARECEPCAO'
+		TableMergedDynamicFiltersdistDataRecepcao3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTROTACODIGO'
+		&distRotaCodigo3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTPERIODO'
+		&distPeriodo3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTLOCALORIGEMNOME'
+		&distLocalOrigemNome3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTLOCALDESTINONOME'
+		&distLocalDestinoNome3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'DISTRECEBER'
+		&distReceber3.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'ResetDynFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = False
+	&DynamicFiltersSelector2 = !'DISTCODIGO'
+	&DynamicFiltersOperator2 = 0
+	&distCodigo2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	&DynamicFiltersEnabled3 = False
+	&DynamicFiltersSelector3 = !'DISTCODIGO'
+	&DynamicFiltersOperator3 = 0
+	&distCodigo3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadSavedFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ManageFiltersData = WWP_ManageFiltersLoadSavedFilters(!'trnsdistribuicaoWWFilters', !"WWPDynFilterHideAll_AL('%1', 3, 0)", TableDynamicFilters.InternalName, False)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CleanFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TFdistCodigo.SetEmpty()
+	&TFdistCodigo_To.SetEmpty()
+	&TFdistRemCodigo.SetEmpty()
+	&TFdistRemCodigo_To.SetEmpty()
+	&TFdistPeriodo.SetEmpty()
+	&TFdistPeriodo_Sel.SetEmpty()
+	&TFdistLocalOrigem.SetEmpty()
+	&TFdistLocalOrigem_Sel.SetEmpty()
+	&TFdistDataEnvio.SetEmpty()
+	&TFdistDataEnvio_To.SetEmpty()
+	&TFdistLocalDestino.SetEmpty()
+	&TFdistLocalDestino_Sel.SetEmpty()
+	&TFdistDataRecepcao.SetEmpty()
+	&TFdistDataRecepcao_To.SetEmpty()
+	&TFdistRecebedor.SetEmpty()
+	&TFdistRecebedor_Sel.SetEmpty()
+	&TFdistRotaCodigo.SetEmpty()
+	&TFdistRotaCodigo_Sel.SetEmpty()
+	&TFdistReceber_Sels = new()
+	&TFdistStatus_Sels = new()
+	DDO_Grid.SelectedValue_set = ''
+	DDO_Grid.FilteredText_set = ''
+	DDO_Grid.FilteredTextTo_set = ''
+
+	&DynamicFiltersSelector1 = !'DISTCODIGO'
+	&DynamicFiltersOperator1 = 0
+	&distCodigo1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+	Do 'ResetDynFilters'
+	&GridState.DynamicFilters.Clear()
+	Do 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'Do btnExcluirRemessa'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	PRCDRemessaZerar.Call(&prefCodigo_Selected, &distRemCodigo_Selected)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+
+	&OrderedBy = &GridState.OrderedBy
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+	Do 'LoadRegFiltersState'
+	Do 'LoadDynFiltersState'
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadRegFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"TFDISTCODIGO"
+				&TFdistCodigo.FromString(&GridStateFilterValue.Value)
+				&TFdistCodigo_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFDISTREMCODIGO"
+				&TFdistRemCodigo.FromString(&GridStateFilterValue.Value)
+				&TFdistRemCodigo_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFDISTPERIODO"
+				&TFdistPeriodo.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTPERIODO_SEL"
+				&TFdistPeriodo_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTLOCALORIGEM"
+				&TFdistLocalOrigem.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTLOCALORIGEM_SEL"
+				&TFdistLocalOrigem_Sel.FromString(&GridStateFilterValue.Value)
+					&TFdistLocalOrigem_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFDISTDATAENVIO"
+				&TFdistDataEnvio.FromString(&GridStateFilterValue.Value)
+				&TFdistDataEnvio_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFDISTLOCALDESTINO"
+				&TFdistLocalDestino.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTLOCALDESTINO_SEL"
+				&TFdistLocalDestino_Sel.FromString(&GridStateFilterValue.Value)
+					&TFdistLocalDestino_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFDISTDATARECEPCAO"
+				&TFdistDataRecepcao.FromString(&GridStateFilterValue.Value)
+				&TFdistDataRecepcao_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFDISTRECEBEDOR"
+				&TFdistRecebedor.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTRECEBEDOR_SEL"
+				&TFdistRecebedor_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTROTACODIGO"
+				&TFdistRotaCodigo.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTROTACODIGO_SEL"
+				&TFdistRotaCodigo_Sel.FromString(&GridStateFilterValue.Value)
+					&TFdistRotaCodigo_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFDISTRECEBER_SEL"
+				&TFdistReceber_SelsJson = &GridStateFilterValue.Value
+				&TFdistReceber_Sels.FromJson(&TFdistReceber_SelsJson)
+			Case &GridStateFilterValue.Name = !"TFDISTSTATUS_SEL"
+				&TFdistStatus_SelsJson = &GridStateFilterValue.Value
+				&TFdistStatus_Sels.FromJson(&TFdistStatus_SelsJson)
+		EndCase
+	EndFor
+	DDO_Grid.SelectedText_set = !'|||' + iif(&TFdistLocalOrigem_Sel.IsEmpty(), '', &TFdistLocalOrigem_SelDsc) + !'||' + iif(&TFdistLocalDestino_Sel.IsEmpty(), '', &TFdistLocalDestino_SelDsc) + !'|||' + iif(&TFdistRotaCodigo_Sel.IsEmpty(), '', &TFdistRotaCodigo_SelDsc) + !'|||'
+	DDO_Grid.SelectedValue_set = !'||' + WWP_GetFilterVal(&TFdistPeriodo_Sel.IsEmpty(), &TFdistPeriodo_Sel) + !'|' + iif(&TFdistLocalOrigem_Sel.IsEmpty(), '', &TFdistLocalOrigem_Sel.ToString()) + !'||' + iif(&TFdistLocalDestino_Sel.IsEmpty(), '', &TFdistLocalDestino_Sel.ToString()) + !'||' + WWP_GetFilterVal(&TFdistRecebedor_Sel.IsEmpty(), &TFdistRecebedor_Sel) + !'|' + iif(&TFdistRotaCodigo_Sel.IsEmpty(), '', &TFdistRotaCodigo_Sel.ToString()) + !'|' + WWP_GetFilterVal(&TFdistReceber_Sels.Count = 0, &TFdistReceber_SelsJson) + !'|' + WWP_GetFilterVal(&TFdistStatus_Sels.Count = 0, &TFdistStatus_SelsJson) + !'|'
+	DDO_Grid.FilteredText_set = iif(&TFdistCodigo.IsEmpty(), '', &TFdistCodigo.ToString()) + !'|' + iif(&TFdistRemCodigo.IsEmpty(), '', &TFdistRemCodigo.ToString()) + !'|' + WWP_GetFilterVal(&TFdistPeriodo.IsEmpty(), &TFdistPeriodo) + !'|' + WWP_GetFilterVal(&TFdistLocalOrigem.IsEmpty(), &TFdistLocalOrigem) + !'|' + iif(&TFdistDataEnvio.IsEmpty(), '', &TFdistDataEnvio.ToString()) + !'|' + WWP_GetFilterVal(&TFdistLocalDestino.IsEmpty(), &TFdistLocalDestino) + !'|' + iif(&TFdistDataRecepcao.IsEmpty(), '', &TFdistDataRecepcao.ToString()) + !'|' + WWP_GetFilterVal(&TFdistRecebedor.IsEmpty(), &TFdistRecebedor) + !'|' + WWP_GetFilterVal(&TFdistRotaCodigo.IsEmpty(), &TFdistRotaCodigo) + !'|||'
+	DDO_Grid.FilteredTextTo_set = iif(&TFdistCodigo_To.IsEmpty(), '', &TFdistCodigo_To.ToString()) + !'|' + iif(&TFdistRemCodigo_To.IsEmpty(), '', &TFdistRemCodigo_To.ToString()) + !'|||' + iif(&TFdistDataEnvio_To.IsEmpty(), '', &TFdistDataEnvio_To.ToString()) + !'||' + iif(&TFdistDataRecepcao_To.IsEmpty(), '', &TFdistDataRecepcao_To.ToString()) + !'|||||'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	AddDynamicFilters1.Visible = True
+	RemoveDynamicFilters1.Visible = False
+	AddDynamicFilters2.Visible = True
+	RemoveDynamicFilters2.Visible = False
+
+	If &GridState.DynamicFilters.Count >= 1
+		&GridStateDynamicFilter = &GridState.DynamicFilters.Item(1)
+		&DynamicFiltersSelector1 = &GridStateDynamicFilter.Selected
+		Do Case
+			Case &DynamicFiltersSelector1 = !'DISTCODIGO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distCodigo1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'DISTREMCODIGO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distRemCodigo1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'DISTDATAENVIO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distDataEnvio1.FromString(&GridStateDynamicFilter.Value)
+				&distDataEnvio_To1.FromString(&GridStateDynamicFilter.ValueTo)
+			Case &DynamicFiltersSelector1 = !'DISTDATARECEPCAO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distDataRecepcao1.FromString(&GridStateDynamicFilter.Value)
+				&distDataRecepcao_To1.FromString(&GridStateDynamicFilter.ValueTo)
+			Case &DynamicFiltersSelector1 = !'DISTROTACODIGO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distRotaCodigo1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'DISTPERIODO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distPeriodo1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'DISTLOCALORIGEMNOME'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distLocalOrigemNome1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'DISTLOCALDESTINONOME'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&distLocalDestinoNome1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'DISTRECEBER'
+				&distReceber1.FromString(&GridStateDynamicFilter.Value)
+		EndCase
+		Do 'EnableDynamicFilters1'
+			If &GridState.DynamicFilters.Count >= 2
+				JSDynamicFilters.Caption = !'<script type="text/javascript">$(document).ready(function() {'
+				JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 2, 0);", TableDynamicFilters.InternalName)
+				AddDynamicFilters1.Visible = False
+				RemoveDynamicFilters1.Visible = True
+				&DynamicFiltersEnabled2 = True
+				&GridStateDynamicFilter = &GridState.DynamicFilters.Item(2)
+				&DynamicFiltersSelector2 = &GridStateDynamicFilter.Selected
+				Do Case
+					Case &DynamicFiltersSelector2 = !'DISTCODIGO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distCodigo2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'DISTREMCODIGO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distRemCodigo2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'DISTDATAENVIO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distDataEnvio2.FromString(&GridStateDynamicFilter.Value)
+						&distDataEnvio_To2.FromString(&GridStateDynamicFilter.ValueTo)
+					Case &DynamicFiltersSelector2 = !'DISTDATARECEPCAO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distDataRecepcao2.FromString(&GridStateDynamicFilter.Value)
+						&distDataRecepcao_To2.FromString(&GridStateDynamicFilter.ValueTo)
+					Case &DynamicFiltersSelector2 = !'DISTROTACODIGO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distRotaCodigo2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'DISTPERIODO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distPeriodo2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'DISTLOCALORIGEMNOME'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distLocalOrigemNome2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'DISTLOCALDESTINONOME'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&distLocalDestinoNome2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'DISTRECEBER'
+						&distReceber2.FromString(&GridStateDynamicFilter.Value)
+				EndCase
+				Do 'EnableDynamicFilters2'
+				If &GridState.DynamicFilters.Count >= 3
+					JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 3, 0);", TableDynamicFilters.InternalName)
+					AddDynamicFilters2.Visible = False
+					RemoveDynamicFilters2.Visible = True
+					&DynamicFiltersEnabled3 = True
+					&GridStateDynamicFilter = &GridState.DynamicFilters.Item(3)
+					&DynamicFiltersSelector3 = &GridStateDynamicFilter.Selected
+					Do Case
+						Case &DynamicFiltersSelector3 = !'DISTCODIGO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distCodigo3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'DISTREMCODIGO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distRemCodigo3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'DISTDATAENVIO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distDataEnvio3.FromString(&GridStateDynamicFilter.Value)
+							&distDataEnvio_To3.FromString(&GridStateDynamicFilter.ValueTo)
+						Case &DynamicFiltersSelector3 = !'DISTDATARECEPCAO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distDataRecepcao3.FromString(&GridStateDynamicFilter.Value)
+							&distDataRecepcao_To3.FromString(&GridStateDynamicFilter.ValueTo)
+						Case &DynamicFiltersSelector3 = !'DISTROTACODIGO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distRotaCodigo3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'DISTPERIODO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distPeriodo3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'DISTLOCALORIGEMNOME'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distLocalOrigemNome3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'DISTLOCALDESTINONOME'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&distLocalDestinoNome3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'DISTRECEBER'
+							&distReceber3.FromString(&GridStateDynamicFilter.Value)
+					EndCase
+					Do 'EnableDynamicFilters3'
+				EndIf
+				JSDynamicFilters.Caption += !'});</script>'
+			EndIf
+	EndIf
+	If &DynamicFiltersRemoving
+		JSDynamicFilters.Caption = ''
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedBy = &OrderedBy
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTCODIGO", "Código", not (&TFdistCodigo.IsEmpty() AND &TFdistCodigo_To.IsEmpty()), 0, &TFdistCodigo.ToString().Trim(), iif(&TFdistCodigo.IsEmpty(), '', trim(&TFdistCodigo.ToFormattedString())), True, &TFdistCodigo_To.ToString().Trim(), iif(&TFdistCodigo_To.IsEmpty(), '', trim(&TFdistCodigo_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTREMCODIGO", "Remessa", not (&TFdistRemCodigo.IsEmpty() AND &TFdistRemCodigo_To.IsEmpty()), 0, &TFdistRemCodigo.ToString().Trim(), iif(&TFdistRemCodigo.IsEmpty(), '', trim(&TFdistRemCodigo.ToFormattedString())), True, &TFdistRemCodigo_To.ToString().Trim(), iif(&TFdistRemCodigo_To.IsEmpty(), '', trim(&TFdistRemCodigo_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTPERIODO", "Período", not &TFdistPeriodo.IsEmpty(), 0, &TFdistPeriodo, &TFdistPeriodo, False, '', '', not &TFdistPeriodo_Sel.IsEmpty(), &TFdistPeriodo_Sel, &TFdistPeriodo_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTLOCALORIGEM", "Origem", not &TFdistLocalOrigem.IsEmpty(), 0, &TFdistLocalOrigem.ToString().Trim(), trim(&TFdistLocalOrigem.ToFormattedString()), False, '', '', not &TFdistLocalOrigem_Sel.IsEmpty(), &TFdistLocalOrigem_Sel.ToString().Trim(), &TFdistLocalOrigem_SelDsc)
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTDATAENVIO", "Envio", not (&TFdistDataEnvio.IsEmpty() AND &TFdistDataEnvio_To.IsEmpty()), 0, &TFdistDataEnvio.ToString().Trim(), iif(&TFdistDataEnvio.IsEmpty(), '', trim(&TFdistDataEnvio.ToFormattedString())), True, &TFdistDataEnvio_To.ToString().Trim(), iif(&TFdistDataEnvio_To.IsEmpty(), '', trim(&TFdistDataEnvio_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTLOCALDESTINO", "Destino ", not &TFdistLocalDestino.IsEmpty(), 0, &TFdistLocalDestino.ToString().Trim(), trim(&TFdistLocalDestino.ToFormattedString()), False, '', '', not &TFdistLocalDestino_Sel.IsEmpty(), &TFdistLocalDestino_Sel.ToString().Trim(), &TFdistLocalDestino_SelDsc)
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTDATARECEPCAO", "Recepção", not (&TFdistDataRecepcao.IsEmpty() AND &TFdistDataRecepcao_To.IsEmpty()), 0, &TFdistDataRecepcao.ToString().Trim(), iif(&TFdistDataRecepcao.IsEmpty(), '', trim(&TFdistDataRecepcao.ToFormattedString())), True, &TFdistDataRecepcao_To.ToString().Trim(), iif(&TFdistDataRecepcao_To.IsEmpty(), '', trim(&TFdistDataRecepcao_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTRECEBEDOR", "Recebedor", not &TFdistRecebedor.IsEmpty(), 0, &TFdistRecebedor, &TFdistRecebedor, False, '', '', not &TFdistRecebedor_Sel.IsEmpty(), &TFdistRecebedor_Sel, &TFdistRecebedor_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTROTACODIGO", "Rota", not &TFdistRotaCodigo.IsEmpty(), 0, &TFdistRotaCodigo.ToString().Trim(), trim(&TFdistRotaCodigo.ToFormattedString()), False, '', '', not &TFdistRotaCodigo_Sel.IsEmpty(), &TFdistRotaCodigo_Sel.ToString().Trim(), &TFdistRotaCodigo_SelDsc)
+	&AuxText = iif(&TFdistReceber_Sels.Count = 1, !'[' + &TFdistReceber_Sels.Item(1) + !']', 'WWP_FilterValueDescription_MultipleValues')
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTRECEBER_SEL", "Recebimento UE", not &TFdistReceber_Sels.Count = 0, 0, &TFdistReceber_Sels.ToJson(), iif(&AuxText = '', '', &AuxText.Replace(!"[S]", "Recebido").Replace(!"[N]", "Aguardando")), False, '', '')
+	&AuxText = iif(&TFdistStatus_Sels.Count = 1, !'[' + &TFdistStatus_Sels.Item(1) + !']', 'WWP_FilterValueDescription_MultipleValues')
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTSTATUS_SEL", "Situação", not &TFdistStatus_Sels.Count = 0, 0, &TFdistStatus_Sels.ToJson(), iif(&AuxText = '', '', &AuxText.Replace(!"[A]", "Ativo").Replace(!"[I]", "Inativo").Replace(!"[C]", "Cancelada")), False, '', '')
+
+	Do 'SaveDynFiltersState'
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.DynamicFilters.Clear()
+	If not &DynamicFiltersIgnoreFirst
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector1
+		Do Case
+			Case &DynamicFiltersSelector1 = !'DISTCODIGO' AND not &distCodigo1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator1, &distCodigo1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "=" + !' ' + trim(&distCodigo1.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector1 = !'DISTREMCODIGO' AND not &distRemCodigo1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Remessa Código", &DynamicFiltersOperator1, &distRemCodigo1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "=" + !' ' + trim(&distRemCodigo1.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector1 = !'DISTDATAENVIO' AND not (&distDataEnvio1.IsEmpty() AND &distDataEnvio_To1.IsEmpty())
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período de Envio", &DynamicFiltersOperator1, &distDataEnvio1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterRange" + !' ' + trim(&distDataEnvio1.ToFormattedString())), &DynamicFiltersOperator1 = 0, &distDataEnvio_To1.ToString().Trim(), iif(&distDataEnvio_To1.IsEmpty(), '', trim(&distDataEnvio_To1.ToFormattedString())))
+			Case &DynamicFiltersSelector1 = !'DISTDATARECEPCAO' AND not (&distDataRecepcao1.IsEmpty() AND &distDataRecepcao_To1.IsEmpty())
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período da Recepção", &DynamicFiltersOperator1, &distDataRecepcao1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterRange" + !' ' + trim(&distDataRecepcao1.ToFormattedString())), &DynamicFiltersOperator1 = 0, &distDataRecepcao_To1.ToString().Trim(), iif(&distDataRecepcao_To1.IsEmpty(), '', trim(&distDataRecepcao_To1.ToFormattedString())))
+			Case &DynamicFiltersSelector1 = !'DISTROTACODIGO' AND not &distRotaCodigo1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Rota", &DynamicFiltersOperator1, &distRotaCodigo1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "=" + !' ' + trim(&distRotaCodigo1.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector1 = !'DISTPERIODO' AND not &distPeriodo1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período", &DynamicFiltersOperator1, &distPeriodo1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &distPeriodo1, "WWP_FilterContains" + !' ' + &distPeriodo1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'DISTLOCALORIGEMNOME' AND not &distLocalOrigemNome1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Origem", &DynamicFiltersOperator1, &distLocalOrigemNome1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterContains" + !' ' + &distLocalOrigemNome1, "WWP_FilterLike" + !' ' + &distLocalOrigemNome1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'DISTLOCALDESTINONOME' AND not &distLocalDestinoNome1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Destino", &DynamicFiltersOperator1, &distLocalDestinoNome1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterContains" + !' ' + &distLocalDestinoNome1, "WWP_FilterLike" + !' ' + &distLocalDestinoNome1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'DISTRECEBER' AND not &distReceber1.IsEmpty()
+				&AuxText = !'[' + &distReceber1 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Receber", 0, &distReceber1, &AuxText.Replace(!"[S]", "Recebido").Replace(!"[N]", "Aguardando"), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty() OR not &GridStateDynamicFilter.ValueTo.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled2
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector2
+		Do Case
+			Case &DynamicFiltersSelector2 = !'DISTCODIGO' AND not &distCodigo2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator2, &distCodigo2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "=" + !' ' + trim(&distCodigo2.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector2 = !'DISTREMCODIGO' AND not &distRemCodigo2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Remessa Código", &DynamicFiltersOperator2, &distRemCodigo2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "=" + !' ' + trim(&distRemCodigo2.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector2 = !'DISTDATAENVIO' AND not (&distDataEnvio2.IsEmpty() AND &distDataEnvio_To2.IsEmpty())
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período de Envio", &DynamicFiltersOperator2, &distDataEnvio2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterRange" + !' ' + trim(&distDataEnvio2.ToFormattedString())), &DynamicFiltersOperator2 = 0, &distDataEnvio_To2.ToString().Trim(), iif(&distDataEnvio_To2.IsEmpty(), '', trim(&distDataEnvio_To2.ToFormattedString())))
+			Case &DynamicFiltersSelector2 = !'DISTDATARECEPCAO' AND not (&distDataRecepcao2.IsEmpty() AND &distDataRecepcao_To2.IsEmpty())
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período da Recepção", &DynamicFiltersOperator2, &distDataRecepcao2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterRange" + !' ' + trim(&distDataRecepcao2.ToFormattedString())), &DynamicFiltersOperator2 = 0, &distDataRecepcao_To2.ToString().Trim(), iif(&distDataRecepcao_To2.IsEmpty(), '', trim(&distDataRecepcao_To2.ToFormattedString())))
+			Case &DynamicFiltersSelector2 = !'DISTROTACODIGO' AND not &distRotaCodigo2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Rota", &DynamicFiltersOperator2, &distRotaCodigo2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "=" + !' ' + trim(&distRotaCodigo2.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector2 = !'DISTPERIODO' AND not &distPeriodo2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período", &DynamicFiltersOperator2, &distPeriodo2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &distPeriodo2, "WWP_FilterContains" + !' ' + &distPeriodo2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'DISTLOCALORIGEMNOME' AND not &distLocalOrigemNome2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Origem", &DynamicFiltersOperator2, &distLocalOrigemNome2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterContains" + !' ' + &distLocalOrigemNome2, "WWP_FilterLike" + !' ' + &distLocalOrigemNome2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'DISTLOCALDESTINONOME' AND not &distLocalDestinoNome2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Destino", &DynamicFiltersOperator2, &distLocalDestinoNome2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterContains" + !' ' + &distLocalDestinoNome2, "WWP_FilterLike" + !' ' + &distLocalDestinoNome2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'DISTRECEBER' AND not &distReceber2.IsEmpty()
+				&AuxText = !'[' + &distReceber2 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Receber", 0, &distReceber2, &AuxText.Replace(!"[S]", "Recebido").Replace(!"[N]", "Aguardando"), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty() OR not &GridStateDynamicFilter.ValueTo.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled3
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector3
+		Do Case
+			Case &DynamicFiltersSelector3 = !'DISTCODIGO' AND not &distCodigo3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator3, &distCodigo3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "=" + !' ' + trim(&distCodigo3.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector3 = !'DISTREMCODIGO' AND not &distRemCodigo3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Remessa Código", &DynamicFiltersOperator3, &distRemCodigo3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "=" + !' ' + trim(&distRemCodigo3.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector3 = !'DISTDATAENVIO' AND not (&distDataEnvio3.IsEmpty() AND &distDataEnvio_To3.IsEmpty())
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período de Envio", &DynamicFiltersOperator3, &distDataEnvio3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterRange" + !' ' + trim(&distDataEnvio3.ToFormattedString())), &DynamicFiltersOperator3 = 0, &distDataEnvio_To3.ToString().Trim(), iif(&distDataEnvio_To3.IsEmpty(), '', trim(&distDataEnvio_To3.ToFormattedString())))
+			Case &DynamicFiltersSelector3 = !'DISTDATARECEPCAO' AND not (&distDataRecepcao3.IsEmpty() AND &distDataRecepcao_To3.IsEmpty())
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período da Recepção", &DynamicFiltersOperator3, &distDataRecepcao3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterRange" + !' ' + trim(&distDataRecepcao3.ToFormattedString())), &DynamicFiltersOperator3 = 0, &distDataRecepcao_To3.ToString().Trim(), iif(&distDataRecepcao_To3.IsEmpty(), '', trim(&distDataRecepcao_To3.ToFormattedString())))
+			Case &DynamicFiltersSelector3 = !'DISTROTACODIGO' AND not &distRotaCodigo3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Rota", &DynamicFiltersOperator3, &distRotaCodigo3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "=" + !' ' + trim(&distRotaCodigo3.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector3 = !'DISTPERIODO' AND not &distPeriodo3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Período", &DynamicFiltersOperator3, &distPeriodo3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &distPeriodo3, "WWP_FilterContains" + !' ' + &distPeriodo3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'DISTLOCALORIGEMNOME' AND not &distLocalOrigemNome3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Origem", &DynamicFiltersOperator3, &distLocalOrigemNome3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterContains" + !' ' + &distLocalOrigemNome3, "WWP_FilterLike" + !' ' + &distLocalOrigemNome3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'DISTLOCALDESTINONOME' AND not &distLocalDestinoNome3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Destino", &DynamicFiltersOperator3, &distLocalDestinoNome3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterContains" + !' ' + &distLocalDestinoNome3, "WWP_FilterLike" + !' ' + &distLocalDestinoNome3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'DISTRECEBER' AND not &distReceber3.IsEmpty()
+				&AuxText = !'[' + &distReceber3 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Receber", 0, &distReceber3, &AuxText.Replace(!"[S]", "Recebido").Replace(!"[N]", "Aguardando"), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty() OR not &GridStateDynamicFilter.ValueTo.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"trnsdistribuicao"
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate Excel spreadsheet and download it.
+	Do 'LoadGridState'
+	trnsdistribuicaoWWExport.Call(&ExcelFilename, &ErrorMessage)
+	If (&ExcelFilename <> "")
+		Link(&ExcelFilename)
+	Else
+		msg(&ErrorMessage)
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExportReport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate PDF file.
+	Do 'LoadGridState'
+	InNewWindow1.Target = trnsdistribuicaoWWExportReport.Link()
+	InNewWindow1.Height = !'600'
+	InNewWindow1.Width = !'800'
+	InNewWindow1.OpenWindow()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+prefCodigo = &prefCodigo;
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateDynamicFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateDynamicFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.DynamicFilter, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedByAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedByAux</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Código:DISTCODIGO,Remessa Código:DISTREMCODIGO,Período de Envio:DISTDATAENVIO,Período da Recepção:DISTDATARECEPCAO,Rota:DISTROTACODIGO,Período:DISTPERIODO,Origem:DISTLOCALORIGEMNOME,Destino:DISTLOCALDESTINONOME,Receber:DISTRECEBER</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator1</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>=:0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio_To1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio_To1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Código:DISTCODIGO,Remessa Código:DISTREMCODIGO,Período de Envio:DISTDATAENVIO,Período da Recepção:DISTDATARECEPCAO,Rota:DISTROTACODIGO,Período:DISTPERIODO,Origem:DISTLOCALORIGEMNOME,Destino:DISTLOCALDESTINONOME,Receber:DISTRECEBER</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator2</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>=:0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio_To2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio_To2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Código:DISTCODIGO,Remessa Código:DISTREMCODIGO,Período de Envio:DISTDATAENVIO,Período da Recepção:DISTDATARECEPCAO,Rota:DISTROTACODIGO,Período:DISTPERIODO,Origem:DISTLOCALORIGEMNOME,Destino:DISTLOCALDESTINONOME,Receber:DISTRECEBER</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator3</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>=:0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio_To3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio_To3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersRemoving">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersRemoving</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersIgnoreFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersIgnoreFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelFilename">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelFilename</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>512</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>512</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorXML">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorXML</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserCustomValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserCustomValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelector">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelector</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorAux</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersXml">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersXml</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersExecutionStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersExecutionStep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistDataEnvio">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistDataEnvio_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistDataEnvio_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataEnvio</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distDataEnvioAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distDataEnvioAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distDataEnvioAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distDataEnvioAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distDataEnvioAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distDataEnvioAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalOrigem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalOrigem</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalOrigem_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalOrigem_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistDataRecepcao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistDataRecepcao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistDataRecepcao_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistDataRecepcao_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distDataRecepcaoAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distDataRecepcaoAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distDataRecepcaoAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distDataRecepcaoAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distDataRecepcaoAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distDataRecepcaoAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalDestino">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalDestino</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalDestino_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalDestino_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistStatus_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistStatus_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistStatus_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistStatus_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distStatus</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportDataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportDataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio_RangeText1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio_RangeText1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio_RangeText2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio_RangeText2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataEnvio_RangeText3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataEnvio_RangeText3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao_To1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao_To1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigem1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigem1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestino1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestino1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao_To2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao_To2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigem2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigem2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestino2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestino2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao_To3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao_To3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDataRecepcao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigem3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigem3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestino3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestino3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRecebedor">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRecebedor</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRecebedor</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRecebedor_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRecebedor_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRecebedor</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnItens">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnItens</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao_RangeText1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao_RangeText1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao_RangeText2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao_RangeText2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distDataRecepcao_RangeText3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distDataRecepcao_RangeText3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Insert">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Insert</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalOrigem_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalOrigem_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigem</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalDestino_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalDestino_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestino</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalOrigem_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalOrigem_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistLocalDestino_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistLocalDestino_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnPrint">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnPrint</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRotaCodigo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRotaCodigo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRotaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRotaCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRotaCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRotaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRotaCodigo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRotaCodigo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRotaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRotaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:rotaDescricao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRotaCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRotaCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRemCodigo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRemCodigo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRemCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRemCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRemCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRemCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRemCodigo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRemCodigo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRemCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRemCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRemCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRemCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRemCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRemCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRemCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRotaCodigo_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRotaCodigo_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistRotaCodigo_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistRotaCodigo_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distPeriodo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distPeriodo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distPeriodo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distPeriodo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distPeriodo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distPeriodo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distPeriodo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distPeriodo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distPeriodo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistPeriodo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistPeriodo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distPeriodo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistPeriodo_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistPeriodo_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distPeriodo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnCancelar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnCancelar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnItens">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnItens</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnCancelar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnCancelar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnPrint">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnPrint</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuxText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuxText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Websession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Websession</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnExcluirRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnExcluirRemessa</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Selected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Selected</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distRemCodigo_Selected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distRemCodigo_Selected</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distRemCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnPrint2via">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnPrint2via</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnPrint2via">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnPrint2via</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigemNome1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigemNome1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigemNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestinoNome1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestinoNome1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestinoNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigemNome2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigemNome2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigemNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestinoNome2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestinoNome2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestinoNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalOrigemNome3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalOrigemNome3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalOrigemNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distLocalDestinoNome3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distLocalDestinoNome3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distLocalDestinoNome</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distReceber1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distReceber1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distReceber</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distReceber2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distReceber2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distReceber</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distReceber3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distReceber3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distReceber</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistReceber_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistReceber_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistReceber_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistReceber_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distReceber</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="checkBox">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>checkBox</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="listImpressao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>listImpressao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>2000</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2000</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicaoWW</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Listagem de Distribuição</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsdistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>Selection</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

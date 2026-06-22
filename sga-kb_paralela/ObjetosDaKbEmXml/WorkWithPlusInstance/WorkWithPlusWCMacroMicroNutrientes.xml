@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="fca6b14c-13b8-448b-9feb-2fe623c36642" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:39:57.0000000Z" checksum="04ced364e86acf86df206088e6cbdd9f" fullyQualifiedName="WorkWithPlusWCMacroMicroNutrientes" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fbb5e9dc-4544-0c10-2be3-29d10139f93f" name="WorkWithPlusWCMacroMicroNutrientes" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WCMacro Micro Nutrientes" parent="WCMacroMicroNutrientes" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WCMacroMicroNutrientes" defaultSecFuntionKey="WCMacroMicroNutrientes" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <variable name="totalAtendimentoNormal" description="Total de Atendimento  :" defaultDescription="Total de Atendimento  :" dataType="Basic" defaultDataType="Basic" descriptionWidth="17%" defaultDescriptionWidth="17%" readOnly="True" defaultReadOnly="True" />
+        <grid includePaginationBar="False" name="GridSDTNutrientess" page="&lt;unlimited&gt;" pagingType="One page at a time" SDTCollection="&amp;SDTNutrientes">
+          <gridVariable name="SDTNutrientes" description="Nutriente" defaultDescription="Nutriente" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTNutrientes" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTNutrientes" sdtItem="item(0).Nutriente" defaultSdtItem="item(0).Nutriente" />
+          <gridVariable name="SDTNutrientes" description="Unidade" defaultDescription="unidade" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTNutrientes" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTNutrientes" sdtItem="item(0).unidade" defaultSdtItem="item(0).unidade" />
+          <gridVariable name="SDTNutrientes" description="Valor" defaultDescription="valor" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTNutrientes" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTNutrientes" sdtItem="item(0).valor" defaultSdtItem="item(0).valor" />
+        </grid>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWCMacroMicroNutrientes</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WCMacroMicroNutrientes</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

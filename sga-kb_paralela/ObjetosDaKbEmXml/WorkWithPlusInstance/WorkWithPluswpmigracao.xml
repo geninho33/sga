@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="fced583a-7c0f-42a7-b8e7-16797d245843" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-10-30T01:51:23.0000000Z" checksum="992c73c7ef4809f46b5e18d8a50a233d" fullyQualifiedName="WorkWithPluswpmigracao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="fbfe00aa-2af3-0a3c-0cef-104e5fdec73e" name="WorkWithPluswpmigracao" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Pluswpmigracao" parent="wpmigracao" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="wpmigracao" defaultSecFuntionKey="wpmigracao" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table name="cPainel" numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Migração de Dados">
+        <userAction caption="Migrar Pratos para Cardápios" name="btnMigrarPratos" cellVisible_E="True" cellVisible_S="True" cellVisible_M="True" cellVisible_L="True" />
+        <userAction caption="Atualizar Tipo de Movimentação" name="btnAtualizaTipo" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRCDAtualizarTipoMovimentacao" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" mergeWithPrevious="False" />
+        <userAction caption="Ajuste de Saldo" name="btnAjusteMovimentacao" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRCDAjustarSaldo" cellVisible_E="True" cellVisible_S="True" cellVisible_M="True" cellVisible_L="True" mergeWithPrevious="True" />
+        <grid includePaginationBar="False" name="GridSDTCardapios" page="&lt;unlimited&gt;" SDTCollection="&amp;SDTCardapio">
+          <gridVariable name="SDTCardapio" description="Código" defaultDescription="Código" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapio" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapio" sdtItem="item(0).carDapCodigo" defaultSdtItem="item(0).carDapCodigo" />
+          <gridVariable name="SDTCardapio" description="Descrição" defaultDescription="Descrição" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapio" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapio" sdtItem="item(0).carDapDescricao" defaultSdtItem="item(0).carDapDescricao" />
+          <gridVariable name="SDTCardapio" description="Mês e Ano" defaultDescription="Mês e Ano" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapio" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTCardapio" sdtItem="item(0).carDapMesAno" defaultSdtItem="item(0).carDapMesAno" />
+        </grid>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPluswpmigracao</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-wpmigracao</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

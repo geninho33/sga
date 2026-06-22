@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="da2bbf54-ab54-4d23-bae5-cddd3d944e1c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-05T23:45:46.0000000Z" checksum="a746a1b988742baa7f9863261c7189da" fullyQualifiedName="SDTComposicaoRefeicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="1b7e0920-27dd-403e-91ef-7a3bbc536220" name="SDTComposicaoRefeicao" type="447527b5-9210-4523-898b-5dccb17be60a" description="Composição de Refeição" parent="SDT" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="5c2aa9da-8fc4-4b6b-ae02-8db4fa48976a">
+    <Level Name="SDTComposicaoRefeicao">
+      <LevelInfo guid="68017954-1cc4-4e1c-87e4-7c95c330dc6f" name="SDTComposicaoRefeicao" type="a76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="SDTComposicao Refeicao" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>SDTComposicaoRefeicao</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+          <Property>
+            <Name>idCollectionItemName</Name>
+            <Value>refeicao</Value>
+          </Property>
+        </Properties>
+      </LevelInfo>
+      <Item guid="93006b5c-cff3-42fe-9cb2-d8cfd7999779" name="pratoCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Código</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="0e2afdad-c2e6-4194-825a-4ba90cf152d9" name="carDapDescricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Cardápio" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapDescricao</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Cardápio</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapDescricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="01b3c49e-eecd-4895-828f-84ba2086f550" name="pratoDscricao" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Nome" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoDscricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoDscricao</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="5ab0f36a-85f6-4055-b42f-a0b7989c6996" name="carPratoData" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Data" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="b4b21931-1b2b-447a-96b1-8e08b2c4de5a" name="carPratoHorario" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Horário Sugerido" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoHorario</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoHorario</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="446ec517-d697-4073-9dd2-4c057dfd1dc7" name="AreEnsNome" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Nome" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="da6761c3-06d8-41fa-82f6-065954b14542" name="AreEnsEtapaNome" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Nome Etapa" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsEtapaNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="4dd39fb5-b4e1-4e17-adc0-a0517c0f2b2e" name="perCapta" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="per Capta" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>perCapta</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Domain:PerCapta</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="a6ce7437-2a1b-4151-b1e1-96f7941350c2" name="AreEnsCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Área de Ensino" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Área de Ensino</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="aee99c3e-afbc-49be-93a0-531df09fe68f" name="AreEnsSequencial" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Sequencial" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsSequencial</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Sequencial</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsSequencial</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="e7a894e3-cc42-4cb0-8389-b4f7e39058b0" name="prodCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prodCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+      <Item guid="6217147b-5f9e-434e-985f-a9f0ad251608" name="carDapCodigo" type="f76e9340-bdb9-445d-8f81-cfd4ddd0b0f3" description="Código" user="">
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapCodigo</Value>
+          </Property>
+        </Properties>
+      </Item>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>SDTComposicaoRefeicao</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Composição de Refeição</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

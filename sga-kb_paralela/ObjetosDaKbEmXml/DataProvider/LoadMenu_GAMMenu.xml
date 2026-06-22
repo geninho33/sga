@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="159fad11-329d-4b0f-ab38-2a38d2f35f3d" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-21T20:56:42.0000000Z" checksum="4287eeab66cb4f66bdfcb617321623fa" fullyQualifiedName="WWPBaseObjects.LoadMenu_GAMMenu" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="6bbaa656-e969-492f-b828-393a5e67d643" name="LoadMenu_GAMMenu" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Load Menu_GAMMenu" parent="WWPBaseObjects.MenuData" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[
+DVelop_Menu 
+{
+	&GAMApplication = GAMApplication.Get() 
+	&MinMenuIdAux = &MinMenuId
+	Item Input &GAMMenuItem in &GAMMenu
+	{
+		&MinMenuIdAux = &MinMenuIdAux + 1
+		id = &MinMenuIdAux.ToString().Trim()
+		link = &GAMMenuItem.Link
+		
+		iconClass = &GAMMenuItem.Properties.Item(1).Value if &GAMMenuItem.Properties.Count > 0; "menu-icon fa fa-bullseye" if &MenuId > 0 and &GAMMenuItem.Properties.Count = 0; "" otherwise;
+		linkTarget = &GAMMenuItem.Properties.Item(2).Value.Trim() if &GAMMenuItem.Properties.Count > 0; "" otherwise;
+		
+		caption = &GAMMenuItem.Name
+		subItems =  WWPBaseObjects.LoadMenu_GAMMenu(&GAMMenuItem.Nodes, 0, &MinMenuIdAux * 100)
+		
+	}
+	
+//	Item
+//	where &MenuId > 0
+//	{
+//		&MinMenuIdAux = &MinMenuIdAux + 1
+//		id = &MinMenuIdAux.ToString().Trim()
+//		tooltip = ""
+//		link = GAMWWAppMenuOptions.Link(&GAMApplication.Id, &GAMApplication.MainMenuId)
+//		linkTarget ="" 
+//		iconClass = !"menu-icon fa fa-tasks"
+//		caption = !"Edit Menu Options" 
+//	}
+	
+//	Item
+//	where &MenuId > 0
+//	{
+//		&MinMenuIdAux = &MinMenuIdAux + 1
+//		id = &MinMenuIdAux.ToString().Trim()
+//		tooltip = ""
+//		link =""
+//		linkTarget ="" 
+//		iconClass = !"menu-icon fa fa-edit"
+//		caption = !"Developer Menu" 
+//
+//
+//		subItems 
+//		{ 
+//			Item [Count=20] Input &ProgramName in ListWWPPrograms()
+//			{
+//				&MinMenuIdAux = &MinMenuIdAux + 1
+//				id = &MinMenuIdAux.ToString().Trim()
+//				tooltip = ""
+//				link = &ProgramName.Link
+//				linkTarget ="" 
+//				iconClass = !""
+//				caption = &ProgramName.Description
+//				
+//		 	}
+//		}
+//	}
+}
+
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(&GAMMenu, &MenuId, &MinMenuId);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="GAMMenu">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMMenu</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMMenuOptionList, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMMenuItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMMenuItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMMenuOptionList, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MainMenuId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MainMenuId</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMKeyNumLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMApplication">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMApplication</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMApplication, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MenuId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MenuId</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:GAMKeyNumLong, GeneXusSecurityCommon</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="id">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>id</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ProgramName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ProgramName</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ProgramNames.ProgramName, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MinMenuId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MinMenuId</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MinMenuIdAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MinMenuIdAux</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>LoadMenu_GAMMenu</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-WWPBaseObjects.DVelop_Menu</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

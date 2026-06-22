@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="49a991f1-e62d-4cd7-b7a2-9b68cdc3e83f" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-26T19:58:18.0000000Z" checksum="1d7ef8faf7a3c39a53b0824598e3529f" fullyQualifiedName="WWPBaseObjects.WWP_GridStateAddDynFilterValue" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="4303b52c-30b8-4ce3-972e-69ced3a37423" name="WWP_GridStateAddDynFilterValue" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="WWP_Grid State Add Dyn Filter Value" parent="WWPBaseObjects.GridObjectProcedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[
+&GridStateDynamicFilter.Dsc = &FilterDsc
+&GridStateDynamicFilter.Value = &FilterValue
+&GridStateDynamicFilter.ValueDsc = &FilterValueDsc
+&GridStateDynamicFilter.Operator = &FilterOperator
+&GridStateDynamicFilter.ValueTo = &FilterValueTo
+If &IsRange
+	&GridStateDynamicFilter.ValueToDsc = &FilterValueToDsc
+	If &FilterValueToDsc.IsEmpty() And Not &FilterValueDsc.IsEmpty()
+		&GridStateDynamicFilter.ValueDsc = format('from %1', &FilterValueDsc)
+	Else
+		If &FilterValueDsc.IsEmpty() And Not &FilterValueToDsc.IsEmpty()
+			&GridStateDynamicFilter.ValueToDsc = format('up to %1', &FilterValueToDsc)
+		EndIf
+	EndIf
+EndIf
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+parm(inout:&GridStateDynamicFilter, in:&FilterDsc, in:&FilterOperator, in:&FilterValue, in:&FilterValueDsc, in:&IsRange, in:&FilterValueTo, in:&FilterValueToDsc);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="FilterDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterOperator">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterOperator</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterValueDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterValueDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterValueTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterValueTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterValueToDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterValueToDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsRange">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsRange</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateDynamicFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateDynamicFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.DynamicFilter, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_GridStateAddDynFilterValue</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>WWP_Grid State Add Dyn Filter Value</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

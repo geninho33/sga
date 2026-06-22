@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="b06c8689-f702-4521-a2d1-0fd5fee6bc6c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2020-11-19T11:51:46.0000000Z" checksum="2b5a633b86408af2436d0d4ccaf53988" fullyQualifiedName="WWPBaseObjects.GetNotificationSamples" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="8501ea72-a91f-4312-a309-1a50f7aaebc1" name="GetNotificationSamples" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Get Notification Samples" parent="WWPBaseObjects.Notifications" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[WWP_SDTNotificationsDataSample
+{
+	
+	WWP_SDTNotificationsDataSampleItem
+	{
+		&DateTime = now()
+		NotificationIconClass = "fas fa-layer-group NotificationFontIconSuccess"
+		NotificationTitle = "Group Records & Totalizers"
+		NotificationDescription = "Group the records of a grid within a certain column and show totalizers of each group"
+		NotificationDatetime = &DateTime
+	}
+	
+	WWP_SDTNotificationsDataSampleItem
+	{
+		NotificationIconClass = "fas fa-palette NotificationFontIconWarning"
+		NotificationTitle = "Dark Designs"
+		NotificationDescription = "Option to select dark designs in the Design System Wizard"
+		&DateTime = &DateTime.AddHours(-2)
+		NotificationDatetime = &DateTime
+	}
+	
+	WWP_SDTNotificationsDataSampleItem
+	{
+		NotificationIconClass = "fas fa-cog NotificationFontIconDanger"
+		NotificationTitle = "100% Customizable"
+		NotificationDescription = "Customize and create your own design system"
+		&DateTime = &DateTime.AddHours(-5)
+		NotificationDatetime = &DateTime
+	}
+	
+	WWP_SDTNotificationsDataSampleItem
+	{
+		NotificationIconClass = "far fa-star NotificationFontIconInfo"
+		NotificationTitle = "Bookmarks"
+		NotificationDescription = "Bookmark pages and have their shortcuts in the Master Page"
+		&DateTime = &DateTime.AddHours(-8)
+		NotificationDatetime = &DateTime
+	}
+	
+	WWP_SDTNotificationsDataSampleItem
+	{
+		NotificationIconClass = "fas fa-plus NotificationFontIconSuccess"
+		NotificationTitle = "Add new"
+		NotificationDescription = "Add new record of a DVelop Combo while editing other record"
+		&DateTime = &DateTime.AddHours(-36)
+		NotificationDatetime = &DateTime
+	}
+	
+	WWP_SDTNotificationsDataSampleItem
+	{
+		NotificationIconClass = "fas fa-caret-down NotificationFontIconInfoLight"
+		NotificationTitle = "Expand record"
+		NotificationDescription = "Expand record of a grid in order to visualize more information"
+		&DateTime = &DateTime.AddHours(-65)
+		NotificationDatetime = &DateTime
+	}
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="DateTime">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DateTime</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:DateTime</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GetNotificationSamples</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Get Notification Samples</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-WWPBaseObjects.WWP_SDTNotificationsDataSample</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

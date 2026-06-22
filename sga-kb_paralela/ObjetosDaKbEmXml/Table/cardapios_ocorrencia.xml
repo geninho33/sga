@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-02-27T02:29:11.0000000Z" checksum="3ca3b77973f9161a60d62416e92b64e8" fullyQualifiedName="cardapios_ocorrencia" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="3406d344-f9ca-41bd-8225-789458cd342d" name="cardapios_ocorrencia" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="cardapios_ocorrencia">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="7d95633c-a535-9ce5-94c1-95372c4db491">prefeitura</Item>
+      <Item guid="e9da9f4a-b42e-63c9-e36d-eded8d2932a9">cardapio</Item>
+      <Item guid="69c82a8b-a8c6-65f3-9d30-4e2a65da1d06">semana</Item>
+      <Item guid="e617c3bf-6046-8f7f-4050-1de4cea4250c">dia</Item>
+      <Item guid="bdcc00d1-70a4-26c3-2097-781b37ef6e38">seq</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-02-27T02:29:11.0000000Z" checksum="bf1d1c75871e8853a2cbfeb36528f089" fullyQualifiedName="Icardapios_ocorrencia" moduleGuid="00000000-0000-0000-0000-000000000000" guid="abf8c195-d7d4-4b8f-8b9f-7feaec9688da" name="Icardapios_ocorrencia" type="9e750647-3679-0000-0100-2529de263960" description="Icardapios_ocorrencia">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefeitura</Member>
+              <Member Order="Ascending">cardapio</Member>
+              <Member Order="Ascending">semana</Member>
+              <Member Order="Ascending">dia</Member>
+              <Member Order="Ascending">seq</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Icardapios_ocorrencia</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>cardapios_ocorrencia</Value>
+    </Property>
+  </Properties>
+</Object>

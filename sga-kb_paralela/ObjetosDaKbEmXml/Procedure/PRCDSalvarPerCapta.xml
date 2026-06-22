@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-09T00:43:36.0000000Z" checksum="e544cdd987725258db754fb2f66bf7d6" fullyQualifiedName="PRCDSalvarPerCapta" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="4500c1ed-7754-4def-afce-c00f102563e2" name="PRCDSalvarPerCapta" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Salvar Per Capta das Refeições" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[for each
+  where prefCodigo         = &prefCodigo
+	where pratoCodigo        = &pratoCodigo
+	where pratIngrProdCodigo = &pratIngrProdCodigo
+	where AreEnsCodigo       = &AreEnsCodigo
+	where AreEnsSequencial   = &AreEnsSequencial
+  if pratIngrQuantidade <> &pratIngrQuantidade
+    pratIngrQuantidade = &pratIngrQuantidade
+	  pratIngrDataAlt    = serverNow()
+		&carGruTurno       = carGruTurno
+		&AdmLogCha = &pratoCodigo.ToString().Trim() + '-' + &pratIngrProdCodigo.ToString().Trim() + '-' + &AreEnsCodigo.ToString().Trim() + '-' + &AreEnsSequencial.ToString().Trim() + '-' + &carGruTurno.ToString().Trim()
+		&AdmLogDad = &pratIngrProdCodigo.ToFormattedString() + '-' + &AreEnsCodigo.ToFormattedString() + '-' + &AreEnsSequencial.ToString().Trim() + '-' + &carGruTurno.ToFormattedString() + '-' + &pratIngrQuantidade.ToFormattedString() + '-' + Status.Ativo		
+		PRC_AliEscGravaLog(&AdmLogCha, &Pgmname, 'UPD', &AdmLogDad)
+  endif
+when none
+	new
+    prefCodigo		   	 = &prefCodigo
+		pratoCodigo        = &pratoCodigo
+		pratIngrProdCodigo = &pratIngrProdCodigo
+		AreEnsCodigo       = &AreEnsCodigo
+		AreEnsSequencial   = &AreEnsSequencial
+    pratIngrQuantidade = &pratIngrQuantidade
+		carGruTurno        = turno.Int
+		&carGruTurno       = carGruTurno
+		pratIngrStatus     = Status.Ativo
+		pratIngrDataCad = serverNow()
+    pratIngrDataAlt = serverNow()
+		&AdmLogCha = &pratoCodigo.ToString().Trim() + '-' + &pratIngrProdCodigo.ToString().Trim() + '-' + &AreEnsCodigo.ToString().Trim() + '-' + &AreEnsSequencial.ToString().Trim() + '-' + &carGruTurno.ToString().Trim()
+		&AdmLogDad = &pratIngrProdCodigo.ToFormattedString() + '-' + &AreEnsCodigo.ToFormattedString() + '-' + &AreEnsSequencial.ToString().Trim() + '-' + &carGruTurno.ToFormattedString() + '-' + &pratIngrQuantidade.ToFormattedString() + '-' + Status.Ativo		
+		PRC_AliEscGravaLog(&AdmLogCha, &Pgmname, 'INS', &AdmLogDad)
+	endNew
+endFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo, in:&pratoCodigo, in:&pratIngrProdCodigo, in:&AreEnsCodigo, in:&AreEnsSequencial, in:&pratIngrQuantidade );
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="pratIngrQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratIngrProdCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratIngrProdCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código Produto</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratIngrProdCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área de Ensino</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AreEnsSequencial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsSequencial</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Sequencial</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsSequencial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogCha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogCha</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Chave</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogCha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AdmLogDad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AdmLogDad</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Dados</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AdmLogDad</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="wMode">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>wMode</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>3</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>3</Value>
+        </Property>
+        <Property>
+          <Name>idCHARCASE</Name>
+          <Value>idCHARCASE_UPPER</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="carGruTurno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>carGruTurno</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Turno</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:carGruTurno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDSalvarPerCapta</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Salvar Per Capta das Refeições</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

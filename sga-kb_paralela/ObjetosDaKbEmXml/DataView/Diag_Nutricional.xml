@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="1d998af6-bf9c-458d-a414-a34ae3d15717" user="JORGE-AVELL\joadh" versionDate="2025-02-20T21:56:54.0000000Z" lastUpdate="2025-02-20T20:37:45.0000000Z" checksum="f8a2374dfe01f8f7bd77003ccfebc3f0" fullyQualifiedName="Diag_Nutricional" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="439f615e-d530-84f3-1e9e-4e5d160bb71a" name="Diag_Nutricional" type="19abc6ff-2cd2-0000-0006-6d172bc2333b" description="Diag_Nutricional" parent="Views" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="19abc6ff-2cd2-1000-0006-6d172bc2333b">
+    <Attributes>
+      <DataViewAttribute InternalName="diag_nutricional_Ano" ExternalName="Ano" />
+      <DataViewAttribute InternalName="diag_nutricional_Escola" ExternalName="Escola" />
+      <DataViewAttribute InternalName="diag_nutricional_NomeEscola" ExternalName="NomeEscola" />
+      <DataViewAttribute InternalName="diag_nutricional_NumColeta" ExternalName="NumColeta" />
+      <DataViewAttribute InternalName="diag_nutricional_DataColeta" ExternalName="DataColeta" />
+      <DataViewAttribute InternalName="diag_nutricional_Aluno" ExternalName="Aluno" />
+      <DataViewAttribute InternalName="diag_nutricional_AlunoNome" ExternalName="AlunoNome" />
+      <DataViewAttribute InternalName="diag_nutricional_Nascto" ExternalName="Nascto" />
+      <DataViewAttribute InternalName="diag_nutricional_Sexo" ExternalName="Sexo" />
+      <DataViewAttribute InternalName="diag_nutricional_Anos" ExternalName="Anos" />
+      <DataViewAttribute InternalName="diag_nutricional_Meses" ExternalName="Meses" />
+      <DataViewAttribute InternalName="diag_nutricional_Altura" ExternalName="Altura" />
+      <DataViewAttribute InternalName="diag_nutricional_Peso" ExternalName="Peso" />
+      <DataViewAttribute InternalName="diag_nutricional_Circunferencia" ExternalName="Circunferencia" />
+      <DataViewAttribute InternalName="diag_nutricional_IMC" ExternalName="IMC" />
+      <DataViewAttribute InternalName="diag_nutricional_DiagnosticoIMC" ExternalName="DiagnosticoIMC" />
+    </Attributes>
+    <Platforms>
+      <DataViewStructurePlatform Dbms="12">
+        <PlatformProperties>
+          <Properties>
+            <Property>
+              <Name>NAME</Name>
+              <Value>view_diagnostico_nutricional</Value>
+            </Property>
+          </Properties>
+        </PlatformProperties>
+      </DataViewStructurePlatform>
+      <DataViewStructurePlatform Dbms="18">
+        <PlatformProperties>
+          <Properties>
+            <Property>
+              <Name>NAME</Name>
+              <Value>view_diagnostico_nutricional</Value>
+            </Property>
+          </Properties>
+        </PlatformProperties>
+      </DataViewStructurePlatform>
+    </Platforms>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="7706bd3b-212a-1000-0006-8aaeb59068b9">
+    <Indexes>
+      <Object Type="Unique" parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2025-02-25T05:17:15.0000000Z" checksum="2136377156c58df4b87e2aaabceafb35" fullyQualifiedName="IDiag_Nutricional" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2b4da742-5623-43e6-aaf6-812eb3fa9989" name="IDiag_Nutricional" type="fc1b76c4-95c5-0000-0101-44f9543121bd" description="IDiag_Nutricional">
+        <Part type="fe47b55c-ea2a-1000-0101-5b38901e24f7">
+          <Members>
+            <Member Order="Ascending">diag_nutricional_Ano</Member>
+            <Member Order="Ascending">diag_nutricional_Escola</Member>
+            <Member Order="Ascending">diag_nutricional_NumColeta</Member>
+            <Member Order="Ascending">diag_nutricional_Aluno</Member>
+          </Members>
+          <Properties />
+        </Part>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>IDiag_Nutricional</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>IDiag_Nutricional</Value>
+          </Property>
+        </Properties>
+      </Object>
+    </Indexes>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Diag_Nutricional</Value>
+    </Property>
+    <Property>
+      <Name>DVAssocTable</Name>
+      <Value>adbb33c9-0906-4971-833c-998de27e0676-diag_nutricional_Ano;adbb33c9-0906-4971-833c-998de27e0676-diag_nutricional_Escola;adbb33c9-0906-4971-833c-998de27e0676-diag_nutricional_NumColeta;adbb33c9-0906-4971-833c-998de27e0676-diag_nutricional_Aluno</Value>
+    </Property>
+    <Property>
+      <Name>DVDataStore</Name>
+      <Value>dsSGE_SqlServer_8183</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

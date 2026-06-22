@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="2b32f807-91e0-49c1-bb1e-a6245777604c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T17:58:11.0000000Z" checksum="cc6a29c169fa5bb8c11b95c8fe990fb0" fullyQualifiedName="WorkWithPlusGAMUserTOTPActivation" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2c21a097-c71c-015a-0f16-a013758dff31" name="WorkWithPlusGAMUserTOTPActivation" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus GAMUser TOTPActivation" parent="GAMUserTOTPActivation" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Transaction" masterPage="&lt;default&gt;" defaultMasterPage="&lt;default&gt;">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent-7;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" numberOfColumns="2" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;66;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" defaultCellWidth_S="75%">
+          <variable name="Image" description="WWP_GAM_URLimage" defaultDescription="WWP_GAM_URLimage" dataType="Basic" defaultDataType="Basic" basicType="Image" defaultBasicType="Image" visibleCondition="Not &amp;GAMUser.URLImage.IsEmpty()" defaultVisibleCondition="Not &amp;GAMUser.URLImage.IsEmpty()" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" showDescription="False" readOnly="True" defaultReadOnly="True" />
+          <variable name="UserGUID" description="WWP_GAM_GUID" defaultDescription="GUID" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMGUID" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMGUID" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" startCol="1" readOnly="True" defaultReadOnly="True" isRequired="False" />
+          <variable name="UserNameSpace" description="WWP_GAM_Namespace" defaultDescription="GAMRepository Name Space" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMRepositoryNameSpace" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMRepositoryNameSpace" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" readOnly="True" defaultReadOnly="True" />
+          <variable name="AuthenticationTypeName" description="WWP_GAM_AuthType" defaultDescription="GAMAuthentication Type Name" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMAuthenticationTypeName" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMAuthenticationTypeName" visibleCondition="&amp;AuthenticationTypeName.Count &gt; 1" defaultVisibleCondition="&amp;AuthenticationTypeName.Count &gt; 1" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Combo Box" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" readOnly="True" defaultReadOnly="True" />
+          <variable name="Name" description="WWP_GAM_UserName" defaultDescription="User Id" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" startCol="1" readOnly="True" defaultReadOnly="True" />
+          <variable name="Email" description="WWP_GAM_Email" defaultDescription="GAMEMail" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMEMail" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMEMail" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" readOnly="True" defaultReadOnly="True" />
+          <variable name="ExternalId" description="WWP_GAM_ExternalId" defaultDescription="User Id" dataType="Based on" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMUserIdentification" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" readOnly="True" defaultReadOnly="True" />
+        </table>
+        <table name="GAM_DataCard" defaultThemeClass="card bg-white" type="Responsive" defaultType="Responsive" includeInPanel="True" panelTitle="Enable TOTP authenticator">
+          <textBlock controlName="QRimage" caption=" " format="Raw HTML" align="Center" defaultAlign="Center" />
+          <variable name="SecretKey" description="Secret key" defaultDescription="Secret key" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="256" defaultBasicCLength="256" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <variable name="TOTPCode" description="Type a code" defaultDescription="Type a code" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="8" defaultBasicCLength="8" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="7;91;Enter-7;91;Cancel">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Cancel" />
+      </actionGroup>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusGAMUserTOTPActivation</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-GAMUserTOTPActivation</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

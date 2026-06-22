@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="33b9cdf1-2793-435d-8fe7-78dad30c5cf8" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-10T04:19:47.0000000Z" lastUpdate="2025-10-10T02:12:24.0000000Z" checksum="d3fb0433a4b4b3a1b2a1d79da37d7504" fullyQualifiedName="WorkWithPlusWPCriacaoChamadosGLPI" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="34aa9561-716f-0bc6-3bef-7eedf1f6c385" name="WorkWithPlusWPCriacaoChamadosGLPI" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPCriacao Chamados GLPI" parent="WPCriacaoChamadosGLPI" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPCriacaoChamadosGLPI" defaultSecFuntionKey="WPCriacaoChamadosGLPI" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive">
+        <table type="Responsive" includeInPanel="True" panelTitle="Informe os dados abaixo para a abertua de chamado : " cellWidth_E="58%" cellWidth_S="58%">
+          <variable name="TicketTitle" description="Titulo" defaultDescription="Titulo" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" descriptionWidth="8%" />
+          <variable name="TicketDescription" description="Descrição" defaultDescription="Descrição" dataType="Basic" defaultDataType="Basic" basicType="LongVarChar" defaultBasicType="LongVarChar" descriptionWidth="8%" />
+          <userAction caption="Enviar Chamado" name="UserActionEnviar" />
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPCriacaoChamadosGLPI</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPCriacaoChamadosGLPI</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ca2417ff-53d6-013a-1088-edc7ebb19da7" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-11-09T01:32:56.0000000Z" checksum="3225d927f83db778528867e56d042172" fullyQualifiedName="AtendimentoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="58f6e623-cc81-424c-aa3d-20737fc5a5c0" name="AtendimentoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Atendimento WWDS" parent="WorkWithPlusAtendimento" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &locDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LOCDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &locDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like '%' +  &locDescricao1.ToLower() when &DynamicFiltersSelector1 = !'LOCDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &locDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like &AreEnsNome1.ToLower() when &DynamicFiltersSelector1 = !'AREENSNOME' AND &DynamicFiltersOperator1 = 0 AND (not &AreEnsNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like '%' +  &AreEnsNome1.ToLower() when &DynamicFiltersSelector1 = !'AREENSNOME' AND &DynamicFiltersOperator1 = 1 AND (not &AreEnsNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruDescricao.ToLower() like &carGruDescricao1.ToLower() when &DynamicFiltersSelector1 = !'CARGRUDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &carGruDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruDescricao.ToLower() like '%' +  &carGruDescricao1.ToLower() when &DynamicFiltersSelector1 = !'CARGRUDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &carGruDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &AreEnsEtapaNome1.ToLower() when &DynamicFiltersSelector1 = !'AREENSETAPANOME' AND &DynamicFiltersOperator1 = 0 AND (not &AreEnsEtapaNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like '%' +  &AreEnsEtapaNome1.ToLower() when &DynamicFiltersSelector1 = !'AREENSETAPANOME' AND &DynamicFiltersOperator1 = 1 AND (not &AreEnsEtapaNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens < &carGruQtdeItens1 when &DynamicFiltersSelector1 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator1 = 0 AND (not &carGruQtdeItens1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens = &carGruQtdeItens1 when &DynamicFiltersSelector1 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator1 = 1 AND (not &carGruQtdeItens1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens > &carGruQtdeItens1 when &DynamicFiltersSelector1 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator1 = 2 AND (not &carGruQtdeItens1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &locDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &locDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like '%' +  &locDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'LOCDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &locDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like &AreEnsNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AREENSNOME' AND &DynamicFiltersOperator2 = 0 AND (not &AreEnsNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like '%' +  &AreEnsNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AREENSNOME' AND &DynamicFiltersOperator2 = 1 AND (not &AreEnsNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruDescricao.ToLower() like &carGruDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARGRUDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &carGruDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruDescricao.ToLower() like '%' +  &carGruDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARGRUDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &carGruDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &AreEnsEtapaNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AREENSETAPANOME' AND &DynamicFiltersOperator2 = 0 AND (not &AreEnsEtapaNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like '%' +  &AreEnsEtapaNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AREENSETAPANOME' AND &DynamicFiltersOperator2 = 1 AND (not &AreEnsEtapaNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens < &carGruQtdeItens2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator2 = 0 AND (not &carGruQtdeItens2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens = &carGruQtdeItens2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator2 = 1 AND (not &carGruQtdeItens2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens > &carGruQtdeItens2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator2 = 2 AND (not &carGruQtdeItens2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &locDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &locDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like '%' +  &locDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'LOCDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &locDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like &AreEnsNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AREENSNOME' AND &DynamicFiltersOperator3 = 0 AND (not &AreEnsNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like '%' +  &AreEnsNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AREENSNOME' AND &DynamicFiltersOperator3 = 1 AND (not &AreEnsNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruDescricao.ToLower() like &carGruDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARGRUDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &carGruDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruDescricao.ToLower() like '%' +  &carGruDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARGRUDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &carGruDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &AreEnsEtapaNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AREENSETAPANOME' AND &DynamicFiltersOperator3 = 0 AND (not &AreEnsEtapaNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like '%' +  &AreEnsEtapaNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AREENSETAPANOME' AND &DynamicFiltersOperator3 = 1 AND (not &AreEnsEtapaNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens < &carGruQtdeItens3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator3 = 0 AND (not &carGruQtdeItens3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens = &carGruQtdeItens3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator3 = 1 AND (not &carGruQtdeItens3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruQtdeItens > &carGruQtdeItens3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARGRUQTDEITENS' AND &DynamicFiltersOperator3 = 2 AND (not &carGruQtdeItens3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoCodigo >= &TFAtendimentoCodigo when not &TFAtendimentoCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoCodigo <= &TFAtendimentoCodigo_To when not &TFAtendimentoCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &TFlocDescricao.ToLower() when &TFlocDescricao_Sel.IsEmpty() AND (not &TFlocDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao = &TFlocDescricao_Sel when not &TFlocDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome.ToLower() like &TFAreEnsNome.ToLower() when &TFAreEnsNome_Sel.IsEmpty() AND (not &TFAreEnsNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsNome = &TFAreEnsNome_Sel when not &TFAreEnsNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &TFAreEnsEtapaNome.ToLower() when &TFAreEnsEtapaNome_Sel.IsEmpty() AND (not &TFAreEnsEtapaNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome = &TFAreEnsEtapaNome_Sel when not &TFAreEnsEtapaNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoTurno in &TFAtendimentoTurno_Sels when &TFAtendimentoTurno_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruDescricao.ToLower() like &TFcarGruCodigo.ToLower() when &TFcarGruCodigo_Sel.IsEmpty() AND (not &TFcarGruCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruCodigo = &TFcarGruCodigo_Sel when not &TFcarGruCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoFuncionariosSegunda >= &TFAtendimentoFuncionariosSegunda when not &TFAtendimentoFuncionariosSegunda.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoFuncionariosSegunda <= &TFAtendimentoFuncionariosSegunda_To when not &TFAtendimentoFuncionariosSegunda_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoNormalSegunda >= &TFAtendimentoNormalSegunda when not &TFAtendimentoNormalSegunda.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoNormalSegunda <= &TFAtendimentoNormalSegunda_To when not &TFAtendimentoNormalSegunda_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoColesterolSegunda >= &TFAtendimentoColesterolSegunda when not &TFAtendimentoColesterolSegunda.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoColesterolSegunda <= &TFAtendimentoColesterolSegunda_To when not &TFAtendimentoColesterolSegunda_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoDiabeticoSegunda >= &TFAtendimentoDiabeticoSegunda when not &TFAtendimentoDiabeticoSegunda.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoDiabeticoSegunda <= &TFAtendimentoDiabeticoSegunda_To when not &TFAtendimentoDiabeticoSegunda_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoGlutenSegunda >= &TFAtendimentoGlutenSegunda when not &TFAtendimentoGlutenSegunda.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoGlutenSegunda <= &TFAtendimentoGlutenSegunda_To when not &TFAtendimentoGlutenSegunda_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoLactoseSegunda >= &TFAtendimentoLactoseSegunda when not &TFAtendimentoLactoseSegunda.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoLactoseSegunda <= &TFAtendimentoLactoseSegunda_To when not &TFAtendimentoLactoseSegunda_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoStatus in &TFAtendimentoStatus_Sels when &TFAtendimentoStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carGruDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carGruDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carGruDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carGruDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="locDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>locDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carGruDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carGruDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoTurno_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoTurno_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoTurno</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsEtapaNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsEtapaNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsEtapaNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsEtapaNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsEtapaNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsEtapaNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarGruCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarGruCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarGruCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarGruCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoNormalSegunda">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoNormalSegunda</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoNormalSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoNormalSegunda_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoNormalSegunda_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoNormalSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoColesterolSegunda">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoColesterolSegunda</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoColesterolSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoColesterolSegunda_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoColesterolSegunda_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoColesterolSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoDiabeticoSegunda">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoDiabeticoSegunda</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoDiabeticoSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoDiabeticoSegunda_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoDiabeticoSegunda_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoDiabeticoSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoGlutenSegunda">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoGlutenSegunda</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoGlutenSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoGlutenSegunda_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoGlutenSegunda_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoGlutenSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoLactoseSegunda">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoLactoseSegunda</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoLactoseSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoLactoseSegunda_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoLactoseSegunda_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoLactoseSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFlocDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFlocDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsEtapaNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsEtapaNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsEtapaNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsEtapaNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carGruQtdeItens1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carGruQtdeItens1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruQtdeItens</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carGruQtdeItens2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carGruQtdeItens2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruQtdeItens</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carGruQtdeItens3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carGruQtdeItens3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruQtdeItens</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoFuncionariosSegunda">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoFuncionariosSegunda</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoFuncionariosSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAtendimentoFuncionariosSegunda_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAtendimentoFuncionariosSegunda_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoFuncionariosSegunda</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locDescricao1</Name>
+        <Description>loc Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsNome1</Name>
+        <Description>Are Ens Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carGruDescricao1</Name>
+        <Description>car Gru Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsEtapaNome1</Name>
+        <Description>Are Ens Etapa Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carGruQtdeItens1</Name>
+        <Description>car Gru Qtde Itens1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locDescricao2</Name>
+        <Description>loc Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsNome2</Name>
+        <Description>Are Ens Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carGruDescricao2</Name>
+        <Description>car Gru Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsEtapaNome2</Name>
+        <Description>Are Ens Etapa Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carGruQtdeItens2</Name>
+        <Description>car Gru Qtde Itens2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>locDescricao3</Name>
+        <Description>loc Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsNome3</Name>
+        <Description>Are Ens Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carGruDescricao3</Name>
+        <Description>car Gru Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsEtapaNome3</Name>
+        <Description>Are Ens Etapa Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carGruQtdeItens3</Name>
+        <Description>car Gru Qtde Itens3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoCodigo</Name>
+        <Description>TFAtendimento Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoCodigo_To</Name>
+        <Description>TFAtendimento Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocDescricao</Name>
+        <Description>TFloc Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFlocDescricao_Sel</Name>
+        <Description>TFloc Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsNome</Name>
+        <Description>TFAre Ens Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsNome_Sel</Name>
+        <Description>TFAre Ens Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsEtapaNome</Name>
+        <Description>TFAre Ens Etapa Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsEtapaNome_Sel</Name>
+        <Description>TFAre Ens Etapa Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoTurno_Sels</Name>
+        <Description>TFAtendimento Turno_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarGruCodigo</Name>
+        <Description>TFcar Gru Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarGruCodigo_Sel</Name>
+        <Description>TFcar Gru Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoFuncionariosSegunda</Name>
+        <Description>TFAtendimento Funcionarios Segunda</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoFuncionariosSegunda_To</Name>
+        <Description>TFAtendimento Funcionarios Segunda_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoNormalSegunda</Name>
+        <Description>TFAtendimento Normal Segunda</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoNormalSegunda_To</Name>
+        <Description>TFAtendimento Normal Segunda_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoColesterolSegunda</Name>
+        <Description>TFAtendimento Colesterol Segunda</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoColesterolSegunda_To</Name>
+        <Description>TFAtendimento Colesterol Segunda_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoDiabeticoSegunda</Name>
+        <Description>TFAtendimento Diabetico Segunda</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoDiabeticoSegunda_To</Name>
+        <Description>TFAtendimento Diabetico Segunda_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoGlutenSegunda</Name>
+        <Description>TFAtendimento Gluten Segunda</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoGlutenSegunda_To</Name>
+        <Description>TFAtendimento Gluten Segunda_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoLactoseSegunda</Name>
+        <Description>TFAtendimento Lactose Segunda</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoLactoseSegunda_To</Name>
+        <Description>TFAtendimento Lactose Segunda_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAtendimentoStatus_Sels</Name>
+        <Description>TFAtendimento Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>AtendimentoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusAtendimento</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="1ab375f4-744e-4841-ad42-cc7bb54e1bd2" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-11-06T04:29:22.0000000Z" lastUpdate="2024-12-04T20:20:15.0000000Z" checksum="3c01ff4ab3f61b1d12a644d3e3857b7e" fullyQualifiedName="WPLoginUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="93cb2e18-1a96-4728-8099-f8a960980196" name="WPLoginUE" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Login para Unidade Escolar" parent="WebPanel" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" formClass="Form" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="Table100x100H" tableType="Responsive" responsiveSizes="[]"><row><cell hAlign="Center"><table controlName="TableContent"><row><cell cellClass="CellPaddingLeft30" hAlign="Center"><table controlName="tablelogin" class="TableLoginWithLeftImage" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:100}]]}]"><row><cell><image controlName="LoginImage" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-IconRefeicao" class="Image" /></cell></row><row><cell cellClass="CellNoPaddingHorizontal" hAlign="Center"><textblock controlName="nmTotulo" caption="Portal da Alimentação Escolar" class="TextBlockTitleMaster" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;HTML&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell cellClass="CellMarginTop" hAlign="Center"><table controlName="tableForm" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[],[],[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;label&quot;:100,&quot;visible&quot;:true}],[{&quot;label&quot;:100,&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}],[{&quot;visible&quot;:true}]]}]"><row><cell cellClass="DataContentCellLogin CellPaddingLogin DscTop"><data attribute="&amp;login" labelCaption="Informe o login" class="AttributeLoginImageLeft" /></cell></row><row><cell cellClass="DataContentCellLogin CellPaddingLogin DscTop"><data attribute="&amp;senha" labelCaption="Informe a Senha " class="AttributeLoginImageLeft" /></cell></row><row><cell cellClass="DataContentCellLogin CellPaddingLogin"><textblock controlName="ForgotPassword" caption="Servidor Municipal: use a senha do contracheque" class="DataDescriptionLogin" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;GxFormat&lt;/Name&gt;&lt;Value&gt;HTML&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row><row><cell><action controlName="BtnUserActionEntrar" onClickEvent="'DoUserActionEntrar'" caption="Entrar" /></cell></row><row><cell cellClass="DataContentCellLogin CellPaddingLogin"><table controlName="tableEsqueceuSenha"><row><cell><textblock controlName="tbEsqueceuSenha" caption="Esqueceu sua senha ? " class="TextBlock" /></cell></row><row><cell><textblock controlName="tbEsqueceuSenha2" caption="Entre em  contato com orgão central " class="TextBlock" /></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></layout></detail></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(&locDescricao);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+If &Httprequest.Method = HttpMethod.Get
+	&WWP_DesignSystemSettings = WWP_GetDesignSystemSettings()
+    GeneXus.Common.UI.DesignSystem.SetOption(!"base-color", &WWP_DesignSystemSettings.BaseColor)
+	GeneXus.Common.UI.DesignSystem.SetOption(!"background-color", &WWP_DesignSystemSettings.BackgroundStyle)
+	GeneXus.Common.UI.DesignSystem.SetOption(!"menu-color", &WWP_DesignSystemSettings.MenuColor)
+	GeneXus.Common.UI.DesignSystem.SetOption(!"font-size", &WWP_DesignSystemSettings.FontSize)
+	WWPActions.EmpoweredGrids_Refresh()
+EndIf
+
+if not &locDescricao.IsEmpty()
+	msg('Essa unidade é vinculada com a  ' + &locDescricao )
+	&locDescricao = ''
+endif
+
+	
+// &prefCodigo = &WebSession.Get('prefCodigo').ToNumeric()
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoUserActionEntrar'
+
+	 for each
+		 where locUsuario = &login
+		 where locSenha   = &senha
+			//where prefCodigo = &prefCodigo
+			LoadWWPContext.Call(&WWPContext)
+			&WWPContext.login        = locUsuario
+			&WWPContext.senha        = locSenha
+			&WWPContext.locCodigo    = locCodigo
+			&WWPContext.locDescricao = locDescricao
+			&WWPContext.prefCodigo   = prefCodigo
+			&WWPContext.locVinculada = locVinculada
+			IncluiAcessoUE(prefCodigo, locUsuario, 2)
+			if locStatus = 'A'
+				SetWWPContext(&WWPContext)
+				HomeUE()
+			else
+				msg('Essa Unidade de Ensino não está ativa !')
+			endif
+     when none
+		 &login  = ""
+		 &senha  = ""
+		 msg("O usuário não foi encontrado !")
+	 endFor
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Httprequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Httprequest</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWP_DesignSystemSettings">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWP_DesignSystemSettings</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWP_DesignSystemSettings, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="login">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>login</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locUsuario</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefLogo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefLogo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefLogo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="senha">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>senha</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locSenha</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Local Nome</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WPLoginUE</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Login para Unidade Escolar</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>(none)</Value>
+    </Property>
+    <Property>
+      <Name>IsMain</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityNone</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

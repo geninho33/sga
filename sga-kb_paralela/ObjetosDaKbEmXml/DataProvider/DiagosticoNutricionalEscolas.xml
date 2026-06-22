@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="687d6d62-378b-4328-a31b-889b02268617" user="JORGE-AVELL\joadh" versionDate="2025-02-19T00:13:32.0000000Z" lastUpdate="2025-01-15T18:46:17.0000000Z" checksum="0220dfb282b51b8151b5ad665c53a0b5" fullyQualifiedName="DiagosticoNutricionalEscolas" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="25a21edf-f7e5-4718-9a37-77ee6b5e8d0a" name="DiagosticoNutricionalEscolas" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Diagostico Nutricional Escolas" parent="DataProviders" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[Escolas_Structure
+{
+	Escola
+	Order diag_nutricional_NomeEscola
+	Unique diag_nutricional_Escola, diag_nutricional_NomeEscola
+	Where diag_nutricional_Ano = &diag_nutricional_Ano
+	{
+		Codigo	= diag_nutricional_Escola
+		Nome	= diag_nutricional_NomeEscola
+	}
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&diag_nutricional_Ano);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="diag_nutricional_Ano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>diag_nutricional_Ano</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:diag_nutricional_Ano</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>DiagosticoNutricionalEscolas</Value>
+    </Property>
+    <Property>
+      <Name>idINFER_SDT</Name>
+      <Value>idINFER_STRUCTURE_IF_SDT_IS_DYNAMIC</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-Escolas_Structure</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

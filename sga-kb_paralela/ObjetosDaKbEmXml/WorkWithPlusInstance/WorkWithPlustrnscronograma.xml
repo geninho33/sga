@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="56686d99-c211-4b28-adf1-3968033ae7a1" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-02-19T03:18:18.0000000Z" lastUpdate="2025-02-19T01:16:34.0000000Z" checksum="e7fdaedc7ec23945b6875b9fb3acddf0" fullyQualifiedName="WorkWithPlustrnscronograma" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="517b3509-94ed-03b3-19f9-3f5f21c078dc" name="WorkWithPlustrnscronograma" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnscronograma" parent="trnscronograma" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnscronograma" defaultSecFuntionKey="WWtrnscronograma" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnscronograma" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnscronograma" SecFuntionKeyINS="WWtrnscronograma_Insert" defaultSecFuntionKeyINS="WWtrnscronograma_Insert" SecFuntionKeyUPD="WWtrnscronograma_Update" defaultSecFuntionKeyUPD="WWtrnscronograma_Update" SecFuntionKeyDLT="WWtrnscronograma_Delete" defaultSecFuntionKeyDLT="WWtrnscronograma_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;croCodigo-2;22;forCodigo-2;22;prodCodigo-2;22;croMarca-2;22;croDtInicial-2;22;croDtFinal-2;22;croDtConsumo-2;22;croNumeroNota-2;22;croTipoRemessa-2;22;croRemessa-2;22;croStatus-2;22;croUsuario-2;22;croDataAlt-2;22;croFeito-2;22;croUnidade-2;22;croDataCad-2;22;croTotal">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visibleCondition="croCodigo&lt;&gt;0" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" description=" Fornecedor" defaultDescription="Cadastro de Fornecedor" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-forNome" conditions="prefCodigo = &amp;prefCodigo and forStatus = 'A';" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" description="Produto" defaultDescription="Alimentos" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo = &amp;prefCodigo and prodStatus = 'A';" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croMarca" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDtInicial" description="Período de " defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDtFinal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" mergeWithPrevious="True" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDtConsumo" description="Data Consumo" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croNumeroNota" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croTipoRemessa" description="Tipo de Remessa" defaultDescription="=Attribute.ContextualTitle" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-disTipNumero" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-disTipDescricao" conditions="distipStatus = 'A';" controlEmptyItem="True" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croRemessa" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" controlInfoDef="Based on" controlType="&lt;default&gt;" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" EditSecFuntionKey="true" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visibleCondition="" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croUsuario" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croFeito" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croTotal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" descriptionWidth="17%" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;croMarca-4;39;-5;41;" id="56686d99-c211-4b28-adf1-3968033ae7a1:1" name="trnscronograma">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croMarca" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-croMarca" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Cronograma de Entrega de Produtos" defaultDescription=" Cronograma de Entrega de Produtos" childrenOrderedList="4;02;Main Table" level="root:trnscronograma" defaultLevel="root:trnscronograma" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="EditColumns" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=croMarca.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;croMarca;=croMarca.ContextualTitle" name="=croMarca.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croMarca" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;croMarca">
+                  <filterAttribute name="croCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;croCodigo;LowerThan-4;96;4;99;croCodigo;Equals-4;96;4;99;croCodigo;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                  <filterAttribute name="croDtInicial" description="Data" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;croDtInicial;Past-4;96;4;99;croDtInicial;Today-4;96;4;99;croDtInicial;InTheFuture-4;96;4;99;croDtInicial;RangePicker">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="RangePicker" defaultPredefinedOperator="RangePicker" />
+                  </filterAttribute>
+                  <filterAttribute name="croNumeroNota" description="Nota" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;croNumeroNota;LowerThan-4;96;4;99;croNumeroNota;Equals-4;96;4;99;croNumeroNota;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                  <filterAttribute name="prodCodigo" description="Produto" defaultDescription="=Attribute.Title" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;prodCodigo;LowerThan-4;96;4;99;prodCodigo;Equals-4;96;4;99;prodCodigo;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                  <filterAttribute name="croTipoRemessa" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;croTipoRemessa;LowerThan-4;96;4;99;croTipoRemessa;Equals-4;96;4;99;croTipoRemessa;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer />
+        <grid cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;croCodigo-4;23;forCodigo-4;23;croMarca-4;23;prodCodigo-4;23;croUnidade-4;23;croDtInicial-4;23;croDtFinal-4;23;croNumeroNota-4;23;croDtConsumo-4;23;croStatus-4;23;croDataCad-4;23;croUsuario-4;23;croDataAlt-4;23;croRemessa-4;23;croFeito-4;23;croTipoRemessa-4;23;croTotal">
+          <standardAction name="Update" />
+          <standardAction name="Delete" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" />
+          <userAction tooltip="Unidades" fontIcon="fas fa-school" ControlType="Image" name="btnLocais" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-trnscronogramalocalWW" imageType="Font icon">
+            <parameters>
+              <parameter type="In" name="prefCodigo" />
+              <parameter type="In" name="croCodigo" />
+            </parameters>
+          </userAction>
+          <userAction tooltip="Gerar Remessa" fontIcon="fas fa-cogs" ControlType="Image" name="btnGeraRemessa" imageType="Font icon" popup="False" confirm="False" confirmMessage="Tem certeza deseja gerar uma remessa ?" confirmTitle="Gerar Remessa" />
+          <userAction tooltip="Clonar o clonograma" fontIcon="fas fa-copy" ControlType="Image" name="btnDuplicar" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRCDDuplicarCronograma" imageType="Font icon" popup="False" confirm="True" confirmMessage="Deseja realmente duplicar e cronograma ?" confirmTitle="Duplicar">
+            <parameters>
+              <parameter type="In" name="prefCodigo" />
+              <parameter type="In" name="croCodigo" />
+            </parameters>
+          </userAction>
+          <userAction tooltip="Imprimir Cronograma" fontIcon="fas fa-print" ControlType="Image" name="btnImprimir" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRINTCronograma" imageType="Font icon" popup="True" refreshAfterPopup="False">
+            <parameters>
+              <parameter type="In" name="prefCodigo" />
+              <parameter type="In" name="croCodigo" />
+            </parameters>
+          </userAction>
+          <userAction tooltip="2 guias em uma folha" fontIcon="fas fa-newspaper" ControlType="Image" name="btnPrint2via" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRINTGuiaRemessa2vias" imageType="Font icon" condition="distStatus&lt;&gt;'C'" popup="True" refreshAfterPopup="False">
+            <parameters>
+              <parameter name="prefCodigo" />
+              <parameter name="croRemessa" />
+            </parameters>
+          </userAction>
+          <userAction fontIcon="far fa-calendar-alt" ControlType="Image" name="btnPrintDiario" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRINTCronogramaDiaHora" imageType="Font icon" popup="True">
+            <parameters>
+              <parameter type="In" name="prefCodigo" />
+              <parameter type="In" name="croCodigo" />
+            </parameters>
+          </userAction>
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="croCodigo &gt;= &amp;TFcroCodigo when not &amp;TFcroCodigo.IsEmpty();croCodigo &lt;= &amp;TFcroCodigo_To when not &amp;TFcroCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" description="Fornecedor " defaultDescription="=Attribute.ColumnTitle" autolink="False" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-forNome" width="200" defaultCellVisible_E="False" defaultFilterCondition="forCodigo &gt;= &amp;TFforCodigo when not &amp;TFforCodigo.IsEmpty();forCodigo &lt;= &amp;TFforCodigo_To when not &amp;TFforCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" description="Produto" defaultDescription="=Attribute.ColumnTitle" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo = &amp;prefCodigo and prodStatus = 'A';" defaultCellVisible_E="False" defaultFilterCondition="prodCodigo &gt;= &amp;TFprodCodigo when not &amp;TFprodCodigo.IsEmpty();prodCodigo &lt;= &amp;TFprodCodigo_To when not &amp;TFprodCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croTotal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="True" cellVisible_E="False" defaultCellVisible_E="False" defaultFilterCondition="croTotal &gt;= &amp;TFcroTotal when not &amp;TFcroTotal.IsEmpty();croTotal &lt;= &amp;TFcroTotal_To when not &amp;TFcroTotal_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDtInicial" description="Dt Inicial" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="croDtInicial &gt;= &amp;TFcroDtInicial when not &amp;TFcroDtInicial.IsEmpty();croDtInicial &lt;= &amp;TFcroDtInicial_To when not &amp;TFcroDtInicial_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDtFinal" description="Dt Final" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="croDtFinal &gt;= &amp;TFcroDtFinal when not &amp;TFcroDtFinal.IsEmpty();croDtFinal &lt;= &amp;TFcroDtFinal_To when not &amp;TFcroDtFinal_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croTipoRemessa" description="Tipo Distribuição" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="croTipoRemessa &gt;= &amp;TFcroTipoRemessa when not &amp;TFcroTipoRemessa.IsEmpty();croTipoRemessa &lt;= &amp;TFcroTipoRemessa_To when not &amp;TFcroTipoRemessa_To.IsEmpty()" defaultFilterCondition="croTipoRemessa &gt;= &amp;TFcroTipoRemessa when not &amp;TFcroTipoRemessa.IsEmpty();croTipoRemessa &lt;= &amp;TFcroTipoRemessa_To when not &amp;TFcroTipoRemessa_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croRemessa" description="Última Remessa" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="croRemessa &gt;= &amp;TFcroRemessa when not &amp;TFcroRemessa.IsEmpty();croRemessa &lt;= &amp;TFcroRemessa_To when not &amp;TFcroRemessa_To.IsEmpty()" defaultFilterCondition="croRemessa &gt;= &amp;TFcroRemessa when not &amp;TFcroRemessa.IsEmpty();croRemessa &lt;= &amp;TFcroRemessa_To when not &amp;TFcroRemessa_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="croDataCad &gt;= &amp;TFcroDataCad when not &amp;TFcroDataCad.IsEmpty();croDataCad &lt;= &amp;TFcroDataCad_To when not &amp;TFcroDataCad_To.IsEmpty()" defaultFilterCondition="croDataCad &gt;= &amp;TFcroDataCad when not &amp;TFcroDataCad.IsEmpty();croDataCad &lt;= &amp;TFcroDataCad_To when not &amp;TFcroDataCad_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croUsuario" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="croUsuario.ToLower() like &amp;TFcroUsuario.ToLower() when not &amp;TFcroUsuario.IsEmpty()" defaultFilterCondition="croUsuario.ToLower() like &amp;TFcroUsuario.ToLower() when not &amp;TFcroUsuario.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="croDataAlt &gt;= &amp;TFcroDataAlt when not &amp;TFcroDataAlt.IsEmpty();croDataAlt &lt;= &amp;TFcroDataAlt_To when not &amp;TFcroDataAlt_To.IsEmpty()" defaultFilterCondition="croDataAlt &gt;= &amp;TFcroDataAlt when not &amp;TFcroDataAlt.IsEmpty();croDataAlt &lt;= &amp;TFcroDataAlt_To when not &amp;TFcroDataAlt_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-croFeito" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="croFeito.ToLower() like &amp;TFcroFeito.ToLower() when not &amp;TFcroFeito.IsEmpty()" defaultFilterCondition="croFeito.ToLower() like &amp;TFcroFeito.ToLower() when not &amp;TFcroFeito.IsEmpty()" />
+        </grid>
+      </table>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnscronograma</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnscronograma</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

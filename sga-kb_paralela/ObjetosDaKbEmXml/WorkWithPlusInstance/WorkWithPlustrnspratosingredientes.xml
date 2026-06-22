@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="5cef88d9-0d32-42e2-b5ae-099ed43675f3" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-04-16T14:36:20.0000000Z" checksum="8c7f0af32ef45f6f3600287a9802253a" fullyQualifiedName="WorkWithPlustrnspratosingredientes" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5bfcd049-5bce-0a79-01a6-0fa9f6ccea8e" name="WorkWithPlustrnspratosingredientes" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnspratosingredientes" parent="trnspratosingredientes" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnspratosingredientes" defaultSecFuntionKey="WWtrnspratosingredientes" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnspratosingredientes" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnspratosingredientes" SecFuntionKeyINS="WWtrnspratosingredientes_Insert" defaultSecFuntionKeyINS="WWtrnspratosingredientes_Insert" SecFuntionKeyUPD="WWtrnspratosingredientes_Update" defaultSecFuntionKeyUPD="WWtrnspratosingredientes_Update" SecFuntionKeyDLT="WWtrnspratosingredientes_Delete" defaultSecFuntionKeyDLT="WWtrnspratosingredientes_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;pratoCodigo-2;22;pratIngrProdCodigo-2;22;pratIngrProdDescricaoItem-2;22;pratIngrDataCad-2;22;pratIngrDataAlt-2;22;AreEnsCodigo-2;22;AreEnsSequencial-2;22;carGruTurno-2;22;pratIngrQuantidade-2;22;pratIngrStatus-2;22;pratIngrTipoRemessa">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratoCodigo" description="Cadastro de Refeição" defaultDescription="Cadastro de Refeição" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrProdCodigo" description="Ingrediente" defaultDescription="=Attribute.ContextualTitle" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrProdDescricaoItem" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" description="Área" defaultDescription="Áreas Ensino e Etapas" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" conditions="ArenEnsStatus = 'A' and prefCodigo = &amp;prefCodigo;" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSequencial" description="Etapa" defaultDescription="Áreas Ensino e Etapas" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSequencial" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNome" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruTurno" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrQuantidade" description="Percapta" defaultDescription="=Attribute.ContextualTitle" rightText="Atenção! O percapta é com 4 casas decimais. Se percapta é 40 gramas deve informar 0,0400." cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrTipoRemessa" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;pratIngrProdCodigo-4;39;" id="5cef88d9-0d32-42e2-b5ae-099ed43675f3:1" name="trnspratosingredientes">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrProdCodigo" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrProdCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Cadastro de Ingrediente" defaultDescription=" Cadastro de Ingrediente" childrenOrderedList="4;02;Main Table" level="root:trnspratosingredientes" defaultLevel="root:trnspratosingredientes" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <table name="cPainelIngredientes" type="Responsive" includeInPanel="True" panelTitle="Montagem das Refeições por Áreas ">
+          <table name="groupRefeicao" isGroup="True" title="Refeição">
+            <variable name="refeicao" description="Refeição : " dataType="Basic" basicType="VarChar" basicCLength="150" themeClass="ActionGroupGrouped" showDescription="False" descriptionWidth="25%" readOnly="True" />
+          </table>
+          <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+            <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+              <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+                <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                  <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                    <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Export" />
+                    <standardAction popup="True" defaultPopup="True" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="ExportReport" />
+                  </actionGroup>
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="EditColumns" />
+                  <userAction caption="Retornar" name="btnRetorno" />
+                </actionGroup>
+              </table>
+              <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+                <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+                <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                  <orders childrenOrderedList="4;13;=pratIngrProdCodigo.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                    <order childrenOrderedList="4;26;pratIngrProdCodigo;=pratIngrProdCodigo.ContextualTitle" name="=pratIngrProdCodigo.ContextualTitle">
+                      <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrProdCodigo" />
+                    </order>
+                  </orders>
+                  <dynamicFilter childrenOrderedList="4;99;pratIngrProdCodigo">
+                    <filterAttribute name="pratIngrProdCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;pratIngrProdCodigo;LowerThan-4;96;4;99;pratIngrProdCodigo;Equals-4;96;4;99;pratIngrProdCodigo;HigherThan">
+                      <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                    </filterAttribute>
+                    <filterAttribute name="AreEnsEtapaNome" description="Etapa Nome " defaultDescription="=Attribute.Title" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;AreEnsEtapaNome;StartsWith-4;96;4;99;AreEnsEtapaNome;Contains">
+                      <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                      <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    </filterAttribute>
+                  </dynamicFilter>
+                </table>
+              </table>
+            </table>
+            <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+          </table>
+          <grid defaultType="&lt;default&gt;" groupType="Fixed" groupField="AreEnsSequencial" groupCaption="format('Área : %1 ',  AreEnsNome  ) " allowCollapseGroup="True" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;pratoCodigo-4;23;pratIngrProdCodigo-4;23;AreEnsCodigo-4;23;AreEnsSequencial-4;23;carGruTurno-4;23;pratIngrProdDescricaoItem-4;23;pratIngrTipoRemessa-4;23;pratIngrQuantidade-4;23;pratIngrStatus-4;23;pratIngrDataCad-4;23;pratIngrDataAlt">
+            <standardAction name="Update" />
+            <standardAction name="Delete" />
+            <userAction tooltip="Lançamento Multiplo de Per Capta" fontIcon="fas fa-list-alt" ControlType="Image" name="btnLancMultiplo" imageType="Font icon" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrProdCodigo" description="Ingrediente" defaultDescription="=Attribute.ContextualTitle" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';" defaultFilterCondition="pratIngrProdCodigo &gt;= &amp;TFpratIngrProdCodigo when not &amp;TFpratIngrProdCodigo.IsEmpty();pratIngrProdCodigo &lt;= &amp;TFpratIngrProdCodigo_To when not &amp;TFpratIngrProdCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrProdDescricaoItem" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="pratIngrProdDescricaoItem.ToLower() like &amp;TFpratIngrProdDescricaoItem.ToLower() when not &amp;TFpratIngrProdDescricaoItem.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" description="Área" defaultDescription="=Attribute.ColumnTitle" autolink="False" visible="False" controlInfoDef="Based on" controlType="Dynamic Combo Box" defaultCellVisible_E="False" defaultFilterCondition="AreEnsCodigo &gt;= &amp;TFAreEnsCodigo when not &amp;TFAreEnsCodigo.IsEmpty();AreEnsCodigo &lt;= &amp;TFAreEnsCodigo_To when not &amp;TFAreEnsCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSequencial" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" autolink="False" visible="False" controlInfoDef="Based on" controlType="&lt;default&gt;" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-AreEnsSequencial" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNome" defaultCellVisible_E="False" defaultFilterCondition="AreEnsSequencial &gt;= &amp;TFAreEnsSequencial when not &amp;TFAreEnsSequencial.IsEmpty();AreEnsSequencial &lt;= &amp;TFAreEnsSequencial_To when not &amp;TFAreEnsSequencial_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-AreEnsEtapaNome" description="Etapa" visible="True" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-carGruTurno" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="True" defaultCellVisible_E="False" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratoCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="pratoCodigo &gt;= &amp;TFpratoCodigo when not &amp;TFpratoCodigo.IsEmpty();pratoCodigo &lt;= &amp;TFpratoCodigo_To when not &amp;TFpratoCodigo_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrQuantidade" description="Qtdade (percapta)" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="pratIngrQuantidade &gt;= &amp;TFpratIngrQuantidade when not &amp;TFpratIngrQuantidade.IsEmpty();pratIngrQuantidade &lt;= &amp;TFpratIngrQuantidade_To when not &amp;TFpratIngrQuantidade_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="pratIngrDataCad &gt;= &amp;TFpratIngrDataCad when not &amp;TFpratIngrDataCad.IsEmpty();pratIngrDataCad &lt;= &amp;TFpratIngrDataCad_To when not &amp;TFpratIngrDataCad_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="pratIngrDataAlt &gt;= &amp;TFpratIngrDataAlt when not &amp;TFpratIngrDataAlt.IsEmpty();pratIngrDataAlt &lt;= &amp;TFpratIngrDataAlt_To when not &amp;TFpratIngrDataAlt_To.IsEmpty()" />
+            <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-pratIngrTipoRemessa" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="pratIngrTipoRemessa &gt;= &amp;TFpratIngrTipoRemessa when not &amp;TFpratIngrTipoRemessa.IsEmpty();pratIngrTipoRemessa &lt;= &amp;TFpratIngrTipoRemessa_To when not &amp;TFpratIngrTipoRemessa_To.IsEmpty()" defaultFilterCondition="pratIngrTipoRemessa &gt;= &amp;TFpratIngrTipoRemessa when not &amp;TFpratIngrTipoRemessa.IsEmpty();pratIngrTipoRemessa &lt;= &amp;TFpratIngrTipoRemessa_To when not &amp;TFpratIngrTipoRemessa_To.IsEmpty()" />
+          </grid>
+        </table>
+      </table>
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="pratoCodigo" />
+      </parameters>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnspratosingredientes</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnspratosingredientes</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

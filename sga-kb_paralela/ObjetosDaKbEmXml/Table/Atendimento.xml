@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2025-04-16T01:51:35.0000000Z" checksum="9dae06896ce871f55352c331858f706b" fullyQualifiedName="Atendimento" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="c71f006b-4172-4d7e-a4cc-c3719a62e1fd" name="Atendimento" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Atendimento">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="dee034a2-65bd-40fe-a6eb-0bdf954df6a1">AtendimentoCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-04-22T00:03:27.0000000Z" checksum="18c69deb7ed21598e0789f7b8e06cdfc" fullyQualifiedName="IAtendimento" moduleGuid="00000000-0000-0000-0000-000000000000" guid="cb78e525-b3cb-4ff3-aab8-24f22f23d7f4" name="IAtendimento" type="9e750647-3679-0000-0100-2529de263960" description="IAtendimento">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">AtendimentoCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAtendimento</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-04-22T00:03:27.0000000Z" checksum="4eedab18fd923be08b87cee93e7b740b" fullyQualifiedName="IAtendimento1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="9572381c-348e-4ae5-9122-3da50fe5e362" name="IAtendimento1" type="9e750647-3679-0000-0100-2529de263960" description="IAtendimento1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">carGruCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAtendimento1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-04-22T00:03:27.0000000Z" checksum="506a69a3ae00fc72335b1f5bc2802669" fullyQualifiedName="IAtendimento2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="d3b132d7-6b2d-4860-8def-7e475bf78699" name="IAtendimento2" type="9e750647-3679-0000-0100-2529de263960" description="IAtendimento2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">AreEnsCodigo</Member>
+              <Member Order="Ascending">AreEnsSequencial</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAtendimento2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-04-22T00:03:27.0000000Z" checksum="d48499746754fcc4f5dab715e9497345" fullyQualifiedName="IAtendimento3" moduleGuid="00000000-0000-0000-0000-000000000000" guid="850b8a31-ef88-41d6-8f5d-b020b4de4237" name="IAtendimento3" type="9e750647-3679-0000-0100-2529de263960" description="IAtendimento3">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">locCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAtendimento3</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="User" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-04-22T00:03:27.0000000Z" checksum="f000410d61ab6ed6821b71d8a7081c80" fullyQualifiedName="UAtendimento" moduleGuid="00000000-0000-0000-0000-000000000000" guid="c009761d-071b-4af5-b0d7-2e8ced65d860" name="UAtendimento" type="9e750647-3679-0000-0100-2529de263960" description="UAtendimento">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">locCodigo</Member>
+              <Member Order="Ascending">AreEnsCodigo</Member>
+              <Member Order="Ascending">AreEnsSequencial</Member>
+              <Member Order="Ascending">AtendimentoTurno</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>UAtendimento</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Atendimento</Value>
+    </Property>
+  </Properties>
+</Object>

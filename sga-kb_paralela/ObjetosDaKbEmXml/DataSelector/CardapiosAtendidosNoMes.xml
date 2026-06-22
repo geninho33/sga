@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="06be50bc-f023-46c5-aecb-856b093eec03" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-01-31T19:29:11.0000000Z" checksum="2b90bfbbc3e28901ec6ee62c807e8a1c" fullyQualifiedName="CardapiosAtendidosNoMes" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="6b9bbce4-f297-4e17-b3f8-ea8ed91332a3" name="CardapiosAtendidosNoMes" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Cardápios Atendidos no Mês" parent="Movimentacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[carDapMesAno.Month() = &Data.Month();
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno.Year() = &Data.Year();
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoStatus = Status.Ativo;
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="Data">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Data</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Date</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Attribute</Type>
+        <Name>prefCodigo</Name>
+        <Description>Prefeitura</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>Data</Name>
+        <Description>Data</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>CardapiosAtendidosNoMes</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Cardápios Atendidos no Mês</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

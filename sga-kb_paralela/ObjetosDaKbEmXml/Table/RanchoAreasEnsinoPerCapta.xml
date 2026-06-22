@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-03-25T21:23:07.0000000Z" checksum="b37b260824738453fb5a595b1751eb91" fullyQualifiedName="RanchoAreasEnsinoPerCapta" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5782fdac-0898-4727-b10a-7147b03f3c6e" name="RanchoAreasEnsinoPerCapta" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Per Capta">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="519fb050-abcc-44b5-947c-8596dc2a9768">RanchoAno</Item>
+      <Item guid="dd4b67ef-220e-45fc-9ac8-33afc1bec3f1">RanchoMes</Item>
+      <Item guid="eaf11661-e824-4df2-bb58-839f0b47a2d7">RanchoAreasEnsinoCodigo</Item>
+      <Item guid="a8a3f9ac-078c-547a-1fed-1a3fe3041b46">prodCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-14T23:21:14.0000000Z" checksum="48ece4afa785e2941bfcaff0a9f3f846" fullyQualifiedName="IRanchoAreasEnsinoPerCapta" moduleGuid="00000000-0000-0000-0000-000000000000" guid="b367b7e7-85c4-49bc-b7cc-4549817f2ea8" name="IRanchoAreasEnsinoPerCapta" type="9e750647-3679-0000-0100-2529de263960" description="IRancho Areas Ensino Per Capta">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">RanchoAno</Member>
+              <Member Order="Ascending">RanchoMes</Member>
+              <Member Order="Ascending">RanchoAreasEnsinoCodigo</Member>
+              <Member Order="Ascending">prodCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRanchoAreasEnsinoPerCapta</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-14T23:21:14.0000000Z" checksum="95010b2c86c8ed1fc9218dac72f324de" fullyQualifiedName="IRanchoAreasEnsinoPerCapta1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="962da881-5200-4546-b230-96d188583051" name="IRanchoAreasEnsinoPerCapta1" type="9e750647-3679-0000-0100-2529de263960" description="IRancho Areas Ensino Per Capta1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">prodCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRanchoAreasEnsinoPerCapta1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-14T23:21:14.0000000Z" checksum="44003902a2d850151bc4c1b01a8dae4a" fullyQualifiedName="IRanchoAreasEnsinoPerCapta2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="930dc316-ad50-452a-affc-74ee199009af" name="IRanchoAreasEnsinoPerCapta2" type="9e750647-3679-0000-0100-2529de263960" description="IRancho Areas Ensino Per Capta2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">RanchoAno</Member>
+              <Member Order="Ascending">RanchoMes</Member>
+              <Member Order="Ascending">RanchoAreasEnsinoCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRanchoAreasEnsinoPerCapta2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RanchoAreasEnsinoPerCapta</Value>
+    </Property>
+  </Properties>
+</Object>

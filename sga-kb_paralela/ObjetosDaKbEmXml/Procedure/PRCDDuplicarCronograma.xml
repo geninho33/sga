@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-16T04:56:37.0000000Z" lastUpdate="2024-10-16T02:44:42.0000000Z" checksum="86515493c50445c0691cbca11b08773f" fullyQualifiedName="PRCDDuplicarCronograma" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="e4ee25d0-8b41-4da4-b50d-8d65c318a09f" name="PRCDDuplicarCronograma" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Duplicar Cronograma" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[LoadWWPContext.Call(&WWPContext)
+For each
+	where prefCodigo = &prefCodigo
+	where croCodigo  = &croCodigo
+		  &forCodigo      = forCodigo
+		  &croMarca       = croMarca
+		  &prodCodigo     = prodCodigo
+		  &croDtInicial   = croDtInicial
+		  &croDtFinal     = croDtFinal
+		  &croNumeroNota  = croNumeroNota
+		  &croCodigoNew   = PRCDGerarNovoCodigo('cronograma')
+		  &croTipoRemessa = croTipoRemessa
+		  new
+			prefCodigo     = &prefCodigo
+		    forCodigo      = &forCodigo
+			prodCodigo     = &prodCodigo
+			croCodigo      = &croCodigoNew
+			croMarca       = &croMarca
+			croDtInicial   = &croDtInicial
+		    croDtFinal     = &croDtFinal
+			croNumeroNota  = &croNumeroNota
+			croStatus      = 'C'
+			croDataCad     = serverNow()
+			croUsuario     = &WWPContext.UserName
+			croDataAlt     = serverNow()
+			croFeito       = 'N'
+			croRemessa     = 0
+			croTipoRemessa = &croTipoRemessa
+		  endNew
+
+		  For each trnscronogramalocal
+			  where prefCodigo   = &prefCodigo
+			  where croCodigo = &croCodigo
+				  &croLocCodigo  = croLocCodigo
+				  &croLocQtde    = croLocQtde
+				  &croRotaCodigo = croRotaCodigo
+				  &croDia        = croDia
+				  &croHora       = croHora				  
+				  new
+					prefCodigo    = &prefCodigo
+					croCodigo     = &croCodigoNew
+					croLocCodigo  = &croLocCodigo
+					croLocQtde    = &croLocQtde
+					croDia        = &croDia
+					croHora       = &croHora
+					// croRotaCodigo = &croRotaCodigo
+				  endNew
+		endFor
+	  msg('Duplicação realizada com sucesso !')
+endFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&prefCodigo,in:&croCodigo);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="croCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="forCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>forCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Fornecedor</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:forCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croMarca">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croMarca</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Marca</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croMarca</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croDtInicial">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croDtInicial</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>de</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croDtInicial</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croDtFinal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croDtFinal</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>a</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croDtFinal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croNumeroNota">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croNumeroNota</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value> Número Nota</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croNumeroNota</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croCodigoNew">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croCodigoNew</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croLocCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croLocCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croLocCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croLocQtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croLocQtde</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croLocQtde</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croRotaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croRotaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Rota</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croRotaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croTipoRemessa">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croTipoRemessa</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Tipo de Remessa</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croTipoRemessa</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croDia">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croDia</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Dia da Semana</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croDia</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="croHora">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>croHora</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Horário</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:croHora</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDDuplicarCronograma</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Duplicar Cronograma</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

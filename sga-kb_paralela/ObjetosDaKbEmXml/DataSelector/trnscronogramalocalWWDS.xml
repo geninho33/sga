@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="8fa06e04-8e4a-0234-0ae5-7526171c252c" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-25T16:47:18.0000000Z" lastUpdate="2024-10-25T16:36:40.0000000Z" checksum="02c2da2131efd62837e6dc3d8d374eb1" fullyQualifiedName="trnscronogramalocalWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7c1a4c68-281e-4dbd-ac76-bcd65b48d512" name="trnscronogramalocalWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnscronogramalocal WWDS" parent="WorkWithPlustrnscronogramalocal" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croCodigo = &croCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo < &croRotaCodigo1 when &DynamicFiltersSelector1 = !'CROROTACODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &croRotaCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo = &croRotaCodigo1 when &DynamicFiltersSelector1 = !'CROROTACODIGO' AND &DynamicFiltersOperator1 = 1 AND (not &croRotaCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo > &croRotaCodigo1 when &DynamicFiltersSelector1 = !'CROROTACODIGO' AND &DynamicFiltersOperator1 = 2 AND (not &croRotaCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croDia = &croDia1 when &DynamicFiltersSelector1 = !'CRODIA' AND (not &croDia1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora >= &croHora1 when &DynamicFiltersSelector1 = !'CROHORA' AND &DynamicFiltersOperator1 = 0 AND (not &croHora1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora <= &croHora_To1 when &DynamicFiltersSelector1 = !'CROHORA' AND &DynamicFiltersOperator1 = 0 AND (not &croHora_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo < &croRotaCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CROROTACODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &croRotaCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo = &croRotaCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CROROTACODIGO' AND &DynamicFiltersOperator2 = 1 AND (not &croRotaCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo > &croRotaCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CROROTACODIGO' AND &DynamicFiltersOperator2 = 2 AND (not &croRotaCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croDia = &croDia2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CRODIA' AND (not &croDia2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora >= &croHora2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CROHORA' AND &DynamicFiltersOperator2 = 0 AND (not &croHora2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora <= &croHora_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CROHORA' AND &DynamicFiltersOperator2 = 0 AND (not &croHora_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo < &croRotaCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CROROTACODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &croRotaCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo = &croRotaCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CROROTACODIGO' AND &DynamicFiltersOperator3 = 1 AND (not &croRotaCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croRotaCodigo > &croRotaCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CROROTACODIGO' AND &DynamicFiltersOperator3 = 2 AND (not &croRotaCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croDia = &croDia3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CRODIA' AND (not &croDia3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora >= &croHora3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CROHORA' AND &DynamicFiltersOperator3 = 0 AND (not &croHora3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora <= &croHora_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CROHORA' AND &DynamicFiltersOperator3 = 0 AND (not &croHora_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[locDescricao.ToLower() like &TFcroLocCodigo.ToLower() when &TFcroLocCodigo_Sel.IsEmpty() AND (not &TFcroLocCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croLocCodigo = &TFcroLocCodigo_Sel when not &TFcroLocCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croDia in &TFcroDia_Sels when &TFcroDia_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora >= &TFcroHora when not &TFcroHora.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croHora <= &TFcroHora_To when not &TFcroHora_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croProdSaldo >= &TFcroProdSaldo when not &TFcroProdSaldo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croProdSaldo <= &TFcroProdSaldo_To when not &TFcroProdSaldo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croProdQtdeFixo >= &TFcroProdQtdeFixo when not &TFcroProdQtdeFixo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croProdQtdeFixo <= &TFcroProdQtdeFixo_To when not &TFcroProdQtdeFixo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croPreviaEnvio >= &TFcroPreviaEnvio when not &TFcroPreviaEnvio.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croPreviaEnvio <= &TFcroPreviaEnvio_To when not &TFcroPreviaEnvio_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croLocQtde >= &TFcroLocQtde when not &TFcroLocQtde.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[croLocQtde <= &TFcroLocQtde_To when not &TFcroLocQtde_To.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croLocQtde1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croLocQtde1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croLocQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croLocQtde2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croLocQtde2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croLocQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croLocQtde3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croLocQtde3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croLocQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroLocCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroLocCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:locDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroLocCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroLocCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroLocQtde">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroLocQtde</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croLocQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroLocQtde_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroLocQtde_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croLocQtde</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroRotaCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroRotaCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroRotaCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroRotaCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroLocCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroLocCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croLocCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croRotaCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croRotaCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croRotaCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croRotaCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croRotaCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croRotaCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croRotaCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croDia1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croDia1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croDia</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croHora1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croHora1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croHora_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croHora_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croDia2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croDia2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croDia</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croHora2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croHora2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croHora_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croHora_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croDia3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croDia3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croDia</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croHora3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croHora3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="croHora_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>croHora_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroDia_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroDia_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croDia</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroHora">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroHora</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroHora_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroHora_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croHora</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroPreviaEnvio">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroPreviaEnvio</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croPreviaEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroPreviaEnvio_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroPreviaEnvio_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croPreviaEnvio</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroProdSaldo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroProdSaldo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croProdSaldo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroProdSaldo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroProdSaldo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croProdSaldo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroProdQtdeFixo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroProdQtdeFixo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croProdQtdeFixo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcroProdQtdeFixo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcroProdQtdeFixo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:croProdQtdeFixo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croCodigo</Name>
+        <Description>cro Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croRotaCodigo1</Name>
+        <Description>cro Rota Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croDia1</Name>
+        <Description>cro Dia1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croHora1</Name>
+        <Description>cro Hora1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croHora_To1</Name>
+        <Description>cro Hora_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croRotaCodigo2</Name>
+        <Description>cro Rota Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croDia2</Name>
+        <Description>cro Dia2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croHora2</Name>
+        <Description>cro Hora2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croHora_To2</Name>
+        <Description>cro Hora_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croRotaCodigo3</Name>
+        <Description>cro Rota Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croDia3</Name>
+        <Description>cro Dia3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croHora3</Name>
+        <Description>cro Hora3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>croHora_To3</Name>
+        <Description>cro Hora_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroLocCodigo</Name>
+        <Description>TFcro Loc Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroLocCodigo_Sel</Name>
+        <Description>TFcro Loc Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroDia_Sels</Name>
+        <Description>TFcro Dia_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroHora</Name>
+        <Description>TFcro Hora</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroHora_To</Name>
+        <Description>TFcro Hora_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroProdSaldo</Name>
+        <Description>TFcro Prod Saldo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroProdSaldo_To</Name>
+        <Description>TFcro Prod Saldo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroProdQtdeFixo</Name>
+        <Description>TFcro Prod Qtde Fixo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroProdQtdeFixo_To</Name>
+        <Description>TFcro Prod Qtde Fixo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroPreviaEnvio</Name>
+        <Description>TFcro Previa Envio</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroPreviaEnvio_To</Name>
+        <Description>TFcro Previa Envio_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroLocQtde</Name>
+        <Description>TFcro Loc Qtde</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcroLocQtde_To</Name>
+        <Description>TFcro Loc Qtde_To</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscronogramalocalWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnscronogramalocal</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-14T14:19:40.0000000Z" checksum="090d8d5597173c410c37ed61575e406b" fullyQualifiedName="Rancho" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="5c289062-e19e-442d-8098-3be2f43ef889" name="Rancho" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Rancho">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="519fb050-abcc-44b5-947c-8596dc2a9768">RanchoAno</Item>
+      <Item guid="dd4b67ef-220e-45fc-9ac8-33afc1bec3f1">RanchoMes</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-13T15:39:42.0000000Z" checksum="3cba1d1e4795cfa5b53708fa43411bb3" fullyQualifiedName="IRancho" moduleGuid="00000000-0000-0000-0000-000000000000" guid="d1b0771d-21ea-45e8-97ef-a300001d9258" name="IRancho" type="9e750647-3679-0000-0100-2529de263960" description="IRancho">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">RanchoAno</Member>
+              <Member Order="Ascending">RanchoMes</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRancho</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-13T15:39:42.0000000Z" checksum="1bad1e2ec9e1b464b2a3968141a404b8" fullyQualifiedName="IRancho1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="b574a119-2d2d-4756-a893-73efc458eab3" name="IRancho1" type="9e750647-3679-0000-0100-2529de263960" description="IRancho1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRancho1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Rancho</Value>
+    </Property>
+  </Properties>
+</Object>

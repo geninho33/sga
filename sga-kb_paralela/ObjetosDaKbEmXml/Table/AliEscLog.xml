@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-11T03:18:46.0000000Z" checksum="3ac934cdee3e6fd71b92fcd719f67e91" fullyQualifiedName="AliEscLog" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a29075f5-9344-4d37-8f28-9fe9520e0534" name="AliEscLog" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Logs do Sistema">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="1e2fdd87-9365-4661-8719-11eaaf25be4e">AdmLogID</Item>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-11T03:18:46.0000000Z" checksum="215ff77cc02b58c178c327fd3d0d2a25" fullyQualifiedName="IAliEscLog" moduleGuid="00000000-0000-0000-0000-000000000000" guid="f9ecc357-f148-45e1-b304-ebd3e07d88f3" name="IAliEscLog" type="9e750647-3679-0000-0100-2529de263960" description="IAli Esc Log">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">AdmLogID</Member>
+              <Member Order="Ascending">prefCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAliEscLog</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-11T03:18:46.0000000Z" checksum="2d5151345093544feb42c3dc9951cdac" fullyQualifiedName="IAliEscLog1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="99a79edd-c169-4584-8dc7-113fa3af8f7b" name="IAliEscLog1" type="9e750647-3679-0000-0100-2529de263960" description="IAli Esc Log1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IAliEscLog1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>AliEscLog</Value>
+    </Property>
+  </Properties>
+</Object>

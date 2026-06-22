@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-09-04T01:36:44.0000000Z" checksum="3d92e3fd60c723652c7208fc502afe6c" fullyQualifiedName="Romaneio" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="6767fdf3-b57a-4184-bf5a-693ae9331515" name="Romaneio" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Romaneio">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="af3b70bd-c7e4-4f89-89ff-f36a6a3f04e8">romanCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-08-15T11:44:33.0000000Z" checksum="9f58bbe316f3c5df1e829ab9f4263817" fullyQualifiedName="IRomaneio" moduleGuid="00000000-0000-0000-0000-000000000000" guid="5cf2caee-7f3d-4c5e-92f6-372b82920b17" name="IRomaneio" type="9e750647-3679-0000-0100-2529de263960" description="IRomaneio">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">romanCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRomaneio</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-08-15T11:44:33.0000000Z" checksum="a57fe7a092d2589184ff9a53e408c6ea" fullyQualifiedName="IRomaneio1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="94db01e7-d9f3-453b-89ea-5de280c4c0be" name="IRomaneio1" type="9e750647-3679-0000-0100-2529de263960" description="IRomaneio1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">notaCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRomaneio1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-08-15T11:44:33.0000000Z" checksum="35f39c3920844d75302f189572fcd8c7" fullyQualifiedName="IRomaneio2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="aa5d0853-3acf-43b4-8dc5-54c31f4a89da" name="IRomaneio2" type="9e750647-3679-0000-0100-2529de263960" description="IRomaneio2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">forCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IRomaneio2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>Romaneio</Value>
+    </Property>
+  </Properties>
+</Object>

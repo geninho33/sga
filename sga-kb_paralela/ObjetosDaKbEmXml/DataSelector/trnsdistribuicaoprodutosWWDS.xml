@@ -1,0 +1,1404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="637cb111-b8e3-0edc-1a33-bd2b9281ed76" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-06-24T03:49:09.0000000Z" lastUpdate="2025-06-24T01:20:34.0000000Z" checksum="73f66a5672b5225840eb27673d8a4da5" fullyQualifiedName="trnsdistribuicaoprodutosWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7f2c96d0-211b-4a3e-9c3a-c82976774509" name="trnsdistribuicaoprodutosWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsdistribuicaoprodutos WWDS" parent="WorkWithPlustrnsdistribuicaoprodutos" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao.ToLower() like &distProdutoDescricao1.ToLower() when &DynamicFiltersSelector1 = !'DISTPRODUTODESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao.ToLower() like '%' +  &distProdutoDescricao1.ToLower() when &DynamicFiltersSelector1 = !'DISTPRODUTODESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &distProdutoDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData >= &distProdutoDistData1 when &DynamicFiltersSelector1 = !'DISTPRODUTODISTDATA' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoDistData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData <= &distProdutoDistData_To1 when &DynamicFiltersSelector1 = !'DISTPRODUTODISTDATA' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoDistData_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote.ToLower() like &distProdutoLote1.ToLower() when &DynamicFiltersSelector1 = !'DISTPRODUTOLOTE' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoLote1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote.ToLower() like '%' +  &distProdutoLote1.ToLower() when &DynamicFiltersSelector1 = !'DISTPRODUTOLOTE' AND &DynamicFiltersOperator1 = 1 AND (not &distProdutoLote1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino.ToLower() like &distProdutoDisDestino1.ToLower() when &DynamicFiltersSelector1 = !'DISTPRODUTODISDESTINO' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoDisDestino1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino.ToLower() like '%' +  &distProdutoDisDestino1.ToLower() when &DynamicFiltersSelector1 = !'DISTPRODUTODISDESTINO' AND &DynamicFiltersOperator1 = 1 AND (not &distProdutoDisDestino1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade >= &distProdutoValidade1 when &DynamicFiltersSelector1 = !'DISTPRODUTOVALIDADE' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoValidade1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade <= &distProdutoValidade_To1 when &DynamicFiltersSelector1 = !'DISTPRODUTOVALIDADE' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoValidade_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota.ToLower() like &distRota1.ToLower() when &DynamicFiltersSelector1 = !'DISTROTA' AND &DynamicFiltersOperator1 = 0 AND (not &distRota1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota.ToLower() like '%' +  &distRota1.ToLower() when &DynamicFiltersSelector1 = !'DISTROTA' AND &DynamicFiltersOperator1 = 1 AND (not &distRota1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoRemessa = &distProdutoRemessa1 when &DynamicFiltersSelector1 = !'DISTPRODUTOREMESSA' AND &DynamicFiltersOperator1 = 0 AND (not &distProdutoRemessa1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao.ToLower() like &distProdutoDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTODESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao.ToLower() like '%' +  &distProdutoDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTODESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &distProdutoDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData >= &distProdutoDistData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTODISTDATA' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoDistData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData <= &distProdutoDistData_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTODISTDATA' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoDistData_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote.ToLower() like &distProdutoLote2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTOLOTE' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoLote2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote.ToLower() like '%' +  &distProdutoLote2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTOLOTE' AND &DynamicFiltersOperator2 = 1 AND (not &distProdutoLote2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino.ToLower() like &distProdutoDisDestino2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTODISDESTINO' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoDisDestino2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino.ToLower() like '%' +  &distProdutoDisDestino2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTODISDESTINO' AND &DynamicFiltersOperator2 = 1 AND (not &distProdutoDisDestino2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade >= &distProdutoValidade2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTOVALIDADE' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoValidade2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade <= &distProdutoValidade_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTOVALIDADE' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoValidade_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota.ToLower() like &distRota2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTROTA' AND &DynamicFiltersOperator2 = 0 AND (not &distRota2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota.ToLower() like '%' +  &distRota2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTROTA' AND &DynamicFiltersOperator2 = 1 AND (not &distRota2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoRemessa = &distProdutoRemessa2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'DISTPRODUTOREMESSA' AND &DynamicFiltersOperator2 = 0 AND (not &distProdutoRemessa2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao.ToLower() like &distProdutoDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTODESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao.ToLower() like '%' +  &distProdutoDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTODESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &distProdutoDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData >= &distProdutoDistData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTODISTDATA' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoDistData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData <= &distProdutoDistData_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTODISTDATA' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoDistData_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote.ToLower() like &distProdutoLote3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTOLOTE' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoLote3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote.ToLower() like '%' +  &distProdutoLote3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTOLOTE' AND &DynamicFiltersOperator3 = 1 AND (not &distProdutoLote3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino.ToLower() like &distProdutoDisDestino3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTODISDESTINO' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoDisDestino3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino.ToLower() like '%' +  &distProdutoDisDestino3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTODISDESTINO' AND &DynamicFiltersOperator3 = 1 AND (not &distProdutoDisDestino3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade >= &distProdutoValidade3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTOVALIDADE' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoValidade3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade <= &distProdutoValidade_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTOVALIDADE' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoValidade_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota.ToLower() like &distRota3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTROTA' AND &DynamicFiltersOperator3 = 0 AND (not &distRota3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota.ToLower() like '%' +  &distRota3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTROTA' AND &DynamicFiltersOperator3 = 1 AND (not &distRota3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoRemessa = &distProdutoRemessa3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'DISTPRODUTOREMESSA' AND &DynamicFiltersOperator3 = 0 AND (not &distProdutoRemessa3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoRemessa >= &TFdistProdutoRemessa when not &TFdistProdutoRemessa.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoRemessa <= &TFdistProdutoRemessa_To when not &TFdistProdutoRemessa_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distCodigo >= &TFdistCodigo when not &TFdistCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distCodigo <= &TFdistCodigo_To when not &TFdistCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData >= &TFdistProdutoDistData when not &TFdistProdutoDistData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDistData <= &TFdistProdutoDistData_To when not &TFdistProdutoDistData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota.ToLower() like &TFdistRota.ToLower() when &TFdistRota_Sel.IsEmpty() AND (not &TFdistRota.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distRota = &TFdistRota_Sel when not &TFdistRota_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoCodigo >= &TFdistProdutoCodigo when not &TFdistProdutoCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoCodigo <= &TFdistProdutoCodigo_To when not &TFdistProdutoCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao.ToLower() like &TFdistProdutoDescricao.ToLower() when &TFdistProdutoDescricao_Sel.IsEmpty() AND (not &TFdistProdutoDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDescricao = &TFdistProdutoDescricao_Sel when not &TFdistProdutoDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoUN.ToLower() like &TFdistProdutoUN.ToLower() when &TFdistProdutoUN_Sel.IsEmpty() AND (not &TFdistProdutoUN.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoUN = &TFdistProdutoUN_Sel when not &TFdistProdutoUN_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoQuantidade >= &TFdistProdutoQuantidade when not &TFdistProdutoQuantidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoQuantidade <= &TFdistProdutoQuantidade_To when not &TFdistProdutoQuantidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoPesoTotal >= &TFdistProdutoPesoTotal when not &TFdistProdutoPesoTotal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoPesoTotal <= &TFdistProdutoPesoTotal_To when not &TFdistProdutoPesoTotal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade >= &TFdistProdutoValidade when not &TFdistProdutoValidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoValidade <= &TFdistProdutoValidade_To when not &TFdistProdutoValidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote.ToLower() like &TFdistProdutoLote.ToLower() when &TFdistProdutoLote_Sel.IsEmpty() AND (not &TFdistProdutoLote.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoLote = &TFdistProdutoLote_Sel when not &TFdistProdutoLote_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino.ToLower() like &TFdistProdutoDisDestino.ToLower() when &TFdistProdutoDisDestino_Sel.IsEmpty() AND (not &TFdistProdutoDisDestino.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoDisDestino = &TFdistProdutoDisDestino_Sel when not &TFdistProdutoDisDestino_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[distProdutoStatus in &TFdistProdutoStatus_Sels when &TFdistProdutoStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDistData1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDistData1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDistData_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDistData_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoLote1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoLote1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDisDestino1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDisDestino1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDisDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoValidade1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoValidade1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoValidade_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoValidade_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRota1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRota1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDistData2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDistData2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDistData_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDistData_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoLote2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoLote2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDisDestino2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDisDestino2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDisDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoValidade2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoValidade2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoValidade_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoValidade_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRota2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRota2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDistData3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDistData3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDistData_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDistData_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoLote3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoLote3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoDisDestino3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoDisDestino3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDisDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoValidade3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoValidade3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoValidade_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoValidade_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distRota3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distRota3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoDistData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoDistData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoDistData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoDistData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDistData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRota">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRota</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistRota_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistRota_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distRota</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoUN">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoUN</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoUN</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoUN_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoUN_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoUN</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoQuantidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoQuantidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoQuantidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoQuantidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoPesoTotal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoPesoTotal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoPesoTotal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoPesoTotal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoPesoTotal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoValidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoValidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoValidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoValidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoValidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoLote">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoLote</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoLote_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoLote_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoLote</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoDisDestino">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoDisDestino</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDisDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoDisDestino_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoDisDestino_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoDisDestino</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoRemessa1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoRemessa1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoRemessa2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoRemessa2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="distProdutoRemessa3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>distProdutoRemessa3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoRemessa">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoRemessa</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFdistProdutoRemessa_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFdistProdutoRemessa_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:distProdutoRemessa</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDescricao1</Name>
+        <Description>dist Produto Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDistData1</Name>
+        <Description>dist Produto Dist Data1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDistData_To1</Name>
+        <Description>dist Produto Dist Data_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoLote1</Name>
+        <Description>dist Produto Lote1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDisDestino1</Name>
+        <Description>dist Produto Dis Destino1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoValidade1</Name>
+        <Description>dist Produto Validade1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoValidade_To1</Name>
+        <Description>dist Produto Validade_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRota1</Name>
+        <Description>dist Rota1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoRemessa1</Name>
+        <Description>dist Produto Remessa1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDescricao2</Name>
+        <Description>dist Produto Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDistData2</Name>
+        <Description>dist Produto Dist Data2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDistData_To2</Name>
+        <Description>dist Produto Dist Data_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoLote2</Name>
+        <Description>dist Produto Lote2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDisDestino2</Name>
+        <Description>dist Produto Dis Destino2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoValidade2</Name>
+        <Description>dist Produto Validade2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoValidade_To2</Name>
+        <Description>dist Produto Validade_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRota2</Name>
+        <Description>dist Rota2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoRemessa2</Name>
+        <Description>dist Produto Remessa2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDescricao3</Name>
+        <Description>dist Produto Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDistData3</Name>
+        <Description>dist Produto Dist Data3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDistData_To3</Name>
+        <Description>dist Produto Dist Data_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoLote3</Name>
+        <Description>dist Produto Lote3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoDisDestino3</Name>
+        <Description>dist Produto Dis Destino3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoValidade3</Name>
+        <Description>dist Produto Validade3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoValidade_To3</Name>
+        <Description>dist Produto Validade_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distRota3</Name>
+        <Description>dist Rota3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>distProdutoRemessa3</Name>
+        <Description>dist Produto Remessa3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoRemessa</Name>
+        <Description>TFdist Produto Remessa</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoRemessa_To</Name>
+        <Description>TFdist Produto Remessa_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistCodigo</Name>
+        <Description>TFdist Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistCodigo_To</Name>
+        <Description>TFdist Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoDistData</Name>
+        <Description>TFdist Produto Dist Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoDistData_To</Name>
+        <Description>TFdist Produto Dist Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRota</Name>
+        <Description>TFdist Rota</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistRota_Sel</Name>
+        <Description>TFdist Rota_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoCodigo</Name>
+        <Description>TFdist Produto Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoCodigo_To</Name>
+        <Description>TFdist Produto Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoDescricao</Name>
+        <Description>TFdist Produto Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoDescricao_Sel</Name>
+        <Description>TFdist Produto Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoUN</Name>
+        <Description>TFdist Produto UN</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoUN_Sel</Name>
+        <Description>TFdist Produto UN_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoQuantidade</Name>
+        <Description>TFdist Produto Quantidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoQuantidade_To</Name>
+        <Description>TFdist Produto Quantidade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoPesoTotal</Name>
+        <Description>TFdist Produto Peso Total</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoPesoTotal_To</Name>
+        <Description>TFdist Produto Peso Total_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoValidade</Name>
+        <Description>TFdist Produto Validade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoValidade_To</Name>
+        <Description>TFdist Produto Validade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoLote</Name>
+        <Description>TFdist Produto Lote</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoLote_Sel</Name>
+        <Description>TFdist Produto Lote_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoDisDestino</Name>
+        <Description>TFdist Produto Dis Destino</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoDisDestino_Sel</Name>
+        <Description>TFdist Produto Dis Destino_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFdistProdutoStatus_Sels</Name>
+        <Description>TFdist Produto Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicaoprodutosWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsdistribuicaoprodutos</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

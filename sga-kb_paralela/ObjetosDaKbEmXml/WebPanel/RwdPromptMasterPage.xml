@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a676350a-d3a1-4850-9f51-4cef8688b224" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2020-07-06T20:48:14.0000000Z" checksum="8bf4b1795a4e14ba13b5fc6e347fa859" fullyQualifiedName="RwdPromptMasterPage" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="d4f6a8ab-c56c-4613-ba01-36332cfd7f8c" name="RwdPromptMasterPage" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Rwd Prompt Master Page" parent="Web" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="2" version="html:15.0.0;layout:17.11.0"><Form id="2" type="layout"><detail><layout><table controlName="MainTable" class="PromptMainTable" tableType="Responsive"><row><cell><contentholder controlName="ContentHolder" /></cell></row></table></layout></detail></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[Event Start
+	//  Load context (for example, not needed here)
+	//LoadContext(&Context)
+
+	//  Check security (for example, not needed here)
+	//IsAuthorized(ContentHolder.Pgmname, &IsAuthorized)
+	//If not &IsAuthorized
+	//	NotAuthorized(ContentHolder.Pgmname)
+	//Endif
+EndEvent
+
+Event Refresh
+EndEvent
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>RwdPromptMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Rwd Prompt Master Page</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Master</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

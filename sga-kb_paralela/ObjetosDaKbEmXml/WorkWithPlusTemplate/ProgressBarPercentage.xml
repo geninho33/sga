@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="734ffb90-aa9e-498c-a0c5-f9dd598acf6e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-13T14:29:57.0000000Z" checksum="2d562f46a424604f0f62828aebd8e010" fullyQualifiedName="WWPBaseObjects.ProgressBarPercentage" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="94a79d34-fd89-450b-ab40-4012ee7d0747" name="ProgressBarPercentage" type="083f1b21-5715-45e1-8a8d-ceadef141e02" description="Progress Bar Style 2" parent="WWPBaseObjects.Components" parentType="00000000-0000-0000-0000-000000000008">
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>ProgressBarPercentage</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Progress Bar Style 2</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Category</Name>
+      <Value>Progress Indicator</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_CategoryOrder</Name>
+      <Value>0</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Type</Name>
+      <Value>Component</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_TemplateXml</Name>
+      <Value>&lt;component Name="ProgressBarPercentage"&gt;      &lt;table name="TableMain" type="Responsive" cellThemeClass="CellPaddingRight30" editProps="themeClass:Progress borders style:::\mRounded-ProgressBarNotRounded\mNot Rounded"&gt;         &lt;table name="TableProgressTotal" type="Flex" flexJustifyContent="Flex End" cellThemeClass="CellMarginBottom10"&gt;            &lt;textBlock controlName="TxtProgress" caption="Progress" themeClass="CardTitle" /&gt;            &lt;variable name="Percentage" previewExampleText="83%" themeClass="CardTitle" showDescription="False" flexGrow="0" domain="00972a17-9975-449e-aab1-d26165d51393-WWPBaseObjects.WWPPercentage" readOnly="True" /&gt;         &lt;/table&gt;         &lt;userControl controlName="ProgressBar" ucName="DVelop.GXBootstrap.DVProgressIndicator" ucProperties="Type:Bar,Cls:ProgressBar ProgressBarRounded,Percentage:83" cellThemeClass="ProgressBarWidthNormal" editProps="UCP\gCls:Progress bar color:::ProgressBar\mBase color-ProgressBar ProgressBarWarning\mWarning-ProgressBar ProgressBarDanger\mDanger-ProgressBar ProgressBarInfo\mInfo-ProgressBar ProgressBarInfoLight\mInfo light-ProgressBar ProgressBarSuccess\mSuccess;cellThemeClass:Progress bar width:::ProgressBarWidthNormal\mNormal-ProgressBarWidthThin\mThin" /&gt;      &lt;/table&gt;      &lt;events&gt;         &lt;eventBlock BlockName="AssignProgressUCValue" WrappingTag="" code="&amp;lt;COMP_NAME&amp;gt;_ProgressBar.Percentage = &amp;amp;&amp;lt;COMP_NAME&amp;gt;_Percentage" DelBlock="Include" AddToInstanceByDefault="False" EventName="Start" /&gt;      &lt;/events&gt;      &lt;variables /&gt;   &lt;/component&gt;</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_InstanceType</Name>
+      <Value>WebPanel</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_PreviewImage</Name>
+      <Value>data:image/octet-stream;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAASCAYAAABy+8PSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASkSURBVHhe7ZhfaB1FFMavFKsVVAS1ovgHX1QUQaqVYEVFmyb1GsTu7uzMmdm9f5LbJFBDSaWpJkaxFJWgFak2taWk0VpbogmihoqRmtYHC32xL0If+paHmBuCl2iT24zfbG+kYiVX8OEq54OP3ZmdObv34XfOmZsKpFlHUaYv1FF3GJoHUiwWq2allLrOJ+qRcfYjnyLt5gKt7wtNvBPX7WEYrlRxvEpS9GIURbd4OrNWCHo8FSh6T1D0cWDizkDpcYC/Hhs2hGRyWusbBcVPUpztEkSPuqC+7y8PKGqWZNql1s+EYXS/L80aYWITSP1sHMdX+mRiX+ktvm9uc3uEUo34kE585J1JDKIA7+zw/fgmN2axWNUpVPS6UOawNKZOkD6OexOQHhY6zgfKvCu0HgzI9GN8MNBmxCc9Joy5BxDqtwH1JjfAg++w6X1B5hcAvzdwVV6ZE1LH+5AETgoVNeK6HcF/cMFCin4WknowdwTJ4Czg3oz7N92HuLi4fuqgx/33iPkOxh9gzfP4wGOY24139LvEUPkNLBZrCYGbvONKZ/NZsDTqSbnaQ+UODAo0RUNSUntI5Emd2QPmzoLf1mRjCDBVFJ8EzEcQpBAQbUSgQfcM0A+FIQUX7qkdGeMrgPztYmVOYCbzMtYPeEKJZI70aQe7r0wLnh1DQtiUJA2AjoQSK2WeQtxDQkd9SBS6UChc7vaxWKyl5bppMDYuTdTvKjq4fMjNg7Uu8PWjh0SQrFPqETw/Fahom5Tx3Q7WXai6XWjJl7kFriUPJO1NFkuzHwHeCMP8yqQdQLUHpF+i9Y6FyNyK8aiQpkcoGvCImhoaGq7AuhOYe8WjyEPbcNzTug1Qb02AR5JwRwJ0BlvQQbwkpB5zZw73LhaLtbRQbEfQnrcl96QPgKd+XPcIEd+BI3cWR+IvPG/zCnA9iGp+RmiDVl4fwEbdjUO9TKJAqM4KoO5I7gXaedKfUzb/GTZ8IqW8Hs/TgP8beACgn0ZHsA3n99fwgvrK/rRrIZTJHUTs3ueUuh1zu6N88z7A/lao9cOuAzDZlv1IMDu4dWexqhe64CZwN0ZR5jDYHEaBvQu8viBNfBSF82vHH87vjyEh7Exa+Cg+5BhPeZ63wvd7l1fiJH+2pdOFqypDN16Wy+VurgxTF87Ypsu1DCGqO7JLwe25uAUnomv8+E9/tF3mzhGLXYNbH14Uk8ViVS/Hloyi1Y7dylTKy2ZvWOyOm3K5qxd5dGsXuftHci9AWzCKM/0ptOC7fL9wbeURi8X6P8miQvsFBpzFYrFYLBaLxWKxWKx/W/Ovtj2x0NqYXmiuZ7PZ1VjUpUsjH6aLv82ni8ViTbpUKqUnJycfTCCf623tth0brG1PW9v2NJvNrsZmjbVHh+y8tbZcLtekFxYW7Ozs7Lnp6elMynZ41ubWWptfx2azq3VYZ38dHrTFufMWINWcUdETA3Q7NTVVTNmWhkv/EDab/fcG6LMAfepc+Q+oatGAPIE9db5TTtt8Pao6fKkfxGaz/+r/COiuhcf1p9RcX9eq8lZzxm5cz7Cz2dW6xkF37fvMzIwtlUrjExMT9/4Ou5ScMo6WXO8AAAAASUVORK5CYII=</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="309b4a01-d415-4e9a-a955-9c65382062a3" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-07T03:36:24.0000000Z" checksum="af6449abf219d94019c4c8d76559465c" fullyQualifiedName="trnsprefeituras" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="f3df5e82-787d-93ce-65ee-cd7b54a33907" name="trnsprefeituras" type="19abc6ff-2cd2-0000-0006-6d172bc2333b" description="trnsprefeituras" parent="Transacoes" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="19abc6ff-2cd2-1000-0006-6d172bc2333b">
+    <Attributes>
+      <DataViewAttribute InternalName="usuPrefeitura" ExternalName="prefCodigo" />
+      <DataViewAttribute InternalName="prefNome" ExternalName="prefNome" />
+      <DataViewAttribute InternalName="prefCNPJ" ExternalName="prefCNPJ" />
+      <DataViewAttribute InternalName="prefEndereco" ExternalName="prefEndereco" />
+      <DataViewAttribute InternalName="prefComplemento" ExternalName="prefComplemento" />
+      <DataViewAttribute InternalName="prefBairro" ExternalName="prefBairro" />
+      <DataViewAttribute InternalName="PrefMunicipio" ExternalName="PrefMunicipio" />
+      <DataViewAttribute InternalName="prefCodigoIbge" ExternalName="prefCodigoIbge" />
+      <DataViewAttribute InternalName="prefEstado" ExternalName="prefEstado" />
+      <DataViewAttribute InternalName="prefCep" ExternalName="prefCep" />
+      <DataViewAttribute InternalName="prefTelefone" ExternalName="prefTelefone" />
+      <DataViewAttribute InternalName="prefContato" ExternalName="prefContato" />
+      <DataViewAttribute InternalName="prefNomeEmail" ExternalName="prefNomeEmail" />
+      <DataViewAttribute InternalName="prefEmail" ExternalName="prefEmail" />
+      <DataViewAttribute InternalName="prefForma_gestao" ExternalName="prefForma_gestao" />
+      <DataViewAttribute InternalName="prefTitular" ExternalName="prefTitular" />
+      <DataViewAttribute InternalName="prefStatus" ExternalName="prefStatus" />
+      <DataViewAttribute InternalName="prefDataCad" ExternalName="prefDataCad" />
+      <DataViewAttribute InternalName="prefDataAlt" ExternalName="prefDataAlt" />
+      <DataViewAttribute InternalName="prefLogo" ExternalName="" />
+    </Attributes>
+    <Platforms>
+      <DataViewStructurePlatform Dbms="18">
+        <PlatformProperties>
+          <Properties>
+            <Property>
+              <Name>NAME</Name>
+              <Value>trnsprefeituras</Value>
+            </Property>
+            <Property>
+              <Name>SCHEMA</Name>
+              <Value>sgegae</Value>
+            </Property>
+          </Properties>
+        </PlatformProperties>
+      </DataViewStructurePlatform>
+    </Platforms>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="7706bd3b-212a-1000-0006-8aaeb59068b9">
+    <Indexes>
+      <Object Type="Unique" parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-07T14:35:31.0000000Z" checksum="28076891d1ed1bea9ef3b1aa20425087" fullyQualifiedName="PRIMARY2" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a64c4b35-689a-3862-e7d5-9f252a708450" name="PRIMARY2" type="fc1b76c4-95c5-0000-0101-44f9543121bd" description="">
+        <Platforms>
+          <DataViewIndexesPlatform Dbms="18">
+            <PlatformProperties>
+              <Properties>
+                <Property>
+                  <Name>NAME</Name>
+                  <Value>PRIMARY</Value>
+                </Property>
+                <Property>
+                  <Name>SCHEMA</Name>
+                  <Value>sgegae</Value>
+                </Property>
+              </Properties>
+            </PlatformProperties>
+          </DataViewIndexesPlatform>
+        </Platforms>
+        <Part type="fe47b55c-ea2a-1000-0101-5b38901e24f7">
+          <Members>
+            <Member Order="Ascending">usuPrefeitura</Member>
+          </Members>
+          <Properties />
+        </Part>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>PRIMARY2</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value />
+          </Property>
+        </Properties>
+      </Object>
+      <Object Type="Duplicate" parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-10-07T14:35:31.0000000Z" checksum="c131393d01fb97aac407daf58a1c3184" fullyQualifiedName="idx_prefeituras_1" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2373adde-c3d4-c767-a2c1-263e9d788aa0" name="idx_prefeituras_1" type="fc1b76c4-95c5-0000-0101-44f9543121bd" description="">
+        <Platforms>
+          <DataViewIndexesPlatform Dbms="18">
+            <PlatformProperties>
+              <Properties>
+                <Property>
+                  <Name>NAME</Name>
+                  <Value>idx_prefeituras_1</Value>
+                </Property>
+                <Property>
+                  <Name>SCHEMA</Name>
+                  <Value>sgegae</Value>
+                </Property>
+              </Properties>
+            </PlatformProperties>
+          </DataViewIndexesPlatform>
+        </Platforms>
+        <Part type="fe47b55c-ea2a-1000-0101-5b38901e24f7">
+          <Members>
+            <Member Order="Ascending">prefNomeEmail</Member>
+          </Members>
+          <Properties />
+        </Part>
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>idx_prefeituras_1</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value />
+          </Property>
+        </Properties>
+      </Object>
+    </Indexes>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsprefeituras</Value>
+    </Property>
+    <Property>
+      <Name>DVDataStore</Name>
+      <Value>dsDataViews</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="8171fb26-6c9d-4dc5-8303-17176f70804d" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-08T14:09:06.0000000Z" lastUpdate="2024-08-08T23:42:25.0000000Z" checksum="77a0c6d60a6d1bd78294544cd419f5b7" fullyQualifiedName="WorkWithPlustrnsnota" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8662a3b6-3a61-055e-370b-11204d8a1f30" name="WorkWithPlustrnsnota" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnsnota" parent="trnsnota" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" afterInsert="&lt;default&gt;" SecFuntionKey="WWtrnsnota" defaultSecFuntionKey="WWtrnsnota" type="WebPanel">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsnota" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsnota" SecFuntionKeyINS="WWtrnsnota_Insert" defaultSecFuntionKeyINS="WWtrnsnota_Insert" SecFuntionKeyUPD="WWtrnsnota_Update" defaultSecFuntionKeyUPD="WWtrnsnota_Update" SecFuntionKeyDLT="WWtrnsnota_Delete" defaultSecFuntionKeyDLT="WWtrnsnota_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;prefCodigo-2;22;notaCodigo-2;22;notaNumero-2;22;notaSerie-2;22;notaProgCodigo-2;22;notaData-2;22;notaFornecedor-2;22;notaLocal-2;22;notaUserName-2;22;notaDataCadastro-2;22;notaDataAlteracao-2;22;notaTotal-2;22;notaStatus-2;22;notaDsCancelamento">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="Prefeitura" defaultDescription="Prefeitura" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visibleCondition="notaCodigo&lt;&gt;0" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaSerie" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaProgCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaData" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaFornecedor" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" controlInfoDef="Custom" controlType="DVelop Combo" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-forNome" conditions="prefCodigo = &amp;prefCodigo and forStatus = 'A';" controlEmptyItem="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaLocal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="True" controlInfoDef="Based on" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locaCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locaDescricao" conditions="locTipoUnidade = 1;" controlEmptyItem="True" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" EditSecFuntionKey="&lt;default&gt;" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaUserName" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaDataCadastro" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaDataAlteracao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaTotal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" controlInfoDef="Custom" controlType="Combo Box" controlValues="Sim:S,Não:N" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;notaNumero-4;39;-5;41;" id="8171fb26-6c9d-4dc5-8303-17176f70804d:1" name="trnsnota">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaNumero" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-notaNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description=" Lançamento de Nota de Compra" defaultDescription=" Lançamento de Nota de Compra" childrenOrderedList="4;02;Main Table" level="root:trnsnota" defaultLevel="root:trnsnota" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+                <userAction caption="Ajuda" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WPAjuda" popup="True" ControlType="Button" imageType="Font icon" fontIcon="fas fa-info" tooltip="" name="btnAjuda" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=notaNumero.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;notaNumero;=notaNumero.ContextualTitle" name="=notaNumero.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" />
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaCodigo" ascending="False" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;notaNumero">
+                  <filterAttribute name="notaNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;notaNumero;StartsWith-4;96;4;99;notaNumero;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                  <filterAttribute name="notaData" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;notaData;Past-4;96;4;99;notaData;Today-4;96;4;99;notaData;InTheFuture-4;96;4;99;notaData;RangePicker">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="RangePicker" defaultPredefinedOperator="RangePicker" />
+                  </filterAttribute>
+                  <filterAttribute name="notaStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" allValue="True" defaultAllValue="True" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;notaStatus;Equals-4;96;4;99;notaStatus;NotEquals">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                  <filterAttribute name="notaFornecedorNome" description="Fornecedor" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;notaFornecedorNome;StartsWith-4;96;4;99;notaFornecedorNome;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" conditionalFormatting="0;notaStatus = 'C':Warning:" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;notaCodigo-4;23;notaNumero-4;23;notaSerie-4;23;notaData-4;23;notaProgCodigo-4;23;notaFornecedor-4;23;notaLocal-4;23;notaUserName-4;23;notaDataCadastro-4;23;notaDataAlteracao-4;23;notaStatus-4;23;notaDsCancelamento-4;23;notaTotal">
+          <standardAction name="Update" condition="notaStatus&lt;&gt;'C'" />
+          <standardAction name="Delete" condition="notaStatus&lt;&gt;'C'" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" />
+          <userAction tooltip="Itens da NF" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-DDOOptionSortDSC" fontIcon="fas fa-tasks" ControlType="Image" name="UserActionItens" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-trnsnotaitensWW" imageType="Font icon">
+            <parameters>
+              <parameter name="prefCodigo" />
+              <parameter name="notaCodigo" />
+              <parameter name="notaLocal" />
+            </parameters>
+          </userAction>
+          <userAction tooltip="Cancelar NF" fontIcon="fas fa-ban" caption="Cancelar nota" ControlType="Image" name="btnCancelar" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-trnsnotaCancelar" imageType="Font icon" condition="notaStatus&lt;&gt;'C'">
+            <parameters>
+              <parameter name="prefCodigo" />
+              <parameter name="notaCodigo" />
+            </parameters>
+          </userAction>
+          <userAction tooltip="Imprimir Comprovante" fontIcon="fas fa-print" ControlType="Image" name="btnImprimir" gxobject="84a12160-f59b-4ad7-a683-ea4481ac23e9-PRINTNotaFiscalCompra" imageType="Font icon" condition="notaStatus&lt;&gt;'C'" popup="True">
+            <parameters>
+              <parameter name="notaCodigo" />
+            </parameters>
+          </userAction>
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-prefCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ColumnTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="prefCodigo &gt;= &amp;TFprefCodigo when not &amp;TFprefCodigo.IsEmpty();prefCodigo &lt;= &amp;TFprefCodigo_To when not &amp;TFprefCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="notaCodigo &gt;= &amp;TFnotaCodigo when not &amp;TFnotaCodigo.IsEmpty();notaCodigo &lt;= &amp;TFnotaCodigo_To when not &amp;TFnotaCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" defaultFilterCondition="notaNumero.ToLower() like &amp;TFnotaNumero.ToLower() when not &amp;TFnotaNumero.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaSerie" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="notaSerie.ToLower() like &amp;TFnotaSerie.ToLower() when not &amp;TFnotaSerie.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaData" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="notaData &gt;= &amp;TFnotaData when not &amp;TFnotaData.IsEmpty();notaData &lt;= &amp;TFnotaData_To when not &amp;TFnotaData_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaFornecedor" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" defaultCellVisible_E="False" defaultFilterCondition="notaFornecedor &gt;= &amp;TFnotaFornecedor when not &amp;TFnotaFornecedor.IsEmpty();notaFornecedor &lt;= &amp;TFnotaFornecedor_To when not &amp;TFnotaFornecedor_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaFornecedorNome" description="Fornecedor" autolink="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaLocal" description="Local ( Destino )" defaultDescription="=Attribute.ContextualTitle" visible="False" controlInfoDef="Based on" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-locaCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locaDescricao" defaultCellVisible_E="False" defaultFilterCondition="notaLocal &gt;= &amp;TFnotaLocal when not &amp;TFnotaLocal.IsEmpty();notaLocal &lt;= &amp;TFnotaLocal_To when not &amp;TFnotaLocal_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaUserName" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="notaUserName.ToLower() like &amp;TFnotaUserName.ToLower() when not &amp;TFnotaUserName.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaDataCadastro" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="notaDataCadastro &gt;= &amp;TFnotaDataCadastro when not &amp;TFnotaDataCadastro.IsEmpty();notaDataCadastro &lt;= &amp;TFnotaDataCadastro_To when not &amp;TFnotaDataCadastro_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaDataAlteracao" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" visible="False" defaultCellVisible_E="False" defaultFilterCondition="notaDataAlteracao &gt;= &amp;TFnotaDataAlteracao when not &amp;TFnotaDataAlteracao.IsEmpty();notaDataAlteracao &lt;= &amp;TFnotaDataAlteracao_To when not &amp;TFnotaDataAlteracao_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaTotal" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" defaultCellVisible_E="False" defaultFilterCondition="notaTotal &gt;= &amp;TFnotaTotal when not &amp;TFnotaTotal.IsEmpty();notaTotal &lt;= &amp;TFnotaTotal_To when not &amp;TFnotaTotal_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-notaStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" controlInfoDef="Custom" controlType="Combo Box" controlValues="Ativo:A,Inativo:I,Cancelada:C" defaultCellVisible_E="False" />
+        </grid>
+      </table>
+    </selection>
+    <view childrenOrderedList="5;14;prefCodigo;5;41;-5;14;notaCodigo;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="notaNumero.ToString()" defaultCaption="notaNumero.ToString()">
+      <parameters>
+        <parameter name="prefCodigo" />
+        <parameter name="notaCodigo" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsnotaGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Lançamento de Nota de Compra" defaultCaption="Ir a Lançamento de Nota de Compra" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsnotaGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsnotaGeneral;42;General-trnsnotatrnsnotaitensWC;43;trnsnotaitens-trnsnotaRomaneioWC;43;Romaneio">
+        <tabularTab childrenOrderedList="trnsnotaGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsnotaGeneral" defaultWcname="trnsnotaGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsnotaGeneral;126;-trnsnotaGeneral;88;Actions">
+            <transactionDetailData />
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsnotaGeneral;91;Update-trnsnotaGeneral;91;Delete">
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsnota</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsnota</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:19:00.0000000Z" checksum="32329e25f9b8b1fd40543a44597801c5" fullyQualifiedName="WWP_Notification" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="4635d5cf-3c45-4bd9-894b-b1f31b7a69db" name="WWP_Notification" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="WWP_Notification">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="0aebfcc2-e972-4c17-b7fe-da0654c284e4">WWPNotificationId</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="87f5aaac6733f691a2faecd7bd809cf3" fullyQualifiedName="IWWP_Notification" moduleGuid="00000000-0000-0000-0000-000000000000" guid="dd9b302a-59f8-408e-8b08-e290e1e8a0fa" name="IWWP_Notification" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Notification">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPNotificationId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Notification</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="bd7038202a5175704a170767e545aad6" fullyQualifiedName="IWWP_Notification1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="1dcbb72e-623e-4cc9-b177-d67fdb157e6c" name="IWWP_Notification1" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Notification1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPUserExtendedId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Notification1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-09-10T03:14:22.0000000Z" checksum="5fb129801ef094fd049ee56425b73283" fullyQualifiedName="IWWP_Notification2" moduleGuid="00000000-0000-0000-0000-000000000000" guid="bd79e355-40bf-4f5e-a528-d8055cee5d47" name="IWWP_Notification2" type="9e750647-3679-0000-0100-2529de263960" description="IWWP_Notification2">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">WWPNotificationDefinitionId</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IWWP_Notification2</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_Notification</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>WWP_Notification</Value>
+    </Property>
+  </Properties>
+</Object>

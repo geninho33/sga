@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="2364619e-dace-47cb-bbc0-0fe43878680b" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-06-17T12:18:49.0000000Z" lastUpdate="2024-06-17T01:10:38.0000000Z" checksum="2b14eccff8b1bd47ac872659e0f2d3f1" fullyQualifiedName="WorkWithPlusWPCompraRemessaDistribuicao" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2477390e-8c32-0f50-0fc8-09d31a82f776" name="WorkWithPlusWPCompraRemessaDistribuicao" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPCompra Remessa Distribuicao" parent="WPCompraRemessaDistribuicao" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table-7;14;&amp;prefCodigo;7;57;-7;14;&amp;remCodigo;7;57;" Template="Empty" formThemeClass="Form" defaultFormThemeClass="Form">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent-7;66;tableGeracaoRemessa">
+      <errorViewer />
+      <table name="TableContent" numberOfColumns="1" type="Responsive" defaultType="Responsive" align="Left" />
+      <table name="tableEmissao" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="Informe a opção abaixo : " defaultPanelTitle="Geração de Remessa" cellWidth_E="100%" defaultCellWidth_E="83%" cellWidth_S="100%" defaultCellWidth_S="83%" cellWidth_M="100%" defaultCellWidth_M="83%" cellWidth_L="100%" defaultCellWidth_L="83%" childrenOrderedList="7;09;remCodigo-7;09;remCadastro-7;09;locCodigo-7;66;grupoPeriodo-7;19;btnRetornar">
+        <table numberOfColumns="1" cellWidth_E="75%" cellWidth_S="75%" align="Center">
+          <textBlock controlName="textoAbertura" caption="Emissão" themeClass="DashboardInfo" format="HTML" />
+        </table>
+        <variable name="remCodigo" description="Remessa Código" defaultDescription="Remessa Código" domain="adbb33c9-0906-4971-833c-998de27e0676-remCodigo" defaultDomain="adbb33c9-0906-4971-833c-998de27e0676-remCodigo" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" descriptionWidth="17%" readOnly="True" defaultReadOnly="True" />
+        <variable name="remCadastro" description="Mês e Ano " defaultDescription="Mês e Ano " dataType="Basic" defaultDataType="Basic" basicType="Character" defaultBasicType="Character" basicCLength="7" defaultBasicCLength="7" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Edit" defaultControlType="Edit" descriptionWidth="17%" readOnly="True" defaultReadOnly="True" />
+        <variable name="locCodigo" description="Local de Origem" defaultDescription="Local de Origem" domain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" controlInfoDef="Custom" defaultControlInfoDef="Custom" controlType="Dynamic Combo Box" defaultControlType="Dynamic Combo Box" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-locDescricao" conditions="prefCodigo=&amp;prefCodigo;&#xA;" defaultConditions="prefCodigo=&amp;prefCodigo;&#xA;" customProperties="ControlItemValues=locCodigo" defaultCustomProperties="ControlItemValues=locCodigo" descriptionWidth="17%" readOnly="True" defaultReadOnly="True" />
+        <variable name="disTipNumero" description="Tipo de Remessa" dataType="Basic" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-disTipNumero" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-disTipDescricao" conditions="prefCodigo=&amp;prefCodigo;&#xD;&#xA;disTipStatus='A';" controlEmptyItem="False" descriptionWidth="17%" />
+        <variable name="rotaCodigo" description="Rota" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-rotaCodigo" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-rotaCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-rotaDescricao" conditions="prefCodigo = &amp;prefCodigo;&#xD;&#xA;rotaStatus = 'A';" controlEmptyItem="True" descriptionWidth="17%" />
+        <variable name="AreEnsCodigo" description="Área de Ensino" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-AreEnsCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-AreEnsNome" conditions="prefCodigo = &amp;prefCodigo and AreEnsStatus = 'A';" controlEmptyItem="True" descriptionWidth="17%" />
+        <table name="grupoPeriodo" isGroup="True" defaultIsGroup="True" type="Responsive" defaultType="Responsive" title="Período  " defaultTitle="Período  " groupControlName="" defaultGroupControlName="" groupThemeClass="Group" defaultGroupThemeClass="Group" cellWidth_E="75%" defaultCellWidth_E="75%" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="7;66;tableSemana1-7;66;tableSemana2-7;66;tableSemana3-7;66;tableSemana4-7;66;tableSemana5">
+          <table name="tableSemana1" numberOfColumns="3" defaultNumberOfColumns="3" type="Responsive" defaultType="Responsive" cellWidth_E="50%" defaultCellWidth_E="50%" cellWidth_S="50%" defaultCellWidth_S="50%" childrenOrderedList="7;66;-7;09;periodoSemana1Fim-7;19;btnGerarSemana1">
+            <table name="" numberOfColumns="2" defaultNumberOfColumns="2" type="Responsive" defaultType="Responsive" childrenOrderedList="7;27;TextBlockperiodoSemana1Ini-7;09;periodoSemana1Ini">
+              <textBlock controlName="TextBlockperiodoSemana1Ini" caption="1ª" defaultCaption="1ª" themeClass="Label" defaultThemeClass="Label" cellThemeClass="MergeLabelCell CellWidth_6_25" defaultCellThemeClass="MergeLabelCell CellWidth_6_25" />
+              <variable name="periodoSemana1Ini" description="periodo Semana1 Ini" defaultDescription="periodo Semana1 Ini" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" cellThemeClass="CellWidth_93_75" defaultCellThemeClass="CellWidth_93_75" showDescription="False" defaultShowDescription="False" readOnly="True" defaultReadOnly="True" />
+            </table>
+            <variable name="periodoSemana1Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" readOnly="True" defaultReadOnly="True" />
+            <userAction caption="Emissão" defaultCaption="Gerar" buttonClass="Button" defaultButtonClass="Button" name="btnGerarSemana1" />
+          </table>
+          <table name="tableSemana2" numberOfColumns="3" defaultNumberOfColumns="3" visibleCondition="not &amp;periodoSemana2Ini.isEmpty()" type="Responsive" defaultType="Responsive" cellWidth_E="50%" defaultCellWidth_E="50%" cellWidth_S="50%" defaultCellWidth_S="50%" childrenOrderedList="7;66;-7;09;periodoSemana2Fim-7;19;btnGerarSemana2">
+            <table name="" numberOfColumns="2" defaultNumberOfColumns="2" type="Responsive" defaultType="Responsive" childrenOrderedList="7;27;TextBlockperiodoSemana2Ini-7;09;periodoSemana2Ini">
+              <textBlock controlName="TextBlockperiodoSemana2Ini" caption="2ª" defaultCaption="2ª" themeClass="Label" defaultThemeClass="Label" cellThemeClass="MergeLabelCell CellWidth_6_25" defaultCellThemeClass="MergeLabelCell CellWidth_6_25" />
+              <variable name="periodoSemana2Ini" description="periodo Semana2 Ini" defaultDescription="periodo Semana2 Ini" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" cellThemeClass="CellWidth_93_75" defaultCellThemeClass="CellWidth_93_75" showDescription="False" defaultShowDescription="False" readOnly="True" defaultReadOnly="True" />
+            </table>
+            <variable name="periodoSemana2Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" readOnly="True" defaultReadOnly="True" />
+            <userAction caption="Emissão" defaultCaption="Gerar" buttonClass="Button" defaultButtonClass="Button" name="btnGerarSemana2" />
+          </table>
+          <table name="tableSemana3" numberOfColumns="3" defaultNumberOfColumns="3" visibleCondition="not &amp;periodoSemana3Ini.isEmpty()" type="Responsive" defaultType="Responsive" cellWidth_E="50%" defaultCellWidth_E="50%" cellWidth_S="50%" defaultCellWidth_S="50%" childrenOrderedList="7;66;-7;09;periodoSemana3Fim-7;19;btnGerarSemana3">
+            <table name="" numberOfColumns="2" defaultNumberOfColumns="2" type="Responsive" defaultType="Responsive" childrenOrderedList="7;27;TextBlockperiodoSemana3Ini-7;09;periodoSemana3Ini">
+              <textBlock controlName="TextBlockperiodoSemana3Ini" caption="3ª" defaultCaption="3ª" themeClass="Label" defaultThemeClass="Label" cellThemeClass="MergeLabelCell CellWidth_6_25" defaultCellThemeClass="MergeLabelCell CellWidth_6_25" />
+              <variable name="periodoSemana3Ini" description="periodo Semana3 Ini" defaultDescription="periodo Semana3 Ini" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" cellThemeClass="CellWidth_93_75" defaultCellThemeClass="CellWidth_93_75" showDescription="False" defaultShowDescription="False" readOnly="True" defaultReadOnly="True" />
+            </table>
+            <variable name="periodoSemana3Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" readOnly="True" defaultReadOnly="True" />
+            <userAction caption="Emissão" defaultCaption="Gerar" buttonClass="Button" defaultButtonClass="Button" name="btnGerarSemana3" />
+          </table>
+          <table name="tableSemana4" numberOfColumns="3" defaultNumberOfColumns="3" visibleCondition="not &amp;periodoSemana4Ini.isEmpty()" type="Responsive" defaultType="Responsive" cellWidth_E="50%" defaultCellWidth_E="50%" cellWidth_S="50%" defaultCellWidth_S="50%" childrenOrderedList="7;66;-7;09;periodoSemana4Fim-7;19;btnGerarSemana4">
+            <table name="" numberOfColumns="2" defaultNumberOfColumns="2" type="Responsive" defaultType="Responsive" childrenOrderedList="7;27;TextBlockperiodoSemana4Ini-7;09;periodoSemana4Ini">
+              <textBlock controlName="TextBlockperiodoSemana4Ini" caption="4ª" defaultCaption="4ª" themeClass="Label" defaultThemeClass="Label" cellThemeClass="MergeLabelCell CellWidth_6_25" defaultCellThemeClass="MergeLabelCell CellWidth_6_25" />
+              <variable name="periodoSemana4Ini" description="periodo Semana4 Ini" defaultDescription="periodo Semana4 Ini" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" cellThemeClass="CellWidth_93_75" defaultCellThemeClass="CellWidth_93_75" showDescription="False" defaultShowDescription="False" readOnly="True" defaultReadOnly="True" />
+            </table>
+            <variable name="periodoSemana4Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" readOnly="True" defaultReadOnly="True" />
+            <userAction caption="Emissão" defaultCaption="Gerar" buttonClass="Button" defaultButtonClass="Button" name="btnGerarSemana4" />
+          </table>
+          <table name="tableSemana5" numberOfColumns="3" defaultNumberOfColumns="3" visibleCondition="not &amp;periodoSemana5Ini.isEmpty()" type="Responsive" defaultType="Responsive" cellWidth_E="50%" defaultCellWidth_E="50%" cellWidth_S="50%" defaultCellWidth_S="50%" childrenOrderedList="7;66;-7;09;periodoSemana5Fim-7;19;btnGerar">
+            <table name="" numberOfColumns="2" defaultNumberOfColumns="2" type="Responsive" defaultType="Responsive" childrenOrderedList="7;27;TextBlockperiodoSemana5Ini-7;09;periodoSemana5Ini">
+              <textBlock controlName="TextBlockperiodoSemana5Ini" caption="5ª" defaultCaption="5ª" themeClass="Label" defaultThemeClass="Label" cellThemeClass="MergeLabelCell CellWidth_6_25" defaultCellThemeClass="MergeLabelCell CellWidth_6_25" />
+              <variable name="periodoSemana5Ini" description="periodo Semana5 Ini" defaultDescription="periodo Semana5 Ini" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" cellThemeClass="CellWidth_93_75" defaultCellThemeClass="CellWidth_93_75" showDescription="False" defaultShowDescription="False" readOnly="True" defaultReadOnly="True" />
+            </table>
+            <variable name="periodoSemana5Fim" description="a " defaultDescription="a " dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" themeClass="ReadonlyAttribute" defaultThemeClass="ReadonlyAttribute" readOnly="True" defaultReadOnly="True" />
+            <userAction caption="Emissão" defaultCaption="Gerar " buttonClass="Button" defaultButtonClass="Button" name="btnGerar" />
+          </table>
+        </table>
+        <userAction caption="Retornar" defaultCaption="Retornar" buttonClass="Button" defaultButtonClass="Button" name="btnRetornar" />
+      </table>
+      <userControl controlName="InNewWindow" ucName="InNewWindow" ucId="-667710712" />
+    </table>
+    <steps />
+    <parameters>
+      <parameter name="&amp;prefCodigo" />
+      <parameter name="&amp;remCodigo" />
+      <parameter type="" name="&amp;opc" />
+    </parameters>
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPCompraRemessaDistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPCompraRemessaDistribuicao</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

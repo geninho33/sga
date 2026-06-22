@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="fbd375d7-2e82-0963-245e-766be2a898cd" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T13:34:28.0000000Z" checksum="650ad4b24d92e98a9eae5bbff27de80f" fullyQualifiedName="trnscardapioAreaEnsinoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="9cb2a8d7-e654-410b-9927-9de21c4aafeb" name="trnscardapioAreaEnsinoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnscardapio Area Ensino WWDS" parent="WorkWithPlustrnscardapioAreaEnsino" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[CarAteDoenNome.ToLower() like &CarAteDoenNome1.ToLower() when &DynamicFiltersSelector1 = !'CARATEDOENNOME' AND &DynamicFiltersOperator1 = 0 AND (not &CarAteDoenNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[CarAteDoenNome.ToLower() like '%' +  &CarAteDoenNome1.ToLower() when &DynamicFiltersSelector1 = !'CARATEDOENNOME' AND &DynamicFiltersOperator1 = 1 AND (not &CarAteDoenNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[CarAteDoenNome.ToLower() like &CarAteDoenNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARATEDOENNOME' AND &DynamicFiltersOperator2 = 0 AND (not &CarAteDoenNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[CarAteDoenNome.ToLower() like '%' +  &CarAteDoenNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARATEDOENNOME' AND &DynamicFiltersOperator2 = 1 AND (not &CarAteDoenNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[CarAteDoenNome.ToLower() like &CarAteDoenNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARATEDOENNOME' AND &DynamicFiltersOperator3 = 0 AND (not &CarAteDoenNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[CarAteDoenNome.ToLower() like '%' +  &CarAteDoenNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARATEDOENNOME' AND &DynamicFiltersOperator3 = 1 AND (not &CarAteDoenNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsCodigo >= &TFAreEnsCodigo when not &TFAreEnsCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsCodigo <= &TFAreEnsCodigo_To when not &TFAreEnsCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsSequencial >= &TFAreEnsSequencial when not &TFAreEnsSequencial.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsSequencial <= &TFAreEnsSequencial_To when not &TFAreEnsSequencial_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carTurno in &TFcarTurno_Sels when &TFcarTurno_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstNormal >= &TFcarEstNormal when not &TFcarEstNormal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstNormal <= &TFcarEstNormal_To when not &TFcarEstNormal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstGluten >= &TFcarEstGluten when not &TFcarEstGluten.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstGluten <= &TFcarEstGluten_To when not &TFcarEstGluten_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstLactose >= &TFcarEstLactose when not &TFcarEstLactose.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstLactose <= &TFcarEstLactose_To when not &TFcarEstLactose_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstDiabetico >= &TFcarEstDiabetico when not &TFcarEstDiabetico.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstDiabetico <= &TFcarEstDiabetico_To when not &TFcarEstDiabetico_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstColesterol >= &TFcarEstColesterol when not &TFcarEstColesterol.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carEstColesterol <= &TFcarEstColesterol_To when not &TFcarEstColesterol_To.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carEstNormal1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carEstNormal1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstNormal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carEstNormal2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carEstNormal2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstNormal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carEstNormal3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carEstNormal3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstNormal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsSequencial">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsSequencial</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsSequencial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsSequencial_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsSequencial_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsSequencial</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarTurno_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarTurno_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carTurno</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstNormal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstNormal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstNormal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstNormal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstNormal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstNormal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstGluten">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstGluten</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstGluten</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstGluten_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstGluten_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstGluten</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstLactose">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstLactose</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstLactose</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstLactose_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstLactose_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstLactose</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstDiabetico">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstDiabetico</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstDiabetico</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstDiabetico_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstDiabetico_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstDiabetico</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstColesterol">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstColesterol</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstColesterol</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarEstColesterol_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarEstColesterol_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carEstColesterol</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="CarAteDoenNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>CarAteDoenNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:CarAteDoenNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="CarAteDoenNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>CarAteDoenNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:CarAteDoenNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="CarAteDoenNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>CarAteDoenNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:CarAteDoenNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>CarAteDoenNome1</Name>
+        <Description>Car Ate Doen Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>CarAteDoenNome2</Name>
+        <Description>Car Ate Doen Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>CarAteDoenNome3</Name>
+        <Description>Car Ate Doen Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsCodigo</Name>
+        <Description>TFAre Ens Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsCodigo_To</Name>
+        <Description>TFAre Ens Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsSequencial</Name>
+        <Description>TFAre Ens Sequencial</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsSequencial_To</Name>
+        <Description>TFAre Ens Sequencial_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarTurno_Sels</Name>
+        <Description>TFcar Turno_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstNormal</Name>
+        <Description>TFcar Est Normal</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstNormal_To</Name>
+        <Description>TFcar Est Normal_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstGluten</Name>
+        <Description>TFcar Est Gluten</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstGluten_To</Name>
+        <Description>TFcar Est Gluten_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstLactose</Name>
+        <Description>TFcar Est Lactose</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstLactose_To</Name>
+        <Description>TFcar Est Lactose_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstDiabetico</Name>
+        <Description>TFcar Est Diabetico</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstDiabetico_To</Name>
+        <Description>TFcar Est Diabetico_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstColesterol</Name>
+        <Description>TFcar Est Colesterol</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarEstColesterol_To</Name>
+        <Description>TFcar Est Colesterol_To</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscardapioAreaEnsinoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnscardapioAreaEnsino</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

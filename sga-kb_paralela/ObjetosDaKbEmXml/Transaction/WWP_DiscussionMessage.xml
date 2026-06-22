@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="70ded634-e409-40b5-a75c-fb4c09742f5e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2020-11-16T12:21:39.0000000Z" checksum="7386e6c007e896fdf268c4bc1838a505" fullyQualifiedName="WWPBaseObjects.Discussions.WWP_DiscussionMessage" moduleGuid="e2da86dd-2537-4d5a-8e82-35fda77dc9e5" guid="eaaf8060-5b8f-48d2-8b34-febd8695fe03" name="WWP_DiscussionMessage" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Discussion Message" parent="WWPBaseObjects.Discussions.Transactions" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="WWP_DiscussionMessage" Type="WWP_DiscussionMessage" Description="Discussion Message" Guid="eaaf8060-5b8f-48d2-8b34-febd8695fe03">
+      <Properties />
+      <Attribute key="True" guid="43d9d515-e39b-4e3c-ba1c-bbf465efefa9">WWPDiscussionMessageId</Attribute>
+      <Attribute key="False" guid="92b107fa-f6d6-4b44-a55b-8a2178625cbc">WWPDiscussionMessageDate</Attribute>
+      <Attribute key="False" guid="868a0e0b-0b7d-4a47-8cd4-78506c79405a" isNullable="True">WWPDiscussionMessageThreadId</Attribute>
+      <Attribute key="False" guid="db7703c8-b9b6-4271-9819-ef3758a5bacb">WWPDiscussionMessageMessage</Attribute>
+      <Attribute key="False" guid="d0963a09-45f6-40f8-8694-ba40b9277a18">WWPUserExtendedId</Attribute>
+      <Attribute key="False" guid="81562034-e14e-4774-b82d-1b3506320217">WWPUserExtendedPhoto</Attribute>
+      <Attribute key="False" guid="a3d00320-8501-48b7-a70f-d24575d1c7fb">WWPUserExtendedFullName</Attribute>
+      <Attribute key="False" guid="adab596f-8a19-46a2-aedc-f2e246bd6289">WWPEntityId</Attribute>
+      <Attribute key="False" guid="edb4c3d6-0a82-4be5-8b44-309fcedce5ad">WWPEntityName</Attribute>
+      <Attribute key="False" guid="fe2846ab-1471-4a4e-b0a2-24107dbcdc6d">WWPDiscussionMessageEntityRecordId</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>True</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[WWPDiscussionMessageDate = now();
+WWPUserExtendedId = WWP_GetLoggedUserId();
+WWPDiscussionMessageThreadId.SetNull() If WWPDiscussionMessageThreadId.IsEmpty() On BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_DiscussionMessage</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Discussion Message</Value>
+    </Property>
+    <Property>
+      <Name>idISBUSINESSCOMPONENT</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>WWPDiscussionMessage</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

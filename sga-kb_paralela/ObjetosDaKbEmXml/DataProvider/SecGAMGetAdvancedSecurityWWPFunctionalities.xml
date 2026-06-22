@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="2c01440d-1215-4aa3-81fe-3334dd0a38f6" user="JORGE-AVELL\joadh" versionDate="2024-07-31T14:52:42.0000000Z" lastUpdate="2024-07-26T18:22:16.0000000Z" checksum="239806ce96d9245fc36e49cc41140757" fullyQualifiedName="WWPBaseObjects.SecGAMGetAdvancedSecurityWWPFunctionalities" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="21053622-870a-4b8c-a8b2-0405e8acbbfb" name="SecGAMGetAdvancedSecurityWWPFunctionalities" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Get Advanced Security WWP Functionalities" parent="WWPBaseObjects.Security" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[Functionalities
+{
+	SubGroup_1.Insert()
+}
+SubGroup SubGroup_1()
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'true'
+		SecGAMFunctionalityDsc = !'Código (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'True'
+		SecGAMFunctionalityDsc = !'Codigo (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'Ttrue'
+		SecGAMFunctionalityDsc = !'Código (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'false'
+		SecGAMFunctionalityDsc = !'Origem (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'Rancho_PermiteSaldoNegativo'
+		SecGAMFunctionalityDsc = !''
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'usuCodigo_Edit_Attribute'
+		SecGAMFunctionalityDsc = !' Código (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'ajusItemProdutoNome_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Descrição (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'nfItemUnidadeCompra_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Unidade (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'nfItemProdutoDescricao_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Descrição (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'prodLocalCodigo_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Local (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'prodLocalSaldo_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Saldo (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'remCodigo_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Código (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'romanLocal_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Local Estoque (Edit)'
+	}
+	SecGAMFunctionalitiesToLoad
+	{
+		SecGAMFunctionalityKey = !'lanestcodigo_Edit_Attribute'
+		SecGAMFunctionalityDsc = !'Código Lançamento (Edit)'
+	}
+EndSubGroup
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="SecGAMFunctionalityKeyUser">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecGAMFunctionalityKeyUser</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecGAMFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecGAMFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecGAMFunctionalitiesToLoadUser">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecGAMFunctionalitiesToLoadUser</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SecGAMFunctionalitiesToLoad, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecGAMFunctionalitiesToLoadUserCollection">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecGAMFunctionalitiesToLoadUserCollection</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SecGAMFunctionalitiesToLoad, WWPBaseObjects</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>SecGAMGetAdvancedSecurityWWPFunctionalities</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Get Advanced Security WWP Functionalities</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-WWPBaseObjects.SecGAMFunctionalitiesToLoad</Value>
+    </Property>
+    <Property>
+      <Name>OutputCollection</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>OutputCollectionName</Name>
+      <Value>Functionalities</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

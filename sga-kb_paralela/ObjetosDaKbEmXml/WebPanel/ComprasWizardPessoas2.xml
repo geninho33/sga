@@ -1,0 +1,1232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="7cc46d2a-3bcf-0604-399b-537f7d1576db" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-14T14:21:20.0000000Z" checksum="6d76d310485870c39ec80bf948d8ff65" fullyQualifiedName="ComprasWizardPessoas2" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="ab113739-bd44-45d0-8af5-4cb2888c0da2" name="ComprasWizardPessoas2" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Compras Wizard Pessoas2" parent="WorkWithPlusComprasWizard" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell cellClass="CellMarginTop"><table controlName="TableGrid" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;xs&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}]]},{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;md&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}]]},{&quot;scale&quot;:&quot;lg&quot;,&quot;rows&quot;:[[{&quot;visible&quot;:false}],[{&quot;visible&quot;:true}]]}]"><row><cell><table controlName="TableOptionData" tableType="Responsive" responsiveSizes="[]"><row><cell><data attribute="&amp;Origem" labelCaption="Origem dos dados" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlValues&lt;/Name&gt;&lt;Value&gt;Mes/Ano Base:0,SGE:1,Digitação manual:2&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="GridTableWithTotalizers" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithTotalizer GridWithBorderColor WorkWith"><item attribute="&amp;locDescricao" titleExp="Local" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario1" titleExp="Berçário 1" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Bercario2" titleExp="Berçário 2" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Creche" titleExp="Creche" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Emeb" titleExp="EMEB" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Integral" titleExp="Integral" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Funcionarios" titleExp="Funcionários" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;TotalEstudantes" titleExp="Estudantes" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;TotalPessoas" titleExp="Pessoas" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;locCodigo" titleExp="Unidade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;locUeCod" titleExp="Cód. SGE" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xBercario1" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xBercario2" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xCreche" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xEmeb" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xIntegral" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;xFuncionarios" titleExp="" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row rowClass="Invisible"><cell><table controlName="GridTableTotalizer" class="TableTotalizerAl" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell /><cell><data attribute="&amp;TotValueBercario1" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell><data attribute="&amp;TotValueBercario2" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell><data attribute="&amp;TotValueCreche" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell><data attribute="&amp;TotValueEmeb" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell><data attribute="&amp;TotValueIntegral" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell><data attribute="&amp;TotValueFuncionarios" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell><data attribute="&amp;TotValueTotalEstudantes" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell><data attribute="&amp;TotValueTotalPessoas" labelPosition="None" readonly="True" class="AttributeTotalizer" /></cell><cell /><cell /><cell /><cell /><cell /><cell /><cell /><cell /></row></table></cell></row></table></cell></row></table></cell></row><row><cell cellClass="CellWizardActions"><table controlName="TableActions" tableType="Flex" flexWrap="Wrap" justifyContent="Space Between"><row><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardPrevious&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;BeforeIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Event&lt;/Name&gt;&lt;Value&gt;'WizardPrevious'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GXM_previous&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;BtnDefault ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell flexGrow="0"><ucw gxControlType="-1052264986" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;BtnWizardNext&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AfterIconClass&lt;/Name&gt;&lt;Value&gt;fas fa-arrow-right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CaptionExpression&lt;/Name&gt;&lt;Value&gt;GXM_next&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;Button ButtonWizard&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute AttID="&amp;TotBercario1" /><gxAttribute AttID="&amp;TotBercario2" /><gxAttribute AttID="&amp;TotCreche" /><gxAttribute AttID="&amp;TotEmeb" /><gxAttribute AttID="&amp;TotIntegral" /><gxAttribute AttID="&amp;TotFuncionarios" /><gxDVelop.GridTitlesCategories ControlName="Grid_TitlesCategories" GridTitlesCategories=";Quantidades;Quantidades;Quantidades;Quantidades;Quantidades;Quantidades;Totais;Totais;;;;;;;;" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasCategories="True" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&WebSessionKey, in:&PreviousStep, in:&GoingBack);
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call(&WWPContext)
+   	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'LoadVariablesFromWizardData'
+	&TotBercario1.Visible = False
+	&TotBercario2.Visible = False
+	&TotCreche.Visible = False
+	&TotEmeb.Visible = False
+	&TotIntegral.Visible = False
+	&TotFuncionarios.Visible = False
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	Grid.Rows = 0
+	Grid_TitlesCategories.GridInternalName = Grid.InternalName
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//this code should be inside the For Each used to load the grid
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+	for &GridLocaisItem in &WizardData.Locais.GridLocais
+
+		&locCodigo 		= &GridLocaisItem.locCodigo
+		&locUeCod		= &GridLocaisItem.locUeCod
+		&locDescricao 	= &GridLocaisItem.locDescricao
+
+		&Bercario1.SetEmpty()
+		&Bercario2.SetEmpty()
+		&Creche.SetEmpty()
+		&Emeb.SetEmpty()
+		&Integral.SetEmpty()
+		&Funcionarios.SetEmpty()
+		&TotalEstudantes.SetEmpty()
+		&TotalPessoas.SetEmpty()
+
+		/* Verifica se existe informação no WizardData */
+		for &PessoasGridItem in &WizardData.Pessoas2.Grid
+
+			if &PessoasGridItem.locCodigo = &locCodigo
+				&Bercario1 			= &PessoasGridItem.Bercario1
+				&Bercario2 			= &PessoasGridItem.Bercario2
+				&Creche					= &PessoasGridItem.Creche
+				&Emeb						= &PessoasGridItem.Emeb
+				&Integral				= &PessoasGridItem.Integral
+				&Funcionarios	 	= &PessoasGridItem.Funcionarios
+				&TotalPessoas		= &PessoasGridItem.TotalPessoas
+				Exit
+			endif
+
+		endfor
+
+		/* Se não achou busca do SGE */
+		if &TotalPessoas = 0
+			QtdeAlunosPorUEAreaEnsino(&WizardData.Periodo.Ano,&locUeCod,&Bercario1,&Bercario2,&Creche,&Emeb,&Integral,&Funcionarios)
+		endif
+		if &Bercario1 + &Bercario2 + &Creche + &Emeb + &Integral = 0
+			/* Verifica se ainda existem colunas sem dados e busca de Ranchos anteriores */
+			if &Bercario1 = 0
+				// Berçario 1
+				&AreEnsCodigo = 1
+				do 'BuscaQtdePessoas'
+				&Bercario1 = &Quantidade
+			endif
+			if &Bercario2 = 0
+				// Berçario 2
+				&AreEnsCodigo = 2
+				do 'BuscaQtdePessoas'
+				&Bercario2 = &Quantidade
+			endif
+			if &Creche = 0
+				// Creche
+				&AreEnsCodigo = 3
+				do 'BuscaQtdePessoas'
+				&Creche = &Quantidade
+			endif
+			if &Emeb = 0
+				// EMEB
+				&AreEnsCodigo = 4
+				do 'BuscaQtdePessoas'
+				&Emeb = &Quantidade
+			endif
+			if &Integral = 0
+				// Integral
+				&AreEnsCodigo = 5
+				do 'BuscaQtdePessoas'
+				&Integral = &Quantidade
+			endif
+			if &Funcionarios = 0
+				// Funcionários
+				&AreEnsCodigo = 99999997
+				do 'BuscaQtdePessoas'
+				&Funcionarios = &Quantidade
+			endif
+		endif
+
+		// Total linha
+		&TotalEstudantes = (&Bercario1+&Bercario2+&Creche+&Emeb+&Integral)
+		&TotalPessoas	 = (&TotalEstudantes + &Funcionarios)
+
+		// Total coluna
+		&TotBercario1 	 	+= &Bercario1
+		&TotBercario2 	 	+= &Bercario2
+		&TotCreche 		 	+= &Creche
+		&TotEmeb 		 	+= &Emeb
+		&TotIntegral	 	+= &Integral
+		&TotFuncionarios 	+= &Funcionarios
+		&TotTotalEstudantes += &TotalEstudantes
+		&TotTotalPessoas 	+= &TotalPessoas
+
+		// Guarda valores anteriores
+		&xBercario1 = &Bercario1
+		&xBercario2 = &Bercario2
+		&xCreche	= &Creche
+		&xEmeb		= &Emeb
+		&xIntegral	= &Integral
+		&xFuncionarios = &Funcionarios
+
+		Load
+	endfor
+
+	&TotValueBercario1		 = &TotBercario1.ToFormattedString()
+	&TotValueBercario2		 = &TotBercario2.ToFormattedString()
+	&TotValueCreche			 = &TotCreche.ToFormattedString()
+	&TotValueEmeb			 = &TotEmeb.ToFormattedString()
+	&TotValueIntegral		 = &TotIntegral.ToFormattedString()
+	&TotValueFuncionarios 	 = &TotFuncionarios.ToFormattedString()
+	&TotValueTotalEstudantes = &TotTotalEstudantes.ToFormattedString()
+	&TotValueTotalPessoas	 = &TotTotalPessoas.ToFormattedString()
+
+EndEvent
+
+Event Enter
+
+	// Remove locais sem quantidade total de pessoas
+	&Atualizou = false
+	For each line in Grid
+		if &TotalPessoas = 0
+			&Atualizou = true
+			&Index = 0
+			for &GridLocaisItem in &WizardData.Locais.GridLocais
+				&Index += 1
+				if &GridLocaisItem.locCodigo = &locCodigo
+					&WizardData.Locais.GridLocais.Remove(&Index)
+					Exit
+				endif
+			endfor
+		endif
+	Endfor
+
+	if &Atualizou
+		&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If not &HasValidationErrors
+		Do 'SaveVariablesToWizardData'
+		ComprasWizard(!'Pessoas2', !'PerCapta2', false)
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'WizardPrevious'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do 'SaveVariablesToWizardData'
+	ComprasWizard(!'Pessoas2', !'Alimentos', true)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'LoadVariablesFromWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&TotBercario1 = &WizardData.Pessoas2.TotBercario1
+	&TotBercario2 = &WizardData.Pessoas2.TotBercario2
+	&TotCreche = &WizardData.Pessoas2.TotCreche
+	&TotEmeb = &WizardData.Pessoas2.TotEmeb
+	&TotIntegral = &WizardData.Pessoas2.TotIntegral
+	&TotFuncionarios = &WizardData.Pessoas2.TotFuncionarios
+	&Origem = &WizardData.Pessoas2.Origem
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveVariablesToWizardData'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&WizardData.FromJson(&WebSession.Get(&WebSessionKey))
+	&WizardData.Pessoas2.TotBercario1 = &TotBercario1
+	&WizardData.Pessoas2.TotBercario2 = &TotBercario2
+	&WizardData.Pessoas2.TotCreche = &TotCreche
+	&WizardData.Pessoas2.TotEmeb = &TotEmeb
+	&WizardData.Pessoas2.TotIntegral = &TotIntegral
+	&WizardData.Pessoas2.TotFuncionarios = &TotFuncionarios
+	&WizardData.Pessoas2.Origem = &Origem
+	&WizardData.Pessoas2.Grid.Clear()
+	For Each Line in Grid
+		&GridItem = new()
+		&GridItem.locDescricao = &locDescricao
+		&GridItem.Bercario1 = &Bercario1
+		&GridItem.Bercario2 = &Bercario2
+		&GridItem.Creche = &Creche
+		&GridItem.Emeb = &Emeb
+		&GridItem.Integral = &Integral
+		&GridItem.Funcionarios = &Funcionarios
+		&GridItem.TotalEstudantes = &TotalEstudantes
+		&GridItem.TotalPessoas = &TotalPessoas
+		&GridItem.locCodigo = &locCodigo
+		&GridItem.locUeCod = &locUeCod
+		&GridItem.xBercario1 = &xBercario1
+		&GridItem.xBercario2 = &xBercario2
+		&GridItem.xCreche = &xCreche
+		&GridItem.xEmeb = &xEmeb
+		&GridItem.xIntegral = &xIntegral
+		&GridItem.xFuncionarios = &xFuncionarios
+
+		&WizardData.Pessoas2.Grid.Add(&GridItem)
+	EndFor
+	&WebSession.Set(&WebSessionKey, &WizardData.ToJson())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event &Bercario1.ControlValueChanged
+
+	&Diferenca = (&Bercario1 - &xBercario1)
+
+	&TotalEstudantes += &Diferenca
+	&TotalPessoas += &Diferenca
+
+	&TotBercario1 += &Diferenca
+	&TotValueBercario1 = &TotBercario1.ToFormattedString()
+
+	&TotTotalEstudantes += &Diferenca
+	&TotValueTotalEstudantes = &TotTotalEstudantes.ToFormattedString()
+
+	&TotTotalPessoas += &Diferenca
+	&TotValueTotalPessoas = &TotTotalPessoas.ToFormattedString()
+
+	&xBercario1 = &Bercario1
+
+EndEvent
+
+Event &Bercario2.ControlValueChanged
+
+	&Diferenca = (&Bercario2 - &xBercario2)
+
+	&TotalEstudantes += &Diferenca
+	&TotalPessoas += &Diferenca
+
+	&TotBercario2 += &Diferenca
+	&TotValueBercario2 = &TotBercario2.ToFormattedString()
+
+	&TotTotalEstudantes += &Diferenca
+	&TotValueTotalEstudantes = &TotTotalEstudantes.ToFormattedString()
+
+	&TotTotalPessoas += &Diferenca
+	&TotValueTotalPessoas = &TotTotalPessoas.ToFormattedString()
+
+	&xBercario2 = &Bercario2
+
+EndEvent
+
+Event &Creche.ControlValueChanged
+
+	&Diferenca = (&Creche - &xCreche)
+
+	&TotalEstudantes += &Diferenca
+	&TotalPessoas += &Diferenca
+
+	&TotCreche += &Diferenca
+	&TotValueCreche = &TotCreche.ToFormattedString()
+
+	&TotTotalEstudantes += &Diferenca
+	&TotValueTotalEstudantes = &TotTotalEstudantes.ToFormattedString()
+
+	&TotTotalPessoas += &Diferenca
+	&TotValueTotalPessoas = &TotTotalPessoas.ToFormattedString()
+
+	&xCreche = &Creche
+
+EndEvent
+
+Event &Emeb.ControlValueChanged
+
+	&Diferenca = (&Emeb - &xEmeb)
+
+	&TotalEstudantes += &Diferenca
+	&TotalPessoas += &Diferenca
+
+	&TotEmeb += &Diferenca
+	&TotValueEmeb = &TotEmeb.ToFormattedString()
+
+	&TotTotalEstudantes += &Diferenca
+	&TotValueTotalEstudantes = &TotTotalEstudantes.ToFormattedString()
+
+	&TotTotalPessoas += &Diferenca
+	&TotValueTotalPessoas = &TotTotalPessoas.ToFormattedString()
+
+	&xEmeb = &Emeb
+
+EndEvent
+
+Event &Funcionarios.ControlValueChanged
+
+	&Diferenca = (&Funcionarios - &xFuncionarios)
+
+	&TotalPessoas += &Diferenca
+
+	&TotFuncionarios += &Diferenca
+	&TotValueFuncionarios = &TotFuncionarios.ToFormattedString()
+
+	&TotTotalPessoas += &Diferenca
+	&TotValueTotalPessoas = &TotTotalPessoas.ToFormattedString()
+
+	&xFuncionarios = &Funcionarios
+
+EndEvent
+
+Event &Integral.ControlValueChanged
+
+	&Diferenca = (&Integral - &xIntegral)
+
+	&TotalEstudantes += &Diferenca
+	&TotalPessoas += &Diferenca
+
+	&TotIntegral += &Diferenca
+	&TotValueIntegral = &TotIntegral.ToFormattedString()
+
+	&TotTotalEstudantes += &Diferenca
+	&TotValueTotalEstudantes = &TotTotalEstudantes.ToFormattedString()
+
+	&TotTotalPessoas += &Diferenca
+	&TotValueTotalPessoas = &TotTotalPessoas.ToFormattedString()
+
+	&xIntegral = &Integral
+
+EndEvent
+
+Event Grid.Refresh
+
+	&TotBercario1.SetEmpty()
+	&TotBercario2.SetEmpty()
+	&TotCreche.SetEmpty()
+	&TotEmeb.SetEmpty()
+	&TotIntegral.SetEmpty()
+	&TotFuncionarios.SetEmpty()
+	&TotTotalEstudantes.SetEmpty()
+	&TotTotalPessoas.SetEmpty()
+
+EndEvent
+
+Sub 'BuscaQtdePessoas'
+
+	// Procura no Ano e Mês informado
+	For each Rancho.AreasEnsino.Pessoas
+		Order prefCodigo,RanchoAno,(RanchoMes),RanchoAreasEnsinoCodigo,locCodigo
+		Where prefCodigo 				= &prefCodigo
+		Where RanchoAno 				= &WizardData.Periodo.Ano
+		Where RanchoMes					<= &WizardData.Periodo.Mes
+		Where RanchoAreasEnsinoCodigo	= &AreEnsCodigo
+		Where locCodigo 				= &locCodigo
+
+		&Quantidade = RanchoAreasEnsinoPessoasQuantidade
+		Exit
+
+	Endfor
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="AreEnsCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AreEnsCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Área de Ensino</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:AreEnsCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Atualizou">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Atualizou</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Creche">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Creche</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="CurrentStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>CurrentStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Diferenca">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Diferenca</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Emeb">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Emeb</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Funcionarios">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Funcionarios</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GoingBack">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GoingBack</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ComprasWizardData.Pessoas2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HasValidationErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HasValidationErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Index">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Index</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Integral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Integral</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locDescricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locUeCod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locUeCod</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locUeCod</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Origem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Origem</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PreviousStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PreviousStep</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Quantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Quantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotalEstudantes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotalEstudantes</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotalPessoas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotalPessoas</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotBercario1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotBercario1</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotBercario2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotBercario2</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotCreche">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotCreche</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotEmeb">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotEmeb</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotFuncionarios">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotFuncionarios</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotIntegral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotIntegral</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotTotalEstudantes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotTotalEstudantes</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotTotalPessoas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotTotalPessoas</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>18</Value>
+        </Property>
+        <Property>
+          <Name>ATT_PICTURE</Name>
+          <Value>ZZZ9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueBercario1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueBercario1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueBercario2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueBercario2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueCreche">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueCreche</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueEmeb">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueEmeb</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueFuncionarios">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueFuncionarios</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueIntegral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueIntegral</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueTotalEstudantes">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueTotalEstudantes</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TotValueTotalPessoas">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TotValueTotalPessoas</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSessionKey">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSessionKey</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WizardData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WizardData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ComprasWizardData</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xBercario1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xBercario1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xBercario2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xBercario2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xCreche">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xCreche</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xEmeb">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xEmeb</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xFuncionarios">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xFuncionarios</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="xIntegral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>xIntegral</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridLocaisItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridLocaisItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ComprasWizardData.Locais.GridLocaisItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PessoasGridItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PessoasGridItem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ComprasWizardData.Pessoas2.GridItem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>ComprasWizardPessoas2</Value>
+    </Property>
+    <Property>
+      <Name>WEB_COMP</Name>
+      <Value>Yes</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlusComprasWizard</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/WPRoot[1]/steps/step[@Name="Pessoas2"]</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>WizardStep</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

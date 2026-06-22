@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ef953648-e868-4c50-8451-f61bcb069a46" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-05T05:08:41.0000000Z" lastUpdate="2024-08-05T13:45:15.0000000Z" checksum="57b101d5078fcf3cb5d1bfdad6a73a92" fullyQualifiedName="WorkWithPlustrnsfornecedores" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="e8866ed8-be94-04cb-3059-f02ce9fc053b" name="WorkWithPlustrnsfornecedores" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plustrnsfornecedores" parent="trnsfornecedores" parentType="1db606f2-af09-4cf9-a3b5-b481519d28f6">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="2;37;-3;40;" SecFuntionKey="WWtrnsfornecedores" defaultSecFuntionKey="WWtrnsfornecedores">
+  <transaction childrenOrderedList="2;01;Main Table" viewDetailRoot="TableAttributes" defaultViewDetailRoot="TableAttributes" TrnTemplate="Transaction" transaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsfornecedores" defaultTransaction="1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsfornecedores" SecFuntionKeyINS="WWtrnsfornecedores_Insert" defaultSecFuntionKeyINS="WWtrnsfornecedores_Insert" SecFuntionKeyUPD="WWtrnsfornecedores_Update" defaultSecFuntionKeyUPD="WWtrnsfornecedores_Update" SecFuntionKeyDLT="WWtrnsfornecedores_Delete" defaultSecFuntionKeyDLT="WWtrnsfornecedores_Delete">
+    <table name="TableMain" themeClass="TableMainTransaction" defaultThemeClass="TableMainTransaction" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;28;ErrorViewer-2;01;TableContent-2;88;Actions">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" numberOfColumns="1" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="2;01;TableAttributes">
+        <table name="TableAttributes" numberOfColumns="2" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_TemplateDataPanelTitle" defaultPanelTitle="WWP_TemplateDataPanelTitle" collapsable="False" defaultCollapsable="False" cellWidth_S="75%" defaultCellWidth_S="75%" childrenOrderedList="2;22;forCodigo-2;22;forNome-2;22;forAbreviatura-2;22;forCnpjcpf-2;22;forDocumento-2;22;forFisicaJuridica-2;22;forEndereco-2;22;forComplemento-2;22;forBairro-2;22;forCidade-2;22;forEstado-2;22;forCep-2;22;forTelefone-2;22;forContato-2;22;forEmail-2;22;forTipo-2;22;forCooperativa-2;22;forDap-2;22;forCertificadoNumero-2;22;forCertificadoValidade-2;22;forStatus-2;22;forDataCad-2;22;forDataAlt-2;22;prefCodigo">
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="True" visibleCondition="forCodigo&lt;&gt;0" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" EditSecFuntionKey="Ttrue" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forAbreviatura" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCnpjcpf" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDocumento" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forFisicaJuridica" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forEndereco" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forComplemento" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forBairro" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forEstado" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCep" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forTelefone" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forContato" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forEmail" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forTipo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCooperativa" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDap" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCertificadoNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCertificadoValidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+          <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellThemeClass="DataContentCell" defaultCellThemeClass="DataContentCell" />
+        </table>
+      </table>
+      <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="2;91;Trn_Enter-2;91;Trn_Cancel-2;91;Trn_Delete">
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Enter" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Trn_Cancel" />
+        <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" name="Trn_Delete" />
+      </actionGroup>
+    </table>
+  </transaction>
+  <level childrenOrderedList="3;25;forNome-4;39;-5;41;" id="ef953648-e868-4c50-8451-f61bcb069a46:1" name="trnsfornecedores">
+    <descriptionAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forNome" defaultAttribute="adbb33c9-0906-4971-833c-998de27e0676-forNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" />
+    <selection Template="Selection" description="Listagem de Fornecedores" defaultDescription=" Cadastro de Fornecedor" childrenOrderedList="4;02;Main Table" level="root:trnsfornecedores" defaultLevel="root:trnsfornecedores" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexDirection="Column" defaultFlexDirection="Column" type="Flex" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableHeaderContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" childrenOrderedList="4;02;TableActions-4;02;TableRightHeader">
+            <table name="TableActions" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Flex" defaultType="Flex" childrenOrderedList="4;88;Actions">
+              <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" flexGrow="0" defaultFlexGrow="0">
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert" />
+                <actionGroup childrenOrderedList="4;91;Export-4;91;ExportReport" caption="WWP_ExportData" defaultCaption="WWP_ExportData" name="AGExport" imageType="Font icon" defaultImageType="Font icon" fontIconThemeClass="fas fa-download" defaultFontIconThemeClass="fas fa-download">
+                  <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Export" />
+                  <standardAction popup="True" defaultPopup="True" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="ExportReport" />
+                </actionGroup>
+                <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+              </actionGroup>
+            </table>
+            <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" flexWrap="Wrap" defaultFlexWrap="Wrap" type="Flex" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" flexGrow="0" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+              <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+              <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;-4;97;">
+                <orders childrenOrderedList="4;13;=forNome.ContextualTitle" descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top">
+                  <order childrenOrderedList="4;26;forNome;=forNome.ContextualTitle" name="=forNome.ContextualTitle">
+                    <attribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" ascending="False" />
+                  </order>
+                </orders>
+                <dynamicFilter childrenOrderedList="4;99;forNome">
+                  <filterAttribute name="forNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forNome;StartsWith-4;96;4;99;forNome;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                  <filterAttribute name="forCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forCodigo;LowerThan-4;96;4;99;forCodigo;Equals-4;96;4;99;forCodigo;HigherThan">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Equals" defaultPredefinedOperator="Equals" />
+                  </filterAttribute>
+                  <filterAttribute name="forCidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forCidade;StartsWith-4;96;4;99;forCidade;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                  <filterAttribute name="forCnpjcpf" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forCnpjcpf;StartsWith-4;96;4;99;forCnpjcpf;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                  <filterAttribute name="forEmail" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forEmail;StartsWith-4;96;4;99;forEmail;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                  <filterAttribute name="forBairro" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forBairro;StartsWith-4;96;4;99;forBairro;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                  <filterAttribute name="forTelefone" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" themeClass="Attribute" defaultThemeClass="Attribute" condition="&lt;default&gt;" defaultCondition="&lt;default&gt;" childrenOrderedList="4;96;4;99;forTelefone;StartsWith-4;96;4;99;forTelefone;Contains">
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="Contains" defaultPredefinedOperator="Contains" />
+                    <operator type="Predefined operator" defaultType="Predefined operator" predefinedOperator="StartsWith" defaultPredefinedOperator="StartsWith" />
+                  </filterAttribute>
+                </dynamicFilter>
+              </table>
+            </table>
+          </table>
+          <table name="AdvancedFiltersContainer" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexWrap="Wrap" defaultFlexWrap="Wrap" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" internalType="Adv" defaultInternalType="Adv" />
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete-4;23;prefCodigo-4;23;forCodigo-4;23;forNome-4;23;forAbreviatura-4;23;forCnpjcpf-4;23;forDocumento-4;23;forFisicaJuridica-4;23;forEndereco-4;23;forComplemento-4;23;forBairro-4;23;forCidade-4;23;forEstado-4;23;forCep-4;23;forTelefone-4;23;forContato-4;23;forEmail-4;23;forTipo-4;23;forCooperativa-4;23;forDap-4;23;forCertificadoNumero-4;23;forCertificadoValidade-4;23;forStatus-4;23;forDataCad-4;23;forDataAlt">
+          <standardAction name="Update" />
+          <standardAction name="Delete" cellVisible_E="False" cellVisible_S="False" cellVisible_M="False" cellVisible_L="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCodigo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forCodigo &gt;= &amp;TFforCodigo when not &amp;TFforCodigo.IsEmpty();forCodigo &lt;= &amp;TFforCodigo_To when not &amp;TFforCodigo_To.IsEmpty()" defaultFilterCondition="forCodigo &gt;= &amp;TFforCodigo when not &amp;TFforCodigo.IsEmpty();forCodigo &lt;= &amp;TFforCodigo_To when not &amp;TFforCodigo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forNome" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" autolink="False" filterCondition="forNome.ToLower() like &amp;TFforNome.ToLower() when not &amp;TFforNome.IsEmpty()" defaultFilterCondition="forNome.ToLower() like &amp;TFforNome.ToLower() when not &amp;TFforNome.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forContato" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forContato.ToLower() like &amp;TFforContato.ToLower() when not &amp;TFforContato.IsEmpty()" defaultFilterCondition="forContato.ToLower() like &amp;TFforContato.ToLower() when not &amp;TFforContato.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forAbreviatura" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forAbreviatura.ToLower() like &amp;TFforAbreviatura.ToLower() when not &amp;TFforAbreviatura.IsEmpty()" defaultFilterCondition="forAbreviatura.ToLower() like &amp;TFforAbreviatura.ToLower() when not &amp;TFforAbreviatura.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forTipo" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forTipo &gt;= &amp;TFforTipo when not &amp;TFforTipo.IsEmpty();forTipo &lt;= &amp;TFforTipo_To when not &amp;TFforTipo_To.IsEmpty()" defaultFilterCondition="forTipo &gt;= &amp;TFforTipo when not &amp;TFforTipo.IsEmpty();forTipo &lt;= &amp;TFforTipo_To when not &amp;TFforTipo_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCnpjcpf" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forCnpjcpf.ToLower() like &amp;TFforCnpjcpf.ToLower() when not &amp;TFforCnpjcpf.IsEmpty()" defaultFilterCondition="forCnpjcpf.ToLower() like &amp;TFforCnpjcpf.ToLower() when not &amp;TFforCnpjcpf.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDocumento" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forDocumento.ToLower() like &amp;TFforDocumento.ToLower() when not &amp;TFforDocumento.IsEmpty()" defaultFilterCondition="forDocumento.ToLower() like &amp;TFforDocumento.ToLower() when not &amp;TFforDocumento.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forFisicaJuridica" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forEndereco" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forEndereco.ToLower() like &amp;TFforEndereco.ToLower() when not &amp;TFforEndereco.IsEmpty()" defaultFilterCondition="forEndereco.ToLower() like &amp;TFforEndereco.ToLower() when not &amp;TFforEndereco.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forComplemento" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forComplemento.ToLower() like &amp;TFforComplemento.ToLower() when not &amp;TFforComplemento.IsEmpty()" defaultFilterCondition="forComplemento.ToLower() like &amp;TFforComplemento.ToLower() when not &amp;TFforComplemento.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forBairro" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forBairro.ToLower() like &amp;TFforBairro.ToLower() when not &amp;TFforBairro.IsEmpty()" defaultFilterCondition="forBairro.ToLower() like &amp;TFforBairro.ToLower() when not &amp;TFforBairro.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forCidade.ToLower() like &amp;TFforCidade.ToLower() when not &amp;TFforCidade.IsEmpty()" defaultFilterCondition="forCidade.ToLower() like &amp;TFforCidade.ToLower() when not &amp;TFforCidade.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forEstado" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forEstado.ToLower() like &amp;TFforEstado.ToLower() when not &amp;TFforEstado.IsEmpty()" defaultFilterCondition="forEstado.ToLower() like &amp;TFforEstado.ToLower() when not &amp;TFforEstado.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCep" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forCep.ToLower() like &amp;TFforCep.ToLower() when not &amp;TFforCep.IsEmpty()" defaultFilterCondition="forCep.ToLower() like &amp;TFforCep.ToLower() when not &amp;TFforCep.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forTelefone" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forTelefone.ToLower() like &amp;TFforTelefone.ToLower() when not &amp;TFforTelefone.IsEmpty()" defaultFilterCondition="forTelefone.ToLower() like &amp;TFforTelefone.ToLower() when not &amp;TFforTelefone.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forEmail" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forEmail.ToLower() like &amp;TFforEmail.ToLower() when not &amp;TFforEmail.IsEmpty()" defaultFilterCondition="forEmail.ToLower() like &amp;TFforEmail.ToLower() when not &amp;TFforEmail.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCooperativa" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forCooperativa &gt;= &amp;TFforCooperativa when not &amp;TFforCooperativa.IsEmpty();forCooperativa &lt;= &amp;TFforCooperativa_To when not &amp;TFforCooperativa_To.IsEmpty()" defaultFilterCondition="forCooperativa &gt;= &amp;TFforCooperativa when not &amp;TFforCooperativa.IsEmpty();forCooperativa &lt;= &amp;TFforCooperativa_To when not &amp;TFforCooperativa_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDap" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forDap.ToLower() like &amp;TFforDap.ToLower() when not &amp;TFforDap.IsEmpty()" defaultFilterCondition="forDap.ToLower() like &amp;TFforDap.ToLower() when not &amp;TFforDap.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCertificadoNumero" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forCertificadoNumero.ToLower() like &amp;TFforCertificadoNumero.ToLower() when not &amp;TFforCertificadoNumero.IsEmpty()" defaultFilterCondition="forCertificadoNumero.ToLower() like &amp;TFforCertificadoNumero.ToLower() when not &amp;TFforCertificadoNumero.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forCertificadoValidade" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forCertificadoValidade &gt;= &amp;TFforCertificadoValidade when not &amp;TFforCertificadoValidade.IsEmpty();forCertificadoValidade &lt;= &amp;TFforCertificadoValidade_To when not &amp;TFforCertificadoValidade_To.IsEmpty()" defaultFilterCondition="forCertificadoValidade &gt;= &amp;TFforCertificadoValidade when not &amp;TFforCertificadoValidade.IsEmpty();forCertificadoValidade &lt;= &amp;TFforCertificadoValidade_To when not &amp;TFforCertificadoValidade_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forStatus" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" cellVisible_E="False" defaultCellVisible_E="False" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDataCad" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forDataCad &gt;= &amp;TFforDataCad when not &amp;TFforDataCad.IsEmpty();forDataCad &lt;= &amp;TFforDataCad_To when not &amp;TFforDataCad_To.IsEmpty()" defaultFilterCondition="forDataCad &gt;= &amp;TFforDataCad when not &amp;TFforDataCad.IsEmpty();forDataCad &lt;= &amp;TFforDataCad_To when not &amp;TFforDataCad_To.IsEmpty()" />
+          <gridAttribute attribute="adbb33c9-0906-4971-833c-998de27e0676-forDataAlt" description="=Attribute.ContextualTitle" defaultDescription="=Attribute.ContextualTitle" visible="False" cellVisible_E="False" defaultCellVisible_E="False" filterCondition="forDataAlt &gt;= &amp;TFforDataAlt when not &amp;TFforDataAlt.IsEmpty();forDataAlt &lt;= &amp;TFforDataAlt_To when not &amp;TFforDataAlt_To.IsEmpty()" defaultFilterCondition="forDataAlt &gt;= &amp;TFforDataAlt when not &amp;TFforDataAlt.IsEmpty();forDataAlt &lt;= &amp;TFforDataAlt_To when not &amp;TFforDataAlt_To.IsEmpty()" />
+        </grid>
+      </table>
+    </selection>
+    <view childrenOrderedList="5;14;prefCodigo;5;41;-5;14;forCodigo;5;41;-5;06;Main Table-5;38;" Template="ViewMainDataAndTabs" caption="forNome.ToString()" defaultCaption="forNome.ToString()">
+      <parameters>
+        <parameter name="usuPrefeitura" />
+        <parameter name="forCodigo" />
+      </parameters>
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="5;06;TableViewRightItems-5;133;trnsfornecedoresGeneral-5;34;">
+        <table name="TableViewRightItems" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" flexJustifyContent="Flex End" defaultFlexJustifyContent="Flex End" type="Flex" defaultType="Flex" cellThemeClass="CellWWLinkPanel" defaultCellThemeClass="CellWWLinkPanel" childrenOrderedList="5;29;WorkWithLink">
+          <workWithLink caption="Ir a Cadastro de Fornecedor" defaultCaption="Ir a Cadastro de Fornecedor" themeClass="TextBlockLink" defaultThemeClass="TextBlockLink" cellThemeClass="ViewCellRightItem" defaultCellThemeClass="ViewCellRightItem" flexGrow="0" defaultFlexGrow="0" />
+        </table>
+        <viewComponent compWCName="trnsfornecedoresGeneral" includeInPanel="True" defaultIncludeInPanel="True" />
+        <tabsPosition cellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" defaultCellThemeClass="CellViewTabsPosition CellPaddingTop10 CellMarginTop" colSpan="999" defaultColSpan="999" startCol="1" defaultStartCol="1" />
+      </table>
+      <tabs childrenOrderedList="trnsfornecedoresGeneral;42;General-trnsfornecedoresRomaneioWC;43;Romaneio">
+        <tabularTab childrenOrderedList="trnsfornecedoresGeneral;04;Main Table" name="WWP_TemplateDataPanelTitle" defaultName="WWP_TemplateDataPanelTitle" code="General" wcname="trnsfornecedoresGeneral" defaultWcname="trnsfornecedoresGeneral">
+          <table name="Table" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="trnsfornecedoresGeneral;126;-trnsfornecedoresGeneral;88;Actions">
+            <transactionDetailData />
+            <actionGroup themeClass="CellMarginTop10" defaultThemeClass="CellMarginTop10" name="Actions" childrenOrderedList="trnsfornecedoresGeneral;91;Update-trnsfornecedoresGeneral;91;Delete">
+              <standardAction caption="" ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="Button" defaultButtonClass="Button" name="Update" />
+              <standardAction caption="" ControlType="Button" defaultControlType="Button" defaultImageType="&lt;default&gt;" buttonClass="BtnDefault" defaultButtonClass="BtnDefault" name="Delete" />
+            </actionGroup>
+          </table>
+        </tabularTab>
+      </tabs>
+    </view>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlustrnsfornecedores</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-trnsfornecedores</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

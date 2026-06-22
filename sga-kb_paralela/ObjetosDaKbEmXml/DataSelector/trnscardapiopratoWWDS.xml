@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a18d7916-2f9f-02f4-176f-ce66de452bfa" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-06-14T01:00:42.0000000Z" checksum="a5418929354a17f0ae3e848fdcc138d0" fullyQualifiedName="trnscardapiopratoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="20f6f67b-9f05-4f45-92ab-c2014396cf74" name="trnscardapiopratoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnscardapioprato WWDS" parent="WorkWithPlustrnscardapioprato" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapCodigo = &carDapCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoNome.ToLower() like &carPratoTurnoNome1.ToLower() when &DynamicFiltersSelector1 = !'CARPRATOTURNONOME' AND &DynamicFiltersOperator1 = 0 AND (not &carPratoTurnoNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoNome.ToLower() like '%' +  &carPratoTurnoNome1.ToLower() when &DynamicFiltersSelector1 = !'CARPRATOTURNONOME' AND &DynamicFiltersOperator1 = 1 AND (not &carPratoTurnoNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData >= &carPratoData1 when &DynamicFiltersSelector1 = !'CARPRATODATA' AND &DynamicFiltersOperator1 = 0 AND (not &carPratoData1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData <= &carPratoData_To1 when &DynamicFiltersSelector1 = !'CARPRATODATA' AND &DynamicFiltersOperator1 = 0 AND (not &carPratoData_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoRefeicao = &carPratoRefeicao1 when &DynamicFiltersSelector1 = !'CARPRATOREFEICAO' AND &DynamicFiltersOperator1 = 0 AND (not &carPratoRefeicao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurno = &carPratoTurno1 when &DynamicFiltersSelector1 = !'CARPRATOTURNO' AND &DynamicFiltersOperator1 = 0 AND (not &carPratoTurno1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoNome.ToLower() like &carPratoTurnoNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARPRATOTURNONOME' AND &DynamicFiltersOperator2 = 0 AND (not &carPratoTurnoNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoNome.ToLower() like '%' +  &carPratoTurnoNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARPRATOTURNONOME' AND &DynamicFiltersOperator2 = 1 AND (not &carPratoTurnoNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData >= &carPratoData2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARPRATODATA' AND &DynamicFiltersOperator2 = 0 AND (not &carPratoData2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData <= &carPratoData_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARPRATODATA' AND &DynamicFiltersOperator2 = 0 AND (not &carPratoData_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoRefeicao = &carPratoRefeicao2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARPRATOREFEICAO' AND &DynamicFiltersOperator2 = 0 AND (not &carPratoRefeicao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurno = &carPratoTurno2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARPRATOTURNO' AND &DynamicFiltersOperator2 = 0 AND (not &carPratoTurno2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoNome.ToLower() like &carPratoTurnoNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARPRATOTURNONOME' AND &DynamicFiltersOperator3 = 0 AND (not &carPratoTurnoNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoNome.ToLower() like '%' +  &carPratoTurnoNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARPRATOTURNONOME' AND &DynamicFiltersOperator3 = 1 AND (not &carPratoTurnoNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData >= &carPratoData3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARPRATODATA' AND &DynamicFiltersOperator3 = 0 AND (not &carPratoData3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData <= &carPratoData_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARPRATODATA' AND &DynamicFiltersOperator3 = 0 AND (not &carPratoData_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoRefeicao = &carPratoRefeicao3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARPRATOREFEICAO' AND &DynamicFiltersOperator3 = 0 AND (not &carPratoRefeicao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurno = &carPratoTurno3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARPRATOTURNO' AND &DynamicFiltersOperator3 = 0 AND (not &carPratoTurno3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData >= &TFcarPratoData when not &TFcarPratoData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoData <= &TFcarPratoData_To when not &TFcarPratoData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoHorario >= &TFcarPratoTurnoHorario when not &TFcarPratoTurnoHorario.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoHorario <= &TFcarPratoTurnoHorario_To when not &TFcarPratoTurnoHorario_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurnoNome.ToLower() like &TFcarPratoTurno.ToLower() when &TFcarPratoTurno_Sel.IsEmpty() AND (not &TFcarPratoTurno.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoTurno = &TFcarPratoTurno_Sel when not &TFcarPratoTurno_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoRefeicaoDescricao.ToLower() like &TFcarPratoRefeicao.ToLower() when &TFcarPratoRefeicao_Sel.IsEmpty() AND (not &TFcarPratoRefeicao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carPratoRefeicao = &TFcarPratoRefeicao_Sel when not &TFcarPratoRefeicao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoTurno">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoTurno</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:refTipDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoData1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoData1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoData_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoData_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoRefeicao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoRefeicao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoTurno1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoTurno1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoData2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoData2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoData_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoData_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoRefeicao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoRefeicao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoTurno2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoTurno2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoData3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoData3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoData_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoData_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoRefeicao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoRefeicao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoTurno3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoTurno3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoTurno_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoTurno_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoTurnoNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoTurnoNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurnoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoTurnoNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoTurnoNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurnoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carPratoTurnoNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carPratoTurnoNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurnoNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoRefeicao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoRefeicao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoDscricao50</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoRefeicao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoRefeicao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoRefeicao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoTurnoHorario">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoTurnoHorario</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurnoHorario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarPratoTurnoHorario_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarPratoTurnoHorario_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carPratoTurnoHorario</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapCodigo</Name>
+        <Description>car Dap Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoTurnoNome1</Name>
+        <Description>car Prato Turno Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoData1</Name>
+        <Description>car Prato Data1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoData_To1</Name>
+        <Description>car Prato Data_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoRefeicao1</Name>
+        <Description>car Prato Refeicao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoTurno1</Name>
+        <Description>car Prato Turno1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoTurnoNome2</Name>
+        <Description>car Prato Turno Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoData2</Name>
+        <Description>car Prato Data2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoData_To2</Name>
+        <Description>car Prato Data_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoRefeicao2</Name>
+        <Description>car Prato Refeicao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoTurno2</Name>
+        <Description>car Prato Turno2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoTurnoNome3</Name>
+        <Description>car Prato Turno Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoData3</Name>
+        <Description>car Prato Data3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoData_To3</Name>
+        <Description>car Prato Data_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoRefeicao3</Name>
+        <Description>car Prato Refeicao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carPratoTurno3</Name>
+        <Description>car Prato Turno3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoData</Name>
+        <Description>TFcar Prato Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoData_To</Name>
+        <Description>TFcar Prato Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoTurnoHorario</Name>
+        <Description>TFcar Prato Turno Horario</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoTurnoHorario_To</Name>
+        <Description>TFcar Prato Turno Horario_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoTurno</Name>
+        <Description>TFcar Prato Turno</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoTurno_Sel</Name>
+        <Description>TFcar Prato Turno_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoRefeicao</Name>
+        <Description>TFcar Prato Refeicao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarPratoRefeicao_Sel</Name>
+        <Description>TFcar Prato Refeicao_Sel</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscardapiopratoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnscardapioprato</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

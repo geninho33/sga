@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="67f1243d-6829-07fc-3de7-6752e4c3d922" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-23T03:09:41.0000000Z" lastUpdate="2025-04-23T01:15:33.0000000Z" checksum="e4a937914f4b1a3ee19ad3e1b1dddf69" fullyQualifiedName="trnsalunoWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="213f2ee5-1004-4330-ba5d-b72d67519ecd" name="trnsalunoWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsaluno WWDS" parent="WorkWithPlustrnsaluno" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AtendimentoCodigo = &AtendimentoCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula.ToLower() like &alunMatricula1.ToLower() when &DynamicFiltersSelector1 = !'ALUNMATRICULA' AND &DynamicFiltersOperator1 = 0 AND (not &alunMatricula1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula.ToLower() like '%' +  &alunMatricula1.ToLower() when &DynamicFiltersSelector1 = !'ALUNMATRICULA' AND &DynamicFiltersOperator1 = 1 AND (not &alunMatricula1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento >= &alunNascimento1 when &DynamicFiltersSelector1 = !'ALUNNASCIMENTO' AND &DynamicFiltersOperator1 = 0 AND (not &alunNascimento1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento <= &alunNascimento_To1 when &DynamicFiltersSelector1 = !'ALUNNASCIMENTO' AND &DynamicFiltersOperator1 = 0 AND (not &alunNascimento_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome.ToLower() like &alunNome1.ToLower() when &DynamicFiltersSelector1 = !'ALUNNOME' AND &DynamicFiltersOperator1 = 0 AND (not &alunNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome.ToLower() like '%' +  &alunNome1.ToLower() when &DynamicFiltersSelector1 = !'ALUNNOME' AND &DynamicFiltersOperator1 = 1 AND (not &alunNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunSexo = &alunSexo1 when &DynamicFiltersSelector1 = !'ALUNSEXO' AND (not &alunSexo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula.ToLower() like &alunMatricula2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ALUNMATRICULA' AND &DynamicFiltersOperator2 = 0 AND (not &alunMatricula2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula.ToLower() like '%' +  &alunMatricula2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ALUNMATRICULA' AND &DynamicFiltersOperator2 = 1 AND (not &alunMatricula2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento >= &alunNascimento2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ALUNNASCIMENTO' AND &DynamicFiltersOperator2 = 0 AND (not &alunNascimento2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento <= &alunNascimento_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ALUNNASCIMENTO' AND &DynamicFiltersOperator2 = 0 AND (not &alunNascimento_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome.ToLower() like &alunNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ALUNNOME' AND &DynamicFiltersOperator2 = 0 AND (not &alunNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome.ToLower() like '%' +  &alunNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ALUNNOME' AND &DynamicFiltersOperator2 = 1 AND (not &alunNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunSexo = &alunSexo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'ALUNSEXO' AND (not &alunSexo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula.ToLower() like &alunMatricula3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ALUNMATRICULA' AND &DynamicFiltersOperator3 = 0 AND (not &alunMatricula3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula.ToLower() like '%' +  &alunMatricula3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ALUNMATRICULA' AND &DynamicFiltersOperator3 = 1 AND (not &alunMatricula3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento >= &alunNascimento3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ALUNNASCIMENTO' AND &DynamicFiltersOperator3 = 0 AND (not &alunNascimento3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento <= &alunNascimento_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ALUNNASCIMENTO' AND &DynamicFiltersOperator3 = 0 AND (not &alunNascimento_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome.ToLower() like &alunNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ALUNNOME' AND &DynamicFiltersOperator3 = 0 AND (not &alunNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome.ToLower() like '%' +  &alunNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ALUNNOME' AND &DynamicFiltersOperator3 = 1 AND (not &alunNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunSexo = &alunSexo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'ALUNSEXO' AND (not &alunSexo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula.ToLower() like &TFalunMatricula.ToLower() when &TFalunMatricula_Sel.IsEmpty() AND (not &TFalunMatricula.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunMatricula = &TFalunMatricula_Sel when not &TFalunMatricula_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome.ToLower() like &TFalunNome.ToLower() when &TFalunNome_Sel.IsEmpty() AND (not &TFalunNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNome = &TFalunNome_Sel when not &TFalunNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento >= &TFalunNascimento when not &TFalunNascimento.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunNascimento <= &TFalunNascimento_To when not &TFalunNascimento_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunSexo in &TFalunSexo_Sels when &TFalunSexo_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunStatus in &TFalunStatus_Sels when &TFalunStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunMatricula1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunMatricula1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunMatricula</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNascimento1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNascimento1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNascimento_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNascimento_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunSexo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunSexo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunSexo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunMatricula2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunMatricula2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunMatricula</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNascimento2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNascimento2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNascimento_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNascimento_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunSexo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunSexo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunSexo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunMatricula3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunMatricula3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunMatricula</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNascimento3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNascimento3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNascimento_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNascimento_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunSexo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunSexo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunSexo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunMatricula">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunMatricula</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunMatricula</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunMatricula_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunMatricula_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunMatricula</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunNascimento">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunNascimento</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunNascimento_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunNascimento_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunNascimento</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunSexo_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunSexo_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunSexo</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFalunStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFalunStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AtendimentoCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AtendimentoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AtendimentoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AtendimentoCodigo</Name>
+        <Description>Atendimento Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunMatricula1</Name>
+        <Description>alun Matricula1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNascimento1</Name>
+        <Description>alun Nascimento1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNascimento_To1</Name>
+        <Description>alun Nascimento_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNome1</Name>
+        <Description>alun Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunSexo1</Name>
+        <Description>alun Sexo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunMatricula2</Name>
+        <Description>alun Matricula2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNascimento2</Name>
+        <Description>alun Nascimento2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNascimento_To2</Name>
+        <Description>alun Nascimento_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNome2</Name>
+        <Description>alun Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunSexo2</Name>
+        <Description>alun Sexo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunMatricula3</Name>
+        <Description>alun Matricula3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNascimento3</Name>
+        <Description>alun Nascimento3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNascimento_To3</Name>
+        <Description>alun Nascimento_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunNome3</Name>
+        <Description>alun Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunSexo3</Name>
+        <Description>alun Sexo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunMatricula</Name>
+        <Description>TFalun Matricula</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunMatricula_Sel</Name>
+        <Description>TFalun Matricula_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunNome</Name>
+        <Description>TFalun Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunNome_Sel</Name>
+        <Description>TFalun Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunNascimento</Name>
+        <Description>TFalun Nascimento</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunNascimento_To</Name>
+        <Description>TFalun Nascimento_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunSexo_Sels</Name>
+        <Description>TFalun Sexo_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFalunStatus_Sels</Name>
+        <Description>TFalun Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsalunoWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsaluno</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

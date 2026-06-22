@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="159fad11-329d-4b0f-ab38-2a38d2f35f3d" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-09-18T05:35:35.0000000Z" lastUpdate="2025-09-18T05:27:24.0000000Z" checksum="eb633c7b0f6768a9cda5688b6048526f" fullyQualifiedName="WWPBaseObjects.MenuOptionsData" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="0eda3511-9a06-4371-a4c5-c4b76016c852" name="MenuOptionsData" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Menu Options Data" parent="WWPBaseObjects.MenuData" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[DVelop_Menu
+{
+	
+	&id = 0
+	
+	Item
+	{
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		linkTarget ="" 
+		caption = !"Menu de Opções"
+		iconClass = !"menu-icon fas fa-bars"		
+	}
+
+	Item
+	{ 
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		link =	WWPBaseObjects.HomeUE.Link()
+		linkTarget ="" 
+		iconClass = !"menu-icon fas fa-chart-line"
+		caption = !"Dashboard"  
+	}
+
+
+	Item
+		{ 
+			&id = &id + 1
+			id = &id.ToString()
+			tooltip = ""
+			link = WPCardapiosUE.Link()
+			linkTarget ="" 
+			iconClass = !"menu-icon fas fa-calendar"
+			caption = !"Cardápios"  
+		}
+
+	Item
+	{ 
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		link =	WPMapaLancamentoUE.Link()
+		linkTarget ="" 
+		iconClass = !"menu-icon fas fa-utensils"
+		caption = !"Mapa de Consumo"  
+	}
+
+//	Item
+//	{ 
+//		&id = &id + 1
+//		id = &id.ToString()
+//		tooltip = ""
+//		link =	WPAjusteMapaLancamentoUE.Link()
+//		linkTarget ="" 
+//		iconClass = !"menu-icon fas fa-undo"
+//		caption = !"Ajuste de Lançamento"  
+//	}
+
+
+	Item
+	{ 
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		link =	WPEntregasUE.Link()
+		linkTarget ="" 
+		iconClass = !"menu-icon fas fa-truck-loading"
+		caption = !"Guias de Entregas"  
+	}
+
+//	Item
+//	{ 
+//		&id = &id + 1
+//		id = &id.ToString()
+//		tooltip = ""
+//		link =	WPLancarEstoqueUE.Link()
+//		linkTarget ="" 
+//		iconClass = !"menu-icon fa fa-store"
+//		caption = !"Lançar Estoque"  
+//	}
+
+	Item
+	{ 
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		link =	WPEstoqueUE.Link()
+		linkTarget ="" 
+		iconClass = !"menu-icon fa fa-store"
+		caption = !"Consultar Estoque"  
+	}
+
+//	Item
+//	{ 
+//		&id = &id + 1
+//		id = &id.ToString()
+//		tooltip = ""
+//		link = WPLancarEstoqueUE.Link()
+//		linkTarget ="" 
+//		iconClass = !"menu-icon fas fa-clipboard-list"
+//		caption = !"Saldo do Mês Anterior "  		
+//	}
+
+	Item
+	{ 
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		link =	WPInventarioUE.Link()
+		linkTarget ="" 
+		iconClass = !"menu-icon fa fa-list"
+		caption = !"Inventário"  
+	}
+
+	Item
+	{ 
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		// link =  WPPerguntasRespostasUE.link()
+		link = WPerguntaswwUE.Link()
+		linkTarget ="" 
+		iconClass = !"menu-icon fas fa-info"
+		caption = !"Ajuda"  
+	}
+
+
+	Item
+	{ 
+		&id = &id + 1
+		id = &id.ToString()
+		tooltip = ""
+		link = WPLoginUE.Link()
+		linkTarget ="" 
+		iconClass = !"menu-icon fa fa-door-open"
+		caption = !"Sair"  
+	}		
+
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="id">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>id</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ProgramName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ProgramName</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:ProgramNames.ProgramName, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>MenuOptionsData</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-WWPBaseObjects.DVelop_Menu</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityNone</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

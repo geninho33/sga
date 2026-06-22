@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="734ffb90-aa9e-498c-a0c5-f9dd598acf6e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2023-12-13T14:29:56.0000000Z" checksum="13cb2294b94702ae437a53304580d8ff" fullyQualifiedName="WWPBaseObjects.ProgressBar" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="a4b2f48e-5a9a-4346-8976-ae45c87c1472" name="ProgressBar" type="083f1b21-5715-45e1-8a8d-ceadef141e02" description="Progress bar" parent="WWPBaseObjects.Components" parentType="00000000-0000-0000-0000-000000000008">
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>ProgressBar</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Progress bar</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Category</Name>
+      <Value>Progress Indicator</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_CategoryOrder</Name>
+      <Value>0</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_Type</Name>
+      <Value>Component</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_TemplateXml</Name>
+      <Value>&lt;component Name="ProgressBar"&gt;      &lt;table name="TableMain" themeClass="ProgressBarNotRounded" editProps="themeClass:Progress borders style:::\mRounded-ProgressBarNotRounded\mNot Rounded" numberOfColumns="2" type="Responsive" cellThemeClass="CellPaddingRight30"&gt;         &lt;textBlock controlName="DescriptionProgressBar" caption="Progress" themeClass="ProgressBarAdminV2Description" cellWidth_E="58%" editProps="caption:Progress bar Description::T:" /&gt;         &lt;table name="TableTotal" type="Flex" flexJustifyContent="Flex End" cellWidth_E="42%"&gt;            &lt;attributeTemplate name="Value" previewExampleText="83" themeClass="ProgressBarAdminV2Number" showDescription="False" flexGrow="0" editProps="&amp;lt;Att_Template&amp;gt;:Value::T:" dataType="Basic" readOnly="True" /&gt;            &lt;textBlock controlName="SeparatorProgressBar" caption="/" themeClass="ProgressBarAdminV2NumberTotal" flexGrow="0" editProps=";" /&gt;            &lt;attributeTemplate name="TotalValue" previewExampleText="100" themeClass="ProgressBarAdminV2NumberTotal" showDescription="False" flexGrow="0" editProps="&amp;lt;Att_Template&amp;gt;:Total Value::T:" dataType="Basic" readOnly="True" /&gt;         &lt;/table&gt;         &lt;userControl controlName="ProgressBar" ucName="DVelop.GXBootstrap.DVProgressIndicator" ucProperties="Type:Bar,Cls:ProgressBar,Percentage:83" editProps="UCP\gCls:Progress bar color:::ProgressBar\mBase color-ProgressBar ProgressBarWarning\mWarning-ProgressBar ProgressBarDanger\mDanger-ProgressBar ProgressBarInfo\mInfo-ProgressBar ProgressBarInfoLight\mInfo light-ProgressBar ProgressBarSuccess\mSuccess;cellThemeClass:Progress bar width:::ProgressBarWidthNormal\mNormal-ProgressBarWidthThin\mThin" cellThemeClass="ProgressBarWidthNormal" /&gt;      &lt;/table&gt;      &lt;events&gt;         &lt;eventBlock BlockName="AssignProgressUCValue" code="&amp;lt;COMP_NAME&amp;gt;_ProgressBar.Percentage = (&amp;amp;&amp;lt;COMP_NAME&amp;gt;_Value / &amp;amp;&amp;lt;COMP_NAME&amp;gt;_TotalValue) * 100" DelBlock="Include" AddToInstanceByDefault="False" EventName="Start" /&gt;      &lt;/events&gt;      &lt;variables /&gt;   &lt;/component&gt;</Value>
+    </Property>
+    <Property>
+      <Name>WWPTemplate_PreviewImage</Name>
+      <Value>data:image/octet-stream;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAAOCAYAAAAG7wEyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVqSURBVGhD7VhbbxVVFJ6KAiIqVMUbNxWEUkqhLdWWQmnLaUuppaUzs2ffZs6lPaUtRxQsEgkeL4hgQgzE4IvGICbGaAwYookmksgP4MFXH3xvrCBgrJIzfms61BsxYIwC3V/yZfbae6215zx8a605loGBwfWFLqVmuVKujM0rRpFt28XE2DYwMPifYEu5hOtUXTabvYVsx3EmaZ1e4aXTD0QOABN6kyPUk0qp22AW0R78pnPO76b1JeB8VhAEUyODK9XJhHqdSb0LwUkrb90UHcQJCO3Z7LR4OY7WXG5KvBwHvVS8LIpfYhx/sova29v/ktPAYCLDVqrfFeqk8JMfuVy/xZj/iCvVuyJIf+xI9QXOG8mPcdVvS7/LlfqwK/wGxth8aPiQK/Rh6LmbfPD0Pdikbc9DkaDk3UrVRgmkPogL2nDZDgRtd7Se6wi9GQn3gQNUHZB0Dvz2kw9TKmv7frXnqQTsPZ4nOcXgfBsVDk8lE0KImZ7UAS58hsmgyfO8e7HOMCmHbK7rce14QTEwmMAogoY+dKXf4wTBfUyqL4XQDnS0c2MQzMDZ27TO5/M3Yf1ie3t2mqv8lC0089DdudZ1jjMwHetX0FTL4buXpgJX6zY08KwFsWZQQV5l3KdqsoPGApejiggxD4LM4ltgIBIrkjkkWKl3M+GvtzOZYlepA9hL0wswLp+jPfjlXSHW4VPgHlSbPfDphtD30UhCcRzihv/Lnu+Xoip14MVvjn+ogcGEhq38Lejg34ggeQo6PBFvW2i6x9Fov8VovtC21UOO8p+N9rnyHCmV6+kcGmg02kOHQ0wEmpop2VKmF0Fvz1sQcg/XwS4kW0fjNTptMyrAIDlB+HnGLnV7uRoBL4D7xQYxMzrnSlK3hrgHbe5Xj/lhKpCygr4PXBV084AvRqGopJdyuZ+ijg6x1+CHaBvxGPcnU5yBwUTGmPb0J0wIp0vK2dDjCRrRPYzrjqPnQuhv0FTsqaAV2hEUQyLHmiFuCBp7mPY4JmnoqwWC30m2q1LU3bdRR++3MXrTJgGdt8PhKqoYOKuF2A8kM1mHnp6nV1DHR+BeD364+BBXgcRLPIVC0EQx2HeZ9LcynRR0GdO6BN8Km9G9bXT3l5CjCnZvJHyM+87AwHSKMzCYyKCGB219wJR/SCbTaWjjK4zmPjR2Sgap3RD+Zzjbgk/pXo7PZYqhru2Rrny/Af6vQZc7qRjkcq1TUCDy0Nl2TNUHbM7hL3N3WK0Hf/tjrTU3xRL9UccmzBDpeWsyg4mprH9OtGE/XVzLk22VPFW31tPBYyy13tq4dYZVf3J8BC/x0itWqUzCSmwf+wNO9t6/UqabrM7Bu8i8k/XNr/Z6Gq2OodujcwMDA8KtTa0b+ts6OneVVVSURRvFsx9saXsiWbu6oRnm5ERb+xCel7RGTTL6U7t0eXV5Td3aqNnGmLRqTWOipKS8NLIKvU1lhVRzeSG9ripitE4spXXY01xZ6GtcUsg8voCeZB9Nbtp2ULlvfhp0yX2+e+xzv9ONcvTFOXpbKsJs/eJCpn5BIdO4LMqRrl9a6FuzkPJGdk9DaWQjbuw8vtvQ8HqhV1t14diRquELP1cNDw//KywUCmXgo+AisOTMmTOVeJaCC2n/9Omv175z5EiO9mP/ZcTYj2IWjI6OLqczPMvJDsNwMZ1bYe/68KrY0xKG2bYw7AOzsX05P0PDG5miNrx44v3wHJR0/vz5/4jnwh/Oni1c/uzvaYU9rRDr1RDCzvyOZF/Wz9DwBiavCX86/l74/S+FEB3zmqf1B9EaGhpeGb2a8MdjR8PvRi+GIyMj1zyN0A0N/wmN0A0NJwCvK6GPhL8CUph4BF9GoTsAAAAASUVORK5CYII=</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

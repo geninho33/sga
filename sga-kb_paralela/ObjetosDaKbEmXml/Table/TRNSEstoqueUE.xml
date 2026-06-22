@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-16T18:20:27.0000000Z" lastUpdate="2024-10-24T17:36:31.0000000Z" checksum="e572d832cd3e99bd74563d1510515a32" fullyQualifiedName="TRNSEstoqueUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="b8e02a9b-0faa-4fe4-8072-4a3dfe35e7ee" name="TRNSEstoqueUE" type="857ca50e-7905-0000-0007-c5d9ff2975ec" description="Controle de Estoque das Unidades">
+  <Part type="00000000-0000-0000-0002-000000000004">
+    <Key>
+      <Item guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Item>
+      <Item guid="cbf205e2-099b-4c59-bff2-3036832a8dc2">estoUeCodigo</Item>
+    </Key>
+    <Properties />
+  </Part>
+  <Part type="a5c0e770-560d-0001-0001-7fe71c260de3">
+    <Indexes>
+      <TableIndex>
+        <Index Type="Unique" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-05T00:38:11.0000000Z" checksum="9f167f28169930cb41d461782d62b2b6" fullyQualifiedName="ITRNSEstoqueUE" moduleGuid="00000000-0000-0000-0000-000000000000" guid="bc42e814-ac6f-4746-9624-7b337df88f0b" name="ITRNSEstoqueUE" type="9e750647-3679-0000-0100-2529de263960" description="ITRNSEstoque UE">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+              <Member Order="Ascending">estoUeCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>ITRNSEstoqueUE</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+      <TableIndex>
+        <Index Type="Duplicate" Source="Automatic" parentGuid="00000000-0000-0000-0000-000000000000" user="DESKTOP-OQ270FR\Geninho" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-10-05T00:38:11.0000000Z" checksum="91f794fb7eb926354a6b9530c3f3db70" fullyQualifiedName="ITRNSEstoqueUE1" moduleGuid="00000000-0000-0000-0000-000000000000" guid="2e0366ab-52af-465c-804a-d22fadf7d9a0" name="ITRNSEstoqueUE1" type="9e750647-3679-0000-0100-2529de263960" description="ITRNSEstoque UE1">
+          <Part type="62cfa789-c127-0001-0100-77676175e433">
+            <Members>
+              <Member Order="Ascending">prefCodigo</Member>
+            </Members>
+            <Properties />
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>ITRNSEstoqueUE1</Value>
+            </Property>
+          </Properties>
+        </Index>
+      </TableIndex>
+    </Indexes>
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>TRNSEstoqueUE</Value>
+    </Property>
+  </Properties>
+</Object>

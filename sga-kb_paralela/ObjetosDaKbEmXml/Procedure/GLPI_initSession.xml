@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-10-10T04:19:47.0000000Z" lastUpdate="2025-10-07T02:48:05.0000000Z" checksum="80581bc140508f2b958aff3950f669c7" fullyQualifiedName="GLPI_initSession" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a54bcb3b-5c89-4519-b4b8-cd4fe0a472d3" name="GLPI_initSession" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Inicializar a sessão do GLPI" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[// Declaração de variáveis (devem estar definidas no contexto ou como parâmetros)
+LoadWWPContext( &wwPContext )
+
+&HTTP_URL = &wwPContext.GLPI_URL + "/initSession"
+&HTTP_METHOD = "POST"
+&HTTP_STATUS = 0
+&HTTP_RESPONSE = ""
+&SUCCESS = False
+&ERROR_MESSAGE = ""
+&SESSION_TOKEN = ""
+
+// Configurar headers
+&HttpClient.AddHeader("app-token", &wwPContext.APP_TOKEN)
+&HttpClient.AddHeader("Authorization", "user_token " + &wwPContext.USER_TOKEN)
+&HttpClient.AddHeader("Content-Type", "application/json")
+
+// Executar requisição
+&HttpClient.Execute(&HTTP_METHOD, &HTTP_URL)
+
+// Obter status e resposta
+&HTTP_STATUS = &HttpClient.StatusCode
+&HTTP_RESPONSE = &HttpClient.ToString()
+
+If &HTTP_STATUS = 200
+    // Parsear resposta JSON
+    &JSON_SDT = new() // SDT para armazenar a resposta JSON
+    &JSON_SDT.FromJson(&HTTP_RESPONSE)
+
+    If &JSON_SDT.success // Supondo que SDT_JSON_RESPONSE tenha um campo Success
+        &SESSION_TOKEN = &JSON_SDT.session_token // Ajuste conforme o campo do SDT
+        &SUCCESS = True
+        &ERROR_MESSAGE = ""
+    Else
+        &SUCCESS = False
+        &ERROR_MESSAGE = "Erro ao processar resposta da API"
+    EndIf
+Else
+    &SUCCESS = False
+    &ERROR_MESSAGE = "Erro HTTP: " + &HTTP_STATUS.ToString()
+EndIf
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(out:&SESSION_TOKEN, out:&SUCCESS, out:&ERROR_MESSAGE);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Properties />
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="HTTP_URL">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_URL</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="wwPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>wwPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_METHOD">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_METHOD</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_STATUS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_STATUS</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Situacao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTP_RESPONSE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTP_RESPONSE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SUCCESS">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SUCCESS</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ERROR_MESSAGE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ERROR_MESSAGE</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SESSION_TOKEN">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SESSION_TOKEN</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>255</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>255</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HttpClient">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HttpClient</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpClient</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="JSON_SDT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>JSON_SDT</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:SDT_JSON_RESPONSE</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GLPI_initSession</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Inicializar a sessão do GLPI</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

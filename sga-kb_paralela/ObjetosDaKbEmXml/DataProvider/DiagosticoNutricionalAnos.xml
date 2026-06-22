@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="687d6d62-378b-4328-a31b-889b02268617" user="JORGE-AVELL\joadh" versionDate="2025-02-19T00:13:32.0000000Z" lastUpdate="2025-01-15T19:44:05.0000000Z" checksum="72e1d6bc9b7fc5b70d48c54562353b95" fullyQualifiedName="DiagosticoNutricionalAnos" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8cee83ce-9e72-45a4-b1c2-43e4a9f21ed8" name="DiagosticoNutricionalAnos" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="Diagostico Nutricional Anos" parent="DataProviders" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[Anos_Structure
+{
+	Item
+	Order (diag_nutricional_Ano)
+	Unique diag_nutricional_Ano
+	{
+		Ano 	  = diag_nutricional_Ano
+		Descricao = diag_nutricional_Ano.ToString()
+	}
+}
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>DiagosticoNutricionalAnos</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Diagostico Nutricional Anos</Value>
+    </Property>
+    <Property>
+      <Name>idINFER_SDT</Name>
+      <Value>idINFER_STRUCTURE_IF_SDT_IS_DYNAMIC</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>447527b5-9210-4523-898b-5dccb17be60a-Anos_Structure</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

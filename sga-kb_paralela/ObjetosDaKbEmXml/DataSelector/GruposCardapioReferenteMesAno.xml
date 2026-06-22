@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c6b7135b-2925-42bc-a6cb-299d32fd312e" user="JORGE-AVELL\joadh" versionDate="2024-07-16T21:59:41.0000000Z" lastUpdate="2024-07-16T12:34:02.0000000Z" checksum="d457bbde737837427930c4dc1796c7c4" fullyQualifiedName="GruposCardapioReferenteMesAno" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="d05298ae-81ca-4ded-8666-d132e498e560" name="GruposCardapioReferenteMesAno" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="Grupos Cardapio Referente Mes Ano" parent="Distribuicao" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Attribute Name="carDapGruCodigo" />
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo;
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno.Month() = &Mes;
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno.Year() = &Ano;
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>Description</Name>
+            <Value>Prefeitura</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="Mes">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Mes</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>2</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="Ano">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>Ano</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>Prefeitura</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>Mes</Name>
+        <Description>Mes</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>Ano</Name>
+        <Description>Ano</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>GruposCardapioReferenteMesAno</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

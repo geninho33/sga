@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="36bf3172-e1f9-47ab-98af-7a8621b6718c" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2020-11-13T17:43:06.0000000Z" checksum="5aeff9a2d342eb6fe1d71dee23d1219d" fullyQualifiedName="WWPBaseObjects.Discussions.WWP_SubscribeLoggedUserToDiscussion" moduleGuid="e2da86dd-2537-4d5a-8e82-35fda77dc9e5" guid="0b8f4eb0-06ae-444f-9741-6836ffa2e7a2" name="WWP_SubscribeLoggedUserToDiscussion" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Subscribe the logged user to a discussion" parent="WWPBaseObjects.Discussions.Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[For Each WWPBaseObjects.Notifications.Common.WWP_NotificationDefinition
+	Where WWPNotificationDefinitionName = &WWPNotificationDefinitionName
+	Where WWPEntityId = WWP_GetEntityByName(&WWPEntityName)
+	
+	For Each WWPBaseObjects.Subscriptions.WWP_Subscription
+		Where WWPUserExtendedId = WWP_GetLoggedUserId()
+		Where WWPSubscriptionEntityRecordId = &WWPSubscriptionEntityRecordId
+		
+		WWPSubscriptionSubscribed = True
+	When None
+		&WWPSubscription = New()
+		&WWPSubscription.WWPNotificationDefinitionId = WWPNotificationDefinitionId
+		&WWPSubscription.WWPUserExtendedId = WWP_GetLoggedUserId()
+		&WWPSubscription.WWPSubscriptionEntityRecordId = &WWPSubscriptionEntityRecordId
+		&WWPSubscription.WWPSubscriptionEntityRecordDescription = &WWPSubscriptionEntityRecordDescription
+		&WWPSubscription.WWPSubscriptionSubscribed = True
+		&WWPSubscription.Save()
+		If &WWPSubscription.Success()
+			Commit
+		EndIf
+	EndFor
+When None
+	WWP_Logger.Error(&pgmname, format(!'WWP_NotificationDefinition not found: %1', &WWPNotificationDefinitionName))
+EndFor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm(in:&WWPNotificationDefinitionName, in:&WWPEntityName, in:&WWPSubscriptionEntityRecordId, in:&WWPSubscriptionEntityRecordDescription);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="WWPNotificationDefinitionName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPNotificationDefinitionName</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPNotification Definition Internal Name</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPNotificationDefinitionName</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPSubscriptionEntityRecordId">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPSubscriptionEntityRecordId</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPSubscription Entity Record Id</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPSubscriptionEntityRecordId</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPSubscription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPSubscription</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:WWP_Subscription, WWPBaseObjects.Subscriptions</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPSubscriptionEntityRecordDescription">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPSubscriptionEntityRecordDescription</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>WWPSubscription Entity Record Description</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPSubscriptionEntityRecordDescription</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPEntityName">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPEntityName</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Entity Name</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:WWPEntityName</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_SubscribeLoggedUserToDiscussion</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Subscribe the logged user to a discussion</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

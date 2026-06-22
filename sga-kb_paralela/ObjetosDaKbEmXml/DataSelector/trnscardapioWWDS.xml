@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="c603bcf2-0235-0518-0564-238a69020a6b" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-24T03:54:53.0000000Z" lastUpdate="2024-10-23T16:12:30.0000000Z" checksum="0ab14483a57e92a323fc81a35551e2be" fullyQualifiedName="trnscardapioWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="91a7e349-da18-44d2-9207-e2fcfb1dde74" name="trnscardapioWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnscardapio WWDS" parent="WorkWithPlustrnscardapio" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[carDapCodigo = &carDapCodigo1 when &DynamicFiltersSelector1 = !'CARDAPCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &carDapCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao.ToLower() like &carDapDescricao1.ToLower() when &DynamicFiltersSelector1 = !'CARDAPDESCRICAO' AND &DynamicFiltersOperator1 = 0 AND (not &carDapDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao.ToLower() like '%' +  &carDapDescricao1.ToLower() when &DynamicFiltersSelector1 = !'CARDAPDESCRICAO' AND &DynamicFiltersOperator1 = 1 AND (not &carDapDescricao1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno >= &carDapMesAno1 when &DynamicFiltersSelector1 = !'CARDAPMESANO' AND &DynamicFiltersOperator1 = 0 AND (not &carDapMesAno1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno <= &carDapMesAno_To1 when &DynamicFiltersSelector1 = !'CARDAPMESANO' AND &DynamicFiltersOperator1 = 0 AND (not &carDapMesAno_To1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapNutricionista = &carDapNutricionista1 when &DynamicFiltersSelector1 = !'CARDAPNUTRICIONISTA' AND &DynamicFiltersOperator1 = 0 AND (not &carDapNutricionista1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapStatus = &carDapStatus1 when &DynamicFiltersSelector1 = !'CARDAPSTATUS' AND (not &carDapStatus1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapCodigo = &carDapCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARDAPCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &carDapCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao.ToLower() like &carDapDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARDAPDESCRICAO' AND &DynamicFiltersOperator2 = 0 AND (not &carDapDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao.ToLower() like '%' +  &carDapDescricao2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARDAPDESCRICAO' AND &DynamicFiltersOperator2 = 1 AND (not &carDapDescricao2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno >= &carDapMesAno2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARDAPMESANO' AND &DynamicFiltersOperator2 = 0 AND (not &carDapMesAno2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno <= &carDapMesAno_To2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARDAPMESANO' AND &DynamicFiltersOperator2 = 0 AND (not &carDapMesAno_To2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapNutricionista = &carDapNutricionista2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARDAPNUTRICIONISTA' AND &DynamicFiltersOperator2 = 0 AND (not &carDapNutricionista2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapStatus = &carDapStatus2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'CARDAPSTATUS' AND (not &carDapStatus2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapCodigo = &carDapCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARDAPCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &carDapCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao.ToLower() like &carDapDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARDAPDESCRICAO' AND &DynamicFiltersOperator3 = 0 AND (not &carDapDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao.ToLower() like '%' +  &carDapDescricao3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARDAPDESCRICAO' AND &DynamicFiltersOperator3 = 1 AND (not &carDapDescricao3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno >= &carDapMesAno3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARDAPMESANO' AND &DynamicFiltersOperator3 = 0 AND (not &carDapMesAno3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno <= &carDapMesAno_To3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARDAPMESANO' AND &DynamicFiltersOperator3 = 0 AND (not &carDapMesAno_To3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapNutricionista = &carDapNutricionista3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARDAPNUTRICIONISTA' AND &DynamicFiltersOperator3 = 0 AND (not &carDapNutricionista3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapStatus = &carDapStatus3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'CARDAPSTATUS' AND (not &carDapStatus3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapCodigo >= &TFcarDapCodigo when not &TFcarDapCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapCodigo <= &TFcarDapCodigo_To when not &TFcarDapCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao.ToLower() like &TFcarDapDescricao.ToLower() when &TFcarDapDescricao_Sel.IsEmpty() AND (not &TFcarDapDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapDescricao = &TFcarDapDescricao_Sel when not &TFcarDapDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[usuNome.ToLower() like &TFcarDapNutricionista.ToLower() when &TFcarDapNutricionista_Sel.IsEmpty() AND (not &TFcarDapNutricionista.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapNutricionista = &TFcarDapNutricionista_Sel when not &TFcarDapNutricionista_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno >= &TFcarDapMesAno when not &TFcarDapMesAno.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapMesAno <= &TFcarDapMesAno_To when not &TFcarDapMesAno_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapStatus in &TFcarDapStatus_Sels when &TFcarDapStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carDapLiberarAcesso in &TFcarDapLiberarAcesso_Sels when &TFcarDapLiberarAcesso_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapDescricao1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapDescricao1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapDescricao2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapDescricao2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapDescricao3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapDescricao3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapNutricionista">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapNutricionista</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:usuNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapMesAno">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapMesAno</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapMesAno_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapMesAno_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapMesAno1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapMesAno1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapMesAno_To1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapMesAno_To1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapNutricionista1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapNutricionista1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapNutricionista</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapStatus1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapStatus1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapMesAno2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapMesAno2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapMesAno_To2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapMesAno_To2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapNutricionista2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapNutricionista2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapNutricionista</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapStatus2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapStatus2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapMesAno3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapMesAno3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapMesAno_To3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapMesAno_To3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapMesAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapNutricionista3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapNutricionista3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapNutricionista</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="carDapStatus3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>carDapStatus3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapStatus</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapNutricionista_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapNutricionista_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapNutricionista</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarDapLiberarAcesso_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarDapLiberarAcesso_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carDapLiberarAcesso</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapCodigo1</Name>
+        <Description>car Dap Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapDescricao1</Name>
+        <Description>car Dap Descricao1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapMesAno1</Name>
+        <Description>car Dap Mes Ano1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapMesAno_To1</Name>
+        <Description>car Dap Mes Ano_To1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapNutricionista1</Name>
+        <Description>car Dap Nutricionista1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapStatus1</Name>
+        <Description>car Dap Status1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapCodigo2</Name>
+        <Description>car Dap Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapDescricao2</Name>
+        <Description>car Dap Descricao2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapMesAno2</Name>
+        <Description>car Dap Mes Ano2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapMesAno_To2</Name>
+        <Description>car Dap Mes Ano_To2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapNutricionista2</Name>
+        <Description>car Dap Nutricionista2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapStatus2</Name>
+        <Description>car Dap Status2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapCodigo3</Name>
+        <Description>car Dap Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapDescricao3</Name>
+        <Description>car Dap Descricao3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapMesAno3</Name>
+        <Description>car Dap Mes Ano3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapMesAno_To3</Name>
+        <Description>car Dap Mes Ano_To3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapNutricionista3</Name>
+        <Description>car Dap Nutricionista3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>carDapStatus3</Name>
+        <Description>car Dap Status3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapCodigo</Name>
+        <Description>TFcar Dap Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapCodigo_To</Name>
+        <Description>TFcar Dap Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapDescricao</Name>
+        <Description>TFcar Dap Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapDescricao_Sel</Name>
+        <Description>TFcar Dap Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapNutricionista</Name>
+        <Description>TFcar Dap Nutricionista</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapNutricionista_Sel</Name>
+        <Description>TFcar Dap Nutricionista_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapMesAno</Name>
+        <Description>TFcar Dap Mes Ano</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapMesAno_To</Name>
+        <Description>TFcar Dap Mes Ano_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapStatus_Sels</Name>
+        <Description>TFcar Dap Status_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarDapLiberarAcesso_Sels</Name>
+        <Description>TFcar Dap Liberar Acesso_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnscardapioWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnscardapio</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

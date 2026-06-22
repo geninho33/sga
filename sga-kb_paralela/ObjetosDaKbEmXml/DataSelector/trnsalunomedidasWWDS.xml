@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="397882e0-c092-0861-0105-759c5236b8fe" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-04-23T03:09:41.0000000Z" lastUpdate="2025-04-23T02:39:40.0000000Z" checksum="98e623959019b4575e94fd41e058830a" fullyQualifiedName="trnsalunomedidasWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="7593452a-4165-4604-8f79-7bf35f8b5823" name="trnsalunomedidasWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsalunomedidas WWDS" parent="WorkWithPlustrnsalunomedidas" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[alunCodigo = &alunCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunAno = &mediAlunAno1 when &DynamicFiltersSelector1 = !'MEDIALUNANO' AND &DynamicFiltersOperator1 = 0 AND (not &mediAlunAno1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunAno = &mediAlunAno2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'MEDIALUNANO' AND &DynamicFiltersOperator2 = 0 AND (not &mediAlunAno2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunAno = &mediAlunAno3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'MEDIALUNANO' AND &DynamicFiltersOperator3 = 0 AND (not &mediAlunAno3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunData >= &TFmediAlunData when not &TFmediAlunData.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunData <= &TFmediAlunData_To when not &TFmediAlunData_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunAltura >= &TFmediAlunAltura when not &TFmediAlunAltura.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunAltura <= &TFmediAlunAltura_To when not &TFmediAlunAltura_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunPeso >= &TFmediAlunPeso when not &TFmediAlunPeso.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunPeso <= &TFmediAlunPeso_To when not &TFmediAlunPeso_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunCircunferencia >= &TFmediAlunCircunferencia when not &TFmediAlunCircunferencia.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunCircunferencia <= &TFmediAlunCircunferencia_To when not &TFmediAlunCircunferencia_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunDobraAbdominal >= &TFmediAlunDobraAbdominal when not &TFmediAlunDobraAbdominal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunDobraAbdominal <= &TFmediAlunDobraAbdominal_To when not &TFmediAlunDobraAbdominal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunDobrasSupra >= &TFmediAlunDobrasSupra when not &TFmediAlunDobrasSupra.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunDobrasSupra <= &TFmediAlunDobrasSupra_To when not &TFmediAlunDobrasSupra_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunDobrasTriciptal >= &TFmediAlunDobrasTriciptal when not &TFmediAlunDobrasTriciptal.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunDobrasTriciptal <= &TFmediAlunDobrasTriciptal_To when not &TFmediAlunDobrasTriciptal_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunAtivExtras >= &TFmediAlunAtivExtras when not &TFmediAlunAtivExtras.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunAtivExtras <= &TFmediAlunAtivExtras_To when not &TFmediAlunAtivExtras_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunIMC >= &TFmediAlunIMC when not &TFmediAlunIMC.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunIMC <= &TFmediAlunIMC_To when not &TFmediAlunIMC_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[mediAlunStatus in &TFmediAlunStatus_Sels when &TFmediAlunStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="mediAlunAno1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>mediAlunAno1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="mediAlunAno2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>mediAlunAno2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="mediAlunAno3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>mediAlunAno3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunAno</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunColeta">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunColeta</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunColeta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunColeta_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunColeta_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunColeta</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunData">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunData</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunData_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunData_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunData</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunAltura">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunAltura</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunAltura</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunAltura_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunAltura_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunAltura</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunPeso">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunPeso</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunPeso_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunPeso_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunPeso</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunCircunferencia">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunCircunferencia</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunCircunferencia</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunCircunferencia_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunCircunferencia_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunCircunferencia</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunDobraAbdominal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunDobraAbdominal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunDobraAbdominal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunDobraAbdominal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunDobraAbdominal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunDobraAbdominal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunDobrasSupra">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunDobrasSupra</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunDobrasSupra</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunDobrasSupra_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunDobrasSupra_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunDobrasSupra</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunDobrasTriciptal">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunDobrasTriciptal</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunDobrasTriciptal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunDobrasTriciptal_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunDobrasTriciptal_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunDobrasTriciptal</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunAtivExtras">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunAtivExtras</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunAtivExtras</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunAtivExtras_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunAtivExtras_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunAtivExtras</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunIMC">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunIMC</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunIMC</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunIMC_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunIMC_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunIMC</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="alunCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>alunCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:alunCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFmediAlunNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFmediAlunNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:mediAlunNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>alunCodigo</Name>
+        <Description>alun Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>mediAlunAno1</Name>
+        <Description>medi Alun Ano1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>mediAlunAno2</Name>
+        <Description>medi Alun Ano2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>mediAlunAno3</Name>
+        <Description>medi Alun Ano3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunData</Name>
+        <Description>TFmedi Alun Data</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunData_To</Name>
+        <Description>TFmedi Alun Data_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunAltura</Name>
+        <Description>TFmedi Alun Altura</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunAltura_To</Name>
+        <Description>TFmedi Alun Altura_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunPeso</Name>
+        <Description>TFmedi Alun Peso</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunPeso_To</Name>
+        <Description>TFmedi Alun Peso_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunCircunferencia</Name>
+        <Description>TFmedi Alun Circunferencia</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunCircunferencia_To</Name>
+        <Description>TFmedi Alun Circunferencia_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunDobraAbdominal</Name>
+        <Description>TFmedi Alun Dobra Abdominal</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunDobraAbdominal_To</Name>
+        <Description>TFmedi Alun Dobra Abdominal_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunDobrasSupra</Name>
+        <Description>TFmedi Alun Dobras Supra</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunDobrasSupra_To</Name>
+        <Description>TFmedi Alun Dobras Supra_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunDobrasTriciptal</Name>
+        <Description>TFmedi Alun Dobras Triciptal</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunDobrasTriciptal_To</Name>
+        <Description>TFmedi Alun Dobras Triciptal_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunAtivExtras</Name>
+        <Description>TFmedi Alun Ativ Extras</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunAtivExtras_To</Name>
+        <Description>TFmedi Alun Ativ Extras_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunIMC</Name>
+        <Description>TFmedi Alun IMC</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunIMC_To</Name>
+        <Description>TFmedi Alun IMC_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFmediAlunStatus_Sels</Name>
+        <Description>TFmedi Alun Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsalunomedidasWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsalunomedidas</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

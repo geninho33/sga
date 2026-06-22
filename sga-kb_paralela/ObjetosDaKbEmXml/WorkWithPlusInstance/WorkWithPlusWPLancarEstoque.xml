@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a626d84a-7590-4ab0-8540-fded18808ddb" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-08-22T18:52:01.0000000Z" lastUpdate="2024-08-22T18:09:12.0000000Z" checksum="659f873635c4ef4f0a499b593e68cd08" fullyQualifiedName="WorkWithPlusWPLancarEstoque" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="2ff8860c-4e5b-4a1c-a49c-792ec6c293eb" name="WorkWithPlusWPLancarEstoque" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPLancar Estoque" parent="WPLancarEstoque" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPLancarEstoqueUE" defaultSecFuntionKey="WPLancarEstoqueUE" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <errorViewer defaultThemeClass="ErrorViewer" />
+      <table name="TableContent" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" />
+      <table name="cpanelLancarEstoque" type="Responsive" includeInPanel="True">
+        <table name="tablePanel" numberOfColumns="2" type="Responsive">
+          <table name="grupoDtPeriodo" isGroup="True" numberOfColumns="2" type="Responsive" title="Dados do Lançamento" cellWidth_E="42%" cellWidth_S="42%">
+            <variable name="DtInicial" description="De:" defaultDescription="Produto " dataType="Basic" domain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" basicType="Date" controlInfoDef="Based on" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" controlSortDescription="False" defaultConditions="prodStatus = 'A';" descriptionWidth="12%" defaultDescriptionWidth="12%" readOnly="True" />
+            <variable name="DtFinal" description="  a  " defaultDescription="Produto " dataType="Basic" domain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-codigoMaior" basicType="Date" controlInfoDef="Based on" defaultControlInfoDef="Custom" controlType="Combo Box" defaultControlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" defaultControlInputValue="adbb33c9-0906-4971-833c-998de27e0676-prodCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" defaultControlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-prodDescricao" controlSortDescription="False" defaultConditions="prodStatus = 'A';" descriptionWidth="12%" defaultDescriptionWidth="12%" mergeWithPrevious="False" readOnly="True" />
+            <variable name="lanestRemessa" description="Remessa:" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-lanestRemessa" descriptionWidth="12%" readOnly="True" />
+          </table>
+          <variable name="dsPeriodo" description="Orientação" defaultDescription="Quantidade" dataType="Basic" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-WWPBaseObjects.Qtde" basicType="VarChar" basicCLength="500" descriptionWidth="12%" defaultDescriptionWidth="12%" descriptionPosition="Top" readOnly="True" />
+        </table>
+        <table name="grupoProdutos" isGroup="True" type="Responsive" title="Lançamento de Estoque das Unidades Escolares">
+          <variable name="locCodigo" description="Unidade Escolar" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-locCodigo" controlInfoDef="Custom" controlType="Combo Box" align="Left" descriptionWidth="17%" />
+          <variable name="disTipNumero" description="Tipo de Distribuição" dataType="Based on" domain="adbb33c9-0906-4971-833c-998de27e0676-disTipNumero" controlInfoDef="Custom" controlType="Combo Box" descriptionWidth="17%" />
+          <userAction caption="Buscar Produtos" name="btnActionOk" mergeWithPrevious="True" />
+          <grid includePaginationBar="&lt;default&gt;" type="&lt;default&gt;" name="GridSDTLancaEstoqueUEs" page="&lt;default&gt;" pagingType="&lt;default&gt;" SDTCollection="&amp;SDTLancaEstoqueUE">
+            <gridVariable name="SDTLancaEstoqueUE" description="Tipo de Distribuição" defaultDescription="Código Lançamento" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" visible="True" sdtItem="item(0).lanestdisTipDescricao" defaultSdtItem="item(0).lanestcodigo" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Código Lançamento" defaultDescription="Código Lançamento" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" visible="False" sdtItem="item(0).lanestcodigo" defaultSdtItem="item(0).lanestcodigo" />
+            <gridVariable name="SDTLancaEstoqueUE" description="lanest Item Index" defaultDescription="lanest Item Index" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" visible="False" sdtItem="item(0).lanestItemIndex" defaultSdtItem="item(0).lanestItemIndex" />
+            <gridVariable name="SDTLancaEstoqueUE" description="lanest Item Loc Codigo" defaultDescription="lanest Item Loc Codigo" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" visible="False" sdtItem="item(0).lanestItemLocCodigo" defaultSdtItem="item(0).lanestItemLocCodigo" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Codigo" defaultDescription="Cod. Produto" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" sdtItem="item(0).lanestItemProdCodigo" defaultSdtItem="item(0).lanestItemProdCodigo" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Descrição" defaultDescription="Descrição" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" sdtItem="item(0).lanestItemProdDescricao" defaultSdtItem="item(0).lanestItemProdDescricao" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Unid." defaultDescription="Unidade" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" controlInfoDef="Custom" controlType="Dynamic Combo Box" controlInputValue="adbb33c9-0906-4971-833c-998de27e0676-uniCodigo" controlInputDescription="adbb33c9-0906-4971-833c-998de27e0676-uniFracao" sdtItem="item(0).lanestItemProdUni" defaultSdtItem="item(0).lanestItemProdUni" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Peso Unidade" defaultDescription="Peso Unidade" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" visible="False" sdtItem="item(0).lanestItemPesoUni" defaultSdtItem="item(0).lanestItemPesoUni" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Peso" defaultDescription="Peso" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" visible="False" sdtItem="item(0).lanestItemPeso" defaultSdtItem="item(0).lanestItemPeso" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Quantidade" defaultDescription="Quantidade" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" readOnly="False" sdtItem="item(0).lanestItemQuantidade" defaultSdtItem="item(0).lanestItemQuantidade" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Status" defaultDescription="Status" tags="&amp;SDTLancaEstoqueUE.CurrentItem.lanestItemStatus = 'I':1:Não aplicado::Danger:;&amp;SDTLancaEstoqueUE.CurrentItem.lanestItemStatus = 'A':1:Aplicado::Success:;1" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" visible="True" sdtItem="item(0).lanestItemStatus" defaultSdtItem="item(0).lanestItemStatus" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Validade" defaultDescription="Validade" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" readOnly="True" sdtItem="item(0).lanestItemValidade" defaultSdtItem="item(0).lanestItemValidade" />
+            <gridVariable name="SDTLancaEstoqueUE" description="Observação" defaultDescription="Observação" domain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" defaultDomain="447527b5-9210-4523-898b-5dccb17be60a-SDTLancaEstoqueUE" readOnly="True" sdtItem="item(0).lanestItemObservacao" defaultSdtItem="item(0).lanestItemObservacao" />
+          </grid>
+        </table>
+        <userAction caption="Salvar " name="BtnSalvarEstoque" confirm="True" confirmMessage="Deseja realmente salvar  esses dados ?" confirmTitle="Gravação de Dados" />
+        <userAction caption="Fazer a correção da distribuição" name="btnAplicarEstoque" confirm="True" confirmMessage="Tem certeza que deseja aplicar os ajustes na distribuição ?" confirmTitle="Ajustes de distribuição" mergeWithPrevious="True" />
+        <userAction caption="Retornar" name="btnActionRetornar" mergeWithPrevious="True" />
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPLancarEstoque</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPLancarEstoque</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

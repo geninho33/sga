@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="6736cf57-35cb-46a5-97f1-4f72e9d64670" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-05-03T02:54:50.0000000Z" checksum="6b31399c625dcc731e2e264d87bc684d" fullyQualifiedName="PRCDEstoqueMovimentacaoCompra" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8397a53b-01b7-4198-8e24-18ed04996530" name="PRCDEstoqueMovimentacaoCompra" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Lançamento de Movimentação de Estoque para Compra" parent="Procedures" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[// Log.Write(!"Write message", !"MyCompany.Test.TestLoggingWrite",LogLEvel.DEBUG)
+// Log.Error(!" "+&tipo,!"Tipo : " )
+
+LoadWWPContext.Call(&WWPContext)
+&tem         = false
+&saldoMexido = false
+&saldo 		 = 0
+&prefCodigo  = &WWPContext.prefCodigo
+&tipoRT		 = &tipo
+
+// PGeraLog.Call(&Pgmname, 'Prod. Cod. : ' + &prodCodigo.ToString().Trim() + '-  Quantidade: ' + &quantidade.ToString().Trim() + ' |   &uniConvUnidadeOrigem : ' + &uniConvUnidadeOrigem.ToString() )	
+
+if &uniConvUnidadeOrigem>0
+
+	for each
+		where prefCodigo           = &prefCodigo
+		where uniConvUnidadeOrigem = &uniConvUnidadeOrigem
+	      &quantidadeReal  = &quantidade*uniConvQtdeGerar
+	      &unidade         = uniConvUnidadeDestino
+	      &uniDescricao    = uniConDestinoDescricao
+	endFor
+
+    if &quantidadeReal = 0 
+		&quantidadeReal = &quantidade
+	endif	
+else
+	&quantidadeReal = &quantidade
+endif
+
+if &locaCodigo = 0
+	for each
+		where notaCodigo = &codigo
+		where prefCodigo = &prefCodigo
+              &locaCodigoLocal = notaLocal
+	endFor
+else
+	&locaCodigoLocal = &locaCodigo
+endif
+
+if &locaCodigoLocal = 0
+   &locaCodigoLocal = prefLocalDeposito
+endif
+
+if &unidade = 0
+	for each
+		where prefCodigo = &prefCodigo
+	    where prodCodigo = &prodCodigo
+		// where prodLocalCodigo = &locaCodigoLocal
+		
+          &saldo   = prodSaldo
+          &unidade = prodUnidMedCompra
+		  For each
+			  where prefCodigo = &prefCodigo
+		      where uniCodigo  = &unidade
+               &uniDescricao = uniDescricao
+		  EndFor
+	endfor
+endif
+
+// PGeraLog.Call(&Pgmname, 'Lançamento de Estoque : ' + &prodCodigo.ToString().Trim() + '-  Qtdade: ' + &quantidadeReal.ToString().Trim()+ ' | Novo saldo: ' + &saldo.ToString().Trim() )	
+
+new 
+ estoCodigo = PRCDGerarNovoCodigo('estoque')
+ estoNfCodigo = &codigo
+ if &tipoRT= 'C'
+	estoNfCodigo = &codigo
+	estoTipo     = 'E'
+ else
+	estoTipo     = 'F'
+ endif
+
+ prefCodigo       = &prefCodigo
+ estoLocal        = &locaCodigoLocal
+ estoProduto      = &prodCodigo
+ estoQuantidade   = &quantidadeReal
+ estoUnidade      = &unidade
+ estoUnidadeSigla = &uniDescricao
+ estoSaldo        = &saldo
+ estoUserName	  = GAMUser.GetEmail()
+endNew
+
+PRCDEstoqueAtualizar(&prodCodigo,&locaCodigoLocal,&quantidadeReal,&tipoRT)
+&retorno = 'A'
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[parm( in:&codigo,
+	  in:&prodCodigo,
+	  in:&locaCodigo, 
+	  in:&quantidade, 
+	  in:&tipo, 
+	  in:&situacao, 
+	  in:&uniConvUnidadeOrigem, 
+	  out:&retorno);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="codigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>codigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:codigoMaior, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>2</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prodCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prodCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Codigo</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="saldo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>saldo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="qtde">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>qtde</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locaCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locaCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Código</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locaCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="saldoMexido">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>saldoMexido</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="unidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>unidade</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="quantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>quantidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Qtde, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="retorno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>retorno</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipo2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Prefeitura</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locaCodigoLocal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locaCodigoLocal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="situacao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>situacao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="tipoRT">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>tipoRT</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>2</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="uniDescricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>uniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Descrição</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="uniConvUnidadeOrigem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>uniConvUnidadeOrigem</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Unidade Medida Origem</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniConvUnidadeOrigem</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="quantidadeReal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>quantidadeReal</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>12</Value>
+        </Property>
+        <Property>
+          <Name>Decimals</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>12</Value>
+        </Property>
+        <Property>
+          <Name>AttAvgLen</Name>
+          <Value>4</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>PRCDEstoqueMovimentacaoCompra</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Lançamento de Movimentação de Estoque para Compra</Value>
+    </Property>
+    <Property>
+      <Name>CommitOnExit</Name>
+      <Value>No</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

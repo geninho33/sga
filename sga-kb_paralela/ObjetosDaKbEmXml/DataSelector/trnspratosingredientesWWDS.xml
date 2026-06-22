@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="5bfcd049-5bce-0a79-01a6-0fa9f6ccea8e" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-01T12:41:24.0000000Z" checksum="c5114e2176ba542642e5071fa8b90774" fullyQualifiedName="trnspratosingredientesWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="34a32167-162e-4d44-9070-2cea17907166" name="trnspratosingredientesWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnspratosingredientes WWDS" parent="WorkWithPlustrnspratosingredientes" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[prefCodigo = &prefCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratoCodigo = &pratoCodigo
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrProdCodigo = &pratIngrProdCodigo1 when &DynamicFiltersSelector1 = !'PRATINGRPRODCODIGO' AND &DynamicFiltersOperator1 = 0 AND (not &pratIngrProdCodigo1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &AreEnsEtapaNome1.ToLower() when &DynamicFiltersSelector1 = !'AREENSETAPANOME' AND &DynamicFiltersOperator1 = 0 AND (not &AreEnsEtapaNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like '%' +  &AreEnsEtapaNome1.ToLower() when &DynamicFiltersSelector1 = !'AREENSETAPANOME' AND &DynamicFiltersOperator1 = 1 AND (not &AreEnsEtapaNome1.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrProdCodigo = &pratIngrProdCodigo2 when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'PRATINGRPRODCODIGO' AND &DynamicFiltersOperator2 = 0 AND (not &pratIngrProdCodigo2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &AreEnsEtapaNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AREENSETAPANOME' AND &DynamicFiltersOperator2 = 0 AND (not &AreEnsEtapaNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like '%' +  &AreEnsEtapaNome2.ToLower() when &DynamicFiltersEnabled2 AND &DynamicFiltersSelector2 = !'AREENSETAPANOME' AND &DynamicFiltersOperator2 = 1 AND (not &AreEnsEtapaNome2.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrProdCodigo = &pratIngrProdCodigo3 when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'PRATINGRPRODCODIGO' AND &DynamicFiltersOperator3 = 0 AND (not &pratIngrProdCodigo3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &AreEnsEtapaNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AREENSETAPANOME' AND &DynamicFiltersOperator3 = 0 AND (not &AreEnsEtapaNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like '%' +  &AreEnsEtapaNome3.ToLower() when &DynamicFiltersEnabled3 AND &DynamicFiltersSelector3 = !'AREENSETAPANOME' AND &DynamicFiltersOperator3 = 1 AND (not &AreEnsEtapaNome3.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrProdDescricaoItem.ToLower() like &TFpratIngrProdCodigo.ToLower() when &TFpratIngrProdCodigo_Sel.IsEmpty() AND (not &TFpratIngrProdCodigo.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrProdCodigo = &TFpratIngrProdCodigo_Sel when not &TFpratIngrProdCodigo_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome.ToLower() like &TFAreEnsEtapaNome.ToLower() when &TFAreEnsEtapaNome_Sel.IsEmpty() AND (not &TFAreEnsEtapaNome.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[AreEnsEtapaNome = &TFAreEnsEtapaNome_Sel when not &TFAreEnsEtapaNome_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[carGruTurno in &TFcarGruTurno_Sels when &TFcarGruTurno_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrQuantidade >= &TFpratIngrQuantidade when not &TFpratIngrQuantidade.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrQuantidade <= &TFpratIngrQuantidade_To when not &TFpratIngrQuantidade_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[pratIngrStatus in &TFpratIngrStatus_Sels when &TFpratIngrStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="DynamicFiltersSelector1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector1</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator1</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector2</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator2</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersEnabled3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersEnabled3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:Boolean</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersSelector3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersSelector3</Value>
+          </Property>
+          <Property>
+            <Name>ATTCUSTOMTYPE</Name>
+            <Value>bas:VarChar</Value>
+          </Property>
+          <Property>
+            <Name>Length</Name>
+            <Value>200</Value>
+          </Property>
+          <Property>
+            <Name>AttMaxLen</Name>
+            <Value>200</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="DynamicFiltersOperator3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>DynamicFiltersOperator3</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratIngrProdCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratIngrProdCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prodDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratIngrQuantidade">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratIngrQuantidade</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratIngrQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratIngrQuantidade_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratIngrQuantidade_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratIngrQuantidade</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratIngrStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratIngrStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratIngrStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="prefCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>prefCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:prefCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratoCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratoCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratoCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFpratIngrProdCodigo_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFpratIngrProdCodigo_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratIngrProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFcarGruTurno_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFcarGruTurno_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:carGruTurno</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsEtapaNome1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsEtapaNome1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsEtapaNome2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsEtapaNome2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="AreEnsEtapaNome3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>AreEnsEtapaNome3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsEtapaNome">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsEtapaNome</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFAreEnsEtapaNome_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFAreEnsEtapaNome_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:AreEnsEtapaNome</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratIngrProdCodigo1">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratIngrProdCodigo1</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratIngrProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratIngrProdCodigo2">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratIngrProdCodigo2</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratIngrProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="pratIngrProdCodigo3">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>pratIngrProdCodigo3</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:pratIngrProdCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>prefCodigo</Name>
+        <Description>pref Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratoCodigo</Name>
+        <Description>prato Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector1</Name>
+        <Description>Dynamic Filters Selector1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator1</Name>
+        <Description>Dynamic Filters Operator1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratIngrProdCodigo1</Name>
+        <Description>prat Ingr Prod Codigo1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsEtapaNome1</Name>
+        <Description>Are Ens Etapa Nome1</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled2</Name>
+        <Description>Dynamic Filters Enabled2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector2</Name>
+        <Description>Dynamic Filters Selector2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator2</Name>
+        <Description>Dynamic Filters Operator2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratIngrProdCodigo2</Name>
+        <Description>prat Ingr Prod Codigo2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsEtapaNome2</Name>
+        <Description>Are Ens Etapa Nome2</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersEnabled3</Name>
+        <Description>Dynamic Filters Enabled3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersSelector3</Name>
+        <Description>Dynamic Filters Selector3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>DynamicFiltersOperator3</Name>
+        <Description>Dynamic Filters Operator3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>pratIngrProdCodigo3</Name>
+        <Description>prat Ingr Prod Codigo3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>AreEnsEtapaNome3</Name>
+        <Description>Are Ens Etapa Nome3</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratIngrProdCodigo</Name>
+        <Description>TFprat Ingr Prod Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratIngrProdCodigo_Sel</Name>
+        <Description>TFprat Ingr Prod Codigo_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsEtapaNome</Name>
+        <Description>TFAre Ens Etapa Nome</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFAreEnsEtapaNome_Sel</Name>
+        <Description>TFAre Ens Etapa Nome_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFcarGruTurno_Sels</Name>
+        <Description>TFcar Gru Turno_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratIngrQuantidade</Name>
+        <Description>TFprat Ingr Quantidade</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratIngrQuantidade_To</Name>
+        <Description>TFprat Ingr Quantidade_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFpratIngrStatus_Sels</Name>
+        <Description>TFprat Ingr Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnspratosingredientesWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnspratosingredientes</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

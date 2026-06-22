@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="44c50fbe-a8e5-4d22-a12e-2e53796aa218" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-11-06T04:29:22.0000000Z" lastUpdate="2024-11-06T03:08:23.0000000Z" checksum="cdf35034b800501b5aa318f13fcc12fb" fullyQualifiedName="trnslocal" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="95025bbf-5da2-59b0-f494-42830860ae99" name="trnslocal" type="1db606f2-af09-4cf9-a3b5-b481519d28f6" description="Locais (Escolas)" parent="Cadastros" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="264be5fb-1b28-4b25-a598-6ca900dd059f">
+    <Level Name="trnslocal" Type="trnslocal" Description="Locais (Escolas)" Guid="95025bbf-5da2-59b0-f494-42830860ae99">
+      <Properties />
+      <Attribute key="True" guid="d3cd7641-9300-4a54-be06-567327829c1d">prefCodigo</Attribute>
+      <Attribute key="True" guid="7cd5d6cc-528a-3959-078c-2d03ac1fc912">locCodigo</Attribute>
+      <Attribute key="False" guid="36ddee25-c76a-df91-eb52-d4681dd54193">locDescricao</Attribute>
+      <Attribute key="False" guid="d87152ca-7a01-ff4c-df64-5709e4d53897">locInep</Attribute>
+      <Attribute key="False" guid="36f22bce-7aac-7879-2d4e-30f529be12b2">locTipoUnidade</Attribute>
+      <Attribute key="False" guid="6173a125-3df8-acb2-24a9-275eda9a780c" isNullable="True">locTelefone</Attribute>
+      <Attribute key="False" guid="d7effac3-76c7-bdaa-a61a-7e525755a836" isNullable="True">locEndereco</Attribute>
+      <Attribute key="False" guid="788eb889-b383-a530-2e08-580e30eb69fc" isNullable="True">locComplemento</Attribute>
+      <Attribute key="False" guid="fdf3d419-8d73-d1d3-fa3c-c89d22f3a044" isNullable="True">locBairro</Attribute>
+      <Attribute key="False" guid="5dbaab0d-4501-d9f4-1461-223a0f44190d" isNullable="True">locCep</Attribute>
+      <Attribute key="False" guid="bb67dc30-4ba4-0e10-df1d-faf82b1947da">locArea</Attribute>
+      <Attribute key="False" guid="339ca9b0-e401-d2ab-4ef1-5f0e58f22e7d">locUnidadeCentral</Attribute>
+      <Attribute key="False" guid="1f003a93-41a6-75c1-4696-d39ec750fac5">locSecretaria</Attribute>
+      <Attribute key="False" guid="68782f6f-a767-fcda-3a21-9bc5c2136bb8">locFreezer</Attribute>
+      <Attribute key="False" guid="1c78bfd9-13fc-eae3-9b3b-c4b5e80b2a55">locForno</Attribute>
+      <Attribute key="False" guid="9c155b61-c1b1-9401-ef24-48e1cf1760a6">locNota</Attribute>
+      <Attribute key="False" guid="ede5ca9a-1d73-b049-b1df-8fdf497cf2c3">locNotaSequencia</Attribute>
+      <Attribute key="False" guid="013956f5-3a99-ce63-7803-73715fcd794f">locAbreviatura</Attribute>
+      <Attribute key="False" guid="edbf895b-7a4f-ef26-b5fb-11fe7db7ac1a">locResponsavel</Attribute>
+      <Attribute key="False" guid="b3738334-cfbf-8b7f-be92-5152131ed1da" isNullable="True">locEmail</Attribute>
+      <Attribute key="False" guid="915e9c64-dfb5-8746-d91d-3070cc457f02">locDiretor</Attribute>
+      <Attribute key="False" guid="58cf9464-3491-7de6-08a5-2664f0ec4f25">locStatus</Attribute>
+      <Attribute key="False" guid="595760b5-6ce5-ee43-42cc-4bbee0a877d3">locDataCad</Attribute>
+      <Attribute key="False" guid="58a831e4-301b-ac69-d2d7-5d20c3c4605e">locDataAlt</Attribute>
+      <Attribute key="False" guid="3c15e0be-8960-422b-9dd1-952a7ba92718" isNullable="True">locUeCod</Attribute>
+      <Attribute key="False" guid="f573424e-265f-41a9-9341-45f07a8f2156" isNullable="True">locUsuario</Attribute>
+      <Attribute key="False" guid="93530651-0b44-424b-802e-1f62cb639c6d" isNullable="True">locSenha</Attribute>
+      <Attribute key="False" guid="997f3599-390f-4d28-8582-52b6e192a1f0" isNullable="True">locCodigoLargada</Attribute>
+      <Attribute key="False" guid="ae643c2c-fdb0-4fe4-9188-2f7956de12d1" isNullable="True">LocObservacaoGuia</Attribute>
+      <Attribute key="False" guid="84b75b4b-3758-483e-9109-70cb1c27b131" isNullable="True">locVinculada</Attribute>
+    </Level>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMainTransaction" tableType="Responsive" responsiveSizes="[]"><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell><table controlName="TableContent" class="CellMarginTop10" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:75}]]}]"><row><cell><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableAttributes&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_TemplateDataPanelTitle&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableAttributes" tableType="Responsive" responsiveSizes="[]" containerSlotName="TableAttributes"><row><cell cellControlName="locCodigo_Cell"><data attribute="locCodigo" labelCaption="ID" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Edit&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;InputType&lt;/Name&gt;&lt;Value&gt;Values&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellClass="DataContentCell"><data attribute="locDescricao" labelCaption="Descrição" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locTipoUnidade" labelCaption="Tipo Unidade" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="locResponsavel" labelCaption="Responsável " class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locEndereco" labelCaption="Endereço" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="locBairro" labelCaption="Bairro" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locCep" labelCaption="Cep" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="locNota" labelCaption="Rota Entrega" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locEmail" labelCaption="Email" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="locDiretor" labelCaption="Diretor" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locTelefone" labelCaption="Telefones" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="locComplemento" labelCaption="Celuar" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><table controlName="TableSplittedlocUeCod" tableType="Responsive" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:25},{&quot;width&quot;:75}]]}]"><row><cell cellClass="MergeLabelCell"><textblock controlName="TextBlocklocUeCod" caption="Cód. SGE" class="Label" /></cell><cell><table controlName="TableMergedlocUeCod" class="TableMerged" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell cellClass="MergeDataCell"><data attribute="locUeCod" labelPosition="None" class="AttributeRealWidth" /></cell><cell><action controlName="BtnbtnSGE" onClickEvent="'DobtnSGE'" caption="Consultar SGE" /></cell></row></table></cell></row></table></cell><cell cellClass="DataContentCell"><data attribute="locCodigoLargada" labelCaption="Código Largada" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="LocObservacaoGuia" labelCaption="Observação Guia" class="AttributeRealWidth" /></cell><cell cellClass="DataContentCell"><data attribute="locStatus" labelCaption="Situação" class="AttributeRealWidth" /></cell></row><row><cell><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]"><row><cell><group controlName="UnnamedGroup3" caption="Situação da Cozinha" class="Group"><table controlName="UnnamedTable2" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><data attribute="locFreezer" labelCaption="Tem Freezer" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locForno" labelCaption="Tem Forno" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locVinculada" labelCaption="Vinculada" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;locCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;locDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;locStatus = 'A';&#xD;&#xA;prefCodigo = &amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></group></cell><cell><group controlName="UnnamedGroup5" caption="Dados de Login " class="Group"><table controlName="UnnamedTable4" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="DataContentCell"><data attribute="locUsuario" labelCaption="Usuario" class="AttributeRealWidth" /></cell></row><row><cell cellClass="DataContentCell"><data attribute="locSenha" labelCaption="Senha" class="AttributeRealWidth" /></cell></row></table></group></cell></row></table></cell></row></table></ucw></cell></row></table></cell></row><row><cell><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="CellMarginTop10"><item><action controlName="BtnTrn_Enter" onClickEvent="Enter" caption="GX_BtnEnter" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnEnter&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnDefault" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnCancel&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnTrn_Delete" onClickEvent="Delete" caption="GX_BtnDelete" class="BtnDefault hidden-xs hidden-sm hidden-md hidden-lg" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxAttribute ControlType="Edit" InputType="Values" AttID="prefCodigo" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locInep" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locArea" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locUnidadeCentral" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locSecretaria" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locNotaSequencia" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locAbreviatura" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locDataCad" /><gxAttribute ControlType="Edit" InputType="Values" AttID="locDataAlt" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWebForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="4c28dfb9-f83b-46f0-9cf3-f7e090b525d5">
+    <Document>
+      <Form>
+        <Type>Windows</Type>
+        <Class>Windows</Class>
+        <ClassGuid>4df66249-100d-407d-8ce0-41ec76938671</ClassGuid>
+        <SizeUnit>px</SizeUnit>
+        <Info>
+          <Properties>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>True</Value>
+            </Property>
+            <Property>
+              <Name>Defaults</Name>
+              <Value>gx:TrnDefaultWindowsForm.dkt</Value>
+            </Property>
+          </Properties>
+        </Info>
+      </Form>
+    </Document>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+      <Property>
+        <Name>Defaults</Name>
+        <Value>gx:TrnDefaultWinForm.dkt</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+parm(in:&Mode, in:&prefCodigo, in:&locCodigo);
+
+prefCodigo = &prefCodigo if not &prefCodigo.IsEmpty();
+noaccept(prefCodigo) if not &prefCodigo.IsEmpty();
+locCodigo = &locCodigo if not &locCodigo.IsEmpty();
+noaccept(locCodigo) if not &locCodigo.IsEmpty();
+
+locCodigo.Visible = locCodigo<>0;
+locCodigo_Cell.Class = !'Invisible' If not(locCodigo<>0);
+locCodigo_Cell.Class = !'col-xs-12 col-sm-6 DataContentCell' If locCodigo<>0;
+prefCodigo = &WWPContext.prefCodigo;
+/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+locDataCad = serverNow() 
+	on beforeInsert;
+
+locDataAlt = serverNow() 
+	on beforeUpdate;
+
+locCodigo = PRCDGerarNovoCodigo('local')  
+	on BeforeInsert;
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	LoadWWPContext.Call(&WWPContext) 
+    &prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: EditFormClass
+	[web]{
+		LayoutMainTable.Class = LayoutMainTable.Class + " " + ThemeClass:EditForm
+	}
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'AttributesSecurityCode'
+
+	&TrnContext.FromXml(&WebSession.Get(!"TrnContext"))
+	
+	prefCodigo.Visible = False
+	locInep.Visible = False
+	locArea.Visible = False
+	locUnidadeCentral.Visible = False
+	locSecretaria.Visible = False
+	locNotaSequencia.Visible = False
+	locAbreviatura.Visible = False
+	locDataCad.Visible = False
+	locDataAlt.Visible = False
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event After Trn
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&Mode = TrnMode.Delete and not &TrnContext.CallerOnDelete)
+		trnslocalWW.Call()
+	Endif
+
+	Return
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnSGE'
+
+	PRCRetornaMunCod.Call(&WWPContext.prefCodigo, &MunCod)
+	//PRCRetornaUeCod.Call(&WWPContext.prefCodigo, locCodigo, &UeCod)
+	if not &MunCod.IsEmpty() and not locUeCod.IsEmpty()
+		&location = getLocation("wsUE")
+		&Host    = 'www.sgebr.com.br'
+		&BaseURL = '/sge' + str(&MunCod, 4, 0) + '/sgenovo/'	
+		&location.Host    = &Host  // don't include protocol (i.e. HTTP/HTTPS)
+		&location.BaseUrl = &BaseURL
+		&wsUE.Execute(&MunCod, locUeCod, locDescricao, &UECodInep, &TipUECod, &UeTel, locEndereco, locComplemento, locBairro, &Cep, &UeSig, locEmail, &Ret)
+		
+		if &Ret = 1
+			msg('WebService executado com sucesso')
+		else
+			msg('Unidade Escolar inexistente')
+		endif
+	else
+		msg('Cadastro da Prefeitura e/ou da Escola não tem código do SGE informado')
+	endif
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'AttributesSecurityCode'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	locCodigo.Visible = False
+	locCodigo_Cell.Class = !'Invisible'
+	If Not SecGAMIsAuthByFunctionalityKey(!'True')
+		locCodigo.Enabled = False
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="BaseURL">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>BaseURL</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Combo_DataJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Combo_DataJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ComboSelectedValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ComboSelectedValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Data">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Data</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTComboData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WebSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WebSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Host">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Host</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Location">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Location</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:Location</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="MunCod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>MunCod</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Ret">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Ret</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Numeric</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>4</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UeCod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UeCod</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="locUeCod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>locUeCod</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Cód. SGE</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:locUeCod</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UeSig">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UeSig</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UeTel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UeTel</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TipUECod">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TipUECod</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UECodInep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UECodInep</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="wsUE">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>wsUE</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:wsUE</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Cep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Cep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>8</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>8</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnslocal</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Locais (Escolas)</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityPermissionPrefix</Name>
+      <Value>trnslocalWW</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>Apply:07135890-56fc-489b-b408-063722fa9f7d</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

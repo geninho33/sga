@@ -1,0 +1,3239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="74a196bb-b7c0-7215-1700-47f369d99430" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2026-04-14T01:00:56.0000000Z" checksum="998e360e2bedd6147931592111873c7a" fullyQualifiedName="trnspratosWW" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="4ace7473-7572-4bc4-8934-7e4014b0c3e2" name="trnspratosWW" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Listagem de Refeições" parent="WorkWithPlustrnspratos" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_FilterOptions&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableHeader" tableType="Flex" flexDirection="Column" containerSlotName="TableHeader"><row><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableActions" tableType="Flex"><row><cell flexGrow="0"><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell><cell flexGrow="0"><table controlName="TableRightHeader" tableType="Flex" flexWrap="Wrap"><row><cell cellClass="CellAlignTopPaddingTop2"><ucw gxControlType="1204120062" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;ddo_ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconType&lt;/Name&gt;&lt;Value&gt;FontIcon&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Icon&lt;/Name&gt;&lt;Value&gt;fas fa-filter&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Tooltip&lt;/Name&gt;&lt;Value&gt;WWP_ManageFiltersTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;ManageFilters&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;DropDownOptionsData&lt;/Name&gt;&lt;Value&gt;&amp;amp;ManageFiltersData&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell><table controlName="TableFilters"><row><cell><table controlName="TableDynamicFilters" class="TableDynamicFiltersFlex" tableType="Flex" flexDirection="Column"><row><cell cellClass="DynRowVisible"><table controlName="TableDynamicFiltersRow1" tableType="Flex"><row><cell><textblock controlName="DynamicFiltersPrefix1" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell><data attribute="&amp;DynamicFiltersSelector1" labelPosition="None" class="Attribute" /></cell><cell><textblock controlName="DynamicFiltersMiddle1" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell><table controlName="TableMergedDynamicFilters1" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoCodigo1_Cell"><data attribute="&amp;pratoCodigo1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoDscricao1_Cell"><data attribute="&amp;pratoDscricao1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoComFreezer1_Cell"><data attribute="&amp;pratoComFreezer1" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoCozinhaCentral1_Cell"><data attribute="&amp;pratoCozinhaCentral1" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoForno1_Cell"><data attribute="&amp;pratoForno1" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoRepeticao1_Cell"><data attribute="&amp;pratoRepeticao1" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoTipoRefeicao1_Cell"><data attribute="&amp;pratoTipoRefeicao1" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter1_Cell"><image controlName="AddDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter1_Cell"><image controlName="RemoveDynamicFilters1" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters1'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow2" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix2" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector2" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle2" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters2" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoCodigo2_Cell"><data attribute="&amp;pratoCodigo2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoDscricao2_Cell"><data attribute="&amp;pratoDscricao2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoComFreezer2_Cell"><data attribute="&amp;pratoComFreezer2" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoCozinhaCentral2_Cell"><data attribute="&amp;pratoCozinhaCentral2" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoForno2_Cell"><data attribute="&amp;pratoForno2" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoRepeticao2_Cell"><data attribute="&amp;pratoRepeticao2" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoTipoRefeicao2_Cell"><data attribute="&amp;pratoTipoRefeicao2" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_AddFilter2_Cell"><image controlName="AddDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionNewDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'AddDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterAddTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="DynamicFilters_RemoveFilter2_Cell"><image controlName="RemoveDynamicFilters2" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters2'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell><cell><table controlName="TableDynamicFiltersRow3" tableType="Flex"><row><cell cellClass="Invisible"><textblock controlName="DynamicFiltersPrefix3" caption="WWP_DynFilterPrefix" class="DataFilterDescriptionPrefix" /></cell><cell cellClass="Invisible"><data attribute="&amp;DynamicFiltersSelector3" labelPosition="None" class="Attribute" /></cell><cell cellClass="Invisible"><textblock controlName="DynamicFiltersMiddle3" caption="WWP_DynFilterMiddle" class="DataFilterDescription" /></cell><cell cellClass="Invisible"><table controlName="TableMergedDynamicFilters3" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;cellPadding&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;cellSpacing&lt;/Name&gt;&lt;Value&gt;0&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><row><cell><data attribute="&amp;DynamicFiltersOperator3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoCodigo3_Cell"><data attribute="&amp;pratoCodigo3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoDscricao3_Cell"><data attribute="&amp;pratoDscricao3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="Filter_pratoComFreezer3_Cell"><data attribute="&amp;pratoComFreezer3" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoCozinhaCentral3_Cell"><data attribute="&amp;pratoCozinhaCentral3" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoForno3_Cell"><data attribute="&amp;pratoForno3" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoRepeticao3_Cell"><data attribute="&amp;pratoRepeticao3" labelPosition="None" class="Attribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;AddEmptyItem&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyItemText&lt;/Name&gt;&lt;Value&gt;WWP_AllInCombo&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell><cell cellControlName="Filter_pratoTipoRefeicao3_Cell"><data attribute="&amp;pratoTipoRefeicao3" labelPosition="None" class="Attribute" /></cell><cell cellControlName="DynamicFilters_RemoveFilter3_Cell"><image controlName="RemoveDynamicFilters3" image="9fb193d9-64a4-4d30-b129-ff7c76830f7e-ActionRemoveDynamicFilter" class="Image" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'RemoveDynamicFilters3'&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;WWP_DynFilterRemoveTooltip&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row><row><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="GridTableWithPaginationBar" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithPaginationBar GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;trnspratos&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;pratoCodigo  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(pratoCodigo)  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = True&#xD;&#xA;pratoDscricao  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(pratoDscricao)  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = True&#xD;&#xA;pratoTipoRefeicao  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(pratoTipoRefeicao)  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = True&#xD;&#xA;pratoStatus  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(pratoStatus)  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-trnspratosWWDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;DynamicFiltersSelector1, &amp;amp;DynamicFiltersOperator1, &amp;amp;pratoCodigo1, &amp;amp;pratoDscricao1, &amp;amp;pratoComFreezer1, &amp;amp;pratoCozinhaCentral1, &amp;amp;pratoForno1, &amp;amp;pratoRepeticao1, &amp;amp;pratoTipoRefeicao1, &amp;amp;DynamicFiltersEnabled2, &amp;amp;DynamicFiltersSelector2, &amp;amp;DynamicFiltersOperator2, &amp;amp;pratoCodigo2, &amp;amp;pratoDscricao2, &amp;amp;pratoComFreezer2, &amp;amp;pratoCozinhaCentral2, &amp;amp;pratoForno2, &amp;amp;pratoRepeticao2, &amp;amp;pratoTipoRefeicao2, &amp;amp;DynamicFiltersEnabled3, &amp;amp;DynamicFiltersSelector3, &amp;amp;DynamicFiltersOperator3, &amp;amp;pratoCodigo3, &amp;amp;pratoDscricao3, &amp;amp;pratoComFreezer3, &amp;amp;pratoCozinhaCentral3, &amp;amp;pratoForno3, &amp;amp;pratoRepeticao3, &amp;amp;pratoTipoRefeicao3, &amp;amp;TFpratoCodigo, &amp;amp;TFpratoCodigo_To, &amp;amp;TFpratoDscricao, &amp;amp;TFpratoDscricao_Sel, &amp;amp;TFpratoTipoRefeicao, &amp;amp;TFpratoTipoRefeicao_Sel, &amp;amp;TFpratoStatus_Sels&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;Update" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_update&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Delete" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn hidden-xs hidden-sm hidden-md hidden-lg&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;UserAction1" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Ingrediente&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnPerCapta" titleExp="" class="ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn hidden-xs hidden-sm hidden-md hidden-lg&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;btnduplicar" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;Duplicar Refeição&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigo" titleExp="Prefeitura" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoDscricao" titleExp="Descrição" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoComFreezer" titleExp="Com Freezer" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoSemFreezer" titleExp="Sem Freezer" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoForno" titleExp="Utiliza Forno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoModoDeFazer" titleExp="Modo de Preparo" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoRepeticao" titleExp="Permite Repeticao" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoCozinhaCentral" titleExp="Preparado na Cozinha Central" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoCodigoPai" titleExp="Codigo Pai" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoCodigoPaiAtend" titleExp="codigo Pai do Tipo Atendimento" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoTipoRefeicao" titleExp="Turno" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;refTipCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;refTipDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;refTipstatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoStatus" titleExp="Situação" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoDataCad" titleExp="Data Cadastro" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="pratoDataAlt" titleExp="Data Alteracao" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row><row><cell><ucw gxControlType="-822546690" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;GridPaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Class&lt;/Name&gt;&lt;Value&gt;PaginationBar&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowFirst&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowPrevious&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowNext&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowLast&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagesToShow&lt;/Name&gt;&lt;Value&gt;5&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingButtonsPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PagingCaptionPosition&lt;/Name&gt;&lt;Value&gt;Left&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridClass&lt;/Name&gt;&lt;Value&gt;PaginationBarEmptyGrid&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageSelector&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageOptions&lt;/Name&gt;&lt;Value&gt;5:WWP_Rows5,10:WWP_Rows10,20:WWP_Rows20,50:WWP_Rows50&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Previous&lt;/Name&gt;&lt;Value&gt;WWP_PagingPreviousCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Next&lt;/Name&gt;&lt;Value&gt;WWP_PagingNextCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Caption&lt;/Name&gt;&lt;Value&gt;WWP_PagingCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;EmptyGridCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingEmptyGridCaption&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;RowsPerPageCaption&lt;/Name&gt;&lt;Value&gt;WWP_PagingRowsPerPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;CurrentPage&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridCurrentPage&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;PageCount&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridPageCount&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AppliedFilters&lt;/Name&gt;&lt;Value&gt;&amp;amp;GridAppliedFilters&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></cell></row></table></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="ActionGroupGrouped"><item><action controlName="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_insert&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnAGExport" caption="WWP_ExportData" class="ColumnsSelector" /></item><item><action controlName="BtnbtnComposicaoAlimento" onClickEvent="'DobtnComposicaoAlimento'" caption="Procura por Alimento" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GXBootstrap.DDORegular ControlName="ddo_AGExport" IconType="FontIcon" Icon="fas fa-download" Caption="WWP_ExportData" DropDownOptionsData="&amp;AGExportData" Cls="ColumnsSelector" /><gxTextBlock GxFormat="HTML" id="JSDynamicFilters" CaptionExpression="JSDynamicFilters" /><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="6:pratoCodigo|7:pratoDscricao|16:pratoTipoRefeicao|17:pratoStatus" ColumnsSortValues="1|2|3|4" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T" IncludeFilter="T|T|T|" FilterType="Numeric|Character|Character|" FilterIsRange="T|||" IncludeDataList="|T|T|T" DataListType="|Dynamic|Dynamic|FixedValues" AllowMultipleSelection="|||T" DataListFixedValues="|||A:Ativo,I:Inativo" DataListProc="trnspratosWWGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-trnspratosWWGetFilterData" Format="8.0|||" /><gxInNewWindow ControlName="InNewWindow1" /><table id="TableDVelop_ConfirmPanel_btnduplicar"><tbody><tr><td align="Center"><gxDVelop.GXBootstrap.ConfirmPanel ControlName="DVelop_ConfirmPanel_btnduplicar" Title="Deseja realmente duplicar ?" ConfirmationText="Confirmar" YesButtonCaption="WWP_ConfirmTextYes" NoButtonCaption="WWP_ConfirmTextNo" CancelButtonCaption="WWP_ConfirmTextCancel" YesButtonPosition="Left" ConfirmType="YesNo"><container containerId="Body" /></gxDVelop.GXBootstrap.ConfirmPanel></td></tr></tbody></table><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" /></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+
+	If &HTTPRequest.Method = HttpMethod.Get
+		Do 'LoadSavedFilters'
+	EndIf
+
+	JSDynamicFilters.Caption = ''
+	&pratoComFreezer1 = nullvalue(&pratoComFreezer1)
+	&pratoCozinhaCentral1 = nullvalue(&pratoCozinhaCentral1)
+	&pratoForno1 = nullvalue(&pratoForno1)
+	&pratoRepeticao1 = nullvalue(&pratoRepeticao1)
+	&DynamicFiltersSelector1 = !'PRATOCODIGO'
+	Do 'EnableDynamicFilters1'
+	&pratoComFreezer2 = nullvalue(&pratoComFreezer2)
+	&pratoCozinhaCentral2 = nullvalue(&pratoCozinhaCentral2)
+	&pratoForno2 = nullvalue(&pratoForno2)
+	&pratoRepeticao2 = nullvalue(&pratoRepeticao2)
+	&DynamicFiltersSelector2 = !'PRATOCODIGO'
+	Do 'EnableDynamicFilters2'
+	&pratoComFreezer3 = nullvalue(&pratoComFreezer3)
+	&pratoCozinhaCentral3 = nullvalue(&pratoCozinhaCentral3)
+	&pratoForno3 = nullvalue(&pratoForno3)
+	&pratoRepeticao3 = nullvalue(&pratoRepeticao3)
+	&DynamicFiltersSelector3 = !'PRATOCODIGO'
+	Do 'EnableDynamicFilters3'
+	
+	AddDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 2, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters1.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	AddDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterShow_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters2.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	RemoveDynamicFilters3.JSEvent('onclick', format(!"WWPDynFilterHideLast_AL('%1', 3, 0)", TableDynamicFilters.InternalName))
+	ddo_AGExport.TitleControlIdToReplace = BtnAGExport.InternalName
+	&AGExportData = new()
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportCaption'
+	&AGExportDataItem.Icon = ActionExport.Link()
+	&AGExportDataItem.EventKey = !'Export'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&AGExportDataItem = new()
+	&AGExportDataItem.Title = 'WWP_ExportReportCaption'
+	&AGExportDataItem.Icon = ActionExportReport.Link()
+	&AGExportDataItem.EventKey = !'ExportReport'
+	&AGExportDataItem.IsDivider = False
+	&AGExportData.Add(&AGExportDataItem)
+	
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = 'Listagem de Refeições'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	If &OrderedBy < 1
+		&OrderedBy = 1
+		Do 'SetDDOSortedStatus'
+	EndIf
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+	GridPaginationBar.RowsPerPageSelectedValue = Grid.Rows
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: LoadPrefeitura
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'CheckSecurityForActions'
+
+	Do Case
+		Case &ManageFiltersExecutionStep = 1
+			&ManageFiltersExecutionStep = 2
+		Case &ManageFiltersExecutionStep = 2
+			&ManageFiltersExecutionStep = 0
+			Do 'LoadSavedFilters'
+	EndCase
+
+	&DynamicFiltersOperator1.Clear()
+	Do Case
+		Case &DynamicFiltersSelector1 = !'PRATOCODIGO'
+			&DynamicFiltersOperator1.AddItem(0, "=")
+		Case &DynamicFiltersSelector1 = !'PRATODSCRICAO'
+			&DynamicFiltersOperator1.AddItem(0, "WWP_FilterLike")
+			&DynamicFiltersOperator1.AddItem(1, "WWP_FilterContains")
+		Case &DynamicFiltersSelector1 = !'PRATOTIPOREFEICAO'
+			&DynamicFiltersOperator1.AddItem(0, "=")
+	EndCase
+	If &DynamicFiltersEnabled2
+		&DynamicFiltersOperator2.Clear()
+		Do Case
+			Case &DynamicFiltersSelector2 = !'PRATOCODIGO'
+				&DynamicFiltersOperator2.AddItem(0, "=")
+			Case &DynamicFiltersSelector2 = !'PRATODSCRICAO'
+				&DynamicFiltersOperator2.AddItem(0, "WWP_FilterLike")
+				&DynamicFiltersOperator2.AddItem(1, "WWP_FilterContains")
+			Case &DynamicFiltersSelector2 = !'PRATOTIPOREFEICAO'
+				&DynamicFiltersOperator2.AddItem(0, "=")
+		EndCase
+		If &DynamicFiltersEnabled3
+			&DynamicFiltersOperator3.Clear()
+			Do Case
+				Case &DynamicFiltersSelector3 = !'PRATOCODIGO'
+					&DynamicFiltersOperator3.AddItem(0, "=")
+				Case &DynamicFiltersSelector3 = !'PRATODSCRICAO'
+					&DynamicFiltersOperator3.AddItem(0, "WWP_FilterLike")
+					&DynamicFiltersOperator3.AddItem(1, "WWP_FilterContains")
+				Case &DynamicFiltersSelector3 = !'PRATOTIPOREFEICAO'
+					&DynamicFiltersOperator3.AddItem(0, "=")
+			EndCase
+		EndIf
+	EndIf
+	Do 'SaveGridState'
+
+	&GridCurrentPage = Grid.CurrentPage
+	&GridPageCount = Grid.PageCount
+	&GridAppliedFilters = WWP_GetAppliedFiltersDescription(&Pgmname)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangePage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case GridPaginationBar.SelectedPage = !'Previous'
+			Grid.PreviousPage()
+		Case GridPaginationBar.SelectedPage = !'Next'
+			Grid.NextPage()
+		Otherwise
+			&PageToGo.FromString(GridPaginationBar.SelectedPage)
+			Grid.GotoPage(&PageToGo)
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridPaginationBar.ChangeRowsPerPage
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Grid.Rows = GridPaginationBar.RowsPerPageSelectedValue
+	Grid.FirstPage()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedBy.FromString(DDO_Grid.SelectedValue_get)
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'pratoCodigo'
+					&TFpratoCodigo.FromString(DDO_Grid.FilteredText_get)
+					&TFpratoCodigo_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'pratoDscricao'
+					&TFpratoDscricao = DDO_Grid.FilteredText_get
+					&TFpratoDscricao_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'pratoTipoRefeicao'
+					&TFpratoTipoRefeicao = DDO_Grid.FilteredText_get
+					&TFpratoTipoRefeicao_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFpratoTipoRefeicao_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'pratoStatus'
+					&TFpratoStatus_SelsJson = DDO_Grid.SelectedValue_get
+					&TFpratoStatus_Sels.FromJson(&TFpratoStatus_SelsJson)
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&Update = !'<i class="fa fa-pen"></i>'
+	If (&IsAuthorized_Update)
+		&Update.Link = trnspratos.Link(TrnMode.Update, prefCodigo, pratoCodigo)
+	Endif
+	&Delete = !'<i class="fa fa-times"></i>'
+	If (&IsAuthorized_Delete)
+		&Delete.Link = trnspratos.Link(TrnMode.Delete, prefCodigo, pratoCodigo)
+	Endif
+	&UserAction1 = !'<i class="fas fa-tasks"></i>'
+	If (&IsAuthorized_UserAction1)
+		&UserAction1.Link = trnspratosingredientesWW.Link(prefCodigo, pratoCodigo)
+	Endif
+	&btnPerCapta.FromImage(ActionInsert)
+	&btnPerCapta.TooltipText = "Per Capta"
+	If (&IsAuthorized_btnPerCapta)
+		&btnPerCapta.Link = trnspratopercaptaWW.Link(prefCodigo, pratoCodigo)
+	Endif
+	&btnduplicar = !'<i class="fa-copy far"></i>'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = True
+	AddDynamicFilters1.Visible = False
+	RemoveDynamicFilters1.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersIgnoreFirst = True
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	&DynamicFiltersIgnoreFirst = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector1.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'AddDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled3 = True
+	AddDynamicFilters2.Visible = False
+	RemoveDynamicFilters2.Visible = True
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled2 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector2.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'RemoveDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersRemoving = True
+	&DynamicFiltersEnabled3 = False
+	Do 'SaveDynFiltersState'
+	Do 'ResetDynFilters'
+	Do 'LoadDynFiltersState'
+	&DynamicFiltersRemoving = False
+	Grid.Refresh()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &DynamicFiltersSelector3.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersOperator3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_ManageFilters.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Clean#>'
+			Do 'CleanFilters'
+			Grid.FirstPage()
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Save#>'
+			Do 'SaveGridState'
+			SaveFilterAs.Popup(!'trnspratosWWFilters', &PgmName + !"GridState")
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Case ddo_ManageFilters.ActiveEventKey = !'<#Manage#>'
+			ManageFilters.Popup(!'trnspratosWWFilters')
+			&ManageFiltersExecutionStep = 2
+			Refresh
+		Otherwise
+			&ManageFiltersXml = GetFilterByName(!'trnspratosWWFilters', ddo_ManageFilters.ActiveEventKey)
+			If &ManageFiltersXml.IsEmpty()
+				msg('WWP_FilterNotExist')
+			Else
+				Do 'CleanFilters'
+				SaveGridState.Call(&PgmName + !"GridState",  &ManageFiltersXml)
+				&GridState.FromXml(&ManageFiltersXml)
+				&OrderedBy = &GridState.OrderedBy
+				&OrderedDsc = &GridState.OrderedDsc
+				Do 'SetDDOSortedStatus' 
+				Do 'LoadRegFiltersState'
+				Do 'LoadDynFiltersState'
+				Grid.FirstPage()
+			EndIf
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &btnduplicar.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&prefCodigo_Selected = prefCodigo
+	&pratoCodigo_Selected = pratoCodigo
+	DVelop_ConfirmPanel_btnduplicar.Confirm()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DVelop_ConfirmPanel_btnduplicar.Close
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If DVelop_ConfirmPanel_btnduplicar.Result = !'Yes'
+		Do 'Do btnduplicar'
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoInsert'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		trnspratos.Call(TrnMode.Insert, nullvalue(prefCodigo), nullvalue(pratoCodigo))
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event ddo_AGExport.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case ddo_AGExport.ActiveEventKey = !'Export'
+			Do 'DoExport'
+		Case ddo_AGExport.ActiveEventKey = !'ExportReport'
+			Do 'DoExportReport'
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnComposicaoAlimento'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_btnComposicaoAlimento)
+		WPComposicaoRefeicao.Call()
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = &OrderedBy.ToString().Trim() + !':' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&IsAuthorized_Update = SecGAMIsAuthByFunctionalityKey.Udp(!'trnspratosww_Update')
+	If not (&IsAuthorized_Update)
+		&Update.Visible = False
+	Endif 
+	&IsAuthorized_Delete = SecGAMIsAuthByFunctionalityKey.Udp(!'trnspratosww_Delete')
+	If not (&IsAuthorized_Delete)
+		&Delete.Visible = False
+	Endif 
+	&IsAuthorized_UserAction1 = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_UserAction1)
+		&UserAction1.Visible = False
+	Endif 
+	&IsAuthorized_btnPerCapta = SecGAMIsAuthByFunctionalityKey.Udp(!'<Check_Is_Authenticated>')
+	If not (&IsAuthorized_btnPerCapta)
+		&btnPerCapta.Visible = False
+	Endif 
+	&IsAuthorized_Insert = SecGAMIsAuthByFunctionalityKey.Udp(!'trnspratosww_Insert')
+	If not (&IsAuthorized_Insert)
+		BtnInsert.Visible = False
+	Endif
+	&IsAuthorized_btnComposicaoAlimento = SecGAMIsAuthByFunctionalityKey.Udp(!'wpcomposicaorefeicao_Execute')
+	If not (&IsAuthorized_btnComposicaoAlimento)
+		BtnbtnComposicaoAlimento.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters1'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&pratoCodigo1.Visible = False
+	&pratoDscricao1.Visible = False
+	&pratoComFreezer1.Visible = False
+	&pratoCozinhaCentral1.Visible = False
+	&pratoForno1.Visible = False
+	&pratoRepeticao1.Visible = False
+	&pratoTipoRefeicao1.Visible = False
+	&DynamicFiltersOperator1.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector1 = !'PRATOCODIGO'
+		&pratoCodigo1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PRATODSCRICAO'
+		&pratoDscricao1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PRATOCOMFREEZER'
+		&pratoComFreezer1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PRATOCOZINHACENTRAL'
+		&pratoCozinhaCentral1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PRATOFORNO'
+		&pratoForno1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PRATOREPETICAO'
+		&pratoRepeticao1.Visible = True
+	Case &DynamicFiltersSelector1 = !'PRATOTIPOREFEICAO'
+		&pratoTipoRefeicao1.Visible = True
+		&DynamicFiltersOperator1.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters2'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&pratoCodigo2.Visible = False
+	&pratoDscricao2.Visible = False
+	&pratoComFreezer2.Visible = False
+	&pratoCozinhaCentral2.Visible = False
+	&pratoForno2.Visible = False
+	&pratoRepeticao2.Visible = False
+	&pratoTipoRefeicao2.Visible = False
+	&DynamicFiltersOperator2.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector2 = !'PRATOCODIGO'
+		&pratoCodigo2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PRATODSCRICAO'
+		&pratoDscricao2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PRATOCOMFREEZER'
+		&pratoComFreezer2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PRATOCOZINHACENTRAL'
+		&pratoCozinhaCentral2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PRATOFORNO'
+		&pratoForno2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PRATOREPETICAO'
+		&pratoRepeticao2.Visible = True
+	Case &DynamicFiltersSelector2 = !'PRATOTIPOREFEICAO'
+		&pratoTipoRefeicao2.Visible = True
+		&DynamicFiltersOperator2.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&pratoCodigo3.Visible = False
+	&pratoDscricao3.Visible = False
+	&pratoComFreezer3.Visible = False
+	&pratoCozinhaCentral3.Visible = False
+	&pratoForno3.Visible = False
+	&pratoRepeticao3.Visible = False
+	&pratoTipoRefeicao3.Visible = False
+	&DynamicFiltersOperator3.Visible = False
+	Do Case
+	Case &DynamicFiltersSelector3 = !'PRATOCODIGO'
+		&pratoCodigo3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PRATODSCRICAO'
+		&pratoDscricao3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PRATOCOMFREEZER'
+		&pratoComFreezer3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PRATOCOZINHACENTRAL'
+		&pratoCozinhaCentral3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PRATOFORNO'
+		&pratoForno3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PRATOREPETICAO'
+		&pratoRepeticao3.Visible = True
+	Case &DynamicFiltersSelector3 = !'PRATOTIPOREFEICAO'
+		&pratoTipoRefeicao3.Visible = True
+		&DynamicFiltersOperator3.Visible = True
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'ResetDynFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&DynamicFiltersEnabled2 = False
+	&DynamicFiltersSelector2 = !'PRATOCODIGO'
+	&DynamicFiltersOperator2 = 0
+	&pratoCodigo2.SetEmpty()
+	Do 'EnableDynamicFilters2'
+
+	&DynamicFiltersEnabled3 = False
+	&DynamicFiltersSelector3 = !'PRATOCODIGO'
+	&DynamicFiltersOperator3 = 0
+	&pratoCodigo3.SetEmpty()
+	Do 'EnableDynamicFilters3'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadSavedFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&ManageFiltersData = WWP_ManageFiltersLoadSavedFilters(!'trnspratosWWFilters', !"WWPDynFilterHideAll_AL('%1', 3, 0)", TableDynamicFilters.InternalName, False)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CleanFilters'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TFpratoCodigo.SetEmpty()
+	&TFpratoCodigo_To.SetEmpty()
+	&TFpratoDscricao.SetEmpty()
+	&TFpratoDscricao_Sel.SetEmpty()
+	&TFpratoTipoRefeicao.SetEmpty()
+	&TFpratoTipoRefeicao_Sel.SetEmpty()
+	&TFpratoStatus_Sels = new()
+	DDO_Grid.SelectedValue_set = ''
+	DDO_Grid.FilteredText_set = ''
+	DDO_Grid.FilteredTextTo_set = ''
+
+	&DynamicFiltersSelector1 = !'PRATOCODIGO'
+	&DynamicFiltersOperator1 = 0
+	&pratoCodigo1.SetEmpty()
+	Do 'EnableDynamicFilters1'
+	Do 'ResetDynFilters'
+	&GridState.DynamicFilters.Clear()
+	Do 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'Do btnduplicar'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	PRCDDuplicarRefeicao.Call(&prefCodigo_Selected, &pratoCodigo_Selected)
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+
+	&OrderedBy = &GridState.OrderedBy
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+	Do 'LoadRegFiltersState'
+	Do 'LoadDynFiltersState'
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadRegFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"TFPRATOCODIGO"
+				&TFpratoCodigo.FromString(&GridStateFilterValue.Value)
+				&TFpratoCodigo_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFPRATODSCRICAO"
+				&TFpratoDscricao.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPRATODSCRICAO_SEL"
+				&TFpratoDscricao_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPRATOTIPOREFEICAO"
+				&TFpratoTipoRefeicao.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFPRATOTIPOREFEICAO_SEL"
+				&TFpratoTipoRefeicao_Sel.FromString(&GridStateFilterValue.Value)
+					&TFpratoTipoRefeicao_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFPRATOSTATUS_SEL"
+				&TFpratoStatus_SelsJson = &GridStateFilterValue.Value
+				&TFpratoStatus_Sels.FromJson(&TFpratoStatus_SelsJson)
+		EndCase
+	EndFor
+	DDO_Grid.SelectedText_set = !'||' + iif(&TFpratoTipoRefeicao_Sel.IsEmpty(), '', &TFpratoTipoRefeicao_SelDsc) + !'|'
+	DDO_Grid.SelectedValue_set = !'|' + WWP_GetFilterVal(&TFpratoDscricao_Sel.IsEmpty(), &TFpratoDscricao_Sel) + !'|' + iif(&TFpratoTipoRefeicao_Sel.IsEmpty(), '', &TFpratoTipoRefeicao_Sel.ToString()) + !'|' + WWP_GetFilterVal(&TFpratoStatus_Sels.Count = 0, &TFpratoStatus_SelsJson)
+	DDO_Grid.FilteredText_set = iif(&TFpratoCodigo.IsEmpty(), '', &TFpratoCodigo.ToString()) + !'|' + WWP_GetFilterVal(&TFpratoDscricao.IsEmpty(), &TFpratoDscricao) + !'|' + WWP_GetFilterVal(&TFpratoTipoRefeicao.IsEmpty(), &TFpratoTipoRefeicao) + !'|'
+	DDO_Grid.FilteredTextTo_set = iif(&TFpratoCodigo_To.IsEmpty(), '', &TFpratoCodigo_To.ToString()) + !'|||'
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	AddDynamicFilters1.Visible = True
+	RemoveDynamicFilters1.Visible = False
+	AddDynamicFilters2.Visible = True
+	RemoveDynamicFilters2.Visible = False
+
+	If &GridState.DynamicFilters.Count >= 1
+		&GridStateDynamicFilter = &GridState.DynamicFilters.Item(1)
+		&DynamicFiltersSelector1 = &GridStateDynamicFilter.Selected
+		Do Case
+			Case &DynamicFiltersSelector1 = !'PRATOCODIGO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&pratoCodigo1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PRATODSCRICAO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&pratoDscricao1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PRATOCOMFREEZER'
+				&pratoComFreezer1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PRATOCOZINHACENTRAL'
+				&pratoCozinhaCentral1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PRATOFORNO'
+				&pratoForno1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PRATOREPETICAO'
+				&pratoRepeticao1.FromString(&GridStateDynamicFilter.Value)
+			Case &DynamicFiltersSelector1 = !'PRATOTIPOREFEICAO'
+				&DynamicFiltersOperator1 = &GridStateDynamicFilter.Operator
+				&pratoTipoRefeicao1.FromString(&GridStateDynamicFilter.Value)
+		EndCase
+		Do 'EnableDynamicFilters1'
+			If &GridState.DynamicFilters.Count >= 2
+				JSDynamicFilters.Caption = !'<script type="text/javascript">$(document).ready(function() {'
+				JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 2, 0);", TableDynamicFilters.InternalName)
+				AddDynamicFilters1.Visible = False
+				RemoveDynamicFilters1.Visible = True
+				&DynamicFiltersEnabled2 = True
+				&GridStateDynamicFilter = &GridState.DynamicFilters.Item(2)
+				&DynamicFiltersSelector2 = &GridStateDynamicFilter.Selected
+				Do Case
+					Case &DynamicFiltersSelector2 = !'PRATOCODIGO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&pratoCodigo2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PRATODSCRICAO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&pratoDscricao2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PRATOCOMFREEZER'
+						&pratoComFreezer2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PRATOCOZINHACENTRAL'
+						&pratoCozinhaCentral2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PRATOFORNO'
+						&pratoForno2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PRATOREPETICAO'
+						&pratoRepeticao2.FromString(&GridStateDynamicFilter.Value)
+					Case &DynamicFiltersSelector2 = !'PRATOTIPOREFEICAO'
+						&DynamicFiltersOperator2 = &GridStateDynamicFilter.Operator
+						&pratoTipoRefeicao2.FromString(&GridStateDynamicFilter.Value)
+				EndCase
+				Do 'EnableDynamicFilters2'
+				If &GridState.DynamicFilters.Count >= 3
+					JSDynamicFilters.Caption += format(!"WWPDynFilterShow_AL('%1', 3, 0);", TableDynamicFilters.InternalName)
+					AddDynamicFilters2.Visible = False
+					RemoveDynamicFilters2.Visible = True
+					&DynamicFiltersEnabled3 = True
+					&GridStateDynamicFilter = &GridState.DynamicFilters.Item(3)
+					&DynamicFiltersSelector3 = &GridStateDynamicFilter.Selected
+					Do Case
+						Case &DynamicFiltersSelector3 = !'PRATOCODIGO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&pratoCodigo3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PRATODSCRICAO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&pratoDscricao3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PRATOCOMFREEZER'
+							&pratoComFreezer3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PRATOCOZINHACENTRAL'
+							&pratoCozinhaCentral3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PRATOFORNO'
+							&pratoForno3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PRATOREPETICAO'
+							&pratoRepeticao3.FromString(&GridStateDynamicFilter.Value)
+						Case &DynamicFiltersSelector3 = !'PRATOTIPOREFEICAO'
+							&DynamicFiltersOperator3 = &GridStateDynamicFilter.Operator
+							&pratoTipoRefeicao3.FromString(&GridStateDynamicFilter.Value)
+					EndCase
+					Do 'EnableDynamicFilters3'
+				EndIf
+				JSDynamicFilters.Caption += !'});</script>'
+			EndIf
+	EndIf
+	If &DynamicFiltersRemoving
+		JSDynamicFilters.Caption = ''
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedBy = &OrderedBy
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValue(&GridState, !"TFPRATOCODIGO", "Código", not (&TFpratoCodigo.IsEmpty() AND &TFpratoCodigo_To.IsEmpty()), 0, &TFpratoCodigo.ToString().Trim(), iif(&TFpratoCodigo.IsEmpty(), '', trim(&TFpratoCodigo.ToFormattedString())), True, &TFpratoCodigo_To.ToString().Trim(), iif(&TFpratoCodigo_To.IsEmpty(), '', trim(&TFpratoCodigo_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPRATODSCRICAO", "Descrição", not &TFpratoDscricao.IsEmpty(), 0, &TFpratoDscricao, &TFpratoDscricao, False, '', '', not &TFpratoDscricao_Sel.IsEmpty(), &TFpratoDscricao_Sel, &TFpratoDscricao_Sel)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFPRATOTIPOREFEICAO", "Turno", not &TFpratoTipoRefeicao.IsEmpty(), 0, &TFpratoTipoRefeicao.ToString().Trim(), trim(&TFpratoTipoRefeicao.ToFormattedString()), False, '', '', not &TFpratoTipoRefeicao_Sel.IsEmpty(), &TFpratoTipoRefeicao_Sel.ToString().Trim(), &TFpratoTipoRefeicao_SelDsc)
+	&AuxText = iif(&TFpratoStatus_Sels.Count = 1, !'[' + &TFpratoStatus_Sels.Item(1) + !']', 'WWP_FilterValueDescription_MultipleValues')
+	WWP_GridStateAddFilterValue(&GridState, !"TFPRATOSTATUS_SEL", "Situação", not &TFpratoStatus_Sels.Count = 0, 0, &TFpratoStatus_Sels.ToJson(), iif(&AuxText = '', '', &AuxText.Replace(!"[A]", "Ativo").Replace(!"[I]", "Inativo")), False, '', '')
+
+	Do 'SaveDynFiltersState'
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveDynFiltersState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.DynamicFilters.Clear()
+	If not &DynamicFiltersIgnoreFirst
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector1
+		Do Case
+			Case &DynamicFiltersSelector1 = !'PRATOCODIGO' AND not &pratoCodigo1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator1, &pratoCodigo1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "=" + !' ' + trim(&pratoCodigo1.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PRATODSCRICAO' AND not &pratoDscricao1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Descrição", &DynamicFiltersOperator1, &pratoDscricao1, format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "WWP_FilterLike" + !' ' + &pratoDscricao1, "WWP_FilterContains" + !' ' + &pratoDscricao1), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PRATOCOMFREEZER' AND not &pratoComFreezer1.IsEmpty()
+				&AuxText = !'[' + &pratoComFreezer1 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Com Freezer", 0, &pratoComFreezer1, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PRATOCOZINHACENTRAL' AND not &pratoCozinhaCentral1.IsEmpty()
+				&AuxText = !'[' + &pratoCozinhaCentral1 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Cozinha Central", 0, &pratoCozinhaCentral1, &AuxText.Replace(!"[N]", "Normal").Replace(!"[S]", "Central"), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PRATOFORNO' AND not &pratoForno1.IsEmpty()
+				&AuxText = !'[' + &pratoForno1 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Utiliza Forno", 0, &pratoForno1, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PRATOREPETICAO' AND not &pratoRepeticao1.IsEmpty()
+				&AuxText = !'[' + &pratoRepeticao1 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Permite Repeticao", 0, &pratoRepeticao1, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector1 = !'PRATOTIPOREFEICAO' AND not &pratoTipoRefeicao1.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Tipo de Refeição", &DynamicFiltersOperator1, &pratoTipoRefeicao1.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator1 + 1)), "=" + !' ' + trim(&pratoTipoRefeicao1.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled2
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector2
+		Do Case
+			Case &DynamicFiltersSelector2 = !'PRATOCODIGO' AND not &pratoCodigo2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator2, &pratoCodigo2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "=" + !' ' + trim(&pratoCodigo2.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PRATODSCRICAO' AND not &pratoDscricao2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Descrição", &DynamicFiltersOperator2, &pratoDscricao2, format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "WWP_FilterLike" + !' ' + &pratoDscricao2, "WWP_FilterContains" + !' ' + &pratoDscricao2), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PRATOCOMFREEZER' AND not &pratoComFreezer2.IsEmpty()
+				&AuxText = !'[' + &pratoComFreezer2 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Com Freezer", 0, &pratoComFreezer2, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PRATOCOZINHACENTRAL' AND not &pratoCozinhaCentral2.IsEmpty()
+				&AuxText = !'[' + &pratoCozinhaCentral2 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Cozinha Central", 0, &pratoCozinhaCentral2, &AuxText.Replace(!"[N]", "Normal").Replace(!"[S]", "Central"), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PRATOFORNO' AND not &pratoForno2.IsEmpty()
+				&AuxText = !'[' + &pratoForno2 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Utiliza Forno", 0, &pratoForno2, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PRATOREPETICAO' AND not &pratoRepeticao2.IsEmpty()
+				&AuxText = !'[' + &pratoRepeticao2 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Permite Repeticao", 0, &pratoRepeticao2, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector2 = !'PRATOTIPOREFEICAO' AND not &pratoTipoRefeicao2.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Tipo de Refeição", &DynamicFiltersOperator2, &pratoTipoRefeicao2.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator2 + 1)), "=" + !' ' + trim(&pratoTipoRefeicao2.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+	If &DynamicFiltersEnabled3
+		&GridStateDynamicFilter = new()
+		&GridStateDynamicFilter.Selected = &DynamicFiltersSelector3
+		Do Case
+			Case &DynamicFiltersSelector3 = !'PRATOCODIGO' AND not &pratoCodigo3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Código", &DynamicFiltersOperator3, &pratoCodigo3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "=" + !' ' + trim(&pratoCodigo3.ToFormattedString())), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PRATODSCRICAO' AND not &pratoDscricao3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Descrição", &DynamicFiltersOperator3, &pratoDscricao3, format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "WWP_FilterLike" + !' ' + &pratoDscricao3, "WWP_FilterContains" + !' ' + &pratoDscricao3), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PRATOCOMFREEZER' AND not &pratoComFreezer3.IsEmpty()
+				&AuxText = !'[' + &pratoComFreezer3 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Com Freezer", 0, &pratoComFreezer3, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PRATOCOZINHACENTRAL' AND not &pratoCozinhaCentral3.IsEmpty()
+				&AuxText = !'[' + &pratoCozinhaCentral3 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Cozinha Central", 0, &pratoCozinhaCentral3, &AuxText.Replace(!"[N]", "Normal").Replace(!"[S]", "Central"), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PRATOFORNO' AND not &pratoForno3.IsEmpty()
+				&AuxText = !'[' + &pratoForno3 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Utiliza Forno", 0, &pratoForno3, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PRATOREPETICAO' AND not &pratoRepeticao3.IsEmpty()
+				&AuxText = !'[' + &pratoRepeticao3 + !']'
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Permite Repeticao", 0, &pratoRepeticao3, &AuxText.Replace(!"[N]", "Não").Replace(!"[S]", "Sim"), False, '', '')
+			Case &DynamicFiltersSelector3 = !'PRATOTIPOREFEICAO' AND not &pratoTipoRefeicao3.IsEmpty()
+				WWP_GridStateAddDynFilterValue(&GridStateDynamicFilter, "Tipo de Refeição", &DynamicFiltersOperator3, &pratoTipoRefeicao3.ToString().Trim(), format(!'%' + Trim(Str(&DynamicFiltersOperator3 + 1)), "=" + !' ' + trim(&pratoTipoRefeicao3.ToFormattedString())), False, '', '')
+		EndCase
+		If &DynamicFiltersRemoving OR not &GridStateDynamicFilter.Value.IsEmpty()
+			&GridState.DynamicFilters.Add(&GridStateDynamicFilter)
+		EndIf
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"trnspratos"
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate Excel spreadsheet and download it.
+	Do 'LoadGridState'
+	trnspratosWWExport.Call(&ExcelFilename, &ErrorMessage)
+	If (&ExcelFilename <> "")
+		Link(&ExcelFilename)
+	Else
+		msg(&ErrorMessage)
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'DoExportReport'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Generate PDF file.
+	Do 'LoadGridState'
+	InNewWindow1.Target = trnspratosWWExportReport.Link()
+	InNewWindow1.Height = !'600'
+	InNewWindow1.Width = !'800'
+	InNewWindow1.OpenWindow()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+prefCodigo = &prefCodigo;
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateDynamicFilter">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateDynamicFilter</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.DynamicFilter, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedByAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedByAux</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Código:PRATOCODIGO,Descrição:PRATODSCRICAO,Com Freezer:PRATOCOMFREEZER,Cozinha Central:PRATOCOZINHACENTRAL,Utiliza Forno:PRATOFORNO,Permite Repeticao:PRATOREPETICAO,Tipo de Refeição:PRATOTIPOREFEICAO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator1</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>=:0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoDscricao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoDscricao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDscricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Código:PRATOCODIGO,Descrição:PRATODSCRICAO,Com Freezer:PRATOCOMFREEZER,Cozinha Central:PRATOCOZINHACENTRAL,Utiliza Forno:PRATOFORNO,Permite Repeticao:PRATOREPETICAO,Tipo de Refeição:PRATOTIPOREFEICAO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator2</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>=:0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoDscricao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoDscricao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDscricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersEnabled3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersEnabled3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersSelector3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersSelector3</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>Código:PRATOCODIGO,Descrição:PRATODSCRICAO,Com Freezer:PRATOCOMFREEZER,Cozinha Central:PRATOCOZINHACENTRAL,Utiliza Forno:PRATOFORNO,Permite Repeticao:PRATOREPETICAO,Tipo de Refeição:PRATOTIPOREFEICAO</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersOperator3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersOperator3</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Combo Box</Value>
+        </Property>
+        <Property>
+          <Name>ControlValues</Name>
+          <Value>=:0</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoDscricao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoDscricao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDscricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersRemoving">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersRemoving</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DynamicFiltersIgnoreFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DynamicFiltersIgnoreFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelFilename">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelFilename</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>512</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>512</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorXML">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorXML</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserCustomValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserCustomValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelector">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelector</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorAux</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersXml">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersXml</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ManageFiltersExecutionStep">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ManageFiltersExecutionStep</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>1</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFprefCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFprefCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCodigo_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCodigo_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoDscricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoDscricao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDscricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoDscricao_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoDscricao_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDscricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoComFreezer">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoComFreezer</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoComFreezer</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoComFreezer_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoComFreezer_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoComFreezer</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoSemFreezer">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoSemFreezer</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoSemFreezer</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoSemFreezer_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoSemFreezer_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoSemFreezer</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoForno">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoForno</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoForno</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoForno_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoForno_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoForno</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoModoDeFazer">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoModoDeFazer</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoModoDeFazer_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoModoDeFazer_Sel</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>200</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoRepeticao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoRepeticao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoRepeticao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoRepeticao_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoRepeticao_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoRepeticao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCozinhaCentral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCozinhaCentral</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCozinhaCentral</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCozinhaCentral_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCozinhaCentral_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCozinhaCentral</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCodigoPai">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCodigoPai</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigoPai</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCodigoPai_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCodigoPai_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigoPai</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoTipoAtendimento">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoTipoAtendimento</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:doenDescricao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCodigoPaiAtend">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCodigoPaiAtend</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigoPaiAtend</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCodigoPaiAtend_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCodigoPaiAtend_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigoPaiAtend</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoStatus">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoStatus</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoStatus</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoStatus_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoStatus_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoStatus</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoDataCad">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoDataCad</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDataCad</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoDataCad_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoDataCad_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDataCad</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_pratoDataCadAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_pratoDataCadAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_pratoDataCadAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_pratoDataCadAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_pratoDataCadAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_pratoDataCadAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoDataAlt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoDataAlt</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDataAlt</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoDataAlt_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoDataAlt_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoDataAlt</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_pratoDataAltAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_pratoDataAltAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_pratoDataAltAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_pratoDataAltAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_pratoDataAltAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_pratoDataAltAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_pratoDscricao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_pratoDscricao</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportDataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportDataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Insert">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Insert</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoComFreezer_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoComFreezer_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoComFreezer_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoComFreezer_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoComFreezer</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoForno_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoForno_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoForno_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoForno_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoForno</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoRepeticao_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoRepeticao_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoRepeticao_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoRepeticao_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoRepeticao</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCozinhaCentral_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCozinhaCentral_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoCozinhaCentral_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoCozinhaCentral_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCozinhaCentral</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoStatus_SelsJson">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoStatus_SelsJson</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoStatus_Sels">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoStatus_Sels</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoStatus</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoComFreezer1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoComFreezer1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoComFreezer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCozinhaCentral1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCozinhaCentral1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCozinhaCentral</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoForno1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoForno1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoForno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoRepeticao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoRepeticao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoRepeticao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoComFreezer2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoComFreezer2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoComFreezer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCozinhaCentral2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCozinhaCentral2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCozinhaCentral</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoForno2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoForno2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoForno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoRepeticao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoRepeticao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoRepeticao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoComFreezer3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoComFreezer3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoComFreezer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCozinhaCentral3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCozinhaCentral3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCozinhaCentral</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoForno3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoForno3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoForno</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoRepeticao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoRepeticao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoRepeticao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoTipoAtendimento_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoTipoAtendimento_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoModoDeFazer1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoModoDeFazer1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoModoDeFazer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoModoDeFazer2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoModoDeFazer2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoModoDeFazer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoModoDeFazer3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoModoDeFazer3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoModoDeFazer</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="FilterFullText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>FilterFullText</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:WWPFullTextFilter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoTipoRefeicao">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoTipoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:refTipDescricao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoTipoRefeicao_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoTipoRefeicao_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoTipoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="refTipCodigo1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>refTipCodigo1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:refTipCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="refTipDescricao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>refTipDescricao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:refTipDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="refTipCodigo2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>refTipCodigo2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:refTipCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="refTipDescricao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>refTipDescricao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:refTipDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="refTipCodigo3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>refTipCodigo3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:refTipCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="refTipDescricao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>refTipDescricao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:refTipDescricao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserAction1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserAction1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>Ingrediente</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_UserAction1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_UserAction1</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoTipoRefeicao_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoTipoRefeicao_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoTipoRefeicao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFpratoTipoRefeicao_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFpratoTipoRefeicao_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoTipoRefeicao1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoTipoRefeicao1</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoTipoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoTipoRefeicao2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoTipoRefeicao2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoTipoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoTipoRefeicao3">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoTipoRefeicao3</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoTipoRefeicao</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>Per Capta</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnPerCapta">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnPerCapta</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AuxText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AuxText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_btnComposicaoAlimento">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_btnComposicaoAlimento</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnduplicar">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnduplicar</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_Selected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_Selected</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="pratoCodigo_Selected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>pratoCodigo_Selected</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:pratoCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnspratosWW</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Listagem de Refeições</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IntegratedSecurityLevel</Name>
+      <Value>SecurityHigh</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnspratos</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>Selection</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

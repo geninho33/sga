@@ -1,0 +1,1956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a3b939c2-68af-a304-c613-ff28f3b9b25b" user="DESKTOP-OQ270FR\Geninho" versionDate="2024-10-02T13:11:35.0000000Z" lastUpdate="2024-10-02T13:02:22.0000000Z" checksum="f09e10d52d3311fb18d34182c9630b0c" fullyQualifiedName="trnsdistribuicaoitensWW" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="4e5b288b-d97d-4222-aafc-f58e991ca8ec" name="trnsdistribuicaoitensWW" type="c9584656-94b6-4ccd-890f-332d11fc2c25" description="Itens da Distribuição" parent="WorkWithPlustrnsdistribuicaoitens" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="d24a58ad-57ba-41b7-9e6e-eaca3543c778">
+    <Source><![CDATA[<GxMultiForm rootId="1" version="html:15.0.0;layout:17.11.0"><Form id="1" type="layout"><detail><layout><table controlName="LayoutMainTable" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableMain" class="TableMain" tableType="Responsive" responsiveSizes="[]"><row><cell cellClass="CellPaddingBottom"><ucw gxControlType="-104584741" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlName&lt;/Name&gt;&lt;Value&gt;DVPanel_TableHeader&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Width&lt;/Name&gt;&lt;Value&gt;100%&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoWidth&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoHeight&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Cls&lt;/Name&gt;&lt;Value&gt;DVBootstrapResponsivePanel&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Title&lt;/Name&gt;&lt;Value&gt;WWP_FilterOptions&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsible&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Collapsed&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ShowCollapseIcon&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;IconPosition&lt;/Name&gt;&lt;Value&gt;Right&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;AutoScroll&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><table controlName="TableHeader" tableType="Flex" flexDirection="Column" containerSlotName="TableHeader"><row><cell><group controlName="UnnamedGroup2" caption="Distribuição " class="Group"><table controlName="UnnamedTable1" tableType="Responsive" responsiveSizes="[]"><row><cell><data attribute="&amp;dadosNota" labelPosition="None" readonly="True" class="ReadonlyAttribute" /></cell></row></table></group></cell><cell><table controlName="TableHeaderContent" tableType="Flex" flexWrap="Wrap"><row><cell><table controlName="TableActions" tableType="Flex"><row><cell flexGrow="0"><actiongroup controlName="ActionGroup_Actions" /></cell></row></table></cell></row></table></cell><cell cellClass="SectionGrid GridNoBorderCell GridFixedColumnBorders HasGridEmpowerer"><table controlName="UnnamedTableInLineInsert" tableType="Responsive" responsiveSizes="[]"><row><cell><table controlName="TableGridWrapper" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="Grid" class="GridWithBorderColor WorkWith" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlBaseTable&lt;/Name&gt;&lt;Value&gt;trnsdistribuicaoitens&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlOrder&lt;/Name&gt;&lt;Value&gt;prefCodigo distCodigo distItemProduto  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (distCodigo) (distItemProduto)  when &amp;amp;OrderedBy = 1 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo distCodigo distItemProdutoUN  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (distCodigo) (distItemProdutoUN)  when &amp;amp;OrderedBy = 2 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo distCodigo distItemProdutoUNPeso  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (distCodigo) (distItemProdutoUNPeso)  when &amp;amp;OrderedBy = 3 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo distCodigo distItemProdutoPeso  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (distCodigo) (distItemProdutoPeso)  when &amp;amp;OrderedBy = 4 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo distCodigo distItemQuantidade  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (distCodigo) (distItemQuantidade)  when &amp;amp;OrderedBy = 5 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo distCodigo distItemValidade  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (distCodigo) (distItemValidade)  when &amp;amp;OrderedBy = 6 AND &amp;amp;OrderedDsc = True&#xD;&#xA;prefCodigo distCodigo distItemLote  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = False&#xD;&#xA;(prefCodigo) (distCodigo) (distItemLote)  when &amp;amp;OrderedBy = 7 AND &amp;amp;OrderedDsc = True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelector&lt;/Name&gt;&lt;Value&gt;ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af-trnsdistribuicaoitensWWDS&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;idDataSelectorParms&lt;/Name&gt;&lt;Value&gt;&amp;amp;prefCodigo, &amp;amp;distCodigo, &amp;amp;TFdistItemProduto, &amp;amp;TFdistItemProduto_Sel, &amp;amp;TFdistItemProdutoUN, &amp;amp;TFdistItemProdutoUN_Sel, &amp;amp;TFdistItemProdutoUNPeso, &amp;amp;TFdistItemProdutoUNPeso_Sel, &amp;amp;TFdistItemProdutoPeso, &amp;amp;TFdistItemProdutoPeso_To, &amp;amp;TFdistItemQuantidade, &amp;amp;TFdistItemQuantidade_To, &amp;amp;TFdistItemValidade, &amp;amp;TFdistItemValidade_To, &amp;amp;TFdistItemLote, &amp;amp;TFdistItemLote_Sel, &amp;amp;TFdistItemProdutoPesoTotal, &amp;amp;TFdistItemProdutoPesoTotal_To&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;Sortable&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;"><item attribute="&amp;EditableGridCancel" titleExp="" class="DeleteAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridCancel'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Update" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_update&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;Delete" titleExp="" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWIconActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GX_BtnDelete&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distCodigo" titleExp="Código" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="prefCodigo" titleExp="Prefeitura" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemProduto_Editable" titleExp="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;prodCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;prodDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemProduto" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemProdutoDescricao" titleExp="Descrição" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemProdutoUN" titleExp="UN" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;uniCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;uniDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo=&amp;amp;prefCodigo;&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemProdutoUNPeso" titleExp="Und Peso " class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemProdutoPeso" titleExp="Peso " class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemQuantidade_Editable" titleExp="Qtde" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemQuantidade" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemValidade_Editable" titleExp="Validade" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemValidade" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemLote_Editable" titleExp="Lote" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemLote" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemStatus" titleExp="dist Item Status" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColVisible&lt;/Name&gt;&lt;Value&gt;False&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="distItemProdutoPesoTotal" titleExp="Peso Total" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EditableGridConfirm" titleExp="" class="SelectAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridConfirm'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></cell></row><row><cell><table controlName="TableGridInsertLine" tableType="Responsive" responsiveSizes="[]"><row><cell><simplegrid controlName="GridInsertLine" class="GridWithBorderColor WorkWith"><item attribute="&amp;EditableGridCancel2" titleExp="" class="DeleteAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridCancel'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemProduto_Editable2" titleExp="Produto" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ControlType&lt;/Name&gt;&lt;Value&gt;Dynamic Combo Box&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemValues&lt;/Name&gt;&lt;Value&gt;prodCodigo&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlItemDescription&lt;/Name&gt;&lt;Value&gt;prodDescricao&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ControlWhere&lt;/Name&gt;&lt;Value&gt;prefCodigo = &amp;amp;prefCodigo;&#xD;&#xA;prodStatus = 'A';&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemProdutoUN_Editable2" titleExp="UN" class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemProdutoUNPeso_Editable2" titleExp="Und Peso " class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemProdutoPeso_Editable2" titleExp="Peso " class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemQuantidade_Editable2" titleExp="Qtde" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemValidade_Editable2" titleExp="Validade" class="AttributeRealWidthDate" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemLote_Editable2" titleExp="Lote" class="AttributeRealWidth" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;distItemProdutoPesoTotal_Editable2" titleExp="Peso Total" class="Invisible" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWColumn hidden-xs&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;ColReadOnly&lt;/Name&gt;&lt;Value&gt;True&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /><item attribute="&amp;EditableGridConfirm2" titleExp="" class="SelectAttribute ActionBaseColorAttribute" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;ColumnClass&lt;/Name&gt;&lt;Value&gt;WWActionColumn&lt;/Value&gt;&lt;/Property&gt;&lt;Property&gt;&lt;Name&gt;eventGX&lt;/Name&gt;&lt;Value&gt;'EditableGridInsertLineConfirm'&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></simplegrid></cell></row></table></cell></row></table></cell></row></table></ucw></cell></row><row><cell><errorviewer controlName="ErrorViewer" class="ErrorViewer" /></cell></row></table></cell></row><row><cell><html controlName="Html_BottomAuxiliarControls" formId="2" /></cell></row></table><actionGroups><actionGroup controlName="ActionGroup_Actions" class="ActionGroupGrouped"><item><action controlName="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" PATTERN_ELEMENT_CUSTOM_PROPERTIES="&lt;Properties&gt;&lt;Property&gt;&lt;Name&gt;title&lt;/Name&gt;&lt;Value&gt;GXM_insert&lt;/Value&gt;&lt;/Property&gt;&lt;/Properties&gt;" /></item><item><action controlName="BtnbtnRetornar" onClickEvent="'DobtnRetornar'" caption="Retornar" /></item></actionGroup></actionGroups></layout></detail></Form><Form id="2" type="html"><BODY><gxDVelop.GXBootstrap.DDOGridTitleSettingsM ControlName="DDO_Grid" Caption="" ColumnIds="5:distItemProduto|8:distItemProdutoUN|9:distItemProdutoUNPeso|10:distItemProdutoPeso|11:distItemQuantidade|13:distItemValidade|15:distItemLote|18:distItemProdutoPesoTotal" ColumnsSortValues="1|2|3|4|5|6|7|" DropDownOptionsTitleSettingsIcons="&amp;DDO_TitleSettingsIcons" IncludeSortASC="T|T|T|T|T|T|T|" IncludeFilter="T" FilterType="Character|Character|Character|Numeric|Numeric|Date|Character|Numeric" FilterIsRange="|||T|T|P||T" IncludeDataList="T|T|T||||T|" DataListType="Dynamic|Dynamic|Dynamic||||Dynamic|" DataListProc="trnsdistribuicaoitensWWGetFilterData" DataListGXProc="84a12160-f59b-4ad7-a683-ea4481ac23e9-trnsdistribuicaoitensWWGetFilterData" Format="|||18.3|18.4|||18.4" /><gxWWP.GridEmpowerer ControlName="Grid_Empowerer" HasTitleSettings="True" /><DIV classref="Invisible" id="DDO_distItemValidadeAuxDates"><gxAttribute AttID="&amp;DDO_distItemValidadeAuxDateText" /><gxWWP.DateRangePicker ControlName="TFdistItemValidade_RangePicker" DateRangePickerStartDate="&amp;DDO_distItemValidadeAuxDate" DateRangePickerEndDate="&amp;DDO_distItemValidadeAuxDateTo" /></DIV></BODY></Form></GxMultiForm>]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+parm(in:&prefCodigo, in:&distCodigo);
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c44bd5ff-f918-415b-98e6-aca44fed84fa">
+    <Source><![CDATA[
+Event Start
+
+     &dadosNota = ''
+	 for each 		 
+		 where prefCodigo = &prefCodigo
+		 where distCodigo = &distCodigo
+			   &dadosNota = ' Distribuição nr. : ' + distCodigo.ToString() +' - Data Envio : ' + distDataEnvio.ToString() 
+			   &distStatus = distStatus
+			   For each trnslocal
+				   where locCodigo = distLocalOrigem
+				   where prefCodigo = &prefCodigo
+				     &dadosNota += ' - Origem : '+ locDescricao					 
+				EndFor
+			
+			   For each trnslocal
+				   where locCodigo = distLocalDestino
+				   where prefCodigo = &prefCodigo
+				     &dadosNota += ' - Destino : '+ locDescricao					 
+				EndFor
+			    
+				if not distDSCancelamento.IsEmpty()
+				    &dadosNota += Chr(13) + '  - Motivo do Cancelamento : '  + distDSCancelamento
+				endif			
+	EndFor
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	TFdistItemValidade_RangePicker.Attach(&DDO_distItemValidadeAuxDateText.InternalName)
+	
+	Grid.Rows = Page.Rows
+	Grid_Empowerer.GridInternalName = Grid.InternalName
+	&GAMSession = GAMSession.Get(&GAMErrors)
+	DDO_Grid.GridInternalName = Grid.InternalName
+	DDO_Grid.GAMOAuthToken = &GAMSession.Token
+	Form.Caption = 'Itens da Distribuição'
+
+	Do 'PrepareTransaction'
+	Do 'LoadGridState'
+	If &OrderedBy < 1
+		&OrderedBy = 1
+		Do 'SetDDOSortedStatus'
+	EndIf
+	If &HTTPRequest.Method = HttpMethod.Get
+		TableGridInsertLine.Visible = False
+	EndIf
+	&DDO_TitleSettingsIcons = GetWWPTitleSettingsIcons()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	LoadWWPContext.Call(&WWPContext)
+
+	Do 'CheckSecurityForActions'
+	Do 'SaveGridState'
+
+	If &EditableGrid_IsNotFirst OR &EditableGrid_Mode.IsEmpty()
+		&EditableGrid_Mode = !'TrnMode.Display'
+	EndIf
+	If &EditableGrid_Mode = !'TrnMode.Display'
+		TableGridInsertLine.Visible = False
+		TableGridWrapper.Visible = True
+	Else
+		BtnInsert.Visible = False
+	EndIf
+	&Update.Visible = (&EditableGrid_Mode = !'TrnMode.Display')
+	&Delete.Visible = (&EditableGrid_Mode = !'TrnMode.Display')
+	&EditableGridCancel.Visible = (&EditableGrid_Mode <> !'TrnMode.Display')
+	&EditableGridConfirm.Visible = (&EditableGrid_Mode <> !'TrnMode.Display')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event DDO_Grid.OnOptionClicked
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	Do Case
+		Case DDO_Grid.ActiveEventKey = !'<#OrderASC#>' OR DDO_Grid.ActiveEventKey = !'<#OrderDSC#>'
+			&OrderedBy.FromString(DDO_Grid.SelectedValue_get)
+			&OrderedDsc = iif(DDO_Grid.ActiveEventKey = !'<#OrderDSC#>', true, false)
+			Do 'SetDDOSortedStatus'
+			Grid.FirstPage()
+		Case DDO_Grid.ActiveEventKey = !'<#Filter#>'
+			Do Case
+				Case DDO_Grid.SelectedColumn = !'distItemProduto'
+					&TFdistItemProduto = DDO_Grid.FilteredText_get
+					&TFdistItemProduto_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFdistItemProduto_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'distItemProdutoUN'
+					&TFdistItemProdutoUN = DDO_Grid.FilteredText_get
+					&TFdistItemProdutoUN_Sel.FromString(DDO_Grid.SelectedValue_get)
+					&TFdistItemProdutoUN_SelDsc = DDO_Grid.SelectedText_get
+				Case DDO_Grid.SelectedColumn = !'distItemProdutoUNPeso'
+					&TFdistItemProdutoUNPeso = DDO_Grid.FilteredText_get
+					&TFdistItemProdutoUNPeso_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'distItemProdutoPeso'
+					&TFdistItemProdutoPeso.FromString(DDO_Grid.FilteredText_get)
+					&TFdistItemProdutoPeso_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'distItemQuantidade'
+					&TFdistItemQuantidade.FromString(DDO_Grid.FilteredText_get)
+					&TFdistItemQuantidade_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'distItemValidade'
+					&TFdistItemValidade.FromString(DDO_Grid.FilteredText_get)
+					&TFdistItemValidade_To.FromString(DDO_Grid.FilteredTextTo_get)
+				Case DDO_Grid.SelectedColumn = !'distItemLote'
+					&TFdistItemLote = DDO_Grid.FilteredText_get
+					&TFdistItemLote_Sel = DDO_Grid.SelectedValue_get
+				Case DDO_Grid.SelectedColumn = !'distItemProdutoPesoTotal'
+					&TFdistItemProdutoPesoTotal.FromString(DDO_Grid.FilteredText_get)
+					&TFdistItemProdutoPesoTotal_To.FromString(DDO_Grid.FilteredTextTo_get)
+			EndCase
+			Grid.FirstPage()
+	EndCase
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event Grid.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&EditableGridCancel.FromImage(ActionCancel)
+	&EditableGridCancel.TooltipText = "GX_BtnCancel"
+	
+	&Update = !'<i class="fa fa-pen"></i>'
+	If (&distStatus<>'C')
+		&Update.Class = !'Attribute'
+	Else
+		&Update.Class = !'Invisible'
+	Endif
+	&Delete = !'<i class="fa fa-times"></i>'
+	If (&distStatus<>'C')
+		&Delete.Class = !'Attribute'
+	Else
+		&Delete.Class = !'Invisible'
+	Endif
+	&EditableGridConfirm.FromImage(SelectRow)
+	&EditableGridConfirm.TooltipText = "GX_BtnEnter"
+	
+	TableGridInsertLine.Visible = False
+	TableGridWrapper.Visible = True
+	If &EditableGrid_Mode = !'TrnMode.Insert' AND not &EditableGrid_IsNotFirst
+		&EditableGrid_IsNotFirst = True
+		&distItemProduto_Editable.Enabled = True
+		&distItemQuantidade_Editable.Enabled = True
+		&distItemValidade_Editable.Enabled = True
+		&distItemValidade_Editable.Class = !'AttributeRealWidthDate'
+		&distItemLote_Editable.Enabled = True
+		distItemProdutoUN.Class = !'Invisible'
+		distItemProdutoUNPeso.Class = !'Invisible'
+		distItemProdutoPeso.Class = !'Invisible'
+		distItemProdutoPesoTotal.Class = !'Invisible'
+		Grid.Load()
+		distItemProdutoUN.Class = !'AttributeRealWidth'
+		distItemProdutoUNPeso.Class = !'AttributeRealWidth'
+		distItemProdutoPeso.Class = !'AttributeRealWidth'
+		distItemProdutoPesoTotal.Class = !'AttributeRealWidth'
+	EndIf
+	&distItemProduto_Editable = distItemProduto
+	&distItemQuantidade_Editable = distItemQuantidade
+	&distItemValidade_Editable = distItemValidade
+	&distItemLote_Editable = distItemLote
+
+	If &EditableGrid_Mode <> !'TrnMode.Display'
+		&IsCurrentRecordSelected = False
+		If &EditableGrid_Mode <> !'TrnMode.Insert' AND &distItemProduto_SelectedLine = distItemProduto
+			&IsCurrentRecordSelected = True
+		EndIf
+		If &EditableGrid_Mode = !'TrnMode.Delete'
+			&distItemProduto_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			distItemProdutoUN.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			distItemProdutoUNPeso.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			distItemProdutoPeso.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&distItemQuantidade_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&distItemValidade_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			&distItemLote_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+			distItemProdutoPesoTotal.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidth InGridDeletion', !'AttributeRealWidth')
+		Else
+			&distItemProduto_Editable.Enabled = False
+			&distItemQuantidade_Editable.Enabled = &IsCurrentRecordSelected
+			&distItemValidade_Editable.Enabled = &IsCurrentRecordSelected
+			&distItemValidade_Editable.Class = iif(&IsCurrentRecordSelected, !'AttributeRealWidthDate', !'AttributeRealWidth')
+			&distItemLote_Editable.Enabled = &IsCurrentRecordSelected
+		EndIf
+		&EditableGridCancel.Class = iif(&IsCurrentRecordSelected, !'DeleteAttribute ActionBaseColorAttribute', !'Invisible')
+		&EditableGridConfirm.Class = iif(&IsCurrentRecordSelected, !'SelectAttribute ActionBaseColorAttribute', !'Invisible')
+	EndIf
+				
+
+	Grid.Load()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DoInsert'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		&EditableGrid_Mode = !'TrnMode.Insert'
+		&EditableGrid_IsNotFirst = False
+		
+		&distItemProduto_SelectedLine.SetEmpty()
+		
+		TableGridWrapper.Visible = False
+		TableGridInsertLine.Visible = True
+		Grid.FirstPage()
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &Update.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distItemProduto_SelectedLine = distItemProduto
+	&EditableGrid_Mode = !'TrnMode.Update'
+	&EditableGrid_IsNotFirst = False
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event &Delete.Click
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distItemProduto_SelectedLine = distItemProduto
+	&EditableGrid_Mode = !'TrnMode.Delete'
+	&EditableGrid_IsNotFirst = False
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridConfirm'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TempBoolean = False
+	If &EditableGrid_Mode = !'TrnMode.Insert'
+		If (&IsAuthorized_Insert)
+			&TempBoolean = True
+		Else
+			msg("WWP_ActionNoLongerAvailable")
+			Refresh
+		Endif
+	EndIf
+	If &EditableGrid_Mode = !'TrnMode.Update'
+		&TempBoolean = True
+	EndIf
+	If &EditableGrid_Mode = !'TrnMode.Delete'
+		&TempBoolean = True
+	EndIf
+	
+	If &TempBoolean
+		If &EditableGrid_Mode = !'TrnMode.Insert'
+			&trnsdistribuicaoitensEditableGrid = new()
+			&trnsdistribuicaoitensEditableGrid.prefCodigo = &prefCodigo
+			&trnsdistribuicaoitensEditableGrid.distCodigo = &distCodigo
+		Else
+			&trnsdistribuicaoitensEditableGrid.Load(distCodigo, prefCodigo, distItemProduto)
+		EndIf
+		&Messages = new()
+		If &EditableGrid_Mode = !'TrnMode.Insert' OR &trnsdistribuicaoitensEditableGrid.Success()
+			If &EditableGrid_Mode <> !'TrnMode.Delete'
+				If &EditableGrid_Mode = !'TrnMode.Insert'
+					&trnsdistribuicaoitensEditableGrid.distItemProduto = &distItemProduto_Editable
+				EndIf
+				&trnsdistribuicaoitensEditableGrid.distItemQuantidade = &distItemQuantidade_Editable
+				&trnsdistribuicaoitensEditableGrid.distItemValidade = &distItemValidade_Editable
+				&trnsdistribuicaoitensEditableGrid.distItemLote = &distItemLote_Editable
+				&trnsdistribuicaoitensEditableGrid.Save()
+			Else
+				&trnsdistribuicaoitensEditableGrid.Delete()
+			EndIf
+			If &trnsdistribuicaoitensEditableGrid.Success()
+				&EditableGrid_Mode = !'TrnMode.Display'
+				&distItemProduto_SelectedLine.SetEmpty()
+				Commit
+				Refresh
+			Else
+				&Messages = &trnsdistribuicaoitensEditableGrid.GetMessages()
+			EndIf
+		Else
+			&Messages = &trnsdistribuicaoitensEditableGrid.GetMessages()
+		EndIf
+		If &Messages.Count > 0
+			&distItemProduto_SelectedLine = distItemProduto
+			Do 'Show Messages'
+		EndIf
+		
+	EndIf
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridCancel'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&distItemProduto_SelectedLine.SetEmpty()
+	&EditableGrid_Mode = !'TrnMode.Display'
+	TableGridInsertLine.Visible = False
+	TableGridWrapper.Visible = True
+	Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'EditableGridInsertLineConfirm'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	If (&IsAuthorized_Insert)
+		&trnsdistribuicaoitensEditableGrid = new()
+		&trnsdistribuicaoitensEditableGrid.prefCodigo = &prefCodigo
+		&trnsdistribuicaoitensEditableGrid.distCodigo = &distCodigo
+		&trnsdistribuicaoitensEditableGrid.distItemProduto = &distItemProduto_Editable2
+		&trnsdistribuicaoitensEditableGrid.distItemQuantidade = &distItemQuantidade_Editable2
+		&trnsdistribuicaoitensEditableGrid.distItemValidade = &distItemValidade_Editable2
+		&trnsdistribuicaoitensEditableGrid.distItemLote = &distItemLote_Editable2
+		&trnsdistribuicaoitensEditableGrid.Save()
+		&Messages = new()
+		If &trnsdistribuicaoitensEditableGrid.Success()
+			&EditableGrid_Mode = !'TrnMode.Display'
+			&distItemProduto_SelectedLine.SetEmpty()
+			Commit
+			TableGridInsertLine.Visible = False
+			TableGridWrapper.Visible = True
+			Refresh
+		Else
+			&Messages = &trnsdistribuicaoitensEditableGrid.GetMessages()
+		EndIf
+		If &Messages.Count > 0
+			TableGridWrapper.Visible = False
+			Do 'Show Messages'
+		EndIf
+	Else
+		msg("WWP_ActionNoLongerAvailable")
+		Refresh
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event GridInsertLine.Load
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&EditableGridCancel2.FromImage(ActionCancel)
+	&EditableGridCancel2.TooltipText = "GX_BtnCancel"
+	
+	&EditableGridConfirm2.FromImage(SelectRow)
+	&EditableGridConfirm2.TooltipText = "GX_BtnEnter"
+	
+	GridInsertLine.Load()
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Event 'DobtnRetornar'
+
+	return
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+Sub 'SetDDOSortedStatus'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	DDO_Grid.SortedStatus = &OrderedBy.ToString().Trim() + !':' + iif(&OrderedDsc, !'DSC', !'ASC')
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'CheckSecurityForActions'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	BtnInsert.Visible = True
+	&IsAuthorized_Insert = SecGAMIsAuthByFunctionalityKey.Udp(!'trnsdistribuicaoitensww_Insert')
+	If not (&IsAuthorized_Insert AND (&distStatus<>'C'))
+		BtnInsert.Visible = False
+	Endif
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'Show Messages'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	For &Message in &Messages
+		msg(&Message.Description)
+	endfor
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'LoadGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	// Load grid state from session.
+	If &Session.Get(&PgmName + !"GridState") = !""
+		&GridState.FromXml(LoadGridState.Udp(&PgmName + !"GridState"))
+	Else
+		&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+	Endif	
+
+	&OrderedBy = &GridState.OrderedBy
+	&OrderedDsc = &GridState.OrderedDsc
+	Do 'SetDDOSortedStatus'
+
+	For &GridStateFilterValue in &GridState.FilterValues
+		Do Case
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTO"
+				&TFdistItemProduto.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTO_SEL"
+				&TFdistItemProduto_Sel.FromString(&GridStateFilterValue.Value)
+					&TFdistItemProduto_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTOUN"
+				&TFdistItemProdutoUN.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTOUN_SEL"
+				&TFdistItemProdutoUN_Sel.FromString(&GridStateFilterValue.Value)
+					&TFdistItemProdutoUN_SelDsc = &GridStateFilterValue.ValueTo
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTOUNPESO"
+				&TFdistItemProdutoUNPeso.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTOUNPESO_SEL"
+				&TFdistItemProdutoUNPeso_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTOPESO"
+				&TFdistItemProdutoPeso.FromString(&GridStateFilterValue.Value)
+				&TFdistItemProdutoPeso_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMQUANTIDADE"
+				&TFdistItemQuantidade.FromString(&GridStateFilterValue.Value)
+				&TFdistItemQuantidade_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMVALIDADE"
+				&TFdistItemValidade.FromString(&GridStateFilterValue.Value)
+				&TFdistItemValidade_To.FromString(&GridStateFilterValue.ValueTo)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMLOTE"
+				&TFdistItemLote.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMLOTE_SEL"
+				&TFdistItemLote_Sel.FromString(&GridStateFilterValue.Value)
+			Case &GridStateFilterValue.Name = !"TFDISTITEMPRODUTOPESOTOTAL"
+				&TFdistItemProdutoPesoTotal.FromString(&GridStateFilterValue.Value)
+				&TFdistItemProdutoPesoTotal_To.FromString(&GridStateFilterValue.ValueTo)
+		EndCase
+	EndFor
+	DDO_Grid.SelectedText_set = iif(&TFdistItemProduto_Sel.IsEmpty(), '', &TFdistItemProduto_SelDsc) + !'|' + iif(&TFdistItemProdutoUN_Sel.IsEmpty(), '', &TFdistItemProdutoUN_SelDsc) + !'||||||'
+	DDO_Grid.SelectedValue_set = iif(&TFdistItemProduto_Sel.IsEmpty(), '', &TFdistItemProduto_Sel.ToString()) + !'|' + iif(&TFdistItemProdutoUN_Sel.IsEmpty(), '', &TFdistItemProdutoUN_Sel.ToString()) + !'|' + WWP_GetFilterVal(&TFdistItemProdutoUNPeso_Sel.IsEmpty(), &TFdistItemProdutoUNPeso_Sel) + !'||||' + WWP_GetFilterVal(&TFdistItemLote_Sel.IsEmpty(), &TFdistItemLote_Sel) + !'|'
+	DDO_Grid.FilteredText_set = WWP_GetFilterVal(&TFdistItemProduto.IsEmpty(), &TFdistItemProduto) + !'|' + WWP_GetFilterVal(&TFdistItemProdutoUN.IsEmpty(), &TFdistItemProdutoUN) + !'|' + WWP_GetFilterVal(&TFdistItemProdutoUNPeso.IsEmpty(), &TFdistItemProdutoUNPeso) + !'|' + iif(&TFdistItemProdutoPeso.IsEmpty(), '', &TFdistItemProdutoPeso.ToString()) + !'|' + iif(&TFdistItemQuantidade.IsEmpty(), '', &TFdistItemQuantidade.ToString()) + !'|' + iif(&TFdistItemValidade.IsEmpty(), '', &TFdistItemValidade.ToString()) + !'|' + WWP_GetFilterVal(&TFdistItemLote.IsEmpty(), &TFdistItemLote) + !'|' + iif(&TFdistItemProdutoPesoTotal.IsEmpty(), '', &TFdistItemProdutoPesoTotal.ToString())
+	DDO_Grid.FilteredTextTo_set = !'|||' + iif(&TFdistItemProdutoPeso_To.IsEmpty(), '', &TFdistItemProdutoPeso_To.ToString()) + !'|' + iif(&TFdistItemQuantidade_To.IsEmpty(), '', &TFdistItemQuantidade_To.ToString()) + !'|' + iif(&TFdistItemValidade_To.IsEmpty(), '', &TFdistItemValidade_To.ToString()) + !'||' + iif(&TFdistItemProdutoPesoTotal_To.IsEmpty(), '', &TFdistItemProdutoPesoTotal_To.ToString())
+	If not &GridState.PageSize.Trim().IsEmpty()
+		Grid.Rows = &GridState.PageSize.ToNumeric()
+	EndIf
+	Grid.CurrentPage = &GridState.CurrentPage
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'SaveGridState'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&GridState.FromXml(&Session.Get(&PgmName + !"GridState"))
+
+	// Save grid state in session.
+	&GridState.OrderedBy = &OrderedBy
+	&GridState.OrderedDsc = &OrderedDsc
+	&GridState.FilterValues.Clear()
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTITEMPRODUTO", "", not &TFdistItemProduto.IsEmpty(), 0, &TFdistItemProduto.ToString().Trim(), trim(&TFdistItemProduto.ToFormattedString()), False, '', '', not &TFdistItemProduto_Sel.IsEmpty(), &TFdistItemProduto_Sel.ToString().Trim(), &TFdistItemProduto_SelDsc)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTITEMPRODUTOUN", "", not &TFdistItemProdutoUN.IsEmpty(), 0, &TFdistItemProdutoUN.ToString().Trim(), trim(&TFdistItemProdutoUN.ToFormattedString()), False, '', '', not &TFdistItemProdutoUN_Sel.IsEmpty(), &TFdistItemProdutoUN_Sel.ToString().Trim(), &TFdistItemProdutoUN_SelDsc)
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTITEMPRODUTOUNPESO", "", not &TFdistItemProdutoUNPeso.IsEmpty(), 0, &TFdistItemProdutoUNPeso, &TFdistItemProdutoUNPeso, False, '', '', not &TFdistItemProdutoUNPeso_Sel.IsEmpty(), &TFdistItemProdutoUNPeso_Sel, &TFdistItemProdutoUNPeso_Sel)
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTITEMPRODUTOPESO", "", not (&TFdistItemProdutoPeso.IsEmpty() AND &TFdistItemProdutoPeso_To.IsEmpty()), 0, &TFdistItemProdutoPeso.ToString().Trim(), iif(&TFdistItemProdutoPeso.IsEmpty(), '', trim(&TFdistItemProdutoPeso.ToFormattedString())), True, &TFdistItemProdutoPeso_To.ToString().Trim(), iif(&TFdistItemProdutoPeso_To.IsEmpty(), '', trim(&TFdistItemProdutoPeso_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTITEMQUANTIDADE", "", not (&TFdistItemQuantidade.IsEmpty() AND &TFdistItemQuantidade_To.IsEmpty()), 0, &TFdistItemQuantidade.ToString().Trim(), iif(&TFdistItemQuantidade.IsEmpty(), '', trim(&TFdistItemQuantidade.ToFormattedString())), True, &TFdistItemQuantidade_To.ToString().Trim(), iif(&TFdistItemQuantidade_To.IsEmpty(), '', trim(&TFdistItemQuantidade_To.ToFormattedString())))
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTITEMVALIDADE", "", not (&TFdistItemValidade.IsEmpty() AND &TFdistItemValidade_To.IsEmpty()), 0, &TFdistItemValidade.ToString().Trim(), iif(&TFdistItemValidade.IsEmpty(), '', trim(&TFdistItemValidade.ToFormattedString())), True, &TFdistItemValidade_To.ToString().Trim(), iif(&TFdistItemValidade_To.IsEmpty(), '', trim(&TFdistItemValidade_To.ToFormattedString())))
+	WWP_GridStateAddFilterValueAndSel(&GridState, !"TFDISTITEMLOTE", "", not &TFdistItemLote.IsEmpty(), 0, &TFdistItemLote, &TFdistItemLote, False, '', '', not &TFdistItemLote_Sel.IsEmpty(), &TFdistItemLote_Sel, &TFdistItemLote_Sel)
+	WWP_GridStateAddFilterValue(&GridState, !"TFDISTITEMPRODUTOPESOTOTAL", "", not (&TFdistItemProdutoPesoTotal.IsEmpty() AND &TFdistItemProdutoPesoTotal_To.IsEmpty()), 0, &TFdistItemProdutoPesoTotal.ToString().Trim(), iif(&TFdistItemProdutoPesoTotal.IsEmpty(), '', trim(&TFdistItemProdutoPesoTotal.ToFormattedString())), True, &TFdistItemProdutoPesoTotal_To.ToString().Trim(), iif(&TFdistItemProdutoPesoTotal_To.IsEmpty(), '', trim(&TFdistItemProdutoPesoTotal_To.ToFormattedString())))
+	If not &prefCodigo.IsEmpty()
+		&GridStateFilterValue = new()
+		&GridStateFilterValue.Name = !"PARM_&PREFCODIGO"
+		&GridStateFilterValue.Value = &prefCodigo.ToString()
+		&GridState.FilterValues.Add(&GridStateFilterValue)
+	EndIf
+	If not &distCodigo.IsEmpty()
+		&GridStateFilterValue = new()
+		&GridStateFilterValue.Name = !"PARM_&DISTCODIGO"
+		&GridStateFilterValue.Value = &distCodigo.ToString()
+		&GridState.FilterValues.Add(&GridStateFilterValue)
+	EndIf
+
+	&GridState.PageSize = str(Grid.Rows)
+	&GridState.CurrentPage = Grid.CurrentPage
+	SaveGridState.Call(&PgmName + !"GridState",  &GridState.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Sub 'PrepareTransaction'
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	&TrnContext = new()
+	&TrnContext.CallerObject = &Pgmname
+	&TrnContext.CallerOnDelete = True
+	&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+	&TrnContext.TransactionName = !"trnsdistribuicaoitens"
+
+	&TrnContextAtt = new()
+	&TrnContextAtt.AttributeName = !"prefCodigo"
+	&TrnContextAtt.AttributeValue = &prefCodigo.ToString()
+	&TrnContext.Attributes.Add(&TrnContextAtt)
+
+	&TrnContextAtt = new()
+	&TrnContextAtt.AttributeName = !"distCodigo"
+	&TrnContextAtt.AttributeValue = &distCodigo.ToString()
+	&TrnContext.Attributes.Add(&TrnContextAtt)
+
+	&Session.Set(!"TrnContext", &TrnContext.ToXml())
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndSub
+
+Event Refresh
+
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+	//Code block: LoadPrefeitura
+	LoadWWPContext(&WWPContext)
+	&prefCodigo = &WWPContext.prefCodigo
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+EndEvent
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[
+	/* Generated by DVelop Work With Plus Pattern [Start] - Do not change */
+
+prefCodigo = &prefCodigo;
+
+	/* Generated by DVelop Work With Plus Pattern [End] - Do not change */
+
+
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="IsAuthorized">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="WWPContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>WWPContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="SecurityFunctionalityKeys">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>SecurityFunctionalityKeys</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:SecGAMFunctionalityKey</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="HTTPRequest">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>HTTPRequest</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:HttpRequest</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContext">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContext</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TrnContextAtt">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TrnContextAtt</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPTransactionContext.Attribute, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridState">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridState</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridStateFilterValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridStateFilterValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPGridState.FilterValue, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedBy">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedBy</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="OrderedByAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>OrderedByAux</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ExcelFilename">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ExcelFilename</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Domain:Url, GeneXus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ErrorMessage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ErrorMessage</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>512</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>512</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorXML">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorXML</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="UserCustomValue">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>UserCustomValue</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:LongVarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelector">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelector</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="ColumnsSelectorAux">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>ColumnsSelectorAux</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:WWPColumnsSelector, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Session">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Session</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>ext:WebSession</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProduto">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prodDescricao</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProduto_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProduto_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProduto</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoUN">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoUN</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:uniDescricao</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoUN_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoUN_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoUN</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemQuantidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemQuantidade_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemQuantidade_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemQuantidade</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_TitleSettingsIcons">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_TitleSettingsIcons</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsTitleSettingsIcons, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProduto_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProduto_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TempBoolean">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TempBoolean</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGrid_Mode">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGrid_Mode</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Message">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Message</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages.Message, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Messages">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Messages</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:Messages, GeneXus.Common</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsCurrentRecordSelected">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsCurrentRecordSelected</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="trnsdistribuicaoitensEditableGrid">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>trnsdistribuicaoitensEditableGrid</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bc:trnsdistribuicaoitens</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo_SelectedLine">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo_SelectedLine</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo_SelectedLine">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo_SelectedLine</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProduto_SelectedLine">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProduto_SelectedLine</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGrid_IsNotFirst">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGrid_IsNotFirst</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProdutoUN_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProdutoUN_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoUN</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProduto_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProduto_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProduto_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProduto_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProduto</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemQuantidade_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemQuantidade_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemQuantidade_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemQuantidade_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemQuantidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMSession">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMSession</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMSession, GeneXusSecurity</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GAMErrors">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GAMErrors</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>exo:GAMError, GeneXusSecurity</Value>
+        </Property>
+        <Property>
+          <Name>AttCollection</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="PageToGo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>PageToGo</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>6</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>6</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridCurrentPage">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridCurrentPage</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridPageCount">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridPageCount</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>10</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>10</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="GridAppliedFilters">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>GridAppliedFilters</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridCancel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridCancel</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnCancel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridCancel2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridCancel2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnCancel</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridConfirm">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridConfirm</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnEnter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="EditableGridConfirm2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>EditableGridConfirm2</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Image</Value>
+        </Property>
+        <Property>
+          <Name>TooltipText</Name>
+          <Value>GX_BtnEnter</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportData">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportData</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="AGExportDataItem">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>AGExportDataItem</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>sdt:DVB_SDTDropDownOptionsData.Item, WWPBaseObjects</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="prefCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>prefCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:prefCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distCodigo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distCodigo</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distCodigo</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="dadosNota">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>dadosNota</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distDSCancelamento</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Update">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Update</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Delete">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Delete</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="IsAuthorized_Insert">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>IsAuthorized_Insert</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Boolean</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoUN_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoUN_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoUN</Value>
+        </Property>
+        <Property>
+          <Name>ControlType</Name>
+          <Value>Edit</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoUN_SelDsc">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoUN_SelDsc</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>100</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>100</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="btnImprimir">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>btnImprimir</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Character</Value>
+        </Property>
+        <Property>
+          <Name>GxFormat</Name>
+          <Value>HTML</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoPeso">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoPeso</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoPeso_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoPeso_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoPesoTotal">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoPesoTotal</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoPesoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoPesoTotal_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoPesoTotal_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoPesoTotal</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProdutoPeso_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProdutoPeso_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoPeso</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProdutoPesoTotal_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProdutoPesoTotal_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoPesoTotal</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoUNPeso">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoUNPeso</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoUNPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemProdutoUNPeso_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemProdutoUNPeso_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoUNPeso</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemProdutoUNPeso_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemProdutoUNPeso_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemProdutoUNPeso</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemValidade">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemValidade_To">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemValidade_To</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemValidade</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distItemValidadeAuxDate">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distItemValidadeAuxDate</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distItemValidadeAuxDateTo">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distItemValidadeAuxDateTo</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:Date</Value>
+        </Property>
+        <Property>
+          <Name>idDATEFORMAT</Name>
+          <Value>idDATEFORMAT_LONG</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="DDO_distItemValidadeAuxDateText">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>DDO_distItemValidadeAuxDateText</Value>
+        </Property>
+        <Property>
+          <Name>ATTCUSTOMTYPE</Name>
+          <Value>bas:VarChar</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemLote">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemLote</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemLote</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="TFdistItemLote_Sel">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>TFdistItemLote_Sel</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemLote</Value>
+        </Property>
+        <Property>
+          <Name>AddEmptyItem</Name>
+          <Value>True</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemValidade_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemValidade_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemValidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemValidade_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemValidade_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemValidade</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemLote_Editable">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemLote_Editable</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemLote</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distItemLote_Editable2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distItemLote_Editable2</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distItemLote</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="distStatus">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>distStatus</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Situação</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>True</Value>
+        </Property>
+        <Property>
+          <Name>idBasedOn</Name>
+          <Value>Attribute:distStatus</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsdistribuicaoitensWW</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Itens da Distribuição</Value>
+    </Property>
+    <Property>
+      <Name>MasterPage</Name>
+      <Value>WWPBaseObjects.WorkWithPlusMasterPage</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsdistribuicaoitens</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>Selection</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

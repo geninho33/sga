@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="211edae8-2d6b-49a0-9d4c-6d0614e1a022" user="JORGE-AVELL\joadh" versionDate="2024-07-31T14:52:42.0000000Z" lastUpdate="2024-07-26T18:22:23.0000000Z" checksum="c26a0238a0d07f3208637cd43e29c28a" fullyQualifiedName="WWPBaseObjects.Notifications.Common.WWP_AutomaticNotificationDefinitionsToLoad" moduleGuid="32debbd4-a63b-4d3d-8a4d-69ab661245c1" guid="15fb90f5-9adb-4ecc-926e-a98e947eb964" name="WWP_AutomaticNotificationDefinitionsToLoad" type="2a9e9aba-d2de-4801-ae7f-5e3819222daf" description="WWP_Automatic Notification Definitions To Load" parent="WWPBaseObjects.Notifications.Common.DataProviders" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="1d8aeb5a-6e98-45a7-92d2-d8de7384e432">
+    <Source><![CDATA[NotificationDefinitions
+{
+	SubGroup_1.Insert()
+}
+SubGroup SubGroup_1()
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsprefeituras")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsprefeituras")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsprodutos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsprodutos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsusuarios")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsusuarios")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsunidades")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsunidades")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsconvqtde")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsconvqtde")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicaotipo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicaotipo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnslocal")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnslocal")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsprogramas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsprogramas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsfornecedores")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsfornecedores")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscargos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscargos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscalendarioletivo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscalendarioletivo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsrota")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsrota")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnssalas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnssalas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnspratos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnspratos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsrefeicaotipo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsrefeicaotipo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapiogrupo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapiogrupo")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapio")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapio")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapioprato")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapioprato")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnspratosingredientes")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnspratosingredientes")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdoencas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdoencas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsajuste")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsajuste")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsnota")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsnota")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsnotaitens")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsnotaitens")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsAreaEnsino")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsAreaEnsino")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapioAreaEnsino")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscardapioAreaEnsino")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsajusteitens")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsajusteitens")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"Atendimento")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"Atendimento")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicao")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicao")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicaoitens")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicaoitens")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnspratopercapta")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnspratopercapta")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessaatendimento")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessaatendimento")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessas")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessaitem")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessaitem")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessaproduto")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsremessaproduto")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"TRNSEstoque")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"TRNSEstoque")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicaoprodutos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsdistribuicaoprodutos")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnsajuda")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnsajuda")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"TipoAjuste")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"TipoAjuste")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"Romaneio")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"Romaneio")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"WWP_Parameter")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"WWP_Parameter")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"Rancho")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"Rancho")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnslancarestoqueUE")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnslancarestoqueUE")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnslancarestoqueUEitem")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnslancarestoqueUEitem")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscronograma")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscronograma")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Discussion"
+		WWPEntityId = WWP_GetEntityByName(!"trnscronogramalocal")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = True
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando um mensagens de discussão são criados"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+	WWP_NotificationDefinition
+	{
+		WWPNotificationDefinitionName = !"Mention"
+		WWPEntityId = WWP_GetEntityByName(!"trnscronogramalocal")
+		WWPNotificationDefinitionAppliesTo = WWPBaseObjects.Notifications.WWP_NotificationAppliesTo.SpecificRecord
+		WWPNotificationDefinitionAllowUserSubscription = False
+		WWPNotificationDefinitionIcon = !""
+		WWPNotificationDefinitionTitle = ''
+		WWPNotificationDefinitionDescription = "Seja notificado quando são mencionados em uma discussão"
+		WWPNotificationDefinitionSecFuncionality = !""
+	}
+EndSubGroup
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Properties />
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WWP_AutomaticNotificationDefinitionsToLoad</Value>
+    </Property>
+    <Property>
+      <Name>OutputSDT</Name>
+      <Value>1db606f2-af09-4cf9-a3b5-b481519d28f6-WWPBaseObjects.Notifications.Common.WWP_NotificationDefinition</Value>
+    </Property>
+    <Property>
+      <Name>OutputCollection</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>OutputCollectionName</Name>
+      <Value>NotificationDefinitions</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

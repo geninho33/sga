@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="84f22c27-7b99-4393-416b-6652580c0ba0" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-12-16T15:00:31.0000000Z" checksum="40fc86ccd1c905a26a49553a52ae9dfa" fullyQualifiedName="trnsprogramasWWDS" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="95b63f27-15ee-4b64-b3ba-df15f5c9d0e1" name="trnsprogramasWWDS" type="ffd44be7-3bb4-4d01-9e7e-d1c1a3c095af" description="trnsprogramas WWDS" parent="WorkWithPlustrnsprogramas" parentType="07135890-56fc-489b-b408-063722fa9f7d">
+  <Part type="a2bc65a1-999f-4e9b-b837-72285cc9bb16">
+    <Level>
+      <Condition>
+        <Source><![CDATA[progCodigo >= &TFprogCodigo when not &TFprogCodigo.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progCodigo <= &TFprogCodigo_To when not &TFprogCodigo_To.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progDescricao.ToLower() like &TFprogDescricao.ToLower() when &TFprogDescricao_Sel.IsEmpty() AND (not &TFprogDescricao.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progDescricao = &TFprogDescricao_Sel when not &TFprogDescricao_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progSigla.ToLower() like &TFprogSigla.ToLower() when &TFprogSigla_Sel.IsEmpty() AND (not &TFprogSigla.IsEmpty())
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progSigla = &TFprogSigla_Sel when not &TFprogSigla_Sel.IsEmpty()
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progApareceRemessa in &TFprogApareceRemessa_Sels when &TFprogApareceRemessa_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progOrigem in &TFprogOrigem_Sels when &TFprogOrigem_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[proTipoLicitacao in &TFproTipoLicitacao_Sels when &TFproTipoLicitacao_Sels.Count > 0
+]]></Source>
+      </Condition>
+      <Condition>
+        <Source><![CDATA[progStatus in &TFprogStatus_Sels when &TFprogStatus_Sels.Count > 0
+]]></Source>
+      </Condition>
+    </Level>
+    <Variables type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+      <Variable Name="TFprogCodigo">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogCodigo</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogCodigo_To">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogCodigo_To</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progCodigo</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogDescricao">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogDescricao</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogDescricao_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogDescricao_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progDescricao</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogSigla">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogSigla</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogSigla_Sel">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogSigla_Sel</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progSigla</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogApareceRemessa_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogApareceRemessa_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progApareceRemessa</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogStatus_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogStatus_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progStatus</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFprogOrigem_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFprogOrigem_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:progOrigem</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Variable Name="TFproTipoLicitacao_Sels">
+        <Documentation />
+        <Properties>
+          <Property>
+            <Name>Name</Name>
+            <Value>TFproTipoLicitacao_Sels</Value>
+          </Property>
+          <Property>
+            <Name>idBasedOn</Name>
+            <Value>Attribute:proTipoLicitacao</Value>
+          </Property>
+          <Property>
+            <Name>AttCollection</Name>
+            <Value>True</Value>
+          </Property>
+        </Properties>
+      </Variable>
+      <Properties>
+        <Property>
+          <Name>IsDefault</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variables>
+    <Parameters>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogCodigo</Name>
+        <Description>TFprog Codigo</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogCodigo_To</Name>
+        <Description>TFprog Codigo_To</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogDescricao</Name>
+        <Description>TFprog Descricao</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogDescricao_Sel</Name>
+        <Description>TFprog Descricao_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogSigla</Name>
+        <Description>TFprog Sigla</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogSigla_Sel</Name>
+        <Description>TFprog Sigla_Sel</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogApareceRemessa_Sels</Name>
+        <Description>TFprog Aparece Remessa_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogOrigem_Sels</Name>
+        <Description>TFprog Origem_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFproTipoLicitacao_Sels</Name>
+        <Description>TFpro Tipo Licitacao_Sels</Description>
+      </Parameter>
+      <Parameter>
+        <Type>Variable</Type>
+        <Name>TFprogStatus_Sels</Name>
+        <Description>TFprog Status_Sels</Description>
+      </Parameter>
+    </Parameters>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>trnsprogramasWWDS</Value>
+    </Property>
+    <Property>
+      <Name>IsGeneratedObject</Name>
+      <Value>True</Value>
+    </Property>
+    <Property>
+      <Name>InstanceKey</Name>
+      <Value>07135890-56fc-489b-b408-063722fa9f7d-WorkWithPlustrnsprogramas</Value>
+    </Property>
+    <Property>
+      <Name>ElementKey</Name>
+      <Value>/instance/level[1]/selection</Value>
+    </Property>
+    <Property>
+      <Name>PatternObjectId</Name>
+      <Value>GridDataSelector</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

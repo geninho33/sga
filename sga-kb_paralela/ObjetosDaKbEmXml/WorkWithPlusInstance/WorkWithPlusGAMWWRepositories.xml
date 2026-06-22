@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="a67d56cc-6ffc-4dd4-9f7a-ddf37b0dd984" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-02-27T17:57:59.0000000Z" checksum="a1d2be30698ef8c558e94ac52b547659" fullyQualifiedName="WorkWithPlusGAMWWRepositories" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="a16e0e5c-3900-054f-2b72-dbc459f746f9" name="WorkWithPlusGAMWWRepositories" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus GAMWWRepositories" parent="GAMWWRepositories" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="3;40;">
+  <level childrenOrderedList="4;39;" id="No_TRN" name="GAMWWRepositories">
+    <selection Template="Main;Selection" description="WWP_GAM_Repositories" defaultDescription="WWP_GAM_Repositories" childrenOrderedList="4;02;Main Table" GenerateDataSelectorForConditions="True" defaultGenerateDataSelectorForConditions="True">
+      <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" numberOfColumns="1" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="4;02;TableHeader-4;28;ErrorViewer-4;31;">
+        <table name="TableHeader" numberOfColumns="2" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" defaultFlexDirection="Column" type="Responsive" defaultType="Flex" includeInPanel="True" defaultIncludeInPanel="True" panelTitle="WWP_FilterOptions" defaultPanelTitle="WWP_FilterOptions" cellThemeClass="CellPaddingBottom" defaultCellThemeClass="CellPaddingBottom" childrenOrderedList="4;02;TableHeaderContent-4;02;AdvancedFiltersContainer">
+          <table name="TableActions" themeClass="TableCellsWidthAuto" numberOfColumns="2" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Flex" cellThemeClass="CellWidthAuto" childrenOrderedList="4;88;Actions">
+            <actionGroup themeClass="ActionGroupGrouped" defaultThemeClass="ActionGroupGrouped" name="Actions" childrenOrderedList="4;91;Insert-4;88;AGExport-4;91;EditColumns" defaultFlexGrow="0">
+              <standardAction gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-GAMRepositoryEntry" defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" name="Insert">
+                <parameters>
+                  <parameter name="GAMAPiMode.Insert" />
+                  <parameter name="0" />
+                </parameters>
+              </standardAction>
+              <standardAction defaultControlType="&lt;default&gt;" defaultImageType="&lt;default&gt;" cellVisible_E="False" defaultCellVisible_E="False" name="EditColumns" />
+            </actionGroup>
+          </table>
+          <table name="TableRightHeader" numberOfColumns="2" defaultNumberOfColumns="2" defaultNumberOfColumns_S="2" defaultNumberOfColumns_M="2" defaultNumberOfColumns_L="2" defaultFlexWrap="Wrap" defaultType="Flex" cellVisible_E="False" defaultCellVisible_E="False" cellThemeClass="CellFloatRight CellWidthAuto" defaultFlexGrow="0" childrenOrderedList="4;17;ManageFilters-4;02;TableFilters">
+            <standardAction name="ManageFilters" cellThemeClass="CellAlignTopPaddingTop2" defaultCellThemeClass="CellAlignTopPaddingTop2" />
+            <table name="TableFilters" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" cellVisible_E="False" defaultCellVisible_E="False" childrenOrderedList="4;30;">
+              <orders descriptionThemeClass="OrderedByDescription" defaultDescriptionThemeClass="OrderedByDescription" cellThemeClass="CellNoMarginBottom" defaultCellThemeClass="CellNoMarginBottom" DescriptionCellThemeClass="OrderedByDescriptionCell" defaultDescriptionCellThemeClass="OrderedByDescriptionCell" vAlign="Top" defaultVAlign="Top" />
+              <filterAttribute name="Search" description="WWP_GAM_Name" defaultDescription="WWP_GAM_Name" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionShort" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionShort" themeClass="Attribute" defaultThemeClass="Attribute" cellThemeClass="CellFormGroupMarginBottom5" />
+            </table>
+          </table>
+        </table>
+        <errorViewer defaultThemeClass="ErrorViewer" />
+        <grid defaultType="&lt;default&gt;" cellThemeClass="SectionGrid GridNoBorderCell" defaultCellThemeClass="SectionGrid GridNoBorderCell GridFixedColumnBorders" childrenOrderedList="4;17;Update-4;17;Delete">
+          <standardAction name="Display" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-GAMRepositoryConfiguration">
+            <parameters>
+              <parameter name="&amp;Id" />
+            </parameters>
+          </standardAction>
+          <standardAction name="Update" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-GAMRepositoryConfiguration">
+            <parameters>
+              <parameter name="&amp;Id" />
+            </parameters>
+          </standardAction>
+          <standardAction name="Delete" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-GAMRepositoryEntry">
+            <parameters>
+              <parameter name="GAMAPiMode.Delete" />
+              <parameter name="&amp;Id" />
+            </parameters>
+          </standardAction>
+          <gridVariable name="Id" description="WWP_GAM_Id" defaultDescription="Key Numeric Long" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMKeyNumLong" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMKeyNumLong" cellVisible_E="False">
+            <link webpanel="GAMRepositoryConfiguration">
+              <parameters>
+                <parameter name="&amp;Id" />
+              </parameters>
+            </link>
+          </gridVariable>
+          <gridVariable name="Name" description="WWP_GAM_Name" defaultDescription="Description Long" domain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionLong" defaultDomain="00972a17-9975-449e-aab1-d26165d51393-GeneXusSecurityCommon.GAMDescriptionLong" />
+        </grid>
+      </table>
+    </selection>
+  </level>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusGAMWWRepositories</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-GAMWWRepositories</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

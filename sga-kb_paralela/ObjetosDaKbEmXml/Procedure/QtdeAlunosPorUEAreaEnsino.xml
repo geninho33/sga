@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="1d998af6-bf9c-458d-a414-a34ae3d15717" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2024-04-16T14:32:55.0000000Z" checksum="e675fa4117deebeba9b4b2bf11bbd26f" fullyQualifiedName="QtdeAlunosPorUEAreaEnsino" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="8fdab8b7-f573-499f-98e5-b6e89a3024a6" name="QtdeAlunosPorUEAreaEnsino" type="84a12160-f59b-4ad7-a683-ea4481ac23e9" description="Qtde Alunos por UE e Area Ensino" parent="Views" parentType="00000000-0000-0000-0000-000000000008">
+  <Part type="528d1c06-a9c2-420d-bd35-21dca83f12ff">
+    <Source><![CDATA[&Bercario1 = 0
+xFor each "Bercario1_8183"
+	Where Bercario1_8183_Ano 	 = &Ano
+	Where Bercario1_8183_Escola  = &Escola
+
+	&Bercario1 += Bercario1_8183_Bercario_I
+xEndfor
+
+&Bercario2 = 0
+xFor each "Bercario2_8183"
+	Where Bercario2_8183_Ano 	 = &Ano
+	Where Bercario2_8183_Escola  = &Escola
+
+	&Bercario2 += Bercario2_8183_Bercario_II
+xEndfor
+
+&Creche = 0
+xFor each "Creche_8183"
+	Where Creche_8183_Ano 	  = &Ano
+	Where Creche_8183_Escola  = &Escola
+
+	&Creche += Creche_8183_Creche
+xEndfor
+
+&Emeb = 0
+xFor each "EMEB_8183"
+	Where EMEB_8183_Ano   	= &Ano
+	Where EMEB_8183_Escola  = &Escola
+
+	&Emeb += EMEB_8183_EMEB
+xEndfor
+
+&Integral = 0
+xFor each "Integral_8183"
+	Where Integral_8183_Ano   	= &Ano
+	Where Integral_8183_Escola  = &Escola
+	
+	&Integral += Integral_8183_Integral
+xEndfor
+
+&Funcionarios = 0
+xFor each "Servidores_8183"
+	Where Servidores_8183_Escola = &Escola
+	
+	&Funcionarios = Servidores_8183_Total
+xEndfor
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="c414ed00-8cc4-4f44-8820-4baf93547173">
+    <Properties />
+  </Part>
+  <Part type="9b0a32a3-de6d-4be1-a4dd-1b85d3741534">
+    <Source><![CDATA[Parm(in:&Ano,in:&Escola,out:&Bercario1,out:&Bercario2,out:&Creche,out:&Emeb,out:&Integral,out:&Funcionarios);
+]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="763f0d8b-d8ac-4db4-8dd4-de8979f2b5b9">
+    <Source><![CDATA[]]></Source>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="e4c4ade7-53f0-4a56-bdfd-843735b66f47">
+    <Variable Name="Ano">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Ano</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario1">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario1</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Bercario2">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Bercario2</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Creche">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Creche</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Creche</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Emeb">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Emeb</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>EMEB</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Escola">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Escola</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Escola</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Integral">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Integral</Value>
+        </Property>
+        <Property>
+          <Name>Description</Name>
+          <Value>Integral</Value>
+        </Property>
+        <Property>
+          <Name>idIsAutoDefinedVariable</Name>
+          <Value>False</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Variable Name="Funcionarios">
+      <Documentation />
+      <Properties>
+        <Property>
+          <Name>Name</Name>
+          <Value>Funcionarios</Value>
+        </Property>
+        <Property>
+          <Name>Length</Name>
+          <Value>9</Value>
+        </Property>
+        <Property>
+          <Name>AttMaxLen</Name>
+          <Value>9</Value>
+        </Property>
+      </Properties>
+    </Variable>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="ad3ca970-19d0-44e1-a7b7-db05556e820c">
+    <Help>
+      <HelpItem>
+        <Language>88313f43-5eb2-0000-0028-e8d9f5bf9588-Portuguese</Language>
+        <Content />
+      </HelpItem>
+    </Help>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>QtdeAlunosPorUEAreaEnsino</Value>
+    </Property>
+    <Property>
+      <Name>Description</Name>
+      <Value>Qtde Alunos por UE e Area Ensino</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

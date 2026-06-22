@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="afa47377-41d5-4ae8-9755-6f53150aa361" user="GeneXus" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2024-02-17T01:04:27.0000000Z" checksum="5114c338e3181c6af55d08cbb45fe086" fullyQualifiedName="GeneXusUIControls" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="ab5f1405-0a35-4384-ada7-5398890b865e" name="GeneXusUIControls" type="c88fffcd-b6f8-0000-8fec-00b5497e2117" description="Gene Xus UIControls" PackagedModuleName="GeneXusUI" moduleVersion="1.8.5.180392" author="GeneXus">
+  <Part type="ed1b7b1c-2aaf-46eb-9ec5-db348f6fa3fc">
+    <ExportFile>
+      <KnowledgeBase name="AlimentacaoEscolar2" type="00000000-0000-0000-0000-000000000009" description="Alimentacao Escolar2" user="DESKTOP-OQ270FR\Geninho">
+        <Properties>
+          <Property>
+            <Name>TranslateToLanguageId</Name>
+            <Value>Portuguese</Value>
+          </Property>
+        </Properties>
+      </KnowledgeBase>
+      <Objects>
+        <Object parentGuid="45218f18-ebad-44af-9aa3-705ed3309379" user="GeneXus" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2023-03-24T16:15:43.0000000Z" checksum="139e3887e7556f8e83c8be59f1e14f4c" fullyQualifiedName="GeneXusUIControls.Angular.IntersectionObserver" moduleGuid="45218f18-ebad-44af-9aa3-705ed3309379" guid="ec25a4f3-1047-4b63-ae72-bdb815d055ec" name="IntersectionObserver" type="562f4793-aabe-449f-8821-fc77e550698e" description="Intersection Observer" parent="GeneXusUIControls.Angular" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117">
+          <Part type="3dd92fe7-b095-44d3-9fa0-8488fa3f0c67">
+            <Source><![CDATA[{{=<% %>=}}
+<ch-intersection-observer
+  [bottomMargin]="BottomRootMargin"
+  [leftMargin]="LeftRootMargin"
+  [rightMargin]="RightRootMargin"
+  [threshold]="Threshold"
+  [topMargin]="TopRootMargin"
+  (intersectionUpdate)="
+    IntersectionRatio = $event.detail.intersectionRatio * 100; handleIntersectionUpdate($event)
+  "
+>
+  <slot name="content"/>
+</ch-intersection-observer>
+
+<style>
+  :host {
+    display: contents;
+  }
+</style>]]></Source>
+            <Properties>
+              <Property>
+                <Name>IsDefault</Name>
+                <Value>False</Value>
+              </Property>
+            </Properties>
+          </Part>
+          <Part type="8e9e4a7c-a4d3-4c36-8e8e-fb6702402f63">
+            <Source><![CDATA[<Definition auto="false" target="Angular">
+	<Property Name="TopRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+
+	<Property Name="RightRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+
+	<Property Name="BottomRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+
+	<Property Name="LeftRootMargin" Type="string" Scope="DesignTime" Default="0dip"/>
+
+	<Property Name="Threshold" Type="string" Scope="DesignTime"/>
+
+	<Property Name="IntersectionRatio" Type="numeric" Scope="RunTime" Default="0"/>
+
+	<Event Name="IntersectionUpdate" On="intersectionUpdate" />
+</Definition>]]></Source>
+            <Properties>
+              <Property>
+                <Name>IsDefault</Name>
+                <Value>False</Value>
+              </Property>
+            </Properties>
+          </Part>
+          <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+            <InnerHtml><![CDATA[<H1 class=page-title>Intersection Observer</H1></HEADER>
+<DIV class=page-body><FIGURE id=76979060-f539-49b4-856f-3a0cd192161d class="block-color-gray_background callout" style="WHITE-SPACE: pre-wrap; DISPLAY: flex">
+<DIV style="FONT-SIZE: 1.5em"><SPAN class=icon>💡</SPAN></DIV>
+<DIV style="WIDTH: 100%">This control allows the user to wrap another component and use the Javascript Intersection Observer on it.</DIV></FIGURE>
+<H2 id=c491e685-09bb-42db-9027-f3d11512285a>Properties:</H2>
+<UL id=6514cfdc-450b-40d7-b1bc-f25e3ad12ee8 class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"><MARK class=highlight-gray_background><STRONG>Root:</STRONG></MARK> String: Set the ID of the component that is used as the viewport, default is the browser.</LI></UL>
+<H3 id=22efe259-70c4-4335-8818-133f7bb685a3>Root Margin</H3>
+<P id=7ce80f29-9f97-4f66-b8cf-c675bbbf2540>Margin around the root. The values can be percentages or dip, default value is zero. 
+<DIV class=indented>
+<UL id=357e73e6-919c-4a1d-a018-2736be624cfd class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"><MARK class=highlight-gray_background><STRONG>TopRootMargin: </STRONG></MARK>Top margin around the root</LI></UL>
+<UL id=d062796e-85d8-44b3-ba35-aa92b64a60c5 class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"></MARK><MARK class=highlight-gray_background><STRONG>LeftRootMargin: </STRONG></MARK>Left margin around the root</LI></UL>
+<UL id=ddeec778-03b2-4beb-b0b4-c449abc4833d class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"></MARK><MARK class=highlight-gray_background><STRONG>BottomRootMargin: </STRONG></MARK>Bottom margin around the root</LI></UL>
+<UL id=383fc262-a0b4-4e7c-9d96-c0fd688964d8 class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"></MARK><MARK class=highlight-gray_background><STRONG>RightRootMargin: </STRONG></MARK>Right margin around the root</LI></UL></DIV>
+<P></P>
+<UL id=5d470360-803f-4d21-bd16-1d39e64c8de2 class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"><MARK class=highlight-gray_background><STRONG>Threshold:</STRONG></MARK> An string of colon separated&nbsp;percentage values&nbsp;which indicate at what percentage of the target's visibility the observer's callback should be executed, default is [0]. Example "10%,50%"</LI></UL>
+<UL id=36308b4f-5a91-43c5-8e68-7f87584f6ec8 class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"><MARK class=highlight-gray_background><STRONG>IntersectionRatio:</STRONG></MARK> The degree of intersection between the target element and its root, its a read-only property that change its value when the <MARK class=highlight-gray_background><STRONG>IntersectionUpdate</STRONG></MARK> event its triggered. Default value is zero.</LI></UL>
+<H2 id=d2439906-c7c5-4481-b0f4-e8e8ba8e6a7c>Events:</H2>
+<UL id=96ec6739-87d5-4806-a583-7c1a145547ea class=bulleted-list>
+<LI style="LIST-STYLE-TYPE: disc"><MARK class=highlight-gray_background><STRONG>IntersectionUpdate:</STRONG></MARK> This event is triggered when the page load, and every time that an intercepton occurs.</LI></UL>
+<P id=7f9b875d-670b-42d9-b507-0c7faf0aea9c></P></DIV></ARTICLE>]]></InnerHtml>
+            <Properties>
+              <Property>
+                <Name>IsDefault</Name>
+                <Value>False</Value>
+              </Property>
+            </Properties>
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>IntersectionObserver</Value>
+            </Property>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>False</Value>
+            </Property>
+          </Properties>
+        </Object>
+        <Object parentGuid="ab5f1405-0a35-4384-ada7-5398890b865e" user="GeneXus" versionDate="0001-01-01T00:00:00.0000000" lastUpdate="2023-03-24T16:15:21.0000000Z" checksum="07602b4a009f57d815206a53ade63b43" fullyQualifiedName="GeneXusUIControls.Angular" moduleGuid="ab5f1405-0a35-4384-ada7-5398890b865e" guid="45218f18-ebad-44af-9aa3-705ed3309379" name="Angular" type="c88fffcd-b6f8-0000-8fec-00b5497e2117" description="Angular" parent="GeneXusUIControls" parentType="c88fffcd-b6f8-0000-8fec-00b5497e2117" PackagedModuleName="Angular" moduleVersion="1.0">
+          <Part type="ed1b7b1c-2aaf-46eb-9ec5-db348f6fa3fc">
+            <Properties>
+              <Property>
+                <Name>IsDefault</Name>
+                <Value>False</Value>
+              </Property>
+            </Properties>
+          </Part>
+          <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+            <InnerHtml><![CDATA[]]></InnerHtml>
+            <Properties>
+              <Property>
+                <Name>IsDefault</Name>
+                <Value>False</Value>
+              </Property>
+            </Properties>
+          </Part>
+          <Properties>
+            <Property>
+              <Name>Name</Name>
+              <Value>Angular</Value>
+            </Property>
+            <Property>
+              <Name>IsDefault</Name>
+              <Value>False</Value>
+            </Property>
+          </Properties>
+        </Object>
+      </Objects>
+      <Dependencies>
+        <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="562f4793-aabe-449f-8821-fc77e550698e">
+          <Properties Name="User Control" PackageName="GenexusBL" />
+        </Reference>
+        <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="3dd92fe7-b095-44d3-9fa0-8488fa3f0c67">
+          <Properties Name="Screen Template" PackageName="GenexusBL" />
+        </Reference>
+        <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="8e9e4a7c-a4d3-4c36-8e8e-fb6702402f63">
+          <Properties Name="Properties" PackageName="GenexusBL" />
+        </Reference>
+        <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="babf62c5-0111-49e9-a1c3-cc004d90900a">
+          <Properties Name="Documentation" PackageName="GenexusBL" />
+        </Reference>
+        <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Object" Id="c88fffcd-b6f8-0000-8fec-00b5497e2117">
+          <Properties Name="Module" PackageName="Artech.Architecture" />
+        </Reference>
+        <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="ed1b7b1c-2aaf-46eb-9ec5-db348f6fa3fc">
+          <Properties Name="Content" PackageName="Artech.Architecture" />
+        </Reference>
+        <Reference Package="3ea7e1c6-b849-4df9-931a-070171a8a2f0" Type="Part" Id="a5e6a251-2df0-44d8-adab-1da237574326">
+          <Properties Name="Diagram" PackageName="GenexusBL" />
+        </Reference>
+      </Dependencies>
+    </ExportFile>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <InnerHtml><![CDATA[]]></InnerHtml>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Properties>
+    <Property>
+      <Name>PackagedModuleName</Name>
+      <Value>GeneXusUI</Value>
+    </Property>
+    <Property>
+      <Name>ModuleVersion</Name>
+      <Value>1.8.5.180392</Value>
+    </Property>
+    <Property>
+      <Name>ModuleAuthor</Name>
+      <Value>GeneXus</Value>
+    </Property>
+    <Property>
+      <Name>Name</Name>
+      <Value>GeneXusUIControls</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

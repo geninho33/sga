@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="d410d38f-e98d-492e-8a48-0538e2effd49" user="DESKTOP-OQ270FR\Geninho" versionDate="2025-07-15T03:33:11.0000000Z" lastUpdate="2025-07-15T02:56:32.0000000Z" checksum="ef515d2caa404c60bc12a2a1ecfa2371" fullyQualifiedName="WorkWithPlusWPMonitorarLancamentoUE" moduleGuid="afa47377-41d5-4ae8-9755-6f53150aa361" guid="d3038b1f-bf71-01b5-3e40-030fc0156234" name="WorkWithPlusWPMonitorarLancamentoUE" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus WPMonitorar Lancamento UE" parent="WPMonitorarLancamentoUE" parentType="c9584656-94b6-4ccd-890f-332d11fc2c25">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="7;57;" SecFuntionKey="WPMonitorarLancamentoUE" defaultSecFuntionKey="WPMonitorarLancamentoUE" type="WebPanel">
+  <WPRoot childrenOrderedList="7;66;Main Table" Template="Empty">
+    <table name="TableMain" themeClass="TableMain" defaultThemeClass="TableMain" defaultNumberOfColumns_S="1" defaultNumberOfColumns_M="1" defaultNumberOfColumns_L="1" type="Responsive" defaultType="Responsive" childrenOrderedList="7;28;ErrorViewer-7;66;TableContent">
+      <table numberOfColumns="1" type="Responsive" includeInPanel="True" panelTitle="Painel de Monitoramento">
+        <table numberOfColumns="3" type="Responsive">
+          <variable name="dataHoje" description="Data : " defaultDescription="data Hoje" dataType="Basic" defaultDataType="Basic" basicType="Date" defaultBasicType="Date" controlInfoDef="Based on" controlType="&lt;default&gt;" descriptionPosition="Top" />
+          <variable name="opcaoBusca" description="Opção" dataType="Basic" controlInfoDef="Custom" controlType="Combo Box" controlValues="Todos:0,Com Atividades:1,Sem Atividades:2" descriptionPosition="Top" mergeWithPrevious="False" />
+          <userAction caption="Buscar" name="btnBucar" />
+        </table>
+        <table numberOfColumns="3" type="Responsive">
+          <table name="groupCreches" isGroup="True" type="Responsive" title="Creches">
+            <webComponent name="WCWCPMonitorarCreche" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WCPMonitorarCreche">
+              <parameters>
+                <parameter type="In" name="&amp;tipoCreche" />
+                <parameter type="In" name="&amp;dataHoje" />
+                <parameter type="In" name="&amp;opcaoBusca" />
+              </parameters>
+            </webComponent>
+          </table>
+          <table name="groupEscola" isGroup="True" type="Responsive" title="Escolas" groupControlName="">
+            <webComponent name="WCWCPMonitorarEscola" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WCPMonitorarCreche">
+              <parameters>
+                <parameter type="In" name="&amp;tipoEscola" />
+                <parameter type="In" name="&amp;dataHoje" />
+                <parameter type="In" name="&amp;opcaoBusca" />
+              </parameters>
+            </webComponent>
+          </table>
+          <table name="groupOutras" isGroup="True" type="Responsive" title="Outras Unidades">
+            <webComponent name="WCWCPMonitorarOutras" gxobject="c9584656-94b6-4ccd-890f-332d11fc2c25-WCPMonitorarCreche">
+              <parameters>
+                <parameter type="In" name="&amp;tipoOutros" />
+                <parameter type="In" name="&amp;dataHoje" />
+                <parameter type="In" name="&amp;opcaoBusca" />
+              </parameters>
+            </webComponent>
+          </table>
+        </table>
+      </table>
+    </table>
+    <steps />
+  </WPRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusWPMonitorarLancamentoUE</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>c9584656-94b6-4ccd-890f-332d11fc2c25-WPMonitorarLancamentoUE</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>

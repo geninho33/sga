@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Object parentGuid="ae0f066f-8720-4be0-8198-1b0aa819d964" user="" versionDate="2024-05-16T22:38:51.0000000Z" lastUpdate="2022-08-03T23:48:24.0000000Z" checksum="e7c93c3f7119911c9df44c72582e24eb" fullyQualifiedName="WWPBaseObjects.WorkWithPlusExportReportTemplate_Style1" moduleGuid="f952860a-9553-4095-82c8-dedaadd8cf64" guid="a91c5eff-d1dc-037b-3590-1d3d8ae34619" name="WorkWithPlusExportReportTemplate_Style1" type="07135890-56fc-489b-b408-063722fa9f7d" description="Work With Plus Export Report Template_Style1" parent="WWPBaseObjects.ExportReportTemplate_Style1" parentType="84a12160-f59b-4ad7-a683-ea4481ac23e9">
+  <Part type="a51ced48-7bee-0001-ab12-04e9e32123d1">
+    <Data Pattern="07135890-56fc-489b-b408-063722fa9f7d" Version="1.3"><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<instance childrenOrderedList="17;115;" SecFuntionKey="ExportReportTemplate" defaultSecFuntionKey="ExportReportTemplate_Style1">
+  <PRRoot childrenOrderedList="17;116;printTitle-17;116;printDetailInfo-17;117;printLines-17;116;printTotals" Template="InvoiceStyle1" paperSize="A5" defaultPaperSize="A5" rightMargin="31" defaultRightMargin="31">
+    <printBlock childrenOrderedList="17;118;t1" name="printTitle">
+      <table childrenOrderedList="17;118;t5" name="t1" backColor="" defaultBackColor="Tomato" marginBottom="20">
+        <table backColor="Tomato">
+          <table childrenOrderedList="17;118;t2-17;118;t3-17;118;t4" name="t5" pbNumberOfColumns="3" defaultPbNumberOfColumns="3" marginTop="30" defaultMarginTop="30" marginLeft="30" defaultMarginLeft="30" marginBottom="30" defaultMarginBottom="30" marginRight="30" defaultMarginRight="30">
+            <table childrenOrderedList="17;121;CompanyName-17;119;txtInvoice" name="t2">
+              <variable name="AppName" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" showDescription="False" defaultShowDescription="False" />
+              <variable name="Title" font="Microsoft Sans Serif, 20.25pt" defaultFont="Microsoft Sans Serif, 20.25pt" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="200" defaultBasicCLength="200" showDescription="False" defaultShowDescription="False" />
+            </table>
+            <table childrenOrderedList="17;121;Phone-17;121;Mail-17;121;Website" name="t3">
+              <variable name="Phone" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" align="Right" defaultAlign="Right" showDescription="False" defaultShowDescription="False" />
+              <variable name="Mail" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" align="Right" defaultAlign="Right" showDescription="False" defaultShowDescription="False" />
+              <variable name="Website" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" align="Right" defaultAlign="Right" showDescription="False" defaultShowDescription="False" />
+            </table>
+            <table childrenOrderedList="17;121;AddressLine1-17;121;AddressLine2-17;121;AddressLine3" name="t4">
+              <variable name="AddressLine1" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" align="Right" defaultAlign="Right" showDescription="False" defaultShowDescription="False" />
+              <variable name="AddressLine2" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" align="Right" defaultAlign="Right" showDescription="False" defaultShowDescription="False" />
+              <variable name="AddressLine3" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" align="Right" defaultAlign="Right" showDescription="False" defaultShowDescription="False" />
+            </table>
+          </table>
+        </table>
+      </table>
+    </printBlock>
+    <printBlock name="printBlockFilter">
+      <table childrenOrderedList="17;118;t21" name="t11" defaultMarginTop="40" marginBottom="5">
+        <variable name="Filter" description="Filter" defaultDescription="Filter" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" dscForeColor="DarkGray" defaultDscForeColor="DarkGray" marginLeft="25" defaultMarginLeft="25" marginRight="30" defaultMarginRight="30" />
+      </table>
+    </printBlock>
+    <printBlock name="printBlockBeforeGrid">
+      <table marginLeft="25" marginRight="30">
+        <line controlName="l1" lineColor="Tomato" defaultLineColor="Tomato" lineWidth="2" defaultLineWidth="2" marginTop="20" defaultMarginTop="40" colSpan="3" defaultColSpan="3" />
+      </table>
+    </printBlock>
+    <gridPrintBlock name="printBlockLines" marginLeft="28" defaultMarginLeft="28" marginRight="30" defaultMarginRight="30" hLines="True" defaultHLines="True" hLinesColor="Gainsboro" defaultHLinesColor="Gainsboro" borderStyle="None" defaultBorderStyle="None" titlesFont="Microsoft Sans Serif, 9pt" defaultTitlesFont="Microsoft Sans Serif, 9pt" titlesForeColor="Tomato" defaultTitlesForeColor="Tomato" titlesDivisionLine="None" defaultTitlesDivisionLine="None" titlesSpacing="10" defaultTitlesSpacing="10" rowsSpacing="10" defaultRowsSpacing="10">
+      <gridVariable name="Attribute" description="Attribute Title" defaultDescription="Attribute Title" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" />
+    </gridPrintBlock>
+    <printBlock name="printFooter">
+      <table backColor="Tomato" marginTop="5">
+        <table pbNumberOfColumns="3" defaultPbNumberOfColumns="3" marginTop="10" defaultMarginTop="30" marginLeft="30" defaultMarginLeft="30" marginBottom="10" defaultMarginBottom="30" marginRight="30" defaultMarginRight="30">
+          <table>
+            <variable name="PageInfo" description="Page:" defaultDescription="Page:" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" showDescription="False" defaultShowDescription="False" dscForeColor="White" defaultDscForeColor="White" />
+          </table>
+          <table>
+            <variable name="DateInfo" foreColor="White" defaultForeColor="White" dataType="Basic" defaultDataType="Basic" basicType="VarChar" defaultBasicType="VarChar" basicCLength="100" defaultBasicCLength="100" align="Right" defaultAlign="Right" showDescription="False" defaultShowDescription="False" />
+          </table>
+        </table>
+      </table>
+    </printBlock>
+  </PRRoot>
+</instance>]]></Data>
+    <Properties>
+      <Property>
+        <Name>IsDefault</Name>
+        <Value>False</Value>
+      </Property>
+    </Properties>
+  </Part>
+  <Part type="babf62c5-0111-49e9-a1c3-cc004d90900a">
+    <Properties />
+  </Part>
+  <Properties>
+    <Property>
+      <Name>Name</Name>
+      <Value>WorkWithPlusExportReportTemplate_Style1</Value>
+    </Property>
+    <Property>
+      <Name>KBObject</Name>
+      <Value>84a12160-f59b-4ad7-a683-ea4481ac23e9-WWPBaseObjects.ExportReportTemplate_Style1</Value>
+    </Property>
+    <Property>
+      <Name>IsDefault</Name>
+      <Value>False</Value>
+    </Property>
+  </Properties>
+</Object>
