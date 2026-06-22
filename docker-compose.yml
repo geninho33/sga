@@ -1,0 +1,21 @@
+services:
+  sga:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sga-alimentacao-escolar:latest
+    container_name: sga-alimentacao-escolar
+    restart: unless-stopped
+    ports:
+      - "${SGA_HTTP_PORT:-8080}:80"
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 45s
