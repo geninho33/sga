@@ -47,9 +47,25 @@ export async function loadPrefeituraLogo(prefCodigo) {
   return { buffer: row.prefLogo, mime: logoMimeFromGxi(row.prefLogo_GXI) };
 }
 
-function newGamGuid() {
-  return crypto.randomUUID();
+function formatDateYmd(value) {
+  if (value == null || value === "") return "";
+  if (value instanceof Date) {
+    if (Number.isNaN(value.getTime())) return "";
+    const y = value.getUTCFullYear();
+    const m = String(value.getUTCMonth() + 1).padStart(2, "0");
+    const d = String(value.getUTCDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
+  }
+  const s = String(value).trim();
+  const match = s.match(/^(\d{4}-\d{2}-\d{2})/);
+  return match ? match[1] : "";
 }
+
+function toSqlDateOrNull(value) {
+  const ymd = formatDateYmd(value);
+  return ymd || null;
+}
+
 
 export async function nextPrefeituraCodigo() {
   const [rows] = await pool.query(`SELECT COALESCE(MAX(prefCodigo), 0) + 1 AS n FROM trnsprefeituras`);
@@ -175,12 +191,8 @@ export async function listCargosLookup() {
   return rows;
 }
 
-async function nextUsuarioCodigo(prefCodigo) {
-  const [rows] = await pool.query(
-    `SELECT COALESCE(MAX(usuCodigo), 0) + 1 AS n FROM trnsusuarios WHERE prefCodigo = :prefCodigo`,
-    { prefCodigo }
-  );
-  return Number(rows[0].n);
+function clip(value, max) {
+  return String(value ?? "").trim().slice(0, max);
 }
 
 /** Espelha PRCDSalvarDadosUsuario — vincula usuário GAM ao cadastro SGE. */
@@ -189,36 +201,37 @@ export async function syncSgeUsuario(userGuid, body) {
   if (!prefCodigo) return;
 
   const carCodigo = Number(body.carCodigo) || 0;
-  const nome = [body.UserFirstName, body.UserLastName].filter(Boolean).join(" ").trim();
-  const email = body.UserEMail || "";
-  const login = body.UserName || "";
+  const nome = clip([body.UserFirstName, body.UserLastName].filter(Boolean).join(" "), 40);
+  const email = clip(body.UserEMail, 100);
+  const login = clip(body.UserName, 20);
 
   const [existing] = await pool.query(
-    `SELECT prefCodigo FROM trnsusuarios WHERE usuGUID = :userGuid AND prefCodigo = :prefCodigo`,
-    { userGuid, prefCodigo }
+    `SELECT prefCodigo, usuCodigo FROM trnsusuarios WHERE usuGUID = :userGuid LIMIT 1`,
+    { userGuid }
   );
 
   if (existing.length) {
     await pool.query(
       `UPDATE trnsusuarios
-       SET usuCargo = :carCodigo, usuNome = :nome, usuEmail = :email, usuUsuario = :login,
-           usuStatus = 'A', usuDataAlt = NOW()
-       WHERE usuGUID = :userGuid AND prefCodigo = :prefCodigo`,
+       SET prefCodigo = :prefCodigo, usuCargo = :carCodigo, usuNome = :nome, usuEmail = :email,
+           usuUsuario = :login, usuStatus = 'A', usuDataAlt = CURDATE()
+       WHERE usuGUID = :userGuid`,
       { userGuid, prefCodigo, carCodigo, nome, email, login }
     );
-  } else {
-    const usuCodigo = await nextUsuarioCodigo(prefCodigo);
-    await pool.query(
-      `INSERT INTO trnsusuarios (
-         usuCodigo, prefCodigo, usuGUID, usuCargo, usuNome, usuEmail, usuUsuario,
-         usuStatus, usuDataCad, usuDataAlt
-       ) VALUES (
-         :usuCodigo, :prefCodigo, :userGuid, :carCodigo, :nome, :email, :login,
-         'A', NOW(), NOW()
-       )`,
-      { usuCodigo, prefCodigo, userGuid, carCodigo, nome, email, login }
-    );
+    return;
   }
+
+  await pool.query(
+    `INSERT INTO trnsusuarios (
+       prefCodigo, usuGUID, usuCargo, usuNome, usuEmail, usuUsuario,
+       usuSenha, usuValidadeSenha, usuGrupo, usuUnidade, usuUnidadesPermitidas,
+       usuInscricao, usuDataAcesso, usuStatus, usuDataCad, usuDataAlt
+     ) VALUES (
+       :prefCodigo, :userGuid, :carCodigo, :nome, :email, :login,
+       '', 0, 0, 0, '', '', NOW(), 'A', CURDATE(), CURDATE()
+     )`,
+    { prefCodigo, userGuid, carCodigo, nome, email, login }
+  );
 }
 
 export async function loadGamUserEntry(userGuid) {
@@ -236,7 +249,9 @@ export async function loadGamUserEntry(userGuid) {
 
   const [sgeRows] = await pool.query(
     `SELECT prefCodigo AS prefCodigoUsuario, usuCargo AS carCodigo
-     FROM trnsusuarios WHERE usuGUID = :userGuid LIMIT 1`,
+     FROM trnsusuarios WHERE usuGUID = :userGuid
+     ORDER BY usuDataAlt DESC, usuCodigo DESC
+     LIMIT 1`,
     { userGuid }
   );
   const sge = sgeRows[0] ?? {};
@@ -250,7 +265,7 @@ export async function loadGamUserEntry(userGuid) {
     UserFirstName: gam.UserFirstName || "",
     UserLastName: gam.UserLastName || "",
     ExternalId: gam.ExternalId || "",
-    Birthday: gam.Birthday ? String(gam.Birthday).slice(0, 10) : "",
+    Birthday: formatDateYmd(gam.Birthday),
     Gender: gam.Gender || "N",
     Phone: gam.Phone || "",
     prefCodigoUsuario: sge.prefCodigoUsuario ?? "",
@@ -300,7 +315,7 @@ export async function createGamUserEntry(body) {
         firstName: body.UserFirstName || "",
         lastName: body.UserLastName || "",
         externalId: body.ExternalId || "",
-        birthday: body.Birthday || null,
+        birthday: toSqlDateOrNull(body.Birthday),
         gender: body.Gender || "N",
         phone: body.Phone || "",
         notRcv: body.DontReceiveInformation ? 1 : 0,
@@ -321,6 +336,21 @@ export async function createGamUserEntry(body) {
 }
 
 export async function updateGamUserEntry(userGuid, body) {
+  try {
+    return await updateGamUserEntryInner(userGuid, body);
+  } catch (err) {
+    console.error("[updateGamUserEntry]", err);
+    if (err.code === "ER_DATA_TOO_LONG") {
+      return { error: "Um dos campos excede o tamanho máximo permitido." };
+    }
+    if (err.code === "ER_DUP_ENTRY") {
+      return { error: "Login ou cadastro duplicado no SGE." };
+    }
+    return { error: err.message || "Erro ao salvar usuário." };
+  }
+}
+
+async function updateGamUserEntryInner(userGuid, body) {
   const existing = await loadGamUserEntry(userGuid);
   if (!existing) return { error: "Usuário não encontrado", status: 404 };
 
@@ -350,7 +380,7 @@ export async function updateGamUserEntry(userGuid, body) {
   }
   if (body.Birthday !== undefined) {
     updates.push("UserBirthday = :birthday");
-    params.birthday = body.Birthday || null;
+    params.birthday = toSqlDateOrNull(body.Birthday);
   }
   if (body.Gender !== undefined) {
     updates.push("UserGender = :gender");
@@ -395,7 +425,7 @@ export async function updateGamUserEntry(userGuid, body) {
 
   if (body.UserPwd) {
     const pwdHash = hashGamPassword(body.UserPwd, userGuid, config.gamPasswordIterations);
-    updates.push("UserPwd = :pwd");
+    updates.push("UserPwd = :pwd", "UserPwdEncryption = 'sh5'");
     params.pwd = pwdHash;
   }
 
