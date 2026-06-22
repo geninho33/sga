@@ -1,5 +1,3 @@
-# syntax=docker/dockerfile:1
-
 # --- Build frontend (Vite/React) ---
 FROM node:20-alpine AS web-build
 WORKDIR /build/web
@@ -31,7 +29,7 @@ COPY sga-api/migrations ./migrations
 COPY --from=web-build /build/web/dist /usr/share/nginx/html
 COPY docker/nginx.conf /etc/nginx/nginx.conf
 COPY docker/entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh
 
 ENV NODE_ENV=production
 ENV PORT=3001
