@@ -15,7 +15,7 @@ DEPLOY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$DEPLOY/.." && pwd)"
 cd "$DEPLOY"
 
-BRANCH="${1:-main}"
+BRANCH="${1:-dev}"
 COMPOSE="docker compose"
 if ! docker compose version >/dev/null 2>&1; then
   COMPOSE="docker-compose"
@@ -89,15 +89,21 @@ log "Subindo container..."
 $COMPOSE up -d --remove-orphans
 
 log "Aguardando healthcheck..."
-sleep 5
+sleep 8
 $COMPOSE ps
 
-if $COMPOSE exec -T sga wget -qO- http://127.0.0.1/health >/dev/null 2>&1; then
+CONTAINER_STATUS="$(docker inspect -f '{{.State.Status}}' sga-alimentacao-escolar 2>/dev/null || echo missing)"
+if [[ "$CONTAINER_STATUS" == "running" ]] && $COMPOSE exec -T sga wget -qO- http://127.0.0.1/health >/dev/null 2>&1; then
   log "Sistema OK — healthcheck respondeu."
 else
-  log "Container com problema. Veja os logs:"
-  log "  $COMPOSE logs --tail=80 sga"
-  log "Causas comuns: MYSQL_HOST/PORT incorretos, senha vazia, migrations falhando."
+  log "Container com problema (status: ${CONTAINER_STATUS}). Últimos logs:"
+  docker logs sga-alimentacao-escolar --tail 100 2>&1 || true
+  log ""
+  log "Causas comuns:"
+  log "  1) MYSQL_PASSWORD vazio ou errado no deploy/.env"
+  log "  2) MYSQL_HOST inacessível — tente MYSQL_HOST=172.17.0.1 ou MYSQL_HOST=mysql-aliesc (rede Docker)"
+  log "  3) Banco ${MYSQL_DATABASE:-sgealiesc_2023} não existe no MySQL"
+  log "  4) Migration falhou — veja mensagem nos logs acima"
 fi
 
 log "Container HTTP: http://127.0.0.1:${HTTP_PORT}"

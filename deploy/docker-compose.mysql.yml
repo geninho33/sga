@@ -1,0 +1,15 @@
+# Rede compartilhada com o container mysql-aliesc.
+# Uso:
+#   export MYSQL_DOCKER_NETWORK=$(docker inspect mysql-aliesc --format '{{range $k,$v := .NetworkSettings.Networks}}{{$k}}{{end}}')
+#   # no deploy/.env: MYSQL_HOST=mysql-aliesc  MYSQL_PORT=3306
+#   docker compose -f docker-compose.yml -f docker-compose.mysql.yml up -d --build
+services:
+  sga:
+    networks:
+      - default
+      - mysql_aliesc
+
+networks:
+  mysql_aliesc:
+    external: true
+    name: ${MYSQL_DOCKER_NETWORK:?Defina MYSQL_DOCKER_NETWORK no .env}
