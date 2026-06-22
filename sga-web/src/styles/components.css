@@ -710,8 +710,8 @@ input, select, textarea { font: inherit; color: inherit; }
   right: 0;
   min-width: 200px;
   padding: 6px;
-  background: var(--surface-1);
-  border: 1px solid var(--border);
+  background: var(--green-800);
+  border: 1px solid var(--green-900);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
   z-index: 200;
@@ -725,19 +725,21 @@ input, select, textarea { font: inherit; color: inherit; }
   border: none;
   border-radius: var(--radius-sm);
   background: transparent;
-  color: var(--text-1);
+  color: #fff;
   font-size: var(--text-sm);
   text-align: left;
   cursor: pointer;
 }
 .user-menu-item:hover {
-  background: var(--surface-2);
+  background: var(--green-700);
+  color: #fff;
 }
 .user-menu-item--danger {
-  color: var(--danger-fg);
+  color: #fecaca;
 }
 .user-menu-item--danger:hover {
-  background: color-mix(in srgb, var(--danger-fg) 12%, transparent);
+  background: color-mix(in srgb, #ef4444 22%, var(--green-800));
+  color: #fff;
 }
 .user-profile-modal {
   max-width: 640px;

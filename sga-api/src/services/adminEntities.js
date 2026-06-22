@@ -195,6 +195,18 @@ function clip(value, max) {
   return String(value ?? "").trim().slice(0, max);
 }
 
+function newGamGuid() {
+  return crypto.randomUUID();
+}
+
+async function nextUsuarioCodigo(prefCodigo) {
+  const [rows] = await pool.query(
+    `SELECT COALESCE(MAX(usuCodigo), 0) + 1 AS n FROM trnsusuarios WHERE prefCodigo = :prefCodigo`,
+    { prefCodigo }
+  );
+  return Number(rows[0].n);
+}
+
 /** Espelha PRCDSalvarDadosUsuario — vincula usuário GAM ao cadastro SGE. */
 export async function syncSgeUsuario(userGuid, body) {
   const prefCodigo = Number(body.prefCodigoUsuario) || 0;
@@ -221,16 +233,18 @@ export async function syncSgeUsuario(userGuid, body) {
     return;
   }
 
+  const usuCodigo = await nextUsuarioCodigo(prefCodigo);
+
   await pool.query(
     `INSERT INTO trnsusuarios (
-       prefCodigo, usuGUID, usuCargo, usuNome, usuEmail, usuUsuario,
+       prefCodigo, usuCodigo, usuGUID, usuCargo, usuNome, usuEmail, usuUsuario,
        usuSenha, usuValidadeSenha, usuGrupo, usuUnidade, usuUnidadesPermitidas,
        usuInscricao, usuDataAcesso, usuStatus, usuDataCad, usuDataAlt
      ) VALUES (
-       :prefCodigo, :userGuid, :carCodigo, :nome, :email, :login,
+       :prefCodigo, :usuCodigo, :userGuid, :carCodigo, :nome, :email, :login,
        '', 0, 0, 0, '', '', NOW(), 'A', CURDATE(), CURDATE()
      )`,
-    { prefCodigo, userGuid, carCodigo, nome, email, login }
+    { prefCodigo, usuCodigo, userGuid, carCodigo, nome, email, login }
   );
 }
 
@@ -281,6 +295,21 @@ export async function loadGamUserEntry(userGuid) {
 }
 
 export async function createGamUserEntry(body) {
+  try {
+    return await createGamUserEntryInner(body);
+  } catch (err) {
+    console.error("[createGamUserEntry]", err);
+    if (err.code === "ER_DATA_TOO_LONG") {
+      return { error: "Um dos campos excede o tamanho máximo permitido." };
+    }
+    if (err.code === "ER_DUP_ENTRY") {
+      return { error: "Login ou cadastro duplicado." };
+    }
+    return { error: err.message || "Erro ao cadastrar usuário." };
+  }
+}
+
+async function createGamUserEntryInner(body) {
   const userName = String(body.UserName || "").trim();
   if (!userName) return { error: "Login é obrigatório" };
 
