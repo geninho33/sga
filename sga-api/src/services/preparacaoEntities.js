@@ -1,6 +1,7 @@
 import crypto from "crypto";
 import { pool, gamPool } from "../db.js";
 import { config } from "../config.js";
+import { GAM_DEFAULT_USER_LNG } from "./gamUserFields.js";
 import { hashGamPassword } from "./gamPassword.js";
 import { atendimentoHasCarDapCodigo } from "./schemaFeatures.js";
 
@@ -900,10 +901,10 @@ export async function createGamUser(body) {
       `INSERT INTO user (
          UserGUID, UserNameSpace, UserAutTypeName, UserName, UserEMail, UserPwd,
          UserFirstName, UserLastName, UserPwdEncryption, UserIsBlk, UserIsAct, UserIsDlt,
-         UserCreDate, UserCreUser, UserLng
+         UserDataReqComplete, UserIsDevice, UserCreDate, UserCreUser, UserLng
        ) VALUES (
          :userGuid, '', 'local', :userName, :email, :pwd,
-         :firstName, :lastName, 'sh5', 0, 1, 0, NOW(), 'web', 'Portuguese'
+         :firstName, :lastName, 'sh5', 0, 1, 0, 1, 0, NOW(), 'web', :userLng
        )`,
       {
         userGuid,
@@ -912,6 +913,7 @@ export async function createGamUser(body) {
         pwd: pwdHash,
         firstName: body.UserFirstName || "",
         lastName: body.UserLastName || "",
+        userLng: GAM_DEFAULT_USER_LNG,
       }
     );
   } catch (err) {

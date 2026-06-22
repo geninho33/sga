@@ -2,6 +2,12 @@ import crypto from "crypto";
 import { pool, gamPool } from "../db.js";
 import { config } from "../config.js";
 import { hashGamPassword } from "./gamPassword.js";
+import {
+  GAM_DEFAULT_USER_LNG,
+  dataTooLongErrorMessage,
+  mysqlFieldErrorMessage,
+  normalizeGamUserInput,
+} from "./gamUserFields.js";
 
 const PREFEITURA_COLUMNS = `
   prefCodigo, prefNome, prefCNPJ, prefEndereco, prefComplemento, prefBairro,
@@ -300,17 +306,18 @@ export async function createGamUserEntry(body) {
   } catch (err) {
     console.error("[createGamUserEntry]", err);
     if (err.code === "ER_DATA_TOO_LONG") {
-      return { error: "Um dos campos excede o tamanho máximo permitido." };
+      return { error: dataTooLongErrorMessage(err) };
     }
     if (err.code === "ER_DUP_ENTRY") {
       return { error: "Login ou cadastro duplicado." };
     }
-    return { error: err.message || "Erro ao cadastrar usuário." };
+    return { error: mysqlFieldErrorMessage(err) };
   }
 }
 
 async function createGamUserEntryInner(body) {
-  const userName = String(body.UserName || "").trim();
+  const normalized = normalizeGamUserInput(body);
+  const userName = normalized.userName;
   if (!userName) return { error: "Login é obrigatório" };
 
   const password = String(body.UserPwd || "");
@@ -329,24 +336,27 @@ async function createGamUserEntryInner(body) {
          UserGUID, UserNameSpace, UserAutTypeName, UserName, UserEMail, UserPwd,
          UserFirstName, UserLastName, UserExtId, UserBirthday, UserGender, UserPhone,
          UserNotRcvInf, UserIsBlk, UserIsAct, UserIsDlt, UserNotChgPwd, UserChgPwdNexLog,
-         UserPwdNevExp, UserPwdEncryption, UserCreDate, UserCreUser, UserLng
+         UserPwdNevExp, UserPwdEncryption, UserDataReqComplete, UserIsDevice,
+         UserCreDate, UserCreUser, UserLng
        ) VALUES (
          :userGuid, '', :authType, :userName, :email, :pwd,
          :firstName, :lastName, :externalId, :birthday, :gender, :phone,
-         :notRcv, :blk, :act, 0, :notChgPwd, :chgPwdNext, :pwdNevExp, 'sh5', NOW(), 'web', 'Portuguese'
+         :notRcv, :blk, :act, 0, :notChgPwd, :chgPwdNext, :pwdNevExp, 'sh5', 1, 0,
+         NOW(), 'web', :userLng
        )`,
       {
         userGuid,
-        authType: body.AuthenticationTypeName || "local",
+        authType: normalized.authType,
         userName,
-        email: body.UserEMail || "",
+        email: normalized.email,
         pwd: pwdHash,
-        firstName: body.UserFirstName || "",
-        lastName: body.UserLastName || "",
-        externalId: body.ExternalId || "",
+        firstName: normalized.firstName,
+        lastName: normalized.lastName,
+        externalId: normalized.externalId,
         birthday: toSqlDateOrNull(body.Birthday),
-        gender: body.Gender || "N",
-        phone: body.Phone || "",
+        gender: normalized.gender,
+        phone: normalized.phone,
+        userLng: GAM_DEFAULT_USER_LNG,
         notRcv: body.DontReceiveInformation ? 1 : 0,
         blk: isBlocked ? 1 : 0,
         act: isActive ? 1 : 0,
@@ -360,7 +370,12 @@ async function createGamUserEntryInner(body) {
     throw err;
   }
 
-  await syncSgeUsuario(userGuid, { ...body, UserName: userName });
+  try {
+    await syncSgeUsuario(userGuid, { ...body, ...normalized, UserName: userName });
+  } catch (err) {
+    await gamPool.query(`DELETE FROM user WHERE UserGUID = :userGuid`, { userGuid }).catch(() => {});
+    throw err;
+  }
   return { data: await loadGamUserEntry(userGuid) };
 }
 
@@ -370,12 +385,12 @@ export async function updateGamUserEntry(userGuid, body) {
   } catch (err) {
     console.error("[updateGamUserEntry]", err);
     if (err.code === "ER_DATA_TOO_LONG") {
-      return { error: "Um dos campos excede o tamanho máximo permitido." };
+      return { error: dataTooLongErrorMessage(err) };
     }
     if (err.code === "ER_DUP_ENTRY") {
       return { error: "Login ou cadastro duplicado no SGE." };
     }
-    return { error: err.message || "Erro ao salvar usuário." };
+    return { error: mysqlFieldErrorMessage(err) };
   }
 }
 
