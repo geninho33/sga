@@ -7,13 +7,13 @@
 #   - Nginx instalado no host
 #
 # Uso:
-#   cd /var/alimentacao-escolar/deploy
+#   cd /var/sga/deploy
 #   chmod +x setup-https.sh
 #   sudo ./setup-https.sh
 set -euo pipefail
 
 DEPLOY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SITE_NAME="sga-alimentacao-escolar"
+SITE_NAME="sga"
 SITE_AVAILABLE="/etc/nginx/sites-available/${SITE_NAME}.conf"
 SITE_ENABLED="/etc/nginx/sites-enabled/${SITE_NAME}.conf"
 DOMAIN="sga.sgebr.net.br"
@@ -35,7 +35,7 @@ fi
 
 if ! curl -sf "http://127.0.0.1:${HTTP_PORT}/health" >/dev/null 2>&1; then
   log "AVISO: http://127.0.0.1:${HTTP_PORT}/health não respondeu."
-  log "Suba o container antes: cd ${DEPLOY} && ./deploy.sh dev"
+  log "Suba o container antes: cd ${DEPLOY} && ./deploy.sh main"
   read -r -p "Continuar mesmo assim? [s/N] " ans
   [[ "${ans,,}" == "s" ]] || exit 1
 fi

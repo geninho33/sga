@@ -1,3 +1,6 @@
+# SGA — Alimentação Escolar
+# Repositório: https://github.com/viziv-git/sga
+
 # --- Build frontend (Vite/React) ---
 FROM node:20-alpine AS web-build
 WORKDIR /build
@@ -20,6 +23,9 @@ RUN npm ci --omit=dev
 
 # --- Imagem final: Nginx + Node ---
 FROM node:20-alpine AS runtime
+LABEL org.opencontainers.image.title="SGA — Alimentação Escolar" \
+  org.opencontainers.image.source="https://github.com/viziv-git/sga" \
+  org.opencontainers.image.vendor="Viziv"
 RUN apk add --no-cache nginx tini wget \
   && mkdir -p /var/log/nginx /var/lib/nginx /run/nginx /usr/share/nginx/html
 

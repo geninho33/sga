@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 const fallback = {
   name: "SGA — Alimentação Escolar",
   shortName: "SGA",
+  repository: "https://github.com/viziv-git/sga",
   version: "0.0.0",
   commit: "unknown",
   branch: "",
