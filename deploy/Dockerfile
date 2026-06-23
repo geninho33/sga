@@ -4,12 +4,13 @@
 # --- Build frontend (Vite/React) ---
 FROM node:20-alpine AS web-build
 WORKDIR /build
-COPY VERSION scripts/generate-version.mjs ./
+COPY VERSION ./
+COPY scripts/generate-version.mjs ./scripts/
 COPY sga-web/package.json sga-web/package-lock.json ./sga-web/
 RUN cd sga-web && npm ci
 COPY sga-web ./sga-web
 RUN mkdir -p sga-api/src/generated
-RUN node generate-version.mjs
+RUN node scripts/generate-version.mjs
 WORKDIR /build/sga-web
 # Mesma origem: nginx faz proxy de /api para a API interna
 ENV VITE_API_URL=
