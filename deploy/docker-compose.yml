@@ -3,8 +3,8 @@ services:
     build:
       context: ..
       dockerfile: deploy/Dockerfile
-    image: sga-alimentacao-escolar:latest
-    container_name: sga-alimentacao-escolar
+    image: viziv-git/sga:latest
+    container_name: sga
     restart: unless-stopped
     extra_hosts:
       - "host.docker.internal:host-gateway"

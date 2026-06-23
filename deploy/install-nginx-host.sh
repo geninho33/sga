@@ -3,11 +3,11 @@
 # Preferível: sudo ./setup-https.sh (emite certificado + configura tudo)
 #
 # Este script só copia a config — exige certificado já emitido.
-# Executar com sudo no servidor 186.233.89.56 (/var/alimentacao-escolar).
+# Executar com sudo no servidor 186.233.89.56 (/var/sga).
 set -euo pipefail
 
 DEPLOY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-SITE_NAME="sga-alimentacao-escolar"
+SITE_NAME="sga"
 SOURCE="${DEPLOY}/nginx-host-https.conf"
 TARGET="/etc/nginx/sites-available/${SITE_NAME}.conf"
 DOMAIN="sga.sgebr.net.br"

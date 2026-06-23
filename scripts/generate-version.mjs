@@ -45,6 +45,7 @@ const branch = gitValue("rev-parse --abbrev-ref HEAD") || "";
 const info = {
   name: "SGA — Alimentação Escolar",
   shortName: "SGA",
+  repository: "https://github.com/viziv-git/sga",
   version,
   commit,
   branch,

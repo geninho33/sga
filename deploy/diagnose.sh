@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
-# Diagnóstico rápido no servidor (/var/alimentacao-escolar/deploy)
+# Diagnóstico rápido no servidor (/var/sga/deploy)
 set -euo pipefail
 
 DEPLOY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DEPLOY"
+CONTAINER="${SGA_CONTAINER_NAME:-sga}"
 
 echo "=== Container ==="
-docker ps -a --filter name=sga-alimentacao-escolar --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'
+docker ps -a --filter name="$CONTAINER" --format 'table {{.Names}}\t{{.Status}}\t{{.Ports}}'
 
 echo ""
 echo "=== Logs (últimas 80 linhas) ==="
-docker logs sga-alimentacao-escolar --tail 80 2>&1 || echo "(container não encontrado)"
+docker logs "$CONTAINER" --tail 80 2>&1 || echo "(container não encontrado)"
 
 echo ""
 echo "=== deploy/.env (sem senha) ==="
@@ -23,7 +24,7 @@ fi
 
 echo ""
 echo "=== GAM (dentro do container) ==="
-docker exec sga-alimentacao-escolar node -e "
+docker exec "$CONTAINER" node -e "
 import { config } from './src/config.js';
 import mysql from 'mysql2/promise';
 try {
@@ -44,7 +45,7 @@ try {
 
 echo ""
 echo "=== Login admin (trnsusuarios) ==="
-docker exec sga-alimentacao-escolar node -e "
+docker exec "$CONTAINER" node -e "
 import { pool } from './src/db.js';
 const [users] = await pool.query(
   \`SELECT u.usuUsuario, u.usuNome, u.usuStatus,
