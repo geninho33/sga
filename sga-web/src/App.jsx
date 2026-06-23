@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AppMenu from "./components/shell/AppMenu";
+import AppFooter from "./components/shell/AppFooter";
 import CommandPalette from "./components/shell/CommandPalette";
 import Topbar from "./components/shell/Topbar";
 import { useAuth } from "./context/AuthContext";
@@ -260,8 +261,11 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="login-shell">
-        <div className="login-card card login-loading">Carregando…</div>
+      <div className="login-shell login-shell--with-footer">
+        <div className="login-shell-main">
+          <div className="login-card card login-loading">Carregando…</div>
+        </div>
+        <AppFooter className="app-footer--login" />
       </div>
     );
   }
@@ -282,6 +286,7 @@ export default function App() {
       />
       <AppMenu activeScreen={screen} onScreen={navigateScreen} collapsed={collapsed} />
       <main className="content">{renderScreen()}</main>
+      <AppFooter />
       <CommandPalette open={cmdOpen} onClose={() => setCmdOpen(false)} onNavigate={navigateScreen} />
     </div>
   );
