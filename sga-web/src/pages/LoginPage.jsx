@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { FaIcon } from "../components/Icon";
+import AppFooter from "../components/shell/AppFooter";
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -23,8 +24,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="login-shell">
-      <div className="login-card card">
+    <div className="login-shell login-shell--with-footer">
+      <div className="login-shell-main">
+        <div className="login-card card">
         <div className="login-brand">
           <div className="login-logo">
             <FaIcon icon="fa-utensils" />
@@ -68,7 +70,9 @@ export default function LoginPage() {
             {loading ? "Entrando…" : "Entrar"}
           </button>
         </form>
+        </div>
       </div>
+      <AppFooter className="app-footer--login" />
     </div>
   );
 }

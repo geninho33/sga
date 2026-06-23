@@ -1,9 +1,13 @@
 # --- Build frontend (Vite/React) ---
 FROM node:20-alpine AS web-build
-WORKDIR /build/web
-COPY sga-web/package.json sga-web/package-lock.json ./
-RUN npm ci
-COPY sga-web/ ./
+WORKDIR /build
+COPY VERSION scripts/generate-version.mjs ./
+COPY sga-web/package.json sga-web/package-lock.json ./sga-web/
+RUN cd sga-web && npm ci
+COPY sga-web ./sga-web
+RUN mkdir -p sga-api/src/generated
+RUN node generate-version.mjs
+WORKDIR /build/sga-web
 # Mesma origem: nginx faz proxy de /api para a API interna
 ENV VITE_API_URL=
 RUN npm run build
@@ -25,8 +29,9 @@ COPY sga-api/package.json ./
 COPY sga-api/src ./src
 COPY sga-api/scripts ./scripts
 COPY sga-api/migrations ./migrations
+COPY --from=web-build /build/sga-api/src/generated ./src/generated
 
-COPY --from=web-build /build/web/dist /usr/share/nginx/html
+COPY --from=web-build /build/sga-web/dist /usr/share/nginx/html
 COPY deploy/nginx.conf /etc/nginx/nginx.conf
 COPY deploy/entrypoint.sh /entrypoint.sh
 RUN sed -i 's/\r$//' /entrypoint.sh && chmod +x /entrypoint.sh

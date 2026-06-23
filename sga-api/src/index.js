@@ -12,6 +12,7 @@ import operacionalRouter from "./routes/operacional.js";
 import logisticaRouter from "./routes/logistica.js";
 import estoqueRouter from "./routes/estoque.js";
 import relatoriosRouter from "./routes/relatorios.js";
+import { getAppVersion } from "./lib/appVersion.js";
 
 const app = express();
 
@@ -20,7 +21,19 @@ app.use(express.json());
 
 // Health disponível imediatamente — não bloqueia em migrations (entrypoint aguarda esta rota)
 app.get("/health", (_req, res) => {
-  res.json({ status: "ok", service: "sga-api" });
+  const v = getAppVersion();
+  res.json({
+    status: "ok",
+    service: "sga-api",
+    version: v.version,
+    build: v.buildDate,
+    commit: v.commit,
+    displayVersion: v.displayVersion,
+  });
+});
+
+app.get("/api/version", (_req, res) => {
+  res.json(getAppVersion());
 });
 
 app.use("/api/auth", authRouter);

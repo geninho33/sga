@@ -1,0 +1,11 @@
+// Gerado por scripts/generate-version.mjs — não editar manualmente
+export const APP_VERSION = {
+  "name": "SGA — Alimentação Escolar",
+  "shortName": "SGA",
+  "version": "1.0.0",
+  "commit": "0d88871",
+  "branch": "dev",
+  "buildDate": "20260623",
+  "builtAt": "2026-06-23T04:02:51.101Z",
+  "displayVersion": "1.0.0+20260623.0d88871"
+};

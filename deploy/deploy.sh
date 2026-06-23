@@ -82,6 +82,9 @@ else
   log "Git não disponível ou não é repositório — usando código local."
 fi
 
+log "Gerando metadados de versão..."
+node "$ROOT/scripts/generate-version.mjs" || log "AVISO: não foi possível gerar versão (node/script ausente)"
+
 log "Construindo imagem Docker..."
 $COMPOSE build --pull
 
