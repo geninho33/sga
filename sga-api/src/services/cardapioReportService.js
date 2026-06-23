@@ -1,6 +1,7 @@
 import { pool } from "../db.js";
 import { loadPrefeituraLogo } from "./adminEntities.js";
 import { turnoGrupoLabel } from "./preparacaoEntities.js";
+import { formatHorario, horarioSortKey } from "../utils/horario.js";
 
 /** GeneXus DayOfWeek: domingo=1 … sábado=7 */
 export function gxDayOfWeek(date) {
@@ -19,19 +20,13 @@ function toDateOnly(value) {
   return new Date(`${s}T12:00:00`);
 }
 
-function formatHorario(value) {
-  if (!value) return "";
-  const s = String(value);
-  const m = s.match(/(\d{2}):(\d{2})/);
-  return m ? `${m[1]}:${m[2]}` : "";
-}
-
 function formatDayHeader(date) {
   const d = toDateOnly(date);
   if (!d) return "";
   const months = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
   const days = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"];
-  return `${d.getDate()}/${months[d.getMonth()]} (${days[d.getDay()]})`;
+  const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  return `${d.getDate()}/${cap(months[d.getMonth()])} (${cap(days[d.getDay()])})`;
 }
 
 function addDays(date, n) {
@@ -120,7 +115,7 @@ function horarioKey(row) {
 
 function buildWeekBlocks(week, pratos, opcNutrientesMedida = "TS") {
   const weekPratos = pratos.filter((p) => dateInRange(p.carPratoData, week.dataIni, week.dataFim));
-  if (!weekPratos.length) return { headers: week.headers, blocks: [] };
+  if (!weekPratos.length) return { headers: [], rows: [] };
 
   const headers = [];
   for (let d = new Date(week.dataIni); d <= week.dataFim; d.setDate(d.getDate() + 1)) {
@@ -132,52 +127,37 @@ function buildWeekBlocks(week, pratos, opcNutrientesMedida = "TS") {
     }
   }
 
-  const blocks = [];
-  let currentKey = null;
-  let matrix = [];
-  let turnoLabel = "";
-
-  const flush = () => {
-    if (!matrix.length) return;
-    blocks.push({ turnoLabel, rows: matrix.map((r) => [...r]) });
-    matrix = [];
-  };
-
+  const slots = new Map();
   for (const prato of weekPratos) {
     const key = horarioKey(prato);
-    if (currentKey !== null && key !== currentKey) {
-      flush();
-    }
-    currentKey = key;
     const h = formatHorario(prato.carPratoHorario || prato.refTipHorario);
-    turnoLabel = h ? `${h} - ${prato.refTipDescricao || ""}` : String(prato.refTipDescricao || "");
-
+    const turnoLabel = h ? `${h} - ${prato.refTipDescricao || ""}` : String(prato.refTipDescricao || "");
     const colIdx = headers.findIndex((hd) => sameDay(hd.date, prato.carPratoData));
-    if (colIdx < 0) continue;
+    if (colIdx < 0 || headers[colIdx]?.isObs) continue;
 
-    let placed = false;
-    for (let row = 0; row < 20; row++) {
-      if (!matrix[row]) matrix[row] = Array(headers.length).fill("");
-      if (!matrix[row][colIdx]) {
-        matrix[row][colIdx] = prato.pratoDscricao;
-        placed = true;
-        break;
-      }
-      if (matrix[row][colIdx] && !matrix[row][colIdx].includes(prato.pratoDscricao)) {
-        matrix[row][colIdx] += `\n${prato.pratoDscricao}`;
-        placed = true;
-        break;
-      }
+    if (!slots.has(key)) {
+      slots.set(key, {
+        turnoLabel,
+        sortKey: horarioSortKey(h),
+        byCol: new Map(),
+      });
     }
-    if (!placed) {
-      const row = matrix.length;
-      matrix[row] = Array(headers.length).fill("");
-      matrix[row][colIdx] = prato.pratoDscricao;
+    const slot = slots.get(key);
+    if (!slot.byCol.has(colIdx)) slot.byCol.set(colIdx, []);
+    const nome = prato.pratoDscricao || "";
+    if (nome && !slot.byCol.get(colIdx).includes(nome)) {
+      slot.byCol.get(colIdx).push(nome);
     }
   }
 
-  flush();
-  return { headers, blocks };
+  const rows = [...slots.values()]
+    .sort((a, b) => a.sortKey - b.sortKey || a.turnoLabel.localeCompare(b.turnoLabel, "pt-BR"))
+    .map((slot) => ({
+      turnoLabel: slot.turnoLabel,
+      cells: headers.map((_, i) => (slot.byCol.get(i) || []).join("\n")),
+    }));
+
+  return { headers, rows };
 }
 
 async function loadNutricionistas(prefCodigo, cardapio) {
@@ -195,11 +175,36 @@ async function loadNutricionistas(prefCodigo, cardapio) {
     params[`id${i}`] = id;
   });
   const [rows] = await pool.query(
-    `SELECT usuCodigo, usuNome FROM trnsusuarios
+    `SELECT usuCodigo, usuNome, usuInscricao FROM trnsusuarios
      WHERE prefCodigo = :prefCodigo AND usuCodigo IN (${placeholders})`,
     params
   );
   return rows;
+}
+
+/** Agrupa ingredientes por área/etapa e turno do grupo (carGruTurno). */
+export function groupIngredientesPorAreaTurno(ingredientes) {
+  const map = new Map();
+  for (const ing of ingredientes) {
+    const areaNome = ing.AreEnsNome || "";
+    const etapaNome = ing.AreEnsEtapaNome || "";
+    const areaEtapa = [areaNome, etapaNome].filter(Boolean).join(" / ") || "—";
+    const turno = turnoGrupoLabel(ing.carGruTurno);
+    const key = `${ing.AreEnsCodigo ?? 0}|${ing.AreEnsSequencial ?? 0}|${ing.carGruTurno ?? 0}`;
+
+    if (!map.has(key)) {
+      map.set(key, { areaEtapa, turno, itens: [] });
+    }
+    map.get(key).itens.push({
+      prodDescricao: ing.prodDescricao,
+      quantidadeGramas: formatPercaptaGramas(ing.pratIngrQuantidade),
+    });
+  }
+
+  return [...map.values()].sort((a, b) => {
+    const c = a.areaEtapa.localeCompare(b.areaEtapa, "pt-BR");
+    return c !== 0 ? c : a.turno.localeCompare(b.turno, "pt-BR");
+  });
 }
 
 async function loadReceitas(prefCodigo, carDapCodigo) {
@@ -228,7 +233,7 @@ async function loadReceitas(prefCodigo, carDapCodigo) {
        LEFT JOIN trnsareaensinoetapa et ON et.prefCodigo = pi.prefCodigo
          AND et.AreEnsCodigo = pi.AreEnsCodigo AND et.AreEnsSequencial = pi.AreEnsSequencial
        WHERE pi.prefCodigo = :prefCodigo AND pi.pratoCodigo = :pratoCodigo AND pi.pratIngrQuantidade > 0
-       ORDER BY pi.pratIngrProdCodigo, pi.AreEnsCodigo, pi.AreEnsSequencial`,
+       ORDER BY ae.AreEnsNome, et.AreEnsEtapaNome, pi.carGruTurno, p.prodDescricao`,
       { prefCodigo, pratoCodigo }
     );
 
@@ -238,13 +243,10 @@ async function loadReceitas(prefCodigo, carDapCodigo) {
       usaFreezer: prato.pratoComFreezer === "S" ? "Sim" : "Não",
       usaForno: prato.pratoForno === "S" ? "Sim" : "Não",
       repete: prato.pratoRepeticao === "S" ? "Sim" : "Não",
-      ingredientes: ingredientes.map((i) => ({
+      grupos: groupIngredientesPorAreaTurno(ingredientes.map((i) => ({
+        ...i,
         prodDescricao: i.prodDescricao,
-        quantidade: i.pratIngrQuantidade,
-        quantidadeGramas: formatPercaptaGramas(i.pratIngrQuantidade),
-        area: [i.AreEnsNome, i.AreEnsEtapaNome].filter(Boolean).join(" - "),
-        turno: turnoGrupoLabel(i.carGruTurno),
-      })),
+      }))),
     });
   }
   return receitas;
@@ -262,6 +264,32 @@ export function formatPercaptaGramas(value) {
   if (Number.isNaN(n) || n <= 0) return "—";
   const grams = n < 1 ? n * 1000 : n;
   return `${grams.toLocaleString("pt-BR", { maximumFractionDigits: grams < 10 ? 1 : 0 })} g`;
+}
+
+/** Agrupa preparações do mesmo dia por horário/tipo de refeição (ordem crescente). */
+export function groupRefeicoesPorHorario(pratosDia) {
+  const groups = new Map();
+  for (const p of pratosDia) {
+    const horario = formatHorario(p.carPratoHorario || p.refTipHorario);
+    const turno = p.refTipDescricao || "";
+    const gKey = `${p.carPratoTurno}|${horario}|${turno}`;
+    if (!groups.has(gKey)) {
+      groups.set(gKey, {
+        horario,
+        turno,
+        label: horario ? `${horario} - ${turno}` : turno,
+        pratos: [],
+        sortKey: horarioSortKey(horario),
+      });
+    }
+    const nome = p.pratoDscricao || "";
+    if (nome && !groups.get(gKey).pratos.includes(nome)) {
+      groups.get(gKey).pratos.push(nome);
+    }
+  }
+  return [...groups.values()]
+    .sort((a, b) => a.sortKey - b.sortKey || String(a.turno).localeCompare(String(b.turno), "pt-BR"))
+    .map((g) => ({ ...g, prato: g.pratos.join("\n") }));
 }
 
 /** Grade calendário mensal (domingo = 1ª coluna) para impressão paisagem. */
@@ -287,17 +315,10 @@ export function buildCalendarGrid(mesAno, pratos, weekRanges, opcSemanaINI, opcS
     const key = isoFromDate(p.carPratoData);
     if (!key || !selectedDates.has(key)) continue;
     if (!byDate.has(key)) byDate.set(key, []);
-    const horario = formatHorario(p.carPratoHorario || p.refTipHorario);
-    const turno = p.refTipDescricao || "";
-    byDate.get(key).push({
-      horario,
-      turno,
-      prato: p.pratoDscricao || "",
-      label: [horario, turno].filter(Boolean).join(" · "),
-    });
+    byDate.get(key).push(p);
   }
-  for (const list of byDate.values()) {
-    list.sort((a, b) => String(a.horario).localeCompare(String(b.horario)) || String(a.turno).localeCompare(String(b.turno)));
+  for (const [key, list] of byDate) {
+    byDate.set(key, groupRefeicoesPorHorario(list));
   }
 
   const weeks = [];
@@ -334,6 +355,58 @@ export function buildCalendarGrid(mesAno, pratos, weekRanges, opcSemanaINI, opcS
   };
 }
 
+/** Resumo nutricional consolidado do período (média diária letiva — referência FNDE / GeneXus). */
+export async function buildResumoNutricionalPeriodo(
+  prefCodigo,
+  carDapCodigo,
+  pratos,
+  weekRanges,
+  opcSemanaINI,
+  opcSemanaFIN,
+  opcNutrientesMedida = "TS"
+) {
+  const { groupPratosByDate, calcNutrientsForDay, averageNutrients, sumNutrients, macroPercentByGrams } = await import("./cardapioNutrientesService.js");
+  const pratosByDate = groupPratosByDate(pratos);
+  const diasNutricao = [];
+
+  for (const w of weekRanges) {
+    if (w.semana < opcSemanaINI || w.semana > opcSemanaFIN) continue;
+    for (let d = new Date(w.dataIni); d <= w.dataFim; d.setDate(d.getDate() + 1)) {
+      if (opcNutrientesMedida === "TS" && gxDayOfWeek(d) === 7) continue;
+      const iso = isoFromDate(d);
+      const pratosDia = pratosByDate.get(iso) || [];
+      if (!pratosDia.length) continue;
+      const pratoCodigos = [...new Set(pratosDia.map((p) => p.carPratoRefeicao))];
+      const nutrientes = await calcNutrientsForDay(prefCodigo, carDapCodigo, iso, pratoCodigos);
+      if (nutrientes.kcal > 0) diasNutricao.push(nutrientes);
+    }
+  }
+
+  if (!diasNutricao.length) return null;
+
+  const avg = averageNutrients(diasNutricao);
+  const pct = macroPercentByGrams(avg);
+  return {
+    totalCalorias: sumNutrients(diasNutricao).kcal,
+    mediaCalorica: avg.kcal,
+    mediaProteinas: avg.proteinas,
+    mediaCarboidratos: avg.carboidratos,
+    mediaLipidios: avg.lipidios,
+    mediaFibras: avg.fibras,
+    mediaCalcio: avg.calcio,
+    mediaFerro: avg.ferro,
+    mediaMagnesio: avg.magnesio,
+    mediaZinco: avg.zinco,
+    mediaVitaminaA: avg.vitaminaA,
+    mediaVitaminaC: avg.vitaminaC,
+    mediaSodio: avg.sodio,
+    macroPercentCarb: pct.carbPct,
+    macroPercentProt: pct.protPct,
+    macroPercentLip: pct.lipPct,
+    diasComRefeicao: diasNutricao.length,
+  };
+}
+
 /**
  * Espelha PRINTCardapioMacrosMicros / WPOpcaoImpressaoCardapio.
  */
@@ -343,15 +416,17 @@ export async function buildCardapioReportData(prefCodigo, params) {
   const opcSemanaINI = Math.max(1, Number(params.opcSemanaINI) || 1);
   const opcSemanaFIN = Math.min(6, Number(params.opcSemanaFIN) || 6);
   const opcReceita = params.opcReceita === "S";
+  const opcNutrientes = params.opcNutrientes !== "N";
   const opcNutrientesMedida = params.opcNutrientesMedida || "TS";
 
   const [prefRows] = await pool.query(
-    `SELECT prefCodigo, prefNome FROM trnsprefeituras WHERE prefCodigo = :prefCodigo`,
+    `SELECT prefCodigo, prefNome, PrefMunicipio FROM trnsprefeituras WHERE prefCodigo = :prefCodigo`,
     { prefCodigo }
   );
   const prefeitura = prefRows[0];
   if (!prefeitura) return { error: "Prefeitura não encontrada" };
   const logoData = await loadPrefeituraLogo(prefCodigo);
+  const municipio = prefeitura.PrefMunicipio || prefeitura.prefNome || "";
 
   const [cardapioRows] = await pool.query(
     `SELECT carDapCodigo, carDapDescricao, carDapMesAno, carDapGruCodigo,
@@ -382,7 +457,7 @@ export async function buildCardapioReportData(prefCodigo, params) {
       tituloSemana: `${w.semana}ª Semana`,
       ...buildWeekBlocks(w, pratos, opcNutrientesMedida),
     }))
-    .filter((w) => w.blocks.length > 0);
+    .filter((w) => w.rows.length > 0);
 
   if (!weeks.length) return { error: "Nenhuma refeição no intervalo de semanas selecionado" };
 
@@ -390,21 +465,34 @@ export async function buildCardapioReportData(prefCodigo, params) {
 
   const nutricionistas = await loadNutricionistas(prefCodigo, cardapio);
   const receitas = opcReceita ? await loadReceitas(prefCodigo, carDapCodigo) : [];
+  const resumoMensal = opcNutrientes
+    ? await buildResumoNutricionalPeriodo(
+      prefCodigo,
+      carDapCodigo,
+      pratos,
+      allWeeks,
+      opcSemanaINI,
+      opcSemanaFIN,
+      opcNutrientesMedida
+    )
+    : null;
 
   return {
     prefeitura: {
       prefCodigo: prefeitura.prefCodigo,
       prefNome: prefeitura.prefNome,
+      prefMunicipio: municipio,
       prefLogo: logoData?.buffer || null,
     },
-    titulo: `Cardápio : ${String(cardapio.carDapDescricao || "").trim()}`,
+    titulo: String(cardapio.carDapDescricao || "").trim(),
     subtitulo,
     carDapMesAno: String(cardapio.carDapMesAno).slice(0, 10),
     calendar,
     weeks,
     nutricionistas,
     receitas,
-    params: { opcSemanaINI, opcSemanaFIN, opcReceita, locCodigo },
+    resumoMensal,
+    params: { opcSemanaINI, opcSemanaFIN, opcReceita, opcNutrientes, opcNutrientesMedida, locCodigo },
   };
 }
 
@@ -433,6 +521,7 @@ async function loadUnidadeEscolar(prefCodigo, locCodigo) {
 }
 
 async function loadAtendimentoInfo(prefCodigo, carGruCodigo, locCodigo) {
+  if (!carGruCodigo) return [];
   const params = { prefCodigo, carGruCodigo };
   let locFilter = "";
   if (locCodigo) {
@@ -539,10 +628,12 @@ export async function buildCardapioPnaeReportData(prefCodigo, params) {
   const pratos = await loadPratosMes(prefCodigo, carDapCodigo);
   if (!pratos.length) return { error: "Cardápio sem refeições cadastradas" };
 
-  const allWeeks = buildWeekRanges(cardapio.carDapMesAno);
+  const mesAnoIso = isoFromDate(cardapio.carDapMesAno);
+  if (!mesAnoIso) return { error: "Mês/ano do cardápio inválido" };
+  const year = Number(mesAnoIso.slice(0, 4));
+
+  const allWeeks = buildWeekRanges(mesAnoIso);
   const pratosByDate = groupPratosByDate(pratos);
-  const mesAnoIso = String(cardapio.carDapMesAno).slice(0, 10);
-  const [year] = mesAnoIso.split("-").map(Number);
   const { loadCalendarioMap } = await import("./calendarioLetivoService.js");
   const calendarMap = await loadCalendarioMap(prefCodigo, year);
   const tabelaSemanal = buildPnaeWeeklyRows(allWeeks, pratosByDate, opcSemanaINI, opcSemanaFIN, calendarMap);
@@ -577,6 +668,13 @@ export async function buildCardapioPnaeReportData(prefCodigo, params) {
     mediaCarboidratos: averageNutrients(diasNutricao).carboidratos,
     mediaLipidios: averageNutrients(diasNutricao).lipidios,
     mediaFibras: averageNutrients(diasNutricao).fibras,
+    mediaCalcio: averageNutrients(diasNutricao).calcio,
+    mediaFerro: averageNutrients(diasNutricao).ferro,
+    mediaMagnesio: averageNutrients(diasNutricao).magnesio,
+    mediaZinco: averageNutrients(diasNutricao).zinco,
+    mediaVitaminaA: averageNutrients(diasNutricao).vitaminaA,
+    mediaVitaminaC: averageNutrients(diasNutricao).vitaminaC,
+    mediaSodio: averageNutrients(diasNutricao).sodio,
     mediaVitaminas: (averageNutrients(diasNutricao).vitaminaA + averageNutrients(diasNutricao).vitaminaC) / 2,
     mediaMinerais: (
       averageNutrients(diasNutricao).calcio

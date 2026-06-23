@@ -9,6 +9,7 @@ import { getWwModuleById, wwListScreen } from "../data/wwModules";
 import { emptyForm, formToPayload, getWwFormConfig, recordToForm } from "../data/wwForms";
 import { usePreparacaoReferencias } from "../hooks/usePreparacaoReferencias";
 import { formatDateBr } from "../utils/calendarMonth";
+import { labelTurnoPrato, sortPratosPorHorario } from "../utils/horario";
 
 const config = getWwFormConfig("cardapios");
 
@@ -330,10 +331,10 @@ export default function CardapioFormPage({ recordId, isNew = false, initialTab, 
                   {pratos.length === 0 ? (
                     <tr><td colSpan={3} className="muted">Nenhuma refeição lançada.</td></tr>
                   ) : (
-                    pratos.map((r, i) => (
+                    sortPratosPorHorario(pratos).map((r, i) => (
                       <tr key={`prato-row-${r.carPratoCodigo ?? i}`}>
                         <td>{formatDateBr(r.carPratoData)}</td>
-                        <td>{r.carPratoTurnoDesc || r.carPratoTurno}</td>
+                        <td>{labelTurnoPrato(r)}</td>
                         <td>{r.carPratoRefeicaoDesc || r.carPratoRefeicao}</td>
                       </tr>
                     ))

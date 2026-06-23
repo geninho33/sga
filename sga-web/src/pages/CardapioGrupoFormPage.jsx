@@ -146,23 +146,23 @@ export default function CardapioGrupoFormPage({ recordId, isNew = false, onBack,
         <div className="panel">
           <div className="panel-body">
             {!isNew && st && <span className={"badge " + st.cls} style={{ marginBottom: 12, display: "inline-flex" }}><span className="dot" />{st.label}</span>}
-            <div className="filter-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}>
-              <div className="field"><label className="field-label">Código</label><input className="input input--code" readOnly value={form.carGruCodigo ?? ""} /></div>
-              <div className="field"><label className="field-label">Descrição</label><input className="input" value={form.carGruDescricao ?? ""} onChange={(e) => setForm((f) => ({ ...f, carGruDescricao: e.target.value }))} /></div>
+            <div
+              className="filter-grid"
+              style={{ gridTemplateColumns: "minmax(90px, 120px) 1fr minmax(220px, 1fr)", gap: "var(--space-4)" }}
+            >
+              <div className="field">
+                <label className="field-label">Código</label>
+                <input className="input input--code" readOnly value={form.carGruCodigo ?? ""} />
+              </div>
+              <div className="field" style={{ gridColumn: "span 2" }}>
+                <label className="field-label">Descrição</label>
+                <input className="input" value={form.carGruDescricao ?? ""} onChange={(e) => setForm((f) => ({ ...f, carGruDescricao: e.target.value }))} />
+              </div>
               <NutricionistaSelect label="Nutricionista" value={form.carGruNutricionista ?? ""} list={nutricionistas} onChange={(v) => setForm((f) => ({ ...f, carGruNutricionista: v }))} />
               <div className="field">
                 <label className="field-label">Cozinha central</label>
                 <select className="input" value={form.carGruCozinhaCentral ?? "N"} onChange={(e) => setForm((f) => ({ ...f, carGruCozinhaCentral: e.target.value }))}>
                   <option value="N">Não</option><option value="S">Sim</option>
-                </select>
-              </div>
-              <div className="field">
-                <label className="field-label">Cardápio referência</label>
-                <select className="input" value={form.carDapCodigo ?? ""} onChange={(e) => setForm((f) => ({ ...f, carDapCodigo: e.target.value }))}>
-                  <option value="">Selecione…</option>
-                  {(referencias.cardapios ?? []).map((c) => (
-                    <option key={c.carDapCodigo} value={String(c.carDapCodigo)}>{c.carDapDescricao}</option>
-                  ))}
                 </select>
               </div>
               <div className="field">
