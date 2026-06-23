@@ -2,6 +2,13 @@ import crypto from "crypto";
 import { pool, gamPool } from "../db.js";
 import { config } from "../config.js";
 import { hashGamPassword } from "./gamPassword.js";
+import {
+  GAM_DEFAULT_USER_LNG,
+  dataTooLongErrorMessage,
+  mysqlDuplicateErrorMessage,
+  mysqlFieldErrorMessage,
+  normalizeGamUserInput,
+} from "./gamUserFields.js";
 
 const PREFEITURA_COLUMNS = `
   prefCodigo, prefNome, prefCNPJ, prefEndereco, prefComplemento, prefBairro,
@@ -47,9 +54,25 @@ export async function loadPrefeituraLogo(prefCodigo) {
   return { buffer: row.prefLogo, mime: logoMimeFromGxi(row.prefLogo_GXI) };
 }
 
-function newGamGuid() {
-  return crypto.randomUUID();
+function formatDateYmd(value) {
+  if (value == null || value === "") return "";
+  if (value instanceof Date) {
+    if (Number.isNaN(value.getTime())) return "";
+    const y = value.getUTCFullYear();
+    const m = String(value.getUTCMonth() + 1).padStart(2, "0");
+    const d = String(value.getUTCDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
+  }
+  const s = String(value).trim();
+  const match = s.match(/^(\d{4}-\d{2}-\d{2})/);
+  return match ? match[1] : "";
 }
+
+function toSqlDateOrNull(value) {
+  const ymd = formatDateYmd(value);
+  return ymd || null;
+}
+
 
 export async function nextPrefeituraCodigo() {
   const [rows] = await pool.query(`SELECT COALESCE(MAX(prefCodigo), 0) + 1 AS n FROM trnsprefeituras`);
@@ -175,10 +198,17 @@ export async function listCargosLookup() {
   return rows;
 }
 
-async function nextUsuarioCodigo(prefCodigo) {
+function clip(value, max) {
+  return String(value ?? "").trim().slice(0, max);
+}
+
+function newGamGuid() {
+  return crypto.randomUUID();
+}
+
+async function nextUsuarioCodigo() {
   const [rows] = await pool.query(
-    `SELECT COALESCE(MAX(usuCodigo), 0) + 1 AS n FROM trnsusuarios WHERE prefCodigo = :prefCodigo`,
-    { prefCodigo }
+    `SELECT COALESCE(MAX(usuCodigo), 0) + 1 AS n FROM trnsusuarios`
   );
   return Number(rows[0].n);
 }
@@ -189,36 +219,41 @@ export async function syncSgeUsuario(userGuid, body) {
   if (!prefCodigo) return;
 
   const carCodigo = Number(body.carCodigo) || 0;
-  const nome = [body.UserFirstName, body.UserLastName].filter(Boolean).join(" ").trim();
-  const email = body.UserEMail || "";
-  const login = body.UserName || "";
+  const nome = clip([body.UserFirstName, body.UserLastName].filter(Boolean).join(" "), 40);
+  const email = clip(body.UserEMail, 100);
+  const login = clip(body.UserName, 20);
 
   const [existing] = await pool.query(
-    `SELECT prefCodigo FROM trnsusuarios WHERE usuGUID = :userGuid AND prefCodigo = :prefCodigo`,
+    `SELECT prefCodigo, usuCodigo FROM trnsusuarios
+     WHERE usuGUID = :userGuid AND prefCodigo = :prefCodigo
+     LIMIT 1`,
     { userGuid, prefCodigo }
   );
 
   if (existing.length) {
     await pool.query(
       `UPDATE trnsusuarios
-       SET usuCargo = :carCodigo, usuNome = :nome, usuEmail = :email, usuUsuario = :login,
-           usuStatus = 'A', usuDataAlt = NOW()
+       SET usuCargo = :carCodigo, usuNome = :nome, usuEmail = :email,
+           usuUsuario = :login, usuStatus = 'A', usuDataAlt = CURDATE()
        WHERE usuGUID = :userGuid AND prefCodigo = :prefCodigo`,
       { userGuid, prefCodigo, carCodigo, nome, email, login }
     );
-  } else {
-    const usuCodigo = await nextUsuarioCodigo(prefCodigo);
-    await pool.query(
-      `INSERT INTO trnsusuarios (
-         usuCodigo, prefCodigo, usuGUID, usuCargo, usuNome, usuEmail, usuUsuario,
-         usuStatus, usuDataCad, usuDataAlt
-       ) VALUES (
-         :usuCodigo, :prefCodigo, :userGuid, :carCodigo, :nome, :email, :login,
-         'A', NOW(), NOW()
-       )`,
-      { usuCodigo, prefCodigo, userGuid, carCodigo, nome, email, login }
-    );
+    return;
   }
+
+  const usuCodigo = await nextUsuarioCodigo();
+
+  await pool.query(
+    `INSERT INTO trnsusuarios (
+       prefCodigo, usuCodigo, usuGUID, usuCargo, usuNome, usuEmail, usuUsuario,
+       usuSenha, usuValidadeSenha, usuGrupo, usuUnidade, usuUnidadesPermitidas,
+       usuInscricao, usuDataAcesso, usuStatus, usuDataCad, usuDataAlt
+     ) VALUES (
+       :prefCodigo, :usuCodigo, :userGuid, :carCodigo, :nome, :email, :login,
+       '', 0, 0, 0, '', '', NOW(), 'A', CURDATE(), CURDATE()
+     )`,
+    { prefCodigo, usuCodigo, userGuid, carCodigo, nome, email, login }
+  );
 }
 
 export async function loadGamUserEntry(userGuid) {
@@ -236,7 +271,9 @@ export async function loadGamUserEntry(userGuid) {
 
   const [sgeRows] = await pool.query(
     `SELECT prefCodigo AS prefCodigoUsuario, usuCargo AS carCodigo
-     FROM trnsusuarios WHERE usuGUID = :userGuid LIMIT 1`,
+     FROM trnsusuarios WHERE usuGUID = :userGuid
+     ORDER BY usuDataAlt DESC, usuCodigo DESC
+     LIMIT 1`,
     { userGuid }
   );
   const sge = sgeRows[0] ?? {};
@@ -250,7 +287,7 @@ export async function loadGamUserEntry(userGuid) {
     UserFirstName: gam.UserFirstName || "",
     UserLastName: gam.UserLastName || "",
     ExternalId: gam.ExternalId || "",
-    Birthday: gam.Birthday ? String(gam.Birthday).slice(0, 10) : "",
+    Birthday: formatDateYmd(gam.Birthday),
     Gender: gam.Gender || "N",
     Phone: gam.Phone || "",
     prefCodigoUsuario: sge.prefCodigoUsuario ?? "",
@@ -266,7 +303,23 @@ export async function loadGamUserEntry(userGuid) {
 }
 
 export async function createGamUserEntry(body) {
-  const userName = String(body.UserName || "").trim();
+  try {
+    return await createGamUserEntryInner(body);
+  } catch (err) {
+    console.error("[createGamUserEntry]", err);
+    if (err.code === "ER_DATA_TOO_LONG") {
+      return { error: dataTooLongErrorMessage(err) };
+    }
+    if (err.code === "ER_DUP_ENTRY") {
+      return { error: mysqlDuplicateErrorMessage(err) };
+    }
+    return { error: mysqlFieldErrorMessage(err) };
+  }
+}
+
+async function createGamUserEntryInner(body) {
+  const normalized = normalizeGamUserInput(body);
+  const userName = normalized.userName;
   if (!userName) return { error: "Login é obrigatório" };
 
   const password = String(body.UserPwd || "");
@@ -285,24 +338,27 @@ export async function createGamUserEntry(body) {
          UserGUID, UserNameSpace, UserAutTypeName, UserName, UserEMail, UserPwd,
          UserFirstName, UserLastName, UserExtId, UserBirthday, UserGender, UserPhone,
          UserNotRcvInf, UserIsBlk, UserIsAct, UserIsDlt, UserNotChgPwd, UserChgPwdNexLog,
-         UserPwdNevExp, UserPwdEncryption, UserCreDate, UserCreUser, UserLng
+         UserPwdNevExp, UserPwdEncryption, UserDataReqComplete, UserIsDevice,
+         UserCreDate, UserCreUser, UserLng
        ) VALUES (
          :userGuid, '', :authType, :userName, :email, :pwd,
          :firstName, :lastName, :externalId, :birthday, :gender, :phone,
-         :notRcv, :blk, :act, 0, :notChgPwd, :chgPwdNext, :pwdNevExp, 'sh5', NOW(), 'web', 'Portuguese'
+         :notRcv, :blk, :act, 0, :notChgPwd, :chgPwdNext, :pwdNevExp, 'sh5', 1, 0,
+         NOW(), 'web', :userLng
        )`,
       {
         userGuid,
-        authType: body.AuthenticationTypeName || "local",
+        authType: normalized.authType,
         userName,
-        email: body.UserEMail || "",
+        email: normalized.email,
         pwd: pwdHash,
-        firstName: body.UserFirstName || "",
-        lastName: body.UserLastName || "",
-        externalId: body.ExternalId || "",
-        birthday: body.Birthday || null,
-        gender: body.Gender || "N",
-        phone: body.Phone || "",
+        firstName: normalized.firstName,
+        lastName: normalized.lastName,
+        externalId: normalized.externalId,
+        birthday: toSqlDateOrNull(body.Birthday),
+        gender: normalized.gender,
+        phone: normalized.phone,
+        userLng: GAM_DEFAULT_USER_LNG,
         notRcv: body.DontReceiveInformation ? 1 : 0,
         blk: isBlocked ? 1 : 0,
         act: isActive ? 1 : 0,
@@ -312,15 +368,36 @@ export async function createGamUserEntry(body) {
       }
     );
   } catch (err) {
-    if (err.code === "ER_DUP_ENTRY") return { error: "Login já cadastrado" };
+    if (err.code === "ER_DUP_ENTRY") return { error: mysqlDuplicateErrorMessage(err) };
     throw err;
   }
 
-  await syncSgeUsuario(userGuid, { ...body, UserName: userName });
+  try {
+    await syncSgeUsuario(userGuid, { ...body, ...normalized, UserName: userName });
+  } catch (err) {
+    await gamPool.query(`DELETE FROM user WHERE UserGUID = :userGuid`, { userGuid }).catch(() => {});
+    if (err.code === "ER_DUP_ENTRY") return { error: mysqlDuplicateErrorMessage(err) };
+    throw err;
+  }
   return { data: await loadGamUserEntry(userGuid) };
 }
 
 export async function updateGamUserEntry(userGuid, body) {
+  try {
+    return await updateGamUserEntryInner(userGuid, body);
+  } catch (err) {
+    console.error("[updateGamUserEntry]", err);
+    if (err.code === "ER_DATA_TOO_LONG") {
+      return { error: dataTooLongErrorMessage(err) };
+    }
+    if (err.code === "ER_DUP_ENTRY") {
+      return { error: mysqlDuplicateErrorMessage(err) };
+    }
+    return { error: mysqlFieldErrorMessage(err) };
+  }
+}
+
+async function updateGamUserEntryInner(userGuid, body) {
   const existing = await loadGamUserEntry(userGuid);
   if (!existing) return { error: "Usuário não encontrado", status: 404 };
 
@@ -350,7 +427,7 @@ export async function updateGamUserEntry(userGuid, body) {
   }
   if (body.Birthday !== undefined) {
     updates.push("UserBirthday = :birthday");
-    params.birthday = body.Birthday || null;
+    params.birthday = toSqlDateOrNull(body.Birthday);
   }
   if (body.Gender !== undefined) {
     updates.push("UserGender = :gender");
@@ -395,7 +472,7 @@ export async function updateGamUserEntry(userGuid, body) {
 
   if (body.UserPwd) {
     const pwdHash = hashGamPassword(body.UserPwd, userGuid, config.gamPasswordIterations);
-    updates.push("UserPwd = :pwd");
+    updates.push("UserPwd = :pwd", "UserPwdEncryption = 'sh5'");
     params.pwd = pwdHash;
   }
 

@@ -1,0 +1,27 @@
+# Git e backups
+.git
+.gitignore
+backups/
+
+# KB / referências (não necessários no runtime)
+sga-kb_paralela/
+GeneXus-XPZ-Skills-main/
+
+# Dependências e builds locais
+**/node_modules
+sga-web/dist
+sga-api/.env
+sga-web/.env
+.env
+.env.*
+
+# IDE e logs
+.idea
+.vscode
+**/*.log
+**/npm-debug.log*
+
+# Documentação e artefatos de dev
+**/.cursor
+**/agent-tools
+**/terminals

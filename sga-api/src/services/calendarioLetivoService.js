@@ -20,11 +20,13 @@ export async function verifyCalendarDay(prefCodigo, dateIso) {
 }
 
 export async function loadCalendarioMap(prefCodigo, ano) {
+  const year = Number(ano);
+  if (!Number.isFinite(year) || year < 1900) return new Map();
   const [rows] = await pool.query(
     `SELECT calData, calDescricao, calFeriado, calDiautil
      FROM trnscalendarioletivo
      WHERE prefCodigo = :prefCodigo AND calAno = :ano AND calStatus = 'A'`,
-    { prefCodigo, ano }
+    { prefCodigo, ano: year }
   );
   const map = new Map();
   for (const r of rows) {

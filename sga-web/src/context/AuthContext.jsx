@@ -43,6 +43,10 @@ export function AuthProvider({ children }) {
     }
   }, [clearSession]);
 
+  const updateUser = useCallback((partial) => {
+    setUser((prev) => (prev ? { ...prev, ...partial } : prev));
+  }, []);
+
   useEffect(() => {
     refresh();
   }, [refresh]);
@@ -73,8 +77,9 @@ export function AuthProvider({ children }) {
       login,
       logout,
       refresh,
+      updateUser,
     }),
-    [user, loading, login, logout, refresh]
+    [user, loading, login, logout, refresh, updateUser]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -8,7 +8,7 @@ export const config = {
     user: process.env.MYSQL_USER || "root",
     password: process.env.MYSQL_PASSWORD || "",
     database: process.env.MYSQL_DATABASE || "sgealiesc_2023",
-    gamDatabase: process.env.MYSQL_GAM_DATABASE || "sgealiesc_gam",
+    gamDatabase: process.env.MYSQL_GAM_DATABASE || "sgealiesc_gam_2023",
   },
   jwtSecret: process.env.JWT_SECRET || "sga-dev-secret-change-in-production",
   jwtExpiresIn: process.env.JWT_EXPIRES_IN || "8h",

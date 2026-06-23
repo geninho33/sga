@@ -3,6 +3,7 @@ import { pool, gamPool } from "../db.js";
 import { config } from "../config.js";
 import { ensureAuthTables } from "./authSchema.js";
 import { verifyGamPassword } from "./gamPassword.js";
+import { loadGamUserEntry, updateGamUserEntry } from "./adminEntities.js";
 import {
   isBcryptHash,
   verifyBcryptPassword,
@@ -35,15 +36,20 @@ export async function findUsersByLogin(usuario) {
 
 async function loadGamUser(userGuid) {
   if (!userGuid) return null;
-  const [rows] = await gamPool.query(
-    `SELECT UserGUID, UserName, UserPwd, UserPwdEncryption, UserIsAct, UserIsBlk, UserIsDlt
-     FROM user
-     WHERE UserGUID = :userGuid
-       AND UserIsDlt = 0
-     LIMIT 1`,
-    { userGuid }
-  );
-  return rows[0] ?? null;
+  try {
+    const [rows] = await gamPool.query(
+      `SELECT UserGUID, UserName, UserPwd, UserPwdEncryption, UserIsAct, UserIsBlk, UserIsDlt
+       FROM user
+       WHERE UserGUID = :userGuid
+         AND UserIsDlt = 0
+       LIMIT 1`,
+      { userGuid }
+    );
+    return rows[0] ?? null;
+  } catch (err) {
+    console.warn("[auth] GAM indisponível (confira MYSQL_GAM_DATABASE):", err.message);
+    return null;
+  }
 }
 
 async function loadAppPassword(prefCodigo, usuCodigo) {
@@ -189,4 +195,81 @@ export async function getUserFromTokenClaims(claims) {
     { prefCodigo: claims.prefCodigo, usuCodigo: claims.usuCodigo }
   );
   return rows[0] ?? null;
+}
+
+export async function loadOwnProfile(claims) {
+  const user = await getUserFromTokenClaims(claims);
+  if (!user) return null;
+
+  const base = {
+    UserName: user.usuUsuario?.trim() || "",
+    UserEMail: user.usuEmail?.trim() || "",
+    Gender: "N",
+    Phone: "",
+  };
+
+  const guid = user.usuGUID?.trim();
+  if (!guid) return base;
+
+  const gam = await loadGamUserEntry(guid);
+  if (!gam) return base;
+
+  return {
+    UserName: gam.UserName || base.UserName,
+    UserEMail: gam.UserEMail || base.UserEMail,
+    Gender: gam.Gender || "N",
+    Phone: gam.Phone || "",
+  };
+}
+
+export async function updateOwnProfile(claims, body) {
+  const user = await getUserFromTokenClaims(claims);
+  if (!user) return { error: "Usuário não encontrado", status: 404 };
+
+  if (body.UserPwd) {
+    const passwordConf = String(body.UserPwdConf || "");
+    if (body.UserPwd !== passwordConf) {
+      return { error: "Senha e confirmação não conferem" };
+    }
+  }
+
+  const guid = user.usuGUID?.trim();
+  if (!guid) {
+    if (body.UserEMail !== undefined) {
+      await pool.query(
+        `UPDATE trnsusuarios
+         SET usuEmail = :email, usuDataAlt = CURDATE()
+         WHERE prefCodigo = :prefCodigo AND usuCodigo = :usuCodigo`,
+        {
+          email: body.UserEMail || "",
+          prefCodigo: user.prefCodigo,
+          usuCodigo: user.usuCodigo,
+        }
+      );
+    }
+    return { data: await loadOwnProfile(claims) };
+  }
+
+  const existing = await loadGamUserEntry(guid);
+  if (!existing) return { error: "Perfil GAM não encontrado", status: 404 };
+
+  const payload = {
+    UserEMail: body.UserEMail,
+    Gender: body.Gender,
+    Phone: body.Phone,
+    UserFirstName: existing.UserFirstName,
+    UserLastName: existing.UserLastName,
+    UserName: existing.UserName,
+    prefCodigoUsuario: existing.prefCodigoUsuario,
+    carCodigo: existing.carCodigo,
+    IsActive: existing.IsActive,
+    IsBlocked: existing.IsBlocked,
+    Status: existing.Status,
+  };
+  if (body.UserPwd) {
+    payload.UserPwd = body.UserPwd;
+    payload.UserPwdConf = body.UserPwdConf;
+  }
+
+  return updateGamUserEntry(guid, payload);
 }

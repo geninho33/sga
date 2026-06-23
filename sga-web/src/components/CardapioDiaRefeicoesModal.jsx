@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { apiJson } from "../api/client";
 import { formatDateBr, weekdayLabel } from "../utils/calendarMonth";
+import { labelTipoRefeicao, labelTurnoPrato, sortPratosPorHorario, sortTiposRefeicao } from "../utils/horario";
 import { FaIcon } from "./Icon";
 import PratoPercaptaModal from "./PratoPercaptaModal";
 
@@ -19,15 +20,9 @@ export default function CardapioDiaRefeicoesModal({
   const [error, setError] = useState("");
   const [percaptaPrato, setPercaptaPrato] = useState(null);
 
-  const sorted = useMemo(
-    () =>
-      [...refeicoes].sort((a, b) =>
-        String(a.carPratoTurnoDesc || a.carPratoTurno).localeCompare(
-          String(b.carPratoTurnoDesc || b.carPratoTurno)
-        )
-      ),
-    [refeicoes]
-  );
+  const tiposOrdenados = useMemo(() => sortTiposRefeicao(tiposRefeicao), [tiposRefeicao]);
+
+  const sorted = useMemo(() => sortPratosPorHorario(refeicoes), [refeicoes]);
 
   const add = async () => {
     if (!novo.carPratoTurno || !novo.carPratoRefeicao) {
@@ -98,7 +93,7 @@ export default function CardapioDiaRefeicoesModal({
                 {sorted.map((r) => (
                   <li key={r.carPratoCodigo} className="cardapio-dia-item">
                     <div className="cardapio-dia-item-main">
-                      <span className="cardapio-dia-turno">{r.carPratoTurnoDesc || r.carPratoTurno}</span>
+                      <span className="cardapio-dia-turno">{labelTurnoPrato(r)}</span>
                       <span className="cardapio-dia-prato">{r.carPratoRefeicaoDesc || r.carPratoRefeicao}</span>
                     </div>
                     <div className="cardapio-dia-item-actions">
@@ -139,10 +134,10 @@ export default function CardapioDiaRefeicoesModal({
               disabled={busy}
               onChange={(e) => setNovo((n) => ({ ...n, carPratoTurno: e.target.value }))}
             >
-              <option value="">Turno…</option>
-              {tiposRefeicao.map((t, i) => (
+              <option value="">Tipo de refeição…</option>
+              {tiposOrdenados.map((t, i) => (
                 <option key={`turno-${t.refTipCodigo ?? i}`} value={String(t.refTipCodigo)}>
-                  {t.refTipDescricao}
+                  {labelTipoRefeicao(t)}
                 </option>
               ))}
             </select>

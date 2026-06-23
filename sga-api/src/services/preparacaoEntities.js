@@ -1,11 +1,23 @@
 import crypto from "crypto";
 import { pool, gamPool } from "../db.js";
 import { config } from "../config.js";
+import { GAM_DEFAULT_USER_LNG } from "./gamUserFields.js";
 import { hashGamPassword } from "./gamPassword.js";
 import { atendimentoHasCarDapCodigo } from "./schemaFeatures.js";
+import {
+  horarioParaDatetimeGx,
+  normalizeHorarioInput,
+  serializeCardapioPrato,
+  serializeTipoRefeicao,
+} from "../utils/horario.js";
 
 function auditUser(req) {
   return req.user?.usuUsuario || req.user?.usuNome || "web";
+}
+
+/** Normaliza entrada HH:MM ou HH:MM:SS para TIME do MySQL. */
+function normalizeHorario(value) {
+  return normalizeHorarioInput(value);
 }
 
 export async function nextCode(prefCodigo, table, column) {
@@ -109,7 +121,7 @@ export async function loadTipoRefeicao(prefCodigo, refTipCodigo) {
      FROM trnsrefeicaotipo WHERE prefCodigo = :prefCodigo AND refTipCodigo = :refTipCodigo`,
     { prefCodigo, refTipCodigo }
   );
-  return rows[0] ?? null;
+  return rows[0] ? serializeTipoRefeicao(rows[0]) : null;
 }
 
 export async function createTipoRefeicao(prefCodigo, body) {
@@ -131,8 +143,8 @@ export async function createTipoRefeicao(prefCodigo, body) {
       refTipDescricao: desc,
       refTipAbreviatura: body.refTipAbreviatura || "",
       refTipperiodo: body.refTipperiodo || "M",
-      refTipHorario: body.refTipHorario || null,
-      refTipHorario2: body.refTipHorario2 || null,
+      refTipHorario: normalizeHorario(body.refTipHorario),
+      refTipHorario2: normalizeHorario(body.refTipHorario2),
       refTipstatus,
     }
   );
@@ -155,8 +167,8 @@ export async function updateTipoRefeicao(prefCodigo, refTipCodigo, body) {
       refTipDescricao: desc,
       refTipAbreviatura: body.refTipAbreviatura || "",
       refTipperiodo: body.refTipperiodo || "M",
-      refTipHorario: body.refTipHorario || null,
-      refTipHorario2: body.refTipHorario2 || null,
+      refTipHorario: normalizeHorario(body.refTipHorario),
+      refTipHorario2: normalizeHorario(body.refTipHorario2),
       refTipstatus,
     }
   );
@@ -343,7 +355,7 @@ export async function duplicarPrato(prefCodigo, pratoCodigo) {
 export async function listCardapioPratos(prefCodigo, carDapCodigo) {
   const [rows] = await pool.query(
     `SELECT cp.carPratoCodigo, cp.carPratoData, cp.carPratoTurno, cp.carPratoRefeicao, cp.carPratoHorario,
-            p.pratoDscricao AS carPratoRefeicaoDesc, t.refTipDescricao AS carPratoTurnoDesc
+            p.pratoDscricao AS carPratoRefeicaoDesc, t.refTipDescricao AS carPratoTurnoDesc, t.refTipHorario
      FROM trnscardapioprato cp
      LEFT JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao
      LEFT JOIN trnsrefeicaotipo t ON t.prefCodigo = cp.prefCodigo AND t.refTipCodigo = cp.carPratoTurno
@@ -351,7 +363,7 @@ export async function listCardapioPratos(prefCodigo, carDapCodigo) {
      ORDER BY cp.carPratoData, cp.carPratoHorario, cp.carPratoTurno`,
     { prefCodigo, carDapCodigo }
   );
-  return rows;
+  return rows.map(serializeCardapioPrato);
 }
 
 async function horarioDoTurno(prefCodigo, carPratoTurno) {
@@ -371,7 +383,7 @@ export async function createCardapioPrato(prefCodigo, carDapCodigo, body) {
   );
   const carPratoCodigo = Number(maxRows[0].n);
   const carPratoTurno = Number(body.carPratoTurno) || 0;
-  const carPratoHorario = (await horarioDoTurno(prefCodigo, carPratoTurno)) ?? new Date();
+  const carPratoHorario = horarioParaDatetimeGx(await horarioDoTurno(prefCodigo, carPratoTurno));
   await pool.query(
     `INSERT INTO trnscardapioprato (
        prefCodigo, carDapCodigo, carPratoCodigo, carPratoData, carPratoTurno, carPratoRefeicao, carPratoHorario
@@ -808,7 +820,7 @@ export async function deleteCalendario(prefCodigo, calAno, calData) {
 export async function listReferencias(prefCodigo) {
   const [tipos, locais, grupos, pratos, cardapios, areas, etapas, produtos, nutricionistas] = await Promise.all([
     pool.query(
-      `SELECT refTipCodigo, refTipDescricao, refTipHorario FROM trnsrefeicaotipo
+      `SELECT refTipCodigo, refTipDescricao, refTipHorario, refTipHorario2 FROM trnsrefeicaotipo
        WHERE prefCodigo = :prefCodigo AND refTipstatus = 'A' ORDER BY refTipHorario, refTipDescricao`,
       { prefCodigo }
     ),
@@ -858,7 +870,7 @@ export async function listReferencias(prefCodigo) {
     ),
   ]);
   return {
-    tiposRefeicao: tipos[0],
+    tiposRefeicao: tipos[0].map(serializeTipoRefeicao),
     locais: locais[0],
     cardapioGrupos: grupos[0],
     pratos: pratos[0],
@@ -900,10 +912,10 @@ export async function createGamUser(body) {
       `INSERT INTO user (
          UserGUID, UserNameSpace, UserAutTypeName, UserName, UserEMail, UserPwd,
          UserFirstName, UserLastName, UserPwdEncryption, UserIsBlk, UserIsAct, UserIsDlt,
-         UserCreDate, UserCreUser, UserLng
+         UserDataReqComplete, UserIsDevice, UserCreDate, UserCreUser, UserLng
        ) VALUES (
          :userGuid, '', 'local', :userName, :email, :pwd,
-         :firstName, :lastName, 'sh5', 0, 1, 0, NOW(), 'web', 'Portuguese'
+         :firstName, :lastName, 'sh5', 0, 1, 0, 1, 0, NOW(), 'web', :userLng
        )`,
       {
         userGuid,
@@ -912,6 +924,7 @@ export async function createGamUser(body) {
         pwd: pwdHash,
         firstName: body.UserFirstName || "",
         lastName: body.UserLastName || "",
+        userLng: GAM_DEFAULT_USER_LNG,
       }
     );
   } catch (err) {

@@ -1,13 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { apiJson } from "../api/client";
 import { buildCalendarMonth, formatDateBr, indexPratosByDate } from "../utils/calendarMonth";
+import { labelTurnoPrato, sortPratosPorHorario } from "../utils/horario";
 import CardapioDiaRefeicoesModal from "./CardapioDiaRefeicoesModal";
-
-function formatHorario(value) {
-  if (!value) return "";
-  const m = String(value).match(/(\d{2}):(\d{2})/);
-  return m ? `${m[1]}:${m[2]}` : "";
-}
 
 export default function CardapioCalendario({
   carDapCodigo,
@@ -92,10 +87,10 @@ export default function CardapioCalendario({
                   <span className="cardapio-cal-feriado">{feriado.calDescricao || feriado.diaLivre}</span>
                 ) : hasItems ? (
                   <ul className="cardapio-cal-meals">
-                    {items.map((r) => (
+                    {sortPratosPorHorario(items).map((r) => (
                       <li key={r.carPratoCodigo}>
                         <span className="cardapio-cal-meal-turno">
-                          {formatHorario(r.carPratoHorario) || r.carPratoTurnoDesc?.slice(0, 8)}
+                          {labelTurnoPrato(r)}
                         </span>
                         <span className="cardapio-cal-meal-name">
                           {r.carPratoRefeicaoDesc || r.carPratoRefeicao}

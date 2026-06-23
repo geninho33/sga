@@ -173,6 +173,25 @@ function FormField({ field, form, onChange, referencias, isNew, recordId }) {
     );
   }
 
+  if (field.type === "time") {
+    return (
+      <div className="field">
+        <label className="field-label">
+          {field.label}
+          {field.required && <span className="req"> *</span>}
+        </label>
+        <input
+          className={"input" + (disabled ? " input--code" : "")}
+          type="time"
+          value={value}
+          readOnly={disabled}
+          disabled={disabled}
+          onChange={(e) => onChange(field.key, e.target.value)}
+        />
+      </div>
+    );
+  }
+
   const inputType = field.type === "password" ? "password" : field.type === "date" ? "date" : field.type === "number" || field.type === "decimal" ? "number" : "text";
   const isNum = field.type === "number" || field.type === "decimal";
   return (

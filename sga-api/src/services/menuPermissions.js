@@ -52,12 +52,25 @@ export const MENU_CATALOG = [
     { id: "rel-entradas-saidas-ue", label: "Entradas e Saídas nas UE", screen: "ww:rel-entradas-saidas-ue" },
   ]},
   { section: "Administração", items: [
+    { id: "prefeituras", label: "Prefeitura", screen: "ww:prefeituras" },
     { id: "gam-usuarios", label: "Usuários", screen: "ww:gam-usuarios" },
     { id: "gam-perfis", label: "Perfis", screen: "ww:gam-perfis" },
   ]},
 ];
 
-const GAM_REP_ID = 2;
+export const SUPER_USUARIO_ROLE_NAME = "super_usuario";
+
+export function getAllMenuIds() {
+  const ids = new Set();
+  for (const section of MENU_CATALOG) {
+    for (const item of section.items) {
+      ids.add(item.id);
+    }
+  }
+  return [...ids].sort();
+}
+
+export const GAM_REP_ID = 2;
 
 export function getMenuCatalog() {
   return MENU_CATALOG;
@@ -83,12 +96,17 @@ export async function setRoleMenuIds(roleId, menuIds) {
 }
 
 export async function getUserRoleIds(userGuid) {
-  const [rows] = await gamPool.query(
-    `SELECT UserMemRoleRoleId AS RoleId FROM usermemrole
-     WHERE UserGUID = :userGuid AND RepId = :repId`,
-    { userGuid, repId: GAM_REP_ID }
-  );
-  return rows.map((r) => Number(r.RoleId));
+  try {
+    const [rows] = await gamPool.query(
+      `SELECT UserMemRoleRoleId AS RoleId FROM usermemrole
+       WHERE UserGUID = :userGuid AND RepId = :repId`,
+      { userGuid, repId: GAM_REP_ID }
+    );
+    return rows.map((r) => Number(r.RoleId));
+  } catch (err) {
+    console.warn("[menuPermissions] GAM indisponível (confira MYSQL_GAM_DATABASE):", err.message);
+    return [];
+  }
 }
 
 export async function setUserRoleIds(userGuid, roleIds, auditUser = "web") {

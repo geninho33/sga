@@ -28,9 +28,9 @@ function drawLine(doc, x1, y, x2, color = C.borda) {
   doc.strokeColor(color).lineWidth(0.5).moveTo(x1, y).lineTo(x2, y).stroke();
 }
 
-function sectionTitle(doc, title, y) {
+function sectionTitle(doc, title, y, accent = C.azul) {
   const w = PAGE.width - PAGE.margin * 2;
-  doc.rect(PAGE.margin, y, w, 18).fill(C.azul);
+  doc.rect(PAGE.margin, y, w, 18).fill(accent);
   doc.fontSize(9).fillColor("#fff").text(title.toUpperCase(), PAGE.margin + 8, y + 5, { width: w - 16 });
   return y + 22;
 }
@@ -218,10 +218,40 @@ function drawPreparacoes(doc, report, y, repeatHeader) {
     p.nome, p.fichaTecnica, p.receitaPadronizada, p.perCapta, p.rendimento, p.faixaEtaria,
   ]);
   if (!rows.length) rows.push(["—", "—", "—", "—", "—", "—"]);
-  return drawSimpleTable(doc, "Controle de Preparações", cols, rows, y, repeatHeader, 16);
+  y = ensureSpace(doc, y, 50, repeatHeader);
+  y = sectionTitle(doc, "Receitas das Preparações — Controle Técnico", y, C.verde);
+  return drawSimpleTable(doc, "", cols, rows, y, repeatHeader, 14);
+}
+
+function drawTabelaFnde(doc, report, y, repeatHeader) {
+  const r = report.resumoMensal || {};
+  const cols = [
+    { label: "Nutriente", w: 210 },
+    { label: "Média do período", w: 110 },
+    { label: "Unidade", w: 65 },
+  ];
+  const rows = [
+    ["Valor Energético (Kcal)", roundNutrient(r.mediaCalorica, 0), "Kcal"],
+    ["Carboidratos", roundNutrient(r.mediaCarboidratos), "g"],
+    ["Proteínas", roundNutrient(r.mediaProteinas), "g"],
+    ["Lipídios", roundNutrient(r.mediaLipidios), "g"],
+    ["Fibras", roundNutrient(r.mediaFibras), "g"],
+    ["Cálcio", roundNutrient(r.mediaCalcio), "mg"],
+    ["Ferro", roundNutrient(r.mediaFerro), "mg"],
+    ["Magnésio", roundNutrient(r.mediaMagnesio), "mg"],
+    ["Zinco", roundNutrient(r.mediaZinco), "mg"],
+    ["Vitamina A", roundNutrient(r.mediaVitaminaA), "mcg"],
+    ["Vitamina C", roundNutrient(r.mediaVitaminaC), "mg"],
+    ["Sódio", roundNutrient(r.mediaSodio), "mg"],
+  ];
+  y = ensureSpace(doc, y, 50, repeatHeader);
+  y = sectionTitle(doc, "Tabela de Informação Nutricional — Referência FNDE", y, C.verde);
+  return drawSimpleTable(doc, "", cols, rows, y, repeatHeader, 12);
 }
 
 function drawNutrientes(doc, report, y, repeatHeader) {
+  y = drawTabelaFnde(doc, report, y, repeatHeader);
+
   const macroCols = [
     { label: "Dia", w: 110 },
     { label: "Kcal", w: 62 },
@@ -238,7 +268,7 @@ function drawNutrientes(doc, report, y, repeatHeader) {
     roundNutrient(d.lipidios),
     roundNutrient(d.fibras),
   ]);
-  y = drawSimpleTable(doc, "Tabela de Informação Nutricional (Diária)", macroCols, macroRows.length ? macroRows : [["—", "—", "—", "—", "—", "—"]], y, repeatHeader);
+  y = drawSimpleTable(doc, "Detalhamento Nutricional Diário — Macronutrientes", macroCols, macroRows.length ? macroRows : [["—", "—", "—", "—", "—", "—"]], y, repeatHeader);
 
   const microCols = [
     { label: "Dia", w: 90 },
@@ -260,19 +290,13 @@ function drawNutrientes(doc, report, y, repeatHeader) {
     roundNutrient(d.vitaminaC),
     roundNutrient(d.sodio),
   ]);
-  y = drawSimpleTable(doc, "Tabela de Micronutrientes (Diária)", microCols, microRows.length ? microRows : [["—", "—", "—", "—", "—", "—", "—", "—"]], y, repeatHeader);
+  y = drawSimpleTable(doc, "Detalhamento Nutricional Diário — Micronutrientes", microCols, microRows.length ? microRows : [["—", "—", "—", "—", "—", "—", "—", "—"]], y, repeatHeader);
 
-  y = ensureSpace(doc, y, 80, repeatHeader);
-  y = sectionTitle(doc, "Resumo Nutricional Mensal", y);
+  y = ensureSpace(doc, y, 60, repeatHeader);
+  y = sectionTitle(doc, "Resumo Nutricional do Período", y);
   const r = report.resumoMensal || {};
   y = fieldRow(doc, "Total de calorias ofertadas:", `${roundNutrient(r.totalCalorias, 0)} Kcal`, y);
   y = fieldRow(doc, "Média calórica diária:", `${roundNutrient(r.mediaCalorica, 0)} Kcal`, y);
-  y = fieldRow(doc, "Média de proteínas:", `${roundNutrient(r.mediaProteinas)} g`, y);
-  y = fieldRow(doc, "Média de carboidratos:", `${roundNutrient(r.mediaCarboidratos)} g`, y);
-  y = fieldRow(doc, "Média de lipídios:", `${roundNutrient(r.mediaLipidios)} g`, y);
-  y = fieldRow(doc, "Média de fibras:", `${roundNutrient(r.mediaFibras)} g`, y);
-  y = fieldRow(doc, "Média de vitaminas (A/C):", `${roundNutrient(r.mediaVitaminas)}`, y);
-  y = fieldRow(doc, "Média de minerais:", `${roundNutrient(r.mediaMinerais)}`, y);
   return y + 6;
 }
 
@@ -353,17 +377,33 @@ function drawNecessidadesEspeciais(doc, report, y, repeatHeader) {
 }
 
 function drawAssinaturas(doc, report, y, repeatHeader) {
-  y = ensureSpace(doc, y, 180, repeatHeader);
+  y = ensureSpace(doc, y, 200, repeatHeader);
 
-  y = sectionTitle(doc, "Responsabilidade Técnica", y);
   const nutri = report.nutricionistas?.[0];
-  y = fieldRow(doc, "Nome:", nutri?.usuNome || "", y);
-  y = fieldRow(doc, "CRN:", "", y);
-  y += 8;
-  doc.fontSize(8).fillColor(C.muted).text("Assinatura: _________________________________________", PAGE.margin, y);
-  y += 14;
-  doc.text(`Data: ${fmtDateTimeBr(new Date())}`, PAGE.margin, y);
+  const boxW = PAGE.width - PAGE.margin * 2;
+  const boxX = PAGE.margin;
+
+  y = sectionTitle(doc, "Identificação do Nutricionista Responsável", y, C.verde);
+  const boxTop = y + 4;
+  y += 12;
+
+  doc.strokeColor(C.texto).lineWidth(0.6);
+  doc.moveTo(boxX, y + 22).lineTo(boxX + 230, y + 22).stroke();
+  y += 26;
+  doc.fontSize(9).fillColor(C.texto).text(nutri?.usuNome || "Nome do Nutricionista Responsável", boxX, y, { width: boxW });
+  y += 12;
+  doc.fontSize(8).fillColor(C.muted).text(`CRN: ${nutri?.usuInscricao || "_____"}`, boxX, y);
+  y += 16;
+
+  doc.fontSize(8).fillColor(C.muted).text("Assinatura", boxX, y);
+  doc.strokeColor(C.borda).lineWidth(0.5);
+  doc.moveTo(boxX + 52, y + 10).lineTo(boxX + 260, y + 10).stroke();
+  doc.fontSize(8).fillColor(C.muted).text("Data da assinatura: ___/___/______", boxX + 280, y);
   y += 20;
+
+  doc.strokeColor(C.verde).lineWidth(0.8);
+  doc.rect(boxX, boxTop, boxW, y - boxTop).stroke();
+  y += 14;
 
   y = sectionTitle(doc, "Aprovação — Direção da Unidade Escolar", y);
   y = fieldRow(doc, "Nome:", report.identificacao?.responsavelUnidade !== "—" ? report.identificacao.responsavelUnidade : "", y);
@@ -407,30 +447,46 @@ function drawReceitasAnexo(doc, receitas, y, repeatHeader) {
 
   doc.addPage(pageOpts());
   y = PAGE.margin;
-  y = sectionTitle(doc, "Anexo — Receitas e Percaptas", y);
+  y = sectionTitle(doc, "Anexo — Receitas e Percaptas das Preparações", y, C.verde);
 
   for (const r of receitas) {
-    y = ensureSpace(doc, y, 60, repeatHeader);
-    doc.fontSize(10).fillColor(C.azul).text(r.pratoDscricao, PAGE.margin, y);
+    y = ensureSpace(doc, y, 70, repeatHeader);
+    const blockTop = y;
+    y += 4;
+    doc.fontSize(10).fillColor(C.verde).text(r.pratoDscricao, PAGE.margin + 8, y);
     y += 14;
     if (r.pratoModoDeFazer) {
-      doc.fontSize(7).fillColor(C.texto).text(r.pratoModoDeFazer, PAGE.margin, y, {
-        width: PAGE.width - PAGE.margin * 2,
+      doc.fontSize(7).fillColor(C.texto).text(r.pratoModoDeFazer, PAGE.margin + 8, y, {
+        width: PAGE.width - PAGE.margin * 2 - 16,
         lineGap: 1,
       });
-      y += doc.heightOfString(r.pratoModoDeFazer, { width: PAGE.width - PAGE.margin * 2, lineGap: 1 }) + 6;
+      y += doc.heightOfString(r.pratoModoDeFazer, { width: PAGE.width - PAGE.margin * 2 - 16, lineGap: 1 }) + 6;
     }
-    if (r.ingredientes?.length) {
+
+    const grupos = r.grupos?.length ? r.grupos : [];
+    if (!grupos.length) {
+      doc.fontSize(7).fillColor(C.muted).text("Sem ingredientes cadastrados.", PAGE.margin + 8, y);
+      y += 12;
+    }
+
+    for (const grupo of grupos) {
+      y = ensureSpace(doc, y, 40, repeatHeader);
+      const titulo = `${grupo.areaEtapa}${grupo.turno ? ` — ${grupo.turno}` : ""}`;
+      doc.fontSize(8).fillColor(C.azul).text(titulo, PAGE.margin + 8, y);
+      y += 11;
       const cols = [
-        { label: "Ingrediente", w: 200 },
-        { label: "Área / Etapa", w: 140 },
-        { label: "Turno", w: 80 },
-        { label: "Percapta", w: 60 },
+        { label: "Ingrediente", w: 340 },
+        { label: "Percapta", w: 124 },
       ];
-      const rows = r.ingredientes.map((i) => [i.prodDescricao, i.area, i.turno, i.quantidadeGramas]);
-      y = drawSimpleTable(doc, "", cols, rows, y, repeatHeader, 13);
+      const rows = (grupo.itens || []).map((i) => [i.prodDescricao, i.quantidadeGramas]);
+      if (rows.length) {
+        y = drawSimpleTable(doc, "", cols, rows, y, repeatHeader, 12);
+      }
     }
-    y += 6;
+
+    doc.strokeColor(C.verdeClaro).lineWidth(0.6);
+    doc.rect(PAGE.margin, blockTop, PAGE.width - PAGE.margin * 2, y - blockTop + 4).stroke();
+    y += 10;
   }
   return y;
 }
@@ -463,7 +519,7 @@ export function generateCardapioPnaePdf(report) {
     y = drawNecessidadesEspeciais(doc, report, y, repeatHeader);
     y = drawAssinaturas(doc, report, y, repeatHeader);
 
-    if (report.params?.opcReceita && report.receitas?.length) {
+    if ((report.receitas?.length ?? 0) > 0) {
       drawReceitasAnexo(doc, report.receitas, y, repeatHeader);
     }
 

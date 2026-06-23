@@ -306,9 +306,10 @@ router.get("/cardapios/:id/impressao", async (req, res, next) => {
       carDapMesAno: req.query.carDapMesAno,
       locCodigo: req.query.locCodigo,
       opcReceita: req.query.opcReceita || "N",
+      opcNutrientes: req.query.opcNutrientes || "S",
       opcSemanaINI: req.query.opcSemanaINI,
       opcSemanaFIN: req.query.opcSemanaFIN,
-      opcFormato: req.query.opcFormato || "pnae",
+      opcFormato: req.query.opcFormato || "calendario",
     });
 
     if (result.error) return res.status(400).json({ error: result.error });

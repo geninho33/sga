@@ -147,6 +147,8 @@ export const WW_FORM_CONFIGS = {
     fields: [
       { key: "refTipCodigo", label: "Código", type: "number", readOnly: true },
       { key: "refTipDescricao", label: "Descrição", type: "text", required: true },
+      { key: "refTipHorario", label: "Horário 1", type: "time" },
+      { key: "refTipHorario2", label: "Horário 2", type: "time" },
       { key: "refTipAbreviatura", label: "Abreviatura", type: "text" },
       { key: "refTipperiodo", label: "Período", type: "select", options: [
         { value: "M", label: "Matutino" },
@@ -185,7 +187,6 @@ export const WW_FORM_CONFIGS = {
     fields: [
       { key: "carGruCodigo", label: "Código", type: "number", readOnly: true },
       { key: "carGruDescricao", label: "Descrição", type: "text", required: true },
-      { key: "carDapCodigo", label: "Cardápio", type: "lookup", lookup: "cardapios" },
       { key: "carGruCozinhaCentral", label: "Cozinha central", type: "select", options: [{ value: "S", label: "Sim" }, { value: "N", label: "Não" }] },
       { key: "carGruNutricionista", label: "Nutricionista", type: "lookup", lookup: "nutricionistas" },
       { key: "carGruStatus", label: "Situação", type: "select", options: STATUS_OPTIONS.filter((o) => o.value) },
@@ -511,7 +512,10 @@ export function recordToForm(config, row) {
     const v = row?.[field.key];
     if (v === null || v === undefined) form[field.key] = "";
     else if (field.type === "date") form[field.key] = String(v).slice(0, 10);
-    else form[field.key] = String(v);
+    else if (field.type === "time") {
+      const m = String(v).match(/(\d{1,2}):(\d{2})/);
+      form[field.key] = m ? `${String(m[1]).padStart(2, "0")}:${m[2]}` : "";
+    } else form[field.key] = String(v);
   }
   return form;
 }
@@ -537,6 +541,8 @@ export function formToPayload(config, form, isNew) {
     if (field.type === "number" || field.type === "decimal" || field.type === "lookup") {
       payload[field.key] = raw === "" ? null : Number(raw);
     } else if (field.type === "date") {
+      payload[field.key] = raw === "" ? null : raw;
+    } else if (field.type === "time") {
       payload[field.key] = raw === "" ? null : raw;
     } else {
       payload[field.key] = raw ?? "";

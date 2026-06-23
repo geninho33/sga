@@ -55,7 +55,20 @@ function addNutrients(target, source, factor = 1) {
   }
 }
 
-/** Espelha ImprimeMacroMicroNutrientes do GeneXus: nutriente × percapta (kg). */
+/** Percentuais de macros conforme PRINTCardapioMacrosMicros (participação em gramas). */
+export function macroPercentByGrams(totals) {
+  const carb = Number(totals?.carboidratos ?? totals?.mediaCarboidratos) || 0;
+  const prot = Number(totals?.proteinas ?? totals?.mediaProteinas) || 0;
+  const lip = Number(totals?.lipidios ?? totals?.mediaLipidios) || 0;
+  const sum = carb + prot + lip || 1;
+  return {
+    carbPct: Math.round((carb * 100) / sum),
+    protPct: Math.round((prot * 100) / sum),
+    lipPct: Math.round((lip * 100) / sum),
+  };
+}
+
+/** Espelha ImprimeMacroMicroNutrientes: nutriente do produto × percapta (kg). */
 export async function calcNutrientsForDay(prefCodigo, carDapCodigo, dateIso, pratoCodigos) {
   if (!pratoCodigos?.length) return emptyNutrients();
 
@@ -67,7 +80,8 @@ export async function calcNutrientsForDay(prefCodigo, carDapCodigo, dateIso, pra
   });
 
   const [ingredientes] = await pool.query(
-    `SELECT DISTINCT pi.pratoCodigo, pi.pratIngrProdCodigo, pi.pratIngrQuantidade
+    `SELECT pi.pratoCodigo, pi.pratIngrProdCodigo, pi.pratIngrQuantidade,
+            pi.AreEnsCodigo, pi.AreEnsSequencial
      FROM trnscardapioprato cp
      INNER JOIN trnspratosingredientes pi
        ON pi.prefCodigo = cp.prefCodigo AND pi.pratoCodigo = cp.carPratoRefeicao

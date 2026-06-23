@@ -18,8 +18,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-await ensureAuthTables();
-
+// Health disponível imediatamente — não bloqueia em migrations (entrypoint aguarda esta rota)
 app.get("/health", (_req, res) => {
   res.json({ status: "ok", service: "sga-api" });
 });
@@ -45,4 +44,9 @@ app.use((err, _req, res, _next) => {
 
 app.listen(config.port, () => {
   console.log(`sga-api ouvindo em http://localhost:${config.port}`);
+});
+
+ensureAuthTables().catch((err) => {
+  console.error("[sga-api] Falha ao preparar schema:", err.message);
+  process.exit(1);
 });
