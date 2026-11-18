@@ -23,23 +23,29 @@ export async function createFornecedor(prefCodigo, body) {
 
   const forCodigo = await nextCode(prefCodigo, "trnsfornecedores", "forCodigo");
   const forStatus = body.forStatus === "I" ? "I" : "A";
+  const forCnpjcpf = String(body.forCnpjcpf ?? "");
+  const documento = forCnpjcpf.replace(/[.\-/\s]/g, "");
+  let forFisicaJuridica = "";
+  if (/^\d{11}$/.test(documento)) forFisicaJuridica = "F";
+  if (/^[A-Z0-9]{12}\d{2}$/i.test(documento)) forFisicaJuridica = "J";
 
   await pool.query(
     `INSERT INTO trnsfornecedores (
-       prefCodigo, forCodigo, forNome, forAbreviatura, forCnpjcpf, forEndereco, forComplemento,
+       prefCodigo, forCodigo, forNome, forAbreviatura, forCnpjcpf, forFisicaJuridica, forEndereco, forComplemento,
        forBairro, forCidade, forEstado, forCep, forTelefone, forContato, forEmail,
        forTipo, forCooperativa, forDap, forStatus, forDataCad, forDataAlt
      ) VALUES (
-       :prefCodigo, :forCodigo, :forNome, :forAbreviatura, :forCnpjcpf, :forEndereco, :forComplemento,
+       :prefCodigo, :forCodigo, :forNome, :forAbreviatura, :forCnpjcpf, :forFisicaJuridica, :forEndereco, :forComplemento,
        :forBairro, :forCidade, :forEstado, :forCep, :forTelefone, :forContato, :forEmail,
-       0, 'N', 'N', :forStatus, NOW(), NOW()
+       0, 0, '', :forStatus, NOW(), NOW()
      )`,
     {
       prefCodigo,
       forCodigo,
       forNome: nome,
       forAbreviatura: body.forAbreviatura != null ? String(body.forAbreviatura) : "",
-      forCnpjcpf: body.forCnpjcpf != null ? String(body.forCnpjcpf) : "",
+      forCnpjcpf,
+      forFisicaJuridica,
       forEndereco: body.forEndereco != null ? String(body.forEndereco) : "",
       forComplemento: body.forComplemento != null ? String(body.forComplemento) : "",
       forBairro: body.forBairro != null ? String(body.forBairro) : "",
