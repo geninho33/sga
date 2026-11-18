@@ -6,6 +6,13 @@ const ACAO_AJUSTE_OPTIONS = [
   { value: "S", label: "Saída" },
 ];
 
+const UF_OPTIONS = [
+  { value: "", label: "Selecione…" },
+  ..."AC AL AP AM BA CE DF ES GO MA MT MS MG PA PB PR PE PI RJ RN RS RO RR SC SP SE TO"
+    .split(" ")
+    .map((uf) => ({ value: uf, label: uf })),
+];
+
 /** Formulários das transactions GeneXus (objeto aberto no Alterar do WW). */
 export const WW_FORM_CONFIGS = {
   unidades: {
@@ -276,24 +283,24 @@ export const WW_FORM_CONFIGS = {
         title: "Identificação",
         fields: [
           { key: "forCodigo", label: "Código", type: "number", readOnly: true },
-          { key: "forNome", label: "Nome", type: "text", required: true },
-          { key: "forAbreviatura", label: "Abreviatura", type: "text" },
-          { key: "forCnpjcpf", label: "CNPJ ou CPF", type: "text" },
+          { key: "forNome", label: "Nome", type: "text", required: true, maxLength: 100 },
+          { key: "forAbreviatura", label: "Abreviatura", type: "text", maxLength: 30 },
+          { key: "forCnpjcpf", label: "CNPJ ou CPF", type: "text", maxLength: 20 },
           { key: "forStatus", label: "Situação", type: "select", options: STATUS_OPTIONS.filter((o) => o.value) },
         ],
       },
       {
         title: "Endereço e contato",
         fields: [
-          { key: "forEndereco", label: "Endereço", type: "text" },
-          { key: "forComplemento", label: "Complemento", type: "text" },
-          { key: "forBairro", label: "Bairro", type: "text" },
-          { key: "forCidade", label: "Cidade", type: "text" },
-          { key: "forEstado", label: "UF", type: "text" },
-          { key: "forCep", label: "CEP", type: "text" },
-          { key: "forTelefone", label: "Telefone", type: "text" },
-          { key: "forContato", label: "Contato", type: "text" },
-          { key: "forEmail", label: "E-mail", type: "text" },
+          { key: "forCep", label: "CEP", type: "text", maxLength: 10, mask: "cep", inputMode: "numeric" },
+          { key: "forEndereco", label: "Endereço", type: "text", maxLength: 50 },
+          { key: "forComplemento", label: "Complemento", type: "text", maxLength: 20 },
+          { key: "forBairro", label: "Bairro", type: "text", maxLength: 30 },
+          { key: "forCidade", label: "Cidade", type: "text", maxLength: 30 },
+          { key: "forEstado", label: "UF", type: "select", options: UF_OPTIONS, maxLength: 2 },
+          { key: "forTelefone", label: "Telefone", type: "text", maxLength: 50, mask: "phone", inputMode: "tel" },
+          { key: "forContato", label: "Contato", type: "text", maxLength: 20, mask: "contact" },
+          { key: "forEmail", label: "E-mail", type: "text", maxLength: 50 },
         ],
       },
     ],

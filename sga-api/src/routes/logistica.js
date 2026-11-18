@@ -468,6 +468,45 @@ router.get("/cronograma", async (req, res, next) => {
   }
 });
 
+router.get("/fornecedores/cep/:cep", async (req, res) => {
+  const { cep } = req.params;
+  if (!/^\d{8}$/.test(cep)) {
+    return res.status(400).json({ error: "Informe um CEP com oito dígitos." });
+  }
+
+  const token = process.env.CORREIOS_CEP_TOKEN?.trim();
+  const url = token
+    ? `https://api.correios.com.br/cep/v1/enderecos/${cep}`
+    : `https://viacep.com.br/ws/${cep}/json/`;
+  const unavailable = () => res.status(502).json({
+    error: "A consulta de CEP está indisponível. Preencha o endereço manualmente.",
+  });
+
+  try {
+    const response = await fetch(url, {
+      headers: token ? { Authorization: `Bearer ${token}` } : undefined,
+      redirect: "error",
+      signal: AbortSignal.timeout(5000),
+    });
+    const address = response.ok ? await response.json() : null;
+    if (response.status === 404 || address?.erro) {
+      return res.status(404).json({ error: "CEP não encontrado. Preencha o endereço manualmente." });
+    }
+    if (!address?.localidade || !address?.uf) return unavailable();
+
+    return res.json({
+      data: {
+        forEndereco: token ? address.nomeLogradouro ?? address.logradouro ?? "" : address.logradouro ?? "",
+        forBairro: address.bairro ?? "",
+        forCidade: address.localidade,
+        forEstado: address.uf,
+      },
+    });
+  } catch {
+    return unavailable();
+  }
+});
+
 router.get("/fornecedores/:id", async (req, res, next) => {
   try {
     const prefCodigo = getPrefCodigo(req);

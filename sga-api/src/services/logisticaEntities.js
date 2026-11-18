@@ -7,6 +7,39 @@ function auditUser(req) {
 }
 
 // --- Fornecedores ---
+const fornecedorTextFields = {
+  forNome: ["Nome", 100],
+  forAbreviatura: ["Abreviatura", 30],
+  forCnpjcpf: ["CNPJ ou CPF", 20],
+  forEndereco: ["Endereço", 50],
+  forComplemento: ["Complemento", 20],
+  forBairro: ["Bairro", 30],
+  forCidade: ["Cidade", 30],
+  forEstado: ["UF", 2],
+  forCep: ["CEP", 10],
+  forTelefone: ["Telefone", 50],
+  forContato: ["Contato", 20],
+  forEmail: ["E-mail", 50],
+};
+
+function fornecedorParams(body) {
+  const params = {};
+  for (const [key, [label, maxLength]] of Object.entries(fornecedorTextFields)) {
+    const value = String(body[key] ?? "").trim();
+    if (key === "forNome" && !value) return { error: "Nome é obrigatório" };
+    if ([...value].length > maxLength) {
+      return { error: `${label} deve ter no máximo ${maxLength} caracteres.` };
+    }
+    params[key] = value;
+  }
+  params.forEstado = params.forEstado.toUpperCase();
+  if (params.forEstado && !/^[A-Z]{2}$/.test(params.forEstado)) {
+    return { error: "Informe a sigla da UF com duas letras." };
+  }
+  params.forStatus = body.forStatus === "I" ? "I" : "A";
+  return params;
+}
+
 export async function loadFornecedor(prefCodigo, forCodigo) {
   const [rows] = await pool.query(
     `SELECT forCodigo, forNome, forAbreviatura, forCnpjcpf, forEndereco, forComplemento,
@@ -18,13 +51,11 @@ export async function loadFornecedor(prefCodigo, forCodigo) {
 }
 
 export async function createFornecedor(prefCodigo, body) {
-  const nome = String(body.forNome || "").trim();
-  if (!nome) return { error: "Nome é obrigatório" };
+  const params = fornecedorParams(body);
+  if (params.error) return params;
 
   const forCodigo = await nextCode(prefCodigo, "trnsfornecedores", "forCodigo");
-  const forStatus = body.forStatus === "I" ? "I" : "A";
-  const forCnpjcpf = String(body.forCnpjcpf ?? "");
-  const documento = forCnpjcpf.replace(/[.\-/\s]/g, "");
+  const documento = params.forCnpjcpf.replace(/[.\-/\s]/g, "");
   let forFisicaJuridica = "";
   if (/^\d{11}$/.test(documento)) forFisicaJuridica = "F";
   if (/^[A-Z0-9]{12}\d{2}$/i.test(documento)) forFisicaJuridica = "J";
@@ -39,32 +70,14 @@ export async function createFornecedor(prefCodigo, body) {
        :forBairro, :forCidade, :forEstado, :forCep, :forTelefone, :forContato, :forEmail,
        0, 0, '', :forStatus, NOW(), NOW()
      )`,
-    {
-      prefCodigo,
-      forCodigo,
-      forNome: nome,
-      forAbreviatura: body.forAbreviatura != null ? String(body.forAbreviatura) : "",
-      forCnpjcpf,
-      forFisicaJuridica,
-      forEndereco: body.forEndereco != null ? String(body.forEndereco) : "",
-      forComplemento: body.forComplemento != null ? String(body.forComplemento) : "",
-      forBairro: body.forBairro != null ? String(body.forBairro) : "",
-      forCidade: body.forCidade != null ? String(body.forCidade) : "",
-      forEstado: body.forEstado != null ? String(body.forEstado) : "",
-      forCep: body.forCep != null ? String(body.forCep) : "",
-      forTelefone: body.forTelefone != null ? String(body.forTelefone) : "",
-      forContato: body.forContato != null ? String(body.forContato) : "",
-      forEmail: body.forEmail != null ? String(body.forEmail) : "",
-      forStatus,
-    }
+    { ...params, prefCodigo, forCodigo, forFisicaJuridica }
   );
   return { data: await loadFornecedor(prefCodigo, forCodigo) };
 }
 
 export async function updateFornecedor(prefCodigo, forCodigo, body) {
-  const nome = String(body.forNome || "").trim();
-  if (!nome) return { error: "Nome é obrigatório" };
-  const forStatus = body.forStatus === "I" ? "I" : "A";
+  const params = fornecedorParams(body);
+  if (params.error) return params;
 
   const [result] = await pool.query(
     `UPDATE trnsfornecedores SET
@@ -74,23 +87,7 @@ export async function updateFornecedor(prefCodigo, forCodigo, body) {
        forTelefone = :forTelefone, forContato = :forContato, forEmail = :forEmail,
        forStatus = :forStatus, forDataAlt = NOW()
      WHERE prefCodigo = :prefCodigo AND forCodigo = :forCodigo`,
-    {
-      prefCodigo,
-      forCodigo,
-      forNome: nome,
-      forAbreviatura: body.forAbreviatura != null ? String(body.forAbreviatura) : "",
-      forCnpjcpf: body.forCnpjcpf != null ? String(body.forCnpjcpf) : "",
-      forEndereco: body.forEndereco != null ? String(body.forEndereco) : "",
-      forComplemento: body.forComplemento != null ? String(body.forComplemento) : "",
-      forBairro: body.forBairro != null ? String(body.forBairro) : "",
-      forCidade: body.forCidade != null ? String(body.forCidade) : "",
-      forEstado: body.forEstado != null ? String(body.forEstado) : "",
-      forCep: body.forCep != null ? String(body.forCep) : "",
-      forTelefone: body.forTelefone != null ? String(body.forTelefone) : "",
-      forContato: body.forContato != null ? String(body.forContato) : "",
-      forEmail: body.forEmail != null ? String(body.forEmail) : "",
-      forStatus,
-    }
+    { ...params, prefCodigo, forCodigo }
   );
   if (result.affectedRows === 0) return { error: "Registro não encontrado", status: 404 };
   return { data: await loadFornecedor(prefCodigo, forCodigo) };

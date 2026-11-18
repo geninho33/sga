@@ -109,8 +109,22 @@ function ImageField({ field, form, onChange, recordId, isNew }) {
   );
 }
 
-function FormField({ field, form, onChange, referencias, isNew, recordId }) {
+function maskFieldValue(mask, value) {
+  if (!mask || (mask === "contact" && /[^\d().\s-]/.test(value))) return value;
+  const digits = value.replace(/\D/g, "");
+  if (mask === "cep") {
+    return digits.length > 5 ? `${digits.slice(0, 5)}-${digits.slice(5, 8)}` : digits;
+  }
+  const phone = digits.slice(0, 11);
+  if (phone.length <= 2) return phone;
+  const separator = phone.length === 11 ? 7 : 6;
+  const suffix = phone.slice(separator);
+  return `(${phone.slice(0, 2)}) ${phone.slice(2, separator)}${suffix ? `-${suffix}` : ""}`;
+}
+
+function FormField({ field, form, onChange, referencias, isNew, recordId, message }) {
   const value = form[field.key] ?? "";
+  const inputId = `ww-field-${field.key}`;
   const disabled = field.readOnly || (!isNew && field.readOnlyOnEdit);
   const showField = !field.insertOnly || isNew;
 
@@ -123,11 +137,11 @@ function FormField({ field, form, onChange, referencias, isNew, recordId }) {
   if (field.type === "select") {
     return (
       <div className="field">
-        <label className="field-label">
+        <label className="field-label" htmlFor={inputId}>
           {field.label}
           {field.required && <span className="req"> *</span>}
         </label>
-        <select className={"input" + (disabled ? " input--code" : "")} value={value} disabled={disabled} onChange={(e) => onChange(field.key, e.target.value)}>
+        <select id={inputId} className={"input" + (disabled ? " input--code" : "")} value={value} disabled={disabled} onChange={(e) => onChange(field.key, e.target.value)}>
           {field.options.map((o) => (
             <option key={o.value} value={o.value}>
               {o.label}
@@ -193,23 +207,26 @@ function FormField({ field, form, onChange, referencias, isNew, recordId }) {
   }
 
   const inputType = field.type === "password" ? "password" : field.type === "date" ? "date" : field.type === "number" || field.type === "decimal" ? "number" : "text";
-  const isNum = field.type === "number" || field.type === "decimal";
   return (
     <div className="field">
-      <label className="field-label">
+      <label className="field-label" htmlFor={inputId}>
         {field.label}
         {field.required && <span className="req"> *</span>}
         {field.insertOnly && isNew && <span className="muted" style={{ fontSize: "var(--text-xs)" }}> (inclusão)</span>}
       </label>
       <input
+        id={inputId}
         className={"input" + (disabled ? " input--code" : "")}
         type={inputType}
         step={field.type === "decimal" ? "any" : undefined}
+        maxLength={field.maxLength}
+        inputMode={field.inputMode}
         value={value}
         readOnly={disabled && field.type !== "password"}
         disabled={disabled && field.type === "password"}
-        onChange={(e) => onChange(field.key, e.target.value)}
+        onChange={(e) => onChange(field.key, maskFieldValue(field.mask, e.target.value))}
       />
+      {message && <small className="muted" role="status">{message}</small>}
     </div>
   );
 }
@@ -249,6 +266,9 @@ export default function WwTransactionFormPage({ moduleId, recordId, isNew = fals
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
   const [saveMsg, setSaveMsg] = useState(null);
+  const [cepRequest, setCepRequest] = useState(null);
+  const [cepMessage, setCepMessage] = useState("");
+  const [cepLoading, setCepLoading] = useState(false);
   const [doencasItems, setDoencasItems] = useState([]);
   const [doencasCatalogo, setDoencasCatalogo] = useState([]);
   const [comprasTab, setComprasTab] = useState(initialTab === "itens" ? "itens" : "dados");
@@ -288,8 +308,36 @@ export default function WwTransactionFormPage({ moduleId, recordId, isNew = fals
   }, [config, isNew, recordId]);
 
   useEffect(() => {
+    setCepRequest(null);
+    setCepMessage("");
+    setCepLoading(false);
     load();
   }, [load]);
+
+  useEffect(() => {
+    if (!cepRequest) return;
+    const controller = new AbortController();
+    apiJson(`/api/logistica/fornecedores/cep/${cepRequest.cep}`, { signal: controller.signal })
+      .then(({ data }) => {
+        if (controller.signal.aborted) return;
+        setForm((current) => {
+          if (current?.forCep?.replace(/\D/g, "") !== cepRequest.cep) return current;
+          const next = { ...current };
+          for (const [key, value] of Object.entries(data)) {
+            if (value && current[key] === cepRequest.form[key]) next[key] = value;
+          }
+          return next;
+        });
+        setCepMessage("");
+      })
+      .catch((err) => {
+        if (!controller.signal.aborted) setCepMessage(err.message);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setCepLoading(false);
+      });
+    return () => controller.abort();
+  }, [cepRequest]);
 
   useEffect(() => {
     if (moduleId !== "atendimentos") return;
@@ -299,6 +347,13 @@ export default function WwTransactionFormPage({ moduleId, recordId, isNew = fals
   }, [moduleId]);
 
   const onChange = (key, value) => {
+    if (moduleId === "fornecedores" && key === "forCep") {
+      const cep = value.replace(/\D/g, "");
+      const complete = cep.length === 8;
+      setCepRequest(complete ? { cep, form } : null);
+      setCepLoading(complete);
+      setCepMessage(complete ? "Consultando CEP…" : "");
+    }
     setForm((f) => {
       const next = { ...f, [key]: value };
       if (moduleId === "atendimentos" && key === "carGruCodigo" && value) {
@@ -313,7 +368,13 @@ export default function WwTransactionFormPage({ moduleId, recordId, isNew = fals
   };
 
   const handleSave = async () => {
-    if (!config) return;
+    if (!config || cepLoading) return;
+    for (const field of getFormFields(config)) {
+      if (field.maxLength && [...String(form[field.key] ?? "").trim()].length > field.maxLength) {
+        setError(`${field.label} deve ter no máximo ${field.maxLength} caracteres.`);
+        return;
+      }
+    }
     for (const key of config.requiredFields || []) {
       if (!String(form[key] ?? "").trim()) {
         const f = getFormFields(config).find((x) => x.key === key);
@@ -458,7 +519,11 @@ export default function WwTransactionFormPage({ moduleId, recordId, isNew = fals
                 style={{ gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}
               >
                 {section.fields.map((field) => (
-                  <FormField key={field.key} field={field} form={form} onChange={onChange} referencias={referencias} isNew={isNew} recordId={recordId} />
+                  <FormField
+                    key={field.key} field={field} form={form} onChange={onChange}
+                    referencias={referencias} isNew={isNew} recordId={recordId}
+                    message={field.mask === "cep" ? cepMessage : undefined}
+                  />
                 ))}
               </div>
             </div>
@@ -525,7 +590,7 @@ export default function WwTransactionFormPage({ moduleId, recordId, isNew = fals
           <button type="button" className="btn btn-ghost" onClick={onBack} disabled={saving}>
             Fechar
           </button>
-          <button type="button" className="btn btn-primary" onClick={handleSave} disabled={saving}>
+          <button type="button" className="btn btn-primary" onClick={handleSave} disabled={saving || cepLoading}>
             <FaIcon icon="fa-check" /> {saving ? "Confirmando…" : "Confirmar"}
           </button>
         </div>
