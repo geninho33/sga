@@ -38,7 +38,7 @@ async function loadLocalPrint(prefCodigo, locCodigo) {
             l.locTipoUnidade, l.locCodigoLargada, l.locVinculada,
             lv.locDescricao AS locVinculadaNome
      FROM trnslocal l
-     LEFT JOIN trnslocal lv ON lv.prefCodigo = l.prefCodigo AND lv.locCodigo = l.locVinculada
+     LEFT JOIN trnslocal lv ON lv.prefCodigo = l.prefCodigo AND lv.locCodigo = l.locVinculada AND NOT (lv.locStatus <=> 'I')
      WHERE l.prefCodigo = :prefCodigo AND l.locCodigo = :locCodigo AND l.locStatus = 'A'`,
     { prefCodigo, locCodigo }
   );
@@ -84,7 +84,7 @@ async function loadAtendimentoText(prefCodigo, remCodigo, locCodigo) {
        LEFT JOIN trnsAreaEnsinoEtapa et
          ON et.prefCodigo = ae.prefCodigo AND et.AreEnsCodigo = ae.AreEnsCodigo
         AND et.AreEnsSequencial = :seq
-       WHERE ae.prefCodigo = :prefCodigo AND ae.AreEnsCodigo = :codigo`,
+       WHERE ae.prefCodigo = :prefCodigo AND ae.AreEnsCodigo = :codigo AND NOT (ae.ArenEnsStatus <=> 'I')`,
       { prefCodigo, codigo: row.remAreEnsCodigo, seq: row.remAreEnsSequencial }
     );
     const ar = areaRows[0];
@@ -101,9 +101,9 @@ async function loadItensPrint(prefCodigo, distCodigo) {
             p.prodPesoConsumo, p.prodObsConsumo, u.uniFracao,
             di.distItemQuantidade, di.distItemPesoTotal, di.distItemValidade, di.distItemLote
      FROM trnsdistribuicaoitens di
-     INNER JOIN trnsprodutos p ON p.prefCodigo = di.prefCodigo AND p.prodCodigo = di.distItemProduto
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
-     WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo
+     INNER JOIN trnsprodutos p ON p.prefCodigo = di.prefCodigo AND p.prodCodigo = di.distItemProduto AND NOT (p.prodStatus <=> 'I')
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
+     WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo AND NOT (di.distItemStatus <=> 'I')
      ORDER BY p.prodDescricao`,
     { prefCodigo, distCodigo }
   );
@@ -135,11 +135,11 @@ export async function loadGuiaDistribuicaoPrintData(prefCodigo, distCodigo) {
     `SELECT d.*, lo.locDescricao AS distLocalOrigemNome, ld.locDescricao AS distLocalDestinoNome,
             dt.disTipDescricao, r.rotaDescricao
      FROM trnsdistribuicao d
-     LEFT JOIN trnslocal lo ON lo.prefCodigo = d.prefCodigo AND lo.locCodigo = d.distLocalOrigem
-     LEFT JOIN trnslocal ld ON ld.prefCodigo = d.prefCodigo AND ld.locCodigo = d.distLocalDestino
+     LEFT JOIN trnslocal lo ON lo.prefCodigo = d.prefCodigo AND lo.locCodigo = d.distLocalOrigem AND NOT (lo.locStatus <=> 'I')
+     LEFT JOIN trnslocal ld ON ld.prefCodigo = d.prefCodigo AND ld.locCodigo = d.distLocalDestino AND NOT (ld.locStatus <=> 'I')
      LEFT JOIN trnsdistribuicaotipo dt
        ON dt.prefCodigo = d.prefCodigo AND dt.disTipNumero = d.distCodigoTipoRemessa AND dt.disTipStatus = 'A'
-     LEFT JOIN trnsrota r ON r.prefCodigo = d.prefCodigo AND r.rotaCodigo = d.distRotaCodigo
+     LEFT JOIN trnsrota r ON r.prefCodigo = d.prefCodigo AND r.rotaCodigo = d.distRotaCodigo AND NOT (r.rotaStatus <=> 'I')
      WHERE d.prefCodigo = :prefCodigo AND d.distCodigo = :distCodigo AND d.distStatus = 'A'`,
     { prefCodigo, distCodigo }
   );

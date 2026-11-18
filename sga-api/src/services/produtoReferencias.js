@@ -28,12 +28,12 @@ export const PRODUTO_SELECT = `
 
 export const PRODUTO_FROM = `
   FROM trnsprodutos p
-  LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo
-  LEFT JOIN trnsprodutosorigem o ON o.prodOrigCodigo = p.prodOrigem
-  LEFT JOIN trnsdistribuicaotipo r ON r.prefCodigo = p.prefCodigo AND r.disTipNumero = p.prodCodigoTipoRemessa
-  LEFT JOIN trnstaco tk ON tk.tacoCodigo = p.prodTaco
-  LEFT JOIN trnsunidades umc ON umc.prefCodigo = p.prefCodigo AND umc.uniCodigo = p.prodUnidMedCompra
-  LEFT JOIN trnsunidades ume ON ume.prefCodigo = p.prefCodigo AND ume.uniCodigo = p.prodUnidMedEstocagem
+  LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo AND NOT (g.prodGrupStatus <=> 'I')
+  LEFT JOIN trnsprodutosorigem o ON o.prodOrigCodigo = p.prodOrigem AND NOT (o.prodOrigStatus <=> 'I')
+  LEFT JOIN trnsdistribuicaotipo r ON r.prefCodigo = p.prefCodigo AND r.disTipNumero = p.prodCodigoTipoRemessa AND NOT (r.disTipStatus <=> 'I')
+  LEFT JOIN trnstaco tk ON tk.tacoCodigo = p.prodTaco AND NOT (tk.tacoStatus <=> 'I')
+  LEFT JOIN trnsunidades umc ON umc.prefCodigo = p.prefCodigo AND umc.uniCodigo = p.prodUnidMedCompra AND NOT (umc.uniStatus <=> 'I')
+  LEFT JOIN trnsunidades ume ON ume.prefCodigo = p.prefCodigo AND ume.uniCodigo = p.prodUnidMedEstocagem AND NOT (ume.uniStatus <=> 'I')
 `;
 
 export async function listGruposAtivos() {

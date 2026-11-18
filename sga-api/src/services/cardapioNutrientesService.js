@@ -85,10 +85,13 @@ export async function calcNutrientsForDay(prefCodigo, carDapCodigo, dateIso, pra
      FROM trnscardapioprato cp
      INNER JOIN trnspratosingredientes pi
        ON pi.prefCodigo = cp.prefCodigo AND pi.pratoCodigo = cp.carPratoRefeicao
+     INNER JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao
+       AND NOT (p.pratoStatus <=> 'I')
      WHERE cp.prefCodigo = :prefCodigo
        AND cp.carDapCodigo = :carDapCodigo
        AND DATE(cp.carPratoData) = :dateIso
        AND cp.carPratoRefeicao IN (${placeholders})
+       AND NOT (pi.pratIngrStatus <=> 'I')
        AND pi.pratIngrQuantidade > 0`,
     params
   );
@@ -105,7 +108,7 @@ export async function calcNutrientsForDay(prefCodigo, carDapCodigo, dateIso, pra
   const [produtos] = await pool.query(
     `SELECT prodCodigo, ${NUTRIENT_FIELDS.join(", ")}, prodNpcal, prodNdpcal, prodSal
      FROM trnsprodutos
-     WHERE prefCodigo = :prefCodigo AND prodCodigo IN (${prodPh})`,
+     WHERE prefCodigo = :prefCodigo AND prodCodigo IN (${prodPh}) AND NOT (prodStatus <=> 'I')`,
     prodParams
   );
 
@@ -230,10 +233,13 @@ export async function loadAgriculturaFamiliar(prefCodigo, carDapCodigo) {
   const [rows] = await pool.query(
     `SELECT DISTINCT p.prodDescricao, COALESCE(po.prodOrigDescricao, '') AS origem
      FROM trnscardapioprato cp
+     INNER JOIN trnspratos pr ON pr.prefCodigo = cp.prefCodigo AND pr.pratoCodigo = cp.carPratoRefeicao
+       AND NOT (pr.pratoStatus <=> 'I')
      INNER JOIN trnspratosingredientes pi ON pi.prefCodigo = cp.prefCodigo AND pi.pratoCodigo = cp.carPratoRefeicao
-     INNER JOIN trnsprodutos p ON p.prefCodigo = pi.prefCodigo AND p.prodCodigo = pi.pratIngrProdCodigo
-     LEFT JOIN trnsprodutosorigem po ON po.prodOrigCodigo = p.prodOrigem
+     INNER JOIN trnsprodutos p ON p.prefCodigo = pi.prefCodigo AND p.prodCodigo = pi.pratIngrProdCodigo AND NOT (p.prodStatus <=> 'I')
+     LEFT JOIN trnsprodutosorigem po ON po.prodOrigCodigo = p.prodOrigem AND NOT (po.prodOrigStatus <=> 'I')
      WHERE cp.prefCodigo = :prefCodigo AND cp.carDapCodigo = :carDapCodigo
+       AND NOT (pi.pratIngrStatus <=> 'I')
        AND (
          LOWER(po.prodOrigDescricao) LIKE '%familiar%'
          OR LOWER(po.prodOrigDescricao) LIKE '%paa%'

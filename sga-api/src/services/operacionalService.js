@@ -20,7 +20,7 @@ export async function listMapaEstoque(prefCodigo, locCodigo, options = {}) {
   const prodFiltro = String(options.prodDescricao || "").trim();
 
   const [localRows] = await pool.query(
-    `SELECT locCodigo, locDescricao, locVinculada FROM trnslocal WHERE prefCodigo = :prefCodigo AND locCodigo = :loc`,
+    `SELECT locCodigo, locDescricao, locVinculada FROM trnslocal WHERE prefCodigo = :prefCodigo AND locCodigo = :loc AND NOT (locStatus <=> 'I')`,
     { prefCodigo, loc }
   );
   const local = localRows[0] ?? null;
@@ -30,7 +30,7 @@ export async function listMapaEstoque(prefCodigo, locCodigo, options = {}) {
   let locVincDescricao = "";
   if (locVinculada) {
     const [vinc] = await pool.query(
-      `SELECT locDescricao FROM trnslocal WHERE prefCodigo = :prefCodigo AND locCodigo = :loc`,
+      `SELECT locDescricao FROM trnslocal WHERE prefCodigo = :prefCodigo AND locCodigo = :loc AND NOT (locStatus <=> 'I')`,
       { prefCodigo, loc: locVinculada }
     );
     locVincDescricao = vinc[0]?.locDescricao || "";
@@ -42,9 +42,9 @@ export async function listMapaEstoque(prefCodigo, locCodigo, options = {}) {
             dt.disTipDescricao AS distipDescricao,
             COALESCE(e.estoUeSaldo, 0) AS saldo
      FROM trnsmapaue m
-     INNER JOIN trnsprodutos p ON p.prefCodigo = m.prefCodigo AND p.prodCodigo = m.mapaUeProdCodigo
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
-     LEFT JOIN trnsdistribuicaotipo dt ON dt.prefCodigo = p.prefCodigo AND dt.disTipNumero = p.prodCodigoTipoRemessa
+     INNER JOIN trnsprodutos p ON p.prefCodigo = m.prefCodigo AND p.prodCodigo = m.mapaUeProdCodigo AND NOT (p.prodStatus <=> 'I')
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
+     LEFT JOIN trnsdistribuicaotipo dt ON dt.prefCodigo = p.prefCodigo AND dt.disTipNumero = p.prodCodigoTipoRemessa AND NOT (dt.disTipStatus <=> 'I')
      LEFT JOIN TRNSEstoqueUE e ON e.prefCodigo = m.prefCodigo AND e.estoUeProdCodigo = m.mapaUeProdCodigo AND e.estoUeLocCodigo = m.mapaUeLocCodigo
      WHERE m.prefCodigo = :prefCodigo AND m.mapaUeLocCodigo = :loc AND m.mapaUeData = :dataStr AND p.prodStatus = 'A'
      ORDER BY p.prodCodigoTipoRemessa, p.prodDescricao`,
@@ -68,8 +68,8 @@ export async function listMapaEstoque(prefCodigo, locCodigo, options = {}) {
             dt.disTipDescricao AS estoUeTipoRemessa,
             GREATEST(COALESCE(e.estoUEQtdeFixa, 0) - COALESCE(e.estoUeSaldo, 0), 0) AS estoUePrevisao
      FROM trnsprodutos p
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
-     LEFT JOIN trnsdistribuicaotipo dt ON dt.prefCodigo = p.prefCodigo AND dt.disTipNumero = p.prodCodigoTipoRemessa
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
+     LEFT JOIN trnsdistribuicaotipo dt ON dt.prefCodigo = p.prefCodigo AND dt.disTipNumero = p.prodCodigoTipoRemessa AND NOT (dt.disTipStatus <=> 'I')
      LEFT JOIN TRNSEstoqueUE e ON e.prefCodigo = p.prefCodigo AND e.estoUeProdCodigo = p.prodCodigo AND e.estoUeLocCodigo = :loc
      WHERE ${estoqueWhere}
      ORDER BY p.prodCodigoTipoRemessa, p.prodDescricao`,
@@ -104,9 +104,9 @@ export async function listMapaEstoque(prefCodigo, locCodigo, options = {}) {
             dt.disTipDescricao AS distipDescricao,
             COALESCE(e.estoUeSaldo, 0) AS saldo
      FROM trnsmapaue m
-     INNER JOIN trnsprodutos p ON p.prefCodigo = m.prefCodigo AND p.prodCodigo = m.mapaUeProdCodigo
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
-     LEFT JOIN trnsdistribuicaotipo dt ON dt.prefCodigo = p.prefCodigo AND dt.disTipNumero = p.prodCodigoTipoRemessa
+     INNER JOIN trnsprodutos p ON p.prefCodigo = m.prefCodigo AND p.prodCodigo = m.mapaUeProdCodigo AND NOT (p.prodStatus <=> 'I')
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
+     LEFT JOIN trnsdistribuicaotipo dt ON dt.prefCodigo = p.prefCodigo AND dt.disTipNumero = p.prodCodigoTipoRemessa AND NOT (dt.disTipStatus <=> 'I')
      LEFT JOIN TRNSEstoqueUE e ON e.prefCodigo = m.prefCodigo AND e.estoUeProdCodigo = m.mapaUeProdCodigo AND e.estoUeLocCodigo = m.mapaUeLocCodigo
      WHERE m.prefCodigo = :prefCodigo AND m.mapaUeLocCodigo = :loc
        AND m.mapaUeQtdeAjuste > 0
@@ -175,10 +175,11 @@ export async function listQtdeFixaPorProduto(prefCodigo, prodCodigo) {
   const [produto] = await pool.query(
     `SELECT p.prodCodigo, p.prodDescricao, u.uniDescricao
      FROM trnsprodutos p
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedEstocagem
-     WHERE p.prefCodigo = :prefCodigo AND p.prodCodigo = :prod`,
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedEstocagem AND NOT (u.uniStatus <=> 'I')
+     WHERE p.prefCodigo = :prefCodigo AND p.prodCodigo = :prod AND NOT (p.prodStatus <=> 'I')`,
     { prefCodigo, prod }
   );
+  if (!produto[0]) return { error: "Produto não encontrado" };
 
   const [locais] = await pool.query(
     `SELECT l.locCodigo, l.locDescricao, e.estoUeCodigo, e.estoUeSaldo, e.estoUEQtdeFixa

@@ -12,7 +12,7 @@ export async function loadDashboardStats(prefCodigo) {
     return null;
   }
 
-  const [remessasAtivas, locaisAtivos, produtosAtivos, produtosTotal, cardapios] = await Promise.all([
+  const [remessasAtivas, locaisAtivos, produtosAtivos, cardapios] = await Promise.all([
     countOne(
       `SELECT COUNT(*) AS c FROM trnsremessas
        WHERE prefCodigo = :prefCodigo AND remStatus = 'A'`,
@@ -29,10 +29,6 @@ export async function loadDashboardStats(prefCodigo) {
       { prefCodigo: pref }
     ),
     countOne(
-      `SELECT COUNT(*) AS c FROM trnsprodutos WHERE prefCodigo = :prefCodigo`,
-      { prefCodigo: pref }
-    ),
-    countOne(
       `SELECT COUNT(*) AS c FROM trnscardapio
        WHERE prefCodigo = :prefCodigo AND carDapStatus = 'A'`,
       { prefCodigo: pref }
@@ -44,7 +40,6 @@ export async function loadDashboardStats(prefCodigo) {
     remessasAtivas,
     locaisAtivos,
     produtosAtivos,
-    produtosTotal,
     cardapios,
   };
 }

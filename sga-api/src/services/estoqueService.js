@@ -46,8 +46,8 @@ export async function listPosicaoEstoque(prefCodigo, query = {}) {
                ELSE ''
              END AS prodSaldoSituacao`,
     from: `FROM trnsprodutos p
-           LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo
-           LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra`,
+           LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo AND NOT (g.prodGrupStatus <=> 'I')
+           LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra AND NOT (u.uniStatus <=> 'I')`,
     alias: "p",
     where,
     params,
@@ -88,8 +88,8 @@ export async function listSaldoEstoque(prefCodigo, query = {}) {
     select: `p.prodCodigo, p.prodDescricao, p.prodSaldo, p.prodTipo, g.prodGrupdescricao,
              p.prodUnidMedCompra, u.uniDescricao`,
     from: `FROM trnsprodutos p
-           LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo
-           LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra`,
+           LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo AND NOT (g.prodGrupStatus <=> 'I')
+           LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra AND NOT (u.uniStatus <=> 'I')`,
     alias: "p",
     where,
     params,
@@ -132,7 +132,7 @@ export async function listAjustes(prefCodigo, query = {}) {
              a.ajusLocaCodigo, l.locDescricao AS ajusLocaDescricao, a.ajusStatus, a.ajusOBS`,
     from: `FROM trnsajuste a
            LEFT JOIN tipoajuste t ON t.prefCodigo = a.prefCodigo AND t.tipajuCodigo = a.tipajuCodigo
-           LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.ajusLocaCodigo`,
+           LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.ajusLocaCodigo AND NOT (l.locStatus <=> 'I')`,
     alias: "a",
     where,
     params,
@@ -182,8 +182,8 @@ export async function buscarInventario(prefCodigo, query = {}) {
     `SELECT p.prodCodigo, p.prodDescricao, p.prodSaldo, p.prodQtdeMinimo, p.prodQtdeMaximo,
             g.prodGrupdescricao AS Grupo, u.uniDescricao AS UNCompra
      FROM trnsprodutos p
-     LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra
+     LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo AND NOT (g.prodGrupStatus <=> 'I')
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra AND NOT (u.uniStatus <=> 'I')
      WHERE ${where.join(" AND ")}
      ORDER BY p.prodDescricao
      LIMIT 500`,
@@ -272,8 +272,8 @@ export async function processarApuracao(prefCodigo, query = {}) {
     `SELECT p.prodCodigo, p.prodDescricao, p.prodSaldo,
             uc.uniDescricao AS UNCompra, ud.uniDescricao AS UNDistribuicao
      FROM trnsprodutos p
-     LEFT JOIN trnsunidades uc ON uc.prefCodigo = p.prefCodigo AND uc.uniCodigo = p.prodUnidMedCompra
-     LEFT JOIN trnsunidades ud ON ud.prefCodigo = p.prefCodigo AND ud.uniCodigo = p.prodUnidMedConsumo
+     LEFT JOIN trnsunidades uc ON uc.prefCodigo = p.prefCodigo AND uc.uniCodigo = p.prodUnidMedCompra AND NOT (uc.uniStatus <=> 'I')
+     LEFT JOIN trnsunidades ud ON ud.prefCodigo = p.prefCodigo AND ud.uniCodigo = p.prodUnidMedConsumo AND NOT (ud.uniStatus <=> 'I')
      WHERE ${prodWhere.join(" AND ")}
      ORDER BY p.prodCodigo`,
     params

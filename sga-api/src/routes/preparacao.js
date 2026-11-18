@@ -247,7 +247,7 @@ router.get("/cardapios", async (req, res, next) => {
         select: `c.carDapCodigo, c.carDapDescricao, c.carDapNutricionista, c.carDapMesAno, c.carDapStatus,
                  c.carDapLiberarAcesso, c.carDapGruCodigo, cg.carGruDescricao`,
         from: `FROM trnscardapio c
-          LEFT JOIN trnscardapiogrupo cg ON cg.prefCodigo = c.prefCodigo AND cg.carGruCodigo = c.carDapGruCodigo`,
+          LEFT JOIN trnscardapiogrupo cg ON cg.prefCodigo = c.prefCodigo AND cg.carGruCodigo = c.carDapGruCodigo AND NOT (cg.carGruStatus <=> 'I')`,
         alias: "c",
         where,
         params,
@@ -390,7 +390,7 @@ router.get("/cardapio-grupos", async (req, res, next) => {
         select: `g.carGruCodigo, g.carGruDescricao, g.carGruCozinhaCentral, g.carGruStatus,
                  g.carDapCodigo, cd.carDapDescricao, cd.carDapMesAno`,
         from: `FROM trnscardapiogrupo g
-          LEFT JOIN trnscardapio cd ON cd.prefCodigo = g.prefCodigo AND cd.carDapCodigo = g.carDapCodigo`,
+          LEFT JOIN trnscardapio cd ON cd.prefCodigo = g.prefCodigo AND cd.carDapCodigo = g.carDapCodigo AND NOT (cd.carDapStatus <=> 'I')`,
         alias: "g",
         where,
         params,
@@ -473,15 +473,17 @@ router.get("/atendimentos", async (req, res, next) => {
                  ${ATENDIMENTO_TOTAL_SEGUNDA_SQL} AS AtendimentoTotalAlunos,
                  a.AtendimentoStatus`,
         from: `FROM atendimento a
-          LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.locCodigo
-          LEFT JOIN trnsareaensino ae ON ae.prefCodigo = a.prefCodigo AND ae.AreEnsCodigo = a.AreEnsCodigo
-          LEFT JOIN trnscardapiogrupo cg ON cg.prefCodigo = a.prefCodigo AND cg.carGruCodigo = a.carGruCodigo
+          LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.locCodigo AND NOT (l.locStatus <=> 'I')
+          LEFT JOIN trnsareaensino ae ON ae.prefCodigo = a.prefCodigo AND ae.AreEnsCodigo = a.AreEnsCodigo AND NOT (ae.ArenEnsStatus <=> 'I')
+          LEFT JOIN trnscardapiogrupo cg ON cg.prefCodigo = a.prefCodigo AND cg.carGruCodigo = a.carGruCodigo AND NOT (cg.carGruStatus <=> 'I')
           ${cardapioJoin}
-          LEFT JOIN trnsrefeicaotipo rt ON rt.prefCodigo = a.prefCodigo AND rt.refTipCodigo = a.AtendimentoTurno
+          LEFT JOIN trnsrefeicaotipo rt ON rt.prefCodigo = a.prefCodigo AND rt.refTipCodigo = a.AtendimentoTurno AND NOT (rt.refTipstatus <=> 'I')
           LEFT JOIN (
-            SELECT prefCodigo, AtendimentoCodigo, SUM(COALESCE(qtdeSegunda, 0)) AS sumDoencasSegunda
-            FROM sga_atendimento_doenca
-            GROUP BY prefCodigo, AtendimentoCodigo
+            SELECT ado.prefCodigo, ado.AtendimentoCodigo, SUM(COALESCE(ado.qtdeSegunda, 0)) AS sumDoencasSegunda
+            FROM sga_atendimento_doenca ado
+            JOIN trnsdoencas d ON d.prefCodigo = ado.prefCodigo AND d.doenCodigo = ado.doenCodigo
+              AND d.doenStatus = 'A'
+            GROUP BY ado.prefCodigo, ado.AtendimentoCodigo
           ) ad ON ad.prefCodigo = a.prefCodigo AND ad.AtendimentoCodigo = a.AtendimentoCodigo`,
         alias: "a",
         where,
@@ -625,7 +627,7 @@ router.get("/cardapio-grupos/:id/cardapios", async (req, res, next) => {
     const carGruCodigo = Number(req.params.id);
     const [rows] = await pool.query(
       `SELECT carDapCodigo, carDapDescricao, carDapMesAno, carDapStatus
-       FROM trnscardapio WHERE prefCodigo = :prefCodigo AND carDapGruCodigo = :carGruCodigo
+       FROM trnscardapio WHERE prefCodigo = :prefCodigo AND carDapGruCodigo = :carGruCodigo AND NOT (carDapStatus <=> 'I')
        ORDER BY carDapMesAno DESC, carDapDescricao`,
       { prefCodigo, carGruCodigo }
     );

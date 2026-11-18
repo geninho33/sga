@@ -94,7 +94,7 @@ export async function loadAjuste(prefCodigo, ajusCodigo) {
     `SELECT a.*, t.tipajuNome, t.tipajuAcao, l.locDescricao AS ajusLocaDescricao
      FROM trnsajuste a
      LEFT JOIN tipoajuste t ON t.prefCodigo = a.prefCodigo AND t.tipajuCodigo = a.tipajuCodigo
-     LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.ajusLocaCodigo
+     LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.ajusLocaCodigo AND NOT (l.locStatus <=> 'I')
      WHERE a.prefCodigo = :prefCodigo AND a.ajusCodigo = :ajusCodigo`,
     { prefCodigo, ajusCodigo }
   );
@@ -190,7 +190,7 @@ export async function listAjusteItens(prefCodigo, ajusCodigo, query = {}) {
      FROM trnsajusteitens ai
      JOIN trnsajuste a ON a.prefCodigo = ai.prefCodigo AND a.ajusCodigo = ai.ajusCodigo
      LEFT JOIN trnsprodutos p ON p.prefCodigo = ai.prefCodigo AND p.prodCodigo = ai.ajusItemProduto
-     WHERE ai.prefCodigo = :prefCodigo AND ai.ajusCodigo = :ajusCodigo ${whereExtra}
+     WHERE ai.prefCodigo = :prefCodigo AND ai.ajusCodigo = :ajusCodigo AND NOT (p.prodStatus <=> 'I') ${whereExtra}
      ORDER BY p.prodDescricao`,
     params
   );

@@ -279,7 +279,7 @@ router.get("/compras", async (req, res, next) => {
       select: `n.notaCodigo, n.notaNumero, n.notaSerie, n.notaData, n.notaFornecedor,
                n.notaLocal, n.notaProgCodigo, n.notaStatus, f.forNome AS notaFornecedorNome`,
       from: `FROM trnsnota n
-             LEFT JOIN trnsfornecedores f ON f.prefCodigo = n.prefCodigo AND f.forCodigo = n.notaFornecedor`,
+             LEFT JOIN trnsfornecedores f ON f.prefCodigo = n.prefCodigo AND f.forCodigo = n.notaFornecedor AND NOT (f.forStatus <=> 'I')`,
       alias: "n",
       where,
       params,
@@ -338,8 +338,8 @@ router.get("/distribuicoes", async (req, res, next) => {
                d.distRecebedor, d.distReceber, d.distLocalOrigem, d.distLocalDestino, d.distStatus,
                d.distObservacao, lo.locDescricao AS distLocalOrigemNome, ld.locDescricao AS distLocalDestinoNome`,
       from: `FROM trnsdistribuicao d
-             LEFT JOIN trnslocal lo ON lo.prefCodigo = d.prefCodigo AND lo.locCodigo = d.distLocalOrigem
-             LEFT JOIN trnslocal ld ON ld.prefCodigo = d.prefCodigo AND ld.locCodigo = d.distLocalDestino`,
+             LEFT JOIN trnslocal lo ON lo.prefCodigo = d.prefCodigo AND lo.locCodigo = d.distLocalOrigem AND NOT (lo.locStatus <=> 'I')
+             LEFT JOIN trnslocal ld ON ld.prefCodigo = d.prefCodigo AND ld.locCodigo = d.distLocalDestino AND NOT (ld.locStatus <=> 'I')`,
       alias: "d",
       where,
       params,
@@ -387,8 +387,8 @@ router.get("/romaneios", async (req, res, next) => {
       select: `r.romanCodigo, r.romanData, r.forCodigo, r.romanLocal, r.notaCodigo,
                f.forNome, n.notaNumero, n.notaSerie`,
       from: `FROM Romaneio r
-             LEFT JOIN trnsfornecedores f ON f.prefCodigo = r.prefCodigo AND f.forCodigo = r.forCodigo
-             LEFT JOIN trnsnota n ON n.prefCodigo = r.prefCodigo AND n.notaCodigo = r.notaCodigo`,
+             LEFT JOIN trnsfornecedores f ON f.prefCodigo = r.prefCodigo AND f.forCodigo = r.forCodigo AND NOT (f.forStatus <=> 'I')
+             LEFT JOIN trnsnota n ON n.prefCodigo = r.prefCodigo AND n.notaCodigo = r.notaCodigo AND NOT (n.notaStatus <=> 'I')`,
       alias: "r",
       where,
       params,
@@ -448,9 +448,9 @@ router.get("/cronograma", async (req, res, next) => {
                (SELECT COALESCE(SUM(cl.croLocQtde), 0) FROM trnscronogramalocal cl
                 WHERE cl.prefCodigo = c.prefCodigo AND cl.croCodigo = c.croCodigo) AS croTotal`,
       from: `FROM trnscronograma c
-             LEFT JOIN trnsfornecedores f ON f.prefCodigo = c.prefCodigo AND f.forCodigo = c.forCodigo
-             LEFT JOIN trnsprodutos p ON p.prefCodigo = c.prefCodigo AND p.prodCodigo = c.prodCodigo
-             LEFT JOIN trnsdistribuicaotipo t ON t.prefCodigo = c.prefCodigo AND t.disTipNumero = c.croTipoRemessa`,
+             LEFT JOIN trnsfornecedores f ON f.prefCodigo = c.prefCodigo AND f.forCodigo = c.forCodigo AND NOT (f.forStatus <=> 'I')
+             LEFT JOIN trnsprodutos p ON p.prefCodigo = c.prefCodigo AND p.prodCodigo = c.prodCodigo AND NOT (p.prodStatus <=> 'I')
+             LEFT JOIN trnsdistribuicaotipo t ON t.prefCodigo = c.prefCodigo AND t.disTipNumero = c.croTipoRemessa AND NOT (t.disTipStatus <=> 'I')`,
       alias: "c",
       where,
       params,

@@ -19,13 +19,13 @@ function esc(value) {
 
 export async function loadNotaCompraPrintData(prefCodigo, notaCodigo) {
   const [notaRows] = await pool.query(
-    `SELECT n.notaCodigo, n.notaNumero, n.notaSerie, n.notaData, n.notaFornecedor, n.notaLocal,
+    `SELECT n.notaCodigo, n.notaNumero, n.notaSerie, n.notaData, f.forCodigo AS notaFornecedor, l.locCodigo AS notaLocal,
             n.notaStatus, n.notaUserName, n.notaDataCadastro,
             f.forNome AS notaFornecedorNome, l.locDescricao AS notaLocalNome
      FROM trnsnota n
-     LEFT JOIN trnsfornecedores f ON f.prefCodigo = n.prefCodigo AND f.forCodigo = n.notaFornecedor
-     LEFT JOIN trnslocal l ON l.prefCodigo = n.prefCodigo AND l.locCodigo = n.notaLocal
-     WHERE n.prefCodigo = :prefCodigo AND n.notaCodigo = :notaCodigo`,
+     LEFT JOIN trnsfornecedores f ON f.prefCodigo = n.prefCodigo AND f.forCodigo = n.notaFornecedor AND NOT (f.forStatus <=> 'I')
+     LEFT JOIN trnslocal l ON l.prefCodigo = n.prefCodigo AND l.locCodigo = n.notaLocal AND NOT (l.locStatus <=> 'I')
+     WHERE n.prefCodigo = :prefCodigo AND n.notaCodigo = :notaCodigo AND NOT (n.notaStatus <=> 'I')`,
     { prefCodigo, notaCodigo }
   );
   const nota = notaRows[0] ?? null;

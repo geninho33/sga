@@ -360,6 +360,7 @@ export async function listCardapioPratos(prefCodigo, carDapCodigo) {
      LEFT JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao
      LEFT JOIN trnsrefeicaotipo t ON t.prefCodigo = cp.prefCodigo AND t.refTipCodigo = cp.carPratoTurno
      WHERE cp.prefCodigo = :prefCodigo AND cp.carDapCodigo = :carDapCodigo
+       AND NOT (p.pratoStatus <=> 'I') AND NOT (t.refTipstatus <=> 'I')
      ORDER BY cp.carPratoData, cp.carPratoHorario, cp.carPratoTurno`,
     { prefCodigo, carDapCodigo }
   );
@@ -435,8 +436,8 @@ export async function listPratoIngredientes(prefCodigo, pratoCodigo) {
             pi.pratIngrQuantidade, pi.pratIngrStatus,
             p.prodDescricao, ae.AreEnsNome, et.AreEnsEtapaNome
      FROM trnspratosingredientes pi
-     INNER JOIN trnsprodutos p ON p.prefCodigo = pi.prefCodigo AND p.prodCodigo = pi.pratIngrProdCodigo
-     LEFT JOIN trnsareaensino ae ON ae.prefCodigo = pi.prefCodigo AND ae.AreEnsCodigo = pi.AreEnsCodigo
+     INNER JOIN trnsprodutos p ON p.prefCodigo = pi.prefCodigo AND p.prodCodigo = pi.pratIngrProdCodigo AND NOT (p.prodStatus <=> 'I')
+     LEFT JOIN trnsareaensino ae ON ae.prefCodigo = pi.prefCodigo AND ae.AreEnsCodigo = pi.AreEnsCodigo AND NOT (ae.ArenEnsStatus <=> 'I')
      LEFT JOIN trnsareaensinoetapa et ON et.prefCodigo = pi.prefCodigo
        AND et.AreEnsCodigo = pi.AreEnsCodigo AND et.AreEnsSequencial = pi.AreEnsSequencial
      WHERE pi.prefCodigo = :prefCodigo AND pi.pratoCodigo = :pratoCodigo
@@ -650,11 +651,11 @@ const ATENDIMENTO_LOAD = `
   SELECT a.*, ae.AreEnsNome, et.AreEnsEtapaNome, cg.carGruDescricao, l.locDescricao,
          cd.carDapDescricao, cd.carDapMesAno
   FROM atendimento a
-  LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.locCodigo
-  LEFT JOIN trnsareaensino ae ON ae.prefCodigo = a.prefCodigo AND ae.AreEnsCodigo = a.AreEnsCodigo
+  LEFT JOIN trnslocal l ON l.prefCodigo = a.prefCodigo AND l.locCodigo = a.locCodigo AND NOT (l.locStatus <=> 'I')
+  LEFT JOIN trnsareaensino ae ON ae.prefCodigo = a.prefCodigo AND ae.AreEnsCodigo = a.AreEnsCodigo AND NOT (ae.ArenEnsStatus <=> 'I')
   LEFT JOIN trnsareaensinoetapa et ON et.prefCodigo = a.prefCodigo
     AND et.AreEnsCodigo = a.AreEnsCodigo AND et.AreEnsSequencial = a.AreEnsSequencial
-  LEFT JOIN trnscardapiogrupo cg ON cg.prefCodigo = a.prefCodigo AND cg.carGruCodigo = a.carGruCodigo`;
+  LEFT JOIN trnscardapiogrupo cg ON cg.prefCodigo = a.prefCodigo AND cg.carGruCodigo = a.carGruCodigo AND NOT (cg.carGruStatus <=> 'I')`;
 
 let atendimentoLoadSql = null;
 
@@ -851,8 +852,11 @@ export async function listReferencias(prefCodigo) {
       { prefCodigo }
     ),
     pool.query(
-      `SELECT AreEnsCodigo, AreEnsSequencial, AreEnsEtapaNome FROM trnsareaensinoetapa
-       WHERE prefCodigo = :prefCodigo ORDER BY AreEnsCodigo, AreEnsSequencial`,
+      `SELECT e.AreEnsCodigo, e.AreEnsSequencial, e.AreEnsEtapaNome
+       FROM trnsareaensinoetapa e
+       JOIN trnsareaensino a ON a.prefCodigo = e.prefCodigo AND a.AreEnsCodigo = e.AreEnsCodigo
+       WHERE e.prefCodigo = :prefCodigo AND (a.ArenEnsStatus IS NULL OR a.ArenEnsStatus = 'A')
+       ORDER BY e.AreEnsCodigo, e.AreEnsSequencial`,
       { prefCodigo }
     ),
     pool.query(

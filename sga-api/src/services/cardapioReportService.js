@@ -99,8 +99,8 @@ async function loadPratosMes(prefCodigo, carDapCodigo) {
             rt.refTipDescricao, rt.refTipHorario, rt.refTipperiodo,
             p.pratoDscricao
      FROM trnscardapioprato cp
-     INNER JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao
-     LEFT JOIN trnsrefeicaotipo rt ON rt.prefCodigo = cp.prefCodigo AND rt.refTipCodigo = cp.carPratoTurno
+     INNER JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao AND NOT (p.pratoStatus <=> 'I')
+     LEFT JOIN trnsrefeicaotipo rt ON rt.prefCodigo = cp.prefCodigo AND rt.refTipCodigo = cp.carPratoTurno AND NOT (rt.refTipstatus <=> 'I')
      WHERE cp.prefCodigo = :prefCodigo AND cp.carDapCodigo = :carDapCodigo
      ORDER BY cp.carPratoData, rt.refTipHorario, cp.carPratoTurno`,
     { prefCodigo, carDapCodigo }
@@ -218,7 +218,7 @@ async function loadReceitas(prefCodigo, carDapCodigo) {
   for (const { pratoCodigo } of pratoIds) {
     const [pratos] = await pool.query(
       `SELECT pratoCodigo, pratoDscricao, pratoModoDeFazer, pratoComFreezer, pratoForno, pratoRepeticao
-       FROM trnspratos WHERE prefCodigo = :prefCodigo AND pratoCodigo = :pratoCodigo`,
+       FROM trnspratos WHERE prefCodigo = :prefCodigo AND pratoCodigo = :pratoCodigo AND NOT (pratoStatus <=> 'I')`,
       { prefCodigo, pratoCodigo }
     );
     const prato = pratos[0];
@@ -228,8 +228,8 @@ async function loadReceitas(prefCodigo, carDapCodigo) {
       `SELECT pi.AreEnsCodigo, pi.AreEnsSequencial, pi.carGruTurno, pi.pratIngrQuantidade,
               p.prodDescricao, ae.AreEnsNome, et.AreEnsEtapaNome
        FROM trnspratosingredientes pi
-       INNER JOIN trnsprodutos p ON p.prefCodigo = pi.prefCodigo AND p.prodCodigo = pi.pratIngrProdCodigo
-       LEFT JOIN trnsareaensino ae ON ae.prefCodigo = pi.prefCodigo AND ae.AreEnsCodigo = pi.AreEnsCodigo
+       INNER JOIN trnsprodutos p ON p.prefCodigo = pi.prefCodigo AND p.prodCodigo = pi.pratIngrProdCodigo AND NOT (p.prodStatus <=> 'I')
+       LEFT JOIN trnsareaensino ae ON ae.prefCodigo = pi.prefCodigo AND ae.AreEnsCodigo = pi.AreEnsCodigo AND NOT (ae.ArenEnsStatus <=> 'I')
        LEFT JOIN trnsareaensinoetapa et ON et.prefCodigo = pi.prefCodigo
          AND et.AreEnsCodigo = pi.AreEnsCodigo AND et.AreEnsSequencial = pi.AreEnsSequencial
        WHERE pi.prefCodigo = :prefCodigo AND pi.pratoCodigo = :pratoCodigo AND pi.pratIngrQuantidade > 0
@@ -431,7 +431,7 @@ export async function buildCardapioReportData(prefCodigo, params) {
   const [cardapioRows] = await pool.query(
     `SELECT carDapCodigo, carDapDescricao, carDapMesAno, carDapGruCodigo,
             carDapNutricionista, carDapNutricionista1, carDapNutricionista2, carDapNutricionista3
-     FROM trnscardapio WHERE prefCodigo = :prefCodigo AND carDapCodigo = :carDapCodigo`,
+     FROM trnscardapio WHERE prefCodigo = :prefCodigo AND carDapCodigo = :carDapCodigo AND NOT (carDapStatus <=> 'I')`,
     { prefCodigo, carDapCodigo }
   );
   const cardapio = cardapioRows[0];
@@ -440,7 +440,7 @@ export async function buildCardapioReportData(prefCodigo, params) {
   let subtitulo = "";
   if (locCodigo) {
     const [locRows] = await pool.query(
-      `SELECT locDescricao FROM trnslocal WHERE prefCodigo = :prefCodigo AND locCodigo = :locCodigo`,
+      `SELECT locDescricao FROM trnslocal WHERE prefCodigo = :prefCodigo AND locCodigo = :locCodigo AND NOT (locStatus <=> 'I')`,
       { prefCodigo, locCodigo }
     );
     if (locRows[0]) subtitulo = `Unidade Educativa : ${locRows[0].locDescricao}`;
@@ -512,8 +512,8 @@ async function loadUnidadeEscolar(prefCodigo, locCodigo) {
             l.locResponsavel, l.locDiretor, l.locAbreviatura,
             u.usuNome AS responsavelNome, d.usuNome AS diretorNome
      FROM trnslocal l
-     LEFT JOIN trnsusuarios u ON u.prefCodigo = l.prefCodigo AND u.usuCodigo = l.locResponsavel
-     LEFT JOIN trnsusuarios d ON d.prefCodigo = l.prefCodigo AND d.usuCodigo = l.locDiretor
+     LEFT JOIN trnsusuarios u ON u.prefCodigo = l.prefCodigo AND u.usuCodigo = l.locResponsavel AND NOT (u.usuStatus <=> 'I')
+     LEFT JOIN trnsusuarios d ON d.prefCodigo = l.prefCodigo AND d.usuCodigo = l.locDiretor AND NOT (d.usuStatus <=> 'I')
      WHERE l.prefCodigo = :prefCodigo AND l.locCodigo = :locCodigo`,
     { prefCodigo, locCodigo }
   );
@@ -536,7 +536,7 @@ async function loadAtendimentoInfo(prefCodigo, carGruCodigo, locCodigo) {
             (COALESCE(a.AtendimentoColesterolDomingo,0)+COALESCE(a.AtendimentoColesterolSegunda,0)+COALESCE(a.AtendimentoColesterolTerca,0)+COALESCE(a.AtendimentoColesterolQuarta,0)+COALESCE(a.AtendimentoColesterolQuinta,0)+COALESCE(a.AtendimentoColesterolSexta,0)+COALESCE(a.AtendimentoColesterolSabado,0)) AS colesterolTotal,
             (COALESCE(a.AtendimentoNormalDomingo,0)+COALESCE(a.AtendimentoNormalSegunda,0)+COALESCE(a.AtendimentoNormalTerca,0)+COALESCE(a.AtendimentoNormalQuarta,0)+COALESCE(a.AtendimentoNormalQuinta,0)+COALESCE(a.AtendimentoNormalSexta,0)+COALESCE(a.AtendimentoNormalSabado,0)) AS normalTotal
      FROM atendimento a
-     LEFT JOIN trnsareaensino ae ON ae.prefCodigo = a.prefCodigo AND ae.AreEnsCodigo = a.AreEnsCodigo
+     LEFT JOIN trnsareaensino ae ON ae.prefCodigo = a.prefCodigo AND ae.AreEnsCodigo = a.AreEnsCodigo AND NOT (ae.ArenEnsStatus <=> 'I')
      LEFT JOIN trnsareaensinoetapa et ON et.prefCodigo = a.prefCodigo
        AND et.AreEnsCodigo = a.AreEnsCodigo AND et.AreEnsSequencial = a.AreEnsSequencial
      WHERE a.prefCodigo = :prefCodigo AND a.carGruCodigo = :carGruCodigo${locFilter}
@@ -550,7 +550,7 @@ async function loadPreparacoesControle(prefCodigo, carDapCodigo) {
   const [pratoIds] = await pool.query(
     `SELECT DISTINCT cp.carPratoRefeicao AS pratoCodigo, p.pratoDscricao, p.pratoModoDeFazer
      FROM trnscardapioprato cp
-     INNER JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao
+     INNER JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao AND NOT (p.pratoStatus <=> 'I')
      WHERE cp.prefCodigo = :prefCodigo AND cp.carDapCodigo = :carDapCodigo
      ORDER BY p.pratoDscricao`,
     { prefCodigo, carDapCodigo }
@@ -561,7 +561,7 @@ async function loadPreparacoesControle(prefCodigo, carDapCodigo) {
     const [ingredientes] = await pool.query(
       `SELECT pi.pratIngrQuantidade, ae.AreEnsNome, et.AreEnsEtapaNome, pi.carGruTurno
        FROM trnspratosingredientes pi
-       LEFT JOIN trnsareaensino ae ON ae.prefCodigo = pi.prefCodigo AND ae.AreEnsCodigo = pi.AreEnsCodigo
+       LEFT JOIN trnsareaensino ae ON ae.prefCodigo = pi.prefCodigo AND ae.AreEnsCodigo = pi.AreEnsCodigo AND NOT (ae.ArenEnsStatus <=> 'I')
        LEFT JOIN trnsareaensinoetapa et ON et.prefCodigo = pi.prefCodigo
          AND et.AreEnsCodigo = pi.AreEnsCodigo AND et.AreEnsSequencial = pi.AreEnsSequencial
        WHERE pi.prefCodigo = :prefCodigo AND pi.pratoCodigo = :pratoCodigo AND pi.pratIngrQuantidade > 0`,
@@ -619,7 +619,7 @@ export async function buildCardapioPnaeReportData(prefCodigo, params) {
   const [cardapioRows] = await pool.query(
     `SELECT carDapCodigo, carDapDescricao, carDapMesAno, carDapGruCodigo,
             carDapNutricionista, carDapNutricionista1, carDapNutricionista2, carDapNutricionista3
-     FROM trnscardapio WHERE prefCodigo = :prefCodigo AND carDapCodigo = :carDapCodigo`,
+     FROM trnscardapio WHERE prefCodigo = :prefCodigo AND carDapCodigo = :carDapCodigo AND NOT (carDapStatus <=> 'I')`,
     { prefCodigo, carDapCodigo }
   );
   const cardapio = cardapioRows[0];

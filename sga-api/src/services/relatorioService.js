@@ -14,6 +14,9 @@ export async function gerarRelatorioComprasPdf(prefCodigo, body = {}) {
   const params = { prefCodigo, start, end };
   const where = [
     "n.prefCodigo = :prefCodigo",
+    "NOT (n.notaStatus <=> 'I')",
+    "NOT (p.prodStatus <=> 'I')",
+    "NOT (f.forStatus <=> 'I')",
     "n.notaData >= :start",
     "n.notaData <= :end",
   ];
@@ -44,7 +47,7 @@ export async function gerarRelatorioComprasPdf(prefCodigo, body = {}) {
      JOIN trnsnotaitens ni ON ni.prefCodigo = n.prefCodigo AND ni.notaCodigo = n.notaCodigo
      LEFT JOIN trnsprodutos p ON p.prefCodigo = ni.prefCodigo AND p.prodCodigo = ni.notaItemProduto
      LEFT JOIN trnsfornecedores f ON f.prefCodigo = n.prefCodigo AND f.forCodigo = n.notaFornecedor
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra AND NOT (u.uniStatus <=> 'I')
      WHERE ${where.join(" AND ")}
      ORDER BY ${order}`,
     params
@@ -79,7 +82,11 @@ export async function gerarRelatorioDistribuicaoUePdf(prefCodigo, body = {}) {
         ? "((d.distDataEnvio >= :start AND d.distDataEnvio <= :end) OR (d.distDataRecepcao >= :start AND d.distDataRecepcao <= :end))"
         : "d.distDataRecepcao >= :start AND d.distDataRecepcao <= :end";
 
-  const where = ["d.prefCodigo = :prefCodigo", "d.distStatus = 'A'", dateClause];
+  const where = [
+    "d.prefCodigo = :prefCodigo", "d.distStatus = 'A'", dateClause,
+    "NOT (p.prodStatus <=> 'I')", "NOT (di.distItemStatus <=> 'I')",
+    "NOT (lo.locStatus <=> 'I')", "NOT (ld.locStatus <=> 'I')",
+  ];
   if (body.rotaCodigo) {
     where.push("d.distRotaCodigo = :rotaCodigo");
     params.rotaCodigo = Number(body.rotaCodigo);
@@ -107,7 +114,7 @@ export async function gerarRelatorioDistribuicaoUePdf(prefCodigo, body = {}) {
      LEFT JOIN trnsprodutos p ON p.prefCodigo = di.prefCodigo AND p.prodCodigo = di.distItemProduto
      LEFT JOIN trnslocal lo ON lo.prefCodigo = d.prefCodigo AND lo.locCodigo = d.distLocalOrigem
      LEFT JOIN trnslocal ld ON ld.prefCodigo = d.prefCodigo AND ld.locCodigo = d.distLocalDestino
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
      WHERE ${where.join(" AND ")}
      ORDER BY d.distRotaCodigo, d.distLocalDestino`,
     params
@@ -141,6 +148,8 @@ export async function gerarRelatorioDistribuicaoRotaPdf(prefCodigo, body = {}) {
     "d.distStatus = 'A'",
     "d.distDataEnvio >= :start",
     "d.distDataEnvio <= :end",
+    "NOT (p.prodStatus <=> 'I')",
+    "NOT (di.distItemStatus <=> 'I')",
     `di.distItemProduto IN (${prodIds.map((_, i) => `:p${i}`).join(",")})`,
   ];
   prodIds.forEach((id, i) => {
@@ -157,9 +166,9 @@ export async function gerarRelatorioDistribuicaoRotaPdf(prefCodigo, body = {}) {
             SUM(di.distItemQuantidade) AS qtde, SUM(di.distItemPesoTotal) AS pesoTotal
      FROM trnsdistribuicao d
      JOIN trnsdistribuicaoitens di ON di.prefCodigo = d.prefCodigo AND di.distCodigo = d.distCodigo
-     JOIN trnsrota r ON r.prefCodigo = d.prefCodigo AND r.rotaCodigo = d.distRotaCodigo
+     JOIN trnsrota r ON r.prefCodigo = d.prefCodigo AND r.rotaCodigo = d.distRotaCodigo AND NOT (r.rotaStatus <=> 'I')
      LEFT JOIN trnsprodutos p ON p.prefCodigo = di.prefCodigo AND p.prodCodigo = di.distItemProduto
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
      WHERE ${where.join(" AND ")}
      GROUP BY di.distItemProduto, p.prodDescricao, r.rotaDescricao, u.uniDescricao
      ORDER BY produto, rota`,
@@ -200,8 +209,13 @@ export async function gerarRelatorioEntradasSaidasUePdf(prefCodigo, body = {}) {
   );
 
   const rows = [];
+  const [produtos] = await pool.query(
+    `SELECT prodCodigo FROM trnsprodutos
+     WHERE prefCodigo = ? AND prodCodigo IN (?) AND NOT (prodStatus <=> 'I')`,
+    [prefCodigo, prodIds]
+  );
   for (const loc of locais) {
-    for (const prodCodigo of prodIds) {
+    for (const { prodCodigo } of produtos) {
       if (tipo === "T" || tipo === "E") {
         const [ent] = await pool.query(
           `SELECT d.distDataEnvio AS movData, 'Entrada' AS movTipo, 'Distribuição' AS movDados,
@@ -210,6 +224,7 @@ export async function gerarRelatorioEntradasSaidasUePdf(prefCodigo, body = {}) {
            JOIN trnsdistribuicaoitens di ON di.prefCodigo = d.prefCodigo AND di.distCodigo = d.distCodigo
            WHERE d.prefCodigo = :prefCodigo AND d.distLocalDestino = :locCodigo
              AND di.distItemProduto = :prodCodigo AND d.distReceber = 'S' AND d.distStatus = 'A'
+             AND NOT (di.distItemStatus <=> 'I')
              AND d.distDataEnvio >= :start AND d.distDataEnvio <= :end`,
           { prefCodigo, locCodigo: loc.locCodigo, prodCodigo, start, end }
         );
@@ -258,8 +273,8 @@ export async function gerarRelatorioSaldoPdf(prefCodigo, body = {}) {
   const [rows] = await pool.query(
     `SELECT p.prodCodigo, g.prodGrupdescricao AS tipo, p.prodDescricao, u.uniDescricao AS unidade, p.prodSaldo
      FROM trnsprodutos p
-     LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra
+     LEFT JOIN trnsprodutosgrupo g ON g.prodGrupCodigo = p.prodTipo AND NOT (g.prodGrupStatus <=> 'I')
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra AND NOT (u.uniStatus <=> 'I')
      WHERE ${where.join(" AND ")}
      ORDER BY g.prodGrupCodigo, p.prodDescricao`,
     params

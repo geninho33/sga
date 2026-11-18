@@ -146,7 +146,7 @@ export function flattenCommands(allowedMenuIds = null) {
 export const DASHBOARD_STAT_META = [
   { key: "remessasAtivas", label: "Remessas ativas", trend: "operacional", icon: "fa-box-open", tone: "brand" },
   { key: "locaisAtivos", label: "Locais ativos", trend: "UEs cadastradas", icon: "fa-school", tone: "info" },
-  { key: "produtosAtivos", label: "Produtos ativos", trendKey: "produtosTotal", trendPrefix: "de ", icon: "fa-carrot", tone: "success" },
+  { key: "produtosAtivos", label: "Produtos ativos", icon: "fa-carrot", tone: "success" },
   { key: "cardapios", label: "Cardápios", trend: "planejados", icon: "fa-utensils", tone: "warning" },
 ];
 

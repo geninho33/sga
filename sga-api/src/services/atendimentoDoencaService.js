@@ -6,7 +6,7 @@ export async function listAtendimentoDoencas(prefCodigo, AtendimentoCodigo) {
   const [rows] = await pool.query(
     `SELECT ad.*, d.doenDescricao
      FROM sga_atendimento_doenca ad
-     LEFT JOIN trnsdoencas d ON d.prefCodigo = ad.prefCodigo AND d.doenCodigo = ad.doenCodigo
+     JOIN trnsdoencas d ON d.prefCodigo = ad.prefCodigo AND d.doenCodigo = ad.doenCodigo AND d.doenStatus = 'A'
      WHERE ad.prefCodigo = :prefCodigo AND ad.AtendimentoCodigo = :AtendimentoCodigo
      ORDER BY d.doenOrdem, d.doenDescricao`,
     { prefCodigo, AtendimentoCodigo }
@@ -15,27 +15,45 @@ export async function listAtendimentoDoencas(prefCodigo, AtendimentoCodigo) {
 }
 
 export async function saveAtendimentoDoencas(prefCodigo, AtendimentoCodigo, items = []) {
-  await pool.query(
-    `DELETE FROM sga_atendimento_doenca WHERE prefCodigo = :prefCodigo AND AtendimentoCodigo = :AtendimentoCodigo`,
-    { prefCodigo, AtendimentoCodigo }
-  );
-  for (const item of items) {
-    const doenCodigo = Number(item.doenCodigo);
-    if (!doenCodigo) continue;
-    const params = { prefCodigo, AtendimentoCodigo, doenCodigo };
-    for (const d of DAY_COLS) {
-      params[`qtde${d}`] = Number(item[`qtde${d}`]) || 0;
-    }
-    await pool.query(
-      `INSERT INTO sga_atendimento_doenca (
-         prefCodigo, AtendimentoCodigo, doenCodigo,
-         qtdeDomingo, qtdeSegunda, qtdeTerca, qtdeQuarta, qtdeQuinta, qtdeSexta, qtdeSabado
-       ) VALUES (
-         :prefCodigo, :AtendimentoCodigo, :doenCodigo,
-         :qtdeDomingo, :qtdeSegunda, :qtdeTerca, :qtdeQuarta, :qtdeQuinta, :qtdeSexta, :qtdeSabado
-       )`,
-      params
+  const conn = await pool.getConnection();
+  try {
+    await conn.beginTransaction();
+    await conn.query(
+      `SELECT AtendimentoCodigo FROM atendimento
+       WHERE prefCodigo = :prefCodigo AND AtendimentoCodigo = :AtendimentoCodigo FOR UPDATE`,
+      { prefCodigo, AtendimentoCodigo }
     );
+    await conn.query(
+      `DELETE ad FROM sga_atendimento_doenca ad
+       JOIN trnsdoencas d ON d.prefCodigo = ad.prefCodigo AND d.doenCodigo = ad.doenCodigo
+       WHERE ad.prefCodigo = :prefCodigo AND ad.AtendimentoCodigo = :AtendimentoCodigo AND d.doenStatus = 'A'`,
+      { prefCodigo, AtendimentoCodigo }
+    );
+    for (const item of items) {
+      const doenCodigo = Number(item.doenCodigo);
+      if (!doenCodigo) continue;
+      const params = { prefCodigo, AtendimentoCodigo, doenCodigo };
+      for (const d of DAY_COLS) {
+        params[`qtde${d}`] = Number(item[`qtde${d}`]) || 0;
+      }
+      await conn.query(
+        `INSERT INTO sga_atendimento_doenca (
+           prefCodigo, AtendimentoCodigo, doenCodigo,
+           qtdeDomingo, qtdeSegunda, qtdeTerca, qtdeQuarta, qtdeQuinta, qtdeSexta, qtdeSabado
+         )
+         SELECT d.prefCodigo, :AtendimentoCodigo, d.doenCodigo,
+           :qtdeDomingo, :qtdeSegunda, :qtdeTerca, :qtdeQuarta, :qtdeQuinta, :qtdeSexta, :qtdeSabado
+         FROM trnsdoencas d
+         WHERE d.prefCodigo = :prefCodigo AND d.doenCodigo = :doenCodigo AND d.doenStatus = 'A'`,
+        params
+      );
+    }
+    await conn.commit();
+  } catch (err) {
+    await conn.rollback();
+    throw err;
+  } finally {
+    conn.release();
   }
   return listAtendimentoDoencas(prefCodigo, AtendimentoCodigo);
 }

@@ -220,7 +220,7 @@ export async function loadNota(prefCodigo, notaCodigo) {
     `SELECT n.notaCodigo, n.notaNumero, n.notaSerie, n.notaData, n.notaFornecedor,
             n.notaLocal, n.notaStatus, n.notaProgCodigo, f.forNome AS notaFornecedorNome
      FROM trnsnota n
-     LEFT JOIN trnsfornecedores f ON f.prefCodigo = n.prefCodigo AND f.forCodigo = n.notaFornecedor
+     LEFT JOIN trnsfornecedores f ON f.prefCodigo = n.prefCodigo AND f.forCodigo = n.notaFornecedor AND NOT (f.forStatus <=> 'I')
      WHERE n.prefCodigo = :prefCodigo AND n.notaCodigo = :notaCodigo`,
     { prefCodigo, notaCodigo }
   );
@@ -318,8 +318,8 @@ export async function listNotaItens(prefCodigo, notaCodigo, opts = {}) {
               ni.notaItemValidade, ni.notaItemLote
        FROM trnsnotaitens ni
        LEFT JOIN trnsprodutos p ON p.prefCodigo = ni.prefCodigo AND p.prodCodigo = ni.notaItemProduto
-       LEFT JOIN trnsunidades u ON u.prefCodigo = ni.prefCodigo AND u.uniCodigo = ni.notaItemProdutoUnidade
-       WHERE ni.prefCodigo = :prefCodigo AND ni.notaCodigo = :notaCodigo
+       LEFT JOIN trnsunidades u ON u.prefCodigo = ni.prefCodigo AND u.uniCodigo = ni.notaItemProdutoUnidade AND NOT (u.uniStatus <=> 'I')
+       WHERE ni.prefCodigo = :prefCodigo AND ni.notaCodigo = :notaCodigo AND NOT (p.prodStatus <=> 'I')
        ORDER BY p.prodDescricao`,
       { prefCodigo, notaCodigo }
     );
@@ -342,7 +342,7 @@ export async function listNotaItens(prefCodigo, notaCodigo, opts = {}) {
     `SELECT COUNT(*) AS total
      FROM trnsnotaitens ni
      LEFT JOIN trnsprodutos p ON p.prefCodigo = ni.prefCodigo AND p.prodCodigo = ni.notaItemProduto
-     WHERE ni.prefCodigo = :prefCodigo AND ni.notaCodigo = :notaCodigo${filterSql}`,
+     WHERE ni.prefCodigo = :prefCodigo AND ni.notaCodigo = :notaCodigo AND NOT (p.prodStatus <=> 'I')${filterSql}`,
     params
   );
   const total = Number(countRows[0]?.total) || 0;
@@ -355,8 +355,8 @@ export async function listNotaItens(prefCodigo, notaCodigo, opts = {}) {
             ni.notaItemValidade, ni.notaItemLote
      FROM trnsnotaitens ni
      LEFT JOIN trnsprodutos p ON p.prefCodigo = ni.prefCodigo AND p.prodCodigo = ni.notaItemProduto
-     LEFT JOIN trnsunidades u ON u.prefCodigo = ni.prefCodigo AND u.uniCodigo = ni.notaItemProdutoUnidade
-     WHERE ni.prefCodigo = :prefCodigo AND ni.notaCodigo = :notaCodigo${filterSql}
+     LEFT JOIN trnsunidades u ON u.prefCodigo = ni.prefCodigo AND u.uniCodigo = ni.notaItemProdutoUnidade AND NOT (u.uniStatus <=> 'I')
+     WHERE ni.prefCodigo = :prefCodigo AND ni.notaCodigo = :notaCodigo AND NOT (p.prodStatus <=> 'I')${filterSql}
      ORDER BY p.prodDescricao
      LIMIT :limit OFFSET :offset`,
     params
@@ -439,7 +439,7 @@ export async function upsertNotaItem(prefCodigo, notaCodigo, body) {
             ni.notaItemValidade, ni.notaItemLote
      FROM trnsnotaitens ni
      LEFT JOIN trnsprodutos p ON p.prefCodigo = ni.prefCodigo AND p.prodCodigo = ni.notaItemProduto
-     LEFT JOIN trnsunidades u ON u.prefCodigo = ni.prefCodigo AND u.uniCodigo = ni.notaItemProdutoUnidade
+     LEFT JOIN trnsunidades u ON u.prefCodigo = ni.prefCodigo AND u.uniCodigo = ni.notaItemProdutoUnidade AND NOT (u.uniStatus <=> 'I')
      WHERE ni.prefCodigo = :prefCodigo AND ni.notaCodigo = :notaCodigo AND ni.notaItemProduto = :notaItemProduto`,
     { prefCodigo, notaCodigo, notaItemProduto }
   );
@@ -480,12 +480,12 @@ export async function listDistribuicaoItens(prefCodigo, distCodigo, opts = {}) {
             di.distItemQuantidade, di.distItemStatus, di.distItemValidade, di.distItemLote
      FROM trnsdistribuicaoitens di
      LEFT JOIN trnsprodutos p ON p.prefCodigo = di.prefCodigo AND p.prodCodigo = di.distItemProduto
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo`;
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')`;
 
   if (!paginate) {
     const [rows] = await pool.query(
       `${baseSelect}
-       WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo
+       WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo AND NOT (p.prodStatus <=> 'I')
        ORDER BY p.prodDescricao`,
       { prefCodigo, distCodigo }
     );
@@ -508,14 +508,14 @@ export async function listDistribuicaoItens(prefCodigo, distCodigo, opts = {}) {
     `SELECT COUNT(*) AS total
      FROM trnsdistribuicaoitens di
      LEFT JOIN trnsprodutos p ON p.prefCodigo = di.prefCodigo AND p.prodCodigo = di.distItemProduto
-     WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo${filterSql}`,
+     WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo AND NOT (p.prodStatus <=> 'I')${filterSql}`,
     params
   );
   const total = Number(countRows[0]?.total) || 0;
 
   const [rows] = await pool.query(
     `${baseSelect}
-     WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo${filterSql}
+     WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo AND NOT (p.prodStatus <=> 'I')${filterSql}
      ORDER BY p.prodDescricao
      LIMIT :limit OFFSET :offset`,
     params
@@ -587,7 +587,7 @@ export async function upsertDistribuicaoItem(prefCodigo, distCodigo, body) {
             di.distItemQuantidade, di.distItemStatus, di.distItemValidade, di.distItemLote
      FROM trnsdistribuicaoitens di
      LEFT JOIN trnsprodutos p ON p.prefCodigo = di.prefCodigo AND p.prodCodigo = di.distItemProduto
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
      WHERE di.prefCodigo = :prefCodigo AND di.distCodigo = :distCodigo AND di.distItemProduto = :distItemProduto`,
     { prefCodigo, distCodigo, distItemProduto }
   );
@@ -629,8 +629,8 @@ export async function loadDistribuicao(prefCodigo, distCodigo) {
             d.distObservacao, d.distCodigoTipoRemessa, d.distRotaCodigo, d.distDataCadastro,
             lo.locDescricao AS distLocalOrigemNome, ld.locDescricao AS distLocalDestinoNome
      FROM trnsdistribuicao d
-     LEFT JOIN trnslocal lo ON lo.prefCodigo = d.prefCodigo AND lo.locCodigo = d.distLocalOrigem
-     LEFT JOIN trnslocal ld ON ld.prefCodigo = d.prefCodigo AND ld.locCodigo = d.distLocalDestino
+     LEFT JOIN trnslocal lo ON lo.prefCodigo = d.prefCodigo AND lo.locCodigo = d.distLocalOrigem AND NOT (lo.locStatus <=> 'I')
+     LEFT JOIN trnslocal ld ON ld.prefCodigo = d.prefCodigo AND ld.locCodigo = d.distLocalDestino AND NOT (ld.locStatus <=> 'I')
      WHERE d.prefCodigo = :prefCodigo AND d.distCodigo = :distCodigo`,
     { prefCodigo, distCodigo }
   );
@@ -665,7 +665,14 @@ export async function updateDistribuicao(prefCodigo, distCodigo, body, req) {
 export async function listDistribuicaoProdutosQuery(prefCodigo, reqQuery) {
   const q = String(reqQuery.q || "").trim();
   const status = reqQuery.status;
-  const where = ["dp.prefCodigo = :prefCodigo"];
+  const where = [
+    "dp.prefCodigo = :prefCodigo",
+    "NOT (dp.distProdutoStatus <=> 'I')",
+    "NOT (p.prodStatus <=> 'I')",
+    "NOT (d.distStatus <=> 'I')",
+    "NOT (l.locStatus <=> 'I')",
+    "NOT (r.rotaStatus <=> 'I')",
+  ];
   const params = { prefCodigo };
 
   if (status) {
@@ -706,6 +713,8 @@ export async function listDistribuicaoProdutosQuery(prefCodigo, reqQuery) {
              COALESCE(r.rotaDescricao, CAST(dp.distRota AS CHAR)) AS distRotaDescricao`,
     from: `FROM trnsdistribuicaoprodutos dp
            LEFT JOIN trnsdistribuicao d ON d.prefCodigo = dp.prefCodigo AND d.distCodigo = dp.distCodigo
+           LEFT JOIN trnsprodutos p ON p.prefCodigo = dp.prefCodigo AND p.prodCodigo = dp.distProdutoCodigo
+           LEFT JOIN trnslocal l ON l.prefCodigo = d.prefCodigo AND l.locCodigo = d.distLocalDestino
            LEFT JOIN trnsrota r ON r.prefCodigo = dp.prefCodigo AND r.rotaCodigo = dp.distRota`,
     where,
     params,
@@ -730,6 +739,10 @@ export async function loadRanchoWizardAlimentos(prefCodigo, options = {}) {
   const [pratoRows] = await pool.query(
     `SELECT DISTINCT cp.carPratoRefeicao AS pratoCodigo
      FROM trnscardapioprato cp
+     JOIN trnscardapio c ON c.prefCodigo = cp.prefCodigo AND c.carDapCodigo = cp.carDapCodigo
+       AND NOT (c.carDapStatus <=> 'I')
+     JOIN trnspratos p ON p.prefCodigo = cp.prefCodigo AND p.pratoCodigo = cp.carPratoRefeicao
+       AND NOT (p.pratoStatus <=> 'I')
      WHERE cp.prefCodigo = :prefCodigo${dateFilter}`,
     params
   );
@@ -741,7 +754,7 @@ export async function loadRanchoWizardAlimentos(prefCodigo, options = {}) {
     const [ingRows] = await pool.query(
       `SELECT DISTINCT pi.pratIngrProdCodigo AS prodCodigo
        FROM trnspratosingredientes pi
-       WHERE pi.prefCodigo = ? AND pi.pratoCodigo IN (${placeholders})`,
+       WHERE pi.prefCodigo = ? AND pi.pratoCodigo IN (${placeholders}) AND NOT (pi.pratIngrStatus <=> 'I')`,
       [prefCodigo, ...pratoIds]
     );
     prodIds = ingRows.map((r) => r.prodCodigo).filter(Boolean);
@@ -765,7 +778,7 @@ export async function loadRanchoWizardAlimentos(prefCodigo, options = {}) {
             COALESCE(NULLIF(TRIM(p.prodObsConsumo), ''), u.uniFracao) AS uniDescricao,
             IF(p.prodPesoConsumo = 0, 1, p.prodPesoConsumo) AS qtdeEmbalagem
      FROM trnsprodutos p
-     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo
+     LEFT JOIN trnsunidades u ON u.prefCodigo = p.prefCodigo AND u.uniCodigo = p.prodUnidMedConsumo AND NOT (u.uniStatus <=> 'I')
      WHERE ${where.join(" AND ")}
      ORDER BY p.prodDescricao`,
     prodParams
@@ -806,7 +819,7 @@ export async function loadRanchoFixoGuiasPreview(prefCodigo, locCodigos, prodCod
             COALESCE(e.estoUeSaldo, 0) AS estoque,
             GREATEST(COALESCE(e.estoUEQtdeFixa, 0) - COALESCE(e.estoUeSaldo, 0), 0) AS quantidade
      FROM trnslocal l
-     INNER JOIN trnsprodutos p ON p.prefCodigo = l.prefCodigo AND p.prodCodigo IN (${prodPh})
+     INNER JOIN trnsprodutos p ON p.prefCodigo = l.prefCodigo AND p.prodCodigo IN (${prodPh}) AND NOT (p.prodStatus <=> 'I')
      LEFT JOIN TRNSEstoqueUE e
        ON e.prefCodigo = l.prefCodigo
       AND e.estoUeLocCodigo = l.locCodigo
@@ -854,7 +867,7 @@ export async function loadRanchoWizardLocais(prefCodigo, options = {}) {
   const [rows] = await pool.query(
     `SELECT l.locCodigo, l.locDescricao, l.locBairro, l.locNota, r.rotaDescricao
      FROM trnslocal l
-     LEFT JOIN trnsrota r ON r.prefCodigo = l.prefCodigo AND r.rotaCodigo = l.locNota
+     LEFT JOIN trnsrota r ON r.prefCodigo = l.prefCodigo AND r.rotaCodigo = l.locNota AND NOT (r.rotaStatus <=> 'I')
      WHERE ${where.join(" AND ")}
      ORDER BY l.locDescricao`,
     params
@@ -1003,9 +1016,9 @@ export async function loadRomaneio(prefCodigo, romanCodigo) {
             f.forNome, n.notaNumero, n.notaSerie, n.notaData,
             l.locDescricao AS romanLocalDescricao
      FROM Romaneio r
-     LEFT JOIN trnsfornecedores f ON f.prefCodigo = r.prefCodigo AND f.forCodigo = r.forCodigo
-     LEFT JOIN trnsnota n ON n.prefCodigo = r.prefCodigo AND n.notaCodigo = r.notaCodigo
-     LEFT JOIN trnslocal l ON l.prefCodigo = r.prefCodigo AND l.locCodigo = r.romanLocal
+     LEFT JOIN trnsfornecedores f ON f.prefCodigo = r.prefCodigo AND f.forCodigo = r.forCodigo AND NOT (f.forStatus <=> 'I')
+     LEFT JOIN trnsnota n ON n.prefCodigo = r.prefCodigo AND n.notaCodigo = r.notaCodigo AND NOT (n.notaStatus <=> 'I')
+     LEFT JOIN trnslocal l ON l.prefCodigo = r.prefCodigo AND l.locCodigo = r.romanLocal AND NOT (l.locStatus <=> 'I')
      WHERE r.prefCodigo = :prefCodigo AND r.romanCodigo = :romanCodigo`,
     { prefCodigo, romanCodigo }
   );
@@ -1017,8 +1030,8 @@ export async function listRomaneioItens(prefCodigo, romanCodigo, opts = {}) {
   const baseSql = `
      FROM RomaneioItem ri
      LEFT JOIN trnsprodutos p ON p.prefCodigo = ri.prefCodigo AND p.prodCodigo = ri.prodCodigo
-     LEFT JOIN trnsunidades u ON u.prefCodigo = ri.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra
-     WHERE ri.prefCodigo = :prefCodigo AND ri.romanCodigo = :romanCodigo`;
+     LEFT JOIN trnsunidades u ON u.prefCodigo = ri.prefCodigo AND u.uniCodigo = p.prodUnidMedCompra AND NOT (u.uniStatus <=> 'I')
+     WHERE ri.prefCodigo = :prefCodigo AND ri.romanCodigo = :romanCodigo AND NOT (p.prodStatus <=> 'I')`;
   const selectSql = `
      SELECT ri.prodCodigo, p.prodDescricao, p.prodUnidMedCompra,
             u.uniDescricao AS prodUnidMedCompraDesc,
@@ -1233,9 +1246,9 @@ export async function loadCronograma(prefCodigo, croCodigo) {
             (SELECT COALESCE(SUM(cl.croLocQtde), 0) FROM trnscronogramalocal cl
              WHERE cl.prefCodigo = c.prefCodigo AND cl.croCodigo = c.croCodigo) AS croTotal
      FROM trnscronograma c
-     LEFT JOIN trnsfornecedores f ON f.prefCodigo = c.prefCodigo AND f.forCodigo = c.forCodigo
-     LEFT JOIN trnsprodutos p ON p.prefCodigo = c.prefCodigo AND p.prodCodigo = c.prodCodigo
-     LEFT JOIN trnsdistribuicaotipo t ON t.prefCodigo = c.prefCodigo AND t.disTipNumero = c.croTipoRemessa
+     LEFT JOIN trnsfornecedores f ON f.prefCodigo = c.prefCodigo AND f.forCodigo = c.forCodigo AND NOT (f.forStatus <=> 'I')
+     LEFT JOIN trnsprodutos p ON p.prefCodigo = c.prefCodigo AND p.prodCodigo = c.prodCodigo AND NOT (p.prodStatus <=> 'I')
+     LEFT JOIN trnsdistribuicaotipo t ON t.prefCodigo = c.prefCodigo AND t.disTipNumero = c.croTipoRemessa AND NOT (t.disTipStatus <=> 'I')
      WHERE c.prefCodigo = :prefCodigo AND c.croCodigo = :croCodigo`,
     { prefCodigo, croCodigo }
   );
@@ -1398,8 +1411,8 @@ export async function listCronogramaLocais(prefCodigo, croCodigo, opts = {}) {
   const baseFrom = `
      FROM trnscronogramalocal cl
      LEFT JOIN trnslocal l ON l.prefCodigo = cl.prefCodigo AND l.locCodigo = cl.croLocCodigo
-     LEFT JOIN trnsrota r ON r.prefCodigo = l.prefCodigo AND r.rotaCodigo = l.locNota
-     WHERE cl.prefCodigo = :prefCodigo AND cl.croCodigo = :croCodigo`;
+     LEFT JOIN trnsrota r ON r.prefCodigo = l.prefCodigo AND r.rotaCodigo = l.locNota AND NOT (r.rotaStatus <=> 'I')
+     WHERE cl.prefCodigo = :prefCodigo AND cl.croCodigo = :croCodigo AND NOT (l.locStatus <=> 'I')`;
 
   const [countRows] = await pool.query(`SELECT COUNT(*) AS total ${baseFrom}${filterSql}`, params);
   const total = Number(countRows[0]?.total) || 0;

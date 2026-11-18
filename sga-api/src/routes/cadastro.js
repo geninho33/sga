@@ -104,8 +104,8 @@ router.get("/conv-qtdes", async (req, res, next) => {
       select: `c.uniConvUnidadeOrigem, c.uniConvUnidadeDestino, c.uniConvQtdeGerar, c.uniConvStatus,
                uo.uniDescricao AS uniConOrigemDescricao, ud.uniDescricao AS uniConDestinoDescricao`,
       from: `FROM trnsconvqtde c
-             LEFT JOIN trnsunidades uo ON uo.prefCodigo = c.prefCodigo AND uo.uniCodigo = c.uniConvUnidadeOrigem
-             LEFT JOIN trnsunidades ud ON ud.prefCodigo = c.prefCodigo AND ud.uniCodigo = c.uniConvUnidadeDestino`,
+             LEFT JOIN trnsunidades uo ON uo.prefCodigo = c.prefCodigo AND uo.uniCodigo = c.uniConvUnidadeOrigem AND NOT (uo.uniStatus <=> 'I')
+             LEFT JOIN trnsunidades ud ON ud.prefCodigo = c.prefCodigo AND ud.uniCodigo = c.uniConvUnidadeDestino AND NOT (ud.uniStatus <=> 'I')`,
       alias: "c",
       where,
       params,
@@ -159,7 +159,7 @@ router.get("/locais", async (req, res, next) => {
                l.locUsuario, l.locForno, l.locNota, l.locStatus, l.locUeCod,
                r.rotaDescricao AS locRotaDescricao`,
       from: `FROM trnslocal l
-             LEFT JOIN trnsrota r ON r.prefCodigo = l.prefCodigo AND r.rotaCodigo = l.locNota`,
+             LEFT JOIN trnsrota r ON r.prefCodigo = l.prefCodigo AND r.rotaCodigo = l.locNota AND NOT (r.rotaStatus <=> 'I')`,
       alias: "l",
       where,
       params,

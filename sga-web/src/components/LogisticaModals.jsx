@@ -153,7 +153,7 @@ export function CancelarNotaModal({ row, onClose, onSuccess }) {
   }, [load]);
 
   const headerText = nota
-    ? ` Nota nr. : ${nota.notaNumero} - Série : ${nota.notaSerie} - Data : ${formatDateBr(nota.notaData)} - Fornecedor : ${nota.notaFornecedorNome || nota.notaFornecedor}`
+    ? ` Nota nr. : ${nota.notaNumero} - Série : ${nota.notaSerie} - Data : ${formatDateBr(nota.notaData)}${nota.notaFornecedorNome ? ` - Fornecedor : ${nota.notaFornecedorNome}` : ""}`
     : "";
 
   const handleCancelar = () => {
